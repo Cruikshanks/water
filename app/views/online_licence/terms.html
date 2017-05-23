@@ -1,0 +1,55 @@
+{% include "includes/phase_banner_alpha.html" %}
+{% extends "layout.html" %}
+{% block page_title %}
+  Water abstraction licence
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  <div class="column-full">
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+    </div>
+  <h1 class="heading-large">
+    Your Water Abstraction Licence
+  </h1>
+  <h2 class="heading-medium">
+    Check your licence term of use
+  </h2>
+      Licence no. 123456
+    </p>
+    <details class="closeOnOpen">
+    					<summary><span class="summary">Source of supply</span></summary>
+                              River Avon
+      </details>
+        <details class="closeOnOpen">
+        					<summary><span class="summary">Point of abstraction</span></summary>
+                                  West point pump
+          </details>
+            <details class="closeOnOpen">
+            					<summary><span class="summary">Purpose of abstraction</span></summary>
+                                      Irrigation
+              </details>
+                <details class="closeOnOpen">
+                					<summary><span class="summary">Means of abstraction</span></summary>
+                                          Pump
+                  </details>
+                    <details class="closeOnOpen">
+                    					<summary><span class="summary">Means of measurement</span></summary>
+                                              Meter
+                      </details>
+                        <details class="closeOnOpen">
+                        					<summary><span class="summary">Map</span></summary>
+                                                  Pending map
+                          </details>
+                            <details class="closeOnOpen">
+                            					<summary><span class="summary">Notes</span></summary>
+                                                      Pending notes
+                              </details>
+    </div>
+      <div class="column-one-half"><a href="/online_licence"><p></p>< Back to previous</a></div>
+
+  </main>
+{% endblock %}
