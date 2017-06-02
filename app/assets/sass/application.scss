@@ -36,6 +36,15 @@ $path: "/public/images/";
   font-size: 0.85em;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.maplist {
+  padding: 0px 0px 30px 21px;
+  line-height: 20px;
+}
 .licenceno {
   padding: 0px 0px 20px;
 }
