@@ -1,0 +1,54 @@
+{% include "includes/phase_banner_alpha.html" %}
+{% extends "layout.html" %}
+{% block page_title %}
+  Water abstraction licence
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  <div class="column-full">
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+    <nav>
+    <div class="breadcrumbs">
+    	  <ol role="breadcrumbs">
+          <li><a href="#">Your Services</a></li>
+    	    <li><a href="#">Abstraction Licences</a></li>
+    	  </ol>
+    	</div>
+</nav>
+    </div>
+    </div>
+
+  <div class="column-full">
+  <h1 class="heading-large">
+    Your Water Abstraction Licence
+  </h1>
+    <p>Licence no: 123456</p>
+  </div>
+<div class="column-one-half">Abstraction point grid ref:</div>
+  <div class="column-one-half">123456567<p></p></div>
+
+  <div class="column-one-half">Period of abstraction:</div>
+    <div class="column-one-half">01/05/1990 - 14/01/2050<p></p></div>
+
+  <div class="column-one-half">Your abstraction allowance in cubic metres:</div>
+    </div>
+<div class="column-one-half">
+100 hour<p></p>
+11,000 day<p></p>
+14,000,000 year<p></p>
+</div>
+</div>
+  <div class="column-full">
+  <a href="/v1a/online_licence/terms">Check your licence term of use</a></br></br>
+
+    <a href="/v1a/online_licence/contact_details">Check your licence contact details</a>
+
+  </div>
+</div>
+</main>
+
+{% endblock %}
