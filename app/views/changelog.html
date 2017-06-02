@@ -5,7 +5,12 @@
 {% endblock %}
 
 {% block content %}
-
+<style>
+  td{vertical-align:top;}
+  table td, table th{padding:0.5em;width:50%;}
+  th,th p{font-weight:bold;background-color:#EDEDED;}
+  th p, td p{margin:0.2em 0;}
+</style>
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -17,14 +22,108 @@
 
 
       <h2 class="heading-medium">Change log</h2>
-
-			<ul class="list list-bullet">
-        <li>Change#1
-        </li>
-			</ul>
-
     </div>
+    </div>
+      <table>
+
+      			<tbody><tr>
+      				<th>
+      					<p>Summary of change in v1</p>
+      				</th>
+      				<th>
+      					<p>Reason/source</p>
+      				</th>
+      			</tr>
+      			<tr>
+      				<td>
+      					<p>Changed header to sentence case on online licence page</p>
+      				</td>
+      				<td>
+      					<p>Grammar correction</p>
+      				</td>
+      			</tr>
+      			<tr>
+      				<td>
+      					<p>Alignment change from two column table list, to left aligned single column list on online licence page</p>
+      				</td>
+      				<td>
+      					<p>Users had trouble understanding the information on the page</p>
+      				</td>
+      			</tr>
+      			<tr>
+      				<td>
+      					<p>Name and site address added on online licence page</p>
+      				</td>
+      				<td>
+      					<p>Internal user feedback states this information is useful for site visits</p>
+      				</td>
+      			</tr>
+      			<tr>
+      				<td>
+      					<p>Other contact details link moved up the page, next to associated content on online licence page</p>
+      				</td>
+      				<td>
+      					<p>Feedback suggests links were not easy to spot in their previous positions</p>
+      				</td>
+      			</tr>
+      			<tr>
+      				<td>
+      					<p>Abstraction point grid ref - title change, and data format change on online licence page</p>
+      				</td>
+      				<td>
+      					<p>Internal users expected to see SJ or SK grid references</p>
+      				</td>
+      			</tr>
+      			<tr>
+      				<td>
+      					<p>Abstraction amount label change on online licence page</p>
+      				</td>
+      				<td>
+      					<p>Mirroring the format on the paper licence to make amounts clearer
+</p>
+      				</td>
+      			</tr>
+            <tr>
+              <td>
+                <p>Hands off flow restriction added to online licence page</p>
+              </td>
+              <td>
+                <p>Internal users noted this is important information
+          </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Changed header to sentence case on terms of use page</p>
+              </td>
+              <td>
+                <p>Grammar correction
+          </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Changed header to sentence case to contact details page</p>
+              </td>
+              <td>
+                <p>Grammar correction
+          </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Changed ‘Business details’ to ‘Abstraction return contact details’ on contact details page
+</p>
+              </td>
+              <td>
+                <p>Internal user feedback states that returns have a separate address, no user research has suggested that business address is required.
+
+          </p>
+              </td>
+            </tr>
+      	</tbody></table>
   </div>
+  <div class='column-full'><a href="/">  <p></p>< Back to previous</a></div>
 </main>
 
 {% endblock %}
