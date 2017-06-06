@@ -1,0 +1,50 @@
+{% include "includes/phase_banner_alpha.html" %}
+{% extends "layout.html" %}
+{% block page_title %}
+  Water abstraction licence
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+    <strong class="phase-tag">ALPHA</strong>
+  <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+  </p>
+  </div>
+  <nav>
+  <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="#">Your Services</a></li>
+        <li><a href="#">Abstraction Licences</a></li>
+        <li><a href="#">Licences no 123456</a></li>
+      </ol>
+    </div>
+</nav>
+<h1 class="heading-large">
+  Your water abstraction licence
+  </h1>
+<h2 class="heading-medium">
+  Check your licence term of use
+</h2>
+    Licence no. 123457
+  </p>
+  <form action="/docs/tutorials-and-examples" method="post" class="form">
+
+    <div class="form-group">
+      <details>
+        <summary><span class="summary">Help with date of birth</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>
+            If you don’t know your exact date of birth, use the one you put on official documents (for example, your passport or driving licence).
+          </p>
+          <p>
+            If you can’t provide your date of birth you’ll have to send copies of identity documents through the post.
+          </p>
+        </div>
+      </details>
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}
