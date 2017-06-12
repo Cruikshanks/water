@@ -85,3 +85,55 @@ padding: 0px 0px 05px 237px;
   font-size: 0.95em;
   padding: 20px;
 }
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+   background-color: #FFF;
+   color: #005ea5;
+   cursor: pointer;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   width: 100%;
+   text-align: left;
+   border: none;
+   outline: none;
+   transition: 0.4s;
+   font-family: "nta", Arial, sans-serif;
+   font-weight: 700;
+   font-size: 1.25em;
+   line-height: 1.25;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #F8F8F8;
+}
+
+div.grey_line {
+  border-top: 1px solid #bfc1c3;
+}
+
+div.grey_line_bottom {
+  border-top: 1px solid #bfc1c3;
+  border-bottom: 1px solid #bfc1c3;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.white_panel {
+  padding: 30px 6px 20px;
+    background-color: white;
+    display: none;
+}
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    padding-top: 6px;
+    padding-right: 10px;
+}
+
+button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
