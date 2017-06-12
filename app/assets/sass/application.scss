@@ -91,6 +91,7 @@ button.accordion {
    background-color: #FFF;
    color: #005ea5;
    cursor: pointer;
+   padding-left: 0px;
    padding-top: 20px;
    padding-bottom: 20px;
    width: 100%;
@@ -120,7 +121,7 @@ div.grey_line_bottom {
 
 /* Style the accordion panel. Note: hidden by default */
 div.white_panel {
-  padding: 30px 6px 20px;
+  padding: 30px 0px 20px;
     background-color: white;
     display: none;
 }
