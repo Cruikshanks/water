@@ -8,4 +8,10 @@ router.get('/', function (req, res) {
 
 // add your routes here
 
+router.get('/v3/a/int/online_licence', function (req, res) {
+  res.render('v3/a/int/online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
 module.exports = router
