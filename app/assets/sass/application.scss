@@ -32,6 +32,20 @@ $path: "/public/images/";
     }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.sourceofsupplyq {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 7px;
+}
+
+.sourceofsupplya {
+  display: inline-block;
+  width: 50%;
+  padding-left: 0.5em;
+  padding-bottom: 7px;
+}
+
 .menubox {
   background-color: #FFF;
   cursor: pointer;
