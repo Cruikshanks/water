@@ -1,115 +1,88 @@
-{% include "includes/phase_banner_alpha.html" %}
 {% extends "layout.html" %}
+
+{% set title = "Water test" %}
+
 {% block page_title %}
   Water abstraction licence
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
-  <div class="phase-banner-alpha">
-    <p>
-    <strong class="phase-tag">ALPHA</strong>
-  <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
-  </p>
-  </div>
-  <nav>
-  <div class="breadcrumbs">
-      <ol role="breadcrumbs">
-        <li><a href="#">Your Services</a></li>
-        <li><a href="#">Abstraction Licences</a></li>
-        <li><a href="#">Licences no 123456</a></li>
-      </ol>
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+            </div>
+                <p><a href="/v3/a/int/signin" class="sign-out">Sign out</a></p></div>
+    <nav>
+    <div class="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="#">Your Services</a></li>
+          <li><a href="#">Abstraction Licences</a></li>
+        </ol>
+    </nav>
     </div>
-</nav>
-<h1 class="heading-large">
-  Your water abstraction licence
-  </h1>
-<h2 class="heading-medium">
-  Check your licence term of use
-</h2>
-    Licence no. 123457
-  </p>
+
+
+{% from "custom_inc/water_permits.html" import permits %}
+
+
+  <h1 class="heading-large">
+    Your water abstraction licence
+    </h1>
+
+  <h2 class="heading-medium">
+    Check your licence details are up to date
+  </h2>
+  {% for pNumber, pData in permits %}
+    {% if pNumber==chosenPermitID %}
+<p>Licence no: {{ pData.LicenceSerialNo }}</p>
   <div class='grid-row'>
   <div class='column-two-thirds'>
 <div class="grey_line">
   <button class="accordion">Source of supply</button>
 <div class="white_panel">
-  <p>Underground strata comprising of chalk at Bath Spring Well, Charlton,
-  Hitchin, Hertfordshire.</p>
+  <p>{{ pData.SourceofSupply }}</p>
 </div></div>
 
 <div class="grey_line">
 <button class="accordion">Point of abstraction</button>
 <div class="white_panel">
-  <p>At National Grid Reference TL 1794 2809 marked ‘Abstraction Point’ on the
-map. </p>
+  <p>{{ pData.Pointofabstraction }}</p>
 </div></div>
 
 <div class="grey_line">
 <button class="accordion">Purpose of abstraction</button>
 <div class="white_panel">
-  <p>Transfer for the purpose of supporting flows within the River Hiz as part of the
-River Hiz Support Scheme, discharging water at National Grid Reference TL
-17883 28104 marked ‘Discharge Point’ on the map.</p>
-</div></div>
+  <p>{{ pData.Purposeofabstraction }}</p></div></div>
 
 <div class="grey_line">
 <button class="accordion">Means of abstraction</button>
 <div class="white_panel">
-  <p>A well not exceeding 5.75 metres in depth with the following dimensions:<p></p>
-  <div class='grid-row'>
-  <div class='column-one-third'>0 to 3 metres deep</div>
-<div class='column-one-third'>3.2 metres diameter</div>
-<div class='column-one-third'>Pump type: Submersible pump<p></p></div></div>
-<div class='grid-row'>
-<div class='column-one-third'>3 to 4.5 metres deep</div>
-<div class='column-one-third'>2.8 metres diameter</div>
-<div class='column-one-third'>Pump type: Submersible pump<p></p></div></div>
-<div class='grid-row'>
-  <div class='column-one-third'>4.5 to 5.75 metres deep</div>
-  <div class='column-one-third'>1.25 metres diameter</div>
-  <div class='column-one-third'>Pump type: Submersible pump</div>
-</div></p>
-</div></div>
+  <p>{{ pData.Meansofabstraction }}</p></div></div>
 
 <div class="grey_line">
 <button class="accordion">Means of measurement</button>
 <div class="white_panel">
-  <p>(i) No abstraction shall take place unless the Licence Holder has installed a
-meter (or other measuring device) in the delivery pipe to measure quantities
-of water abstracted.</p>
+  <p>{{ pData.Meansofmeasurement| replace( ".", ".</p><p>") | safe }}</p></div></div>
 
-<p>(ii) The Licence Holder shall position and install the meter in accordance with
-any written directions given by the Agency.</p>
-
-<p>(iii) The Licence Holder shall maintain, repair or replace the meter to ensure
-that accurate measurements are recorded at all times.</p>
-
-<p>(iv) The Licence Holder shall keep all records of meter repair or replacement
-including evidence of current certification for a period of 6 years. <p></p>
-</div></div>
 
 <div class="grey_line">
 <button class="accordion">Records</button>
 <div class="white_panel">
-  <p>(i) The Licence Holder shall take and record readings of the meter specified in
-condition 7 at the same time each month during the whole of the period
-during which abstraction is authorised or as otherwise approved in writing by
-the Agency.</p>
+  <p>{{ pData.records| replace( ".", ".</p><p>" ) | safe }}</p></div></div>
 
-<p>(ii) The Licence Holder shall send a copy of the record or summary data from it
-to the Agency within 28 calendar days of 31 March in each year or within 28
-days of being so directed in writing by the Agency.</p>
-
-<p>(iii) Each record shall be kept and be made available during all reasonable hours
-for inspection by the Agency for at least 6 years. <p></p>
-</div></div>
 
 <div class="grey_line_bottom">
 <button class="accordion">Maps</button>
 <div class="white_panel">
 <a href="/v3/a/int/online_licence/map_of_abstraction_point">Map of abstraction point</a></p>
 </div></div></div></div>
+<p></p>
+<a href="/v3/a/int/online_licence?wid={{ pNumber }}" >< Back to previous</a>
 
-<a href="/v3/a/int/online_licence"><p></p>< Back to previous</a>
+{% endif %}
+
+{% endfor %}
 </main>
 {% endblock %}

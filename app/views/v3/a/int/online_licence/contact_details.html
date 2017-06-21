@@ -1,25 +1,33 @@
-{% include "includes/phase_banner_alpha.html" %}
 {% extends "layout.html" %}
+
+{% set title = "Water test" %}
+
 {% block page_title %}
   Water abstraction licence
 {% endblock %}
 {% block content %}
+
 <main id="content" role="main">
-        <div class="phase-banner-alpha">
-            <p>
-            <strong class="phase-tag">ALPHA</strong>
-          <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
-          </p>
-          </div>
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+            </div>
+                <p><a href="/v3/a/int/signin" class="sign-out">Sign out</a></p></div>
     <nav>
-      <div class="breadcrumbs">
+    <div class="breadcrumbs">
         <ol role="breadcrumbs">
           <li><a href="#">Your Services</a></li>
           <li><a href="#">Abstraction Licences</a></li>
-          <li><a href="#">Licences no 123456</a></li>
         </ol>
-      </div>
-</nav>
+    </nav>
+    </div>
+
+
+{% from "custom_inc/water_permits.html" import permits %}
+
+
   <h1 class="heading-large">
     Your water abstraction licence
     </h1>
@@ -27,9 +35,10 @@
   <h2 class="heading-medium">
     Check your licence details are up to date
   </h2>
-<p>
-    Licence no. 123456
-  </p>
+  {% for pNumber, pData in permits %}
+    {% if pNumber==chosenPermitID %}
+<p>Licence no: {{ pData.LicenceSerialNo }}</p>
+
   <table class="check-your-answers">
     <thead>
       <tr>
@@ -49,12 +58,14 @@
             </td>
             <td>
               <p></p>
-              Joe Blogs<br>
-              4 Fake Street<br>
-              Bristol, BS4 8LD<br>
-              Contact: Gill Blogs<br>
-              Tel: 01234 567 890<br>
-              Email: joe&gill@gillblogs.com
+            <div class="sourceofsupplyq">Name: </div><div class="sourceofsupplya">{{ pData.FirstName }} {{ pData.Surname }}</div>
+            <p></p>
+              <div class="sourceofsupplyq">Address: </div> <div class="sourceofsupplya">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
+            <p></p>
+              <div class="sourceofsupplyq">Telephone: </div> <div class="sourceofsupplya">{{ pData.tel}}</div>
+              <p></p>
+              <div class="sourceofsupplyq">Email: </div><div class="sourceofsupplya">{{ pData.Email}}</div>
+              <p></p>
             </td>
             <td class="change-answer">
 
@@ -69,13 +80,16 @@
             Registered licence holder details
           </h3>
         </td>
-        <td><p></p>
-          Joe Blogs<br>
-          4 Fake Street<br>
-          Bristol, BS4 8LD<br>
-          Contact: Gill Blogs<br>
-          Tel: 01234 567 890<br>
-          Email: joe&gill@gillblogs.com
+        <td>
+          <p></p>
+        <div class="sourceofsupplyq">Name: </div><div class="sourceofsupplya">{{ pData.FirstName }} {{ pData.Surname }}</div>
+        <p></p>
+          <div class="sourceofsupplyq">Address: </div> <div class="sourceofsupplya">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
+        <p></p>
+          <div class="sourceofsupplyq">Telephone: </div> <div class="sourceofsupplya">{{ pData.tel}}</div>
+          <p></p>
+          <div class="sourceofsupplyq">Email: </div><div class="sourceofsupplya">{{ pData.Email}}</div>
+          <p></p>
         </td>
         <td class="change-answer">
 
@@ -91,13 +105,16 @@
             Abstraction return contact details
           </h3>
         </td>
-        <td><p></p>
-          Joe Bloggs<br>
-          4 Fake Street<br>
-          Bristol, BS4 8LD<br>
-          Contact: Gill Blogs<br>
-          Tel: 01234 567 890<br>
-          Email: joe&gill@gillblogs.com
+        <td>
+          <p></p>
+        <div class="sourceofsupplyq">Name: </div><div class="sourceofsupplya">{{ pData.FirstName }} {{ pData.Surname }}</div>
+        <p></p>
+          <div class="sourceofsupplyq">Address: </div> <div class="sourceofsupplya">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
+        <p></p>
+          <div class="sourceofsupplyq">Telephone: </div> <div class="sourceofsupplya">{{ pData.tel}}</div>
+          <p></p>
+          <div class="sourceofsupplyq">Email: </div><div class="sourceofsupplya">{{ pData.Email}}</div>
+          <p></p>
         </td>
         <td class="change-answer">
 
@@ -112,26 +129,33 @@
           <h3 class="heading-small">
             Billing contact details
           </h3>
-        </td>
-        <td><p></p>
-          Joe Blogs<br>
-          4 Fake Street<br>
-          Bristol, BS4 8LD<br>
-          Contact: Gill Blogs<br>
-          Tel: 01234 567 890<br>
-          Email: joe&gill@gillblogs.com
-        </td>
-        <td class="change-answer">
+          <td>
+            <p></p>
+          <div class="sourceofsupplyq">Name: </div><div class="sourceofsupplya">{{ pData.FirstName }} {{ pData.Surname }}</div>
+          <p></p>
+            <div class="sourceofsupplyq">Address: </div> <div class="sourceofsupplya">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
+          <p></p>
+            <div class="sourceofsupplyq">Telephone: </div> <div class="sourceofsupplya">{{ pData.tel}}</div>
+            <p></p>
+            <div class="sourceofsupplyq">Email: </div><div class="sourceofsupplya">{{ pData.Email}}</div>
+            <p></p>
+          </td>
+          <td class="change-answer">
 
-        </td>
+            </a>
+          </td>
       </tr>
       </tbody>
   </table>
 </div>
   <div class='grid-row'>
-    <div class='column-full'><a href="/v3/a/int/online_licence">  <p></p>< Back to previous</a></div></div>
+    <div class='column-full'>
+      <p></p>
+      <a href="/v3/a/int/online_licence?wid={{ pNumber }}" >< Back to previous</a>
 
+      {% endif %}
 
+      {% endfor %}
 </main>
 
 {% endblock %}

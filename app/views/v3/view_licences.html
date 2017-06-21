@@ -27,13 +27,12 @@
                 <span class="font-medium" style="white-space: nowrap;">Ref: {{ pNumber }}</span>
               </h2>
 
-							<p>{{ pData.title }}</p>
+							<p>Licence Serial No:{{ pData.LicenceSerialNo }}</p>
 
-							<p>Allowed volume: {{ pData.volume }} litres a month</p>
+							<p>Licence holder: {{ pData.FirstName }} {{ pData.Surname }}</p>
 
-							<p>{{ pData.description }}</p>
-
-							<p><a href="{{ pData.map }}" target="_blank">Map of {{ pData.title }} on Google maps</a></p>
+							<p>{{ pData.Addressline1}}</p>
+              <p>{{ pData.Addressline3}}</p>
 
               {% endif %}
 
