@@ -6,6 +6,11 @@
   Water abstraction licence
 {% endblock %}
 {% block content %}
+
+  {% from "custom_inc/water_permits.html" import permits %}
+  {% for pNumber, pData in permits %}
+    {% if pNumber==chosenPermitID %}
+
 <main id="content" role="main">
     <div class="phase-banner-alpha">
       <p>
@@ -18,13 +23,12 @@
     <div class="breadcrumbs">
         <ol role="breadcrumbs">
           <li><a href="#">Your Services</a></li>
-          <li><a href="#">Abstraction Licences</a></li>
+          <li><a href="/v3/a/int/licences">Abstraction Licences</a></li>
+          <li><a href="/v3/a/int/online_licence?wid={{ pNumber }}">Licence no: {{ pData.LicenceSerialNo }}</a></li>
         </ol>
     </nav>
     </div>
 
-
-{% from "custom_inc/water_permits.html" import permits %}
 
 
   <h1 class="heading-large">
@@ -34,8 +38,7 @@
   <h2 class="heading-medium">
     Check your licence details are up to date
   </h2>
-  {% for pNumber, pData in permits %}
-    {% if pNumber==chosenPermitID %}
+
 <p>Licence no: {{ pData.LicenceSerialNo }}</p>
   <div class='grid-row'>
   <div class='column-two-thirds'>
@@ -76,7 +79,7 @@
 <div class="grey_line_bottom">
 <button class="accordion">Maps</button>
 <div class="white_panel">
-<a href="/v3/a/int/online_licence/map_of_abstraction_point">Map of abstraction point</a></p>
+<a href="/v3/a/int/online_licence/map_of_abstraction_point?wid={{ pNumber }}">Map of abstraction point</a></p>
 </div></div></div></div>
 <p></p>
 <a href="/v3/a/int/online_licence?wid={{ pNumber }}" >< Back to previous</a>

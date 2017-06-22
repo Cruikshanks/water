@@ -9,6 +9,12 @@
 {% block content %}
 
 <main id="content" role="main">
+  {% from "custom_inc/water_permits.html" import permits %}
+
+
+
+    {% for pNumber, pData in permits %}
+      {% if pNumber==chosenPermitID %}
     <div class="phase-banner-alpha">
       <p>
       <strong class="phase-tag">ALPHA</strong>
@@ -20,10 +26,12 @@
     <div class="breadcrumbs">
         <ol role="breadcrumbs">
           <li><a href="#">Your Services</a></li>
-          <li><a href="#">Abstraction Licences</a></li>
+          <li><a href="/v3/a/int/licences">Abstraction Licences</a></li>
+          <li><a href="/v3/a/int/online_licence?wid={{ pNumber }}">Licence no: {{ pData.LicenceSerialNo }}</a></li>
         </ol>
     </nav>
     </div>
+
 
 
     <h1 class="heading-large">
@@ -31,31 +39,23 @@
     </h1>
     <p></p>
 
-
-
-      {% from "custom_inc/water_permits.html" import permits %}
-
-
-
-        {% for pNumber, pData in permits %}
-          {% if pNumber==chosenPermitID %}
-
-
-
-							<p>Licence no: {{ pData.LicenceSerialNo }}</p>
-
-							<div class="sourceofsupplyq">Licence holder: {{ pData.FirstName }} {{ pData.Surname }}</div>
-              <a href="/v3/a/int/online_licence/contact_details?wid={{ pNumber }}" class="sourceofsupplya" >Licence contact details</a>
               <p></p>
-							<div class="sourceofsupplyq">Abstraction point:</div> <div class="sourceofsupplya">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}. <p></p>{{ pData.Pointofabstraction}}</div>
+							<div class="sourceofsupplyq">Licence no:</div> <div class="licenceAnswer">{{ pData.LicenceSerialNo }}</div>
               <p></p>
-              <div class="sourceofsupplyq">Licence effective:</div> <div class="sourceofsupplya">{{ pData.EffectiveDateStart }} - {{ pData.EffectiveDateend }}</div>
+							<div class="sourceofsupplyq">Licence holder:</div> <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}<p></p>
+              <a href="/v3/a/int/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
               <p></p>
-              <div class="sourceofsupplyq">Source of supply:</div> <div class="sourceofsupplya">{{ pData.SourceofSupply }}</div>
+							<div class="sourceofsupplyq">Abstraction point:</div> <div class="licenceAnswer">{{ pData.Addressline1}}<p></p>{{ pData.Addressline3}}<p></p>{{ pData.County}}<p></p>{{ pData.Postcode}}. <p></p>{{ pData.Pointofabstraction}}</div>
               <p></p>
-              <div class="sourceofsupplyq">Period of abstraction:</div> <div class="sourceofsupplya">{{ pData.PeriodofAbstraction }}</div>
+              <div class="sourceofsupplyq">Licence effective from:</div> <div class="licenceAnswer">{{ pData.EffectiveDateStart }}</div>
               <p></p>
-              <div class="sourceofsupplyq">Maximum quantities:</div> <div class="sourceofsupplya">{{ pData.MaximumQuantityofwatertobeabstracted }}</div>
+              <div class="sourceofsupplyq">Licenced until:</div> <div class="licenceAnswer">{{ pData.EffectiveDateend }}</div>
+              <p></p>
+              <div class="sourceofsupplyq">Source of supply:</div> <div class="licenceAnswer">{{ pData.SourceofSupply }}</div>
+              <p></p>
+              <div class="sourceofsupplyq">Period of abstraction:</div> <div class="licenceAnswer">{{ pData.PeriodofAbstraction }}</div>
+              <p></p>
+              <div class="sourceofsupplyq">Maximum quantities:</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</p><p>") | replace( "per day", "per day</p><p>") | replace( "per year", "per year</p><p>") | replace( "Note", "</p><p>Note") | replace( "Per Hour", "per hour</p><p>") | replace( "Per Day", "per day</p><p>") | replace( "Per Year", "per year</p><p>") |safe }}</div>
               <p></p>
 
 
@@ -71,8 +71,7 @@
 
 
 
-    </div>
-  </div>
+
 
 </main>
 

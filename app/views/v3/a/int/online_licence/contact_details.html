@@ -7,6 +7,10 @@
 {% endblock %}
 {% block content %}
 
+  {% from "custom_inc/water_permits.html" import permits %}
+  {% for pNumber, pData in permits %}
+    {% if pNumber==chosenPermitID %}
+
 <main id="content" role="main">
     <div class="phase-banner-alpha">
       <p>
@@ -19,13 +23,12 @@
     <div class="breadcrumbs">
         <ol role="breadcrumbs">
           <li><a href="#">Your Services</a></li>
-          <li><a href="#">Abstraction Licences</a></li>
+          <li><a href="/v3/a/int/licences">Abstraction Licences</a></li>
+          <li><a href="/v3/a/int/online_licence?wid={{ pNumber }}">Licence no: {{ pData.LicenceSerialNo }}</a></li>
         </ol>
     </nav>
     </div>
 
-
-{% from "custom_inc/water_permits.html" import permits %}
 
 
   <h1 class="heading-large">
@@ -35,118 +38,73 @@
   <h2 class="heading-medium">
     Check your licence details are up to date
   </h2>
-  {% for pNumber, pData in permits %}
-    {% if pNumber==chosenPermitID %}
+    <p></p>
 <p>Licence no: {{ pData.LicenceSerialNo }}</p>
-
-  <table class="check-your-answers">
-    <thead>
-      <tr>
-        <th colspan="2">
-
-        </th>
-        <th>
-        </th>
-      </tr>
-    </thead>
-        <tbody>
-            <tr>
-              <td>
-                <h3 class="heading-small">
+<p></p>
+          <div class="siteaddress">
+            <p></p>
+                    <h2 class="heading-medium">
                   Site contact details
                 </h3>
-            </td>
-            <td>
-              <p></p>
-            <div class="sourceofsupplyq">Name: </div><div class="sourceofsupplya">{{ pData.FirstName }} {{ pData.Surname }}</div>
-            <p></p>
-              <div class="sourceofsupplyq">Address: </div> <div class="sourceofsupplya">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
-            <p></p>
-              <div class="sourceofsupplyq">Telephone: </div> <div class="sourceofsupplya">{{ pData.tel}}</div>
-              <p></p>
-              <div class="sourceofsupplyq">Email: </div><div class="sourceofsupplya">{{ pData.Email}}</div>
-              <p></p>
-            </td>
-            <td class="change-answer">
 
-              </a>
-            </td>
-    </tr>
-  </tbody>
-    <tbody>
-      <tr>
-        <td>
-          <h3 class="heading-small">
+              <p></p>
+            <div class="licenceLabel">Name: </div><div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
+            <p></p>
+              <div class="licenceLabel">Address: </div> <div class="licenceAnswer">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
+            <p></p>
+              <div class="licenceLabel">Telephone: </div> <div class="licenceAnswer">{{ pData.tel}}</div>
+              <p></p>
+              <div class="licenceLabel">Email: </div><div class="licenceAnswer">{{ pData.Email}}</div>
+              <p></p>
+</div>
+
+<div class="address">
+  <p></p>
+          <h2 class="heading-medium">
             Registered licence holder details
           </h3>
-        </td>
-        <td>
-          <p></p>
-        <div class="sourceofsupplyq">Name: </div><div class="sourceofsupplya">{{ pData.FirstName }} {{ pData.Surname }}</div>
-        <p></p>
-          <div class="sourceofsupplyq">Address: </div> <div class="sourceofsupplya">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
-        <p></p>
-          <div class="sourceofsupplyq">Telephone: </div> <div class="sourceofsupplya">{{ pData.tel}}</div>
-          <p></p>
-          <div class="sourceofsupplyq">Email: </div><div class="sourceofsupplya">{{ pData.Email}}</div>
-          <p></p>
-        </td>
-        <td class="change-answer">
 
-          </a>
-        </td>
-      </tr>
-      </tbody>
+          <p></p>
+        <div class="licenceLabel">Name: </div><div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
+        <p></p>
+          <div class="licenceLabel">Address: </div> <div class="licenceAnswer">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
+        <p></p>
+          <div class="licenceLabel">Telephone: </div> <div class="licenceAnswer">{{ pData.tel}}</div>
+          <p></p>
+          <div class="licenceLabel">Email: </div><div class="licenceAnswer">{{ pData.Email}}</div>
+          <p></p>
+        </div>
 
-      <tbody>
-      <tr>
-        <td>
-          <h3 class="heading-small">
+<div class="address">
+  <p></p>
+          <h2 class="heading-medium">
             Abstraction return contact details
           </h3>
-        </td>
-        <td>
           <p></p>
-        <div class="sourceofsupplyq">Name: </div><div class="sourceofsupplya">{{ pData.FirstName }} {{ pData.Surname }}</div>
+        <div class="licenceLabel">Name: </div><div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
         <p></p>
-          <div class="sourceofsupplyq">Address: </div> <div class="sourceofsupplya">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
+          <div class="licenceLabel">Address: </div> <div class="licenceAnswer">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
         <p></p>
-          <div class="sourceofsupplyq">Telephone: </div> <div class="sourceofsupplya">{{ pData.tel}}</div>
+          <div class="licenceLabel">Telephone: </div> <div class="licenceAnswer">{{ pData.tel}}</div>
           <p></p>
-          <div class="sourceofsupplyq">Email: </div><div class="sourceofsupplya">{{ pData.Email}}</div>
+          <div class="licenceLabel">Email: </div> <div class="licenceAnswer">{{ pData.Email}}</div>
           <p></p>
-        </td>
-        <td class="change-answer">
+</div>
 
-          </a>
-        </td>
-      </tr>
-      </tbody>
-
-      <tbody>
-      <tr>
-        <td>
-          <h3 class="heading-small">
+<div class="address">
+  <p></p>
+          <h2 class="heading-medium">
             Billing contact details
-          </h3>
-          <td>
+          </h2>
             <p></p>
-          <div class="sourceofsupplyq">Name: </div><div class="sourceofsupplya">{{ pData.FirstName }} {{ pData.Surname }}</div>
+          <div class="licenceLabel">Name: </div><div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
           <p></p>
-            <div class="sourceofsupplyq">Address: </div> <div class="sourceofsupplya">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
+            <div class="licenceLabel">Address: </div> <div class="licenceAnswer">{{ pData.Addressline1}}, {{ pData.Addressline3}}, {{ pData.County}}, {{ pData.Postcode}}.</div>
           <p></p>
-            <div class="sourceofsupplyq">Telephone: </div> <div class="sourceofsupplya">{{ pData.tel}}</div>
+            <div class="licenceLabel">Telephone: </div> <div class="licenceAnswer">{{ pData.tel}}</div>
             <p></p>
-            <div class="sourceofsupplyq">Email: </div><div class="sourceofsupplya">{{ pData.Email}}</div>
+            <div class="licenceLabel">Email: </div><div class="licenceAnswer">{{ pData.Email}}</div>
             <p></p>
-          </td>
-          <td class="change-answer">
-
-            </a>
-          </td>
-      </tr>
-      </tbody>
-  </table>
 </div>
   <div class='grid-row'>
     <div class='column-full'>

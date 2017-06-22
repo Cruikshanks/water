@@ -31,3 +31,11 @@ router.get('/v3/a/int/online_licence/terms', function (req, res) {
 })
 
 module.exports = router
+
+router.get('/v3/a/int/online_licence/map_of_abstraction_point', function (req, res) {
+  res.render('v3/a/int/online_licence/map_of_abstraction_point',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
