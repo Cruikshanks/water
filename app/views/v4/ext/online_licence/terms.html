@@ -52,6 +52,7 @@
 <button class="accordion">Point of abstraction</button>
 <div class="white_panel">
   <p>{{ pData.Pointofabstraction }}</p>
+  <a href="/v4/int/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a>
 </div></div>
 
 <div class="grey_line">
@@ -69,18 +70,24 @@
 <div class="white_panel">
   <p>{{ pData.Meansofmeasurement| replace( ".", ".</p><p>") | safe }}</p></div></div>
 
+  <div class="grey_line">
+  <button class="accordion">Maximum quantities</button>
+  <div class="white_panel">
+    <p>{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</p></div></div>
 
-<div class="grey_line">
+    <div class="grey_line">
+    <button class="accordion"  href="#hands_off">Hands off flow conditions</button>
+    <div class="white_panel">
+      <p>{{ pData.handsOffFlowDescfull | replace( ". ", ".<p></p>") |safe }}</p></div></div>
+
+
+<div class="grey_line_bottom">
 <button class="accordion">Records</button>
 <div class="white_panel">
   <p>{{ pData.records| replace( ".", ".</p><p>" ) | safe }}</p></div></div>
 
 
-<div class="grey_line_bottom">
-<button class="accordion">Maps</button>
-<div class="white_panel">
-<a href="/v4/ext/online_licence/map_of_abstraction_point?wid={{ pNumber }}">Map of abstraction point</a></p>
-</div></div></div></div>
+</div></div>
 <p></p>
 <a href="/v4/ext/online_licence?wid={{ pNumber }}" >< Back to previous</a>
 

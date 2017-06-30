@@ -43,7 +43,7 @@
 							<div class="sourceofsupplyq">Licence holder:</div> <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</br>
               <a href="/v4/int/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
               <p></p>
-							<div class="sourceofsupplyq">Abstraction point:</div> <div class="licenceAnswer">{{ pData.Addressline1}}</br>{{ pData.Addressline3}}</br>{{ pData.County}}</br>{{ pData.Postcode}}. <p></p>{{ pData.Pointofabstraction}}</div>
+              <div class="sourceofsupplyq">Point of abstraction:</div> <div class="licenceAnswer">{{ pData.Pointofabstraction}}</br><a href="/v4/int/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
               <p></p>
               <div class="sourceofsupplyq">Licence effective from:</div> <div class="licenceAnswer">{{ pData.EffectiveDateStart }}</div>
               <p></p>
@@ -55,7 +55,6 @@
               <p></p>
               <div class="sourceofsupplyq">Maximum quantities:</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
               <p></p>
-
               <div class="panel panel-border-wide">
 
                 <h3 class="heading-small">Hands off flow restriction</h3>
