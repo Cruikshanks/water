@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+  <div class="column-full">
+
+      <h1 class="heading-xlarge">
+        View my water resource licence online prototype: Alpha<h1>
+
+<p>Prototype for Water abstraction licence online. Alpha sprint 4.</p>
+
+<h2 class="heading-medium">Prototype version 4</h1></div>
+
+<div class='column-one-third'>
+      <h2 class="heading-medium">Internal licences</h2>
+			<ul class="list list-bullet">
+        <li>
+          <a href="/v4/int/signin">
+            Sign in
+          </a>
+        </li>
+        <li>
+          <a href="/v4/int/licences">
+            Abstraction licences
+          </a>
+        </li>
+        <li>
+          <a href="/v4/int/online_licence?wid=1">
+            Licence
+          </a>
+        </li>
+        <li>
+					<a href="/v4/int/online_licence/terms?wid=1">
+						Licence terms
+					</a>
+				</li>
+        <li>
+					<a href="/v4/int/online_licence/contact_details?wid=1">
+						Contact details
+					</a>
+				</li>
+			</ul>
+    </div>
+    <div class='column-one-third'>
+      <h2 class="heading-medium">External licences</h2>
+
+      <ul class="list list-bullet">
+        <li>
+          <a href="/v4/ext/signin">
+            Sign in
+          </a>
+        </li>
+        <li>
+          <a href="/v4/ext/licences">
+            Abstraction licences
+          </a>
+        </li>
+        <li>
+          <a href="/v4/ext/online_licence">
+            Licence
+          </a>
+        </li><li>
+          <a href="/v4/ext/online_licence/terms">
+            Licence terms
+          </a>
+        </li>
+        <li>
+          <a href="/v4/ext/online_licence/contact_details">
+            Contact details
+          </a>
+        </li>
+      </ul>
+          </div>
+  </div>
+</main>
+
+{% endblock %}
