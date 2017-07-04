@@ -35,14 +35,7 @@
     <h1 class="heading-large">{{ pData.LicenceName }} water abstraction licence</h1>
     <p></p>
 
-    <div class="panel panel-border-wide">
-
-      <h3 class="heading-small">  {{ pData.handsOffFlow }}</h3>
-
-      <p>{{ pData.LicenceName }} {{ pData.handsOffFlowDesc| replace( "handsOffFlowDesc", "water abstraction licence has a hands off flow condition.</br>This will affect the licensed maximum quantity to abstract." ) | safe }}
-      </br><a href="/v4/int/online_licence/terms?wid={{ pNumber }}">{{ pData.handsOffFlowLink| replace( "link", "Read your licence hands off flow condition" ) | safe }}</a></div>
-
-              <p></p>
+  <p></p>
 							<div class="sourceofsupplyq">Licence holder:</div> <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</br>
               <a href="/v4/int/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
               <p></p>
@@ -57,10 +50,16 @@
               <div class="sourceofsupplyq">Period of abstraction:</div> <div class="licenceAnswer">{{ pData.PeriodofAbstraction }}</div>
               <p></p>
               <div class="sourceofsupplyq">Maximum quantities:</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
-              <p></p>
-                  </br>
 
+                  <div class="panel panel-border-wide">
 
+                    <h3 class="heading-small">  {{ pData.handsOffFlow }}</h3>
+
+                    <p>{{ pData.LicenceName }} {{ pData.handsOffFlowDesc| replace( "handsOffFlowDesc", "water abstraction licence has a hands off flow condition.</br>This will affect the licensed maximum quantity to abstract." ) | safe }}
+                    </br><a href="/v4/int/online_licence/terms?wid={{ pNumber }}">{{ pData.handsOffFlowLink| replace( "link", "Read your licence hands off flow condition" ) | safe }}</a></div>
+<p></p>
+
+</br>
 
               <p><a href="/v4/int/online_licence/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
 
