@@ -50,17 +50,17 @@
               <p></p>
               <div class="sourceofsupplyq">Period of abstraction:</div> <div class="licenceAnswer">{{ pData.PeriodofAbstraction }}</div>
 <p></p>
-              <div class="sourceofsupplyq">Hands off flow condition:</div> <div class="licenceAnswer">Yes, this licence has a hands off flow condition<details>
+              <div class="sourceofsupplyq">Hands off flow condition:</div> <div class="licenceAnswer">This licence has {{ pData.handsOffFlow }}<details>
 
-  <summary><span class="summary">Learn how this affects the amount you can abstract</span></summary>
+  <summary><span class="summary">{{ pData.handsOffFlowHelp }}</span></summary>
 
   <div class="panel panel-border-narrow">
 
 
-      <h3 class="heading-small">  {{ pData.handsOffFlow }}</h3>
+      <h3 class="heading-small">What is a hands off flow condition?</h3>
 
-      <p>A hands off flow condition is a licence condition which applies to water abstraction licences, to protect our water levels in times of low water supply.</p> <p>Your hands off flow condition will affect the licensed maximum amount you can abstract.</p>
-      <a href="/v4/int/online_licence/terms?wid={{ pNumber }}">{{ pData.handsOffFlowLink| replace( "link", "Read your licence hands off flow condition" ) | safe }}</a>
+      <p>A licence condition which applies to some water abstraction licences, to protect our water levels in times of low water supply.</p> <p>A hands off flow condition will affect the licensed maximum amount you can abstract.</p>
+      <a href="/v4/ext/online_licence/terms?wid={{ pNumber }}">{{ pData.handsOffFlowLink| replace( "link", "Read your licence hands off flow condition" ) | safe }}</a>
 
   </div></div>
 
