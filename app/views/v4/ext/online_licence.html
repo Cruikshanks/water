@@ -51,15 +51,25 @@
               <div class="sourceofsupplyq">Period of abstraction:</div> <div class="licenceAnswer">{{ pData.PeriodofAbstraction }}</div>
               <p></p>
               <div class="sourceofsupplyq">Maximum quantities:</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
+            </br>
+              <div class="sourceofsupplyq">Hands off flow condition:</div> <div class="licenceAnswer">Yes, this licence has a hands off flow condition<details>
+
+  <summary><span class="summary">Learn how this condition affects my maximum quanities</span></summary>
+
+  <div class="panel panel-border-narrow">
+
+
+      <h3 class="heading-small">  {{ pData.handsOffFlow }}</h3>
+
+      <p>{{ pData.LicenceName }} {{ pData.handsOffFlowDesc| replace( "handsOffFlowDesc", "water abstraction licence has a hands off flow condition.</br>This will affect the licensed maximum quantity to abstract." ) | safe }}
+      </br><a href="/v4/int/online_licence/terms?wid={{ pNumber }}">{{ pData.handsOffFlowLink| replace( "link", "Read your licence hands off flow condition" ) | safe }}</a>
+
+  </div></div>
+
+</details>
   </br>
 
-                    <div class="panel panel-border-wide">
-
-                      <h3 class="heading-small">  {{ pData.handsOffFlow }}</h3>
-
-                      <p>{{ pData.LicenceName }} {{ pData.handsOffFlowDesc| replace( "handsOffFlowDesc", "water abstraction licence has a hands off flow condition.</br>This will affect the licensed maximum quantity to abstract." ) | safe }}
-                      </br><a href="/v4/int/online_licence/terms?wid={{ pNumber }}">{{ pData.handsOffFlowLink| replace( "link", "Read your licence hands off flow condition" ) | safe }}</a></div>
-  <p></p>
+                    
 
   </br>
 
