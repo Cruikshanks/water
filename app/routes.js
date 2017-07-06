@@ -101,3 +101,11 @@ router.get('/v4/ext/online_licence/map_of_abstraction_point', function (req, res
 })
 
 module.exports = router
+
+router.get('/v4/int/accordion', function (req, res) {
+  res.render('v4/int/accordion',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
