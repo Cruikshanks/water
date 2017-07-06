@@ -49,15 +49,26 @@
               <p></p>
               <div class="sourceofsupplyq">Period of abstraction:</div> <div class="licenceAnswer">{{ pData.PeriodofAbstraction }}</div>
               <p></p>
-              <div class="sourceofsupplyq">Maximum quantities:</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
+              <div class="sourceofsupplyq">Hands off flow condition:</div> <div class="licenceAnswer">This licence has {{ pData.handsOffFlow }}<details>
 
-                  <div class="panel panel-border-wide">
+  <summary><span class="summary">{{ pData.handsOffFlowHelp }}</span></summary>
 
-                    <h3 class="heading-small">  {{ pData.handsOffFlow }}</h3>
+  <div class="panel panel-border-narrow">
 
-                    <p>{{ pData.LicenceName }} {{ pData.handsOffFlowDesc| replace( "handsOffFlowDesc", "water abstraction licence has a hands off flow condition.</br>This will affect the licensed maximum quantity to abstract." ) | safe }}
-                    </br><a href="/v4/int/online_licence/terms?wid={{ pNumber }}">{{ pData.handsOffFlowLink| replace( "link", "Read your licence hands off flow condition" ) | safe }}</a></div>
-<p></p>
+
+      <h3 class="heading-small">What is a hands off flow condition?</h3>
+
+      <p>A licence condition which applies to some water abstraction licences, to protect our water levels in times of low water supply.</p> <p>A hands off flow condition will affect the licensed maximum amount you can abstract.</p>
+      <a href="/v4/int/online_licence/terms?wid={{ pNumber }}">{{ pData.handsOffFlowLink| replace( "link", "Read your licence hands off flow condition" ) | safe }}</a>
+
+  </div></div>
+
+</details>
+
+</br>
+  </br>
+  <div class="sourceofsupplyq">Maximum quantities before conditions:</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
+
 
 </br>
 
