@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% include "includes/phase_banner_alpha.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+  Water abstraction licence
+{% endblock %}
+{% block content %}
+
+  {% from "custom_inc/water_permits.html" import permits %}
+  {% for pNumber, pData in permits %}
+    {% if pNumber==chosenPermitID %}
+
+<main id="content" role="main">
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+    </div>
+<nav>
+<div class="breadcrumbs">
+<ol role="breadcrumbs">
+<li><a href="#">Your services</a></li>
+<li><a href="/v5/licences">Abstraction licences</a></li>
+<li><a href="/v5/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+</ol>
+</div>
+</nav>
+<a href="/v5/signin" class="sign-out2">Sign out</a>
+
+      <figure>
+        <img src="/public/images/map.png" alt="Map">
+      </figure>
+      <p></p>
+
+      <a href="/v5/online_licence/terms?wid={{ pNumber }}" onclick="history.go(-1)">< Back to previous</a>.
+
+      {% endif %}
+      {% endfor %}
+
+  </main>
+
+{% endblock %}
