@@ -141,3 +141,19 @@ router.get('/v5/sketch1', function (req, res) {
 })
 
 module.exports = router
+
+router.get('/v5/sketch2', function (req, res) {
+  res.render('v5/sketch2',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v5/sketch3', function (req, res) {
+  res.render('v5/sketch3',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router

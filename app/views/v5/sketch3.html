@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% from "custom_inc/water_permits.html" import permits %}
+
+
+
+    {% for pNumber, pData in permits %}
+      {% if pNumber==chosenPermitID %}
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+            </div>
+    <nav>
+    <div class="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="#">Your services</a></li>
+          <li><a href="/v5/licences">Abstraction licences</a></li>
+          <li><a href="/v5/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        </ol>
+    </nav>
+ </div>
+ <a href="#" class="sign-out2">Sign out</a>
+<div class='grid-row'>
+    <h1 class="heading-large">{{ pData.LicenceName }} water abstraction licence</h1>
+
+      <div class="column-one-half">
+      <ol class="list list-number">
+      <li><a href="#licenceno">Licence number</a></li>
+      <li><a href="#licenceholder">Licence holder</a></li>
+      <li><a href="#source">Source of supply</a></li>
+      <li><a href="#pointofabs">Point of abstraction</a></li>
+    <li><a href="#purpose">Purpose of abstraction</a></li>
+    </ol>
+    </div>
+      <div class="column-one-half">
+<ol class="list list-number"  start="5">
+
+      <li><a href="#meansabs">Means of abstraction</a></li>
+      <li><a href="#means">Means of measurement</a></li>
+      <li><a href="#maxquant">Maximum quantities before conditions</a></li>
+      <li><a href="#flowconditions">Flow conditions</a></li>
+    <li><a href="#records">Records</a></li>
+    </ol>
+</div>
+</div>
+
+<div class='grid-row'>
+<div class='column-two-thirds'>
+
+  <h3 class="heading-small"id="licenceno">Licence number:</h3>
+  <p>{{ pData.LicenceSerialNo }}</p>
+<p></p>
+
+  <h3 class="heading-small"id="licenceholder">Licence holder:</h3>
+  <p>{{ pData.FirstName }} {{ pData.Surname }}
+  <a href="#">Licence contact details</a></p>
+<p></p>
+
+<h3 class="heading-small"id="source">Source of supply</h3>
+<p>{{ pData.SourceofSupply }}</p>
+<p></p>
+
+<h3 class="heading-small" id="pointofabs">Point of abstraction</h3>
+<p>{{ pData.Pointofabstraction }}
+<a href="#">View map</a></p>
+<p></p>
+<h3 class="heading-small" id="purpose">Purpose of abstraction</h3>
+<p>{{ pData.Purposeofabstraction }}</p>
+<p></p>
+<h3 class="heading-small" id="meansabs">Means of abstraction</h3>
+<p>{{ pData.Meansofabstraction }}</p>
+<p></p>
+<h3 class="heading-small" id="means">Means of measurement</h3>
+<p>{{ pData.Meansofmeasurement| replace( ".", ".</p><p>") | safe }}</p>
+<p></p>
+<h3 class="heading-small" id="maxquant">Maximum quantities before conditions</h3>
+  <p>{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</p>
+<p></p>
+<h3 class="heading-small" id="flowconditions">Flow conditions</h3>
+    <p>{{ pData.handsOffFlowDescfull | replace( ". ", ".<p></p>") | replace ("CESSATION CONDITION", "CESSATION CONDITION<p></p>") | safe }}</p>
+<p></p>
+<h3 class="heading-small" id="records">Records</h3>
+<p>{{ pData.records| replace( ".", ".</p><p>" ) | safe }}</p>
+
+
+</div></div>
+<p></p>
+
+              <a href="#"><p></p>< Back to previous</a>
+
+              {% endif %}
+
+          {% endfor %}
+
+
+
+
+
+</main>
+
+{% endblock %}
