@@ -1,0 +1,224 @@
+{% extends "layout.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% from "custom_inc/water_permits.html" import permits %}
+
+
+
+    {% for pNumber, pData in permits %}
+      {% if pNumber==chosenPermitID %}
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+            </div>
+    <nav>
+    <div class="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="#">Your services</a></li>
+          <li><a href="/v5/licences">Abstraction licences</a></li>
+          <li><a href="/v5/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        </ol>
+    </nav>
+ </div>
+ <a href="#" class="sign-out2">Sign out</a>
+ <h1 class="heading-large">{{ pData.LicenceName }} water abstraction licence</h1>
+<div class='grid-row'>
+      <div class="column-one-half">
+        <ul class="tab">
+          <li><a href="javascript:void(0)" class="tabbedlinksadt" onclick="openCity3(event, 'source')">Source of supply</a></li>
+          <li><a href="javascript:void(0)" class="tabbedlinksadt" onclick="openCity3(event, 'pointofabs')">Point of abstraction</a></li>
+          <li><a href="javascript:void(0)" class="tabbedlinksadt" id="defaultOpen" onclick="openCity3(event, 'purpose')">Purpose of abstraction</a></li>
+          <li><a href="javascript:void(0)" class="tabbedlinksadt" onclick="openCity3(event, 'meansabs')">Means of abstraction</a></li>
+          <li><a href="javascript:void(0)" class="tabbedlinksadt" onclick="openCity3(event, 'E2E')">Means of measurement</a></li>
+        </ul>
+        </div>
+      <div class="column-one-third">
+        <ul class="tab">
+          <li><a href="javascript:void(0)" class="tabbedlinksadt" onclick="openCity3(event, 'unity')">Maximum quantities before conditions</a></li>
+          <li><a href="javascript:void(0)" class="tabbedlinksadt" onclick="openCity3(event, 'data')">Flow conditions</a></li>
+          <li><a href="javascript:void(0)" class="tabbedlinksadt" onclick="openCity3(event, 'skillz')">Records</a></li>
+          <li><a href="javascript:void(0)" class="tabbedlinksadt" onclick="openCity3(event, 'notes')">Important notes</a></li>
+        </ul>
+        </div>
+</div>
+</div>
+
+<div class='grid-row'>
+
+  <div class="column-one-half">
+  <h3 class="heading-small"id="licenceno">Licence number:</h3>
+  <p>{{ pData.LicenceSerialNo }}</p>
+<p></p></div>
+  <div class="column-one-half">
+  <h3 class="heading-small"id="licenceholder">Licence holder:</h3>
+  <p>{{ pData.FirstName }} {{ pData.Surname }}
+<p></p></div></div>
+
+    <div class='grid-row'>
+<div class='column-two-thirds'>
+
+    <div class="grey_line_bottomh3"></div>
+<p></p>
+</div>
+
+
+<div class="column-two-thirds">
+  <div id="source" class="tabbedcontentadt">
+  <h3 class="heading-medium">Source of supply</h3>
+  <p>{{ pData.SourceofSupply }}</p>
+  <p></p></div>
+
+  <div id="pointofabs" class="tabbedcontentadt">
+  <h3 class="heading-medium">Point of abstraction</h3>
+  <p>{{ pData.Pointofabstraction }}
+  <a href="#">View map</a></p>
+  <p></p></div>
+
+  <div id="purpose" class="tabbedcontentadt">
+  <h3 class="heading-medium">Purpose of abstraction</h3>
+<p>{{ pData.Purposeofabstraction }}</p></div>
+
+  <div id="meansabs" class="tabbedcontentadt">
+  <h3 class="heading-medium">Means of abstraction</h3>
+<p>{{ pData.Meansofabstraction }}</p></div>
+
+<div id="E2E" class="tabbedcontentadt">
+<h3 class="heading-medium">Means of measurement</h3>
+<p>{{ pData.Meansofmeasurement| replace( ".", ".</p><p>") | safe }}</p></div>
+
+<div id="unity" class="tabbedcontentadt">
+<h3 class="heading-medium">Maximum quantities before conditions</h3>
+<p>{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</p>
+
+</div>
+<div id="data" class="tabbedcontentadt">
+<h3 class="heading-medium">Flow conditions</h3>
+<p>{{ pData.handsOffFlowDescfull | replace( ". ", ".<p></p>") | replace ("CESSATION CONDITION", "CESSATION CONDITION<p></p>") | safe }}</p>
+
+</div>
+<div id="skillz" class="tabbedcontentadt">
+<h3 class="heading-medium">Records</h3>
+<p>{{ pData.records| replace( ".", ".</p><p>" ) | safe }}</p>
+</div>
+
+<div id="notes" class="tabbedcontentadt">
+<h3 class="heading-medium">Important notes</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus iaculis semper. Curabitur sodales tincidunt ligula, sit amet commodo diam porta ut. Vivamus facilisis, lacus et consectetur dapibus, felis nibh pharetra mi, sed tincidunt risus metus et enim. Maecenas pulvinar at libero nec consectetur. Nam diam nunc, mattis et ullamcorper et, placerat nec turpis. Ut tempus ipsum vel sem tincidunt, at porta diam aliquam. Mauris hendrerit consectetur congue. Vivamus rutrum neque eu nisl convallis dignissim. Donec vel dui a odio faucibus ullamcorper non vehicula arcu. Phasellus rutrum molestie nulla eget lobortis. Cras ut augue non odio condimentum porttitor ut et ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam congue sem ante. Quisque odio risus, vestibulum eget feugiat ut, bibendum eu erat.
+
+</p>
+</div>
+
+<p></p>
+<a href="#">View licence contact details</a>
+<p></p>
+
+</div>
+</div>
+
+<script>
+
+function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+// Show the current tab, and add an "active" class to the link that opened the tab
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+window.scrollBy(0, 000);
+
+function openCity2(evt, cityName) {
+    // Declare all variables
+    var i, tabbedcontent, tabbedlinks;
+
+    // Get all elements with class="tabbedcontent" and hide them
+    tabbedcontent = document.getElementsByClassName("tabbedcontent");
+    for (i = 0; i < tabbedcontent.length; i++) {
+        tabbedcontent[i].style.display = "none";
+    }
+
+
+    // Get all elements with class="tabbedlinks" and remove the class "active"
+    tabbedlinks = document.getElementsByClassName("tabbedlinks");
+    for (i = 0; i < tabbedlinks.length; i++) {
+        tabbedlinks[i].className = tabbedlinks[i].className.replace(" active", "");
+    }
+
+// Show the current tab, and add an "active" class to the link that opened the tab
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen2").click();
+window.scrollBy(0, 000);
+
+function openCity3(evt, cityName) {
+    // Declare all variables
+    var i, tabbedcontentadt, tabbedlinksadt;
+
+    // Get all elements with class="tabbedcontentADT" and hide them
+    tabbedcontentadt = document.getElementsByClassName("tabbedcontentadt");
+    for (i = 0; i < tabbedcontentadt.length; i++) {
+        tabbedcontentadt[i].style.display = "none";
+    }
+
+
+    // Get all elements with class="tabbedlinks" and remove the class "active"
+    tabbedlinksadt = document.getElementsByClassName("tabbedlinksadt");
+    for (i = 0; i < tabbedlinksadt.length; i++) {
+        tabbedlinksadt[i].className = tabbedlinksadt[i].className.replace(" active", "");
+    }
+
+// Show the current tab, and add an "active" class to the link that opened the tab
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen3").click();
+window.scrollBy(0, 000);
+
+
+</script>
+
+
+</div></div>
+<p></p>
+
+              <a href="#"><p></p>< Back to previous</a>
+
+              {% endif %}
+
+          {% endfor %}
+
+
+
+
+
+</main>
+
+{% endblock %}
