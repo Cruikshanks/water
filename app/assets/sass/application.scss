@@ -40,6 +40,22 @@ $path: "/public/images/";
   padding-right: 0.25em;
   width: 20%;
 }
+.sourceofsupplyqs {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 0px;
+  padding-right: 0.25em;
+  width: 20%;
+}
+
+.sourceofsupplyqstop {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  padding-right: 0.25em;
+  width: 20%;
+}
 
 .licenceLabel {
   display: inline-block;
@@ -66,10 +82,15 @@ $path: "/public/images/";
 .sourceofsupplya {
   display: inline-block;
   width: 50%;
-  padding-bottom: 7px;
   padding-left: 1em;
 }
 
+.sourceofsupplyatop {
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 7px;
+  padding-left: 1em;
+}
 .licenceAnswer {
   display: inline-block;
   width: 50%;
@@ -77,6 +98,21 @@ $path: "/public/images/";
   padding-left: 1em;
 }
 
+.licenceAnswers {
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 0px;
+  padding-top: 5px;
+  padding-left: 1em;
+}
+
+.licenceAnswerstop {
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  padding-left: 1em;
+}
 .name {
   display: inline-block;
   width: 50%;
@@ -111,6 +147,11 @@ margin-top: 1.4em;
 
 .sign-out2 {
 float: right;
+}
+
+.openall{
+float: right;
+padding-bottom: 0px;
 }
 
 .check-all-contact-details {
@@ -194,6 +235,11 @@ button.accordion.active, button.accordion:hover, a.accordion.active, a.accordion
 
 div.grey_line {
   border-top: 1px solid #bfc1c3;
+}
+
+div.grey_line_bottomh3 {
+border-bottom: 1px solid #bfc1c3;
+padding-bottom: 0px;
 }
 
 div.grey_line_bottom {
