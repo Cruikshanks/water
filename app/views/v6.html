@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+  <div class="column-full">
+
+      <h1 class="heading-xlarge">
+        View my water resource licence online prototype: Alpha<h1>
+
+<p>Prototype for Water abstraction licence online. Alpha sprint 6.</p>
+
+<h2 class="heading-medium">Prototype version 6</h1></div>
+
+<div class='column-two-thirds'>
+			<ul class="list list-bullet">
+        <li>
+          <a href="/v6/signin">
+            Sign in
+          </a>
+        </li>
+        <li>
+          <a href="/v6/licences">
+            Abstraction licences
+          </a>
+        </li>
+        <li>
+          <a href="/v6/online_licence?wid=1">
+            Licence
+          </a>
+        </li>
+        <li>
+					<a href="/v6/online_licence/terms?wid=1">
+						Licence terms
+					</a>
+				</li>
+        <li>
+					<a href="/v6/online_licence/contact_details?wid=1">
+						Contact details
+					</a>
+				</li>
+			</ul>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}
