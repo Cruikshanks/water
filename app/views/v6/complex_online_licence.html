@@ -47,18 +47,19 @@
 
               <summary><span class="summary">See details of all licence abstraction points</span></summary>
 
-              <div class="panel panel-border">
+              <div class="maxquantlist">
 
-              {{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a>
+            Abstraction point 1</br>
+                          {{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map for point 1</a>
 
 
 
             <p></p>
-      {{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a>
-          <p></p>
-          {{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a>
+      Abstraction point 2</br>{{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map for point 2</a>
+    </br>
+          <p></p>Abstraction point 3</br>{{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map for point 3</a>
         <p></p>
-        {{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a>
+        Abstraction point 4</br>{{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map for point 4</a>
       <p></p>
 
   </details></div></div><p></p>
@@ -90,23 +91,38 @@
   </div></div>
 
 </details>
+
+  <p></p>
+  <div class="sourceofsupplyq">Linked licence conditions:</div><div class="licenceAnswer">Maximum quantities for this licence can be affected by conditions in other licences
+
+  <details>
+
+
+
+  <summary><span class="summary">See details of licences with shared conditions</span></summary>
+
+  <div class="maxquantlist">
+
+  Bridge farm - licence number: 03/28/60/0002</br><a href="/v6/online_licence/terms?wid={{ pNumber }}#flowconditions">View condition for 03/28/60/0002</a>
+  <p></p>
+  West Power - licence number: 03/28/60/0004</br><a href="/v6/online_licence/terms?wid={{ pNumber }}#flowconditions">View condition for 03/28/60/0004</a>
+  <p></p>
+  Valley's water - licence number: 03/28/60/0003</br><a href="/v6/online_licence/terms?wid={{ pNumber }}#flowconditions">View condition for 03/28/60/0003</a>
+  <p></p>
+
+  </details></div></div>
 </br>
   </br>
-  <div class="sourceofsupplyq">Maximum quantities before conditions:</div><div class="licenceAnswer"><details>
-
-
-
+  <div class="sourceofsupplyq">Maximum quantities before conditions:</div><div class="licenceAnswer">
+    <details>
+      <p></p>
 <summary><span class="summary">Maximum quantities for each abstraction point</span></summary>
-
-
-
+<div class="maxquant">
 <details>
-
-
 
 <summary><span class="summary">At National Grid Reference SK 496308</span></summary>
 
-<div class="panel panel-border">
+<div class="maxquantlist">
 {{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}
 
 </div>
@@ -114,7 +130,7 @@
 
 <details><summary><span class="summary">At National Grid Reference SK 496308</span></summary>
 
-<div class="panel panel-border">
+<div class="maxquantlist">
 {{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}
 
 </div>
@@ -122,17 +138,19 @@
 
 <details><summary><span class="summary">At National Grid Reference SK 496308</span></summary>
 
-<div class="panel panel-border">
+<div class="maxquantlist">
 {{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}
 
 </div>
 </details>
-
+<p></p>
+</div>
 </details>
+
 <details>
 <summary><span class="summary">Total maximum quantities across abstraction points</span></summary>
 
-<div class="panel panel-border">
+<div class="maxquantlist">
 {{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}
 
 </div>
