@@ -205,3 +205,11 @@ router.get('/v6/online_licence/map_of_abstraction_point', function (req, res) {
 })
 
 module.exports = router
+
+router.get('/v6/complex_online_licence', function (req, res) {
+  res.render('v6/complex_online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
