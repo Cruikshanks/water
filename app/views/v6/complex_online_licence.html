@@ -8,13 +8,21 @@
 
 {% block content %}
 
+
 <main id="content" role="main">
+
   {% from "custom_inc/water_permits.html" import permits %}
 
 
 
     {% for pNumber, pData in permits %}
       {% if pNumber==chosenPermitID %}
+
+      <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W64QRBS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="phase-banner-alpha">
       <p>
       <strong class="phase-tag">ALPHA</strong>
