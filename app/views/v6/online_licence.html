@@ -49,7 +49,7 @@
               <p></p>
               <div class="sourceofsupplyq">Period of abstraction:</div> <div class="licenceAnswer">{{ pData.PeriodofAbstraction }}</div>
               <p></p>
-              <div class="sourceofsupplyq">Flow condition:</div> <div class="licenceAnswer">This licence has {{ pData.handsOffFlow }}<details>
+              <div class="sourceofsupplyq">Abstraction conditions:</div> <div class="licenceAnswer">This licence has {{ pData.handsOffFlow }}<details>
 
 
 
@@ -61,11 +61,37 @@
       <h3 class="heading-small">What is a flow condition?</h3>
 
       <p>A licence condition which applies to some water abstraction licences, to protect our water levels in times of low surface water supply.</p> <p>A flow condition will affect the licensed maximum amount you can abstract.</p>
-      <a href="/v6/online_licence/terms?wid={{ pNumber }}#flowconditions">{{ pData.handsOffFlowLink| replace( "link", "Read your licence flow condition" ) | safe }}</a>
+      <a href="/v6/online_licence/terms?wid={{ pNumber }}#abstractionconditions">{{ pData.handsOffFlowLink| replace( "link", "Read your licence flow condition" ) | safe }}</a>
 
-  </div></div>
+  </div></details>
+</br>
+  This licence has an eel screening condition
 
-</details>
+  <details><summary><span class="summary">{{ pData.handsOffFlowHelp }}</span></summary>
+
+  <div class="panel panel-border-narrow">
+
+
+      <h3 class="heading-small">What is an eel screening condition?</h3>
+
+      <p>A licence condition which applies to some water abstraction licences, to protect our water levels in times of low surface water supply.</p> <p>A flow condition will affect the licensed maximum amount you can abstract.</p>
+      <a href="/v6/online_licence/terms?wid={{ pNumber }}#abstractionconditions">{{ pData.handsOffFlowLink| replace( "link", "Read your licence flow condition" ) | safe }}</a>
+
+  </details>
+</br>
+  This licence has a fish passage condition
+
+  <details><summary><span class="summary">{{ pData.handsOffFlowHelp }}</span></summary>
+
+  <div class="panel panel-border-narrow">
+
+
+      <h3 class="heading-small">What is an fish passage condition?</h3>
+
+      <p>A licence condition which applies to some water abstraction licences, to protect our water levels in times of low surface water supply.</p> <p>A flow condition will affect the licensed maximum amount you can abstract.</p>
+      <a href="/v6/online_licence/terms?wid={{ pNumber }}#abstractionconditions">{{ pData.handsOffFlowLink| replace( "link", "Read your licence flow condition" ) | safe }}</a>
+
+  </details></div></div></div></div>
 
 </br>
   </br>
