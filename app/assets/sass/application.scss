@@ -12,9 +12,23 @@ $path: "/public/images/";
 
 
 
-
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.datatabletop {
+border-top: 1px solid #bfc1c3;
+padding-top: 0.5em;
+}
+
+.datatable {
+border-top: 1px solid #bfc1c3;
+padding-top: 0.5em;
+}
+
+.datatablebottom {
+border-top: 1px solid #bfc1c3;
+border-bottom: 1px solid #bfc1c3;
+padding-top: 0.5em;
+}
 
 .maxquant {
   padding-left: 1.75em;

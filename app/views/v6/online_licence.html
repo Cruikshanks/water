@@ -36,45 +36,39 @@
     <p></p>
 
   <p></p>
+  <div class="datatabletop">
 							<div class="sourceofsupplyq">Licence holder:</div> <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</br>
               <a href="/v6/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
-              <p></p>
+          </div>
+            <div class="datatable">
               <div class="sourceofsupplyq">Point of abstraction:</div> <div class="licenceAnswer">{{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
-              <p></p>
+            </div>
+<div class="datatable">
               <div class="sourceofsupplyq">Licence effective from:</div> <div class="licenceAnswer">{{ pData.EffectiveDateStart }}</div>
-              <p></p>
+              </div>
+              <div class="datatable">
               <div class="sourceofsupplyq">Licensed until:</div> <div class="licenceAnswer">{{ pData.EffectiveDateend }}</div>
-              <p></p>
+            </div>
+            <div class="datatable">
               <div class="sourceofsupplyq">Source of supply:</div> <div class="licenceAnswer">{{ pData.SourceofSupply }}</div>
-              <p></p>
+            </div>
+            <div class="datatable">
               <div class="sourceofsupplyq">Period of abstraction:</div> <div class="licenceAnswer">{{ pData.PeriodofAbstraction }}</div>
-              <p></p>
-              <div class="sourceofsupplyq">Abstraction conditions:</div> <div class="licenceAnswer">This licence has {{ pData.handsOffFlow }}<details>
+            </div>
+            <div class="datatable">
+              <div class="sourceofsupplyq">Abstraction conditions:</div> <div class="licenceAnswer">This licence has {{ pData.handsOffFlow }}.
 
 
 
-  <summary><span class="summary">{{ pData.handsOffFlowHelp }}</span></summary>
 
-  <div class="panel panel-border-narrow">
-
-
-      <h3 class="heading-small">What is a flow condition?</h3>
-
-      <p>A licence condition which applies to some water abstraction licences, to protect our water levels in times of low surface water supply.</p> <p>A flow condition will affect the licensed maximum amount you can abstract, or whether you can abstract, in times of low supply.</p>
-
-
-  </div></details>
+<p></p>  {{ pData.EelandFish }}
 </br>
-  This licence also has both an eel screening, and a fish passage condition.
+  <a href="/v6/online_licence/terms?wid={{ pNumber }}#abstractionconditions">Read all abstraction conditions</a>
 </br>
-  <a href="/v6/online_licence/terms?wid={{ pNumber }}#abstractionconditions">Read all licence conditions</a>
-</br>
-</div></div>
-
-</br>
-  </br>
-  <div class="sourceofsupplyq">Maximum quantities before conditions:</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
-
+</div></div></div>
+<div class="datatablebottom">
+  <div class="sourceofsupplyq">Maximum quantities before conditions:</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
+</div>
 
 </br>
 
