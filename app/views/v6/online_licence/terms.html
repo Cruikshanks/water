@@ -179,6 +179,12 @@
               <div class="subsection__content js-subsection-content" id="subsection_content_3">
                 </p>{{ pData.handsOffFlowDescfull | replace( ". ", ".<p></p>") | replace("CESSATION CONDITION", "<strong>Cessation condition</strong><p></p>") | safe }}
 <p></p>
+</p>{{ pData.Augmentationandcompensationconditions | replace( ". ", ".<p></p>") | replace("Augmentationandcompensationconditions", "<strong>Augmentation and compensation conditions</strong><p></p>") | safe }}
+<p></p>
+</p>{{ pData.timeLimitingabstractionstart | replace( ". ", ".<p></p>") | replace("Time limiting abstraction start", "<strong>Time limiting - abstraction start</strong><p></p>") | safe }}
+<p></p>
+</p>{{ pData.timeLimitingconditions | replace( ". ", ".<p></p>") | replace("Time limiting conditions", "<strong>Time limiting - conditions</strong><p></p>") | safe }}
+<p></p>
                 <p><strong>Eel screening condition</strong></p>{{ pData.EelScreening | replace(".", ".<p></p>") | safe }}
 
                 <p><strong>Fish passage condition</strong></p>{{ pData.FishPassage | replace(".", ".<p></p>") | safe }}
