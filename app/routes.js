@@ -213,3 +213,11 @@ router.get('/v6/complex_online_licence', function (req, res) {
 })
 
 module.exports = router
+
+router.get('/v6/online_licence/contact', function (req, res) {
+  res.render('v6/online_licence/contact',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
