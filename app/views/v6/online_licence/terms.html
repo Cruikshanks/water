@@ -183,8 +183,10 @@
 <p></p>
 </p>{{ pData.timeLimitingabstractionstart | replace( ". ", ".<p></p>") | replace("Time limiting abstraction start", "<strong>Time limiting - abstraction start</strong><p></p>") | safe }}
 <p></p>
-</p>{{ pData.timeLimitingconditions | replace( ". ", ".<p></p>") | replace("Time limiting conditions", "<strong>Time limiting - conditions</strong><p></p>") | safe }}
+</p>{{ pData.timeLimitingconditions | replace( ". ", ".<p></p>") | replace( ":", ":<p></p>") | replace("Time limiting conditions", "<strong>Time limiting - conditions</strong><p></p>")  | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}
 <p></p>
+
+
                 <p><strong>Eel screening condition</strong></p>{{ pData.EelScreening | replace(".", ".<p></p>") | safe }}
 
                 <p><strong>Fish passage condition</strong></p>{{ pData.FishPassage | replace(".", ".<p></p>") | safe }}
