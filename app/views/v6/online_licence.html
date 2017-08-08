@@ -26,7 +26,7 @@
         <ol role="breadcrumbs">
           <li><a href="#">Your services</a></li>
           <li><a href="/v6/licences">Abstraction licences</a></li>
-          <li><a href="/v6/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+          <li><a href="/v6/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
         </ol>
     </nav>
  </div>
@@ -37,26 +37,26 @@
 
   <p></p>
   <div class="datatabletop">
-							<div class="sourceofsupplyq">Licence holder:</div> <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</br>
+							<div class="sourceofsupplyq">Licence holder</div> <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</br>
               <a href="/v6/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
           </div>
             <div class="datatable">
-              <div class="sourceofsupplyq">Point of abstraction:</div> <div class="licenceAnswer">{{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
+              <div class="sourceofsupplyq">Point of abstraction</div> <div class="licenceAnswer">{{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
             </div>
 <div class="datatable">
-              <div class="sourceofsupplyq">Licence effective from:</div> <div class="licenceAnswer">{{ pData.EffectiveDateStart }}</div>
+              <div class="sourceofsupplyq">Licence effective from</div> <div class="licenceAnswer">{{ pData.EffectiveDateStart }}</div>
               </div>
               <div class="datatable">
-              <div class="sourceofsupplyq">Licensed until:</div> <div class="licenceAnswer">{{ pData.EffectiveDateend }}</div>
+              <div class="sourceofsupplyq">Licensed until</div> <div class="licenceAnswer">{{ pData.EffectiveDateend }}</div>
             </div>
             <div class="datatable">
-              <div class="sourceofsupplyq">Source of supply:</div> <div class="licenceAnswer">{{ pData.SourceofSupply }}</div>
+              <div class="sourceofsupplyq">Source of supply</div> <div class="licenceAnswer">{{ pData.SourceofSupply }}</div>
             </div>
             <div class="datatable">
-              <div class="sourceofsupplyq">Period of abstraction:</div> <div class="licenceAnswer">{{ pData.PeriodofAbstraction }}</div>
+              <div class="sourceofsupplyq">Period of abstraction</div> <div class="licenceAnswer">{{ pData.PeriodofAbstraction }}</div>
             </div>
             <div class="datatable">
-              <div class="sourceofsupplyq">Abstraction conditions:</div> <div class="licenceAnswer">This licence has {{ pData.handsOffFlow }}.
+              <div class="sourceofsupplyq">Abstraction conditions</div> <div class="licenceAnswer">This licence has {{ pData.handsOffFlow }}.
 
 
 
@@ -67,7 +67,7 @@
 </br>
 </div></div></div>
 <div class="datatablebottom">
-  <div class="sourceofsupplyq">Maximum quantities before conditions:</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
+  <div class="sourceofsupplyq">Maximum quantities before conditions</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
 
 
 </div>
