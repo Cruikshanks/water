@@ -25,12 +25,12 @@
     <div class="breadcrumbs">
         <ol role="breadcrumbs">
           <li><a href="#">Your services</a></li>
-          <li><a href="/v6/licences">Abstraction licences</a></li>
-          <li><a href="/v6/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
+          <li><a href="/V7/licences">Abstraction licences</a></li>
+          <li><a href="/V7/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
         </ol>
     </nav>
  </div>
- <a href="/v6/signin" class="sign-out2">Sign out</a>
+ <a href="/V7/signin" class="sign-out2">Sign out</a>
 
     <h1 class="heading-large">{{ pData.LicenceName }} water abstraction licence</h1>
     <p></p>
@@ -38,10 +38,10 @@
   <p></p>
   <div class="datatabletop">
 							<div class="sourceofsupplyq">Licence holder</div> <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</br>
-              <a href="/v6/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
+              <a href="/V7/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
           </div>
             <div class="datatable">
-              <div class="sourceofsupplyq">Point of abstraction</div> <div class="licenceAnswer">{{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
+              <div class="sourceofsupplyq">Point of abstraction</div> <div class="licenceAnswer">{{ pData.Pointofabstraction | replace( "following National Grid References:", "following National Grid References:<p></p>")|safe }}</br><a href="/V7/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
             </div>
 <div class="datatable">
               <div class="sourceofsupplyq">Licence effective from</div> <div class="licenceAnswer">{{ pData.EffectiveDateStart }}</div>
@@ -63,11 +63,11 @@
 
 <p></p>  {{ pData.EelandFish }}
 </br>
-  <a href="/v6/online_licence/terms?wid={{ pNumber }}#abstractionconditions">Read all abstraction conditions</a>
+  <a href="/V7/online_licence/terms?wid={{ pNumber }}#abstractionconditions">Read all abstraction conditions</a>
 </br>
 </div></div></div>
 <div class="datatablebottom">
-  <div class="sourceofsupplyq">Maximum quantities before conditions</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "*:", ":<p></p>") | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
+  <div class="sourceofsupplyq">Maximum quantities before conditions</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "*:", ":<p></p>") | replace( "per hour", "per hour</br>") | replace( "At an instantaneous rate not exceeding", "<p></p>At an instantaneous rate not exceeding") |replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
 
 
 </div>
@@ -75,9 +75,9 @@
 
 </br>
 
-              <p><a href="/v6/online_licence/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
+              <p><a href="/V7/online_licence/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
 
-              <a href="/v6/licences">< Back to previous</a>
+              <a href="/V7/licences">< Back to previous</a>
 
               {% endif %}
 
