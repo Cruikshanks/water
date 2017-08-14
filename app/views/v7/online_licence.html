@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% from "custom_inc/waterdatav3.html" import permits %}
+
+
+
+    {% for pNumber, pData in permits %}
+      {% if pNumber==chosenPermitID %}
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+            </div>
+    <nav>
+    <div class="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="#">Your services</a></li>
+          <li><a href="/v6/licences">Abstraction licences</a></li>
+          <li><a href="/v6/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
+        </ol>
+    </nav>
+ </div>
+ <a href="/v6/signin" class="sign-out2">Sign out</a>
+
+    <h1 class="heading-large">{{ pData.LicenceName }} water abstraction licence</h1>
+    <p></p>
+
+  <p></p>
+  <div class="datatabletop">
+							<div class="sourceofsupplyq">Licence holder</div> <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</br>
+              <a href="/v6/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
+          </div>
+            <div class="datatable">
+              <div class="sourceofsupplyq">Point of abstraction</div> <div class="licenceAnswer">{{ pData.Pointofabstraction}}</br><a href="/v6/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
+            </div>
+<div class="datatable">
+              <div class="sourceofsupplyq">Licence effective from</div> <div class="licenceAnswer">{{ pData.EffectiveDateStart }}</div>
+              </div>
+              <div class="datatable">
+              <div class="sourceofsupplyq">Licensed until</div> <div class="licenceAnswer">{{ pData.EffectiveDateend }}</div>
+            </div>
+            <div class="datatable">
+              <div class="sourceofsupplyq">Source of supply</div> <div class="licenceAnswer">{{ pData.SourceofSupply }}</div>
+            </div>
+            <div class="datatable">
+              <div class="sourceofsupplyq">Period of abstraction</div> <div class="licenceAnswer">{{ pData.PeriodofAbstraction }}</div>
+            </div>
+            <div class="datatable">
+              <div class="sourceofsupplyq">Abstraction conditions</div> <div class="licenceAnswer">This licence has {{ pData.handsOffFlow }}.
+
+
+
+
+<p></p>  {{ pData.EelandFish }}
+</br>
+  <a href="/v6/online_licence/terms?wid={{ pNumber }}#abstractionconditions">Read all abstraction conditions</a>
+</br>
+</div></div></div>
+<div class="datatablebottom">
+  <div class="sourceofsupplyq">Maximum quantities before conditions</div> <div class="licenceAnswer">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "*:", ":<p></p>") | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
+
+
+</div>
+</div>
+
+</br>
+
+              <p><a href="/v6/online_licence/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
+
+              <a href="/v6/licences">< Back to previous</a>
+
+              {% endif %}
+
+          {% endfor %}
+
+
+
+
+
+</main>
+
+{% endblock %}

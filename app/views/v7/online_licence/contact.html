@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+  Water abstraction licence
+{% endblock %}
+{% block content %}
+
+  {% from "custom_inc/water_permits.html" import permits %}
+  {% for pNumber, pData in permits %}
+    {% if pNumber==chosenPermitID %}
+
+<main id="content" role="main">
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+            </div>
+    <nav>
+    <div class="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="#">Your services</a></li>
+          <li><a href="/v6/licences">Abstraction licences</a></li>
+          <li><a href="/v6/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        </ol>
+    </nav>
+    </div>
+<a href="/v6/signin" class="sign-out2">Sign out</a>
+
+
+  <h1 class="heading-large">
+    Your water abstraction licence
+    </h1>
+
+  <h2 class="heading-medium">
+    Check your licence details are up to date
+  </h2>
+    <p></p>
+<p>Licence number: {{ pData.LicenceSerialNo }}</p>
+<p></p>
+
+
+  <p></p></br>
+          <h2 class="heading-medium">
+            Registered licence holder details
+          </h2>
+
+          <div class="datatable">
+        <div class="licenceLabel">Name:</div><div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
+        </div>
+        <div class="datatable">
+          <div class="licenceLabel">Address:</div><div class="licenceAnswer">{{ pData.Addressline1}}</br>{{ pData.Addressline3}}</br>{{ pData.County}}</br>{{ pData.Postcode}}</div>
+          </div>
+        <div class="datatable">
+          <div class="licenceLabel">Telephone:</div><div class="licenceAnswer">{{ pData.tel}}</div>
+          </div>
+          <div class="datatablebottom">
+          <div class="licenceLabel">Email:</div><div class="licenceAnswer">{{ pData.Email}}</div>
+        </div>
+
+          <p></p></br>
+                  <h2 class="heading-medium">
+                Site contact details
+              </h2>
+
+              <div class="datatable">
+            <div class="licenceLabel">Name:</div><div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
+            </div>
+            <div class="datatable">
+              <div class="licenceLabel">Address:</div><div class="licenceAnswer">{{ pData.Addressline1}}</br>{{ pData.Addressline3}}</br>{{ pData.County}}</br>{{ pData.Postcode}}</div>
+              </div>
+            <div class="datatable">
+              <div class="licenceLabel">Telephone:</div><div class="licenceAnswer">{{ pData.tel}}</div>
+              </div>
+              <div class="datatablebottom">
+              <div class="licenceLabel">Email:</div><div class="licenceAnswer">{{ pData.Email}}</div>
+            </div>
+
+  <p></p></br>
+          <h2 class="heading-medium">
+            Billing contact details
+          </h2>
+
+          <div class="datatable">
+        <div class="licenceLabel">Name:</div><div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
+        </div>
+        <div class="datatable">
+          <div class="licenceLabel">Address:</div><div class="licenceAnswer">{{ pData.Addressline1}}</br>{{ pData.Addressline3}}</br>{{ pData.County}}</br>{{ pData.Postcode}}</div>
+          </div>
+        <div class="datatable">
+          <div class="licenceLabel">Telephone:</div><div class="licenceAnswer">{{ pData.tel}}</div>
+          </div>
+          <div class="datatablebottom">
+          <div class="licenceLabel">Email:</div><div class="licenceAnswer">{{ pData.Email}}</div>
+        </div>
+
+  <p></p></br>
+          <h2 class="heading-medium">
+            Abstraction return contact details
+          </h2>
+
+          <div class="datatable">
+        <div class="licenceLabel">Name:</div><div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
+        </div>
+        <div class="datatable">
+          <div class="licenceLabel">Address:</div><div class="licenceAnswer">{{ pData.Addressline1}}</br>{{ pData.Addressline3}}</br>{{ pData.County}}</br>{{ pData.Postcode}}</div>
+        </div>
+        <div class="datatable">
+          <div class="licenceLabel">Telephone:</div><div class="licenceAnswer">{{ pData.tel}}</div>
+          </div>
+          <div class="datatablebottom">
+          <div class="licenceLabel">Email:</div><div class="licenceAnswer">{{ pData.Email}}</div>
+        </div>
+</br><p></p>
+
+
+      <a href="/v6/online_licence?wid={{ pNumber }}" >< Back to previous</a></main>
+      {% endif %}
+      {% endfor %}
+
+
+{% endblock %}
