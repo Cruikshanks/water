@@ -8,7 +8,7 @@
 {% endblock %}
 {% block content %}
 
-  {% from "custom_inc/water_permits.html" import permits %}
+{% from "custom_inc/waterdatav3.html" import permits %}
   {% for pNumber, pData in permits %}
     {% if pNumber==chosenPermitID %}
 
@@ -23,19 +23,19 @@
 <div class="breadcrumbs">
 <ol role="breadcrumbs">
 <li><a href="#">Your services</a></li>
-<li><a href="/v6/licences">Abstraction licences</a></li>
-<li><a href="/v6/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
+<li><a href="/v7/licences">Abstraction licences</a></li>
+<li><a href="/v7/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
 </ol>
 </div>
 </nav>
-<a href="/v6/signin" class="sign-out2">Sign out</a>
+<a href="/v7/signin" class="sign-out2">Sign out</a>
 
       <figure>
         <img src="/public/images/map.png" alt="Map">
       </figure>
       <p></p>
 
-      <a href="/v6/online_licence/terms?wid={{ pNumber }}" onclick="history.go(-1)">< Back to previous</a>.
+      <a href="/v7/online_licence/terms?wid={{ pNumber }}" onclick="history.go(-1)">< Back to previous</a>.
 
       {% endif %}
       {% endfor %}
