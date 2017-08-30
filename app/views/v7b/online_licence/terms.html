@@ -9,12 +9,35 @@
 
 {% block content %}
 
-{% from "custom_inc/waterdatav3.html" import permits %}
-{% for pNumber, pData in permits %}
-  {% if pNumber==chosenPermitID %}
+
+    <main id="content" role="main">
+
+      {% from "custom_inc/waterdatav3.html" import permits %}
+      {% for pNumber, pData in permits %}
+        {% if pNumber==chosenPermitID %}
+
+      <div class="phase-banner-alpha">
+        <p>
+        <strong class="phase-tag">ALPHA</strong>
+      <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+      </p>
+              </div>
+              <nav>
+              <div class="breadcrumbs">
+                  <ol role="breadcrumbs">
+                    <li><a href="#">Your services</a></li>
+                    <li><a href="/v7b/licences">Abstraction licences</a></li>
+                    <li><a href="/v7b/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
+
+           <a href="/v7b/signin" class="sign-out2">Sign out</a>   </ol>   </nav>
+            </div>
+
+<a href="/v7b/online_licence?wid={{ pNumber }}" class="link-back" onclick="history.go(-1)">Back</a>
+
+
 <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en">
 <!--<![endif]-->
-  <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Design - Service Manual - GOV.UK</title>
@@ -63,41 +86,16 @@
 <meta name="govuk:navigation-document-type" content="other">
 <meta name="description" content="Naming your service, prototypes, frontend tools and design patterns.">
 <!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/service-manual-frontend/screen-ie6-05c00e0f0a39c196b1dcc370fa052863b40b7858175d836d479d5596cc340ce2.css" /><script>var ieVersion = 6;</script><![endif]--><!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/service-manual-frontend/screen-ie7-a042fa72bbaf89e62cff0947194896705ce99bcea6470c229a277c61677e78fd.css" /><script>var ieVersion = 7;</script><![endif]--><!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/service-manual-frontend/screen-ie8-502640e4068d3a6ad7bca0f46a44e4bef025a003a97df0c872a297197d5eaa62.css" /><script>var ieVersion = 8;</script><![endif]--><meta name="govuk:rendering-application" content="service-manual-frontend">
-</head>
 
-  <body>
+
+
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
 
 
 
 
-    <main role="main" id="content" lang="en">
 
-      <div class="phase-banner-alpha">
-        <p>
-        <strong class="phase-tag">ALPHA</strong>
-      <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
-      </p>
-              </div>
-      <nav>
-      <div class="breadcrumbs">
-          <ol role="breadcrumbs">
-            <li><a href="#">Your services</a></li>
-            <li><a href="/v7b/licences">Abstraction licences</a></li>
-            <li><a href="/v7b/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
-          </ol>
-      </nav>
-      </div>
-<a href="/v7b/signin" class="sign-out2">Sign out</a>
-<a href="/v7b/online_licence?wid={{ pNumber }}" class="link-back">Back</a>
-            <div id="wrapper" class="direction-ltr">
-
-      <div class="full-page-width-wrapper">
-      </div>
-
-
-</div>
 
 <div class="grid-row">
   <div class="column-two-thirds">
@@ -230,7 +228,7 @@
 
     <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
   <script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-fa751ac52dc0f490ce602b0e9be8ef77560ed543cc20c3b5339fc30f560df47b.js"></script>
-</body>
+
 
 {% endif %}
 

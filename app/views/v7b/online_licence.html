@@ -25,11 +25,11 @@
           <li><a href="#">Your services</a></li>
           <li><a href="/v7b/licences">Abstraction licences</a></li>
           <li><a href="/v7b/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
-        </ol>
-    </nav>
- </div>
- <a href="/v7b/signin" class="sign-out2">Sign out</a>
-<a href="/v7b/licences" class="link-back">Back</a>
+
+ <a href="/v7b/signin" class="sign-out2">Sign out</a>   </ol>   </nav>
+  </div>
+<a href="/v7b/licences" class="link-back" onclick="history.go(-1)">Back</a>
+
     <h1 class="heading-large">{{ pData.LicenceName }} water abstraction licence</h1>
     <p></p>
 
@@ -39,7 +39,7 @@
               <a href="/v7b/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
           </div>
             <div class="datatable">
-              <div class="sourceofsupplyqv7">Point of abstraction</div> <div class="licenceAnswerv7">{{ pData.Pointofabstraction | replace( "following National Grid References:", "following National Grid References:<p></p>")|safe }}</br><a href="/v7b/online_licence/map_of_abstraction_point_summary?wid={{ pNumber }}">View map</a></div>
+              <div class="sourceofsupplyqv7">Point of abstraction</div> <div class="licenceAnswerv7">{{ pData.Pointofabstraction | replace( "following National Grid References:", "following National Grid References:<p></p>")|safe }}</br><a href="/v7b/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
             </div>
 <div class="datatable">
               <div class="sourceofsupplyqv7">Licence effective from</div> <div class="licenceAnswerv7">{{ pData.EffectiveDateStart }}</div>
