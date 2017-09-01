@@ -349,3 +349,67 @@ router.get('/v7b/licences', function (req, res) {
 })
 
 module.exports = router
+
+router.get('/v7b/licences', function (req, res) {
+  res.render('v7b/licences',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/online_licence', function (req, res) {
+  res.render('v7c/online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/online_licence/contact_details', function (req, res) {
+  res.render('v7c/online_licence/contact_details',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/online_licence/terms', function (req, res) {
+  res.render('v7c/online_licence/terms',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/online_licence/map_of_abstraction_point', function (req, res) {
+  res.render('v7c/online_licence/map_of_abstraction_point',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/complex_online_licence', function (req, res) {
+  res.render('v7c/complex_online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/online_licence/contact', function (req, res) {
+  res.render('v7c/online_licence/contact',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/licences', function (req, res) {
+  res.render('v7c/licences',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router

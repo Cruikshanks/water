@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% from "custom_inc/waterdatav3.html" import permits %}
+
+    {% for pNumber, pData in permits %}
+      {% if pNumber==chosenPermitID %}
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+            </div>
+    <nav>
+    <div class="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="#">Your services</a></li>
+          <li><a href="/v7c/licences">Abstraction licences</a></li>
+          <li><a href="/v7c/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
+
+ <a href="/v7c/signin" class="sign-out2">Sign out</a>   </ol>   </nav>
+  </div>
+<a href="/v7c/licences" class="link-back" onclick="history.go(-1)">Back</a>
+
+    <h1 class="heading-large">{{ pData.LicenceName }} water abstraction licence</h1>
+    <p></p>
+
+  <p></p>
+  <div class="datatabletop">
+							<div class="sourceofsupplyqv7">Licence holder</div> <div class="licenceAnswerv7">{{ pData.FirstName }} {{ pData.Surname }}</br>
+              <a href="/v7c/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
+          </div>
+            <div class="datatable">
+              <div class="sourceofsupplyqv7">Points of abstraction:</div> <div class="licenceAnswerv7">This licence has multiple abstraction points.
+
+              <details>
+
+
+
+              <summary><span class="summary">See details of all licence abstraction points</span></summary>
+
+              <div class="maxquantlist">
+
+            Abstraction point 1</br>
+                          {{ pData.Pointofabstraction}}</br><a href="/v7c/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map for point 1</a>
+
+
+
+            <p></p>
+      Abstraction point 2</br>{{ pData.Pointofabstraction}}</br><a href="/v7c/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map for point 2</a>
+    </br>
+          <p></p>Abstraction point 3</br>{{ pData.Pointofabstraction}}</br><a href="/v7c/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map for point 3</a>
+        <p></p>
+
+  </details></div></div>
+<div class="datatable">
+              <div class="sourceofsupplyqv7">Licence effective from</div> <div class="licenceAnswerv7">{{ pData.EffectiveDateStart }}</div>
+              </div>
+              <div class="datatable">
+              <div class="sourceofsupplyqv7">Licensed until</div> <div class="licenceAnswerv7">{{ pData.EffectiveDateend }}</div>
+            </div>
+            <div class="datatable">
+              <div class="sourceofsupplyqv7">Source of supply</div> <div class="licenceAnswerv7">{{ pData.SourceofSupply }}</div>
+            </div>
+            <div class="datatable">
+              <div class="sourceofsupplyqv7">Period of abstraction</div> <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
+            </div>
+            <div class="datatable">
+              <div class="sourceofsupplyqv7">Abstraction conditions</div> <div class="licenceAnswerv7">This licence has {{ pData.handsOffFlow }}.
+
+
+
+
+<p></p>  {{ pData.EelandFish }}
+</br>
+  <a href="/v7c/online_licence/terms?wid={{ pNumber }}#abstractionconditions">Read all abstraction conditions</a>
+</br>
+</div></div></div>
+<div class="datatablebottom">
+
+<div class="sourceofsupplyqv7">Maximum quantities before conditions:</div> <div class="licenceAnswerv7">
+  <details>
+    <p></p>
+<summary><span class="summary">Maximum quantities for each abstraction point</span></summary>
+<div class="maxquant">
+<details>
+
+<summary><span class="summary">At National Grid Reference SK 496308</span></summary>
+
+<div class="maxquantlist">
+{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}
+
+</div>
+</details>
+
+<details><summary><span class="summary">At National Grid Reference SK 496308</span></summary>
+
+<div class="maxquantlist">
+{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}
+
+</div>
+</details>
+
+<details><summary><span class="summary">At National Grid Reference SK 496308</span></summary>
+
+<div class="maxquantlist">
+{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}
+
+</div>
+</details>
+<p></p>
+</div>
+</details>
+
+<details>
+<summary><span class="summary">Total maximum quantities across abstraction points</span></summary>
+
+<div class="maxquantlist">
+{{ pData.MaximumQuantityofwatertobeabstracted | replace( "per hour", "per hour</br>") | replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}
+
+</div>
+</details>
+</div>
+
+</div>
+</div>
+
+</br>
+
+              <p><a href="/v7c/online_licence/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
+
+
+
+              {% endif %}
+
+          {% endfor %}
+
+
+
+
+
+</main>
+
+{% endblock %}
