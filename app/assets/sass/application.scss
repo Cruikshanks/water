@@ -14,6 +14,33 @@ $path: "/public/images/";
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.pub-c-pagination__item-next {
+  float: right;
+  text-align: right;
+}
+
+a.pub-c-pagination__link:link {
+  text-decoration:  none;
+  }
+
+  a.pub-c-pagination__link:visited {
+    text-decoration:  none;
+    }
+
+  a.pub-c-pagination__link:hover {
+      text-decoration:  none;
+      }
+
+  a.pub-c-pagination__link:active {
+          text-decoration:  none;
+          }
+
+.pub-c-pagination__link-label {
+          display: inline-block;
+          margin-top: 0.1em;
+          text-decoration: underline;
+          }
+
 .part-navigation {
   margin-bottom: 15px;
       font-family: "nta", Arial, sans-serif;
