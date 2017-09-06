@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% from "custom_inc/conditions.html" import permits %}
+
+    {% for pNumber, pData in permits %}
+      {% if pNumber==chosenPermitID %}
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+            </div>
+    <nav>
+    <div class="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="#">Your services</a></li>
+          <li><a href="/v7c/licences">Abstraction licences</a></li>
+          <li><a href="/v7c/online_licence?wid={{ pNumber }}">Licence {{ pData.LicenceSerialNo }}</a></li>
+          <li><a href="/v7c/conditions?wid={{ pNumber }}">Licence conditions</a></li>
+
+ <a href="/v7c/signin" class="sign-out2">Sign out</a>   </ol>   </nav>
+  </div>
+<a href="/v7c/licences" class="link-back" onclick="history.go(-1)">Back</a>
+
+<h1 class="heading-large">Abstraction conditions</h1>
+<p></p>
+<div class="grid-row">
+  <div class="column-one-third">
+      <nav>
+        <div class="part-navigation" aria-label="Pages in this guide">
+  <ol class="list list-number">
+    <li>
+      <a href="/v7c/online_licence/conditions/cessation?wid={{ pNumber }}">Cessation condition</a>
+    </li><p></p>
+    <li>Augmentation and compensation conditions
+      </li><p></p>
+      <li>
+        <a href="/v7c/online_licence/conditions/time_limiting?wid={{ pNumber }}">Time limiting conditions</a>
+      </li>
+    </ol>
+  </div>
+</div>
+</nav>
+<nav>
+      <div class="column-one-third">
+        <div class="part-navigation" aria-label="Pages in this guide">
+
+<ol class="list list-number"  start="4">
+      <li>
+        <a href="/v7c/online_licence/conditions/eel_screening?wid={{ pNumber }}">Eel screening condition</a>
+      </li>
+      <p></p>
+      <li>
+        <a href="/v7c/online_licence/conditions/fish_passage?wid={{ pNumber }}">Fish passage condition</a>
+      </li>
+  </ol>
+</div>
+</nav>
+</div></div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+  <div class="datatabletop"></div></br>
+    <h2 class="heading-medium">2. Augmentation and compensation conditions</h2>
+
+
+
+
+            <p>{{ pData.Augmentationandcompensationconditions | replace( ". ", ".<p></p>") | replace("Augmentationandcompensationconditions", "<strong>Augmentation and compensation conditions</strong></br>") | safe }}
+            </p>
+          </div></div>
+
+              {% endif %}
+
+          {% endfor %}
+
+
+
+
+
+</main>
+
+{% endblock %}
