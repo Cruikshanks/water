@@ -413,3 +413,43 @@ router.get('/v7c/licences', function (req, res) {
 })
 
 module.exports = router
+
+router.get('/v7c/online_licence/conditions/cessation', function (req, res) {
+  res.render('v7c/online_licence/conditions/cessation',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/online_licence/conditions/augmentation_compensation', function (req, res) {
+  res.render('v7c/online_licence/conditions/augmentation_compensation',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/online_licence/conditions/eel_screening', function (req, res) {
+  res.render('v7c/online_licence/conditions/eel_screening',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/online_licence/conditions/fish_passage', function (req, res) {
+  res.render('v7c/online_licence/conditions/fish_passage',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v7c/online_licence/conditions/time_limiting', function (req, res) {
+  res.render('v7c/online_licence/conditions/time_limiting',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router

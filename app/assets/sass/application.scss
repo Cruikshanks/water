@@ -14,6 +14,15 @@ $path: "/public/images/";
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.part-navigation {
+  margin-bottom: 15px;
+      font-family: "nta", Arial, sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 16px;
+      line-height: 1.25;
+}
+
 .datatabletop {
 border-top: 1px solid #bfc1c3;
 padding-top: 0.5em;
