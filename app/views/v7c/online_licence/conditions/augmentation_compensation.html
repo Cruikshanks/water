@@ -20,12 +20,12 @@
     </p>
             </div>
     <nav>
-    <div class="breadcrumbs">
-        <ol role="breadcrumbs">
-          <li><a href="#">Your services</a></li>
-          <li><a href="/v7c/licences">Abstraction licences</a></li>
-          <li><a href="/v7c/online_licence?wid={{ pNumber }}">Licence {{ pData.LicenceSerialNo }}</a></li>
-          <li><a href="/v7c/conditions?wid={{ pNumber }}">Licence conditions</a></li>
+      <div class="breadcrumbs">
+          <ol role="breadcrumbs">
+            <li><a href="#">Your services</a></li>
+            <li><a href="/v7c/licences">Abstraction licences</a></li>
+            <li><a href="/v7c/online_licence?wid={{ pNumber }}">Licence {{ pData.LicenceSerialNo }}</a></li>
+            <li><a href="/v7c/online_licence/conditions/cessation?wid={{ pNumber }}">Licence conditions</a></li>
 
  <a href="/v7c/signin" class="sign-out2">Sign out</a>   </ol>   </nav>
   </div>
@@ -76,8 +76,43 @@
 
 
             <p>{{ pData.Augmentationandcompensationconditions | replace( ". ", ".<p></p>") | replace("Augmentationandcompensationconditions", "<strong>Augmentation and compensation conditions</strong></br>") | safe }}
-            </p>
-          </div></div>
+
+                      </div></div>
+            </br>
+                      <div class="grid-row">
+                        <div class="column-one-third">
+
+                      <a href="/v7c/online_licence/conditions/cessation?wid={{ pNumber }}" class="pub-c-pagination__link" rel="prev">
+                              <div style="font-size: 27px;line-height: 1.25;font-family: "nta", Arial, sans-serif;font-weight: 400;text-transform: none;display: block;text-decoration: none;">
+
+                                  <svg class="pub-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                                    <path fill="currentColor" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                                  </svg>
+                                  Previous
+                                </div>
+                                  <span class="visually-hidden">:</span>
+                                  <span class="pub-c-pagination__link-label">Cessation condition</span>
+                              </a>
+
+                      </div>
+                        <div class="column-one-third">
+                      <div class="pub-c-pagination__item-next">
+
+                                      <a href="/v7c/online_licence/conditions/time_limiting?wid={{ pNumber }}" class="pub-c-pagination__link" rel="prev">
+                                      <div style="font-size: 27px;line-height: 1.25;font-family: "nta", Arial, sans-serif;font-weight: 400;text-transform: none;display: block;text-decoration: none;text-align: right;">
+
+                                          Next
+                                          <svg class="pub-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                                            <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                                          </svg>
+                                        </div>
+                                          <span class="visually-hidden">:</span>
+                                          <span class="pub-c-pagination__link-label">Time limiting conditions</span>
+                                      </a>
+                      </div>
+
+                      </div></div>
+
 
               {% endif %}
 
