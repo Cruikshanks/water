@@ -453,3 +453,52 @@ router.get('/v7c/online_licence/conditions/time_limiting', function (req, res) {
 })
 
 module.exports = router
+
+
+router.get('/v8/online_licence', function (req, res) {
+  res.render('v7/online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v8/online_licence/contact_details', function (req, res) {
+  res.render('v7/online_licence/contact_details',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v8/online_licence/terms', function (req, res) {
+  res.render('v7/online_licence/terms',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v8/online_licence/map_of_abstraction_point', function (req, res) {
+  res.render('v7/online_licence/map_of_abstraction_point',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v8/complex_online_licence', function (req, res) {
+  res.render('v7/complex_online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v8/online_licence/contact', function (req, res) {
+  res.render('v7/online_licence/contact',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
