@@ -23,24 +23,24 @@
     <div class="breadcrumbs">
         <ol role="breadcrumbs">
           <li><a href="#">Your services</a></li>
-          <li><a href="/v88/licences">Abstraction licences</a></li>
-          <li><a href="/v88/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
+          <li><a href="/v8/licences">Abstraction licences</a></li>
+          <li><a href="/v8/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
 
- <a href="/v88/signin" class="sign-out2">Sign out</a>
+ <a href="/v8/signin" class="sign-out2">Sign out</a>
 </ol>
 </nav>
 </div>
-<a href="/v88/licences" class="link-back" onclick="history.go(-1)">Back</a>
+<a href="/v8/licences" class="link-back" onclick="history.go(-1)">Back</a>
     <h1 class="heading-large">{{ pData.LicenceName }} water abstraction licence</h1>
     <p></p>
 
   <p></p>
   <div class="datatabletop">
 							<div class="sourceofsupplyqv7">Licence holder</div> <div class="licenceAnswerv7">{{ pData.FirstName }} {{ pData.Surname }}</br>
-              <a href="/v88/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
+              <a href="/v8/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
           </div>
             <div class="datatable">
-              <div class="sourceofsupplyqv7">Point of abstraction</div> <div class="licenceAnswerv7">{{ pData.Pointofabstraction | replace( "following National Grid References:", "following National Grid References:<p></p>")|safe }}</br><a href="/v88/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
+              <div class="sourceofsupplyqv7">Point of abstraction</div> <div class="licenceAnswerv7">{{ pData.Pointofabstraction | replace( "following National Grid References:", "following National Grid References:<p></p>")|safe }}</br><a href="/v8/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
             </div>
 <div class="datatable">
               <div class="sourceofsupplyqv7">Licence effective from</div> <div class="licenceAnswerv7">{{ pData.EffectiveDateStart }}</div>
@@ -62,7 +62,7 @@
 
 <p></p>  {{ pData.EelandFish }}
 </br>
-  <a href="/v88/online_licence/terms?wid={{ pNumber }}#abstractionconditions">Read all abstraction conditions</a>
+  <a href="/v8/online_licence/terms?wid={{ pNumber }}#abstractionconditions">Read all abstraction conditions</a>
 </br>
 </div></div></div>
 <div class="datatablebottom">
@@ -74,7 +74,7 @@
 
 </br>
 
-              <p><a href="/v88/online_licence/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
+              <p><a href="/v8/online_licence/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
 
 
               {% endif %}
