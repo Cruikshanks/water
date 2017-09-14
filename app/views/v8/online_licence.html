@@ -24,7 +24,7 @@
         <ol role="breadcrumbs">
           <li><a href="#">Your services</a></li>
           <li><a href="/v8/licences">Abstraction licences</a></li>
-          <li><a href="/v8/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
+          <li><a href="/v8/online_licence?wid={{ pNumber }}">Licence Serial No: {{ pData.LicenceSerialNo }}</a></li>
 
  <a href="/v8/signin" class="sign-out2">Sign out</a>
 </ol>
@@ -43,10 +43,10 @@
               <div class="sourceofsupplyqv7">Point of abstraction</div> <div class="licenceAnswerv7">{{ pData.Pointofabstraction | replace( "following National Grid References:", "following National Grid References:<p></p>")|safe }}</br><a href="/v8/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
             </div>
 <div class="datatable">
-              <div class="sourceofsupplyqv7">Licence effective from</div> <div class="licenceAnswerv7">{{ pData.EffectiveDateStart }}</div>
+              <div class="sourceofsupplyqv7">Start date</div> <div class="licenceAnswerv7">{{ pData.EffectiveDateStart }}</div>
               </div>
               <div class="datatable">
-              <div class="sourceofsupplyqv7">Licensed until</div> <div class="licenceAnswerv7">{{ pData.EffectiveDateend }}</div>
+              <div class="sourceofsupplyqv7">End date</div> <div class="licenceAnswerv7">{{ pData.EffectiveDateend }}</div>
             </div>
             <div class="datatable">
               <div class="sourceofsupplyqv7">Source of supply</div> <div class="licenceAnswerv7">{{ pData.SourceofSupply }}</div>

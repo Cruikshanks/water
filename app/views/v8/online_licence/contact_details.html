@@ -23,7 +23,7 @@
         <ol role="breadcrumbs">
           <li><a href="#">Your services</a></li>
           <li><a href="/v8/licences">Abstraction licences</a></li>
-          <li><a href="/v8/online_licence?wid={{ pNumber }}">Licence number {{ pData.LicenceSerialNo }}</a></li>
+          <li><a href="/v8/online_licence?wid={{ pNumber }}">Licence Serial No: {{ pData.LicenceSerialNo }}</a></li>
 
 <a href="/v8/signin" class="sign-out2">Sign out</a>
 </ol>
@@ -31,13 +31,9 @@
 </div>
 <a href="/v8/online_licence?wid={{ pNumber }}" class="link-back" onclick="history.go(-1)">Back</a>
 
-  <h1 class="heading-large">
-    Your water abstraction licence
-    </h1>
+<h1 class="heading-large">{{ pData.LicenceName }} water abstraction licence</h1>
 
-    <p></p>
-<p>Licence number {{ pData.LicenceSerialNo }}</p>
-<p></p>
+    
 
 
   <p></p></br>
