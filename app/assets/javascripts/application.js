@@ -20,6 +20,13 @@ $(document).ready(function () {
   // to toggle hidden content
   var showHideContent = new GOVUK.ShowHideContent()
   showHideContent.init()
+  console.log("initialisingparsley")
+  //parsley validation
+  $('#password_reset').parsley().on('field:validated', function() {
+  console.log("initialisingparsleyagain")
+    var ok = $('.parsley-error').length === 0;
+    $('.error-message').toggleClass('hidden', ok);
+  });
 })
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -39,3 +46,9 @@ for (i = 0; i < acc.length; i++) {
         }
     }
 }
+
+//parsley form validation script
+
+$(function () {
+
+});
