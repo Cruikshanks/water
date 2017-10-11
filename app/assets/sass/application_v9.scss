@@ -35,6 +35,11 @@ $path: "/public/images/";
     border: 0;
 }
 
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
 .visually-hidden {
     position: absolute;
     left: -9999em;

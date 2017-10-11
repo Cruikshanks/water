@@ -26,6 +26,8 @@ $(document).ready(function () {
   console.log("initialisingparsleyagain")
     var ok = $('.parsley-error').length === 0;
     $('.error-message').toggleClass('hidden', ok);
+    $('.error-summary').toggleClass('hidden', ok);
+    $('.form-group').toggleClass('form-group-error', !ok);
   });
 })
 var acc = document.getElementsByClassName("accordion");
