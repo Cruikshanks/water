@@ -1,6 +1,23 @@
 /* global $ */
 /* global GOVUK */
+/*
+window.Parsley.addValidator('password', {
+  validateString: function(value) {
+    if (!/[A-Z]/.test(password)) {
+      return false;
+    }
 
+    if (!/[£!@#\$%\^&\*\?]/.test(password)) {
+      return false;
+    }
+
+    if (password.length < 8) {
+      return false;
+    }
+    return true;
+  }
+});
+*/
 // Warn about using the kit in production
 if (
   window.sessionStorage && window.sessionStorage.getItem('prototypeWarning') !== 'false' &&

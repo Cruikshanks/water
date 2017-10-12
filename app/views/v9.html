@@ -23,9 +23,36 @@
     			<ul class="list list-bullet">
             <li>
               <a href="/v9/signin">
-                Sign in
-              </a>
+                Sign in - incorrect username or password
+              </a> <span class="form-hint">Validation against correct username and password.</span>
             </li>
+            <li>
+              <a href="/v9/signin2">
+                Sign in - missing username or password
+              </a> <span class="form-hint">Validation against a username and password being entered</span>
+            </li>
+            <li>
+              <a href="/v9/password_reset">
+                Password reset
+              </a> <span class="form-hint">Validation against a valid email format being entered</span>
+            </li>
+            <li>
+              <a href="/v9/check_email?">
+                Check your email</a>
+            </li>
+            <li>
+            <a href="/v9/resend_password">
+              Ask for another email
+            </a> <span class="form-hint">Validation against a valid email format being entered</span>
+          </li>
+          <li>
+          <a href="/v9/resent_password">
+            Check your email, or contact us</a>
+        </li>
+        <li>
+        <a href="/v9/change_password">
+          Change your password</a>  <span class="form-hint">Validation as specified, with 250 max character count</span>
+      </li>
             <li>
               <a href="/v9/licences">
                 Abstraction licences
