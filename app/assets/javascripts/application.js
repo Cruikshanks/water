@@ -37,15 +37,31 @@ $(document).ready(function () {
   // to toggle hidden content
   var showHideContent = new GOVUK.ShowHideContent()
   showHideContent.init()
-  console.log("initialisingparsley")
-  //parsley validation
-  $('#password_reset').parsley().on('field:validated', function() {
-  console.log("initialisingparsleyagain")
-    var ok = $('.parsley-error').length === 0;
-    $('.error-message').toggleClass('hidden', ok);
-    $('.error-summary').toggleClass('hidden', ok);
-    $('.form-group').toggleClass('form-group-error', !ok);
-  });
+
+  // Parsley form validation
+  // Find any forms with parsley validation
+  var parsleyForms = $('[data-parsley-validate=""]');
+
+  // Only set up validation if we have any forms
+  if (parsleyForms.length > 0) {
+    parsleyForms.parsley().on('field:validated', function() {
+      // Has this field passed validation?
+      var validationPassed = this.validationResult === true;
+
+      // Find any elements that have a data-parsley-id which matches this elements
+      // id and hide them or show them as needed
+      var elementId = this.element.id;
+      $('[data-parsely-id=' + elementId + ']').toggleClass('hidden', validationPassed);
+
+      // Toggle the display of the fields form group error
+      this.$element.closest('.form-group').toggleClass('form-group-error', !validationPassed);
+
+      // Display the error summary box if there are any errors
+      var formValid = $('.parsley-error').length === 0;
+      $('.error-summary').toggleClass('hidden', formValid);
+    });
+  }
+
 })
 var acc = document.getElementsByClassName("accordion");
 var i;
