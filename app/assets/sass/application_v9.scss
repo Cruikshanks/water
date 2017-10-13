@@ -41,6 +41,39 @@ a.password_reset {
   display: block;
 }
 
+.form-hint {
+  li {
+    &:before {
+      position: absolute;
+      margin-left: -1.3em;
+      font-weight: bold;
+    }
+
+    &.valid {
+      color: green;
+      list-style: none;
+      list-style-position: outside;
+
+      &:before {
+        color: green;
+        content: "\2713";
+      }
+
+    }
+
+    &.invalid {
+      color: red;
+      list-style: none;
+      list-style-position: outside;
+
+      &:before {
+        color: red;
+        content: "\2717";
+      }
+    }
+  }
+}
+
 .hidden {
   display: none;
   visibility: hidden;

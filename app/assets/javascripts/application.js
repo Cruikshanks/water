@@ -1,23 +1,8 @@
 /* global $ */
 /* global GOVUK */
-/*
-window.Parsley.addValidator('password', {
-  validateString: function(value) {
-    if (!/[A-Z]/.test(password)) {
-      return false;
-    }
 
-    if (!/[£!@#\$%\^&\*\?]/.test(password)) {
-      return false;
-    }
 
-    if (password.length < 8) {
-      return false;
-    }
-    return true;
-  }
-});
-*/
+
 // Warn about using the kit in production
 if (
   window.sessionStorage && window.sessionStorage.getItem('prototypeWarning') !== 'false' &&
@@ -62,6 +47,56 @@ $(document).ready(function () {
     });
   }
 
+  window.Parsley.addValidator('password', {
+    validateString: function(value) {
+      // Make a line in the form hint valid
+      function makeValid(field) {
+        $('[data-parsley-password-' + field + '="hint"]').addClass('valid');
+        $('[data-parsley-password-' + field + '="hint"]').removeClass('invalid');
+      }
+
+      // Make a line in the form hint invalid
+      function makeInvalid(field) {
+        $('[data-parsley-password-' + field + '="hint"]').removeClass('valid');
+        $('[data-parsley-password-' + field + '="hint"]').addClass('invalid');
+      }
+
+      var hasCapitals = true;
+      var hasSymbols = true;
+      var isLongEnough = true;
+
+      // Check if the password has capitals
+      if (/[A-Z]/.test(value)) {
+        makeValid('capital');
+      } else {
+        hasCapitals = false;
+        makeInvalid('capital');
+      }
+
+      // Check if the password has symbols
+      if (/[£!@#\$%\^&\*\?]/.test(value)) {
+        makeValid('symbol');
+      } else {
+        hasSymbols = false;
+        makeInvalid('symbol');
+      }
+
+      // Check if the password is long enough
+      if (value.length >= 8) {
+        makeValid('length');
+      } else {
+        isLongEnough = false;
+        makeInvalid('length');
+      }
+
+      // Toggle whether to display the summary errors
+      $('[data-parsley-password-length="summary"]').toggleClass('hidden', isLongEnough);
+      $('[data-parsley-password-capital="summary"]').toggleClass('hidden', hasCapitals);
+      $('[data-parsley-password-symbol="summary"]').toggleClass('hidden', hasSymbols);
+
+      return hasCapitals && hasSymbols && isLongEnough;
+    }
+  });
 })
 var acc = document.getElementsByClassName("accordion");
 var i;
