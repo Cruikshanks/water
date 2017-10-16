@@ -528,7 +528,7 @@ router.get('/v9/online_licence/terms', function (req, res) {
 module.exports = router
 
 router.get('/v9/online_licence/map_of_abstraction_point', function (req, res) {
-  res.render('v9online_licence/map_of_abstraction_point',{
+  res.render('v9/online_licence/map_of_abstraction_point',{
      "chosenPermitID":req.query['wid']
   })
 })
@@ -547,6 +547,31 @@ router.get('/v9/online_licence/contact', function (req, res) {
   res.render('v9/online_licence/contact',{
      "chosenPermitID":req.query['wid']
   })
+})
+
+router.get('/v9/signin', function (req, res) {
+  if(req.query.incorrectLogin){
+    res.render('v9/signin',{
+       "incorrectLogin":"1"
+    })
+  } else {
+    res.render('v9/signin',{})
+
+  }
+})
+
+router.post('/v9/check_email', function (req, res) {
+  res.render('v9/check_email',{
+     "user_id":req.body.user_id
+  })
+})
+
+router.post('/v9/licences', function (req, res) {
+  if (req.body.password=='test12345!'){
+    res.render('v9/licences',{})
+  } else {
+    return res.redirect(301, '/v9/signin?incorrectLogin=1');
+  }
 })
 
 module.exports = router

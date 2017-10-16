@@ -50,24 +50,24 @@ a.password_reset {
     }
 
     &.valid {
-      color: green;
+      color: #066931;
       list-style: none;
       list-style-position: outside;
 
       &:before {
-        color: green;
+        color: #066931;
         content: "\2713";
       }
 
     }
 
     &.invalid {
-      color: red;
+      color: #AF1826;
       list-style: none;
       list-style-position: outside;
 
       &:before {
-        color: red;
+        color: #AF1826;
         content: "\2717";
       }
     }
