@@ -36,6 +36,11 @@ $path: "/public/images/";
     border: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 a.password_reset {
   padding-top: 10px;
   display: block;
