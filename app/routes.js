@@ -567,9 +567,13 @@ router.post('/v9/check_email', function (req, res) {
 })
 
 router.post('/v9/licences', function (req, res) {
+
   if (req.body.password=='test12345!'){
+    // password supplied and correct
     res.render('v9/licences',{})
   } else {
+    //password not correct')
+    //redirect to signin page
     return res.redirect(301, '/v9/signin?incorrectLogin=1');
   }
 })

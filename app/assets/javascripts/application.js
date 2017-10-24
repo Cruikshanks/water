@@ -95,7 +95,7 @@ function validatorFunction(value){
     }
 
     // Check if the password is long enough
-    if (value.length >= 8) {
+    if (value && value.length >= 8) {
       makeValid('length');
     } else {
       isLongEnough = false;
@@ -103,7 +103,7 @@ function validatorFunction(value){
     }
 
     // Check if the password is too long
-    if (value.length <= 250) {
+    if (value && value.length <= 250) {
       makeValid('maxlength');
     } else {
       isShortEnough = false;
