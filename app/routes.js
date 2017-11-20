@@ -579,3 +579,80 @@ router.post('/v9/licences', function (req, res) {
 })
 
 module.exports = router
+
+router.get('/v10/online_licence', function (req, res) {
+  res.render('v10/online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v10/online_licence/contact_details', function (req, res) {
+  res.render('v10/online_licence/contact_details',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v10/online_licence/terms', function (req, res) {
+  res.render('v10/online_licence/terms',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v10/online_licence/map_of_abstraction_point', function (req, res) {
+  res.render('v10/online_licence/map_of_abstraction_point',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v10/complex_online_licence', function (req, res) {
+  res.render('v10/complex_online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v10/online_licence/contact', function (req, res) {
+  res.render('v10/online_licence/contact',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+router.get('/v10/signin', function (req, res) {
+  if(req.query.incorrectLogin){
+    res.render('v10/signin',{
+       "incorrectLogin":"1"
+    })
+  } else {
+    res.render('v10/signin',{})
+
+  }
+})
+
+router.post('/v10/check_email', function (req, res) {
+  res.render('v10/check_email',{
+     "user_id":req.body.user_id
+  })
+})
+
+router.post('/v10/licences', function (req, res) {
+
+  if (req.body.password=='test12345!'){
+    // password supplied and correct
+    res.render('v10/licences',{})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v10/signin?incorrectLogin=1');
+  }
+})
+
+module.exports = router

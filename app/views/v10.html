@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+<div class='column-two-thirds'>
+
+      <h1 class="heading-xlarge">
+        Manage your water abstraction or impoundment licence online prototype: Beta<h1>
+
+
+
+
+    <h2 class="heading-medium">Prototype version 9</h2>
+      <h3 class="heading-small">Licence pages</h3>
+            <ul class="list list-bullet">
+              <li><a href="/v10/signin">
+                  Sign in</a></li>
+                  <li>
+              <a href="/v10/licences">
+                Abstraction licences
+              </a>
+            </li>
+            <li>
+              <a href="/v10/online_licence?wid=1">
+                Licence
+              </a>
+            </li>
+            <li>
+    					<a href="/v10/online_licence/terms?wid=1">
+    						Licence terms
+    					</a>
+    				</li>
+            <li>
+    					<a href="/v10/online_licence/contact_details?wid=1">
+    						Contact details
+    					</a>
+    				</li>
+    			</ul>
+          <h4 class="heading-small">User change password</h4>
+              		<ul class="list list-bullet">
+                  <li><a href="/v10/change_password">Change password</a></li>
+                                  </ul>
+          <h4 class="heading-small">User reset password</h4>
+                        		<ul class="list list-bullet">
+                    <li>
+                      <a href="/v10/password_reset">
+                        Password reset
+                    </li>
+                    <li>
+                      <a href="/v10/check_email?">
+                        Check your email</a>
+                    </li>
+                    <li>
+                    <a href="/v10/resend_password">
+                      Ask for another email                  </li>
+                  <li>
+                  <a href="/v10/resent_password">
+                    Check your email, or contact us</a>
+                  </li>
+                </ul>
+        </div>
+
+
+  </div>
+</main>
+
+{% endblock %}
