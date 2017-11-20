@@ -1,0 +1,70 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+    <div class="phase-banner-alpha">
+      <p>
+      <strong class="phase-tag">ALPHA</strong>
+    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+          	</div>
+
+<nav>
+    <div class="breadcrumbs">
+    	  <ol role="breadcrumbs">
+          <li><a href="#">Your services</a></li>
+    	    <li><a href="#">Abstraction licences</a></li>
+          <li></li>
+
+          <a href="/v10/signin" class="sign-out2">Sign out</a>
+          <a href="/v10/change_password" class="change-password">Change password</a>
+
+</ol>
+</nav>
+</div>
+<div class="grid-row">
+  <div class="column-full">
+<h1 class="heading-large" style="margin-bottom: 30px">
+  Water abstraction licence(s)
+</h1>  </div>
+  <div class="column-one-third">
+<div class="form-group">
+  <label for="user-id">
+
+      <fieldset>
+
+        <div class="form-group">
+          <label for="licence_holder_search">
+
+              <fieldset>
+                <span class="form-label-bold">Filter by licence holder</span>
+                <span class="form-hint">
+                  Give us a licence holder name to view all their authorised licences.
+                </span>
+                <span id="enterPassword" data-parsely-id="password" class="error-message hidden">Please check and enter the password we sent you.</span>
+              </fieldset>
+
+          </label>
+        </div>
+          <input type="enterEmail" class="form-control" name="password" id="password" required=""/>
+
+<a href="/v10/licence_holder_search_result" class="button">Search</a>
+
+      </form></div>
+
+
+  </div>
+  <div class="column-two-thirds">
+
+</div>
+</div>
+
+</main>
+{% endblock %}
