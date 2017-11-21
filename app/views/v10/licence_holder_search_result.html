@@ -31,61 +31,52 @@
 </div>
 <div class="grid-row">
   <div class="column-full">
-<h1 class="heading-large" style="margin-bottom: 30px">
-  Joe Blogs's water abstraction licence(s)
-</h1>  </div>
-  <div class="column-one-third">
-<div class="form-group">
-  <label for="user-id">
+<h1 class="heading-large" style="margin-bottom: 10px">
+  Joe Blogs's water abstraction licences
+</h1><p style="margin-bottom: 35px">Email: joe_blogs@aol.co.uk</p></div>
+<div class="column-one-third">
 
-      <fieldset>
+    <span class="form-label-bold">Filter by licence holder email</span>
 
-        <div class="form-group">
-          <label for="licence_holder_search">
-
-              <fieldset>
-                <span class="form-label-bold">Switch to another licence holder</span>
-                <span class="form-hint">
-                  Give us a licence holder name to view all their authorised licences.
-                </span>
-                <span id="enterPassword" data-parsely-id="password" class="error-message hidden">Please check and enter the password we sent you.</span>
-              </fieldset>
-
-          </label>
-        </div>
           <input type="enterEmail" class="form-control" name="password" id="password" required=""/>
 
 <a href="/v10/licence_holder_search_result2" class="button">Search</a>
 
-      </form></div>
+</div>
 
-
-  </div>
   <div class="column-two-thirds">
-  <a href="/v10/online_licence?wid=1" style="font-weight: bold; margin-top: 10px" class="link"><span class="visually-hidden">H2Go Power</span>Licence serial number: 03/28/60/0002</a>
-  <p></p>
+    <table>
+      <thead>
+        <tr>
+          <th><a href="#">Licence serial number</a></th>
+          <th><a href="#">Licence name</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>03/28/60/0002</td>
+          <td>H2Go Power</td>
+        </tr>
+        <tr>
+          <td>03/28/60/0003</td>
+          <td>Bridge Farm</td>
+        </tr>
+        <tr>
+          <td>03/28/60/0004</td>
+          <td>West Power</td>
+        </tr>
+        <tr>
+          <td>03/28/60/0005</td>
+          <td>Valley's Water</td>
+        </tr>
+        <tr>
+          <td>03/28/60/0006</td>
+          <td>H2Go Power</td>
+        </tr>
 
-  <div class="greyline" style="border-bottom: 1px solid #bfc1c3; margin-bottom: 10px"></div>
-  <p></p>
-  <a href="/v10/online_licence?wid=2" style="font-weight: bold"><span class="visually-hidden">Bridge Farm</span>Licence serial number: 03/28/60/0003</a>
-  <p></p>
-
-  <div class="greyline" style="border-bottom: 1px solid #bfc1c3; margin-bottom: 10px"></div>
-  <p></p>
-  <a href="/v10/online_licence?wid=3" style="font-weight: bold"><span class="visually-hidden">West Power</span>Licence serial number: 03/28/60/0004</a>
-  <p></p>
-
-  <div class="greyline" style="border-bottom: 1px solid #bfc1c3; margin-bottom: 10px"></div>
-  <p></p>
-  <a href="/v10/online_licence?wid=4" style="font-weight: bold"><span class="visually-hidden">Valley's Water</span>Licence serial number: 03/28/60/0005</a>
-  <p></p>
-
-  <div class="greyline" style="border-bottom: 1px solid #bfc1c3; margin-bottom: 10px"></div>
-  <p></p>
-  <a href="/v10/online_licence?wid=5" style="font-weight: bold"><span class="visually-hidden">H2Go Power</span>Licence serial number: 03/28/60/0006</a>
-  <p></p>
+      </tbody>
+    </table>
 </div>
 </div>
-
 </main>
 {% endblock %}
