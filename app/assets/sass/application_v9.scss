@@ -24,19 +24,45 @@ $path: "/public/images/";
 
 // Water resource licensing styles currently in use under V8
 
+.search_licences {
+margin-left: 80px;
+line-height: 0px;
+}
+
+.heading-feild {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.heading-feild-licences {
+  font-weight: bold;
+  margin-bottom: 5px;
+    margin-left: 80px;
+}
+
+.feild-hint {
+  color: grey;
+}
+
+.feild-hint-licences {
+  color: grey;
+  margin-left: 80px;
+}
+
 .search-boxes {
     display: inline-block;
     position: relative;
       align-content: left;
       margin-right: 59px;
       margin-bottom: 20px;
+      margin-top: 10px;
 }
 
 .contains {
   border: 2px solid #0b0c0c;
-  padding: 5px 220px 4px 5px;
+  padding: 5px 270px 4px 5px;
   align-content: left;
-  color: grey;
+  color: white;
 }
 
 .name_info {
@@ -47,9 +73,10 @@ margin-top: 30px;
 
 .Licence-holder-email {
   border: 2px solid #0b0c0c;
-  padding: 5px 150px 4px 5px;
+  padding: 5px 170px 4px 5px;
   align-content: left;
-  color: grey;
+  color: white;
+  margin-top: 10px;
 }
 
 main.search .search-header input {
