@@ -182,6 +182,7 @@
   }
   &:focus {
     background: $focus-colour;
+    border-bottom-color: transparent;
   }
 
   @media screen and (min-width: 641px) {
