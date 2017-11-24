@@ -36,102 +36,75 @@
   All water abstraction licences
 </h1>
   </div>
-
-<div class="column-one-third">
-  <p class="heading-feild">
-    Licence holder email address</p>
-    <span class="feild-hint">
-      View licence list by licence holder.
-    </span>
 </div>
 
-<div class="column-two-thirds">
 
-  <p class="heading-feild-licences">
-    Search licences</p>
-    <span class="feild-hint-licences">
-      Search licences by licence name or number.
-    </span>
 
+
+
+<div class="grid-row">
+  <div class="column-two-fifths">
+    <div class="form-group form-group--horizontal">
+      <label class="form-label form-label--bold" for="emailAddress">Licence holder email address</label>
+      <span class="form-hint">View licence list by licence holder.</span>
+      <input type="text" class="form-control form-control--block" name="emailAddress" id="emailAddress" />
+    </div>
+  </div>
+
+  <div class="column-two-fifths">
+    <div class="form-group form-group--horizontal">
+      <label class="form-label form-label--bold" for="licenseNumber">Search licences</label>
+      <span class="form-hint">Search by licence name or number.</span>
+      <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
+    </div>
+  </div>
+
+  <div class="column-one-fifth">
+    <input id="searchButton" class="button button button-license-search" type="submit" value="Search">
+  </div>
 </div>
 
+
+
+
+<div class="grid-row">
   <div class="column-full">
-    <div class="search-boxes">  <span class="Licence-holder-email">Licence holder email</span>
 
 
+
+    <!-- Results page goes here -->
+    <div class="license-results" id="results">
+
+      <div class="license-results-header">
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence serial number">Licence serial number<span class="sort-icon"> &#x25be;</span></a>
         </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">Licence name</a>
+        </div>
+        <div class="license-results-header__column"></div>
+      </div>
 
-          <div class="search-boxes">    <span class="contains">Contains</span>
 
+      <a href="#" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+        <p class="license-result__column license-result__column--description">H2GO Power</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="#" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+        <p class="license-result__column license-result__column--description">H2GO Power</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+
+    </div>
+
+  </div>
 </div>
-  <a href="/v10/licence_holder_search_result">Search</a>
 
-</div>
+<script src="/public/javascripts/underscore.min.js"></script>
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/license_results.js"></script>
 
-  <div class="column-full">
-    <table>
-      <thead>
-        <tr>
-          <th class="name-width"><a href="#">Licence serial number</a></th>
-          <th><a href="#">Licence name</a></th>
-          <th><a href="#"></a></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>03/28/60/0002</td>
-          <td>H2Go Power</td>
-          <td class="numeric"><a href="#">View</a></td>
-        </tr>
-        <tr>
-          <td>03/28/60/0003</td>
-          <td>-</td>
-          <td class="numeric"><a href="#">View</a></td>
-        </tr>
-        <tr>
-          <td>03/28/60/0004</td>
-          <td>-</td>
-          <td class="numeric"><a href="#">View</a></td>
-        </tr>
-        <tr>
-          <td>03/28/60/0005</td>
-          <td>Valley's Water</td>
-          <td class="numeric"><a href="#">View</a></td>
-        </tr>
-        <tr>
-          <td>03/28/60/0006</td>
-          <td>-</td>
-          <td class="numeric"><a href="#">View</a></td>
-        </tr>
-        <tr>
-          <td>03/28/60/0002</td>
-          <td>North field</td>
-          <td class="numeric"><a href="#">View</a></td>
-        </tr>
-        <tr>
-          <td>03/28/60/0003</td>
-          <td>1</td>
-          <td class="numeric"><a href="#">View</a></td>
-        </tr>
-        <tr>
-          <td>03/28/60/0004</td>
-          <td>A</td>
-          <td class="numeric"><a href="#">View</a></td>
-        </tr>
-        <tr>
-          <td>03/28/60/0005</td>
-          <td>-</td>
-          <td class="numeric"><a href="#">View</a></td>
-        </tr>
-        <tr>
-          <td>03/28/60/0006</td>
-          <td>Public 12845</td>
-          <td class="numeric"><a href="#">View</a></td>
-        </tr>
-
-      </tbody>
-    </table>
-</div>
-</div>
 </main>
 {% endblock %}
