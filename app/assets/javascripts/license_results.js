@@ -19,7 +19,7 @@ $(function() {
     $('.license-result').remove();
   }
 
-  
+
 
 
   /**
@@ -34,8 +34,8 @@ $(function() {
     state.loading = true;
     clearResults();
 
-    // For prototype, just load one of two pages
-    var page = Math.random() < 0.5 ? 1 : 2;
+    // For prototype, just load one of three pages at random
+    var page = Math.ceil(Math.random() * 3);
     var url = 'licence_holder_search_results_' + page;
 
     $.get(url, function(html) {
