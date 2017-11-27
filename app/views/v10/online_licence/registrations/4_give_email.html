@@ -1,0 +1,79 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+  <form action="5_contact_details" method="post" class="form" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+
+    <div class="error-summary hidden" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+            That email address isn’t valid
+          </h2>
+
+          <ul class="error-summary-list">
+            <li><a href="#user-id">Re-enter your email address</a></li>
+          </ul>
+
+        </div>
+
+        <h1 class="heading-large">
+          Give us your email address
+        </h1>
+
+
+
+
+        <p class="lede">Tell us your email address, this will be used as a user name to access your account.</p>
+
+
+
+      <div class="form-group">
+        <label for="user-id">
+
+            <fieldset>
+              <span class="form-label-bold">Email address</span>
+              <span data-parsely-id="user-id" class="error-message hidden">Please enter a valid email address</span>
+            </fieldset>
+
+        </label>
+
+        <input type="email" class="form-control" id="user-id" name="user_id" required=""/>
+      </div>
+
+
+        <input type="submit" value="Continue" class="button" role="button"/>
+
+
+</form>
+
+
+<script>
+    function getParameterByName(name, url) {
+      //this function enables named parameters to be parsed from the query string
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    //get the user-id value from the query string if present and set user-id field to same...
+    document.getElementById('user-id').value = getParameterByName('user_id');
+ </script>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
