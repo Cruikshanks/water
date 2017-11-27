@@ -656,3 +656,26 @@ router.post('/v10/licences', function (req, res) {
 })
 
 module.exports = router
+
+router.get('/v10/online_licence/registrations/2_licence_number', function (req, res) {
+  if(req.query.incorrectLicenceNo){
+    res.render('v10/online_licence/registrations/2_licence_number',{
+       "incorrectLicenceNo":"1"
+    })
+  } else {
+    res.render('v10/online_licence/registrations/2_licence_number',{})
+
+  }
+})
+
+router.post('/v10/online_licence/registrations/2_licence_number', function (req, res) {
+
+  if (req.body.password=='test12345!'){
+    // password supplied and correct
+    res.render('v10/online_licence/registrations/3_select_licences',{})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v10/online_licence/registrations/2_licence_number?incorrectLicenceNo=1');
+  }
+})
