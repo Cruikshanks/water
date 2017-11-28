@@ -40,6 +40,12 @@ $(function() {
 
     $.get(url, function(html) {
       $('#results').append(html);
+
+      // If an email address hasn't been entered, we can't determine the
+      // user-defined name 
+      if(state.emailAddress == '') {
+        $('#results p.license-result__column--description').text('-');
+      }
     });
 
   }
