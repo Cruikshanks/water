@@ -19,7 +19,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <!-- always use method='post' for forms --->
-      <form action="/v10/licences" method="post" class="form" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+      <form action="/v11/licences" method="post" class="form" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
 {% if incorrectLogin == "1" %}
   <!-- only show this error if incorrectLogin param passed through from route-->
         <div id='incorrectLogin' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
@@ -92,7 +92,7 @@
         document.getElementById('password_reset_link').onclick=function(e){
           e.preventDefault();
           var user_id=document.getElementById('user-id').value
-          window.location='/v10/password_reset?user_id='+user_id; //redirect to password reset screen
+          window.location='/v11/password_reset?user_id='+user_id; //redirect to password reset screen
         }
 
 
