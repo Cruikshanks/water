@@ -679,3 +679,103 @@ router.post('/v10/online_licence/registrations/2_licence_number', function (req,
     return res.redirect(301, '/v10/online_licence/registrations/2_licence_number?incorrectLicenceNo=1');
   }
 })
+
+router.get('/v11/online_licence', function (req, res) {
+  res.render('v11/online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v11/online_licence/contact_details', function (req, res) {
+  res.render('v11/online_licence/contact_details',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v11/online_licence/terms', function (req, res) {
+  res.render('v11/online_licence/terms',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v11/online_licence/map_of_abstraction_point', function (req, res) {
+  res.render('v11/online_licence/map_of_abstraction_point',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v11/complex_online_licence', function (req, res) {
+  res.render('v11/complex_online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v11/online_licence/contact', function (req, res) {
+  res.render('v11/online_licence/contact',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+router.get('/v11/signin', function (req, res) {
+  if(req.query.incorrectLogin){
+    res.render('v11/signin',{
+       "incorrectLogin":"1"
+    })
+  } else {
+    res.render('v11/signin',{})
+
+  }
+})
+
+router.post('/v11/check_email', function (req, res) {
+  res.render('v11/check_email',{
+     "user_id":req.body.user_id
+  })
+})
+
+router.post('/v11/licences', function (req, res) {
+
+  if (req.body.password=='test12345!'){
+    // password supplied and correct
+    res.render('v11/licences',{})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v11/signin?incorrectLogin=1');
+  }
+})
+
+module.exports = router
+
+router.get('/v11/online_licence/registrations/2_licence_number', function (req, res) {
+  if(req.query.incorrectLicenceNo){
+    res.render('v11/online_licence/registrations/2_licence_number',{
+       "incorrectLicenceNo":"1"
+    })
+  } else {
+    res.render('v11/online_licence/registrations/2_licence_number',{})
+
+  }
+})
+
+router.post('/v11/online_licence/registrations/2_licence_number', function (req, res) {
+
+  if (req.body.password=='test12345!'){
+    // password supplied and correct
+    res.render('v11/online_licence/registrations/3_select_licences',{})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v11/online_licence/registrations/2_licence_number?incorrectLicenceNo=1');
+  }
+})

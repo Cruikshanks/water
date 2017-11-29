@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+<div class='column-two-thirds'>
+
+      <h1 class="heading-xlarge">
+        Manage your water abstraction or impoundment licence online prototype: Beta<h1>
+
+
+
+
+    <h2 class="heading-medium">Prototype version 11</h2>
+      <h3 class="heading-small">Licence pages</h3>
+            <ul class="list list-bullet">
+              <li><a href="/v11/signin">
+                  Sign in</a></li>
+                  <li>
+              <a href="/v11/licences">
+                Abstraction licences
+              </a>
+            </li>
+            <li>
+              <a href="/v11/online_licence?wid=1">
+                Licence
+              </a>
+            </li>
+            <li>
+    					<a href="/v11/online_licence/terms?wid=1">
+    						Licence terms
+    					</a>
+    				</li>
+            <li>
+    					<a href="/v11/online_licence/contact_details?wid=1">
+    						Contact details
+    					</a>
+    				</li>
+    			</ul>
+          <h4 class="heading-small">User change password</h4>
+              		<ul class="list list-bullet">
+                  <li><a href="/v11/change_password">Change password</a></li>
+                  <li><a href="/v11/change_password_confirm?">Password changed option 1</a></li>
+                  <li><a href="/v11/change_password_confirm2">Password changed option 2</a></li>
+                                  </ul>
+          <h4 class="heading-small">User reset password</h4>
+                        		<ul class="list list-bullet">
+                    <li>
+                      <a href="/v11/password_reset">
+                        Password reset
+                    </li>
+                    <li>
+                      <a href="/v11/check_email?">
+                        Check your email</a>
+                    </li>
+                    <li>
+                    <a href="/v11/resend_password">
+                      Ask for another email                  </li>
+                  <li>
+                  <a href="/v11/resent_password">
+                    Check your email, or contact us</a>
+                  </li>
+                </ul>
+                <h4 class="heading-small">Colleague and agent view</h4>
+                                  <ul class="list list-bullet">
+                          <li>
+                            <a href="/v11/licence_holder_search">
+                              All licences landing page</a>
+                          </li>
+                      </ul>
+                      <h4 class="heading-small">Multiple licence holder view - organisation or sole trader</h4>
+                                        <ul class="list list-bullet">
+                                <li>
+                                  <a href="/v11/licences_search">
+                                    Multiple licences view</a>
+                                </li>
+                            </ul>
+                <h4 class="heading-small">User feedback</h4>
+                <li>
+                <a href="/feedback">
+                  User feedback page (smart survey iframe)</a>
+                </li>
+                <h4 class="heading-small">Registration process - John</h4>
+                                  <ul class="list list-bullet">
+                          <li>
+                            <a href="/v11/online_licence/registrations/1_guidance">
+                              Registration guidance</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/2_licence_number">
+                              Licence number or postcode</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/2-2_no_licences">
+                              No matching licence number</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/3_select_licences">
+                              Select your licences</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/4_give_email">
+                              Give us your email</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/5_contact_details">
+                              Contact preference</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/6_security_options">
+                              Choose security route</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/7-1_by_phone">
+                              Request by phone</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/7-2_by_post">
+                              Request by post</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/7-2-2_by_post_confirm">
+                              Postal request sent</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/8_complete_account">
+                              Complete account</a>
+                          </li>
+                          <li>
+                            <a href="/v11/online_licence/registrations/9_create_password">
+                              Create password</a>
+                          </li>
+                      </ul>
+        </div>
+
+
+  </div>
+</main>
+
+{% endblock %}

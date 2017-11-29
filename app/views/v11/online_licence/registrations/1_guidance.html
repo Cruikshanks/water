@@ -1,0 +1,251 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!DOCTYPE html>
+  <!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en">
+  <!--<![endif]-->
+    <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <title>Using the GOV.UK template, frontend toolkit and elements - Service Manual - GOV.UK</title>
+
+      <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-2775f99eaec64ff8121bfbfb3eb67b0c2b4b7c3fc78d25da30e12db2a09d30d6.css" crossorigin="anonymous" integrity="sha256-J3X5nq7GT/gSG/v7PrZ7DCtLfD/HjSXaMOEtsqCdMNY=">
+  <!--<![endif]-->
+      <!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie6-5bb08c355a12ac38b0ac9d2446da122ec0f81c78e02dcd2a98766f53c23793c8.css" /><![endif]-->
+      <!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie7-be1ea757827710f20eae59ae3ebfd172b7dbeabb171a79945ba610947eebb3cc.css" /><![endif]-->
+      <!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie8-5ab4d0c7b42f2bf10f8c7aadf331a11f7399be832b0ee2c68c94071195a1e36e.css" /><![endif]-->
+      <link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/static/govuk-template-print-1076519521c2fffbbf75ab3b0d3b32ee2d96ac7e9778f1cdfac1771eefd1a1c0.css" crossorigin="anonymous" integrity="sha256-EHZRlSHC//u/das7DTsy7i2WrH6XePHN+sF3Hu/RocA=">
+
+      <!--[if IE 8]><link rel="stylesheet" media="all" href="https://assets.publishing.service.gov.uk/static/fonts-ie8-f5e3c18a96ecb0f37246556a27330202d6e18feffa05a3b67825024609629ac8.css" /><![endif]-->
+      <!--[if gte IE 9]><!--><link rel="stylesheet" media="all" href="https://assets.publishing.service.gov.uk/static/fonts-5ff8c53913434afd0072a480d7cfca67cace4c8d03f6ef96b78a4455728ce745.css" crossorigin="anonymous" integrity="sha256-X/jFORNDSv0AcqSA18/KZ8rOTI0D9u+Wt4pEVXKM50U=">
+  <!--<![endif]-->
+      <!--[if lt IE 9]><script src="https://assets.publishing.service.gov.uk/static/ie-75db9d4df4993de5335d6e49013362743a78107245bcf6543337a0ecc0a95b41.js" crossorigin="anonymous" integrity="sha256-ddudTfSZPeUzXW5JATNidDp4EHJFvPZUMzeg7MCpW0E="></script><![endif]-->
+
+      <link rel="shortcut icon" href="https://assets.publishing.service.gov.uk/static/favicon-8d811b8c3badbc0b0e2f6e25d3660a96cc0cca7993e6f32e98785f205fc40907.ico" type="image/x-icon">
+      <link rel="mask-icon" href="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown-de738c3fcce8ce2a91b67e89787090dc24a5cda0275ab6b75f6226c5b9619d3d.svg" color="#0b0c0c">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-180x180-ea1cbb1cbbeddfff275dfa6e8e46b84cd530892df79dc4882a8f99b802b49a90.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-167x167-181e404a50c572923285fb83f0fbd78da6b4e38e3ce52f8e6b8e29da8586450a.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-152x152-02457fcdcee8d309276305af2233d41bfb8fd055e855727d355e61bce7ffa9bb.png">
+      <link rel="apple-touch-icon" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-a318f305290c523aed80082456175b46c95350c0eeac93f42e78a71c7a55544e.png">
+
+      <meta name="theme-color" content="#0b0c0c">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta property="og:image" content="https://assets.publishing.service.gov.uk/static/opengraph-image-a1f7d89ffd0782738b1aeb0da37842d8bd0addbd724b8e58c3edbc7287cc11de.png">
+
+        <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-7da20ae18cf7127910ec59331f75ffed6f00cff1969dc9366894e01ffa56a2da.css" crossorigin="anonymous" integrity="sha256-faIK4Yz3EnkQ7FkzH3X/7W8Az/GWnck2aJTgH/pWoto=">
+  <!--<![endif]-->
+  <!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie6-91e47d8adde0b3b628a6ed931338a16655c4a79c5bba5cdb7f6389f1f077b63c.css" /><script>var ieVersion = 6;</script><![endif]-->
+  <!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie7-04243275a77f0c908ff266e33890a959888bad90ec0be5857456866ab86e059b.css" /><script>var ieVersion = 7;</script><![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie8-fac25ec78515a5484990fb50fada4cd02304969d4e279ba91562a8ff91d4d8e8.css" /><script>var ieVersion = 8;</script><![endif]-->
+
+  <link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/static/core-layout-print-17ae04fa41ad116c2d3a329800a3160d98adf170d561703b3836dad57f2b994d.css" crossorigin="anonymous" integrity="sha256-F64E+kGtEWwtOjKYAKMWDZit8XDVYXA7ODba1X8rmU0=">
+
+
+    <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/service-manual-frontend/screen-cc3b595f7210b9c6a035acd8cc165ea4e836eac6e8224b29a800f98a948619ba.css">
+  <!--<![endif]--><link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/service-manual-frontend/print-00317139669cd7e57195fd12d279d73aba2c815c00decf15d7f2e4c74d30f79f.css">
+  <meta name="csrf-param" content="authenticity_token">
+  <meta name="csrf-token" content="JWqhf/9W/wpxboL8bvkEF4z9HuaAaR3fp6LTE9EaLSBNSMpxxGTTVJ1YbMI64sSjr+qdRcSubojBxDBxuyo/qg==">
+  <meta name="govuk:format" content="service_manual_guide">
+  <meta name="govuk:schema-name" content="service_manual_guide">
+  <meta name="govuk:analytics:organisations" content="&lt;OT1056&gt;">
+  <meta name="govuk:user-journey-stage" content="thing">
+  <meta name="govuk:navigation-document-type" content="other">
+  <meta name="description" content="How to create GOV.UK services with a consistent look and feel.">
+  <!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/service-manual-frontend/screen-ie6-a6a153e3db771ec9feeeab02b1fbc7c41d428a988a5c5590d81bb8701536d4bc.css" /><script>var ieVersion = 6;</script><![endif]--><!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/service-manual-frontend/screen-ie7-7bbcae88308d728e53c9aa38c9649e50c9cd08df4530748861649e442084e7f6.css" /><script>var ieVersion = 7;</script><![endif]--><!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/service-manual-frontend/screen-ie8-78a26ca363b55c3358e6f12b8f46aa67eee953709918cf15b48a77d1a21b16b0.css" /><script>var ieVersion = 8;</script><![endif]--><meta name="govuk:rendering-application" content="service-manual-frontend">
+  </head>
+
+    <body>
+      <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+<div align="right"><a href="2_licence_number">Next page ></a></div>
+
+
+
+
+  <!-- Page title and contact -->
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+      <div class="page-header">
+        <p class="page-header__context">Design</p>
+        <h1 class="page-header__title">
+          Water management: managing your water abstraction or impoundment licence
+        </h1>
+      </div>
+    </div>
+
+
+
+  <!-- Metadata-->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="metadata">
+        <dl>
+            <dt>Published by:</dt>
+              <dd>
+                The Environment Agency
+                            </dd>
+          <dt>Last updated:</dt>
+          <dd>
+            about 1 month ago
+          </dd>
+        </dl>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row" data-module="highlight-active-section-heading">
+    <div class="column-third">
+
+      <!--  Page contents -->
+      <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize">
+        <h2 class="page-contents__title">Page contents:</h2>
+        <ul class="page-contents__list">
+            <li><a href="#view-your-licence-online">View your licence online</a></li>
+            <li><a href="#create-an-online-account-to-view-your-licence">Create an online account to view your licence(s)</a></li>
+            <li><a href="#abstraction-charges">Abstraction charges</a></li>
+            <li><a href="#measuring-and-recording-your-abstraction">Measuring and recording your abstraction</a></li>
+            <li><a href="#reporting-how-much-water-you-ve-abstracted">Reporting how much water you’ve abstracted</a></li>
+            <li><a href="#submitting-water-abstraction-returns">Submitting water abstraction returns</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="column-two-thirds">
+
+      <div class="govspeak-wrapper">
+
+  <div class="govuk-govspeak ">
+
+
+  <h2 id="view-your-licence-online">View your licence online</h2>
+<p>You can now view basic information about your water abstraction or impoundment licence(s) online. Use this service to:</p>
+  <ul>
+    <li>view information about each of the water abstraction or impoundment licences you hold</li>
+    <li>check your licence start and end dates</li>
+    <li>check your points and periods of abstraction</li>
+  </ul>
+  <p>More of your licence information will be added soon.</p>
+
+  <a href="2_licence_number">Sign in to view your licence</a>
+
+  <h2 id="create-an-online-account-to-view-your-licence">Create an online account to view your licence(s)</h2>
+
+  <p>You need to create an online account and confirm your identity to access your licence information. We’ll need to contact you by phone or post to complete this process.</p>
+
+  <p>You’ll be able to view all of your water abstraction or impoundment licences using this account.</p>
+
+  <h3 class="heading-medium">Before you start</h3>
+
+  <p>You'll need:</p>
+  <ul>
+    <li>Your licence number(s)</li>
+    <li>your postcode (from the address you registered as the licence holder)</li>
+  </ul>
+
+<a href="2_licence_number">Create your account</a>
+
+  <h2 id="abstraction-charges">Abstraction charges</h3>
+
+  <p>The Environment Agency charges abstraction licence holders to fund the costs they incur in ensuring water resources are managed effectively while protecting the environment. This includes ensuring the rights of existing licence holders to abstract water are protected when granting new or varied licences.</p>
+
+  <p>An annual subsistence charge, which comprises the Standard Unit Charge (SUC) and the Environmental Improvement Unit Charge (EIUC), is usually payable by everyone who holds a full licence to abstract water.</p>
+
+  <p>Annual subsistence charges are not payable for temporary licences, transfer licences or for licences to impound water. Other limited exceptions to the annual subsistence charge can be found in the <a href="#">abstraction charges scheme April 2015 to March 2016</a></p>
+
+  <p>To estimate your annual bill, use our <a href="#">abstraction charge calculator</a>.
+
+  <h2 id="measuring-and-recording-your-abstraction">Measuring and recording your abstraction</h2>
+
+  <p>Most licences require you to accurately measure and report the quantity of water you abstract. <a href="#">Metering requirements</a> will form part of your discussions with the Environment Agency during the determination of your application.</p>
+
+  <p>Measuring and recording the amount of water you abstract will allow you to take action to keep within the limits allowed in your licence. If you think you need to abstract more than your maximum quantity, you must contact the Environment Agency early. There is no guarantee that the Environment Agency will be able to increase the maximum quantity your licence allows you to abstract.</p>
+
+  <p>Most abstractors must provide the Environment Agency with accurate records of how much water is taken in order to enable them to:</p>
+
+  <ul>
+    <li>ensure society’s need for water is balanced with that needed to maintain a healthy aquatic environment</li>
+    <li>allocate spare resources to other abstractors</li>
+    <li>charge some abstractors based on how much water they take</li>
+    <li>check compliance with licence conditions</li>
+    <li>provide information on water usage</li>
+      </ul>
+
+  <h2 id="reporting-how-much-water-you-ve-abstracted">Reporting how much water you’ve abstracted</h2>
+
+  <p>Your abstraction licence will tell you how often you need to record the amount of water you abstract. Most licences will also ask you to submit a record of your actual abstraction (known as ‘returns’) to the Environment Agency.</p>
+  <p>Even if you haven’t taken any water, you must submit a ‘nil’ return if your licence states that you must report your water use.</p>
+  <p>If you do not submit your record of actual abstraction when required to do so, the Environment Agency may take enforcement action. If you spray irrigate and hold a two part tariff billing agreement your charges are partially calculated on the amount of water abstracted. To gain the full financial benefits of this agreement it is important that you submit your return, even if you haven’t abstracted any water.</p>
+
+  <h2 id="submitting-water-abstraction-returns">Submitting water abstraction returns</h2>
+
+  <p>You can submit your water abstraction returns using forms supplied by the Environment Agency or use their online reporting system called Generic Operator Returns (GOR).</p>
+  <a href="#">Submit water abstraction returns</a>
+
+
+  </div>
+
+      </div>
+
+      <div class="change-history" data-module="toggle">
+        <div class="change-history__latest-change">
+          <dl>
+            <dt>Published by:</dt>
+              <dd>
+              The Environment Agency</dd>
+            <dt>Last update:</dt>
+            <dd>
+              <time datetime="2017-11-08T13:33:52+00:00" class="timestamp"> 27 November 2017</time>
+  <p class="change-history__summary">
+    Guidance first published
+  </p>
+
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+    </div>
+  </div>
+      </main>
+
+
+
+    </div>
+
+
+
+      <script src="https://assets.publishing.service.gov.uk/static/govuk-template-c4f303154d2a238bdda4d5cf1ebd8d4487822e4cbc3e4c83e743da869443ce72.js" crossorigin="anonymous" integrity="sha256-xPMDFU0qI4vdpNXPHr2NRIeCLky8PkyD50PahpRDznI="></script>
+
+        <script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-cb0decd18b4b0abbece3cfc180d9adc8e11dfa693cf34c2ff1ffcda86e725301.js" crossorigin="anonymous" integrity="sha256-yw3s0YtLCrvs48/BgNmtyOEd+mk880wv8f/NqG5yUwE="></script>
+  <script src="https://assets.publishing.service.gov.uk/static/header-footer-only-8ebb2100d4f59fb7e4eedb9c61672156ca92be731dc4a1ea6e9a7a218904e534.js" crossorigin="anonymous" integrity="sha256-jrshANT1n7fk7tucYWchVsqSvnMdxKHqbpp6IYkE5TQ="></script>
+  <script src="https://assets.publishing.service.gov.uk/static/surveys-8bfddec9d8aa8530dbad519c47440577d01ae78b506a9f2025a01f4f9ee807c4.js" crossorigin="anonymous" integrity="sha256-i/3eydiqhTDbrVGcR0QFd9Aa54tQap8gJaAfT57oB8Q="></script>
+
+
+
+      <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
+    <script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-4316f9d34667897560276221c7e712da80ae88cc0e8c91502b559066abf7e1b6.js"></script>
+  </body>
+  </html>
+
+</main>
+
+{% endblock %}
