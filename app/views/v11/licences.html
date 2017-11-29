@@ -8,13 +8,12 @@
 
 {% block content %}
 <main id="content" role="main">
-  <div class="phase-banner-alpha">
+  <div class="phase-banner-beta">
     <p>
       <strong class="phase-tag">BETA</strong>
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
   </div>
-
 
 
 <nav>
@@ -30,36 +29,106 @@
 </ol>
 </nav>
 </div>
+
 <div class="grid-row">
-  <div class="column-two-thirds">
-<h1 class="heading-large" style="margin-bottom: 30px">
-  Your water abstraction licence(s)
-  </h1>
-  <a href="/v11/online_licence?wid=1" style="font-weight: bold; margin-top: 10px" class="link"><span class="visually-hidden">H2Go Power</span>Licence serial number: 03/28/60/0002</a>
-  <p></p>
-
-  <div class="greyline" style="border-bottom: 1px solid #bfc1c3; margin-bottom: 10px"></div>
-  <p></p>
-  <a href="/v11/online_licence?wid=2" style="font-weight: bold"><span class="visually-hidden">Bridge Farm</span>Licence serial number: 03/28/60/0003</a>
-  <p></p>
-
-  <div class="greyline" style="border-bottom: 1px solid #bfc1c3; margin-bottom: 10px"></div>
-  <p></p>
-  <a href="/v11/online_licence?wid=3" style="font-weight: bold"><span class="visually-hidden">West Power</span>Licence serial number: 03/28/60/0004</a>
-  <p></p>
-
-  <div class="greyline" style="border-bottom: 1px solid #bfc1c3; margin-bottom: 10px"></div>
-  <p></p>
-
-  <a href="/v11/online_licence?wid=4" style="font-weight: bold"><span class="visually-hidden">Valley's Water</span>Licence serial number: 03/28/60/0005</a>
-  <p></p>
-
-  <div class="greyline" style="border-bottom: 1px solid #bfc1c3; margin-bottom: 10px"></div>
-  <p></p>
-  <a href="/v11/online_licence?wid=5" style="font-weight: bold"><span class="visually-hidden">H2Go Power</span>Licence serial number: 03/28/60/0006</a>
-  <p></p>
+  <div class="column-full">
+<h1 class="heading-large" style="margin-bottom: 10px">
+  Your water abstraction licences
+</h1>
+  </div>
 </div>
+
+
+
+
+
+{% block searchform %}
+<div class="grid-row">
+
+  {% block emailfield %}
+  <div class="column-two-fifths">
+    <div class="form-group form-group--horizontal">
+      <label class="form-label form-label--bold" for="emailAddress">Search for an account holder</label>
+      <span class="form-hint">Search by account email address.</span>
+      <input type="text" class="form-control form-control--block" name="emailAddress" id="emailAddress" />
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block search %}
+  <div class="column-two-fifths">
+    <div class="form-group form-group--horizontal">
+      <label class="form-label form-label--bold" for="licenseNumber">Search licences</label>
+      <span class="form-hint">Search by licence name or number.</span>
+      <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
+    </div>
+  </div>
+
+  <div class="column-one-fifth">
+    <input id="searchButton" class="button button button-license-search" type="submit" value="Search">
+  </div>
 </div>
+{% endblock %}
+{% endblock %}
+
+
+
+</div>
+
+<div class="grid-row">
+  <div class="column-full">
+
+
+
+    <!-- Results page goes here -->
+    <div class="license-results" id="results">
+
+      <div class="license-results-header">
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence serial number">Licence serial number<span class="sort-icon"> &#x25be;</span></a>
+        </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">Licence name</a>
+        </div>
+        <div class="license-results-header__column"></div>
+      </div>
+{% block geoff_instruct %}
+      </div>
+    <div class="license-results" id="results" style="margin-top: 0.3em">
+Search for an account holder, or search licences by name or number.
+</div>
+{% endblock %}
+
+{% block searchresults %}
+      <a href="online_licence?wid=1" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="online_licence?wid=2" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0003</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="online_licence?wid=3" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0004</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0005</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+{% endblock %}
+    </div>
+
+  </div>
+</div>
+
+<script src="/public/javascripts/underscore.min.js"></script>
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/license_results.js"></script>
 
 </main>
 {% endblock %}
