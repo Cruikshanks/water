@@ -34,14 +34,22 @@
   </div>
   <a href="/v11/licences" class="link-back" onclick="history.go(-1)">Back</a>
   <h3 class="heading-medium">Licence serial number: {{ pData.LicenceSerialNo }}</h3>
+
+  <div class="grid-row">
+    <div class="column-two-fifths">
+      <div class="form-group form-group--horizontal">
+        <input type="text" class="form-control form-control--block" name="emailAddress" id="emailAddress" />
+      </div>
+    </div>
+
+    <div class="column-one-fifth">
+      <a style="margin-top: 4px" href="online_licence_renamed?wid=1">Save</a> | <a style="margin-top: 4px" href="online_licence?wid=1">Cancel</a>
+    </div>
+    </div>
+
   <p></p>
 
   <p></p>
-  <div class="datatable">
-    <label>Licence name </label>
-    <div class="licenceAnswerv7">
-      <span>No licence name</span></br> <a href="online_licence_rename?wid=1">Name this licence</a></div>
-    </div>
   <div class="datatable">
     <label>Licence holder</label>
     <div class="licenceAnswerv7">
