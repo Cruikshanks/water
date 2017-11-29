@@ -688,6 +688,30 @@ router.get('/v11/online_licence', function (req, res) {
 
 module.exports = router
 
+router.get('/v11/online_licence_rename', function (req, res) {
+  res.render('v11/online_licence_rename',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v11/online_licence_renamed', function (req, res) {
+  res.render('v11/online_licence_renamed',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v11/online_licence_renaming', function (req, res) {
+  res.render('v11/online_licence_renaming',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
 router.get('/v11/online_licence/contact_details', function (req, res) {
   res.render('v11/online_licence/contact_details',{
      "chosenPermitID":req.query['wid']
