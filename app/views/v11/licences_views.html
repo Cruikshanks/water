@@ -42,7 +42,34 @@
 
 
 
+{% block searchform %}
+<div class="grid-row">
 
+  {% block emailfield %}
+  <div class="column-two-fifths">
+    <div class="form-group form-group--horizontal">
+      <label class="form-label form-label--bold" for="emailAddress">Search for an account holder</label>
+      <span class="form-hint">Search by account email address.</span>
+      <input type="text" class="form-control form-control--block" name="emailAddress" id="emailAddress" />
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block search %}
+  <div class="column-two-fifths">
+    <div class="form-group form-group--horizontal">
+      <label class="form-label form-label--bold" for="licenseNumber">Search licences</label>
+      <span class="form-hint">Search by licence name or number.</span>
+      <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
+    </div>
+  </div>
+
+  <div class="column-one-fifth">
+    <input id="searchButton" class="button button button-license-search" type="submit" value="Search">
+  </div>
+</div>
+{% endblock %}
+{% endblock %}
 
 
 
@@ -65,6 +92,15 @@
         </div>
         <div class="license-results-header__column"></div>
       </div>
+{% block geoff_instruct %}
+      </div>
+    <div class="license-result" id="results" aria-hidden="true">
+<div style="margin-top: 10px">Search for an account holder, licence name or number.</div>
+</div>
+</a>
+{% endblock %}
+
+{% block searchresults %}
       <a href="online_licence?wid=1" class="license-result">
         <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
         <p class="license-result__column license-result__column--description">-</p>
@@ -85,6 +121,7 @@
         <p class="license-result__column license-result__column--description">-</p>
         <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
       </a>
+{% endblock %}
     </div>
 
   </div>
