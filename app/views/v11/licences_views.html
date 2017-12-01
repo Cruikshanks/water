@@ -20,7 +20,7 @@
     <div class="breadcrumbs">
     	  <ol role="breadcrumbs">
           <li><a href="#">Your services</a></li>
-    	    <li><a href="#">Abstraction licences</a></li>
+    	    <li>Abstraction licences</li>
           <li></li>
 
           <a href="/v11/signin" class="sign-out2">Sign out</a>
@@ -29,15 +29,18 @@
 </ol>
 </nav>
 </div>
-
+    {% block page_heading %}
 <div class="grid-row">
   <div class="column-two-thirds" style="margin-top:45px;">
 <span style="font-size: 36px;font-weight:bold;">
   Your water abstraction licences
 </span>
     </div>
+        </div>
+        {% endblock %}
     {% block manage_licences_link %}
     </div>
+
     <div class="grid-row">
         <div class="column-full" style="margin-top:35px;margin-bottom:35px;">
     <nav class="tabs">
@@ -48,7 +51,7 @@
     </ul>
     </nav>
     </div>
-  </br>
+
         </div>
 
       {% endblock %}
@@ -69,13 +72,21 @@
 
         {% endblock %}
 
-</div>
+
 
 </br>
 
 
 
-
+{% block page_heading_in_tabs %}
+<div class="grid-row">
+<div class="column-full" style="margin-bottom:45px;">
+<span style="font-size: 36px;font-weight:bold;">
+Your water abstraction licences
+</span>
+</div>
+</div>
+        {% endblock %}
 
 {% block searchform %}
 <div class="grid-row">
