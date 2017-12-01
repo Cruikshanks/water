@@ -151,9 +151,34 @@ Your water abstraction licences
 <p>You can share your licence information with someone else, like other members of your organisation.</br>
 You'll need the email address they will use to access the licences.</p>
 </div>
+</div>
+</br>
+{% block add_user %}
+<div class="grid-row">
+<div class="column-two-fifths">
+  <div class="form-group form-group--horizontal">
+    <label class="form-label form-label--bold">Give us the email address you want to share your licence information with.</label>
+    <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
+  </div>
+</div>
 
-<a class="button" href="add_users_wendy" role="button" style="margin-bottom:20px;">Add user</a>
 
+<div class="column-one-fifth">
+  <a class="button" href="added_user_wendy" role="button" style="margin-top:50px;">Add user</a>
+</div>
+<div class="column-full">
+<a href="manage_licences_views_wendy">Cancel</a>
+</div>
+</div>
+</br>
+{% endblock %}
+{% block added_user %}
+<div class="panel panel-border-wide" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+<p style="font-weight:bold;margin-bottom:3px;margin-top:3px;">Licence access sent</p>
+<p>long_email_address@test.co.uk has been sent an access link and instructions for viewing licences.</p>
+<p>If you need to remove access, then remove them from the table below.</p>
+</div>
+{% endblock %}
 <div class="license-results" id="results">
 
   <div class="license-results-header">
