@@ -33,23 +33,19 @@
     </nav>
   </div>
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
-  <h2 class="heading-large">Licence serial number: {{ pData.LicenceSerialNo }}</h2>
-
-  <div class="grid-row">
-    <div class="column-two-fifths">
-      <div class="form-group form-group--horizontal">
-        <input type="text" class="form-control form-control--block" name="emailAddress" id="emailAddress" />
-      </div>
-    </div>
-
-    <div class="column-one-fifth">
-      <a style="margin-top: 4px" href="online_licence_renamed?wid=1">Save</a> | <a style="margin-top: 4px" href="online_licence?wid=1">Cancel</a>
-    </div>
-    </div>
+  <h1 class="heading-large">Licence serial number: {{ pData.LicenceSerialNo }}</h1>
 
   <p></p>
 
   <p></p>
+  <div class="datatable">
+    <label>Licence name</label>
+    <div class="licenceAnswerv7">
+      <input type="text" label="Licence_name" class="form-control form-control--block" name="emailAddress" id="emailAddress" style="width:300px;"/>
+<a class="button" href="online_licence_renamed?wid={{ pNumber }}" role="button" style="margin-bottom:20px;">Save</a>
+</br>
+      <a href="#" onclick="history.go(-1)">Cancel</a></div>
+    </div>
   <div class="datatable">
     <label>Licence holder</label>
     <div class="licenceAnswerv7">
