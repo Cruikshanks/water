@@ -22,7 +22,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <!-- always use method='post' for forms --->
-      <form action="/v11/licences" method="post" class="form" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+      <form action="/v11/online_licence/registrations/3_select_licences" method="get" class="form" id="password_reset" >
 {% if incorrectLicenceNo == "1" %}
   <!-- only show this error if incorrectLicenceNo param passed through from route-->
         <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
@@ -31,7 +31,7 @@
           </h2>
           <ul class="error-summary-list">
             <li data-parsely-id="user-id"><a href="#user-id">Re-enter your email address</a></li>
-           <li data-parsely-id="password"><a href="#password">Re-enter your password</a></li>
+           <li data-parsely-id="postcode"><a href="#password">Re-enter your password</a></li>
           </ul>
         </div>
 {% endif %}
@@ -57,13 +57,13 @@
                 <span class="form-hint">
                   If you have more than one licence, choose any of your numbers.
                 </span>
-                <span id="enterEmail" data-parsely-id="user-id" class="error-message hidden">Please enter your licence number.</span>
+                <span id="enterEmail"  class="error-message hidden">Please enter your licence number.</span>
 
               </fieldset>
 
           </label>
 
-          <input type="email" class="form-control" name="user-id" id="user-id" required=""/>
+          <input type="email" class="form-control" name="user-id" id="user-id"/>
         </div>
 
         <!-- Password -->
@@ -75,12 +75,12 @@
                 <span class="form-hint">
                   This is the postcode you registered as the licence holder.
                 </span>
-                <span id="enterPassword" data-parsely-id="password" class="error-message hidden">Please check and enter your postcode.</span>
+                <span id="enterPassword" data-parsely-id="postcode" class="error-message hidden">Please check and enter your postcode.</span>
               </fieldset>
 
           </label>
 
-          <input type="password" class="form-control" name="password" id="password" required=""/>
+          <input type="text" class="form-control" name="postcode" id="postcode" />
         </div>
 
           <input onclick="$('#incorrectLicenceNo').hide()" type="submit" value="Continue" class="button" role="button"/>
@@ -107,6 +107,7 @@
       <script>
 
 {% if incorrectLicenceNo == "1" %}
+
 document.getElementById("enterEmail").className = "error-message"
 document.getElementById("enterPassword").className = "error-message"
 

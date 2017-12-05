@@ -21,7 +21,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <!-- always use method='post' for forms --->
-      <form action="/v11/licences" method="post" class="form" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+      <form action="/v11/online_licence/registrations/9_create_password" method="get" class="form" id="password_reset" >
 {% if incorrectLogin == "1" %}
   <!-- only show this error if incorrectLogin param passed through from route-->
         <div id='incorrectLogin' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
@@ -63,7 +63,7 @@
 
           </label>
 
-          <input type="email" class="form-control" name="user-id" id="user-id" required=""/>
+          <input type="email" class="form-control" name="user-id" id="user-id" />
         </div>
 
         <!-- Password -->
@@ -80,7 +80,7 @@
 
           </label>
 
-          <input type="password" class="form-control" name="password" id="password" required=""/>
+          <input type="password" class="form-control" name="password" id="password" />
         </div>
 
           <input onclick="$('#incorrectLogin').hide()" type="submit" value="Sign in" class="button button-start" role="button"/>

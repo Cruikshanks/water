@@ -779,7 +779,6 @@ router.post('/v11/licences', function (req, res) {
   }
 })
 
-module.exports = router
 
 router.get('/v11/online_licence/registrations/2_licence_number', function (req, res) {
   if(req.query.incorrectLicenceNo){
@@ -792,9 +791,9 @@ router.get('/v11/online_licence/registrations/2_licence_number', function (req, 
   }
 })
 
-router.post('/v11/online_licence/registrations/2_licence_number', function (req, res) {
-
-  if (req.body.password=='test12345!'){
+router.post('/v11/online_licence/registrations/3_select_licences', function (req, res) {
+  console.log(req.body)
+  if (!req.body.password || req.body.password=='test12345!'){
     // password supplied and correct
     res.render('v11/online_licence/registrations/3_select_licences',{})
   } else {
@@ -803,3 +802,5 @@ router.post('/v11/online_licence/registrations/2_licence_number', function (req,
     return res.redirect(301, '/v11/online_licence/registrations/2_licence_number?incorrectLicenceNo=1');
   }
 })
+
+module.exports = router
