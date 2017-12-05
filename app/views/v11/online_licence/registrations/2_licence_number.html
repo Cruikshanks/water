@@ -35,6 +35,18 @@
           </ul>
         </div>
 {% endif %}
+{% if data.nodata == "1" %}
+  <!-- only show this error if incorrectLicenceNo param passed through from route-->
+        <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+            You need to enter a licence number or email address
+          </h2>
+          <ul class="error-summary-list">
+            <li data-parsely-id="licence_no"><a href="#licence_no">Enter your licence number</a></li>
+           <li data-parsely-id="postcode"><a href="#postcode">Enter your email address</a></li>
+          </ul>
+        </div>
+{% endif %}
 
             <h1 class="heading-large">
               Tell us your licence information
@@ -72,7 +84,7 @@
 
           </label>
 
-          <input  data-parsely-id="postcode" required="" type="text" class="form-control" name="postcode" id="postcode"  value="{{data.postcode}}"/>
+          <input  data-parsely-id="postcode"  type="text" class="form-control" name="postcode" id="postcode"  value="{{data.postcode}}"/>
         </div>
 
           <input onclick="$('#incorrectLicenceNo').hide()" type="submit" value="Continue" class="button" role="button"/>

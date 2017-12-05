@@ -789,6 +789,8 @@ router.get('/v11/online_licence/registrations/2_licence_number', function (req, 
 })
 
 router.post('/v11/online_licence/registrations/3_select_licences', function (req, res) {
+  data=req.query;
+  console.log(data)
   console.log(req.body)
   var data_valid=1;
   //03/28/60/0001
@@ -808,12 +810,71 @@ router.post('/v11/online_licence/registrations/3_select_licences', function (req
 
   if (data_valid==1){
     // licence_no and postcode valid
-    res.render('v11/online_licence/registrations/3_select_licences',{})
+    res.render('v11/online_licence/registrations/3_select_licences',{data:data})
   } else {
     //password not correct')
     //redirect to signin page
     return res.redirect(301, '/v11/online_licence/registrations/2_licence_number?incorrectLicenceNo=1&licence_no='+req.body.licence_no+'&postcode='+req.body.postcode);
   }
 })
+
+
+router.post('/v11/online_licence/registrations/4_give_email', function (req, res) {
+  console.log('4_give_email')
+  data=req.query;
+  console.log(req.body)
+    if(req.body['waste-types']=='_unchecked'){
+      data.noneselected=1;
+      res.render('v11/online_licence/registrations/3_select_licences',{
+         "data":data
+      })
+    } else {
+      res.render('v11/online_licence/registrations/4_give_email',{
+         "data":data
+      })
+
+    }
+})
+
+router.post('/v11/online_licence/registrations/6_security_options', function (req, res) {
+  console.log('6_security_options')
+  data=req.query;
+  console.log(req.body)
+  if(req.body['contact-email']== '' &&
+    req.body['contact-phone']=='' &&
+    req.body['contact-text-message']=='' ){
+      data.noneselected=1;
+      res.render('v11/online_licence/registrations/5_contact_details',{
+         "data":data
+      })
+    } else {
+      res.render('v11/online_licence/registrations/6_security_options',{
+         "data":data
+      })
+
+    }
+})
+
+router.post('/v11/online_licence/registrations/7', function (req, res) {
+  console.log('7_')
+  data=req.query;
+  console.log(req.body)
+  if(req.body.contact == 'by-post'){
+    res.render('v11/online_licence/registrations/7-2_by_post',{
+           "data":data
+        })
+  } else if (req.body.contact == 'by-phone'){
+  res.render('v11/online_licence/registrations/7-1_by_phone',{
+         "data":data
+      })
+} else {
+  data.noneselected=1
+  res.render('v11/online_licence/registrations/6_security_options',{
+         "data":data
+      })
+
+}
+})
+
 
 module.exports = router

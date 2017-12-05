@@ -21,12 +21,20 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
+            {% if data.noneselected == "1" %}
+              <!-- only show this error if incorrectLicenceNo param passed through from route-->
+                    <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+                      <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+                        You must select a contact method
+                      </h2>
+                    </div>
+            {% endif %}
 
             <h1 class="heading-large">
               How would you like to be contacted about this service?
             </h1>
 
-            <form>
+            <form method="post" action="/v11/online_licence/registrations/6_security_options">
               <div class="form-group">
                 <fieldset>
 
@@ -65,9 +73,9 @@
 
                 </fieldset>
               </div>
-            </form>
 
-            <a class="button" href="6_security_options" role="button">Continue</a>
+          <input type="submit" value="Continue" class="button" role="button"/>
+        </form>
 
     </div>
   </div>
