@@ -781,25 +781,38 @@ router.post('/v11/licences', function (req, res) {
 
 
 router.get('/v11/online_licence/registrations/2_licence_number', function (req, res) {
-  if(req.query.incorrectLicenceNo){
+  data=req.query;
     res.render('v11/online_licence/registrations/2_licence_number',{
-       "incorrectLicenceNo":"1"
+       "data":data
     })
-  } else {
-    res.render('v11/online_licence/registrations/2_licence_number',{})
 
-  }
 })
 
 router.post('/v11/online_licence/registrations/3_select_licences', function (req, res) {
   console.log(req.body)
-  if (!req.body.password || req.body.password=='test12345!'){
-    // password supplied and correct
+  var data_valid=1;
+  //03/28/60/0001
+  console.log('check licence no')
+  if(req.body.licence_no && req.body.licence_no.substr(0,9) != '03/28/60/'){
+    console.log('not valid')
+    data_valid=0;
+  } else {
+    console.log('valid')
+  }
+  if(req.body.postcode && req.body.postcode.length < 6){
+    data_valid=0;
+    console.log('not valid')
+  } else {
+    console.log('valid')
+  }
+
+  if (data_valid==1){
+    // licence_no and postcode valid
     res.render('v11/online_licence/registrations/3_select_licences',{})
   } else {
     //password not correct')
     //redirect to signin page
-    return res.redirect(301, '/v11/online_licence/registrations/2_licence_number?incorrectLicenceNo=1');
+    return res.redirect(301, '/v11/online_licence/registrations/2_licence_number?incorrectLicenceNo=1&licence_no='+req.body.licence_no+'&postcode='+req.body.postcode);
   }
 })
 

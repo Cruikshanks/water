@@ -22,28 +22,20 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <!-- always use method='post' for forms --->
-      <form action="/v11/online_licence/registrations/3_select_licences" method="get" class="form" id="password_reset" >
-{% if incorrectLicenceNo == "1" %}
+      <form action="/v11/online_licence/registrations/3_select_licences" method="post" class="form" id="password_reset" >
+{% if data.incorrectLicenceNo == "1" %}
   <!-- only show this error if incorrectLicenceNo param passed through from route-->
         <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
           <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
-            Your email address or password is incorrect
+            Your licence number or email address were not found
           </h2>
           <ul class="error-summary-list">
-            <li data-parsely-id="user-id"><a href="#user-id">Re-enter your email address</a></li>
-           <li data-parsely-id="postcode"><a href="#password">Re-enter your password</a></li>
+            <li data-parsely-id="licence_no"><a href="#licence_no">Re-enter your licence number</a></li>
+           <li data-parsely-id="postcode"><a href="#postcode">Re-enter your email address</a></li>
           </ul>
         </div>
 {% endif %}
-    <div class="error-summary hidden" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
-      <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
-        Your licence number or postcode are incorrect
-      </h2>
-      <ul class="error-summary-list">
-        <li data-parsely-id="user-id"><a href="#user-id">Re-enter your licence number</a></li>
-        <li data-parsely-id="password"><a href="#password">Re-enter your postcode</a></li>
-      </ul>
-    </div>
+
             <h1 class="heading-large">
               Tell us your licence information
             </h1>
@@ -63,7 +55,7 @@
 
           </label>
 
-          <input type="email" class="form-control" name="user-id" id="user-id"/>
+          <input type="licence_no" class="form-control" name="licence_no" id="licence_no" value="{{data.licence_no}}"/>
         </div>
 
         <!-- Password -->
@@ -75,12 +67,12 @@
                 <span class="form-hint">
                   This is the postcode you registered as the licence holder.
                 </span>
-                <span id="enterPassword" data-parsely-id="postcode" class="error-message hidden">Please check and enter your postcode.</span>
+                <span id="enterPassword" data-parsely-id="" class="error-message hidden">Please check and enter your postcode.</span>
               </fieldset>
 
           </label>
 
-          <input type="text" class="form-control" name="postcode" id="postcode" />
+          <input  data-parsely-id="postcode" required="" type="text" class="form-control" name="postcode" id="postcode"  value="{{data.postcode}}"/>
         </div>
 
           <input onclick="$('#incorrectLicenceNo').hide()" type="submit" value="Continue" class="button" role="button"/>
@@ -106,7 +98,7 @@
 
       <script>
 
-{% if incorrectLicenceNo == "1" %}
+{% if data.incorrectLicenceNo == "1" %}
 
 document.getElementById("enterEmail").className = "error-message"
 document.getElementById("enterPassword").className = "error-message"
