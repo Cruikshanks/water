@@ -761,6 +761,17 @@ router.get('/v11/signin', function (req, res) {
   }
 })
 
+router.get('/v11/online_licence/registrations/8_complete_account', function (req, res) {
+  if(req.query.incorrectLogin){
+    res.render('v11/online_licence/registrations/8_complete_account',{
+       "incorrectLogin":"1"
+    })
+  } else {
+    res.render('v11/online_licence/registrations/8_complete_account',{})
+
+  }
+})
+
 router.post('/v11/check_email', function (req, res) {
   res.render('v11/check_email',{
      "user_id":req.body.user_id
@@ -779,6 +790,29 @@ router.post('/v11/licences', function (req, res) {
   }
 })
 
+router.post('/v11/licences', function (req, res) {
+
+  if (req.body.password=='test12345!'){
+    // password supplied and correct
+    res.render('v11/licences',{})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v11/online_licence/registrations/auth_code?incorrectLogin=1');
+  }
+})
+
+router.post('/v11/online_licence/registrations/auth_code', function (req, res) {
+
+  if (req.body.password=='test12345!'){
+    // password supplied and correct
+    res.render('v11/online_licence/registrations/auth_code',{})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v11/online_licence/registrations/8_complete_account?incorrectLogin=1');
+  }
+})
 
 router.get('/v11/online_licence/registrations/2_licence_number', function (req, res) {
   data=req.query;
