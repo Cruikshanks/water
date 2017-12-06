@@ -780,7 +780,7 @@ router.post('/v11/check_email', function (req, res) {
 
 router.post('/v11/licences', function (req, res) {
 
-  if (req.body.password=='test12345!'){
+  if (req.body.password=='Test12345!'){
     // password supplied and correct
     res.render('v11/licences',{})
   } else {
