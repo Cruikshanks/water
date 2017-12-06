@@ -804,7 +804,7 @@ router.post('/v11/licences', function (req, res) {
 
 router.post('/v11/online_licence/registrations/auth_code', function (req, res) {
 
-  if (req.body.password=='test12345!'){
+  if (req.body.password=='Test12345!'){
     // password supplied and correct
     res.render('v11/online_licence/registrations/auth_code',{})
   } else {
