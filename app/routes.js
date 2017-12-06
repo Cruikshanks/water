@@ -836,8 +836,8 @@ router.post('/v11/online_licence/registrations/4_give_email', function (req, res
     }
 })
 
-router.post('/v11/online_licence/registrations/6_security_options', function (req, res) {
-  console.log('6_security_options')
+router.post('/v11/online_licence/registrations/create_password', function (req, res) {
+  console.log('create_password')
   data=req.query;
   console.log(req.body)
   if(req.body['contact-email']== '' &&
@@ -848,7 +848,7 @@ router.post('/v11/online_licence/registrations/6_security_options', function (re
          "data":data
       })
     } else {
-      res.render('v11/online_licence/registrations/6_security_options',{
+      res.render('v11/online_licence/registrations/create_password',{
          "data":data
       })
 
