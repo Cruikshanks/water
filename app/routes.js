@@ -1,6 +1,12 @@
 var express = require('express')
 var router = express.Router()
 
+
+// Auth code redirect for user testing
+router.get('/auth', function(req, res) {
+  res.redirect('/v11/online_licence/registrations/8_complete_account');
+});
+
 // Route index page
 router.get('/', function (req, res) {
   res.render('index')
