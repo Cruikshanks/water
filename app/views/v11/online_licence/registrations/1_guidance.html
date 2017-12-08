@@ -161,7 +161,17 @@
     <li>your postcode (from the address you registered as the licence holder)</li>
   </ul>
 
-<a href="2_licence_number">Create your account</a>
+{% block wendy_create_account_link %}
+
+<a href="/v11/online_licence/wendy_reg/2_licence_number">Create your account</a>
+
+{% endblock %}
+
+{% block john_create_account_link %}
+
+<a href="/v11/online_licence/john_reg/2_licence_number">Create your account</a>
+
+{% endblock %}
 
   <h2 id="abstraction-charges">Abstraction charges</h3>
 

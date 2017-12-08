@@ -35,18 +35,25 @@
             <h1 class="heading-large">
               Are these all of your water abstraction or impoundment licences?
             </h1>
-
-            <form method="post" action="/v11/online_licence/registrations/4_give_email">
+{% block john_next_page %}
+<form method="post" action="/v11/online_licence/john_reg/4_give_email">
+  <fieldset>
+{% endblock %}
+{% block wendy_next_page %}
+            <form method="post" action="/v11/online_licence/wendy_reg/4_give_email">
               <fieldset>
+{% endblock %}
 {% block john_licence_list_text %}
                 <legend>
                   <span class="body-text">Select all the licence serial numbers that apply:</span>
                 </legend><p></p>
 {% endblock %}
+
+{% block wendy_licence_list_text %}
                 <legend>
                   <span class="body-text">Remove any licence serial numbers that do not apply:</span>
                 </legend><p></p>
-
+{% endblock %}
 {% block john_licence_list %}
                 <div class="multiple-choice">
                   <input  id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
