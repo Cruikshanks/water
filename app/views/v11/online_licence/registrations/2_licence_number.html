@@ -20,7 +20,12 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <!-- always use method='post' for forms --->
+
+<form action="/v11/online_licence/wendy_reg/3_select_licences" method="post" class="form" id="password_reset" data-parsley-validate data-parsley-errors-messages-disabled>
+
+{% block john_next_page %}
       <form action="/v11/online_licence/registrations/3_select_licences" method="post" class="form" id="password_reset" data-parsley-validate data-parsley-errors-messages-disabled>
+{% endblock %}
 {% if data.incorrectLicenceNo == "1" %}
   <!-- only show this error if incorrectLicenceNo param passed through from route-->
         <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
@@ -64,7 +69,7 @@
         <!-- User id -->
         <div class="form-group">
           <label for="licence_no">
-
+{% block john_licence_no_label %}
               <fieldset>
                 <span class="form-label-bold">Your licence number</span>
                 <span class="form-hint">
@@ -73,12 +78,34 @@
 
                 <span id="enterLicenceNo" data-parsely-id="licence_no" class="error-message hidden">Enter your licence number.</span>
               </fieldset>
+  {% endblock %}
+
+  {% block wendy_licence_no_label %}
+                <fieldset>
+                  <span class="form-label-bold">Your licence numbers</span>
+                  <span class="form-hint">
+                    Give us a list of all your licence numbers.
+                  </span>
+
+                  <span id="enterLicenceNo" data-parsely-id="licence_no" class="error-message hidden">Enter your licence number.</span>
+                </fieldset>
+    {% endblock %}
 
           </label>
 
+          {% block wendy_licence_no_input %}
+
+          <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
+          </div>
+
+          {% endblock %}
+
+
+          {% block john_licence_no_input %}
+
           <input type="licence_no" class="form-control" name="licence_no" id="licence_no" value="{{data.licence_no}}" required />
         </div>
-
+        {% endblock %}
         <!-- Password -->
         <div class="form-group">
           <label for="postcode">
