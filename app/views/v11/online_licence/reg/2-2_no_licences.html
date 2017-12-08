@@ -1,0 +1,39 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+            <h1 class="heading-large">
+              Sorry, we need to confirm your licence information with you
+            </h1>
+            <p>Call our team for help:</p>
+
+            <ul class="list list-bullet">
+              <li>phone - <a href="tel:03708506506">03708 506 506</a> (UK)</li>
+              <li>minicom if you are deaf or hard of hearing - 03702 422 549</li>
+            </ul>
+
+            <p>Phone lines are open Monday to Friday, 8am to 6pm.
+          </br>Call charges can be found on <a href="http://www.gov.uk">GOV.UK</a></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

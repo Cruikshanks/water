@@ -1,0 +1,84 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+<a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+            {% if data.noneselected == "1" %}
+              <!-- only show this error if incorrectLicenceNo param passed through from route-->
+                    <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+                      <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+                        You must select a contact method, and then give us the contact details
+                      </h2>
+                    </div>
+            {% endif %}
+
+            <h1 class="heading-large">
+              How would you like to be contacted about this service?
+            </h1>
+
+            <form method="post" action="/v11/online_licence/registrations/create_password">
+              <div class="form-group">
+                <fieldset>
+
+                  <legend>
+                    <h1 class="heading-medium">
+                      How do you want to be contacted?
+                    </h1>
+                  </legend>
+
+                  <div class="multiple-choice" data-target="contact-by-email">
+                    <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+                    <label for="example-contact-by-email">Email</label>
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+                    <label class="form-label" for="contact-email">Email address</label>
+                    <input class="form-control" name="contact-email" type="text" id="contact-email">
+                  </div>
+
+                  <div class="multiple-choice" data-target="contact-by-phone">
+                    <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+                    <label for="example-contact-by-phone">Phone</label>
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+                    <label class="form-label" for="contact-phone">Phone number</label>
+                    <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+                  </div>
+
+                  <div class="multiple-choice" data-target="contact-by-text">
+                    <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+                    <label for="example-contact-by-text">Text message</label>
+                  </div>
+                  <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+                    <label class="form-label" for="contact-text-message">Mobile phone number</label>
+                    <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                  </div>
+
+                </fieldset>
+              </div>
+
+          <input type="submit" value="Continue" class="button" role="button"/>
+        </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

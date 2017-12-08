@@ -899,24 +899,7 @@ router.post('/v11/online_licence/wendy_reg/3_select_licences', function (req, re
 
 
 
-router.post('v11/online_licence/wendy_reg/4_give_email', function (req, res) {
-  console.log('4_give_email')
-  data=req.query;
-  console.log(req.body)
-    if(req.body['waste-types']=='_unchecked'){
-      data.noneselected=1;
-      res.render('v11/online_licence/wendy_reg/3_select_licences',{
-         "data":data
-      })
-    } else {
-      res.render('v11/online_licence/wendy_reg/4_give_emaill',{
-         "data":data
-      })
-
-    }
-})
-
-router.post('v11/online_licence/john_reg/4_give_email', function (req, res) {
+router.post('/v11/online_licence/john_reg/4_give_email', function (req, res) {
   console.log('4_give_email')
   data=req.query;
   console.log(req.body)
@@ -927,6 +910,23 @@ router.post('v11/online_licence/john_reg/4_give_email', function (req, res) {
       })
     } else {
       res.render('v11/online_licence/john_reg/4_give_email',{
+         "data":data
+      })
+
+    }
+})
+
+router.post('/v11/online_licence/registrations/4_give_email', function (req, res) {
+  console.log('4_give_email')
+  data=req.query;
+  console.log(req.body)
+    if(req.body['waste-types']=='_unchecked'){
+      data.noneselected=1;
+      res.render('v11/online_licence/registrations/3_select_licences',{
+         "data":data
+      })
+    } else {
+      res.render('v11/online_licence/registrations/4_give_email',{
          "data":data
       })
 
