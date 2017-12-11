@@ -33,8 +33,14 @@
             <h1 class="heading-large">
               How would you like to be contacted about this service?
             </h1>
-
+{% block john_next_page %}
             <form method="post" action="/v11/online_licence/registrations/create_password">
+              {% endblock %}
+
+{% block wendy_next_page %}
+            <form method="post" action="/v11/online_licence/wendy_reg/create_password">
+              {% endblock %}
+
               <div class="form-group">
                 <fieldset>
 

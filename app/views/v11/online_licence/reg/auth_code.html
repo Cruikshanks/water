@@ -18,8 +18,18 @@
 
   <div class="grid-row">
     <div class="column-two-thirds">
+
+      {% block john_next_page %}
       <!-- always use method='post' for forms --->
       <form action="/v11/licences" method="get" class="form" id="password_reset" data-parsley-validate data-parsley-errors-messages-disabled>
+        {% endblock %}
+
+        {% block wendy_next_page %}
+        <!-- always use method='post' for forms --->
+        <form action="/v11/licence_holder_wendy" method="get" class="form" id="password_reset" data-parsley-validate data-parsley-errors-messages-disabled>
+          {% endblock %}
+
+
 {% if incorrectLogin == "1" %}
   <!-- only show this error if incorrectLogin param passed through from route-->
         <div id='incorrectLogin' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">

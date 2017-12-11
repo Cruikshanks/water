@@ -888,7 +888,7 @@ router.post('/v11/online_licence/wendy_reg/3_select_licences', function (req, re
 
   if (data_valid==1){
     // licence_no and postcode valid
-    res.render('/v11/online_licence/wendy_reg/3_select_licences',{data:data})
+    res.render('v11/online_licence/wendy_reg/3_select_licences',{data:data})
   } else {
     //password not correct')
     //redirect to signin page
@@ -953,6 +953,25 @@ router.post('/v11/online_licence/registrations/create_password', function (req, 
     }
 })
 
+router.post('/v11/online_licence/wendy_reg/create_password', function (req, res) {
+  console.log('create_password')
+  data=req.query;
+  console.log(req.body)
+  if(req.body['contact-email']== '' &&
+    req.body['contact-phone']=='' &&
+    req.body['contact-text-message']=='' ){
+      data.noneselected=1;
+      res.render('v11/online_licence/wendy_reg/5_contact_details',{
+         "data":data
+      })
+    } else {
+      res.render('v11/online_licence/wendy_reg/create_password',{
+         "data":data
+      })
+
+    }
+})
+
 router.post('/v11/online_licence/registrations/7', function (req, res) {
   console.log('7_')
   data=req.query;
@@ -974,5 +993,45 @@ router.post('/v11/online_licence/registrations/7', function (req, res) {
 }
 })
 
+router.post('/v11/wendy_reg/registrations/7', function (req, res) {
+  console.log('7_')
+  data=req.query;
+  console.log(req.body)
+  if(req.body.contact == 'by-post'){
+    res.render('v11/wendy_reg/registrations/7-2_by_post',{
+           "data":data
+        })
+  } else if (req.body.contact == 'by-phone'){
+  res.render('v11/wendy_reg/registrations/7-1_by_phone',{
+         "data":data
+      })
+} else {
+  data.noneselected=1
+  res.render('v11/online_licence/wendy_reg/6_security_options',{
+         "data":data
+      })
 
+}
+})
+
+router.post('/v11/online_licence/wendy_reg/7', function (req, res) {
+  console.log('7_')
+  data=req.query;
+  console.log(req.body)
+  if(req.body.contact == 'by-post'){
+    res.render('v11/online_licence/wendy_reg/7-2_by_post',{
+           "data":data
+        })
+  } else if (req.body.contact == 'by-phone'){
+  res.render('v11/online_licence/wendy_reg/7-1_by_phone',{
+         "data":data
+      })
+} else {
+  data.noneselected=1
+  res.render('v11/online_licence/wendy_reg/6_security_options',{
+         "data":data
+      })
+
+}
+})
 module.exports = router
