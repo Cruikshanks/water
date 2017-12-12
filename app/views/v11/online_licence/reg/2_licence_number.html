@@ -107,6 +107,7 @@
         </div>
         {% endblock %}
         <!-- Password -->
+        {% block john_postcode %}
         <div class="form-group">
           <label for="postcode">
 
@@ -122,7 +123,7 @@
 
           <input   type="text" class="form-control" name="postcode" id="postcode"  value="{{data.postcode}}" required/>
         </div>
-
+{% endblock %}
           <input onclick="$('#incorrectLicenceNo').hide()" type="submit" value="Continue" class="button" role="button"/>
 
 

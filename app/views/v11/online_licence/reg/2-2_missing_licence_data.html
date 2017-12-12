@@ -1,0 +1,47 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+            <h1 class="heading-large">
+              Request your missing licences by email</h1>
+
+
+<p class="lede">Email the following information:</p>
+<ul class="list list-bullet">
+            <li>all licence numbers for any missing licences</li>
+            <li>their addresses</li>
+            <li>the name of the licence holders</li>
+            <li>the email address you will use to access the licences</li>
+</ul>
+<p>The address to email us on is <a href="mailto:test@testuser.co.uk">test@testuser.co.uk</a> </p>
+</br>
+            <div class="panel panel-border-wide">
+  <h2 class="heading-small">Next continue with your account</h3>
+            <p>It's important that once you've emailed us you continue setting up your account, using the mail address you sent us, so we can make sure your licences are added.</p>
+
+          </div>
+          </br>
+          <a class="button" href="4_give_email" role="button">Continue with my account</a>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

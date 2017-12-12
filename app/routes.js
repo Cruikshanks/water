@@ -931,6 +931,7 @@ router.post('/v11/online_licence/registrations/4_give_email', function (req, res
       })
 
     }
+
 })
 
 
@@ -947,6 +948,25 @@ router.post('/v11/online_licence/registrations/create_password', function (req, 
       })
     } else {
       res.render('v11/online_licence/registrations/create_password',{
+         "data":data
+      })
+
+    }
+})
+
+router.post('/v11/online_licence/registrations/7-2-2_by_post_confirm', function (req, res) {
+  console.log('7-2-2_by_post_confirm')
+  data=req.query;
+  console.log(req.body)
+  if(req.body['contact-email']== '' &&
+    req.body['contact-phone']=='' &&
+    req.body['contact-text-message']=='' ){
+      data.noneselected=1;
+      res.render('v11/online_licence/registrations/7-3_by_post2',{
+         "data":data
+      })
+    } else {
+      res.render('v11/online_licence/registrations/7-2-2_by_post_confirm',{
          "data":data
       })
 
@@ -992,6 +1012,8 @@ router.post('/v11/online_licence/registrations/7', function (req, res) {
 
 }
 })
+
+
 
 router.post('/v11/wendy_reg/registrations/7', function (req, res) {
   console.log('7_')

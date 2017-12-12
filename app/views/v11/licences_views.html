@@ -19,7 +19,7 @@
 <nav>
     <div class="breadcrumbs">
     	  <ol role="breadcrumbs">
-          <li><a href="#">Your services</a></li>
+          <li><a href="#">Your service</a></li>
     	    <li>Abstraction licences</li>
           <li></li>
 
@@ -33,7 +33,7 @@
 <div class="grid-row">
   <div class="column-two-thirds" style="margin-top:45px;">
 <span style="font-size: 36px;font-weight:bold;">
-  Your water abstraction licences
+  Your licences
 </span>
     </div>
         </div>
@@ -45,8 +45,8 @@
         <div class="column-full" style="margin-top:35px;margin-bottom:35px;">
     <nav class="tabs">
         	  <ul>
-              <li><span class="active">View licences</span></li>
-        	    <li><a href="manage_licences_views_wendy">Manage licence permissions</a></li>
+              <li><span class="active">Licence list</span></li>
+        	    <li><a href="manage_licences_views_wendy">Manage licence access</a></li>
         	    <li></li>
     </ul>
     </nav>
@@ -61,8 +61,8 @@
           <div class="column-full" style="margin-top:35px;margin-bottom:35px;">
       <nav class="tabs">
           	  <ul>
-                <li><a href="licence_holder_wendy">View licences</a></li>
-          	    <li><span class="active">Manage licence permissions</span></li>
+                <li><a href="licence_holder_wendy">Licence list</a></li>
+          	    <li><span class="active">Manage licence access</span></li>
           	    <li></li>
       </ul>
       </nav>
@@ -82,7 +82,7 @@
 <div class="grid-row">
 <div class="column-full" style="margin-bottom:30px;">
 <span style="font-size: 36px;font-weight:bold;">
-Your water abstraction licences
+Your licences
 </span>
 </div>
 </div>
@@ -104,12 +104,12 @@ Your water abstraction licences
   {% block search %}
   <div class="column-two-fifths">
     <div class="form-group form-group--horizontal">
-      <label class="form-label form-label--bold" for="licenseNumber">Search licences</label>
-      <span class="form-hint">Search by licence name or number.</span>
+      <label class="form-label form-label--bold" for="licenseNumber">Search your licences</label>
+      <span class="form-hint">Enter a licence number or the name you’ve given it.</span>
       <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
     </div>
   </div>
-
+</br>
   <div class="column-one-fifth">
     <input id="searchButton" class="button button button-license-search" type="submit" value="Search">
   </div>
@@ -162,8 +162,8 @@ Your water abstraction licences
     <div class="license-results-header__column">
       <a href="#" aria-label="Sort by licence name">Date shared</a>
     </div>
-        <div class="license-results-header__column">
-      <a href="#" aria-label="Sort by licence name">User access</a>
+    <div class="license-results-header__column">
+
     </div>
     <div class="license-results-header__column"></div>
   </div>
@@ -171,26 +171,26 @@ Your water abstraction licences
 <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">12 March 2015</p>
-  <p class="license-result__column license-result__column--description">View and share</p>
-  <div class="license-result__column license-result__column--view" aria-hidden="true">No access</div>
+    <p class="license-result__column license-result__column--description"></p>
+  <div class="license-result__column license-result__column--description"><span style="color:grey;">No access</span></div>
 </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">28 June 2015</p>
-  <p class="license-result__column license-result__column--description">View only</p>
-  <div class="license-result__column license-result__column--view" aria-hidden="true">No access</div>
+  <p class="license-result__column license-result__column--description"></p>
+  <div class="license-result__column license-result__column--view" aria-hidden="true">Remove</div>
 </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">1 May 2014</p>
-  <p class="license-result__column license-result__column--description">View and share</p>
-  <div class="license-result__column license-result__column--view" aria-hidden="true">No access</div>
+  <p class="license-result__column license-result__column--description"></p>
+  <div class="license-result__column license-result__column--view" aria-hidden="true">Remove</div>
 </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">4 July 2016</p>
-  <p class="license-result__column license-result__column--description">View only</p>
-  <div class="license-result__column license-result__column--view" aria-hidden="true">No access</div>
+  <p class="license-result__column license-result__column--description"></p>
+  <div class="license-result__column license-result__column--view" aria-hidden="true">Remove</div>
 </div>
 
     <div class="grid-row">
