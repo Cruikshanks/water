@@ -1,0 +1,57 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+
+
+        <h1 class="heading-large">
+          Access removed
+        </h1>
+
+
+
+
+        <p class="lede"><a href="mailto:long_email_address@test.co.uk">long_email_address@test.co.uk</a> can no longer view your licences.</p>
+
+
+        <a href="manage_licences_views_wendy">Return to licences</a>
+
+
+<script>
+    function getParameterByName(name, url) {
+      //this function enables named parameters to be parsed from the query string
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    //get the user-id value from the query string if present and set user-id field to same...
+    document.getElementById('user-id').value = getParameterByName('user_id');
+ </script>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

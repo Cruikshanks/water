@@ -105,11 +105,11 @@ Your licences
   <div class="column-two-fifths">
     <div class="form-group form-group--horizontal">
       <label class="form-label form-label--bold" for="licenseNumber">Search your licences</label>
-      <span class="form-hint">Enter a licence number or the name you’ve given it.</span>
+      <span class="form-hint">Enter a licence number or the name.</span>
       <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
     </div>
   </div>
-</br>
+
   <div class="column-one-fifth">
     <input id="searchButton" class="button button button-license-search" type="submit" value="Search">
   </div>
@@ -147,8 +147,8 @@ Your licences
 
 {% endblock %}
 {% block share_licences %}
-<p>You can allow other people to view your licences too. Just tell us their email address and we’ll send them a link to access this account.</p>
-<p>You can remove their access at any time.</p>
+<p>You can give other people access to view your licences too.</p><p> Tell us their email address and we’ll send them a link to create an account.</p>
+
 </div>
 
 <a class="button" href="add_users_wendy" role="button" style="margin-bottom:20px;">Add user</a>
@@ -168,29 +168,29 @@ Your licences
     <div class="license-results-header__column"></div>
   </div>
 
-<div class="license-result">
+  <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">12 March 2015</p>
     <p class="license-result__column license-result__column--description"></p>
-  <div class="license-result__column license-result__column--description"><span style="color:grey;">No access</span></div>
-</div>
+    <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove</a>
+  </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">28 June 2015</p>
   <p class="license-result__column license-result__column--description"></p>
-  <div class="license-result__column license-result__column--view" aria-hidden="true">Remove</div>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove</a>
 </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">1 May 2014</p>
   <p class="license-result__column license-result__column--description"></p>
-  <div class="license-result__column license-result__column--view" aria-hidden="true">Remove</div>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove</a>
 </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">4 July 2016</p>
   <p class="license-result__column license-result__column--description"></p>
-  <div class="license-result__column license-result__column--view" aria-hidden="true">Remove</div>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove</a>
 </div>
 
     <div class="grid-row">
