@@ -47,7 +47,10 @@
         	  <ul>
               <li><span class="active">Licence list</span></li>
         	    <li><a href="manage_licences_views_wendy">Manage licence access</a></li>
-        	    <li></li>
+{% block no_licences_new_user_tab_list_page %}
+                        	    <li><a href="manage_licences_wendy">Manage licences</a></li>
+{% endblock %}
+
     </ul>
     </nav>
     </div>
@@ -55,6 +58,7 @@
         </div>
 
       {% endblock %}
+
       {% block manage_licence_permissions %}
       </div>
       <div class="grid-row">
@@ -63,7 +67,9 @@
           	  <ul>
                 <li><a href="licence_holder_wendy">Licence list</a></li>
           	    <li><span class="active">Manage licence access</span></li>
-          	    <li></li>
+{% block no_licences_new_user_tab %}
+          	    <li><a href="manage_licences_wendy">Manage licences</a></li>
+{% endblock %}
       </ul>
       </nav>
       </div>
@@ -72,7 +78,42 @@
 
         {% endblock %}
 
+        {% block manage_licences_wendy %}
+        </div>
+        <div class="grid-row">
+            <div class="column-full" style="margin-top:35px;margin-bottom:35px;">
+        <nav class="tabs">
+            	  <ul>
+                  <li><span class="active">Licence list</span></li>
+            	    <li><a href="manage_licences_views_wendy">Manage licence access</a></li>
+  {% block manage_licences_wendy_tab %}
+            	    <li><a href="manage_licences_wendy">Manage licences</a></li>
+  {% endblock %}
+        </ul>
+        </nav>
+        </div>
+      </br>
+            </div>
 
+          {% endblock %}
+
+          {% block add_licences_wendy %}
+          </div>
+          <div class="grid-row">
+              <div class="column-full" style="margin-top:35px;margin-bottom:35px;">
+          <nav class="tabs">
+                  <ul>
+                    <li><a href="manage_licences_views_wendy">Licence list</a></li>
+                    <li><a href="manage_licences_views_wendy">Manage licence access</a></li>
+                    <li><span class="active">Manage licences</span></li>
+
+          </ul>
+          </nav>
+          </div>
+        </br>
+              </div>
+
+            {% endblock %}
 
 </br>
 
@@ -167,7 +208,7 @@ Your licences
     </div>
     <div class="license-results-header__column"></div>
   </div>
-
+        {% block no_users_new_user_results %}
   <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">12 March 2015</p>
@@ -192,14 +233,21 @@ Your licences
   <p class="license-result__column license-result__column--description"></p>
   <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove</a>
 </div>
-
-    <div class="grid-row">
+        {% endblock %}
           </div>
+          {% block no_users_new_user %}
+        <div class="grid-row">
+          <div class="column-two-thirds">
+          <p style="padding-top:5px;">You've not shared your licences with any users so far.</p>
+          </div>
+        </div>
+          {% endblock %}
         </br>
 
 
-{% endblock %}
 
+{% endblock %}
+{% block new_user_no_licences %}
 {% block searchresults %}
       <a href="online_licence?wid=1" class="license-result">
         <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
@@ -222,8 +270,12 @@ Your licences
         <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
       </a>
 {% endblock %}
-    </div>
+{% endblock %}
 
+    </div>
+    {% block no_licences_new_user %}
+    <p style="padding-top:5px;">There are currently no licences within your account.<p></p>Add licences on the <a href="/v11/online_licence/new_wendy_reg/first_log_in/manage_licences_views_wendy">manage licence access page.</a></p>
+    {% endblock %}
   </div>
 </div>
 
