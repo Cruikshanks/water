@@ -103,7 +103,7 @@
               <div class="column-full" style="margin-top:35px;margin-bottom:35px;">
           <nav class="tabs">
                   <ul>
-                    <li><a href="manage_licences_views_wendy">Licence list</a></li>
+                    <li><a href="licence_holder_wendy">Licence list</a></li>
                     <li><a href="manage_licences_views_wendy">Manage licence access</a></li>
                     <li><span class="active">Manage licences</span></li>
 
@@ -125,10 +125,53 @@
 <span style="font-size: 36px;font-weight:bold;">
 Your licences
 </span>
-</div>
-</div>
-        {% endblock %}
+{% block manage_licences_new_wendy %}
+<p>You can add licences you are the licence holder for here.</p>
+<p>Once added your licences will be marked as pending until we have verified you're the licence holder.</p><p> You may need to enter a code we send you in the post.</p>
 
+<a class="button" href="add_licences" role="button" style="margin-bottom:20px;">Add licence</a>
+
+<div class="license-results" id="results">
+
+  <div class="license-results-header">
+    <div class="license-results-header__column">
+      <a href="#" aria-label="Sort by licence serial number">Licence number<span class="sort-icon"> &#x25be;</span></a>
+    </div>
+    <div class="license-results-header__column">
+      <a href="#" aria-label="Sort by licence name">Status</a>
+    </div>
+    <div class="license-results-header__column">
+  </div>
+  </div>
+
+  <div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+  <p class="license-result__column license-result__column--description">Pending</p>
+    <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Enter code</a>
+  </div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0003</h2>
+  <p class="license-result__column license-result__column--description">Pending</p>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0004</h2>
+  <p class="license-result__column license-result__column--description">Pending</p>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0005</h2>
+  <p class="license-result__column license-result__column--description">Pending</p>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+
+          </div>
+                  {% endblock %}
+        </div>
+
+      </div>
+
+    {% endblock %}
 {% block searchform %}
 <div class="grid-row">
 
@@ -179,12 +222,15 @@ Your licences
         </div>
         <div class="license-results-header__column"></div>
       </div>
+
       {% endblock %}
 {% block geoff_instruct %}
       </div>
+
     <div class="license-result" id="results" aria-hidden="true">
 <div style="margin-top: 10px">Search for an account holder, licence name or number.</div>
 </div>
+      </div>
 
 {% endblock %}
 {% block share_licences %}
@@ -249,6 +295,7 @@ Your licences
 {% endblock %}
 {% block new_user_no_licences %}
 {% block searchresults %}
+
       <a href="online_licence?wid=1" class="license-result">
         <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
         <p class="license-result__column license-result__column--description">-</p>
@@ -269,6 +316,7 @@ Your licences
         <p class="license-result__column license-result__column--description">-</p>
         <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
       </a>
+
 {% endblock %}
 {% endblock %}
 
