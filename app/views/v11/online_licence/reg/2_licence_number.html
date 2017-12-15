@@ -30,11 +30,10 @@
   <!-- only show this error if incorrectLicenceNo param passed through from route-->
         <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
           <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
-            Your licence number or postcode were not found
+            Some information doesn’t match our records
           </h2>
           <ul class="error-summary-list">
-            <li data-parsely-id="licence_no"><a href="#licence_no">Re-enter your licence number</a></li>
-           <li data-parsely-id="postcode"><a href="#postcode">Re-enter your postcode</a></li>
+            <li data-parsely-id="licence_no"><a href="#licence_no">Check your licence number(s)</a></li>
           </ul>
         </div>
 {% endif %}
@@ -42,11 +41,10 @@
   <!-- only show this error if incorrectLicenceNo param passed through from route-->
         <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
           <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
-            You need to enter a licence number or email address
+            Some information doesn’t match our records
           </h2>
           <ul class="error-summary-list">
-            <li data-parsely-id="licence_no"><a href="#licence_no">Enter your licence number</a></li>
-           <li data-parsely-id="postcode"><a href="#postcode">Enter your email address</a></li>
+            <li data-parsely-id="licence_no"><a href="#licence_no">Check your licence number</a></li>
           </ul>
         </div>
 {% endif %}
@@ -54,17 +52,15 @@
 <!-- only show this error based on Parsley validation -->
 <div class="error-summary hidden" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
   <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
-    You must enter your licence number or postcode
+    We need more information
   </h2>
   <ul class="error-summary-list">
     <li data-parsely-id="licence_no"><a href="#licence_no">Enter your licence number</a></li>
-   <li data-parsely-id="postcode"><a href="#postcode">Enter your postcode</a></li>
   </ul>
 </div>
 
             <h1 class="heading-large">
-              Tell us your licence information
-            </h1>
+              Which licences do you want to be able to view?</h1>
 
         <!-- User id -->
         <div class="form-group">
@@ -82,9 +78,9 @@
 
   {% block wendy_licence_no_label %}
                 <fieldset>
-                  <span class="form-label-bold">Your licence numbers</span>
+                  <span class="form-label-bold">Enter your licence number(s)</span>
                   <span class="form-hint">
-                    Give us a list of all your licence numbers.
+You can separate your licence numbers using spaces, commas, or by entering them on different lines.
                   </span>
 
                   <span id="enterLicenceNo" data-parsely-id="licence_no" class="error-message hidden">Enter your licence number.</span>
