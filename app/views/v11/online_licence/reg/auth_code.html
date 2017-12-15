@@ -54,14 +54,14 @@
 
 
             <h1 class="heading-large">
-              Enter your confirmation code
+              Enter your security code
             </h1>
 <!-- <p class="lede">This is the code we sent you by post or email.</p> -->
         <!-- Code -->
         <div class="form-group">
           <label for="password">
             <span class="form-hint">
-              This is the code we sent you by post or email.
+              We sent this by post to the registered address you chose.
             </span>
               <fieldset>
                 <span id="enterPassword" data-parsely-id="password" class="error-message hidden">Please check your code is correct.</span>
@@ -77,8 +77,54 @@
 
       </form>
 <p></p>
-      <a id="password_reset_link" href="/v11/password_reset" class="password_reset">Not recieved a code?</a>
+<details class="closeOnOpen">
+          <summary><span class="summary">Haven’t received your code?</span></summary>
 
+          <p>Please allow up to 5 working days to receive your code by post.</p>
+          <p>If it hasn’t arrived after that time, please email <a href="mailto:water_abstractiondigital@environment-agency.gov.uk">water_abstractiondigital@environment-agency.gov.uk</a> to request a new code.</p>
+
+
+</details>
+</div>
+
+<div class="column-full">
+  <p></p>
+
+<div class="license-results" id="results">
+
+  <div class="license-results-header">
+    <div class="license-results-header__column">
+      <a href="#" aria-label="Sort by licence serial number">Licences you’ve requested to view<span class="sort-icon"> &#x25be;</span></a>
+    </div>
+    <div class="license-results-header__column">
+      <a href="#" aria-label="Sort by licence name">Status</a>
+    </div>
+    <div class="license-results-header__column">
+  </div>
+  </div>
+
+  <div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
+    <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Enter code</a>
+  </div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0003</h2>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0004</h2>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0005</h2>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+</div>
+          </div>
       <script>
       // the following code overrides the default link click behaviour and adds the
         document.getElementById('password_reset_link').onclick=function(e){
