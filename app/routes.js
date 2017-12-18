@@ -905,7 +905,7 @@ router.post('/v11/online_licence/wendy_reg/3_select_licences', function (req, re
 })
 
 
-router.post('/v11/online_licence/new_wendy_reg/3_select_licences', function (req, res) {
+router.post('/v11/online_licence/new_wendy_reg/select_licences', function (req, res) {
   data=req.query;
   console.log(data)
   console.log(req.body)
@@ -927,11 +927,11 @@ router.post('/v11/online_licence/new_wendy_reg/3_select_licences', function (req
 
   if (data_valid==1){
     // licence_no and postcode valid
-    res.render('v11/online_licence/new_wendy_reg/3_select_licences',{data:data})
+    res.render('v11/online_licence/new_wendy_reg/select_licences',{data:data})
   } else {
     //password not correct')
     //redirect to signin page
-    return res.redirect(301, '/v11/online_licence/new_wendy_reg/2_licence_number?incorrectLicenceNo=1&licence_no='+req.body.licence_no+'&postcode='+req.body.postcode);
+    return res.redirect(301, '/v11/online_licence/new_wendy_reg/licence_number?incorrectLicenceNo=1&licence_no='+req.body.licence_no+'&postcode='+req.body.postcode);
   }
 })
 

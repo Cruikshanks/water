@@ -128,7 +128,7 @@
 Before we give you access, we need to do some security checks to confirm you’re the licence holder or their official representative.<p></p>You can track the status of your requests below.
 </p>
 
-<a class="button" href="add_licences" role="button" style="margin-bottom:20px;">Add licence</a>
+<a class="button" href="/v11/online_licence/new_wendy_reg/licence_number" role="button" style="margin-bottom:20px;">Add licence</a>
 
 <div class="license-results" id="results">
 
@@ -241,7 +241,13 @@ Before we give you access, we need to do some security checks to confirm you’r
 
 </div>
 
+{% block share_licences_button %}
 <a class="button" href="add_users_wendy" role="button" style="margin-bottom:20px;">Add user</a>
+{% endblock %}
+
+{% block new_wendy_share_licences_button %}
+<a class="button" href="/v11/add_users" role="button" style="margin-bottom:20px;">Add user</a>
+{% endblock %}
 
 <div class="license-results" id="results">
 

@@ -32,7 +32,13 @@
               Where should we send your security code?
             </h1>
 
+{% block wendy_next_page %}
             <form method="post" action="/v11/online_licence/wendy_reg/7-2-2_by_post_confirm">
+{% endblock %}
+{% block new_wendy_next_page %}
+            <form method="post" action="/v11/online_licence/new_wendy_reg/post_confirm">
+{% endblock %}
+
 
               <div class="form-group">
                 <fieldset>
