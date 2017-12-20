@@ -145,22 +145,22 @@ Before we give you access, we need to do some security checks to confirm you’r
 
   <div class="license-result">
   <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
-  <p class="license-result__column license-result__column--description">Pending</p>
-    <a href="/v11/online_licence/new_wendy_reg/auth_code" class="license-result__column license-result__column--description" aria-hidden="true">Enter code</a>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
+    <a href="/v11/online_licence/new_wendy_reg/auth_code" class="license-result__column license-result__column--description" aria-hidden="true">Enter security code</a>
   </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">03/28/60/0003</h2>
-  <p class="license-result__column license-result__column--description">Pending</p>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
   <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
 </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">03/28/60/0004</h2>
-  <p class="license-result__column license-result__column--description">Pending</p>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
   <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
 </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">03/28/60/0005</h2>
-  <p class="license-result__column license-result__column--description">Pending</p>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
   <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
 </div>
 
@@ -217,7 +217,7 @@ Before we give you access, we need to do some security checks to confirm you’r
 
       <div class="license-results-header">
         <div class="license-results-header__column">
-          <a href="#" aria-label="Sort by licence serial number">Licence serial number<span class="sort-icon"> &#x25be;</span></a>
+          <a href="#" aria-label="Sort by licence serial number">Licence number<span class="sort-icon"> &#x25be;</span></a>
         </div>
         <div class="license-results-header__column">
           <a href="#" aria-label="Sort by licence name">Licence name</a>
@@ -242,7 +242,7 @@ Before we give you access, we need to do some security checks to confirm you’r
 </div>
 
 {% block share_licences_button %}
-<a class="button" href="add_users_wendy" role="button" style="margin-bottom:20px;">Add user</a>
+<a class="button" href="online_licence/wendy_reg/permissions/add_users_wendy" role="button" style="margin-bottom:20px;">Add user</a>
 {% endblock %}
 
 {% block new_wendy_share_licences_button %}
@@ -268,25 +268,25 @@ Before we give you access, we need to do some security checks to confirm you’r
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">12 March 2015</p>
     <p class="license-result__column license-result__column--description"></p>
-    <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
+    <a href="/v11/permissions/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
   </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">28 June 2015</p>
   <p class="license-result__column license-result__column--description"></p>
-  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
+  <a href="/v11/permissions/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
 </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">1 May 2014</p>
   <p class="license-result__column license-result__column--description"></p>
-  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
+  <a href="/v11/permissions/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
 </div>
 <div class="license-result">
   <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
   <p class="license-result__column license-result__column--description">4 July 2016</p>
   <p class="license-result__column license-result__column--description"></p>
-  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
+  <a href="/v11/permissions/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
 </div>
         {% endblock %}
           </div>
@@ -331,7 +331,7 @@ Before we give you access, we need to do some security checks to confirm you’r
 
     </div>
     {% block no_licences_new_user %}
-    <p style="padding-top:5px;">There are currently no licences within your account.<p>
+    <p style="padding-top:5px;">You don't have access to any licences yet.<p>
     {% endblock %}
   </div>
 </div>

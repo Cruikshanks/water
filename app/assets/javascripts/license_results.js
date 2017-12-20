@@ -36,13 +36,13 @@ $(function() {
 
     // For prototype, just load one of three pages at random
     var page = Math.ceil(Math.random() * 3);
-    var url = 'licence_holder_search_results_' + page;
+    var url = '/v11/online_licence/search_results/licence_holder_search_results_' + page;
 
     $.get(url, function(html) {
       $('#results').append(html);
 
       // If an email address hasn't been entered, we can't determine the
-      // user-defined name 
+      // user-defined name
       if(state.emailAddress == '') {
         $('#results p.license-result__column--description').text('-');
       }
