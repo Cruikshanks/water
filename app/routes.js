@@ -836,9 +836,9 @@ router.get('/v11/online_licence/wendy_reg/2_licence_number', function (req, res)
 
 })
 
-router.get('/v11/online_licence/new_wendy_reg/2_licence_number', function (req, res) {
+router.get('/v11/online_licence/new_wendy_reg/licence_number', function (req, res) {
   data=req.query;
-    res.render('v11/online_licence/new_wendy_reg/2_licence_number',{
+    res.render('v11/online_licence/new_wendy_reg/licence_number',{
        "data":data
     })
 

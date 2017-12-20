@@ -21,14 +21,13 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 <p></p>
-      <div class="panel panel-border-wide">
-        <p class="lede">
-Your security code and instructions will be sent by 2nd Class mail. You should receive them within 5 working days.        </p>
-      </div>
+<h2 class="heading-large">We're sending you a letter</h2>
+        <p>
+Your letter containing a security code and instructions will be sent by 2nd Class mail to:</p><p>111 Abbey House, Abingdon-on-Thames, Oxfordshire, RE1 1GA</p>
+<p>You should receive it within 5 working days.</p>
+          <a href="/v11/signin">Sign out</a>
 
-<h1 class="heading-large">
-  Where should we send your security code?
-</h1>
+
 
 {% block wendy_next_page %}
 <form method="post" action="/v11/online_licence/wendy_reg/7-2-2_by_post_confirm">
@@ -39,39 +38,12 @@ Your security code and instructions will be sent by 2nd Class mail. You should r
 
 {% block wendy_by_post_confirm %}
 
-  <div class="form-group">
-    <fieldset>
-      <legend>
-<p class="lede"> Choose one of your licence addresses:</p>
-</legend>
-<div class="form-group">
-<fieldset>
 
-<div class="multiple-choice">
-<input name="contact" id="radio-1" type="radio"  value="by-phone" checked>
-<label for="radio-1">111 Abbey House, Abingdon-on-Thames, Oxfordshire, RE1 1GA</br><div style="font-size:0.85em;">Licence number 03/28/60/0002</div></label>
-</div>
-<div class="multiple-choice">
-<input name="contact"  id="radio-2" type="radio" value="by-post">
-<label for="radio-2">112 Abbey House, Abingdon-on-Thames, Oxfordshire, RE1 1GA</br><div style="font-size:0.85em;">Licence number 03/28/60/0003</div></label>
-</div>
-<div class="multiple-choice">
-<input name="contact"  id="radio-2" type="radio" value="by-post2">
-<label for="radio-2">113 Abbey House, Abingdon-on-Thames, Oxfordshire, RE1 1GA</br><div style="font-size:0.85em;">Licence number 03/28/60/0004</div></label>
-</div>
 
-</fieldset>
-</div>
 
-</form>
+
 <p></p>
-<details class="closeOnOpen">
-<summary><span class="summary">Why do we need to post you a code?</span></summary>
 
-<p>We post a security code to a registered address to make sure you’re the licence holder or an official representative.</p>
-
-
-</details>
 {% endblock %}
 
 {% block john_by_phone %}
