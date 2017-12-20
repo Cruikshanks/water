@@ -85,14 +85,14 @@ Enter the password you created{% extends "v9/layoutv9.html" %}
 
       </form>
 
-      <a id="password_reset_link" href="/v11/password_reset" class="password_reset">Forgotten password?</a>
+      <a id="password_reset_link" href="/v11/reset_password/password_reset" class="password_reset">Forgotten password?</a>
 
       <script>
       // the following code overrides the default link click behaviour and adds the
         document.getElementById('password_reset_link').onclick=function(e){
           e.preventDefault();
           var user_id=document.getElementById('user-id').value
-          window.location='/v11/password_reset?user_id='+user_id; //redirect to password reset screen
+          window.location='/v11/reset_password/password_reset?user_id='+user_id; //redirect to password reset screen
         }
 
 

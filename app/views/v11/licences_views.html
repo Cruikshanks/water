@@ -47,9 +47,8 @@
         	  <ul>
               <li><span class="active">Licence list</span></li>
         	    <li><a href="manage_licences_views_wendy">Manage licence access</a></li>
-{% block no_licences_new_user_tab_list_page %}
-                        	    <li><a href="manage_licences_wendy">Licence requests</a></li>
-{% endblock %}
+        	    <li><a href="manage_licences_wendy">Licence requests</a></li>
+
 
     </ul>
     </nav>
@@ -67,9 +66,7 @@
           	  <ul>
                 <li><a href="licence_holder_wendy">Licence list</a></li>
           	    <li><span class="active">Manage licence access</span></li>
-{% block no_licences_new_user_tab %}
           	    <li><a href="manage_licences_wendy">Licence requests</a></li>
-{% endblock %}
       </ul>
       </nav>
       </div>
@@ -86,9 +83,7 @@
             	  <ul>
                   <li><span class="active">Licence list</span></li>
             	    <li><a href="manage_licences_views_wendy">Manage licence access</a></li>
-  {% block manage_licences_wendy_tab %}
             	    <li><a href="manage_licences_wendy">Licence requests</a></li>
-  {% endblock %}
         </ul>
         </nav>
         </div>
@@ -237,6 +232,7 @@ Before we give you access, we need to do some security checks to confirm you’r
 {% endblock %}
 {% block share_licences %}
 <h1 class="heading-large">Manage access to your licences</h1>
+<p>You can give other people access to view your licences too. Tell us their email address and we’ll send them a link to create an account.</p>
 <p>You can remove their access at any time.</p>
 
 </div>
