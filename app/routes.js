@@ -694,16 +694,16 @@ router.get('/v11/online_licence', function (req, res) {
 
 module.exports = router
 
-router.get('/v11/online_licence_rename', function (req, res) {
-  res.render('v11/online_licence_rename',{
+router.get('/v11/online_licence/rename/online_licence_rename', function (req, res) {
+  res.render('v11/online_licence/rename/online_licence_rename',{
      "chosenPermitID":req.query['wid']
   })
 })
 
 module.exports = router
 
-router.get('/v11/online_licence_renamed', function (req, res) {
-  res.render('v11/online_licence_renamed',{
+router.get('/v11/online_licence/rename/online_licence_renamed', function (req, res) {
+  res.render('v11/online_licence/rename/online_licence_renamed',{
      "chosenPermitID":req.query['wid']
   })
 })
@@ -784,11 +784,11 @@ router.post('/v11/check_email', function (req, res) {
   })
 })
 
-router.post('/v11/licences', function (req, res) {
+router.post('/v11/online_licence/licences_list/licences', function (req, res) {
 
   if (req.body.password=='Test12345!'){
     // password supplied and correct
-    res.render('v11/licences',{})
+    res.render('v11/online_licence/licences_list/licences',{})
   } else {
     //password not correct')
     //redirect to signin page
@@ -796,11 +796,11 @@ router.post('/v11/licences', function (req, res) {
   }
 })
 
-router.post('/v11/licences', function (req, res) {
+router.post('/v11/online_licence/licences_list/licences', function (req, res) {
 
   if (req.body.password=='test12345!'){
     // password supplied and correct
-    res.render('v11/licences',{})
+    res.render('v11/online_licence/licences_list/licences',{})
   } else {
     //password not correct')
     //redirect to signin page

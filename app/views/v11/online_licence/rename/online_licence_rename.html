@@ -32,14 +32,28 @@
       </ol>
     </nav>
   </div>
-  <a href="/v11/licences" class="link-back" onclick="history.go(-1)">Back</a>
-  <h1 class="heading-large">Licence serial number: {{ pData.LicenceSerialNo }}</h1>
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  <h1 class="heading-medium">Licence serial number <span style="margin-left:0.9em;">{{ pData.LicenceSerialNo }}</span></h1>
+
   <p></p>
-  <div class="datatable">
-    <label>Licence name </label>
-    <div class="licenceAnswerv7">
-      <span>Bridge Farm</span></br> <a href="online_licence_rename?wid=1">Change name</a></div>
+
+  <p></p>
+
+    <div class="form--well ">
+      <label for="name" class="">
+
+        <span class="form-label-bold">Licence name</span>
+
+      </label>
+
+      <input minlength="2" maxlength="32" style="background: #fff" type="text" class="form-control " id="name" name="name" value="">
+
+
+<p></p>
+      <a class="button" href="/v11/online_licence/rename/online_licence_renamed?wid={{ pNumber }}" role="button" style="margin-bottom:20px;">Save</a>
+    <p class="form-cancel"><a href="#" onclick="history.go(-1)">Cancel</a></p>
     </div>
+
   <div class="datatable">
     <label>Licence holder</label>
     <div class="licenceAnswerv7">

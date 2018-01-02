@@ -17,6 +17,20 @@ $path: "/public/images/";
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 
+.form-cancel {
+    display: inline-block;
+    float: right;
+    margin-top: 0.5em;
+}
+
+.form--well {
+    border: 1px solid #bfc1c3;
+    background: #f8f8f8;
+    padding: 28px;
+    margin-bottom: 3em;
+    position: relative;
+}
+
 .govuk-related-items {
   margin-top: $gutter;
   border-top: 10px solid $govuk-blue;
