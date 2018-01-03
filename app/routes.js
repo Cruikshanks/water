@@ -718,24 +718,24 @@ router.get('/v11/online_licence_renaming', function (req, res) {
 
 module.exports = router
 
-router.get('/v11/online_licence/contact_details', function (req, res) {
-  res.render('v11/online_licence/contact_details',{
+router.get('/v11/pages/contact_details', function (req, res) {
+  res.render('v11/pages/contact_details',{
      "chosenPermitID":req.query['wid']
   })
 })
 
 module.exports = router
 
-router.get('/v11/online_licence/terms', function (req, res) {
-  res.render('v11/online_licence/terms',{
+router.get('/v11/pages/terms', function (req, res) {
+  res.render('v11/pages/terms',{
      "chosenPermitID":req.query['wid']
   })
 })
 
 module.exports = router
 
-router.get('/v11/online_licence/map_of_abstraction_point', function (req, res) {
-  res.render('v11/online_licence/map_of_abstraction_point',{
+router.get('/v11/pages/map_of_abstraction_point', function (req, res) {
+  res.render('v11/pages/map_of_abstraction_point',{
      "chosenPermitID":req.query['wid']
   })
 })
@@ -1093,4 +1093,13 @@ router.post('/v11/online_licence/wendy_reg/7', function (req, res) {
 
 }
 })
+
+module.exports = router
+
+router.get('/v12/pages/contact_details', function (req, res) {
+  res.render('v12/pages/contact_details',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
 module.exports = router
