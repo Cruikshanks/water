@@ -686,8 +686,8 @@ router.post('/v10/online_licence/registrations/2_licence_number', function (req,
   }
 })
 
-router.get('/v11/online_licence', function (req, res) {
-  res.render('v11/online_licence',{
+router.get('/v11/pages/online_licence', function (req, res) {
+  res.render('v11/pages/online_licence',{
      "chosenPermitID":req.query['wid']
   })
 })
