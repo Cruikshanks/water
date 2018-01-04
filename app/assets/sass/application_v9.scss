@@ -18,7 +18,11 @@ $path: "/public/images/";
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 
 .needs-love {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
+}
+
+h1 {
+  margin-top: 0 !important;
 }
 
 .app-c-contents-list__list-item {
