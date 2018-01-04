@@ -1,0 +1,111 @@
+Enter the password you created{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <!-- always use method='post' for forms --->
+      <form action="/v12/contact_details/why" method="post" class="form" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+{% if incorrectLogin == "1" %}
+  <!-- only show this error if incorrectLogin param passed through from route-->
+        <div id='incorrectLogin' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+            Your email address or password is incorrect
+          </h2>
+          <ul class="error-summary-list">
+            <li data-parsely-id="user-id"><a href="#user-id">Re-enter your email address</a></li>
+           <li data-parsely-id="password"><a href="#password">Re-enter your password</a></li>
+          </ul>
+        </div>
+{% endif %}
+    <div class="error-summary hidden" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+      <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+        You need to enter both your email and password
+      </h2>
+      <ul class="error-summary-list">
+        <li data-parsely-id="user-id"><a href="#user-id">Re-enter your email address</a></li>
+        <li data-parsely-id="password"><a href="#password">Re-enter your password</a></li>
+      </ul>
+    </div>
+
+            <h1 class="heading-large">
+              Sign in
+            </h1>
+
+        <!-- User id -->
+        <div class="form-group">
+          <label for="user-id">
+
+              <fieldset>
+                <span class="form-label-bold">Email address</span>
+                <span class="form-hint">
+                  This is the email address used to create your account.
+                </span>
+                <span id="enterEmail" data-parsely-id="user-id" class="error-message hidden">Please enter the email address you registered with us.</span>
+
+              </fieldset>
+
+          </label>
+
+          <input type="email" class="form-control" name="user-id" id="user-id" required=""/>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">
+
+              <fieldset>
+                <span class="form-label-bold">Password</span>
+                <span class="form-hint">
+                  Enter the password you created.
+                </span>
+                <span id="enterPassword" data-parsely-id="password" class="error-message hidden">Please check and enter the password you created.</span>
+              </fieldset>
+
+          </label>
+
+          <input type="password" class="form-control" name="password" id="password" required=""/>
+        </div>
+
+          <input onclick="$('#incorrectLogin').hide()" type="submit" value="Sign in" class="button button-start" role="button"/>
+
+
+      </form>
+
+      <a id="password_reset_link" href="/v12/reset_Password/password_reset" class="password_reset">Forgotten password?</a>
+
+      <script>
+      // the following code overrides the default link click behaviour and adds the
+        document.getElementById('password_reset_link').onclick=function(e){
+          e.preventDefault();
+          var user_id=document.getElementById('user-id').value
+          window.location='/v12/reset_password/password_reset?user_id='+user_id; //redirect to password reset screen
+        }
+
+
+{% if incorrectLogin == "1" %}
+document.getElementById("enterEmail").className = "error-message"
+document.getElementById("enterPassword").className = "error-message"
+
+{% endif %}
+
+      </script>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

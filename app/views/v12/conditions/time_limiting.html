@@ -1,35 +1,37 @@
-{% extends "layout.html" %}
+{% extends "v9/layoutv9.html" %}
 
 {% set title = "Water abstraction licence" %}
 
 {% block page_title %}
-    {{title}} - GOV.UK
+Abstraction conditions
 {% endblock %}
 
 {% block content %}
-
 <main id="content" role="main">
-  {% from "custom_inc/conditions.html" import permits %}
-
-    {% for pNumber, pData in permits %}
-      {% if pNumber==chosenPermitID %}
-    <div class="phase-banner-alpha">
-      <p>
-      <strong class="phase-tag">ALPHA</strong>
-    <span>This is an Alpha prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
-            </div>
-    <nav>
-      <div class="breadcrumbs">
-          <ol role="breadcrumbs">
-            <li><a href="#">Your services</a></li>
-            <li><a href="/v7c/licences">Abstraction licences</a></li>
-            <li><a href="/v7c/online_licence?wid={{ pNumber }}">Licence {{ pData.LicenceSerialNo }}</a></li>
-            <li><a href="/v7c/online_licence/conditions/cessation?wid={{ pNumber }}">Licence conditions</a></li>
-
- <a href="/v7c/signin" class="sign-out2">Sign out</a>   </ol>   </nav>
   </div>
-<a href="/v7c/licences" class="link-back" onclick="history.go(-1)">Back</a>
+  {% from "custom_inc/waterdatav3.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="#">Your services</a></li>
+        <li><a href="/v12/online_licence/licences_list/licences">Abstraction licences</a></li>
+        <li><a href="/v12/pages/online_licence?wid={{ pNumber }}">Licence serial number: {{ pData.LicenceSerialNo }}</a></li>
+        <a href="/v12/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12/change_password/new_password.html" class="change-password">Change password</a>
+
+      </ol>
+    </nav>
+  </div>
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
 <h1 class="heading-large">Abstraction conditions</h1>
 <p></p>
@@ -39,9 +41,9 @@
         <div class="part-navigation" aria-label="Pages in this guide">
   <ol class="list list-number">
     <li>
-      <a href="/v7c/online_licence/conditions/cessation?wid={{ pNumber }}">Cessation condition</a>
+      <a href="/v12/conditions/cessation?wid={{ pNumber }}">Cessation condition</a>
     </li><p></p>
-    <li><a href="/v7c/online_licence/conditions/augmentation_compensation?wid={{ pNumber }}">Augmentation and compensation conditions</a>
+    <li><a href="/v12/conditions/augmentation_compensation?wid={{ pNumber }}">Augmentation and compensation conditions</a>
       </li><p></p>
       <li>
         Time limiting conditions
@@ -56,11 +58,11 @@
 
 <ol class="list list-number"  start="4">
       <li>
-        <a href="/v7c/online_licence/conditions/eel_screening?wid={{ pNumber }}">Eel screening condition</a>
+        <a href="/v12/conditions/eel_screening?wid={{ pNumber }}">Eel screening condition</a>
       </li>
       <p></p>
       <li>
-        <a href="/v7c/online_licence/conditions/fish_passage?wid={{ pNumber }}">Fish passage condition</a>
+        <a href="/v12/conditions/fish_passage?wid={{ pNumber }}">Fish passage condition</a>
       </li>
   </ol>
 </div>
@@ -84,7 +86,7 @@
           <div class="grid-row">
             <div class="column-one-third">
 
-          <a href="/v7c/online_licence/conditions/augmentation_compensation?wid={{ pNumber }}" class="pub-c-pagination__link" rel="prev">
+          <a href="/v12/conditions/augmentation_compensation?wid={{ pNumber }}" class="pub-c-pagination__link" rel="prev">
                   <div style="font-size: 27px;line-height: 1.25;font-family: "nta", Arial, sans-serif;font-weight: 400;text-transform: none;display: block;text-decoration: none;">
 
                       <svg class="pub-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
@@ -100,7 +102,7 @@
             <div class="column-one-third">
           <div class="pub-c-pagination__item-next">
 
-                          <a href="/v7c/online_licence/conditions/eel_screening?wid={{ pNumber }}" class="pub-c-pagination__link" rel="prev">
+                          <a href="/v12/conditions/eel_screening?wid={{ pNumber }}" class="pub-c-pagination__link" rel="prev">
                           <div style="font-size: 27px;line-height: 1.25;font-family: "nta", Arial, sans-serif;font-weight: 400;text-transform: none;display: block;text-decoration: none;text-align: right;">
 
                               Next
