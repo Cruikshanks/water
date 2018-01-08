@@ -1,0 +1,96 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+Abstraction conditions
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  {% from "custom_inc/waterdatav3.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="#">Your services</a></li>
+        <li><a href="/v12_2/online_licence/licences_list/licences">Abstraction licences</a></li>
+        <li><a href="/v12_2/pages/online_licence?wid={{ pNumber }}">Licence serial number: {{ pData.LicenceSerialNo }}</a></li>
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+
+      </ol>
+    </nav>
+  </div>
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+<h1 class="heading-large">Summary of the conditions held for Acorn Farm</h1>
+<div class="panel panel-border-wide">
+<p>This information may be incomplete because we are transferring records to our new system. You should check the paper copy of the licence for details of any conditions.</br>
+<a href="#">Find out about data transfer and our new system</a></p>
+</div>
+<p></p>
+<details class="closeOnOpen">
+          <summary><span class="summary">I don’t have the paper licence</span></summary>
+<p>To get a copy of your licence, email your licence number to <a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a>. <p></>We’ll reply within 20 working days. </p>
+
+</details>
+<p></p>
+</div>
+</div>
+<div class="grid-row">
+  <div class="column-full">
+    <h2 class="heading-medium">Chemical cessation condition</h2>
+<div class="datatable">
+  <label>Control sampling site</label>
+  <div class="licenceAnswerv7">
+  Colliters Brook south of the farm grid
+					reference SE 1234 5678</div>
+  </div>
+  <div class="datatable">
+    <label>Concentration</label>
+    <div class="licenceAnswerv7">
+    Manganese should be less than 50 mg/l</div>
+    </div>
+    <p></p>
+      </div>  </div>
+    <div class="grid-row">
+      <div class="column-full">
+<p></p>
+    <h2 class="heading-medium">Rates condition</h2>
+  <div class="datatable">
+  <label>Reference site</label>
+  <div class="licenceAnswerv7">
+  Acorn Farm intake valve</div>
+  </div>
+  <div class="datatable">
+    <label>Rate m3/d</label>
+    <div class="licenceAnswerv7">
+    230 m3/d</div>
+    </div>
+
+                        </div></div>
+
+              {% endif %}
+
+          {% endfor %}
+
+
+
+
+
+</main>
+
+{% endblock %}

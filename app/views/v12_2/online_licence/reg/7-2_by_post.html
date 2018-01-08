@@ -1,0 +1,54 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Request a security code by post" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+<a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+{% block john_post_choice %}
+            <h1 class="heading-large">
+              Request a security code by post
+            </h1>
+<p>We'll send a security code and instructions to the registered licence holder's postal address.</p>
+
+<p>The letter should arrive within 7 days</p>
+{% endblock %}
+
+{% block wendy_post_default %}
+            <h1 class="heading-large">
+              Confirm by post that you're the licence holder</h1>
+<p>To keep your licences safe, we need you to confirm you are the licence holder.</p>
+
+<p>We'll send a security code to the licence holder address for one of your requested licences.</p>
+
+<p>You can then complete your account using your confirmation code posted to you, in one final step.</p>
+
+
+{% endblock %}
+
+            <a class="button" href="7-3_by_post" role="button">Continue</a>
+<p></p>
+{% block john_by_phone %}
+<a href="7-1_by_phone">Or, request your code by phone and email</a>
+{% endblock %}
+    </div>
+  </div>
+</main>
+
+{% endblock %}
