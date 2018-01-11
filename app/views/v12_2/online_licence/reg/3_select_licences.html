@@ -1,0 +1,135 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Are these the licence numbers you want to be able to view?" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+      {% if data.noneselected == "1" %}
+        <!-- only show this error if incorrectLicenceNo param passed through from route-->
+              <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+                <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+                  You must select one or more licences
+                </h2>
+              </div>
+      {% endif %}
+
+            <h1 class="heading-large">
+              Are these the licence numbers you want to be able to view?
+            </h1>
+{% block john_next_page %}
+<form method="post" action="/v12_2/online_licence/john_reg/4_give_email">
+  <fieldset>
+{% endblock %}
+{% block wendy_next_page %}
+            <form method="post" action="/v12_2/online_licence/wendy_reg/4_give_email">
+              <fieldset>
+{% endblock %}
+
+{% block new_wendy_next_page %}
+            <form method="post" action="/v12_2/online_licence/new_wendy_reg/choose_address">
+              <fieldset>
+{% endblock %}
+
+{% block john_licence_list_text %}
+                <legend>
+                  <span class="body-text">Select all the licence serial numbers that apply:</span>
+                </legend><p></p>
+{% endblock %}
+
+{% block wendy_licence_list_text %}
+                <legend>
+                  <span class="body-text">You can add more licences once your account is created:</span>
+                </legend><p></p>
+{% endblock %}
+{% block john_licence_list %}
+                <div class="multiple-choice">
+                  <input  id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal" checked>
+                  <label for="waste-type-1">03/28/60/0001</label>
+                </div>
+                <div class="multiple-choice">
+                  <input  id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines" checked>
+                  <label for="waste-type-2">03/28/60/0002</label>
+                </div>
+                <div class="multiple-choice">
+                  <input  id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural" checked>
+                  <label for="waste-type-3">03/28/60/0003</label>
+                </div>
+                <div class="multiple-choice">
+                  <input  id="waste-type-4" name="waste-types" type="checkbox" value="waste-farm-agricultural" checked>
+                  <label for="waste-type-4">03/28/60/0004</label>
+                </div>
+                <div class="multiple-choice">
+                  <input  id="waste-type-5" name="waste-types" type="checkbox" value="waste-farm-agricultural" checked>
+                  <label for="waste-type-5">03/28/60/0005</label>
+                </div>
+                <div class="multiple-choice">
+                  <input  id="waste-type-6" name="waste-types" type="checkbox" value="waste-farm-agricultural" checked>
+                  <label for="waste-type-6">03/28/60/0006</label>
+                </div>
+{% endblock %}
+{% block wendy_licence_list %}
+<div class="license-results" id="results">
+
+  <div class="license-results-header">
+    <div class="license-results-header__column">
+      <a href="#" aria-label="Sort by licence serial number">Licence number<span class="sort-icon"> &#x25be;</span></a>
+    </div>
+    <div class="license-results-header__column"></div>
+  </div>
+
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+  <div class="license-result__column license-result__column--view" aria-hidden="true">Remove</div>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0003</h2>
+  <div class="license-result__column license-result__column--view" aria-hidden="true">Remove</div>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0004</h2>
+  <div class="license-result__column license-result__column--view" aria-hidden="true">Remove</div>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0005</h2>
+  <div class="license-result__column license-result__column--view" aria-hidden="true">Remove</div>
+</div>
+
+    </div>
+<p></p>
+{% endblock %}
+
+              </fieldset>
+</br>
+          <input type="submit" value="Yes" class="button" role="button"/></form>
+      </div>
+    </div>
+  </br>
+  {% block wendy_licenc_missing_data %}
+  <a href="2-2_missing_licence_data">No, some licences are missing or don’t belong to me</a>
+  {% endblock %}
+
+  {% block new_wendy_licence_missing_data %}
+  <a href="missing_licence_data">No, some licences are missing or don’t belong to me</a>
+  {% endblock %}
+</main>
+
+{% endblock %}

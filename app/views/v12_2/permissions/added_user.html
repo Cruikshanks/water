@@ -1,0 +1,53 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+
+<nav>
+    <div class="breadcrumbs">
+    	  <ol role="breadcrumbs">
+          <li><a href="#">Your service</a></li>
+    	    <li>Abstraction licences</li>
+          <li></li>
+
+          <a href="/v12_2/signin" class="sign-out2">Sign out</a>
+          <a href="/v12_2/change_password" class="change-password">Change password</a>
+
+</ol>
+</nav>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+<h1 class="heading-large" style="margin-bottom: 10px">
+  Access email sent to long_email_address@test.co.uk
+</h1>
+
+<p class="lede">We’ve sent instructions about how to create an account and view your licences.</p>
+
+{% block wendy_reg_next_page %}
+<a href="/v12_2/licence_holder_wendy">Remove access to your licences</a>
+<p>You can remove access to your licences on this page.</p>
+{% endblock %}
+
+</div>
+</div>
+
+
+</main>
+{% endblock %}

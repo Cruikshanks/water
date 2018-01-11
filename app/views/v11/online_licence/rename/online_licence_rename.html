@@ -27,7 +27,7 @@
         <li><a href="/v11/licences">Abstraction licences</a></li>
         <li><a href="/v11/online_licence?wid={{ pNumber }}">Licence serial number: {{ pData.LicenceSerialNo }}</a></li>
         <a href="/v11/signin" class="sign-out2">Sign out</a>
-        <a href="/v11/change_password" class="change-password">Change password</a>
+        <a href="/v11/change_password/new_password.html" class="change-password">Change password</a>
 
       </ol>
     </nav>
@@ -58,10 +58,10 @@
     <label>Licence holder</label>
     <div class="licenceAnswerv7">
       {{ pData.FirstName }} {{ pData.Surname }}</br>
-      <a href="/v11/online_licence/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
+      <a href="/v11/pages/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
     </div>
     <div class="datatable">
-      <label>Point of abstraction</label> <div class="licenceAnswerv7">{{ pData.Pointofabstraction | replace( "following National Grid References:", "following National Grid References:<p></p>")|safe }}</br><a href="/v11/online_licence/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
+      <label>Point of abstraction</label> <div class="licenceAnswerv7">{{ pData.Pointofabstraction | replace( "following National Grid References:", "following National Grid References:<p></p>")|safe }}</br><a href="/v11/pages/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
     </div>
     <div class="datatable">
       <div class="sourceofsupplyqv7">Start date</div> <div class="licenceAnswerv7">{{ pData.EffectiveDateStart }}</div>
@@ -83,7 +83,7 @@
 
         <p></p>  {{ pData.EelandFish }}
       </br>
-      <a href="/v11/online_licence/terms?wid={{ pNumber }}#abstractionconditions">Read all abstraction conditions</a>
+      <a href="/v11/pages/terms?wid={{ pNumber }}#abstractionconditions">Read all abstraction conditions</a>
     </br>
   </div></div></div>
   <div class="datatablebottom">
@@ -95,7 +95,7 @@
 
 </br>
 
-<p><a href="/v11/online_licence/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
+<p><a href="/v11/pages/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
 
 
 {% endif %}

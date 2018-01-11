@@ -1,0 +1,130 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+Abstraction conditions
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  {% from "custom_inc/waterdatav3.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="#">Your services</a></li>
+        <li><a href="/v12/online_licence/licences_list/licences">Abstraction licences</a></li>
+        <li><a href="/v12/pages/online_licence?wid={{ pNumber }}">Licence serial number: {{ pData.LicenceSerialNo }}</a></li>
+        <a href="/v12/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12/change_password/new_password.html" class="change-password">Change password</a>
+
+      </ol>
+    </nav>
+  </div>
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+<h1 class="heading-large">Abstraction conditions</h1>
+<p></p>
+<div class="grid-row">
+  <div class="column-one-third">
+      <nav>
+        <div class="part-navigation" aria-label="Pages in this guide">
+  <ol class="list list-number">
+    <li>
+      <a href="/v12/conditions/cessation?wid={{ pNumber }}">Cessation condition</a>
+    </li><p></p>
+    <li><a href="/v12/conditions/augmentation_compensation?wid={{ pNumber }}">Augmentation and compensation conditions</a>
+      </li><p></p>
+      <li>
+        Time limiting conditions
+      </li>
+    </ol>
+  </div>
+</div>
+</nav>
+<nav>
+      <div class="column-one-third">
+        <div class="part-navigation" aria-label="Pages in this guide">
+
+<ol class="list list-number"  start="4">
+      <li>
+        <a href="/v12/conditions/eel_screening?wid={{ pNumber }}">Eel screening condition</a>
+      </li>
+      <p></p>
+      <li>
+        <a href="/v12/conditions/fish_passage?wid={{ pNumber }}">Fish passage condition</a>
+      </li>
+  </ol>
+</div>
+</nav>
+</div></div>
+
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+  <div class="datatabletop"></div></br>
+    <h2 class="heading-medium">3. Time limiting conditions</h2>
+
+<h3 class="heading-small">Abstraction start</h3>
+            <p>{{ pData.timeLimitingabstractionstart | replace( ". ", ".<p></p>") | replace("Time limiting abstraction start", "<strong>Time limiting - abstraction start</strong></br>") | safe }}
+            </p>
+<h3 class="heading-small">Time limiting conditions</h3>
+            <p>{{ pData.timeLimitingconditions | replace( ". ", ".<p></p>") | replace("Time limiting conditions", "<strong>Time limiting conditions</strong></br>") | safe }}
+
+          </div></div>
+</br>
+          <div class="grid-row">
+            <div class="column-one-third">
+
+          <a href="/v12/conditions/augmentation_compensation?wid={{ pNumber }}" class="pub-c-pagination__link" rel="prev">
+                  <div style="font-size: 27px;line-height: 1.25;font-family: "nta", Arial, sans-serif;font-weight: 400;text-transform: none;display: block;text-decoration: none;">
+
+                      <svg class="pub-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                        <path fill="currentColor" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                      </svg>
+                      Previous
+                    </div>
+                      <span class="visually-hidden">:</span>
+                      <span class="pub-c-pagination__link-label">Augmentation and compensation conditions</span>
+                  </a>
+
+          </div>
+            <div class="column-one-third">
+          <div class="pub-c-pagination__item-next">
+
+                          <a href="/v12/conditions/eel_screening?wid={{ pNumber }}" class="pub-c-pagination__link" rel="prev">
+                          <div style="font-size: 27px;line-height: 1.25;font-family: "nta", Arial, sans-serif;font-weight: 400;text-transform: none;display: block;text-decoration: none;text-align: right;">
+
+                              Next
+                              <svg class="pub-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                                <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                              </svg>
+                            </div>
+                              <span class="visually-hidden">:</span>
+                              <span class="pub-c-pagination__link-label">Eel screening condition</span>
+                          </a>
+          </div>
+
+          </div></div>
+
+              {% endif %}
+
+          {% endfor %}
+
+
+
+
+
+</main>
+
+{% endblock %}
