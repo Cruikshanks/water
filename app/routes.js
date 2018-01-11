@@ -758,13 +758,13 @@ router.get('/v11/online_licence/contact', function (req, res) {
   })
 })
 
-router.get('/v11/signin', function (req, res) {
+router.get('/v11/pages/signin', function (req, res) {
   if(req.query.incorrectLogin){
-    res.render('v11/signin',{
+    res.render('v11/pages/signin',{
        "incorrectLogin":"1"
     })
   } else {
-    res.render('v11/signin',{})
+    res.render('v11/pages/signin',{})
 
   }
 })
@@ -794,7 +794,7 @@ router.post('/v11/online_licence/licences_list/licences', function (req, res) {
   } else {
     //password not correct')
     //redirect to signin page
-    return res.redirect(301, '/v11/signin?incorrectLogin=1');
+    return res.redirect(301, '/v11/pages/signin?incorrectLogin=1');
   }
 })
 
@@ -1168,13 +1168,13 @@ router.get('/v12/online_licence/contact', function (req, res) {
   })
 })
 
-router.get('/v12/signin', function (req, res) {
+router.get('/v12/pages/signin', function (req, res) {
   if(req.query.incorrectLogin){
-    res.render('v12/signin',{
+    res.render('v12/pages/signin',{
        "incorrectLogin":"1"
     })
   } else {
-    res.render('v12/signin',{})
+    res.render('v12/pages/signin',{})
 
   }
 })
@@ -1204,7 +1204,7 @@ router.post('/v12/online_licence/licences_list/licences', function (req, res) {
   } else {
     //password not correct')
     //redirect to signin page
-    return res.redirect(301, '/v12/signin?incorrectLogin=1');
+    return res.redirect(301, '/v12/pages/signin?incorrectLogin=1');
   }
 })
 
@@ -1646,13 +1646,13 @@ router.get('/v12_2/online_licence/contact', function (req, res) {
   })
 })
 
-router.get('/v12_2/signin', function (req, res) {
+router.get('/v12_2/pages/signin', function (req, res) {
   if(req.query.incorrectLogin){
-    res.render('v12_2/signin',{
+    res.render('v12_2/pages/signin',{
        "incorrectLogin":"1"
     })
   } else {
-    res.render('v12_2/signin',{})
+    res.render('v12_2/pages/signin',{})
 
   }
 })
@@ -1682,7 +1682,7 @@ router.post('/v12_2/online_licence/licences_list/licences', function (req, res) 
   } else {
     //password not correct')
     //redirect to signin page
-    return res.redirect(301, '/v12_2/signin?incorrectLogin=1');
+    return res.redirect(301, '/v12_2/pages/signin?incorrectLogin=1');
   }
 })
 
