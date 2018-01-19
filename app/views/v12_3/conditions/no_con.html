@@ -19,7 +19,7 @@ Abstraction conditions
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
-  <nav>
+  <nav> <!-- breadcrumbs -->
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
         <li><a href="#">Your services</a></li>
@@ -31,34 +31,34 @@ Abstraction conditions
       </ol>
     </nav>
   </div>
-  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a> <!-- back button -->
+
+  <div class="grid-row"> <!-- warning -->
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">Conditions held for [licence name or number]</h1>
+      <div class="notice">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Warning</span>
+        </i>
+        <strong class="bold-small">We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.</strong>
+        <p></p>
+      </div>
+      <p></p>
+    </div>
+  </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
+      <p>Sorry, we don’t hold any information about your conditions on our system yet.</p>
+      <p></p>
+      <p>Please check the paper copy of your licence for this information.</p>
+    </div>
+  </div>
 
-<h1 class="heading-large">Conditions held for [licence name or number]</h1>
-<div class="notice">
-  <i class="icon icon-important">
-    <span class="visually-hidden">Warning</span>
-  </i>
-  <strong class="bold-small">We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
-</strong>
-<p></p>
-</div>
-</div>
-<p></p>
-
-</div>
-</div>
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <p>Sorry, we don’t hold any information about your conditions on our system yet.<p></p>
-Please check the paper copy of your licence for this information.</p>
-                        </div></div>
-
-              {% endif %}
-
-          {% endfor %}
+{% endif %}
+{% endfor %}
 
 
 
