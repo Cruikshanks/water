@@ -2586,16 +2586,8 @@ router.get('/v12_3/conditions/time_limiting', function (req, res) {
 
 module.exports = router
 
-router.get('/v12_3/points-purpose', function (req, res) {
-  res.render('v12_3/points-purpose',{
-     "chosenPermitID":req.query['wid']
-  })
-})
-
-module.exports = router
-
-router.get('/v12_3/pages/points_purposes', function (req, res) {
- res.render('v12_3/pages/points_purposes',{
+router.get('/v12_3/pages/point_purpose', function (req, res) {
+ res.render('v12_3/pages/point_purpose',{
     "chosenPermitID":req.query['wid']
  })
 })
