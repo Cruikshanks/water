@@ -2082,8 +2082,6 @@ module.exports = router
 
 /* version 12.3 here */
 
-/* version 12_2 here */
-
 module.exports = router
 
 router.get('/v12_3/pages/online_licence', function (req, res) {
@@ -2587,3 +2585,17 @@ router.get('/v12_3/conditions/time_limiting', function (req, res) {
 })
 
 module.exports = router
+
+router.get('/v12_3/points-purpose', function (req, res) {
+  res.render('v12_3/points-purpose',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/pages/points_purposes', function (req, res) {
+ res.render('v12_3/pages/points_purposes',{
+    "chosenPermitID":req.query['wid']
+ })
+})
