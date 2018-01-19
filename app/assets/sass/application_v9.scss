@@ -17,6 +17,12 @@ $path: "/public/images/";
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 
+
+.datatabletop {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 0.5em;
+}
+
 .needs-love {
   padding-bottom: 0 !important;
 }
@@ -227,6 +233,14 @@ a.password_reset {
     width: 20%;
     font-weight: bold;
   }
+}
+
+.datahead {
+  border-top: none;
+}
+
+.first-data {
+  border-top: 1px solid #000;
 }
 
 .datatablebottom {

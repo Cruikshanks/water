@@ -1574,6 +1574,8 @@ router.get('/v12/conditions/time_limiting', function (req, res) {
   })
 })
 
+/* version 12_2 here */
+
 module.exports = router
 
 router.get('/v12_2/pages/online_licence', function (req, res) {
@@ -2077,3 +2079,515 @@ router.get('/v12_2/conditions/time_limiting', function (req, res) {
 })
 
 module.exports = router
+
+/* version 12.3 here */
+
+module.exports = router
+
+router.get('/v12_3/pages/online_licence', function (req, res) {
+  res.render('v12_3/pages/online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/online_licence/rename/online_licence_rename', function (req, res) {
+  res.render('v12_3/online_licence/rename/online_licence_rename',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/online_licence/rename/online_licence_renamed', function (req, res) {
+  res.render('v12_3/online_licence/rename/online_licence_renamed',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/online_licence_renaming', function (req, res) {
+  res.render('v12_3/online_licence_renaming',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/pages/contact_details', function (req, res) {
+  res.render('v12_3/pages/contact_details',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/pages/terms', function (req, res) {
+  res.render('v12_3/pages/terms',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/pages/map_of_abstraction_point', function (req, res) {
+  res.render('v12_3/pages/map_of_abstraction_point',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/complex_online_licence', function (req, res) {
+  res.render('v12_3/complex_online_licence',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/online_licence/contact', function (req, res) {
+  res.render('v12_3/online_licence/contact',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+router.get('/v12_3/pages/signin', function (req, res) {
+  if(req.query.incorrectLogin){
+    res.render('v12_3/pages/signin',{
+       "incorrectLogin":"1"
+    })
+  } else {
+    res.render('v12_3/pages/signin',{})
+
+  }
+})
+
+router.get('/v12_3/online_licence/registrations/8_complete_account', function (req, res) {
+  if(req.query.incorrectLogin){
+    res.render('v12_3/online_licence/registrations/8_complete_account',{
+       "incorrectLogin":"1"
+    })
+  } else {
+    res.render('v12_3/online_licence/registrations/8_complete_account',{})
+
+  }
+})
+
+router.post('/v12_3/check_email', function (req, res) {
+  res.render('v12_3/check_email',{
+     "user_id":req.body.user_id
+  })
+})
+
+router.post('/v12_3/online_licence/licences_list/licences', function (req, res) {
+
+  if (req.body.password=='Test12345!'){
+    // password supplied and correct
+    res.render('v12_3/online_licence/licences_list/licences',{})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v12_3/pages/signin?incorrectLogin=1');
+  }
+})
+
+router.post('/v12_3/online_licence/licences_list/licences', function (req, res) {
+
+  if (req.body.password=='test12345!'){
+    // password supplied and correct
+    res.render('v12_3/online_licence/licences_list/licences',{})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v12_3/online_licence/registrations/auth_code?incorrectLogin=1');
+  }
+})
+
+router.post('/v12_3/online_licence/registrations/auth_code', function (req, res) {
+
+  if (req.body.password=='Test12345!'){
+    // password supplied and correct
+    res.render('v12_3/online_licence/registrations/auth_code',{})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v12_3/online_licence/registrations/8_complete_account?incorrectLogin=1');
+  }
+})
+
+router.get('/v12_3/online_licence/registrations/2_licence_number', function (req, res) {
+  data=req.query;
+    res.render('v12_3/online_licence/registrations/2_licence_number',{
+       "data":data
+    })
+
+})
+
+router.get('/v12_3/online_licence/wendy_reg/2_licence_number', function (req, res) {
+  data=req.query;
+    res.render('v12_3/online_licence/wendy_reg/2_licence_number',{
+       "data":data
+    })
+
+})
+
+router.get('/v12_3/online_licence/new_wendy_reg/licence_number', function (req, res) {
+  data=req.query;
+    res.render('v12_3/online_licence/new_wendy_reg/licence_number',{
+       "data":data
+    })
+
+})
+
+router.post('/v12_3/online_licence/registrations/3_select_licences', function (req, res) {
+  data=req.query;
+  console.log(data)
+  console.log(req.body)
+  var data_valid=1;
+  //03/28/60/0001
+  console.log('check licence no')
+  if(req.body.licence_no && req.body.licence_no.substr(0,9) != '03/28/60/'){
+    console.log('not valid')
+    data_valid=0;
+  } else {
+    console.log('valid')
+  }
+  if(req.body.postcode && req.body.postcode.length < 6){
+    data_valid=0;
+    console.log('not valid')
+  } else {
+    console.log('valid')
+  }
+
+  if (data_valid==1){
+    // licence_no and postcode valid
+    res.render('v12_3/online_licence/registrations/3_select_licences',{data:data})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v12_3/online_licence/registrations/2_licence_number?incorrectLicenceNo=1&licence_no='+req.body.licence_no+'&postcode='+req.body.postcode);
+  }
+})
+
+router.post('/v12_3/online_licence/wendy_reg/3_select_licences', function (req, res) {
+  data=req.query;
+  console.log(data)
+  console.log(req.body)
+  var data_valid=1;
+  //03/28/60/0001
+  console.log('check licence no')
+  if(req.body.licence_no && req.body.licence_no.substr(0,9) != '03/28/60/'){
+    console.log('not valid')
+    data_valid=0;
+  } else {
+    console.log('valid')
+  }
+  if(req.body.postcode && req.body.postcode.length < 6){
+    data_valid=0;
+    console.log('not valid')
+  } else {
+    console.log('valid')
+  }
+
+  if (data_valid==1){
+    // licence_no and postcode valid
+    res.render('v12_3/online_licence/wendy_reg/3_select_licences',{data:data})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v12_3/online_licence/wendy_reg/2_licence_number?incorrectLicenceNo=1&licence_no='+req.body.licence_no+'&postcode='+req.body.postcode);
+  }
+})
+
+
+router.post('/v12_3/online_licence/new_wendy_reg/select_licences', function (req, res) {
+  data=req.query;
+  console.log(data)
+  console.log(req.body)
+  var data_valid=1;
+  //03/28/60/0001
+  console.log('check licence no')
+  if(req.body.licence_no && req.body.licence_no.substr(0,9) != '03/28/60/'){
+    console.log('not valid')
+    data_valid=0;
+  } else {
+    console.log('valid')
+  }
+  if(req.body.postcode && req.body.postcode.length < 6){
+    data_valid=0;
+    console.log('not valid')
+  } else {
+    console.log('valid')
+  }
+
+  if (data_valid==1){
+    // licence_no and postcode valid
+    res.render('v12_3/online_licence/new_wendy_reg/select_licences',{data:data})
+  } else {
+    //password not correct')
+    //redirect to signin page
+    return res.redirect(301, '/v12_3/online_licence/new_wendy_reg/licence_number?incorrectLicenceNo=1&licence_no='+req.body.licence_no+'&postcode='+req.body.postcode);
+  }
+})
+
+
+router.post('/v12_3/online_licence/john_reg/4_give_email', function (req, res) {
+  console.log('4_give_email')
+  data=req.query;
+  console.log(req.body)
+    if(req.body['waste-types']=='_unchecked'){
+      data.noneselected=1;
+      res.render('v12_3/online_licence/john_reg/3_select_licences',{
+         "data":data
+      })
+    } else {
+      res.render('v12_3/online_licence/john_reg/4_give_email',{
+         "data":data
+      })
+
+    }
+})
+
+router.post('/v12_3/online_licence/registrations/4_give_email', function (req, res) {
+  console.log('4_give_email')
+  data=req.query;
+  console.log(req.body)
+    if(req.body['waste-types']=='_unchecked'){
+      data.noneselected=1;
+      res.render('v12_3/online_licence/registrations/3_select_licences',{
+         "data":data
+      })
+    } else {
+      res.render('v12_3/online_licence/registrations/4_give_email',{
+         "data":data
+      })
+
+    }
+
+})
+
+
+router.post('/v12_3/online_licence/registrations/create_password', function (req, res) {
+  console.log('create_password')
+  data=req.query;
+  console.log(req.body)
+  if(req.body['contact-email']== '' &&
+    req.body['contact-phone']=='' &&
+    req.body['contact-text-message']=='' ){
+      data.noneselected=1;
+      res.render('v12_3/online_licence/registrations/5_contact_details',{
+         "data":data
+      })
+    } else {
+      res.render('v12_3/online_licence/registrations/create_password',{
+         "data":data
+      })
+
+    }
+})
+
+router.post('/v12_3/online_licence/registrations/7-2-2_by_post_confirm', function (req, res) {
+  console.log('7-2-2_by_post_confirm')
+  data=req.query;
+  console.log(req.body)
+  if(req.body['contact-email']== '' &&
+    req.body['contact-phone']=='' &&
+    req.body['contact-text-message']=='' ){
+      data.noneselected=1;
+      res.render('v12_3/online_licence/registrations/7-3_by_post2',{
+         "data":data
+      })
+    } else {
+      res.render('v12_3/online_licence/registrations/7-2-2_by_post_confirm',{
+         "data":data
+      })
+
+    }
+})
+
+router.post('/v12_3/online_licence/wendy_reg/create_password', function (req, res) {
+  console.log('create_password')
+  data=req.query;
+  console.log(req.body)
+  if(req.body['contact-email']== '' &&
+    req.body['contact-phone']=='' &&
+    req.body['contact-text-message']=='' ){
+      data.noneselected=1;
+      res.render('v12_3/online_licence/wendy_reg/5_contact_details',{
+         "data":data
+      })
+    } else {
+      res.render('v12_3/online_licence/wendy_reg/create_password',{
+         "data":data
+      })
+
+    }
+})
+
+router.post('/v12_3/contact_details/confirm', function (req, res) {
+  console.log('create_password')
+  data=req.query;
+  console.log(req.body)
+  if(req.body['contact-email']== '' &&
+    req.body['contact-phone']=='' &&
+    req.body['contact-text-message']=='' ){
+      data.noneselected=1;
+      res.render('v12_3/contact_details/why',{
+         "data":data
+      })
+    } else {
+      res.render('v12_3/contact_details/confirm',{
+         "data":data
+      })
+
+    }
+})
+
+
+router.post('/v12_3/online_licence/registrations/7', function (req, res) {
+  console.log('7_')
+  data=req.query;
+  console.log(req.body)
+  if(req.body.contact == 'by-post'){
+    res.render('v12_3/online_licence/registrations/7-2_by_post',{
+           "data":data
+        })
+  } else if (req.body.contact == 'by-phone'){
+  res.render('v12_3/online_licence/registrations/7-1_by_phone',{
+         "data":data
+      })
+} else {
+  data.noneselected=1
+  res.render('v12_3/online_licence/registrations/6_security_options',{
+         "data":data
+      })
+
+}
+})
+
+
+
+router.post('/v12_3/wendy_reg/registrations/7', function (req, res) {
+  console.log('7_')
+  data=req.query;
+  console.log(req.body)
+  if(req.body.contact == 'by-post'){
+    res.render('v12_3/wendy_reg/registrations/7-2_by_post',{
+           "data":data
+        })
+  } else if (req.body.contact == 'by-phone'){
+  res.render('v12_3/wendy_reg/registrations/7-1_by_phone',{
+         "data":data
+      })
+} else {
+  data.noneselected=1
+  res.render('v12_3/online_licence/wendy_reg/6_security_options',{
+         "data":data
+      })
+
+}
+})
+
+router.post('/v12_3/online_licence/wendy_reg/7', function (req, res) {
+  console.log('7_')
+  data=req.query;
+  console.log(req.body)
+  if(req.body.contact == 'by-post'){
+    res.render('v12_3/online_licence/wendy_reg/7-2_by_post',{
+           "data":data
+        })
+  } else if (req.body.contact == 'by-phone'){
+  res.render('v12_3/online_licence/wendy_reg/7-1_by_phone',{
+         "data":data
+      })
+} else {
+  data.noneselected=1
+  res.render('v12_3/online_licence/wendy_reg/6_security_options',{
+         "data":data
+      })
+
+}
+})
+
+module.exports = router
+
+router.get('/v12_3/pages/contact_details', function (req, res) {
+  res.render('v12_3/pages/contact_details',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/conditions/cessation', function (req, res) {
+  res.render('v12_3/conditions/cessation',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/conditions/1_con', function (req, res) {
+  res.render('v12_3/conditions/1_con',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/conditions/3_con', function (req, res) {
+  res.render('v12_3/conditions/3_con',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/conditions/no_con', function (req, res) {
+  res.render('v12_3/conditions/no_con',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/conditions/augmentation_compensation', function (req, res) {
+  res.render('v12_3/conditions/augmentation_compensation',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/conditions/eel_screening', function (req, res) {
+  res.render('v12_3/conditions/eel_screening',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/conditions/fish_passage', function (req, res) {
+  res.render('v12_3/conditions/fish_passage',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/conditions/time_limiting', function (req, res) {
+  res.render('v12_3/conditions/time_limiting',{
+     "chosenPermitID":req.query['wid']
+  })
+})
+
+module.exports = router
+
+router.get('/v12_3/pages/point_purpose', function (req, res) {
+ res.render('v12_3/pages/point_purpose',{
+    "chosenPermitID":req.query['wid']
+ })
+})
