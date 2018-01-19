@@ -235,12 +235,34 @@ a.password_reset {
   }
 }
 
+.datatablepp {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 0.5em;
+
+  label {
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 7px;
+    padding-right: 0.5em;
+    width: 20%;
+  }
+}
+
 .datahead {
   border-top: none;
 }
 
+.dataheadpp {
+  border-top: none;
+  font-weight: bold;
+}
+
 .first-data {
   border-top: 1px solid #000;
+}
+
+.first-datapp {
+  border-top: 2px solid #bfc1c3;
 }
 
 .datatablebottom {
@@ -282,6 +304,13 @@ a.password_reset {
 }
 
 .licenceAnswerv7 {
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 7px;
+  padding-left: 3em;
+}
+
+.licenceAnswerv12 {
   display: inline-block;
   width: 50%;
   padding-bottom: 7px;
