@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class='column-two-thirds'>
+
+      <h1 class="heading-xlarge">
+        Manage your water abstraction or impoundment licence online prototype: Beta
+      </h1>
+
+      <h2 class="heading-medium">Prototype versions 12.1, 12.2 and 12.3</h2>
+
+      <h3 class="heading-small">Abstraction conditions</h3>
+      <ul class="list list-bullet">
+        <li><a href="/v13/pages/online_licence?wid=7">Time-limited licence condtions</a></li>
+        <li><a href="/v13/pages/variation_summary?wid=7">Summary of temporary conditions</a></li>
+      </ul>
+
+      <details class="closeOnOpen">
+        <summary><span class="summary">Carried over from previous version</span></summary>
+        <h3 class="heading-small">Licence pages (as John)</h3>
+
+        <ul class="list list-bullet">
+          <li>
+            <a href="/v12/pages/signin">
+              Sign in
+            </a>
+          </li>
+
+          <li>
+            <a href="/v12/online_licence/licences_list/licences">
+              Abstraction licences
+            </a>
+          </li>
+
+          <li>
+            <a href="/v12/pages/online_licence?wid=1">
+              Licence
+            </a>
+          </li>
+
+          <li>
+            <a href="/v12/pages/terms?wid=1">
+              Licence terms
+            </a>
+			    </li>
+
+          <li>
+  					<a href="/v12_2/pages/contact_details?wid=1">
+  						Contact details
+  					</a>
+  				</li>
+		    </ul>
+
+        <h4 class="heading-small">User change password</h4>
+    		<ul class="list list-bullet">
+          <li><a href="/v12/change_password/new_password">Change password</a></li>
+          <li><a href="/v12/change_password/new_password_confirm?">Password changed</a></li>
+        </ul>
+
+        <h4 class="heading-small">User reset password</h4>
+    		<ul class="list list-bullet">
+          <li>
+            <a href="/v12/reset_password/password_reset">
+              Password reset
+            </a>
+          </li>
+
+          <li>
+            <a href="/v12/reset_password/check_email?">
+              Check your email
+            </a>
+          </li>
+          <li>
+            <a href="/v12/reset_password/resend_password">
+              Ask for another email
+            </a>
+          </li>
+          <li>
+            <a href="/v12/reset_password/resent_password">
+              Check your email, or contact us
+            </a>
+          </li>
+        </ul>
+
+        <h4 class="heading-small">Licences list page</h4>
+        <ul class="list list-bullet">
+          <li>
+            <a href="/v12/online_licence/licences_list/personas/licence_holder_john">
+              Licences list landing page for John
+            </a>
+          </li>
+
+          <li>
+            <a href="/v12/online_licence/licences_list/personas/licence_holder_wendy">
+              Licences list landing page for Wendy
+            </a>
+          </li>
+
+          <li>
+            <a href="/v12/online_licence/licences_list/personas/licence_holder_geoff">
+              Licences list landing page for Geoff
+            </a>
+          </li>
+        </ul>
+
+        <h4 class="heading-small">User feedback</h4>
+        <ul class="list list-bullet">
+          <li><a href="/v12/pages/feedback">User feedback page (smart survey iframe)</a></li>
+        </ul>
+
+        <h4 class="heading-small">Registration process - Wendy</h4>
+        <ul class="list list-bullet">
+          <li><a href="/v12/online_licence/new_wendy_reg/guidance">Registration guidance</a></li>
+          <li><a href="/v12/online_licence/new_wendy_reg/give_email">Tell us your email</a></li>
+          <li><a href="/v12/online_licence/new_wendy_reg/check_email">Check your email</a></li>
+          <li><a href="/v12/online_licence/new_wendy_reg/resend_email">Resend email</a></li>
+          <li><a href="/v12/online_licence/new_wendy_reg/resent_email">Check your email again</a></li>
+          <li><a href="/v12/online_licence/new_wendy_reg/create_password">Create a password for your account</a></li>
+          <li><a href="/v12/online_licence/new_wendy_reg/licence_number">Tell us your licence numbers</a></li>
+          <li><a href="/v12/online_licence/new_wendy_reg/select_licences">Confirm these are your licences</a></li>
+          <li><a href="/v12/online_licence/new_wendy_reg/choose_address">Where should we send your code?</a></li>
+          <li><a href="/v12/online_licence/new_wendy_reg/post_confirm">Code requested</a></li>
+          <li><a href="/v12/online_licence/new_wendy_reg/auth_code">Tell us your security code</a></li>
+          <li><a href="/v12/online_licence/licences_list/personas/licence_holder_wendy">Licences list page</a></li>
+        </ul>
+
+      </details>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
