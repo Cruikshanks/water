@@ -2591,3 +2591,17 @@ router.get('/v12_3/pages/point_purpose', function (req, res) {
     "chosenPermitID":req.query['wid']
  })
 })
+
+/* version 13 routes */
+module.exports = router
+router.get('/v13/pages/online_licence', function (req, res) {
+ res.render('v13/pages/online_licence',{
+    "chosenPermitID":req.query['wid']
+ })
+})
+module.exports = router
+router.get('/v13/pages/variation_summary', function (req, res) {
+ res.render('v13/pages/variation_summary',{
+    "chosenPermitID":req.query['wid']
+ })
+})
