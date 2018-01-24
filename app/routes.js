@@ -3098,12 +3098,35 @@ router.get('/v13/conditions/time_limiting', function (req, res) {
 
 module.exports = router
 
-router.get('/v13/pages/point_purpose', function (req, res) {
+router.get('/v13/pages/point_purpose', function (req, res) {                                // p&p simple
  res.render('v13/pages/point_purpose',{
     "chosenPermitID":req.query['wid']
  })
 })
 
+module.exports = router
+
+router.get('/v13/pages/points_purposes/tabbed_points', function (req, res) {
+ res.render('v13/pages/points_purposes/tabbed_points',{
+    "chosenPermitID":req.query['wid']
+ })
+})
+
+module.exports = router
+
+router.get('/v13/pages/points_purposes/tabbed_purposes', function (req, res) {
+ res.render('v13/pages/points_purposes/tabbed_purposes',{
+    "chosenPermitID":req.query['wid']
+ })
+})
+
+module.exports = router
+
+router.get('/v13/pages/points_purposes/tabbed_point_and_purpose', function (req, res) {
+ res.render('v13/pages/points_purposes/tabbed_point_and_purpose',{
+    "chosenPermitID":req.query['wid']
+ })
+})
 
 module.exports = router
 
