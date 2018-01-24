@@ -1,0 +1,609 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+Abstraction conditions
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  {% from "custom_inc/waterdatav3.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="#">Your services</a></li>
+        <li><a href="/v12_2/online_licence/licences_list/licences">Abstraction licences</a></li>
+        <li><a href="/v12_2/pages/online_licence?wid={{ pNumber }}">Licence serial number: {{ pData.LicenceSerialNo }}</a></li>
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- condition type purpose to purpose -->
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h2 class="heading-medium">Abstraction amounts to points within a licence</h2>
+
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="datatablepp dataheadpp">
+        <label>                                       Abstraction point
+        </label>
+        <div class="licenceAnswerv12 bold-small">      KINSHALL, SJ35053248
+        </div>
+      </div>
+
+
+      <div class="datatablepp first-datapp">
+        <label>                                       Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                 300m/h
+        </div>
+      </div>
+
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 5,000m/d
+              </div>
+            </div>
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 60,000m/a
+              </div>
+            </div>
+</br>
+            <div class="grid-row">
+              <div class="column-full">
+
+                <div class="datatablepp dataheadpp">
+                  <label>                                       Abstraction point
+                  </label>
+                  <div class="licenceAnswerv12 bold-small">      KINSHALL, SJ47653000
+                  </div>
+                </div>
+
+
+                <div class="datatablepp first-datapp">
+                  <label>                                       Abstraction amount
+                  </label>
+                  <div class="licenceAnswerv12">                 300m/h
+                  </div>
+                </div>
+
+
+                      <div class="datatablepp">
+                        <label>                                       Abstraction amount
+                        </label>
+                        <div class="licenceAnswerv12">                 5,000m/d
+                        </div>
+                      </div>
+
+                      <div class="datatablepp">
+                        <label>                                       Abstraction amount
+                        </label>
+                        <div class="licenceAnswerv12">                 60,000m/a
+                        </div>
+                      </div>
+
+
+
+
+              </div>
+            </div>
+            </br></br>
+
+
+    </div>
+  </div>
+  <h2 class="heading-medium">Abstraction amounts to purposes within a licence</h2>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="datatablepp dataheadpp">
+        <label>                                       Abstraction purpose
+        </label>
+        <div class="licenceAnswerv12 bold-small">      Cress growing
+        </div>
+      </div>
+
+
+      <div class="datatablepp first-datapp">
+        <label>                                       Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                 300m/h
+        </div>
+      </div>
+
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 5,000m/d
+              </div>
+            </div>
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 60,000m/a
+              </div>
+            </div>
+
+
+
+
+    </div>
+  </div>
+  </br>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="datatablepp dataheadpp">
+        <label>                                       Abstraction purpose
+        </label>
+        <div class="licenceAnswerv12 bold-small">      Irrigation
+        </div>
+      </div>
+
+
+      <div class="datatablepp first-datapp">
+        <label>                                       Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                 300m/h
+        </div>
+      </div>
+
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 5,000m/d
+              </div>
+            </div>
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 60,000m/a
+              </div>
+            </div>
+
+
+
+
+    </div>
+  </div>
+  </br>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="datatablepp dataheadpp">
+        <label>                                       Abstraction purpose
+        </label>
+        <div class="licenceAnswerv12 bold-small">      Power generation
+        </div>
+      </div>
+
+
+      <div class="datatablepp first-datapp">
+        <label>                                       Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                 300m/h
+        </div>
+      </div>
+
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 5,000m/d
+              </div>
+            </div>
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 60,000m/a
+              </div>
+            </div>
+
+
+
+
+    </div>
+  </div>
+  </br></br>
+
+  <h2 class="heading-medium">Abstraction amounts point to purpose within a licence</h2>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="datatablepp dataheadpp">
+        <label>                                       Abstraction point
+        </label>
+        <div class="licenceAnswerv12 bold-small">      KINSHALL, SJ35053248
+        </div>
+      </div>
+
+      <div class="datatablepp dataheadpp">
+        <label>                                       Abstraction purpose
+        </label>
+        <div class="licenceAnswerv12 bold-small">                 Cress growing
+        </div>
+      </div>
+
+      <div class="datatablepp first-datapp">
+        <label>                                       Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                 100m/h
+        </div>
+      </div>
+
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 2,000m/d
+              </div>
+            </div>
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 20,000m/a
+              </div>
+            </div>
+
+
+
+
+    </div>
+  </div>
+</br>
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="datatablepp dataheadpp">
+        <label>                                       Abstraction point
+        </label>
+        <div class="licenceAnswerv12 bold-small">      KINSHALL, SJ35053248
+        </div>
+      </div>
+
+      <div class="datatablepp dataheadpp">
+        <label>                                       Abstraction purpose
+        </label>
+        <div class="licenceAnswerv12 bold-small">                 Irrigation
+        </div>
+      </div>
+
+      <div class="datatablepp first-datapp">
+        <label>                                       Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                 100m/h
+        </div>
+      </div>
+
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 2,000m/d
+              </div>
+            </div>
+
+            <div class="datatablepp">
+              <label>                                       Abstraction amount
+              </label>
+              <div class="licenceAnswerv12">                 20,000m/a
+              </div>
+            </div>
+
+
+
+    </div>
+  </div>
+
+</br>
+
+<div class="grid-row">
+  <div class="column-full">
+
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-full">
+
+    <div class="datatablepp dataheadpp">
+      <label>                                       Abstraction point
+      </label>
+      <div class="licenceAnswerv12 bold-small">      KINSHALL, SJ35053248
+      </div>
+    </div>
+
+    <div class="datatablepp dataheadpp">
+      <label>                                       Abstraction purpose
+      </label>
+      <div class="licenceAnswerv12 bold-small">                 Power generation
+      </div>
+    </div>
+
+    <div class="datatablepp first-datapp">
+      <label>                                       Abstraction amount
+      </label>
+      <div class="licenceAnswerv12">                 100m/h
+      </div>
+    </div>
+
+
+          <div class="datatablepp">
+            <label>                                       Abstraction amount
+            </label>
+            <div class="licenceAnswerv12">                 2,000m/d
+            </div>
+          </div>
+
+          <div class="datatablepp">
+            <label>                                       Abstraction amount
+            </label>
+            <div class="licenceAnswerv12">                 20,000m/a
+            </div>
+          </div>
+
+
+    <div class="datatablepp">
+      <label>                                       Aggregate quantity
+      </label>
+      <div class="licenceAnswerv12">                 6,000m/d
+      </div>
+    </div>
+
+    <div class="datatablepp">
+      <label>                                       Aggregate quantity
+      </label>
+      <div class="licenceAnswerv12">                 1,825,000m/a
+      </div>
+    </div>
+
+    <div class="datatablepp">
+      <label>                                       Aggregate quantity
+      </label>
+      <div class="licenceAnswerv12">                 400m/h
+      </div>
+    </div>
+
+  </div>
+</div>
+</br>
+
+
+<div class="grid-row">
+  <div class="column-full">
+
+    <div class="datatablepp dataheadpp">
+      <label>                                       Abstraction point
+      </label>
+      <div class="licenceAnswerv12 bold-small">      KINSHALL, SJ47653000
+      </div>
+    </div>
+
+    <div class="datatablepp dataheadpp">
+      <label>                                       Abstraction purpose
+      </label>
+      <div class="licenceAnswerv12 bold-small">                 Cress growing
+      </div>
+    </div>
+
+    <div class="datatablepp first-datapp">
+      <label>                                       Abstraction amount
+      </label>
+      <div class="licenceAnswerv12">                 100m/h
+      </div>
+    </div>
+
+
+          <div class="datatablepp">
+            <label>                                       Abstraction amount
+            </label>
+            <div class="licenceAnswerv12">                 2,000m/d
+            </div>
+          </div>
+
+          <div class="datatablepp">
+            <label>                                       Abstraction amount
+            </label>
+            <div class="licenceAnswerv12">                 20,000m/a
+            </div>
+          </div>
+
+
+
+
+  </div>
+</div>
+</br>
+<div class="grid-row">
+  <div class="column-full">
+
+    <div class="datatablepp dataheadpp">
+      <label>                                       Abstraction point
+      </label>
+      <div class="licenceAnswerv12 bold-small">      KINSHALL, SJ47653000
+      </div>
+    </div>
+
+    <div class="datatablepp dataheadpp">
+      <label>                                       Abstraction purpose
+      </label>
+      <div class="licenceAnswerv12 bold-small">                 Irrigation
+      </div>
+    </div>
+
+    <div class="datatablepp first-datapp">
+      <label>                                       Abstraction amount
+      </label>
+      <div class="licenceAnswerv12">                 100m/h
+      </div>
+    </div>
+
+
+          <div class="datatablepp">
+            <label>                                       Abstraction amount
+            </label>
+            <div class="licenceAnswerv12">                 2,000m/d
+            </div>
+          </div>
+
+          <div class="datatablepp">
+            <label>                                       Abstraction amount
+            </label>
+            <div class="licenceAnswerv12">                 20,000m/a
+            </div>
+          </div>
+
+
+
+  </div>
+</div>
+
+</br>
+
+<div class="grid-row">
+<div class="column-full">
+
+</div>
+</div>
+
+<div class="grid-row">
+<div class="column-full">
+
+  <div class="datatablepp dataheadpp">
+    <label>                                       Abstraction point
+    </label>
+    <div class="licenceAnswerv12 bold-small">      KINSHALL, SJ47653000
+    </div>
+  </div>
+
+  <div class="datatablepp dataheadpp">
+    <label>                                       Abstraction purpose
+    </label>
+    <div class="licenceAnswerv12 bold-small">                 Power generation
+    </div>
+  </div>
+
+  <div class="datatablepp first-datapp">
+    <label>                                       Abstraction amount
+    </label>
+    <div class="licenceAnswerv12">                 100m/h
+    </div>
+  </div>
+
+
+        <div class="datatablepp">
+          <label>                                       Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                 2,000m/d
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                       Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                 20,000m/a
+          </div>
+        </div>
+
+
+  <div class="datatablepp">
+    <label>                                       Aggregate quantity
+    </label>
+    <div class="licenceAnswerv12">                 6,000m/d
+    </div>
+  </div>
+
+  <div class="datatablepp">
+    <label>                                       Aggregate quantity
+    </label>
+    <div class="licenceAnswerv12">                 1,825,000m/a
+    </div>
+  </div>
+
+  <div class="datatablepp">
+    <label>                                       Aggregate quantity
+    </label>
+    <div class="licenceAnswerv12">                 400m/h
+    </div>
+  </div>
+
+</div>
+</div>
+</br>
+
+<h2 class="heading-medium">Total abstraction amounts for this licence</h2>
+
+<div class="grid-row">
+  <div class="column-full">
+
+    <div class="datatablepp first-datapp">
+      <label>                                       Abstraction amount
+      </label>
+      <div class="licenceAnswerv12">                 900m/h
+      </div>
+    </div>
+
+
+          <div class="datatablepp">
+            <label>                                       Abstraction amount
+            </label>
+            <div class="licenceAnswerv12">                 2,500m/d
+            </div>
+          </div>
+
+          <div class="datatablepp">
+            <label>                                       Abstraction amount
+            </label>
+            <div class="licenceAnswerv12">                 100,100m/a
+            </div>
+          </div>
+
+
+
+
+  </div>
+</div>
+</br>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+
+{% endblock %}
