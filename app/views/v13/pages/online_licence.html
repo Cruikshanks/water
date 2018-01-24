@@ -20,6 +20,7 @@
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
+  <!-- breadcrumbs -->
   <nav>
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
@@ -32,8 +33,10 @@
       </ol>
     </nav>
   </div>
+  <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
-  <!-- <h1 class="heading-medium">Licence serial number <span style="margin-left:0.9em;">{{ pData.LicenceSerialNo }}</span></h1> -->
+
+  <!-- page title -->
   <h1 class="heading-medium">Licence serial number {{ pData.LicenceSerialNo }}</h1>
 
   <p></p>
@@ -45,6 +48,7 @@
   </div>
 
   <p></p>
+
   <div class="datatable">
     <label>Licence name </label>
     <div class="licenceAnswerv7">
@@ -71,31 +75,57 @@
     <div class="datatable">
       <div class="sourceofsupplyqv7">Period of abstraction</div> <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
     </div>
+
     <div class="datatable">
       <div class="sourceofsupplyqv7">Abstraction conditions</div> <div class="licenceAnswerv7">
       <a href="/v12_2/conditions/1_con?wid=1">Read all abstraction conditions</a>
-    </br>
-  </div></div></div>
-  <div class="datatablebottom">
-    <div class="sourceofsupplyqv7">Maximum quantities before conditions</div> <div class="licenceAnswerv7">{{ pData.MaximumQuantityofwatertobeabstracted | replace( "*:", ":<p></p>") | replace( "per hour", "per hour</br>") | replace( "At an instantaneous rate not exceeding", "<p></p>At an instantaneous rate not exceeding") |replace( "per day", "per day</br>") | replace( "per year", "per year<p></p>") | replace( "Note", "<p></p>Note") | replace( "Per Hour", "per hour</br>") | replace( "Per Day", "per day</br>") | replace( "Per Year", "per year<p></p>") |safe }}</div>
-
-
+      </br>
+    </div>
   </div>
-</div>
 
-</br>
+  <div class="datatable">
+    <label>Abstraction amounts</label>
+    <div class="licenceAnswerv7">
+      900m/hour<br>
+      2,500m/day<br>
+      1,250,000m/annum<br>
+      <a href="/v13/pages/points_purposes/tabbed_points?wid=1">See amounts</a>
+  </div>
 
-<p><a href="/v12_2/pages/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="datatablepp first-datapp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          900m/h
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          2,500m/d
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          100,100m/a
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <p><a href="/v12_2/pages/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
 
 
 {% endif %}
-
 {% endfor %}
 
-
-
-
-
 </main>
-
 {% endblock %}
