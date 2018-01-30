@@ -24,15 +24,15 @@
   <nav>
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
-        <li><a href="#">Your services</a></li>
-        <li><a href="/v12_2/online_licence/licences_list/licences">Abstraction licences</a></li>
-        <li><a href="/v12_2/pages/online_licence?wid={{ pNumber }}">Licence serial number: {{ pData.LicenceSerialNo }}</a></li>
+        <li><a href="/v13/pages/licences_wendy?wid={{ pNumber }}">Your licences</a></li>
+        <li><a href="/v13/pages/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
         <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
-
       </ol>
-    </nav>
-  </div>
+    </div>
+  </nav>
+
   <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
   <p></p>
@@ -42,8 +42,8 @@
   <!-- <p>Valid 1 July 2006 to 1 July 2018</p> -->
 
   <!-- page title -->
-  <p><strong class="bold-medium">Licence serial number {{ pData.LicenceSerialNo }}</strong><br>
-  Valid 1 July 2006 to 1 July 2018</p>
+  <p><strong class="bold-medium">Licence number {{ pData.LicenceSerialNo }}</strong><br>
+  Starts 1 July 2006 and ends 1 July 2018</p>
   <p></p>
 
   <p></p>
@@ -57,9 +57,9 @@
   <p></p>
 
   <div class="datatable">
-    <label>Licence name </label>
+    <label>Licence name</label>
     <div class="licenceAnswerv7">
-      <span>No licence name</span></br> <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a></div>
+      <span>No name chosen</span></br> <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a></div>
     </div>
   <div class="datatable">
     <label>Licence holder</label>
@@ -68,18 +68,20 @@
       <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
     </div>
     <div class="datatable">
+      <div class="sourceofsupplyqv7">Source of supply</div>
+      <div class="licenceAnswerv7">Inland water lake known as Featherall Lake at SJ3185632865</div>
+    </div>
+    <div class="datatable">
+      <div class="sourceofsupplyqv7">Period of abstraction</div> <div class="licenceAnswerv7">June to Sept</div>
+    </div>
+
+    <div class="datatable">
       <label>Purpose of abstraction
       </label>
       <div class="licenceAnswerv7">Mole washing</div>
     </div>
     <div class="datatable">
       <label>Point of abstraction</label> <div class="licenceAnswerv7">{{ pData.Pointofabstraction | replace( "following National Grid References:", "following National Grid References:<p></p>")|safe }}</br><a href="/v12_2/pages/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
-    </div>
-    <div class="datatable">
-      <div class="sourceofsupplyqv7">Source of supply</div> <div class="licenceAnswerv7">{{ pData.SourceofSupply }}</div>
-    </div>
-    <div class="datatable">
-      <div class="sourceofsupplyqv7">Period of abstraction</div> <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
     </div>
 
     <div class="datatable">

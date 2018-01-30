@@ -17,12 +17,12 @@ Abstraction conditions
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
+  <!-- breadcrumbs -->
   <nav>
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
-        <li><a href="#">Your services</a></li>
-        <li><a href="/v12_2/online_licence/licences_list/licences">Abstraction licences</a></li>
-        <li><a href="/v12_2/pages/online_licence?wid={{ pNumber }}">Licence serial number: {{ pData.LicenceSerialNo }}</a></li>
+        <li><a href="/v12_2/online_licence/licences_list/licences">Your licences</a></li>
+        <li><a href="/v12_2/pages/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
 
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
         <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
@@ -30,14 +30,16 @@ Abstraction conditions
     </div>
   </nav>
 
+  <!-- approved back block -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  <p></p>
 
   <p><strong class="bold-medium">Conditions for licence number {{ pData.LicenceSerialNo }}</strong><br>
   Starts 1 July 2006 and ends 1 July 2018</p>
   <p></p>
-
   <p></p>
 
+  <!-- notice -->
   <div class="notice">
     <i class="icon icon-important">
       <span class="visually-hidden">Warning</span>

@@ -20,28 +20,29 @@ Abstraction conditions
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
+  <!-- breadcrumbs -->
   <nav>
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
-        <li><a href="#">Your services</a></li>
-        <li><a href="/v12_2/online_licence/licences_list/licences">Abstraction licences</a></li>
-        <li><a href="/v12_2/pages/online_licence?wid={{ pNumber }}">Licence serial number: {{ pData.LicenceSerialNo }}</a></li>
+        <li><a href="/v13/pages/licences_wendy?wid={{ pNumber }}">Your licences</a></li>
+        <li><a href="/v13/pages/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
         <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
       </ol>
     </div>
   </nav>
 
+  <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  <p></p>
+
+  <!-- page title -->
+  <p><strong class="bold-medium">Abstraction amounts for {{ pData.LicenceSerialNo }}</strong><br>
+  Starts 1 July 2006 and ends 1 July 2018</p>
+  <p></p>
 
   <!-- condition type purpose to purpose -->
-  <div class="grid-row">
-    <div class="column-full">
-
-      <h2 class="heading-medium">Abstraction amounts to points within a licence</h2>
-
-    </div>
-  </div>
   <div class="grid-row">
     <div class="column-full">
 

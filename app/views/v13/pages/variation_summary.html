@@ -20,26 +20,28 @@
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
+  <!-- breadcrumbs -->
   <nav>
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
-        <li><a href="#">Your services</a></li>
-        <li><a href="/v12_2/online_licence/licences_list/licences">Abstraction licences</a></li>
-        <li><a href="/v12_2/pages/online_licence?wid={{ pNumber }}">Licence serial number: {{ pData.LicenceSerialNo }}</a></li>
-        <!-- <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
-        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a> -->
+        <li><a href="/v13/pages/licences_wendy?wid={{ pNumber }}">Your licences</a></li>
+        <li><a href="/v13/pages/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
 
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
       </ol>
-    </nav>
-  </div>
+    </div>
+  </nav>
+
+  <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
-
-  <!-- <h1 class="heading-medium">Licence serial number <span style="margin-left:0.9em;">{{ pData.LicenceSerialNo }}</span></h1> -->
-  <h1 class="heading-large">Summary of temporary conditions</h1>
-
-  <p><strong class="bold-medium">Time–limited conditions for  {{ pData.LicenceSerialNo }}</strong><br>
-  Valid 1 July 2006 to 1 July 2018</p>
   <p></p>
+    
+  <!-- page title -->
+  <p><strong class="bold-medium">Time–limited conditions for {{ pData.LicenceSerialNo }}</strong><br>
+  Starts 1 July 2006 and ends 1 July 2018</p>
+  <p></p>
+  <br>
 
   <div class="grid-row"> <!-- warning -->
     <div class="column-two-thirds">
@@ -64,9 +66,6 @@
       </table>
 
       <p></p>
-
-      <!-- <p><a href="/v13/pages/variation_summary?wid=1">See full terms of my licence</a></p> -->
-      <p><a href="/v13/pages/terms.html?wid=1">See full terms of my licence</a></p>
 
     </div>
   </div>
