@@ -1,0 +1,148 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+{{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  {% from "custom_inc/waterdatav3.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v13/pages/licences_wendy?wid={{ pNumber }}">Your licences</a></li>
+        <li><a href="/v13/pages/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large">Points for {{ pData.LicenceSerialNo }}</h1>
+    <!--<br>Starts 1 July 2006 and ends 1 July 2018
+    -->
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h2 class="heading-medium">Colliters Brook</h2>
+
+      <div class="datatable">
+        <label>Grid reference</label>
+        <div class="licenceAnswerv7">
+          SE 1234 5678
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Means of abstraction</label>
+        <div class="licenceAnswerv7">
+          Surface Mounted Pump (Mobile)
+        </div>
+      </div>
+
+      <br>
+
+      <h2 class="heading-medium">Drain at Littleport</h2>
+
+      <div class="datatable">
+        <label>Grid reference</label>
+        <div class="licenceAnswerv7">
+          SE 1234 5647
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Means of abstraction</label>
+        <div class="licenceAnswerv7">
+          Surface Mounted Pump (Mobile)
+        </div>
+      </div>
+
+      <br>
+
+      <h2 class="heading-medium">Drain at South Copse</h2>
+
+      <div class="datatable">
+        <label>Grid reference</label>
+        <div class="licenceAnswerv7">
+          SE 1234 5644
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Means of abstraction</label>
+        <div class="licenceAnswerv7">
+          Surface Mounted Pump (Mobile)
+        </div>
+      </div>
+
+      <br>
+
+      <h2 class="heading-medium">Appledown Brook</h2>
+
+      <div class="datatable">
+        <label>Grid reference</label>
+        <div class="licenceAnswerv7">
+          SE 1234 5621
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Means of abstraction</label>
+        <div class="licenceAnswerv7">
+          Surface Mounted Pump (Mobile)
+        </div>
+      </div>
+
+      <br>
+
+      <h2 class="heading-medium">Borehole at Frippington</h2>
+
+      <div class="datatable">
+        <label>Grid reference</label>
+        <div class="licenceAnswerv7">
+          SE 1234 5715
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Means of abstraction</label>
+        <div class="licenceAnswerv7">
+          Surface Mounted Pump (Mobile)
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endif %}
+
+{% endfor %}
+
+
+
+
+
+</main>
+
+{% endblock %}

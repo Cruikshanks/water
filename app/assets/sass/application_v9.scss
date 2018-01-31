@@ -26,10 +26,6 @@ $path: "/public/images/";
   padding-top: 0.5em;
 }
 
-.needs-love {
-  padding-bottom: 0 !important;
-}
-
 h1 {
   margin-top: 0 !important;
 }
@@ -414,4 +410,10 @@ nav.tabs {
       }
     }
   }
+}
+
+/* Steve M additions / hacks */
+
+.inset-content {
+  padding-left: 2rem;
 }
