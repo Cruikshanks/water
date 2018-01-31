@@ -417,3 +417,17 @@ nav.tabs {
 .inset-content {
   padding-left: 2rem;
 }
+
+.inset-content, a {
+  padding-bottom: 2rem;
+}
+
+.inset-content p {
+  border-bottom: 1px solid #bfc1c3;
+  line-height: 4rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  &:last-child {
+    border-bottom: none;
+  }
+}
