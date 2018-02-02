@@ -24,8 +24,8 @@
   <nav>
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
-        <li><a href="/v12_2/online_licence/licences_list/licences">Your licences</a></li>
-        <li><a href="/v12_2/pages/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        <li><a href="/v13/pages/licences">Your licences</a></li>
+        <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li>
 
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
         <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
@@ -54,7 +54,7 @@
     <label>Licence holder</label>
     <div class="licenceAnswerv7">
       {{ pData.FirstName }} {{ pData.Surname }}</br>
-      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
+      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
     </div>
     <div class="datatable">
       <div class="sourceofsupplyqv7">Source of supply</div>
@@ -65,32 +65,30 @@
     </div>
 
     <div class="datatable">
-      <label>Purposes of abstraction
-      </label>
+      <label>Points of abstraction</label>
       <div class="licenceAnswerv7">
-        Cress growing<br>
-        Irrigation<br>
-        <a href="">View details of each purpose</a>
+        Colliters Brook<br>
+        Drain at Littleport<br>
+        <a href="/v13/pages/point/points-a?wid=1">View details of abstraction points</a>
       </div>
     </div>
+
     <div class="datatable">
-      <label>Points of abstraction
-      </label>
+      <label>Purposes of abstraction</label>
       <div class="licenceAnswerv7">
-        River<br>
-        Well<br>
-        <a href="">View details of each point</a>
+        Public water supply<br>
+        Site activity<br>
+        <a href="/v13/pages/purpose/purposes-a?wid=1">View details of abstraction purposes</a>
       </div>
     </div>
 
     <div class="datatable">
       <div class="sourceofsupplyqv7">Abstraction conditions</div>
-      <div  class="licenceAnswerv7">
-        Cessation condition<br>
-        <a href="/v13/pages/conditions/3_conditions?wid=1">View abstraction condition details</a>
+        <div  class="licenceAnswerv7">
+          Chemical cessation condition<br>
+          <a href="/v13/pages/conditions/1_condition?wid=1">View abstraction condition details</a>
+        </div>
       </div>
-    </div>
-
     </div>
 
     <div class="datatable">
@@ -99,7 +97,7 @@
         900m/hour<br>
         2,500m/day<br>
         1,250,000m/annum<br>
-        <a href="/v13/pages/points_purposes/tabbed_points?wid=1">View amount by point or purpose</a>
+        <a href="/v13/pages/amounts/point-a?wid=1">View abstraction amounts by point or purpose</a>
       </div>
     </div>
 

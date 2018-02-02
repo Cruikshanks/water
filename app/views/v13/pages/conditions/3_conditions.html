@@ -21,8 +21,8 @@ Abstraction conditions
   <nav>
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
-        <li><a href="/v12_2/online_licence/licences_list/licences">Your licences</a></li>
-        <li><a href="/v12_2/pages/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        <li><a href="/v13/pages/licences?wid={{ pNumber }}">Your licences</a></li>
+        <li><a href="/v13/pages/online_licence-b?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
 
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
         <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
@@ -34,10 +34,9 @@ Abstraction conditions
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
-  <h1  class="heading-large">Conditions for licence number {{ pData.LicenceSerialNo }}</h1>
-  <p>Starts 1 July 2006 and ends 1 July 2018</p>
-  <p></p>
-  <p></p>
+  <h1  class="heading-large">Abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
+  <!--<br>Starts 1 July 2006 and ends 1 July 2018
+  -->
 
   <!-- notice -->
   <div class="notice">
@@ -56,7 +55,7 @@ Abstraction conditions
     <div class="column-full">
 
       <h2 class="heading-medium">Chemical cessation condition</h2>
-      <div class="datatable">
+      <div class="datatable first-datapp">
         <label>Control sampling site</label>
         <div class="licenceAnswerv7">
           Colliters Brook south of the farm grid reference SE 1234 5678

@@ -3,12 +3,12 @@
 {% set title = "Water abstraction licence" %}
 
 {% block page_title %}
-{{title}} - GOV.UK
+Abstraction conditions
 {% endblock %}
 
 {% block content %}
-
 <main id="content" role="main">
+
   <div class="phase-banner-alpha">
     <p>
       <strong class="phase-tag">BETA</strong>
@@ -24,132 +24,38 @@
   <nav>
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
-        <li><a href="/v13/pages/licences_wendy?wid={{ pNumber }}">Your licences</a></li>
+        <li><a href="/v13/pages/licences">Your licences</a></li>
         <li><a href="/v13/pages/online_licence-b?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
-
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
         <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
       </ol>
     </div>
   </nav>
 
-  <!-- back -->
+  <!-- back button -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
-  <h1  class="heading-large">Purposes for {{ pData.LicenceSerialNo }}</h1>
-    <!--<br>Starts 1 July 2006 and ends 1 July 2018
-    -->
+  <h1  class="heading-large">How much water you can abstract for each purpose for licence number {{ pData.LicenceSerialNo }}</h1>
+
+  <!-- tabs -->
+  <nav class="tabs">
+    <ul>
+      <li><a href="/v13/pages/amounts/point-b?wid=7">Amounts by point</a></li>
+      <li><span class="active">Amounts by purpose</span></li>
+      <li><a href="/v13/pages/amounts/condition-b?wid=7">Conditional amounts</a></li>
+    </ul>
+  </nav>
+  <p></p>
 
   <div class="grid-row">
     <div class="column-full">
 
-      <h2 class="heading-medium">Public water supply</h2>
+      <div class="datatablepp dataheadpp">
+        <h2 class="heading-medium">Public water supply</h2>
+      </div>
 
       <div class="datatablepp first-datapp">
-        <label>                                                                 Abstraction period
-        </label>
-        <div class="licenceAnswerv12">                                          May to September
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          300m/h
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          5,000m/d
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          60,000m/a
-        </div>
-      </div>
-
-      <br>
-
-      <h2 class="heading-medium">Site activity</h2>
-
-      <div class="datatablepp first-datapp">
-        <label>                                                                 Abstraction period
-        </label>
-        <div class="licenceAnswerv12">                                          May to September
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          300m/h
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          5,000m/d
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          60,000m/a
-        </div>
-      </div>
-
-      <br>
-
-      <h2 class="heading-medium">Industry and evaporative cooling</h2>
-
-      <div class="datatablepp first-datapp">
-        <label>                                                                 Abstraction period
-        </label>
-        <div class="licenceAnswerv12">                                          August to September
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          300m/h
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          5,000m/d
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          60,000m/a
-        </div>
-      </div>
-
-      <br>
-
-      <h2 class="heading-medium">Aquaculture</h2>
-
-      <div class="datatablepp first-datapp">
-        <label>                                                                 Abstraction period
-        </label>
-        <div class="licenceAnswerv12">                                          April to July
-        </div>
-      </div>
-
-      <div class="datatablepp">
         <label>                                                                 Abstraction amount
         </label>
         <div class="licenceAnswerv12">                                          300m/h
@@ -173,13 +79,74 @@
     </div>
   </div>
 
-{% endif %}
+  <br>
 
-{% endfor %}
+  <div class="grid-row">
+    <div class="column-full">
 
+      <div class="datatablepp dataheadpp">
+        <h2 class="heading-medium">Site activity</h2>
+      </div>
 
+      <div class="datatablepp first-datapp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          300m/h
+        </div>
+      </div>
 
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          5,000m/d
+        </div>
+      </div>
 
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          60,000m/a
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="datatablepp dataheadpp">
+        <h2 class="heading-medium">Industry and evaporative cooling</h2>
+      </div>
+
+      <div class="datatablepp first-datapp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          300m/h
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          5,000m/d
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          60,000m/a
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+
+  {% endif %}
+  {% endfor %}
 
 </main>
 

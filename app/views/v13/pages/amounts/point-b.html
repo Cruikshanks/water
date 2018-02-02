@@ -35,39 +35,32 @@ Abstraction conditions
   <!-- back button -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
-  <p></p>
+  <!-- page title -->
+  <h1  class="heading-large">How much water you can abstract at each point for licence number {{ pData.LicenceSerialNo }}</h1>
 
-  <!-- tabs -->
   <nav class="tabs">
     <ul>
-      <li><a href="/v13/pages/points_purposes/tabbed_points?wid=7">Amounts by point</a></li>
-      <li><span class="active">Amounts by purpose</span></li>
-      <li><a href="/v13/pages/points_purposes/tabbed_point_and_purpose?wid=7">Conditional amounts</a></li>
+      <li><span class="active">Amounts by point</span></li>
+      <li><a href="/v13/pages/amounts/purpose-b?wid=7">Amounts by purpose</a></li>
+      <li><a href="/v13/pages/amounts/condition-b?wid=7">Conditional amounts</a></li>
     </ul>
   </nav>
+
   <p></p>
 
   <div class="grid-row">
     <div class="column-full">
 
-      <h2 class="heading-medium">Abstraction amounts to purposes within a licence</h2>
-
-    </div>
-  </div>
-
-  <div class="grid-row">
-    <div class="column-full">
-
       <!-- <div class="datatablepp dataheadpp">
-        <label>                                                                 Abstraction purpose
+        <label>                                                                 Abstraction point
         </label>
-        <div class="licenceAnswerv12 bold-small">                               Cress growing
+        <div class="licenceAnswerv12 bold-small">                               KINSHALL, SJ35053248
         </div>
       </div> -->
 
       <!-- alternative table head -->
       <div class="datatablepp dataheadpp">
-        <h2 class="heading-medium">Cress growing</h2>
+        <h2 class="heading-medium">Colliters Brook, SE12345678</h2>
       </div>
 
       <div class="datatablepp first-datapp">
@@ -91,24 +84,11 @@ Abstraction conditions
         </div>
       </div>
 
-    </div>
-  </div>
-
-  <br>
-
-  <div class="grid-row">
-    <div class="column-full">
-
-      <!-- <div class="datatablepp dataheadpp">
-        <label>                                                                 Abstraction purpose
-        </label>
-        <div class="licenceAnswerv12 bold-small">                               Irrigation
-        </div>
-      </div> -->
+      <br>
 
       <!-- alternative table head -->
       <div class="datatablepp dataheadpp">
-        <h2 class="heading-medium">Irrigation</h2>
+        <h2 class="heading-medium">Drain at Littleport, SE12345647</h2>
       </div>
 
       <div class="datatablepp first-datapp">
@@ -132,53 +112,10 @@ Abstraction conditions
         </div>
       </div>
 
-    </div>
-  </div>
-  <br>
 
-  <div class="grid-row">
-    <div class="column-full">
+    {% endif %}
+    {% endfor %}
 
-      <!-- <div class="datatablepp dataheadpp">
-        <label>                                                                 Abstraction purpose
-        </label>
-        <div class="licenceAnswerv12 bold-small">                               Power generation
-        </div>
-      </div> -->
-
-      <!-- alternative table head -->
-      <div class="datatablepp dataheadpp">
-        <h2 class="heading-medium">Power generation</h2>
-      </div>
-
-      <div class="datatablepp first-datapp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          300m/h
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          5,000m/d
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          60,000m/a
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <br>
-
-  {% endif %}
-  {% endfor %}
-
-</main>
+  </main>
 
 {% endblock %}

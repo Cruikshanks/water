@@ -25,7 +25,7 @@ Abstraction conditions
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
         <li><a href="/v13/pages/licences">Your licences</a></li>
-        <li><a href="/v13/pages/online_licence-b?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        <li><a href="/v13/pages/online_licence-a?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
         <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
       </ol>
@@ -35,13 +35,22 @@ Abstraction conditions
   <!-- back button -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
-  <p></p>
+  <!-- page title -->
+  <h1  class="heading-large">Other abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
+
+  <div class="notice">
+    <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
+    <strong class="bold-small">
+      We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
+    </strong>
+  </div>
+  <p></p><br>
 
   <!-- tabs -->
   <nav class="tabs">
     <ul>
-      <li><a href="/v13/pages/points_purposes/tabbed_points?wid=7">Amounts by point</a></li>
-      <li><a href="/v13/pages/points_purposes/tabbed_purposes?wid=7">Amounts by purpose</a></li>
+      <li><a href="/v13/pages/amounts/point-a?wid=7">Amounts by point</a></li>
+      <li><a href="/v13/pages/amounts/purpose-a?wid=7">Amounts by purpose</a></li>
       <li><span class="active">Conditional amounts</span></li>
     </ul>
   </nav>
@@ -51,25 +60,12 @@ Abstraction conditions
   <div class="grid-row">
     <div class="column-full">
 
-      <p class="lede">
-        These are additional amount conditions on your licence.
-      </p>
-
-      <div class="datatablepp first-datapp">
-        <label>                                                                 Flow condition
-        </label>
-        <div class="licenceAnswerv12">
-          <p>No abstraction shall take place when the flow in the River Severn as gauged by the Agency at its flow gauging station at Bewdly at National Grid Reference SO 7823 7616 is equal to or less than 1,219 Megalitres per day as may be notified by the Agency. The Agency said gauging of the flow shall be conclusive.
-        </div>
+      <div class="datatablepp dataheadpp">
+        <h2 class="heading-medium">Chemical cessation condition</h2>
       </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Flow condition
-        </label>
-        <div class="licenceAnswerv12">
-          <p>
-            Abstraction shall not exceed 55 Megalitres per day when the flow in the River Severn as gauged by the Agency at its flowauging station at Bewdly at National Grid reference SO 7823 7616 is equal to or less than 1,404 Megalitres per dat as notified by the Agency. The Agency’s said gauging of the flow shall be conclusive.
-          </p>
+      <div class="datatablepp first-datapp">
+        <div class="column-two-thirds data">
+          <p>No abstraction shall take place when the flow in the River Severn as gauged by the Agency at its flow gauging station at Bewdly at National Grid Reference SO 7823 7616 is equal to or less than 1,219 Megalitres per day as may be notified by the Agency. The Agency said gauging of the flow shall be conclusive.
         </div>
       </div>
 

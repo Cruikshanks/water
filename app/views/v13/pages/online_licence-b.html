@@ -24,8 +24,8 @@
   <nav>
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
-        <li><a href="/v12_2/online_licence/licences_list/licences">Your licences</a></li>
-        <li><a href="/v12_2/pages/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        <li><a href="/v13/pages/licences">Your licences</a></li>
+        <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li>
 
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
         <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
@@ -53,7 +53,7 @@
     <label>Licence holder</label>
     <div class="licenceAnswerv7">
       {{ pData.FirstName }} {{ pData.Surname }}</br>
-      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
+      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
     </div>
     <div class="datatable">
       <div class="sourceofsupplyqv7">Source of supply</div>
@@ -64,65 +64,32 @@
     </div>
 
     <div class="datatable">
+      <label>Points of abstraction</label>
+      <div class="licenceAnswerv7">
+        You have 7 abstraction points<br>
+        <a href="/v13/pages/point/points-b?wid=1">View details of abstraction points</a>
+      </div>
+    </div>
+
+    <div class="datatable">
       <label>Purposes of abstraction
       </label>
       <div class="licenceAnswerv7">
-        <details>
-          <summary><span class="summary">This licence has 4 purposes of abstraction</span></summary>
-          <div>
-            <div class="inset-content">
-              <p>Public water supply</p>
-              <p>Site activity</p>
-              <p>Industry and evaporative cooling</p>
-              <p class="last-p">Aquaculture</p>
-            </div>
-          </div>
-        </details>
-        <div class="inset-content">
-          <a href="purposes-b?wid=7">View details of each purpose</a>
-        </div>
-      </div>
-    </div>
-    <div class="datatable">
-      <label>Points of abstraction</label>
-      <div class="licenceAnswerv7">
-
-        <details>
-          <summary><span class="summary">This licence has 5 points of abstraction</span></summary>
-          <div>
-            <div class="inset-content">
-              <p>Colliters Brook, grid reference SE 1234 5678</p>
-              <p>Drain at Littleport, grid reference SE 1234 5647</p>
-              <p>Drain at South Copse, grid reference SE 1234 5644</p>
-              <p>Appledown Brook, grid reference SE 1234 56214</p>
-              <p>Borehole at Frippington, grid reference SE 1234 5715</p>
-            </div>
-          </div>
-        </details>
-        <div class="inset-content">
-          <a href="points-b?wid=7">View details of each point</a>
-        </div>
+        Public water supply<br>
+        Site activity<br>
+        Industry and evaporative cooling<br>
+        Aquaculture<br>
+        <a href="/v13/pages/purpose/purposes-b?wid=1">View details of abstraction purposes</a>
       </div>
     </div>
 
     <div class="datatable">
       <div class="sourceofsupplyqv7">Abstraction conditions</div>
       <div  class="licenceAnswerv7">
-
-      <details>
-        <summary><span class="summary">This licence has 3 abstraction conditions</span></summary>
-        <div>
-          <div class="inset-content">
-            <p>Chemical cessation condition</p>
-            <p>Rates condition</p>
-            <p>Eel screening condition</p>
-          </div>
-        </div>
-      </details>
-
-      <div class="inset-content">
-        <a href="/v13/pages/conditions/3_conditions?wid=1">View abstraction condition details</a>
-      </div>
+        Chemical cessation condition<br>
+        Rates condition<br>
+        Eel screening condition<br>
+        <a href="/v13/pages/conditions/3_conditions?wid=1">View details of abstraction conditions</a>
 
       </div>
     </div>
@@ -135,7 +102,7 @@
         900m/hour<br>
         2,500m/day<br>
         1,250,000m/annum<br>
-        <a href="/v13/pages/points_purposes/tabbed_points?wid=1">View amount by point or purpose</a>
+        <a href="/v13/pages/amounts/point-b?wid=1">View abstraction amounts by point or purpose</a>
       </div>
     </div>
 

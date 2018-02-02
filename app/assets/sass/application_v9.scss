@@ -418,8 +418,8 @@ nav.tabs {
   padding-left: 2rem;
 }
 
-.inset-content, a {
-  padding-bottom: 2rem;
+.inset-link {
+  margin-bottom: 2rem;
 }
 
 .inset-content p {
@@ -429,5 +429,10 @@ nav.tabs {
   margin-bottom: 0;
   &:last-child {
     border-bottom: none;
+    padding-bottom: 2rem;
   }
+}
+
+.data {
+  padding: 0;
 }

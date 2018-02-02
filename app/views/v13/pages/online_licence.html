@@ -24,7 +24,7 @@
   <nav>
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
-        <li><a href="/v13/pages/licences_wendy?wid={{ pNumber }}">Your licences</a></li>
+        <li><a href="/v13/pages/licences?wid={{ pNumber }}">Your licences</a></li>
         <li><a href="/v13/pages/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
 
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
@@ -44,7 +44,8 @@
 
   <div class="panel panel-border-wide">
     <p><strong class="bold-small">This is a variation on your existing licence terms</strong><br>
-    Your licence will revert back to it’s <a href="/v12_2/pages/online_licence?wid=1" target="_blank">Original terms</a> on 1 July 2018<br>
+    Your licence will revert back to it’s original terms on 1 July 2018<br>
+    <a href="/v12_2/pages/online_licence?wid=1" target="_blank">See your original licence</a><br>
     <a href="/v13/pages/variation_summary?wid=1">See a summary of variation terms</a></p>
   </div>
 
@@ -53,13 +54,14 @@
   <div class="datatable">
     <label>Licence name</label>
     <div class="licenceAnswerv7">
-      <span>No name chosen</span></br> <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a></div>
+      <!-- <span>No name chosen</span></br>  -->
+      <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a></div>
     </div>
   <div class="datatable">
     <label>Licence holder</label>
     <div class="licenceAnswerv7">
       {{ pData.FirstName }} {{ pData.Surname }}</br>
-      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">Licence contact details</a></div>
+      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
     </div>
     <div class="datatable">
       <div class="sourceofsupplyqv7">Source of supply</div>
@@ -70,17 +72,18 @@
     </div>
 
     <div class="datatable">
-      <label>Purpose of abstraction
-      </label>
-      <div class="licenceAnswerv7">Mole washing</div>
-    </div>
-    <div class="datatable">
       <label>Point of abstraction</label> <div class="licenceAnswerv7">{{ pData.Pointofabstraction | replace( "following National Grid References:", "following National Grid References:<p></p>")|safe }}</br><a href="/v12_2/pages/map_of_abstraction_point?wid={{ pNumber }}">View map</a></div>
     </div>
 
     <div class="datatable">
+      <label>Purpose of abstraction
+      </label>
+      <div class="licenceAnswerv7">Public water supply</div>
+    </div>
+
+    <div class="datatable">
       <div class="sourceofsupplyqv7">Abstraction conditions</div> <div class="licenceAnswerv7">
-      <a href="/v12_2/conditions/1_con?wid=1">Read all abstraction conditions</a>
+      <a href="/v12_2/conditions/1_con?wid=1">View abstraction conditions</a>
       </br>
     </div>
   </div>
@@ -91,14 +94,11 @@
       900m/hour<br>
       2,500m/day<br>
       1,250,000m/annum<br>
-      <a href="/v13/pages/points_purposes/tabbed_points?wid=1">See amounts</a>
+      <a href="/v13/pages/points_purposes/tabbed_points?wid=1">View abstraction amounts by point or purpose</a>
   </div>
 
   <br>
   <br>
-
-  <p><a href="/v12_2/pages/terms?wid={{ pNumber }}">Read your full licence terms of use</a></p>
-
 
 {% endif %}
 {% endfor %}
