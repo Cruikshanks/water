@@ -15,556 +15,661 @@
 
 
 
-      <h1 class="heading-xlarge">
-        Prototype change log<h1>
 
-          <p>This summarises the main changes we’ve made in response to feedback.</p>
-          <p></p>
 
-          <!-- <h2 class="heading-medium">Version #</h2>
-          <p><a href="/versions/v#">Version #</a> was our # sprint of #### testing on the prototype.</p>
-          <p>The table below lists the changes between Version # and # following user feedback.</p>
+<h1 class="heading-xlarge">
+Prototype change log<h1>
 
-          <table>
-            <tbody><tr>
-              <th>
-                <p>Summary of changes in ##</p>
-              </th>
-              <th>
-                <p>Reason/source</p>
-              </th>
-            </tr>
-            <tr>
-              <td>******************
-              </td>
-              <td>******************
-                </td>
-            </tr>
-            <tr>
-              <td>******************
-              </td>
-              <td>******************
-              </td>
-            </tr>
-            <tr>
-              <td>******************
-            </td>
-              <td>******************
-            </td>
-            </tr>
-            <tr>
-              <td>******************
-              </td>
-              <td>******************
-              </td>
-            </tr>
-
-            <tr>
-              <td>******************
-              </td>
-                <td>******************
-                </td>
-            </tr>
-
-            <tr>
-              <td>******************
-              </td>
-                <td>******************
-                </td>
-            </tr>
-
-            <tr>
-              <td>******************
-              </td>
-                <td>******************
-                </td>
-            </tr>
-                </tbody></table> -->
-
-                <h2 class="heading-medium">Version 11</h2>
-                <p><a href="/versions/v11">Version 11</a> was our 11th sprint of testing on the prototype.</p>
-                <p>The table below lists the changes between Version 10 and 11 following user feedback.</p>
-
-                <table>
-                  <tbody><tr>
-                    <th>
-                      <p>Summary of changes in v11</p>
-                    </th>
-                    <th>
-                      <p>Reason/source</p>
-                    </th>
-                  </tr>
-                  <tr>
-                    <td>Abstraction licences page: added tabs to manage licence access
-                  </td>
-                    <td>A licence holder needs to manage: who can view their licences, and which licences are linked to their account.  These options are added as tabs on the Abstraction Licences page.
-                  </td>
-                  </tr>
-                  <tr>
-                    <td>Add or remove licence viewers
-                  </td>
-                    <td>New tab where a licence holder can add or revoke access to other people to view their licences.  Users are added via a button.  The list of users is sortable and contains remove links.
-                  </td>
-                  </tr>
-                  <tr>
-                    <td>Added 'View more licences'
-                  </td>
-                    <td>This page caters for users who have either requested access to view licences and wish to confirm them, or wish to request more.  They do this by entering a confirmation code or entering the new licence numbers.
-                  </td>
-                  </tr>
-                  <tr>
-                    <td>Password reset no longer requires sign-in
-                    </td>
-                    <td>Simplified the user flow by removing the need for a user to sign back in after changing or resetting their password.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Updated process for organisations
-                  </td>
-                    <td>Based on feedback from usability testing, the process for organisations to register to view licences was reorganised.  Also, new content has been incorporated based on a strong need for users to know why we request the information we do.  The rest of the table covers the details.
-                  </td>
-                  </tr>
-                  <tr>
-                    <td>Org Registration - Create account
-                  </td>
-                    <td>The account creation process has been moved to the start of the flow.  This is designed to explain to the user more clearly why we need to identify them and validate their email.  The pattern is copied from the 'reset password' flow.
-                  </td>
-                  </tr>
-                  <tr>
-                    <td>Org Registration - Select licences
-                  </td>
-                    <td>Instead of starting with a single licence, an organisation user now has the ability to upload multiple licences in a single text field.  This field is flexible in terms of how the licences are input.
-                  </td>
-                  </tr>
-                  <tr>
-                    <td>Org Registration - Confirm licences
-                  </td>
-                    <td>The content on the "Are these the licences you want to view" page has been updated to make the wording more flexible and demonstrate that more licences can be added later.
-                  </td>
-                  </tr>
-                  <tr>
-                    <td>Org Registration - Send security code
-                  </td>
-                    <td>The process of sending a security code proved very confusing in user testing.  This has been simplified to a single option (postal validation), with updated content to explain why this is necessary.  The user receives confirmation after the letter is sent.  The Contact Preferences step has been moved out of this part of the flow to avoid confusion.
-                  </td>
-                  </tr>
-                  <tr>
-                    <td>Org Registration - Enter security code
-                  </td>
-                    <td>Previously, the 'complete your account' and 'enter confirmation code' parts of the flow were together.  This caused a lot of confusion in user testing because a password and confirmation code were seen as similar things.  Instead, the 'create account' flow has been moved to the start.  Also, the confirmation code field has been repositioned so that a user can now view their pending licences (without full information) before entering their code.
-                  </td>
-                  </tr>
-                      </tbody></table>
-</br></br></br>
-<p></p>
-                <h2 class="heading-medium">Version 10</h2>
-                <p><a href="/versions/v10">Version 10</a> was our tenth sprint of testing on the prototype.</p>
-                <p>The table below lists the changes between Version 9 and 10 following user feedback.</p>
-
-                <table>
-                  <tbody><tr>
-                    <th scope="col">
-                      <p>Summary of changes in v10</p>
-                    </th>
-                    <th scope="col">
-                      <p>Reason/source</p>
-                    </th>
-                  </tr>
-                  <tr>
-                    <td>Added a 'changed password' confirmation screen
-                    </td>
-                    <td>Previously, users received no feedback that their email address had been successfully changed.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Multiple licences view for colleagues and agents, including email and search
-                    </td>
-                    <td>Enables both internal colleagues to view all licences, and agents to view all licences they've been granted access to.  Both types of user can filter by the email address of the licence holder, or anyone who has been granted access to view licences.  They can also search for any text within the licence number or the licence name allocated by the user.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Multiple licences view for organisations and sole traders
-                    </td>
-                    <td>Enables organisations to view all of their licences.  This works the same way as above but without the email filter.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Feedback page as iFrame
-                    </td>
-                    <td>Allows the Beta feedback survey to appear consistent with GOV.UK style, using an iFrame to embed it into the page.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Guidance
-                    </td>
-                    <td>When an individual registers an account to view their licence, they need to be informed of what the service allows them to do.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Licence number or postcode
-                    </td>
-                    <td>Allows an individual to use a registered licence number or postcode, to start the process of identifying their full set of licences.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - No matching licence number
-                    </td>
-                    <td>If the service is unable to match their licences then they will need to contact us to confirm their licence information.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Select your licences
-                    </td>
-                    <td>Enables a user to see all licences with similar information, and confirm which of them are theirs.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Give us your email
-                    </td>
-                    <td>Allows a user to specify which email address to use as their username.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Contact preference
-                    </td>
-                    <td>Allows a user to specify which method they'd prefer us to contact them about in future (email, phone or text).
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Choose security route
-                    </td>
-                    <td>As a user needs to confirm their identity with us, they are given the option of choosing whether to do this over the phone (followed by an email with a code) or by post, with a letter containing a confirmation code.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Request by phone
-                    </td>
-                    <td>If a user has chosen to verify themselves by phone, this page gives them our contact details, or the option to choose postal verification instead.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Request by post
-                    </td>
-                    <td>If a user chooses to receive a letter containing a code, they are told when the letter is likely to arrive, or given the choice to verify themselves by phone and email instead.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Complete account
-                    </td>
-                    <td>Once a user has received their 5 digit confirmation code, they need to enter it to confirm their identity.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Registration - Create password
-                    </td>
-                    <td>Once a user has confirmed their identity, they need to create a password to use for their online account.
-                      </td>
-                  </tr>
-                      </tbody></table>
-</br></br></br>
-<p></p>
-                <h2 class="heading-medium">Version 9</h2>
-                <p><a href="/versions/v9">Version 9</a> was our ninth sprint of testing on the prototype.</p>
-                <p>The table below lists the changes between Version 8 and 9 following user feedback.</p>
-
-                <table>
-                  <tbody><tr>
-                    <th>
-                      <p>Summary of changes in v9</p>
-                    </th>
-                    <th>
-                      <p>Reason/source</p>
-                    </th>
-                  </tr>
-                  <tr>
-                    <td>Changed 'User ID' label to 'Email address' on sign in page
-                    </td>
-                    <td>User ID is email address. 'Email' is also more plain english and descriptive.
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Changed 'This is a 10-digit customer ID you should have received by post or email' to 'This is the email address used to create your account' on sign in page
-                    </td>
-                    <td>User flow changed, copy updated to remain relevant.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Changed 'You should have received this by post or email. </br>You will be asked to change your password on the first sign in.' to 'You should have received this by post or email.' sign in page
-                  </td>
-                    <td>User flow changed, copy updated to remain relivant.
-                  </td>
-                  </tr>
-                  <tr>
-                    <td>Added 'Forgotten password?' link on sign in page
-                    </td>
-                    <td>New feature to allow users to access an account without password.
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>Added validation to email address field on sign in page
-                    </td>
-                      <td>Validation on sign in to secure online account.
-                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>Added validation to password field on sign in page
-                    </td>
-                      <td>Validation on sign in to secure online account.
-                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>Added error messaging for incorrect email address or password on sign in page
-                    </td>
-                      <td>Validation on sign in to secure online account.
-                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>Removed licence names from list  on Your licences page
-                    </td>
-                      <td>Add name feature has not yet been tested.
-                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>Changed 'Licence serial no.' to ' Licence serial number'  on Your licences page
-                    </td>
-                      <td>Plain english change for accessibility
-                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>Reduced font size on licence list on Your licences page
-                    </td>
-                    <td>In line with GDS data table list pattern
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>Added 'Reset you password' page
-                    </td>
-                    <td>	New user journey for forgotten password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added validation to email address field on Reset your password page                    </td>
-                    <td>	New user journey for forgotten password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added error messaging for invalid email address format on Reset your password page                    </td>
-                    <td>	New user journey for forgotten password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added primary 'Check your email page'                     </td>
-                    <td>	New user journey for forgotten password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added 'Ask for another email' page on primary Check your email page                    </td>
-                    <td>	New user journey for forgotten password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added validation to email address field on primary Check your email page                    </td>
-                    <td>	New user journey for forgotten password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added error messaging for invalid email address format on primary Check your email page                    </td>
-                    <td>	New user journey for forgotten password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added secondary 'Check your email page'                     </td>
-                    <td>	New user journey for forgotten password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added contact phone contact details to 'Still haven't received anything?' on secondary Check your email page                    </td>
-                    <td>	New user journey for forgotten password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added 'Change your password page'                    </td>
-                    <td>	New user journey for change password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added password minimum requirements on Change your password page                    </td>
-                    <td>	New user journey for change password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added 'Enter a new password field' on Change your password page                    </td>
-                    <td>	New user journey for change password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added 'Confirm your new password field' on Change your password page                    </td>
-                    <td>	New user journey for change password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added validation to 'Enter a new password' field on Change your password page                    </td>
-                    <td>	New user journey for change password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added validation to 'Confirm your new password' field on Change your password page                    </td>
-                    <td>	New user journey for change password                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added error messaging for invalid password format on Change your password page                    </td>
-                    <td>	New user journey for change password                      </td>
-                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added error messaging for mismatched passwords on Change your password page                    </td>
-                    <td>	New user journey for change password                      </td>
-                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added 'Your password has been updated' page                    </td>
-                    <td>	New user journey for change password                      </td>
-                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added 'Reset your password' page for forgotten password on Your password has been updated page                    </td>
-                    <td>	New user journey for change password                      </td>
-                      </td>
-                  </tr>
-
-                  <tr>
-                    <td>	Added error messaging for invalid email address format on Your password has been updated page                    </td>
-                    <td>	New user journey for change password                      </td>
-                      </td>
-                  </tr>
-
-                      </tbody></table>
-</br></br></br>
+<p>This summarises the main changes we’ve made in response to feedback.</p>
 <p></p>
 
-          <h2 class="heading-medium">Version 8</h2>
-          <p><a href="/versions/v8">Version 8</a> was our eighth sprint of testing on the prototype.</p>
-          <p>The table below lists the changes between Version 7 and 8 following user feedback.</p>
+    <!-- <h2 class="heading-medium">Version #</h2>
+    <p><a href="/versions/v#">Version #</a> was our # sprint of #### testing on the prototype.</p>
+    <p>The table below lists the changes between Version # and # following user feedback.</p>
 
-          <table>
-            <tbody><tr>
-              <th>
-                <p>Summary of changes in v8</p>
-              </th>
-              <th>
-                <p>Reason/source</p>
-              </th>
-            </tr>
-            <tr>
-              <td>Changed 'Licence number' to 'Licence Serial No'
-              </td>
-              <td>To mirror licences
-                </td>
-            </tr>
-            <tr>
-              <td>Changed 'Licence effective from' to 'Start date'
-              </td>
-              <td>Plain text alternative
-              </td>
-            </tr>
-            <tr>
-              <td>Changed 'Licensed until' to 'End date'
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            <p>Summary of changes in ##</p>
+          </th>
+          <th>
+            <p>Reason/source</p>
+          </th>
+        </tr>
+
+        <tr>
+          <td>******************</td>
+          <td>******************</td>
+        </tr>
+      </tbody>
+    </table> -->
+
+
+
+
+
+    <h2 class="heading-medium">Version 13</h2>
+    <p><a href="/versions/v#">Version 13</a> was our 13th sprint of testing on the prototype. We made a change to the structure of the licence view based on newly available NALD data.</p>
+    <p>The table below lists the changes between Version 12 and 13 following user feedback.</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            <p>Summary of changes in v13</p>
+          </th>
+          <th>
+            <p>Reason/source</p>
+          </th>
+        </tr>
+
+        <tr>
+          <td>Summary view updates</td>
+          <td>We updated and changed the order of some items based on feedback about the licence from users.</td>
+        </tr>
+
+        <tr>
+          <td>Terms view removed</td>
+          <td>Users expressed some confusion between the licence summary view and the terms view. In this iteration we removed the terms view.</td>
+        </tr>
+
+        <tr>
+          <td>Simple licence summary added</td>
+          <td>View of a "simple" licence, a licence with few points, purposes or conditions.</td>
+        </tr>
+
+        <tr>
+          <td>Complex licence summary added</td>
+          <td>View of a "complex" licence, a licence with a lot of points, purposes and conditions.</td>
+        </tr>
+
+        <tr>
+          <td>Points detail view added</td>
+          <td>A view of the points listed on your licence with any respective associated details.</td>
+        </tr>
+
+        <tr>
+          <td>Purposes detail view added</td>
+          <td>A view of the purposes listed on your licence with any respective associated details.</td>
+        </tr>
+
+        <tr>
+          <td>Conditions detail view updated</td>
+          <td>A view of the associated conditions related to your licence.</td>
+        </tr>
+
+        <tr>
+          <td>No conditions view updated</td>
+          <td>A view a licence that has no conditions on file.</td>
+        </tr>
+
+        <tr>
+          <td>Amounts view added</td>
+          <td>A tabbed view to show the abstraction amounts for a licence by point, purpose and showing any conditions that relate to abstraction amounts.</td>
+        </tr>
+
+        <tr>
+          <td>Licence renewal notice component added</td>
+          <td>A component on a licence list view to indicate to the user that some licences may be expiring soon. Clicking on the link in the component would show or highlight the expiring licences.</td>
+        </tr>
+
+        <tr>
+          <td>Time-limited licence view added</td>
+          <td>A view of a licence that has been made as a variation of a main licence.</td>
+        </tr>
+
+        <tr>
+          <td>Summary of varied conditions</td>
+          <td>A view of the conditions that are different/new (the variation) of the main licence.</td>
+        </tr>
+
+        <tr>
+          <td>Title alignments</td>
+          <td>Adding the licence number to any licence view as part of the title.</td>
+        </tr>
+
+
+      </tbody>
+    </table>
+
+    </br></br></br>
+    <p></p>
+
+    <h2 class="heading-medium">Version 12</h2>
+    <p><a href="/versions/v#">Version 12</a> was our 12th sprint of testing on the prototype.</p>
+    <p>The table below lists the changes between Version 11 and 12 following user feedback.</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            <p>Summary of changes in v12</p>
+          </th>
+          <th>
+            <p>Reason/source</p>
+          </th>
+        </tr>
+
+        <tr>
+          <td>Points / Purpose view added</td>
+          <td>Points and purposes view of your licence, based on current NALD data.</td>
+        </tr>
+
+        <tr>
+          <td>Added Licence Condition views</td>
+          <td>Listing licence conditions for a licence where it is available in NALD.</td>
+        </tr>
+
+        <tr>
+          <td>Updates to Change password</td>
+          <td>Content updates for change password.</td>
+        </tr>
+
+        <tr>
+          <td>Title & label updates for Conditions</td>
+          <td>Style changes to tabular data.</td>
+        </tr>
+
+        <tr>
+          <td>Data table lines made lighter</td>
+          <td>Style changes to tabular data.</td>
+        </tr>
+
+        <tr>
+          <td>Top line of data table removed.</td>
+          <td>Style changes to tabular data</td>
+        </tr>
+      </tbody>
+    </table>
+
+    </br></br></br>
+    <p></p>
+
+<h2 class="heading-medium">Version 11</h2>
+<p><a href="/versions/v11">Version 11</a> was our 11th sprint of testing on the prototype.</p>
+<p>The table below lists the changes between Version 10 and 11 following user feedback.</p>
+
+<table>
+<tbody><tr>
+<th>
+<p>Summary of changes in v11</p>
+</th>
+<th>
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>Abstraction licences page: added tabs to manage licence access
 </td>
-              <td>Plain text alternative</td>
-            </tr>
-            <tr>
-              <td>Changed ‘Licence’ to 'Licence(s)'
-              </td>
-              <td>A non dynamic way to accomidate multiple licences, development version is to be dynamic.
-              </td>
-            </tr>
+<td>A licence holder needs to manage: who can view their licences, and which licences are linked to their account.  These options are added as tabs on the Abstraction Licences page.
+</td>
+</tr>
+<tr>
+<td>Add or remove licence viewers
+</td>
+<td>New tab where a licence holder can add or revoke access to other people to view their licences.  Users are added via a button.  The list of users is sortable and contains remove links.
+</td>
+</tr>
+<tr>
+<td>Added 'View more licences'
+</td>
+<td>This page caters for users who have either requested access to view licences and wish to confirm them, or wish to request more.  They do this by entering a confirmation code or entering the new licence numbers.
+</td>
+</tr>
+<tr>
+<td>Password reset no longer requires sign-in
+</td>
+<td>Simplified the user flow by removing the need for a user to sign back in after changing or resetting their password.
+</td>
+</tr>
+<tr>
+<td>Registration - Updated process for organisations
+</td>
+<td>Based on feedback from usability testing, the process for organisations to register to view licences was reorganised.  Also, new content has been incorporated based on a strong need for users to know why we request the information we do.  The rest of the table covers the details.
+</td>
+</tr>
+<tr>
+<td>Org Registration - Create account
+</td>
+<td>The account creation process has been moved to the start of the flow.  This is designed to explain to the user more clearly why we need to identify them and validate their email.  The pattern is copied from the 'reset password' flow.
+</td>
+</tr>
+<tr>
+<td>Org Registration - Select licences
+</td>
+<td>Instead of starting with a single licence, an organisation user now has the ability to upload multiple licences in a single text field.  This field is flexible in terms of how the licences are input.
+</td>
+</tr>
+<tr>
+<td>Org Registration - Confirm licences
+</td>
+<td>The content on the "Are these the licences you want to view" page has been updated to make the wording more flexible and demonstrate that more licences can be added later.
+</td>
+</tr>
+<tr>
+<td>Org Registration - Send security code
+</td>
+<td>The process of sending a security code proved very confusing in user testing.  This has been simplified to a single option (postal validation), with updated content to explain why this is necessary.  The user receives confirmation after the letter is sent.  The Contact Preferences step has been moved out of this part of the flow to avoid confusion.
+</td>
+</tr>
+<tr>
+<td>Org Registration - Enter security code
+</td>
+<td>Previously, the 'complete your account' and 'enter confirmation code' parts of the flow were together.  This caused a lot of confusion in user testing because a password and confirmation code were seen as similar things.  Instead, the 'create account' flow has been moved to the start.  Also, the confirmation code field has been repositioned so that a user can now view their pending licences (without full information) before entering their code.
+</td>
+</tr>
+</tbody></table>
+</br></br></br>
+<p></p>
+<h2 class="heading-medium">Version 10</h2>
+<p><a href="/versions/v10">Version 10</a> was our tenth sprint of testing on the prototype.</p>
+<p>The table below lists the changes between Version 9 and 10 following user feedback.</p>
 
-            <tr>
-              <td>Removed licence number from below the header on contact details and full licence page.
-              </td>
-                <td>This information is already in the breadcrumb
-                </td>
-            </tr>
+<table>
+<tbody><tr>
+<th scope="col">
+<p>Summary of changes in v10</p>
+</th>
+<th scope="col">
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>Added a 'changed password' confirmation screen
+</td>
+<td>Previously, users received no feedback that their email address had been successfully changed.
+</td>
+</tr>
+<tr>
+<td>Multiple licences view for colleagues and agents, including email and search
+</td>
+<td>Enables both internal colleagues to view all licences, and agents to view all licences they've been granted access to.  Both types of user can filter by the email address of the licence holder, or anyone who has been granted access to view licences.  They can also search for any text within the licence number or the licence name allocated by the user.
+</td>
+</tr>
+<tr>
+<td>Multiple licences view for organisations and sole traders
+</td>
+<td>Enables organisations to view all of their licences.  This works the same way as above but without the email filter.
+</td>
+</tr>
+<tr>
+<td>Feedback page as iFrame
+</td>
+<td>Allows the Beta feedback survey to appear consistent with GOV.UK style, using an iFrame to embed it into the page.
+</td>
+</tr>
+<tr>
+<td>Registration - Guidance
+</td>
+<td>When an individual registers an account to view their licence, they need to be informed of what the service allows them to do.
+</td>
+</tr>
+<tr>
+<td>Registration - Licence number or postcode
+</td>
+<td>Allows an individual to use a registered licence number or postcode, to start the process of identifying their full set of licences.
+</td>
+</tr>
+<tr>
+<td>Registration - No matching licence number
+</td>
+<td>If the service is unable to match their licences then they will need to contact us to confirm their licence information.
+</td>
+</tr>
+<tr>
+<td>Registration - Select your licences
+</td>
+<td>Enables a user to see all licences with similar information, and confirm which of them are theirs.
+</td>
+</tr>
+<tr>
+<td>Registration - Give us your email
+</td>
+<td>Allows a user to specify which email address to use as their username.
+</td>
+</tr>
+<tr>
+<td>Registration - Contact preference
+</td>
+<td>Allows a user to specify which method they'd prefer us to contact them about in future (email, phone or text).
+</td>
+</tr>
+<tr>
+<td>Registration - Choose security route
+</td>
+<td>As a user needs to confirm their identity with us, they are given the option of choosing whether to do this over the phone (followed by an email with a code) or by post, with a letter containing a confirmation code.
+</td>
+</tr>
+<tr>
+<td>Registration - Request by phone
+</td>
+<td>If a user has chosen to verify themselves by phone, this page gives them our contact details, or the option to choose postal verification instead.
+</td>
+</tr>
+<tr>
+<td>Registration - Request by post
+</td>
+<td>If a user chooses to receive a letter containing a code, they are told when the letter is likely to arrive, or given the choice to verify themselves by phone and email instead.
+</td>
+</tr>
+<tr>
+<td>Registration - Complete account
+</td>
+<td>Once a user has received their 5 digit confirmation code, they need to enter it to confirm their identity.
+</td>
+</tr>
+<tr>
+<td>Registration - Create password
+</td>
+<td>Once a user has confirmed their identity, they need to create a password to use for their online account.
+</td>
+</tr>
+</tbody></table>
+</br></br></br>
+<p></p>
+<h2 class="heading-medium">Version 9</h2>
+<p><a href="/versions/v9">Version 9</a> was our ninth sprint of testing on the prototype.</p>
+<p>The table below lists the changes between Version 8 and 9 following user feedback.</p>
 
-            <tr>
-              <td>Changed 'Your water abstraction licence’ to 'H2Go Power water abstraction licence’ or [Licence name] water abstraction licence.
-              </td>
-                <td>To remind your user what licence they are viewing. The development version won't have this until we find a way to define licence name.
-                </td>
-            </tr>
+<table>
+<tbody><tr>
+<th>
+<p>Summary of changes in v9</p>
+</th>
+<th>
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>Changed 'User ID' label to 'Email address' on sign in page
+</td>
+<td>User ID is email address. 'Email' is also more plain english and descriptive.
+</td>
+</tr>
+<tr>
+<td>Changed 'This is a 10-digit customer ID you should have received by post or email' to 'This is the email address used to create your account' on sign in page
+</td>
+<td>User flow changed, copy updated to remain relevant.
+</td>
+</tr>
+<tr>
+<td>Changed 'You should have received this by post or email. </br>You will be asked to change your password on the first sign in.' to 'You should have received this by post or email.' sign in page
+</td>
+<td>User flow changed, copy updated to remain relivant.
+</td>
+</tr>
+<tr>
+<td>Added 'Forgotten password?' link on sign in page
+</td>
+<td>New feature to allow users to access an account without password.
+</td>
+</tr>
 
-            <tr>
-              <td>Updated the licence name to use name case
-              </td>
-                <td>Grammar edit
-                </td>
-            </tr>
-                </tbody></table>
+<tr>
+<td>Added validation to email address field on sign in page
+</td>
+<td>Validation on sign in to secure online account.
+</td>
+</tr>
+
+<tr>
+<td>Added validation to password field on sign in page
+</td>
+<td>Validation on sign in to secure online account.
+</td>
+</tr>
+
+<tr>
+<td>Added error messaging for incorrect email address or password on sign in page
+</td>
+<td>Validation on sign in to secure online account.
+</td>
+</tr>
+
+<tr>
+<td>Removed licence names from list  on Your licences page
+</td>
+<td>Add name feature has not yet been tested.
+</td>
+</tr>
+
+<tr>
+<td>Changed 'Licence serial no.' to ' Licence serial number'  on Your licences page
+</td>
+<td>Plain english change for accessibility
+</td>
+</tr>
+
+<tr>
+<td>Reduced font size on licence list on Your licences page
+</td>
+<td>In line with GDS data table list pattern
+</td>
+</tr>
+
+<tr>
+<td>Added 'Reset you password' page
+</td>
+<td>	New user journey for forgotten password                      </td>
+</tr>
+
+<tr>
+<td>	Added validation to email address field on Reset your password page                    </td>
+<td>	New user journey for forgotten password                      </td>
+</tr>
+
+<tr>
+<td>	Added error messaging for invalid email address format on Reset your password page                    </td>
+<td>	New user journey for forgotten password                      </td>
+</tr>
+
+<tr>
+<td>	Added primary 'Check your email page'                     </td>
+<td>	New user journey for forgotten password                      </td>
+</tr>
+
+<tr>
+<td>	Added 'Ask for another email' page on primary Check your email page                    </td>
+<td>	New user journey for forgotten password                      </td>
+</tr>
+
+<tr>
+<td>	Added validation to email address field on primary Check your email page                    </td>
+<td>	New user journey for forgotten password                      </td>
+</tr>
+
+<tr>
+<td>	Added error messaging for invalid email address format on primary Check your email page                    </td>
+<td>	New user journey for forgotten password                      </td>
+</tr>
+
+<tr>
+<td>	Added secondary 'Check your email page'                     </td>
+<td>	New user journey for forgotten password                      </td>
+</tr>
+
+<tr>
+<td>	Added contact phone contact details to 'Still haven't received anything?' on secondary Check your email page                    </td>
+<td>	New user journey for forgotten password                      </td>
+</tr>
+
+<tr>
+<td>	Added 'Change your password page'                    </td>
+<td>	New user journey for change password                      </td>
+</tr>
+
+<tr>
+<td>	Added password minimum requirements on Change your password page                    </td>
+<td>	New user journey for change password                      </td>
+</tr>
+
+<tr>
+<td>	Added 'Enter a new password field' on Change your password page                    </td>
+<td>	New user journey for change password                      </td>
+</tr>
+
+<tr>
+<td>	Added 'Confirm your new password field' on Change your password page                    </td>
+<td>	New user journey for change password                      </td>
+</tr>
+
+<tr>
+<td>	Added validation to 'Enter a new password' field on Change your password page                    </td>
+<td>	New user journey for change password                      </td>
+</tr>
+
+<tr>
+<td>	Added validation to 'Confirm your new password' field on Change your password page                    </td>
+<td>	New user journey for change password                      </td>
+</tr>
+
+<tr>
+<td>	Added error messaging for invalid password format on Change your password page                    </td>
+<td>	New user journey for change password                      </td>
+</td>
+</tr>
+
+<tr>
+<td>	Added error messaging for mismatched passwords on Change your password page                    </td>
+<td>	New user journey for change password                      </td>
+</td>
+</tr>
+
+<tr>
+<td>	Added 'Your password has been updated' page                    </td>
+<td>	New user journey for change password                      </td>
+</td>
+</tr>
+
+<tr>
+<td>	Added 'Reset your password' page for forgotten password on Your password has been updated page                    </td>
+<td>	New user journey for change password                      </td>
+</td>
+</tr>
+
+<tr>
+<td>	Added error messaging for invalid email address format on Your password has been updated page                    </td>
+<td>	New user journey for change password                      </td>
+</td>
+</tr>
+
+</tbody></table>
+</br></br></br>
+<p></p>
+
+<h2 class="heading-medium">Version 8</h2>
+<p><a href="/versions/v8">Version 8</a> was our eighth sprint of testing on the prototype.</p>
+<p>The table below lists the changes between Version 7 and 8 following user feedback.</p>
+
+<table>
+<tbody><tr>
+<th>
+<p>Summary of changes in v8</p>
+</th>
+<th>
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>Changed 'Licence number' to 'Licence Serial No'
+</td>
+<td>To mirror licences
+</td>
+</tr>
+<tr>
+<td>Changed 'Licence effective from' to 'Start date'
+</td>
+<td>Plain text alternative
+</td>
+</tr>
+<tr>
+<td>Changed 'Licensed until' to 'End date'
+</td>
+<td>Plain text alternative</td>
+</tr>
+<tr>
+<td>Changed ‘Licence’ to 'Licence(s)'
+</td>
+<td>A non dynamic way to accomidate multiple licences, development version is to be dynamic.
+</td>
+</tr>
+
+<tr>
+<td>Removed licence number from below the header on contact details and full licence page.
+</td>
+<td>This information is already in the breadcrumb
+</td>
+</tr>
+
+<tr>
+<td>Changed 'Your water abstraction licence’ to 'H2Go Power water abstraction licence’ or [Licence name] water abstraction licence.
+</td>
+<td>To remind your user what licence they are viewing. The development version won't have this until we find a way to define licence name.
+</td>
+</tr>
+
+<tr>
+<td>Updated the licence name to use name case
+</td>
+<td>Grammar edit
+</td>
+</tr>
+</tbody></table>
 
 </br></br></br>
 <p></p>
-          <h2 class="heading-medium">Version 7</h2>
-          <p><a href="/versions/v7">Version 7</a> was our seventh version of the prototype.</p>
-          <p>The table below lists the changes between Version 6 and 7 following user feedback.</p>
+<h2 class="heading-medium">Version 7</h2>
+<p><a href="/versions/v7">Version 7</a> was our seventh version of the prototype.</p>
+<p>The table below lists the changes between Version 6 and 7 following user feedback.</p>
 
-          <table>
-            <tbody><tr>
-              <th>
-                <p>Summary of changes in v7</p>
-              </th>
-              <th>
-                <p>Reason/source</p>
-              </th>
-            </tr>
-            <tr>
-              <td>Data testing prototype: more licences on the data file
-              </td>
-              <td>To see how some of the licence data real examples would render on the existing prototype design
-              </td>
-            </tr>
-            <tr>
-              <td>User testing prototype: Back button
-              </td>
-              <td>Updated in line with GDS back button pattern
-              </td>
-            </tr>
-            <tr>
-              <td>Complex licence: tried adding multiple values against areas of the licence view. Doesn't allow enough data or clarity for really complex licences.
-              </td>
-              <td>To see how we can meet user needs around understanding a complex licence
-              </td>
-            </tr>
-              </tbody></table>
+<table>
+<tbody><tr>
+<th>
+<p>Summary of changes in v7</p>
+</th>
+<th>
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>Data testing prototype: more licences on the data file
+</td>
+<td>To see how some of the licence data real examples would render on the existing prototype design
+</td>
+</tr>
+<tr>
+<td>User testing prototype: Back button
+</td>
+<td>Updated in line with GDS back button pattern
+</td>
+</tr>
+<tr>
+<td>Complex licence: tried adding multiple values against areas of the licence view. Doesn't allow enough data or clarity for really complex licences.
+</td>
+<td>To see how we can meet user needs around understanding a complex licence
+</td>
+</tr>
+</tbody></table>
 
 </br></br></br>
 <p></p>
-          <h2 class="heading-medium">Version 6</h2>
-          <p><a href="/versions/v6">Version 6</a> was our sixth version prototype.</p>
-          <p>The table below lists the changes between Version 5 and 6 following user feedback.</p>
+<h2 class="heading-medium">Version 6</h2>
+<p><a href="/versions/v6">Version 6</a> was our sixth version prototype.</p>
+<p>The table below lists the changes between Version 5 and 6 following user feedback.</p>
 
-          <table>
-            <tbody><tr>
-              <th>
-                <p>Summary of changes in v6</p>
-              </th>
-              <th>
-                <p>Reason/source</p>
-              </th>
-            </tr>
-            <tr>
-              <td>
-                <p>Flow condition on summary page updated to be a summary for ‘Abstraction conditions’. A generic terms for the five complex conditions we’ve now included on the licence.</p>
+<table>
+<tbody><tr>
+<th>
+<p>Summary of changes in v6</p>
+</th>
+<th>
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>
+<p>Flow condition on summary page updated to be a summary for ‘Abstraction conditions’. A generic terms for the five complex conditions we’ve now included on the licence.</p>
 <p></p>
 <p>The summary splits to two paragraphs:</p>
 <li>A summary of conditions that will affect the licences maximum quantities</li>
@@ -572,71 +677,71 @@
 <p></p>
 <p>Below these two short paragraphs is a link to all abstraction conditions within the terms of use page.</p>
 </p>
-              </td>
-              <td>
-                <p>Licences have an array of complex conditions. For version 6 prototype we’ve decided to display and test the top five complex conditions.</p>
+</td>
+<td>
+<p>Licences have an array of complex conditions. For version 6 prototype we’ve decided to display and test the top five complex conditions.</p>
 <p></p>
 <p>Flow condition was a generic, plain english term I applied to a cessation condition. I’ve now reverted to a non plain english option, but sticking with the names as per existing licences.</p>
 <p></p>
 <p>We have a view to update to plain english, but are awaiting a content designer to manage this process.</p>
 
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Help text for flow condition removed. The summary of conditions is descriptive enough to give an overview of conditions. If user testing reports confusion without this text we can look to adding it at the abstraction conditions level.</p>
-              </td>
-              <td>
-                <p>The summary page is becoming quite full as we add in more licence data. With reference now to multiple conditions, help text against each is not feasible at this page.</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Help text for flow condition removed. The summary of conditions is descriptive enough to give an overview of conditions. If user testing reports confusion without this text we can look to adding it at the abstraction conditions level.</p>
+</td>
+<td>
+<p>The summary page is becoming quite full as we add in more licence data. With reference now to multiple conditions, help text against each is not feasible at this page.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
 Maximum quantities before conditions has been updated to reflect maximum quantities for a licence with a time limiting condition; a condition that splits out the time limiting periods for differing abstraction amounts.</p><p></p>
 
 <p>Two show and hide links, one for each time limited period. This list would increase or decrease depending on how many times limiting conditions against the licence. </p><p></p>
 
 <p>Some licences have one set of amounts throughout, they would see a list of amounts as per version 5, without a show and hide.</p>
-              </td>
-              <td>
-                <p>Many licences have time limiting conditions, so just listing one set of abstraction amounts won’t help licence holders know what they will be able to abstract in the future, or were abstracting under their previous time limited period.
+</td>
+<td>
+<p>Many licences have time limiting conditions, so just listing one set of abstraction amounts won’t help licence holders know what they will be able to abstract in the future, or were abstracting under their previous time limited period.
 </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Terms of use page now updated with four additional complex conditions.</p><p></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Terms of use page now updated with four additional complex conditions.</p><p></p>
 
-                <li>Augmentation and compensation conditions</li>
-                <li>Time limiting - abstraction start</li>
-                <li>Time limiting - conditions</li>
-                <li>Eel screening condition</li>
-                <li>Fish passage condition</li>
+<li>Augmentation and compensation conditions</li>
+<li>Time limiting - abstraction start</li>
+<li>Time limiting - conditions</li>
+<li>Eel screening condition</li>
+<li>Fish passage condition</li>
 
-                <p>It’s possible as we bring in more conditions we may need to rethink the design of this section within the accordion.</p><p></p>
+<p>It’s possible as we bring in more conditions we may need to rethink the design of this section within the accordion.</p><p></p>
 
-                <p>Licence one and two is missing augmentation and compensation conditions, as an example of what this section would look like in a licence without such conditions. Any note towards the condition would be absent to keep the list of conditions as short as possible.</p><p></p>
+<p>Licence one and two is missing augmentation and compensation conditions, as an example of what this section would look like in a licence without such conditions. Any note towards the condition would be absent to keep the list of conditions as short as possible.</p><p></p>
 
-                <p>Licences one and two have no cessation condition, but do have a note regarding no such condition, this is to raise awareness of the condition ahead of abstraction reform.</p>
-              </td>
-              <td>
-                <p>So we can cater for displaying more licenses, most licenses have one or more of these conditions.</p>
-              </td>
-            </tr>
+<p>Licences one and two have no cessation condition, but do have a note regarding no such condition, this is to raise awareness of the condition ahead of abstraction reform.</p>
+</td>
+<td>
+<p>So we can cater for displaying more licenses, most licenses have one or more of these conditions.</p>
+</td>
+</tr>
 
-            <tr>
-              <td><p>Added grey lines above and below each row of data on the summary page.
-                <p></td>
-              <td><p>So the information scans better for the user. Quite a lot of information on the summary page now, the lines help seperate the data. They are also used across GDS services within the data patterns available for use.
-                <p></td>
-            </tr>
-            <tr>
-              <td><p>Updated cntact details page to seperate data with grey lines as per GDS data style used on the summary page.
-                <p></td>
-              <td><p>To remain consistant with the summary page and GDS data pattern.<p></td>
-            </tr>
-                </tbody></table>
+<tr>
+<td><p>Added grey lines above and below each row of data on the summary page.
+<p></td>
+<td><p>So the information scans better for the user. Quite a lot of information on the summary page now, the lines help seperate the data. They are also used across GDS services within the data patterns available for use.
+<p></td>
+</tr>
+<tr>
+<td><p>Updated cntact details page to seperate data with grey lines as per GDS data style used on the summary page.
+<p></td>
+<td><p>To remain consistant with the summary page and GDS data pattern.<p></td>
+</tr>
+</tbody></table>
 
 </br></br></br>
 <p></p>
@@ -644,42 +749,42 @@ Maximum quantities before conditions has been updated to reflect maximum quantit
 <p><a href="/versions/v5">Version 5</a> was our fifth version prototype.</p>
 <p>The table below lists the changes between Version 4 and 5 following user feedback.</p>
 
-    <table>
-      <tbody><tr>
-        <th>
-          <p>Summary of changes in v5</p>
-        </th>
-        <th>
-          <p>Reason/source</p>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <p>Accordion accessibility changes - anchor linking</p>
-        </td>
-        <td>
-          <p>Simplifying user design for linking to licence areas</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Accordion accessibility changes - tab through content for expanders</p>
-        </td>
-        <td>
-          <p>Considering screen readers and non-mouse users for content navigation</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Created four sketch pages, displaying different licence layouts within the prototype</p>
-        </td>
-        <td>
-          <p>To test with users different ways of displaying our licence data</p>
-        </td>
-      </tr>
-          </tbody></table>
+<table>
+<tbody><tr>
+<th>
+<p>Summary of changes in v5</p>
+</th>
+<th>
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>
+<p>Accordion accessibility changes - anchor linking</p>
+</td>
+<td>
+<p>Simplifying user design for linking to licence areas</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Accordion accessibility changes - tab through content for expanders</p>
+</td>
+<td>
+<p>Considering screen readers and non-mouse users for content navigation</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Created four sketch pages, displaying different licence layouts within the prototype</p>
+</td>
+<td>
+<p>To test with users different ways of displaying our licence data</p>
+</td>
+</tr>
+</tbody></table>
 
-      </br></br></br>
+</br></br></br>
 <p></p>
 <h2 class="heading-medium">Version 4</h2>
 <p><a href="/versions/v4">Version 4</a> was our fourth version prototype.</p>
@@ -688,432 +793,432 @@ Maximum quantities before conditions has been updated to reflect maximum quantit
 
 <table>
 
-      <tbody><tr>
-        <th>
-          <p>Summary of changes in v4</p>
-        </th>
-        <th>
-          <p>Reason/source</p>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <p>Licence number removed from licence page</p>
-        </td>
-        <td>
-          <p>Simplifying design, removing duplication of breadcrumb licence number</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Licence holder address removed from abstraction point</p>
-        </td>
-        <td>
-          <p>Internal user feedback states that this address is not abstraction point</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Abstraction point labeling changed to Point of abstraction</p>
-        </td>
-        <td>
-          <p>Consistent with paper licence and terms of use page</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>View map link added to Point of abstraction</p>
-        </td>
-        <td>
-          <p>User feedback shows map view of abstraction point is reviewed by internal and external users early in testing</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Hands off flow condition note added to licence page</p>
-        </td>
-        <td>
-          <p>Internal and external users are looking for this information, this information is on the paper licence</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Hands off flow condition details added to accordion</p>
-        </td>
-        <td>
-          <p>Internal and external users are looking for this information, this information is on the paper licence</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>‘Learn about hands off flow’/’Learn how this affects the amount you can abstract’ help text expand link added to hands off flow condition</p>
-        </td>
-        <td>
-          <p>Licence holders that are new to managing a licence, or licence holders with historic licences may not be aware of flow restrictions</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Link to hands off flow condition details, within hands off flow description in help text expander</p>
-        </td>
-        <td>
-          <p>Internal and external users are looking for this information, this information is on the paper licence</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Maximum quantities added to terms page accordion</p>
-        </td>
-        <td>
-          <p>Internal and external users are looking for this information, this information is on the paper licence</p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Map accordion tab removed. Map link added to Point of abstraction accordion tab</p>
-        </td>
-        <td>
-          <p>Map is now grouped with point of abstraction as per top level licence page</p>
-        </td>
-      </tr>
-      <tr>
-          <td>
-            <p>Added a separate page with proof of concept on new accordion functionality</p>
-          </td>
-          <td>
-            <p>For a clearer user pathway to flow conditions, accessibility changes to allow tabbed skip links through content, and better access to analytics through changing url extensions</p>
-          </td>
-        </tr>
-        <tr>
-            <td>
-              <p>Moved the sign out link to after breadcrumb</p>
-            </td>
-            <td>
-              <p>In line with accessibility and best practice dev/design standards around layout and page ordering</p>
+<tbody><tr>
+<th>
+<p>Summary of changes in v4</p>
+</th>
+<th>
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>
+<p>Licence number removed from licence page</p>
+</td>
+<td>
+<p>Simplifying design, removing duplication of breadcrumb licence number</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Licence holder address removed from abstraction point</p>
+</td>
+<td>
+<p>Internal user feedback states that this address is not abstraction point</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Abstraction point labeling changed to Point of abstraction</p>
+</td>
+<td>
+<p>Consistent with paper licence and terms of use page</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>View map link added to Point of abstraction</p>
+</td>
+<td>
+<p>User feedback shows map view of abstraction point is reviewed by internal and external users early in testing</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Hands off flow condition note added to licence page</p>
+</td>
+<td>
+<p>Internal and external users are looking for this information, this information is on the paper licence</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Hands off flow condition details added to accordion</p>
+</td>
+<td>
+<p>Internal and external users are looking for this information, this information is on the paper licence</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>‘Learn about hands off flow’/’Learn how this affects the amount you can abstract’ help text expand link added to hands off flow condition</p>
+</td>
+<td>
+<p>Licence holders that are new to managing a licence, or licence holders with historic licences may not be aware of flow restrictions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Link to hands off flow condition details, within hands off flow description in help text expander</p>
+</td>
+<td>
+<p>Internal and external users are looking for this information, this information is on the paper licence</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Maximum quantities added to terms page accordion</p>
+</td>
+<td>
+<p>Internal and external users are looking for this information, this information is on the paper licence</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Map accordion tab removed. Map link added to Point of abstraction accordion tab</p>
+</td>
+<td>
+<p>Map is now grouped with point of abstraction as per top level licence page</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Added a separate page with proof of concept on new accordion functionality</p>
+</td>
+<td>
+<p>For a clearer user pathway to flow conditions, accessibility changes to allow tabbed skip links through content, and better access to analytics through changing url extensions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Moved the sign out link to after breadcrumb</p>
+</td>
+<td>
+<p>In line with accessibility and best practice dev/design standards around layout and page ordering</p>
 
-            </td>
-          </tr>
-          </tbody></table>
-
-      </br></br></br>
-
-      <h2 class="heading-medium">Version 3</h2>
-      <p><a href="/versions/v3">Version 3</a> was our third version prototype.</p>
-      <p>The table below lists the changes between Version 2 and 3 following user feedback.</p>
-
-      <table>
-
-            <tbody><tr>
-              <th>
-                <p>Summary of changes in v3</p>
-              </th>
-              <th>
-                <p>Reason/source</p>
-              </th>
-            </tr>
-            <tr>
-              <td>
-                <p>Sign in page for internal and external user prototypes</p>
-              </td>
-              <td>
-                <p>So testing can allow users to start at the beginning of the user journey when reaching the licence page</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Licences list page</p>
-              </td>
-              <td>
-                <p>So testing can allow users to start at the beginning of the user journey when reaching the licence page</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Merge internal and external prototypes into one prototype</p>
-              </td>
-              <td>
-                <p>Internal and external user prototypes are currently identical, therefore duplicates. These were merged for this sprint whilst they still remain identical.</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Prototype with multiple licences pulling licence data from a central source</p>
-              </td>
-              <td>
-                <p>So we can test current design against the data we have. This should inform our design and data cleansing required.</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Moved source of summary to summary page on all v3 prototypes</p>
-              </td>
-              <td>
-                <p>Requested in internal user feedback</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Prototype with licence data pulling from a central source updated to now no longer have ‘grid ref’ label</p>
-              </td>
-              <td>
-                <p>This label was defining a field value that was not consistently serving a grid reference. Label was removed to prevent confusion.</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Paragraph spacing added in long answer fields ‘Records’ and ‘Means of measurement’</p>
-              </td>
-              <td>
-                <p>The values for these were broken by sentences, but not paragraphed. Nunchucks update to data to insert paragraph for every sentence to scan easier on the page.</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Paragraph spacing after cubic metre measurements</p>
-              </td>
-              <td>
-                <p>To allow the data to be broken into readable values, rather than free text sentences</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Licence effective dates edited from a range to separate start and end values</p>
-              </td>
-              <td>
-                <p>The range does not fit with the data. The dates are in a long format, and the end value is not always a date.</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Updated breadcrumb links to point to pages, and added breadcrumb on map page</p>
-              </td>
-              <td>
-                <p>Breadcrumb was just their for context, not added as a feature, but updated to remove confusion for users in testing</p>
-              </td>
-            </tr>
-                </tbody></table>
-
-    </br></br></br>
-
-      <h2 class="heading-medium">Version 2</h2>
-      <p><a href="/versions/v2">Version 2</a> was our second version prototype.</p>
-      <p> The table below lists the changes between Version 1 and 2 following user feedback.</p>
-
-      <table>
-
-            <tbody><tr>
-              <th>
-                <p>Summary of changes in v2</p>
-              </th>
-              <th>
-                <p>Reason/source</p>
-              </th>
-            </tr>
-            <tr>
-              <td>
-                <p>Updated quantity condition in line with example licence</p>
-              </td>
-              <td>
-                <p>Continuity update</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Abstraction point grid ref changed in line with example licence
-    </p>
-              </td>
-              <td>
-                <p>Continuity update</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Date effective from has been added to the licence page</p>
-              </td>
-              <td>
-                <p>Feedback from internal user is that this can be different from the date of which the licence is obtained</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Period of abstraction to seasonal information, rather than date ranges</p>
-              </td>
-              <td>
-                <p>Feedback from internal users is that this is the current format, as confirmed by the example licence, updated in line with example licence</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Added map pages with responsive maps, linked to from a maps list on terms of use page</p>
-              </td>
-              <td>
-                <p>To obtain user feedback on map user needs</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Removed ‘change’ links on contact page</p>
-              </td>
-              <td>
-                <p>These links are currently not linked up to a function, so should be removed</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Billing contact details have been added on the contact page</p>
-              </td>
-              <td>
-                <p>Internal user feedback states that Billing is a further separate set of address and contact details</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>External user pages have been added for testing. These are to remain the same as internal user view pages for now, but may change based on user need</p>
-              </td>
-              <td>
-                <p>Anticipating separate feedback from two sets of user groups</p>
-              </td>
-            </tr>
-            <tr>
-                <td>Instead of 'Effective from' and 'Expiry date' listed seperatly, 'Licence effective dates: 11 July 2016 - 11 July 2017'
-                </td>
-                <td>To save list space
-                </td>
-              </tr>
-              <tr>
-              <td>Map list changed to only include one map, the abstraction point
-              </td>
-              <td>As the other example maps were confusing users, as not current examples. Users will tell us if any maps are missing. In the event it is confirmed only one map is needed, we will change the show and hide to a direct link.
-              </td>
-            </tr>
-            <tr>
-            <td>Primary address changed to 'Site contact details', Licence holder details, changed to 'Registered licence holder details'
-            </td>
-            <td>Changed following feedback from a subject matter expert
-            </td>
-          </tr>
-          <tr>
-          <td>Contact details link on the licence page moved to next to name, and changed from 'Other contact details' to 'Contact details'
-          </td>
-          <td>Changed following internal user confusion and feedback
-          </td>
-        </tr>
-        <tr>
-        <td>Terms page updated with an accordion, rather than a series of show and hide links
-        </td>
-        <td>Bugs were being reported with the use of multiple show and hides, and this version is much more mobile friendly regarding the clickable area
-        </td>
-        </tbody></table>
+</td>
+</tr>
+</tbody></table>
 
 </br></br></br>
 
-      <h2 class="heading-medium">Version 1a to 1b</h2>
-      <p><a href="/versions/v1">Version 1</a> was our first version prototype.</p> <p>1a was user tested. 1b was formed as a second iteration of version 1, in responce to user testing.</p>
-      <p> The table below lists the changes between version 1a and 1b following user feedback.</p>
+<h2 class="heading-medium">Version 3</h2>
+<p><a href="/versions/v3">Version 3</a> was our third version prototype.</p>
+<p>The table below lists the changes between Version 2 and 3 following user feedback.</p>
 
-      <table>
+<table>
 
-      			<tbody><tr>
-      				<th>
-      					<p>Summary of change in v1</p>
-      				</th>
-      				<th>
-      					<p>Reason/source</p>
-      				</th>
-      			</tr>
-      			<tr>
-      				<td>
-      					<p>Changed header to sentence case on online licence page</p>
-      				</td>
-      				<td>
-      					<p>Grammar correction</p>
-      				</td>
-      			</tr>
-      			<tr>
-      				<td>
-      					<p>Alignment change from two column table list, to left aligned single column list on online licence page</p>
-      				</td>
-      				<td>
-      					<p>Users had trouble understanding the information on the page</p>
-      				</td>
-      			</tr>
-      			<tr>
-      				<td>
-      					<p>Name and site address added on online licence page</p>
-      				</td>
-      				<td>
-      					<p>Internal user feedback states this information is useful for site visits</p>
-      				</td>
-      			</tr>
-      			<tr>
-      				<td>
-      					<p>Other contact details link moved up the page, next to associated content on online licence page</p>
-      				</td>
-      				<td>
-      					<p>Feedback suggests links were not easy to spot in their previous positions</p>
-      				</td>
-      			</tr>
-      			<tr>
-      				<td>
-      					<p>Abstraction point grid ref - title change, and data format change on online licence page</p>
-      				</td>
-      				<td>
-      					<p>Internal users expected to see SJ or SK grid references</p>
-      				</td>
-      			</tr>
-      			<tr>
-      				<td>
-      					<p>Abstraction amount label change on online licence page</p>
-      				</td>
-      				<td>
-      					<p>Mirroring the format on the paper licence to make amounts clearer
+<tbody><tr>
+<th>
+<p>Summary of changes in v3</p>
+</th>
+<th>
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>
+<p>Sign in page for internal and external user prototypes</p>
+</td>
+<td>
+<p>So testing can allow users to start at the beginning of the user journey when reaching the licence page</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Licences list page</p>
+</td>
+<td>
+<p>So testing can allow users to start at the beginning of the user journey when reaching the licence page</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Merge internal and external prototypes into one prototype</p>
+</td>
+<td>
+<p>Internal and external user prototypes are currently identical, therefore duplicates. These were merged for this sprint whilst they still remain identical.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Prototype with multiple licences pulling licence data from a central source</p>
+</td>
+<td>
+<p>So we can test current design against the data we have. This should inform our design and data cleansing required.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Moved source of summary to summary page on all v3 prototypes</p>
+</td>
+<td>
+<p>Requested in internal user feedback</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Prototype with licence data pulling from a central source updated to now no longer have ‘grid ref’ label</p>
+</td>
+<td>
+<p>This label was defining a field value that was not consistently serving a grid reference. Label was removed to prevent confusion.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Paragraph spacing added in long answer fields ‘Records’ and ‘Means of measurement’</p>
+</td>
+<td>
+<p>The values for these were broken by sentences, but not paragraphed. Nunchucks update to data to insert paragraph for every sentence to scan easier on the page.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Paragraph spacing after cubic metre measurements</p>
+</td>
+<td>
+<p>To allow the data to be broken into readable values, rather than free text sentences</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Licence effective dates edited from a range to separate start and end values</p>
+</td>
+<td>
+<p>The range does not fit with the data. The dates are in a long format, and the end value is not always a date.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Updated breadcrumb links to point to pages, and added breadcrumb on map page</p>
+</td>
+<td>
+<p>Breadcrumb was just their for context, not added as a feature, but updated to remove confusion for users in testing</p>
+</td>
+</tr>
+</tbody></table>
+
+</br></br></br>
+
+<h2 class="heading-medium">Version 2</h2>
+<p><a href="/versions/v2">Version 2</a> was our second version prototype.</p>
+<p> The table below lists the changes between Version 1 and 2 following user feedback.</p>
+
+<table>
+
+<tbody><tr>
+<th>
+<p>Summary of changes in v2</p>
+</th>
+<th>
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>
+<p>Updated quantity condition in line with example licence</p>
+</td>
+<td>
+<p>Continuity update</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Abstraction point grid ref changed in line with example licence
 </p>
-      				</td>
-      			</tr>
-            <tr>
-              <td>
-                <p>Hands off flow restriction added to online licence page</p>
-              </td>
-              <td>
-                <p>Internal users noted this is important information
-          </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Changed header to sentence case on terms of use page</p>
-              </td>
-              <td>
-                <p>Grammar correction
-          </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Changed header to sentence case to contact details page</p>
-              </td>
-              <td>
-                <p>Grammar correction
-          </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>Changed ‘Business details’ to ‘Abstraction return contact details’ on contact details page
-</p>
-              </td>
-              <td>
-                <p>Internal user feedback states that returns have a separate address, no user research has suggested that business address is required
+</td>
+<td>
+<p>Continuity update</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Date effective from has been added to the licence page</p>
+</td>
+<td>
+<p>Feedback from internal user is that this can be different from the date of which the licence is obtained</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Period of abstraction to seasonal information, rather than date ranges</p>
+</td>
+<td>
+<p>Feedback from internal users is that this is the current format, as confirmed by the example licence, updated in line with example licence</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Added map pages with responsive maps, linked to from a maps list on terms of use page</p>
+</td>
+<td>
+<p>To obtain user feedback on map user needs</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Removed ‘change’ links on contact page</p>
+</td>
+<td>
+<p>These links are currently not linked up to a function, so should be removed</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Billing contact details have been added on the contact page</p>
+</td>
+<td>
+<p>Internal user feedback states that Billing is a further separate set of address and contact details</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>External user pages have been added for testing. These are to remain the same as internal user view pages for now, but may change based on user need</p>
+</td>
+<td>
+<p>Anticipating separate feedback from two sets of user groups</p>
+</td>
+</tr>
+<tr>
+<td>Instead of 'Effective from' and 'Expiry date' listed seperatly, 'Licence effective dates: 11 July 2016 - 11 July 2017'
+</td>
+<td>To save list space
+</td>
+</tr>
+<tr>
+<td>Map list changed to only include one map, the abstraction point
+</td>
+<td>As the other example maps were confusing users, as not current examples. Users will tell us if any maps are missing. In the event it is confirmed only one map is needed, we will change the show and hide to a direct link.
+</td>
+</tr>
+<tr>
+<td>Primary address changed to 'Site contact details', Licence holder details, changed to 'Registered licence holder details'
+</td>
+<td>Changed following feedback from a subject matter expert
+</td>
+</tr>
+<tr>
+<td>Contact details link on the licence page moved to next to name, and changed from 'Other contact details' to 'Contact details'
+</td>
+<td>Changed following internal user confusion and feedback
+</td>
+</tr>
+<tr>
+<td>Terms page updated with an accordion, rather than a series of show and hide links
+</td>
+<td>Bugs were being reported with the use of multiple show and hides, and this version is much more mobile friendly regarding the clickable area
+</td>
+</tbody></table>
 
-          </p>
-              </td>
-            </tr>
-      	</tbody></table>
+</br></br></br>
+
+<h2 class="heading-medium">Version 1a to 1b</h2>
+<p><a href="/versions/v1">Version 1</a> was our first version prototype.</p> <p>1a was user tested. 1b was formed as a second iteration of version 1, in responce to user testing.</p>
+<p> The table below lists the changes between version 1a and 1b following user feedback.</p>
+
+<table>
+
+<tbody><tr>
+<th>
+<p>Summary of change in v1</p>
+</th>
+<th>
+<p>Reason/source</p>
+</th>
+</tr>
+<tr>
+<td>
+<p>Changed header to sentence case on online licence page</p>
+</td>
+<td>
+<p>Grammar correction</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Alignment change from two column table list, to left aligned single column list on online licence page</p>
+</td>
+<td>
+<p>Users had trouble understanding the information on the page</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Name and site address added on online licence page</p>
+</td>
+<td>
+<p>Internal user feedback states this information is useful for site visits</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Other contact details link moved up the page, next to associated content on online licence page</p>
+</td>
+<td>
+<p>Feedback suggests links were not easy to spot in their previous positions</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Abstraction point grid ref - title change, and data format change on online licence page</p>
+</td>
+<td>
+<p>Internal users expected to see SJ or SK grid references</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Abstraction amount label change on online licence page</p>
+</td>
+<td>
+<p>Mirroring the format on the paper licence to make amounts clearer
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Hands off flow restriction added to online licence page</p>
+</td>
+<td>
+<p>Internal users noted this is important information
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Changed header to sentence case on terms of use page</p>
+</td>
+<td>
+<p>Grammar correction
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Changed header to sentence case to contact details page</p>
+</td>
+<td>
+<p>Grammar correction
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Changed ‘Business details’ to ‘Abstraction return contact details’ on contact details page
+</p>
+</td>
+<td>
+<p>Internal user feedback states that returns have a separate address, no user research has suggested that business address is required
+
+</p>
+</td>
+</tr>
+</tbody></table>
 
 
 </br></br></br>
 
-  <div class='column-full'><a href="/">  <p></p>< Back to previous</a></div>
+<div class='column-full'><a href="/">  <p></p>< Back to previous</a></div>
 </main>
 
 {% endblock %}
