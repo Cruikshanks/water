@@ -1,0 +1,47 @@
+{% extends "v13/layout.html" %}
+{% set title = "Which licences do you want to add?" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- alpha banner -->
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+         Enter your security code
+      </h1>
+
+      <p class="form-hint">
+         We sent this by post to the registered address you chose.
+      </p>
+      <label class="form-label" for="ni-number">
+        Authorisation code
+      </label>
+      <input class="form-control" id="auth-code" type="text" name="auth-code">
+      <p></p>
+      <!-- <div>
+        <a href="">
+          Sign out
+        </a>
+      </div> -->
+    </div>
+  </div>
+</main>
+
+{% endblock %}
