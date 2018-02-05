@@ -1,0 +1,81 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <!-- <li>Manage your water abstraction</li> -->
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+
+  <!-- page title -->
+  <h1  class="heading-large">Manage your water abstraction</h1>
+
+  <div class="grid-row">
+    <div class="column-full">
+      <nav class="tabs">
+        <ul>
+          <li><span class="active">Your licences</span></li>
+          <li><a href="manage_licences">Access to licences</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <p></p>
+  </div>
+
+  <div class="column-two-thirds">
+
+    <div>
+      <p>
+        Tell us about abstraction licences you own or manage<br>
+        <a href="add_licence/licence_number">
+          Add abstraction licences
+        </a>
+      <br></p>
+    </div>
+
+    <div>
+      <p>
+        Activate licences using a verification code<br>
+        <a href="add_licence/auth_code">
+          Use your verification code here
+        </a>
+      <br></p>
+    </div>
+
+    <div>
+      <p>A list of your abstraction licences<br>
+      <a href="licences"><input class="button" type="submit" value="14 abstraction licences"></a></p>
+    </div>
+
+  </div>
+
+  <script src="/public/javascripts/underscore.min.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}
