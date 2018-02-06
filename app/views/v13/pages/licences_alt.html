@@ -1,0 +1,155 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v13/pages/water_abstraction">Manage your water abstraction</a></li>
+        <li>Your licences</li>
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+        <a href="/v13/pages/water_abstraction?wid=7" class="change-password" style="margin-right: 1.6rem">Manage your licences</a>
+
+      </ol>
+    </div>
+  </nav>
+
+  <!-- page title -->
+  <h1  class="heading-large">Your licences {{ pData.LicenceSerialNo }}</h1>
+
+  <div class="grid-row">
+
+    <div class="column-two-fifths">
+      <div class="form-group form-group--horizontal">
+        <label class="form-label form-label--bold" for="emailAddress">Search for a licence holder’s account</label>
+        <span class="form-hint">Enter their registered email address.</span>
+        <input type="text" class="form-control form-control--block" name="emailAddress" id="emailAddress" />
+      </div>
+    </div>
+
+    <div class="column-two-fifths">
+      <div class="form-group form-group--horizontal">
+        <label class="form-label form-label--bold" for="licenseNumber">Search your licences</label>
+        <span class="form-hint">Enter a licence number or name.</span>
+        <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
+      </div>
+    </div>
+
+    <div class="column-one-fifth">
+      <input id="searchButton" class="button button button-license-search" type="submit" value="Search">
+    </div>
+  </div>
+
+
+  <!-- licence list -->
+  <div class="grid-row">
+    <div class="column-full">
+    <!-- Results page goes here -->
+    <div class="license-results" id="results">
+
+      <div class="license-results-header">
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence serial number">Licence serial number<span class="sort-icon"> &#x25be;</span></a>
+        </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">Licence name</a>
+        </div>
+        <div class="license-results-header__column"></div>
+      </div>
+      <a href="/v13/pages/online_licence-a?wid=1" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence-b?wid=2" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0003</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=3" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0004</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=7" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0008</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">23/71/12/0002</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">23/71/12/0003</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">94/95/32/0212</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">94/95/32/0213</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">96/18/94/1085</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">96/18/94/1086</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">96/18/94/1087</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">96/18/94/1088</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">AN21/84/10/2005</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column">AN21/82/61/0845</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<script src="/public/javascripts/underscore.min.js"></script>
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}
