@@ -1,0 +1,462 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+@import 'patterns/check-your-answers';
+@import 'patterns/task-list';
+
+@import 'patterns/license-search';
+
+// version 13 overrides
+.alert-default {
+  border-color: #008EC9;
+  background-color: #E8F4FA;
+}
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+
+.datatabletop {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 0.5em;
+}
+
+h1 {
+  margin-top: 0 !important;
+}
+
+.app-c-contents-list__list-item {
+  padding-top: 7.5px;
+  line-height: 1.3;
+  list-style-type: none;
+}
+
+.form-cancel {
+    display: inline-block;
+    float: right;
+    margin-top: 0.5em;
+}
+
+.form--well {
+    border: 1px solid #bfc1c3;
+    background: #f8f8f8;
+    padding: 28px;
+    margin-bottom: 3em;
+    position: relative;
+}
+
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+}
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Water resource licensing styles currently in use under V8
+
+.search_licences {
+margin-left: 80px;
+line-height: 0px;
+}
+
+.licence-width {
+  width: 400px;
+}
+
+.heading-field {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.name-width {
+  width: 390px;
+}
+
+.heading-field-licences {
+  margin-bottom: 5px;
+    margin-left: 80px;
+}
+
+.field-hint-licences {
+  margin-left: 80px;
+}
+
+.search-boxes {
+    display: inline-block;
+    position: relative;
+      align-content: left;
+      margin-right: 59px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+}
+
+.licences-search {
+    display: inline-block;
+    position: relative;
+      align-content: left;
+      margin-right: 53px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+}
+
+.contains {
+  border: 2px solid #0b0c0c;
+  padding: 5px 270px 4px 5px;
+  align-content: left;
+  color: white;
+}
+
+.name_info {
+padding:21px;
+margin-top: 30px;
+
+}
+
+.Licence-holder-email {
+  border: 2px solid #0b0c0c;
+  padding: 5px 170px 4px 5px;
+  align-content: left;
+  color: white;
+  margin-top: 10px;
+}
+
+main.search .search-header input {
+    -webkit-appearance: none;
+    border-radius: 0;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 10px;
+    display: block;
+    height: 50px;
+    border: 1px solid #bfc1c3;
+    border-right: none;
+    line-height: 48px !important;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a.password_reset {
+  padding-top: 10px;
+  display: block;
+}
+
+.form-hint {
+  li {
+    &:before {
+      position: absolute;
+      margin-left: -1.3em;
+      font-weight: bold;
+    }
+
+    &.valid {
+      color: #066931;
+      list-style: none;
+      list-style-position: outside;
+
+      &:before {
+        color: #066931;
+        content: "\2713";
+      }
+
+    }
+
+    &.invalid {
+      color: #AF1826;
+      list-style: none;
+      list-style-position: outside;
+
+      &:before {
+        color: #AF1826;
+        content: "\2717";
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -9999em;
+}
+
+.heading-medium {
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+.datatabletop {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 0.5em;
+}
+
+.datatable {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 0.5em;
+
+  label {
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 7px;
+    padding-right: 0.5em;
+    width: 20%;
+    font-weight: bold;
+  }
+}
+
+.datatablepp {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 0.5em;
+
+  label {
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 7px;
+    padding-right: 0.5em;
+    width: 20%;
+  }
+}
+
+.datahead {
+  border-top: none;
+}
+
+.dataheadpp {
+  border-top: none;
+  font-weight: bold;
+}
+
+.first-data {
+  border-top: 1px solid #000;
+}
+
+.first-datapp {
+  border-top: 2px solid #bfc1c3;
+}
+
+.datatablebottom {
+  border-top: 1px solid #bfc1c3;
+  border-bottom: 1px solid #bfc1c3;
+  padding-top: 0.5em;
+}
+
+.sourceofsupplyqv7 {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 7px;
+  padding-right: 0.5em;
+  width: 20%;
+  font-weight: bold;
+}
+
+.licenceLabelv7 {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 7px;
+  padding-right: 0.5em;
+  width: 20%;
+  font-weight: bold;
+}
+
+.address {
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  border-bottom:  1px solid #bfc1c3;
+}
+
+.licenceAnswer {
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 7px;
+  padding-left: 1em;
+}
+
+.licenceAnswerv7 {
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 7px;
+  padding-left: 3em;
+}
+
+.licenceAnswerv12 {
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 7px;
+  padding-left: 3em;
+}
+
+.menubox {
+  background-color: #FFF;
+  cursor: pointer;
+  padding-left: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #bfc1c3;
+  transition: 0.4s;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 1.25;
+}
+
+.menubox:hover {
+    background-color: #F8F8F8;
+}
+
+.sign-out2 {
+float: right;
+font-size: 0.875em;
+line-height: 1.14286;
+margin-left: 0.75em;
+}
+
+.change-password {
+float: right;
+font-size: 0.875em;
+line-height: 1.14286;
+}
+
+
+// Tab nav
+nav.tabs {
+
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-bottom: 2px solid $panel-colour;
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: table-row;
+
+    & li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: table-cell;
+
+
+      & a, & span {
+        margin-left: 5px;
+        margin: 0 0 2px 5px;
+        display:  block;
+        background: $panel-colour;
+        text-decoration: none;
+        padding : 10px;
+        color: black;
+
+
+        &.active {
+          background: none;
+          border: 2px solid $panel-colour;
+          margin-bottom: 0;
+          padding-bottom: 12px;
+          border-bottom: 0;
+          position: relative;
+          text-decoration: none;
+          color: black;
+
+          &:after {
+            content :  ' ';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 3px;
+            background: $page-colour;
+            color: black;
+          }
+        }
+      }
+
+      &:first-child a {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/* Steve M additions / hacks */
+
+.inset-content {
+  padding-left: 2rem;
+}
+
+.inset-link {
+  margin-bottom: 2rem;
+}
+
+.inset-content p {
+  border-bottom: 1px solid #bfc1c3;
+  line-height: 4rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 2rem;
+  }
+}
+
+.data {
+  padding: 0;
+}
+
+.flush {
+  padding: 0;
+}
+
+details {
+  margin-bottom: 4rem;
+}
+
+.small-space {
+  margin-bottom: 15px;
+}
+
+.medium-space {
+  margin-bottom: 30px;
+}
+
+.big-space {
+  margin-bottom: 45px;
+}
+
+.clustered { // removes padding / margin underneath a h1 so that a sub-heading can be nearby
+  margin-bottom: 0;
+}

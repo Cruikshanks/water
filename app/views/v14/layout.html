@@ -12,15 +12,14 @@
 
   <div class="header-proposition">
     <div class="content">
-
+      <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
       <nav id="proposition-menu">
-        <a href="/" id="proposition-name">
-          {# Set serviceName in config.js. Use a block to override on a page. #}
-          {% block service_name %}
-            {% if serviceName %} {{ serviceName }} {% endif %}
-          {% endblock %}
-        </a>
+        <a href="/" id="proposition-name">Manage your water abstraction or impoundment licence online prototype</a>
 
+        <ul id="proposition-links">
+          <li><a href="/v14/pages/licences" class="active">View</a></li>
+          <li><a href="/v14/pages/manage">Manage</a></li>
+        </ul>
       </nav>
     </div>
   </div>
@@ -29,6 +28,10 @@
 
 {% block header_class %}
   with-proposition
+{% endblock %}
+
+{% block content %}
+  <p>No content available</p>
 {% endblock %}
 
 {% block footer_support_links %}

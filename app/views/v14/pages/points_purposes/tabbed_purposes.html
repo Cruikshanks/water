@@ -1,0 +1,184 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+Abstraction conditions
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  {% from "custom_inc/waterdatav3.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v13/pages/licences">Your licences</a></li>
+        <li><a href="/v13/pages/online_licence-b?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- back button -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <p></p>
+
+  <!-- tabs -->
+  <nav class="tabs">
+    <ul>
+      <li><a href="/v13/pages/points_purposes/tabbed_points?wid=7">Amounts by point</a></li>
+      <li><span class="active">Amounts by purpose</span></li>
+      <li><a href="/v13/pages/points_purposes/tabbed_point_and_purpose?wid=7">Conditional amounts</a></li>
+    </ul>
+  </nav>
+  <p></p>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h2 class="heading-medium">Abstraction amounts to purposes within a licence</h2>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <!-- <div class="datatablepp dataheadpp">
+        <label>                                                                 Abstraction purpose
+        </label>
+        <div class="licenceAnswerv12 bold-small">                               Cress growing
+        </div>
+      </div> -->
+
+      <!-- alternative table head -->
+      <div class="datatablepp dataheadpp">
+        <h2 class="heading-medium">Cress growing</h2>
+      </div>
+
+      <div class="datatablepp first-datapp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          300m/h
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          5,000m/d
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          60,000m/a
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <!-- <div class="datatablepp dataheadpp">
+        <label>                                                                 Abstraction purpose
+        </label>
+        <div class="licenceAnswerv12 bold-small">                               Irrigation
+        </div>
+      </div> -->
+
+      <!-- alternative table head -->
+      <div class="datatablepp dataheadpp">
+        <h2 class="heading-medium">Irrigation</h2>
+      </div>
+
+      <div class="datatablepp first-datapp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          300m/h
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          5,000m/d
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          60,000m/a
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <!-- <div class="datatablepp dataheadpp">
+        <label>                                                                 Abstraction purpose
+        </label>
+        <div class="licenceAnswerv12 bold-small">                               Power generation
+        </div>
+      </div> -->
+
+      <!-- alternative table head -->
+      <div class="datatablepp dataheadpp">
+        <h2 class="heading-medium">Power generation</h2>
+      </div>
+
+      <div class="datatablepp first-datapp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          300m/h
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          5,000m/d
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Abstraction amount
+        </label>
+        <div class="licenceAnswerv12">                                          60,000m/a
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+
+{% endblock %}

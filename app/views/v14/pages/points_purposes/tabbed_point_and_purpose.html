@@ -1,0 +1,86 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+Abstraction conditions
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  {% from "custom_inc/waterdatav3.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v13/pages/licences">Your licences</a></li>
+        <li><a href="/v13/pages/online_licence-b?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- back button -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <p></p>
+
+  <!-- tabs -->
+  <nav class="tabs">
+    <ul>
+      <li><a href="/v13/pages/points_purposes/tabbed_points?wid=7">Amounts by point</a></li>
+      <li><a href="/v13/pages/points_purposes/tabbed_purposes?wid=7">Amounts by purpose</a></li>
+      <li><span class="active">Conditional amounts</span></li>
+    </ul>
+  </nav>
+  <p></p>
+
+  <!-- conditional amounts -->
+  <div class="grid-row">
+    <div class="column-full">
+
+      <p class="lede">
+        These are additional amount conditions on your licence.
+      </p>
+
+      <div class="datatablepp first-datapp">
+        <label>                                                                 Flow condition
+        </label>
+        <div class="licenceAnswerv12">
+          <p>No abstraction shall take place when the flow in the River Severn as gauged by the Agency at its flow gauging station at Bewdly at National Grid Reference SO 7823 7616 is equal to or less than 1,219 Megalitres per day as may be notified by the Agency. The Agency said gauging of the flow shall be conclusive.
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>                                                                 Flow condition
+        </label>
+        <div class="licenceAnswerv12">
+          <p>
+            Abstraction shall not exceed 55 Megalitres per day when the flow in the River Severn as gauged by the Agency at its flowauging station at Bewdly at National Grid reference SO 7823 7616 is equal to or less than 1,404 Megalitres per dat as notified by the Agency. The Agency’s said gauging of the flow shall be conclusive.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+
+{% endblock %}
