@@ -1,4 +1,4 @@
-{% extends "v13/layout.html" %}
+{% extends "v14/layout.html" %}
 {% set title = "Which licences do you want to add?" %}
 
 {% block page_title %}
@@ -27,19 +27,30 @@
          Enter your security code to verify access to licences you added
       </h1>
 
-      <p class="form-hint">
-         We sent this by post to the registered address you chose.
-      </p>
-      <label class="form-label" for="ni-number">
-        Security code
-      </label>
-      <input class="form-control" id="auth-code" type="text" name="auth-code">
-      <p></p>
-      <!-- <div>
-        <a href="">
-          Sign out
-        </a>
-      </div> -->
+      <form class="medium-space">
+        <div class="form-group">
+          <label for="password">
+            <span class="form-hint">We sent this by post to the registered address you chose.</span>
+            <fieldset>
+              <span id="enterPassword" data-parsely-id="password" class="error-message hidden">Please check your code is correct.</span>
+            </fieldset>
+          </label>
+          <input type="password" data-parsley-pattern="x45Tn" class="form-control" data-parsely-trigger="keyup change" name="password" id="password" required />
+        </div>
+
+        <input onclick="$('#incorrectLogin').hide()" type="submit" value="Continue" class="button" role="button"/>
+      </form>
+
+      <details class="closeOnOpen">
+      <summary><span class="summary">Haven’t received your code?</span></summary>
+
+      <p>Please allow up to 5 working days to receive your code by post.</p>
+      <p>If it hasn’t arrived after that time, please email <a href="mailto:water_abstractiondigital@environment-agency.gov.uk">water_abstractiondigital@environment-agency.gov.uk</a> to request a new code.</p>
+
+
+      </details>
+      </div>
+
     </div>
   </div>
 </main>

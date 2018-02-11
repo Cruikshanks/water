@@ -1,4 +1,4 @@
-{% extends "v13/layout.html" %}
+{% extends "v14/account.html" %}
 {% set title = "Which licences do you want to add?" %}
 
 {% block page_title %}
@@ -16,6 +16,20 @@
     </p>
   </div>
 
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v14/pages/manage">Manage licences</a></li>
+        <li><a href="">Request to view licences</a></li>
+          <!-- {{ pData.LicenceSerialNo }}</a></li> -->
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
   <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
@@ -23,34 +37,27 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">
-        Which licences do you want to add?</h1>
+      <h1 class="heading-large">Which licences do you want to add?</h1>
 
       <!-- form -->
-      <div class="form-group">
-        <label for="licence_no">
+      <form class="medium-space">
 
-          {% block wendy_licence_no_label %}
-          <fieldset>
-            <span class="form-label-bold">Enter your licence number(s)</span>
-            <span class="form-hint">
-              Add one or many licences here. You can separate your licence numbers using spaces, commas, or by entering them on different lines.
-            </span>
-          </fieldset>
-          {% endblock %}
-          <p></p>
+        <div class="form-group">
+          <label for="licence_no">
+            <fieldset class="small-space">
+              <span class="form-label-bold">Enter your licence number(s)</span>
+              <span class="form-hint">Add one or many licences here. You can separate your licence numbers using spaces, commas, or by entering them on different lines.</span>
+            </fieldset>
+          </label>
+          <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
+        </div>
 
-        </label>
-        <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
-      </div>
-
-      <!-- continue button -->
-      <a href="select_licences">
-        <input onclick="" type="submit" value="Continue" class="button" role="button"/>
-      </a>
+        <!-- continue button -->
+        <a href="select_licences">
+          <input onclick="" type="submit" value="Continue" class="button" role="button"/>
+        </a>
 
       </form>
-      <p></p>
 
     </div>
   </div>

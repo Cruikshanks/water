@@ -42,9 +42,17 @@
   <div class="datatable datahead">
     <label>Licence name</label>
     <div class="licenceAnswerv7">
+
+      {% if data.noneselected == "1" %}
+        <!-- come back to this logic building -->
+      {% endif %}
+
       <!-- <span>No name chosen</span></br>  -->
-      <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a></div>
+      <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
+
     </div>
+  </div>
+
   <div class="datatable">
     <label>Licence holder</label>
     <div class="licenceAnswerv7">
@@ -71,7 +79,7 @@
 
     <div class="datatable">
       <div class="sourceofsupplyqv7">Abstraction conditions</div> <div class="licenceAnswerv7">
-      <a href="/v12_2/conditions/1_con?wid=1">View abstraction conditions</a>
+      <a href="/v12_2/conditions/1_con?wid=1">View details of conditions</a>
       </br>
     </div>
   </div>
@@ -82,7 +90,7 @@
       900m/hour<br>
       2,500m/day<br>
       1,250,000m/annum<br>
-      <a href="/v13/pages/points_purposes/tabbed_points?wid=1">View abstraction amounts by point or purpose</a>
+      <a href="/v13/pages/points_purposes/tabbed_points?wid=1">View details of amounts</a>
   </div>
 
   <br>

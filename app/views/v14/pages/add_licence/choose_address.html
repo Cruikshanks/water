@@ -1,9 +1,95 @@
-{% extends "v12/online_licence/reg/7-3_by_post.html" %}
-{% block john_next_page %}
-{% block john_by_phone %}
-{% block john_post_choice %}
-{% block wendy_next_page %}
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Where should we send your security code?" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
 {% endblock %}
-{% endblock %}
-{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v14/pages/manage">Manage licences</a></li>
+        <li><a href="">Request to view licences</a></li>
+          <!-- {{ pData.LicenceSerialNo }}</a></li> -->
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      {% if data.noneselected == "1" %}
+      <!-- only show this error if incorrectLicenceNo param passed through from route-->
+        <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+            You must select a contact method, and then give us the contact details
+          </h2>
+        </div>
+      {% endif %}
+
+      <h1 class="heading-large">
+        Where should we send your security code?
+      </h1>
+
+      {% block wendy_next_page %}
+        <!-- <form method="post" action="/v14/pages/add_licence/post_confirm.html"> -->
+        <form action="/v14/pages/add_licence/post_confirm.html">
+      {% endblock %}
+
+      {% block new_wendy_next_page %}
+        <form method="post" action="/v12/online_licence/new_wendy_reg/post_confirm">
+      {% endblock %}
+
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <details class="closeOnOpen">
+              <summary><span class="summary">Why do we need to post you a code?</span></summary>
+              <p>We post a security code to a registered address to make sure you’re the licence holder or an official representative.</p>
+            </details>
+            <p class="lede"> Choose one of your licence addresses:</p>
+          </legend>
+
+          <div class="form-group">
+            <fieldset>
+              <div class="multiple-choice">
+                <input name="contact" id="111-Abbey-House" type="radio"  value="by-phone">
+                <label for="111-Abbey-House">111 Abbey House, Abingdon-on-Thames, Oxfordshire, RE1 1GA</label>
+              </div>
+              <div class="multiple-choice">
+                <input name="contact"  id="112-Abbey-House" type="radio" value="by-post">
+                <label for="112-Abbey-House">112 Abbey House, Abingdon-on-Thames, Oxfordshire, RE1 1GA</label>
+              </div>
+              <div class="multiple-choice">
+                <input name="contact"  id="113-Abbey-House" type="radio" value="by-post2">
+                <label for="113-Abbey-House">113 Abbey House, Abingdon-on-Thames, Oxfordshire, RE1 1GA</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <input type="submit" value="Continue" class="button" role="button"/>
+        </form>
+
+        <p></p>
+
+      </div>
+    </div>
+  </main>
+
 {% endblock %}
