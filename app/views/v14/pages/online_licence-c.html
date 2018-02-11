@@ -8,7 +8,7 @@
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
   </div>
-  {% from "custom_inc/waterdatav3.html" import permits %}
+  {% from "custom_inc/waterdata-severn.html" import permits %}
 
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
@@ -18,7 +18,8 @@
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
         <li><a href="/v13/pages/licences">Your licences</a></li>
-        <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        <!-- <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li> -->
+        <li><a href="">Licence number: MD/054/0002/031</a></li>
 
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
         <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
@@ -30,37 +31,42 @@
   <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
   <!-- page title -->
-  <h1  class="heading-large clustered">Licence number {{ pData.LicenceSerialNo }}</h1>
-  <p>Starts 1 July 2006 and ends 1 July 2018</p>
+  <!-- <h1  class="heading-large clustered">Licence number {{ pData.LicenceSerialNo }}</h1> -->
+  <!-- <h1  class="heading-large clustered">Licence number MD/054/0002/031</h1> -->
+  <h1  class="heading-large clustered">Lickhill</h1>
+  <p>Starts 31 August 2016 and ends 30 April 2020</p>
   <p></p>
   <p></p>
 
   <div class="datatable datahead">
     <label>Licence name </label>
     <div class="licenceAnswerv7">
-      <span>No name chosen</span></br> <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
+      <!-- <span>No name chosen</span></br> -->
+      Lickhill<br>
+      <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Rename this licence</a>
     </div>
   </div>
 
   <div class="datatable">
     <label>Licence holder</label>
     <div class="licenceAnswerv7">
-      {{ pData.FirstName }} {{ pData.Surname }}</br>
+      <!-- {{ pData.FirstName }} {{ pData.Surname }}</br> -->
+      Severn Trent Water Limited</br>
       <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
     </div>
     <div class="datatable">
       <div class="sourceofsupplyqv7">Source of supply</div>
-      <div class="licenceAnswerv7">Inland water lake known as Featherall Lake at SJ3185632865, surrounding water sources</div>
+      <div class="licenceAnswerv7">Inland water known as the River Severn at New Barnes Farm, Lickhill Road North, Stourport-on-Severn, Worcestershire.</div>
     </div>
     <div class="datatable">
-      <div class="sourceofsupplyqv7">Period of abstraction</div> <div class="licenceAnswerv7">June to Sept</div>
+      <div class="sourceofsupplyqv7">Period of abstraction</div> <div class="licenceAnswerv7">October to May</div>
     </div>
 
     <div class="datatable">
       <label>Points of abstraction</label>
       <div class="licenceAnswerv7">
-        You have 7 abstraction points<br>
-        <a href="/v13/pages/point/points-b?wid=1">View details of abstraction points</a>
+        SO 78995 72609<br>
+        <a href="/v13/pages/point/points-b?wid=1">View details of abstraction point</a>
       </div>
     </div>
 
@@ -69,10 +75,7 @@
       </label>
       <div class="licenceAnswerv7">
         Public water supply<br>
-        Site activity<br>
-        Industry and evaporative cooling<br>
-        Aquaculture<br>
-        <a href="/v13/pages/purpose/purposes-b?wid=1">View details of abstraction purposes</a>
+        <a href="/v13/pages/purpose/purposes-b?wid=1">View details of abstraction purpose</a>
       </div>
     </div>
 
@@ -92,9 +95,9 @@
     <div class="datatable">
       <label>Abstraction amounts</label>
       <div class="licenceAnswerv7">
-        900m/hour<br>
-        2,500m/day<br>
-        1,250,000m/annum<br>
+        At an instantaneous rate not exceeding 1,620.4 litres per second.<br>
+        140,000 cubic metres per day<br>
+        6,500,000 cubic metres per year<br>
         <a href="/v13/pages/amounts/point-b?wid=1">View abstraction amounts by point or purpose</a>
       </div>
     </div>
