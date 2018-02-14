@@ -1,0 +1,59 @@
+{% extends "v9/layoutv9.html" %}
+{% set title = "Water abstraction licence" %}
+{% block page_title %}
+Abstraction conditions
+{% endblock %}
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  {% from "custom_inc/waterdata-severn.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v13/pages/licences?wid={{ pNumber }}">Your licences</a></li>
+        <li><a href="/v13/pages/online_licence-b?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- approved back block -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large clustered">Abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
+  <!--<br>Starts 1 July 2006 and ends 1 July 2018
+  -->
+  <p></p>
+  <p></p>
+
+  <!-- notice -->
+  <div class="notice">
+    <i class="icon icon-important">
+      <span class="visually-hidden">Warning</span>
+    </i>
+    <strong class="bold-small column-two-thirds">
+      Sorry, we don’t hold any information about your conditions on our system yet. Please check the paper copy of your licence for this information.
+    </strong>
+    <p></p>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+
+{% endblock %}

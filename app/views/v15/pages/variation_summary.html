@@ -1,0 +1,82 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+{{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  {% from "custom_inc/waterdata-severn.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v13/pages/licences?wid={{ pNumber }}">Your licences</a></li>
+        <li><a href="/v13/pages/online_licence?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large clustered">Time–limited conditions for licence number {{ pData.LicenceSerialNo }}</h1>
+  <p>Starts 1 July 2006 and ends 1 July 2018</p>
+  <p></p>
+  <p></p>
+
+  <div class="grid-row"> <!-- warning -->
+    <div class="column-two-thirds">
+
+      <h2 class="lede">The changed licence terms include&#58;</h2>
+
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <strong class="bold-small">Abstraction purpose</strong><br>
+            Maintaining flow through a decorative water feature
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong class="bold-small">Means of abstraction</strong><br>
+              A borehole not exceeding 15 metres in depth and 250 millilitres in
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p></p>
+
+    </div>
+  </div>
+
+{% endif %}
+
+{% endfor %}
+
+
+
+
+
+</main>
+
+{% endblock %}

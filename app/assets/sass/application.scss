@@ -364,9 +364,9 @@ button.accordion.active:after,a.accordion.active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+/* Data row element - used in abstraction conditions view.
+*/
 
-
-/** * Data row element - used in abstraction conditions view. */
 .data-row-group:last-child {
   border-bottom: 1px solid $border-colour;
 }
@@ -390,9 +390,14 @@ button.accordion.active:after,a.accordion.active:after {
         font-weight: normal;
     }
   }
+  &__value {
+    @media screen and (min-width: 641px) {
+        flex: 0 0 67%;
+    }
+  }
   &--heading {
     border: none;
-    .data-row__param, .data-row__value {
+    .data-row__param {
       font-weight: bold;
     }
   }

@@ -316,6 +316,13 @@ a.password_reset {
   padding-left: 3em;
 }
 
+.licenceData {
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 7px;
+  padding-left: 3em;
+}
+
 .menubox {
   background-color: #FFF;
   cursor: pointer;
@@ -459,4 +466,73 @@ details {
 
 .clustered { // removes padding / margin underneath a h1 so that a sub-heading can be nearby
   margin-bottom: 0;
+}
+
+.sub-data {
+  border-bottom: 1px solid #bfc1c3;
+  padding: 4px 0;
+  width: 697px;
+  padding-top: 9px;
+}
+
+.sub-data-top {
+  padding-top: 0;
+}
+
+.sub-data-bottom {
+  border-bottom: none;
+}
+
+.data-row-group:last-child {
+  border-bottom: 1px solid $border-colour;
+}
+
+.data-row {
+  padding: 0.5em 0;
+  border-top: 1px solid $panel-colour;
+  &--section {
+    border-color: $border-colour;
+  }
+  @media screen and (min-width: 641px) {
+    display: flex;
+  }
+  // Abstraction point heading
+  h3.heading-small {
+    margin: 0;
+  }
+  &__param {
+    font-weight: bold;
+    @media screen and (min-width: 641px) {
+        flex: 0 0 33%;
+        font-weight: normal;
+    }
+  }
+  &__value {
+    @media screen and (min-width: 641px) {
+        flex: 0 0 67%;
+    }
+  }
+  &--heading {
+    border: none;
+    .data-row__param {
+      font-weight: bold;
+    }
+  }
+}
+
+/* Sub-list in data-table */
+.sub-list {
+  width: 100%;
+  margin-bottom: 0.5em;
+  @media screen and (min-width: 641px) {
+    position: relative;
+    top: -0.5em;
+    margin-bottom: 0;
+  }
+  li {
+    display: block;
+    padding: 0.5em 0 0.4em 0;
+    margin: 0;
+    border-bottom: 1px solid $panel-colour;
+  }
 }

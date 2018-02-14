@@ -1,0 +1,147 @@
+{% extends "v9/layoutv9.html" %}
+{% set title = "Water abstraction licence" %}
+{% block page_title %}
+Abstraction conditions
+{% endblock %}
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  {% from "custom_inc/waterdata-severn.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v13/pages/licences?wid={{ pNumber }}">Your licences</a></li>
+        <li><a href="/v13/pages/online_licence-b?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- approved back block -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large clustered">Abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
+  <!--<br>Starts 1 July 2006 and ends 1 July 2018
+  -->
+
+  <!-- notice -->
+  <div class="notice">
+    <i class="icon icon-important">
+      <span class="visually-hidden">Warning</span>
+    </i>
+    <strong class="bold-small column-two-thirds">
+      We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
+    </strong>
+    <p></p>
+  </div>
+
+  <p></p>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h2 class="heading-medium">Chemical cessation condition</h2>
+      <div class="datatable first-datapp">
+        <label>Control sampling site</label>
+        <div class="licenceData">
+          Colliters Brook south of the farm grid reference SE 1234 5678
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Concentration</label>
+        <div class="licenceData">
+          Manganese should be less than 50 mg/l
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Abstraction point</label>
+        <div class="licenceData">
+          Acorn farm, 16477</div>
+        </div>
+        <div class="datatable">
+          <label>Other information</label>
+          <div class="licenceData">
+            Further notes on the condition.
+          </div>
+        </div>
+        <p></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <p></p>
+      <h2 class="heading-medium">Rates condition</h2>
+      <div class="datatable">
+        <label>Reference site</label>
+        <div class="licenceData">
+          Acorn Farm intake valve
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Rate m3/d</label>
+        <div class="licenceData">
+          230 m3/d
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Abstraction point</label>
+        <div class="licenceData">
+          Acorn farm, 57143
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Other information</label>
+        <div class="licenceData">
+          Further notes on the condition.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <p></p>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <p></p>
+      <h2 class="heading-medium">Eel screening condition</h2>
+      <div class="datatable">
+        <label>Screening</label>
+        <div class="licenceData">
+          The Agency may have regard to its best practice guide, the Eel Menual: Screening at intakes and outfalls: measures to protect eel (or equivalent guidance) in agreeing where, how and what type of eel screen should be installed and together with the results of any monitoring in determining whether the eel screen is properly effective and maintained, and in judging whether it is necessary to require or replacement of the eel screen.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+<a href="/v13/pages/conditions/no_conditions?wid=1">No abstraction conditions</a>
+{% endblock %}

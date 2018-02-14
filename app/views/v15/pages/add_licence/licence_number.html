@@ -1,0 +1,66 @@
+{% extends "v14/account.html" %}
+{% set title = "Which licences do you want to add?" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- alpha banner -->
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v14/pages/manage">Manage licences</a></li>
+        <li><a href="">Request to view licences</a></li>
+          <!-- {{ pData.LicenceSerialNo }}</a></li> -->
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">Which licences do you want to add?</h1>
+
+      <!-- form -->
+      <form class="medium-space">
+
+        <div class="form-group">
+          <label for="licence_no">
+            <fieldset class="small-space">
+              <span class="form-label-bold">Enter your licence number(s)</span>
+              <span class="form-hint">Add one or many licences here. You can separate your licence numbers using spaces, commas, or by entering them on different lines.</span>
+            </fieldset>
+          </label>
+          <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
+        </div>
+
+        <!-- continue button -->
+        <a href="select_licences">
+          <input onclick="" type="submit" value="Continue" class="button" role="button"/>
+        </a>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

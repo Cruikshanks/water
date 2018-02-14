@@ -1,0 +1,66 @@
+{% extends "../layout.html" %}
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <p class="big-space"></p>
+
+      <!-- page notification -->
+      <div class="panel panel-border-wide alert-default medium-space">
+        You have new licences.<br>
+        <a href="">See these licences</a>
+      </div>
+
+      <!-- page notification -->
+      <div class="panel panel-border-wide alert-default medium-space">
+        One of your licences has recently reverted back to their original terms.<br>
+        <a href="">See this licence</a>
+      </div>
+
+      <!-- page notification -->
+      <div class="panel panel-border-wide alert-default medium-space">
+        Some of your licences have recently reverted back to their original terms.
+      </div>
+
+      <!-- page notification -->
+      <div class="panel panel-border-wide alert-default medium-space">
+        Some of these licences will expire in the next <strong class="bold-small">6 months</strong>.<br>
+        <a href="">See these licences</a>
+      </div>
+
+      <!-- page notification -->
+      <div class="notice medium-space">
+          <i class="icon icon-important">
+          <span class="visuallyhidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            Some of your licences will expire soon. You will need to renew these licences to continue to abstract water from them.<br>
+            <a href="">See these licences</a>
+          </strong>
+      </div>
+
+      <!-- page notification -->
+      <div class="notice medium-space">
+          <i class="icon icon-important">
+          <span class="visuallyhidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            One of your licences will expire soon. You will need to renew this licence to continue to abstract water from it.<br>
+            <a href="">See these licences</a>
+          </strong>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="/public/javascripts/underscore.min.js"></script>
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}

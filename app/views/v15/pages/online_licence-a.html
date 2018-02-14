@@ -1,0 +1,141 @@
+{% extends "../layout.html" %}
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  {% from "custom_inc/waterdata-severn.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v14/pages/licences">Your licences</a></li>
+        <li><a href="">Licence number: 29/38/01/0041</a></li>
+          <!-- {{ pData.LicenceSerialNo }}</a></li> -->
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large clustered">East Hyde</h1>
+  <!-- <h1  class="heading-large clustered">Licence number 29/38/01/0041</h1> -->
+  <!-- <h1  class="heading-large clustered">Licence number {{ pData.LicenceSerialNo }}</h1> -->
+  <p class="medium-space">Starts 1 April 2015 and ends 31 March 2030</p>
+
+  <!-- Licence name -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Licence name
+    </div>
+    <div class="data-row__value">
+      East Hyde<br>
+      <a id="showForm" href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Change name</a>
+    </div>
+  </div>
+
+  <!-- Licence holder -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Licence holder
+    </div>
+    <div class="data-row__value">
+      Severn Trent Water Limited<br>
+      <a id="showForm" href="/v14/pages/contact_details?wid=1">View licence contact details</a>
+    </div>
+  </div>
+
+  <!-- Source / Supply -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Source of supply
+    </div>
+    <div class="data-row__value">
+      Underground strata comprising of Chalk at East Hyde Pumping Station, Harpenden, Hertfordshire.
+    </div>
+  </div>
+
+  <!-- Period of abstraction -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Period of abstraction
+    </div>
+    <div class="data-row__value">
+      All year
+    </div>
+  </div>
+
+  <!-- Points of abstraction -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Points of abstraction
+    </div>
+    <div class="data-row__value">
+      <!-- Multiple points -->
+      <ul class="sub-list">
+        <li>Borehold A, Grid reference TL 133 166</li>
+        <li>Borehold A, Grid reference TL 133 166</li>
+        <li>Borehold C, Grid reference TL 134 166</li>
+      </ul>
+      <a href="/v14/pages/point/points-a?wid=1">View details of your abstraction points</a>
+    </div>
+  </div>
+
+  <!-- Purposes -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Purposes of abstraction
+    </div>
+    <div class="data-row__value">
+      Public Water Supply<br>
+      <a id="showForm" href="/v14/pages/purpose/purposes-a?wid=1">View details of purpose</a>
+    </div>
+  </div>
+
+  <!-- Abstraction conditions -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Abstraction conditions
+    </div>
+    <div class="data-row__value">
+      Aggregate conditions<br>
+      General conditions<br>
+      <a id="showForm" href="/v14/pages/conditions/1_condition?wid=1">View details of condtiions</a>
+    </div>
+  </div>
+
+  <!-- Amounts -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Abstraction amounts
+    </div>
+    <div class="data-row__value">
+      <ul class="sub-list">
+        <li>300m cubic metres per hour</li>
+        <li>6,550m cubic metres per day</li>
+        <li>2,390,750m cubic metres perannum</li>
+      </ul>
+      <a id="showForm" href="/v14/pages/amounts/point-a?wid=1">View details of amounts</a>
+    </div>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends "../layout.html" %}
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  {% from "custom_inc/waterdata-severn.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v13/pages/licences">Your licences</a></li>
+        <!-- <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li> -->
+        <li><a href="">Licence number: MD/054/0002/031</a></li>
+
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  <!-- page title -->
+  <!-- <h1  class="heading-large clustered">Licence number {{ pData.LicenceSerialNo }}</h1> -->
+  <!-- <h1  class="heading-large clustered">Licence number MD/054/0002/031</h1> -->
+  <h1  class="heading-large clustered">Lickhill</h1>
+  <p>Starts 31 August 2016 and ends 30 April 2020</p>
+  <p></p>
+  <p></p>
+
+  <div class="datatable datahead">
+    <label>Licence name </label>
+    <div class="licenceData">
+      <!-- <span>No name chosen</span></br> -->
+      Lickhill<br>
+      <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Rename this licence</a>
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>Licence holder</label>
+    <div class="licenceData">
+      <!-- {{ pData.FirstName }} {{ pData.Surname }}</br> -->
+      Severn Trent Water Limited</br>
+      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
+    </div>
+    <div class="datatable">
+      <div class="sourceofsupplyqv7">Source of supply</div>
+      <div class="licenceData">Inland water known as the River Severn at New Barnes Farm, Lickhill Road North, Stourport-on-Severn, Worcestershire.</div>
+    </div>
+    <div class="datatable">
+      <div class="sourceofsupplyqv7">Period of abstraction</div> <div class="licenceData">October to May</div>
+    </div>
+
+    <div class="datatable">
+      <label>Points of abstraction</label>
+      <div class="licenceData">
+        SO 78995 72609<br>
+        <a href="/v13/pages/point/points-b?wid=1">View details of abstraction point</a>
+      </div>
+    </div>
+
+    <div class="datatable">
+      <label>Purposes of abstraction
+      </label>
+      <div class="licenceData">
+        Public water supply<br>
+        <a href="/v13/pages/purpose/purposes-b?wid=1">View details of purpose</a>
+      </div>
+    </div>
+
+    <div class="datatable">
+      <div class="sourceofsupplyqv7">Abstraction conditions</div>
+      <div  class="licenceData">
+        Chemical cessation condition<br>
+        Rates condition<br>
+        Eel screening condition<br>
+        <a href="/v13/pages/conditions/3_conditions?wid=1">View details of conditions</a>
+
+      </div>
+    </div>
+
+    </div>
+
+    <div class="datatable">
+      <label>Abstraction amounts</label>
+      <div class="licenceData">
+        At an instantaneous rate not exceeding 1,620.4 litres per second.<br>
+        140,000 cubic metres per day<br>
+        6,500,000 cubic metres per year<br>
+        <a href="/v13/pages/amounts/point-b?wid=1">View details of amounts</a>
+      </div>
+    </div>
+
+{% endif %}
+{% endfor %}
+
+</main>
+{% endblock %}
