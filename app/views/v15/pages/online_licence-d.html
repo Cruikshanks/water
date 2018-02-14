@@ -49,62 +49,112 @@
     </div>
   </div>
 
-  <div class="datatable datahead">
-    <label>Licence name </label>
-    <div class="licenceData">
-      <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
+  <!-- page title -->
+  <h1  class="heading-large clustered">
+    East Hyde
+  </h1>
+  <p class="medium-space">
+    Starts 1 April 2015 and ends 31 March 2030
+  </p>
+
+  <!-- Licence name -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Licence name
+    </div>
+    <div class="data-row__value">
+      <a id="showForm" href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
     </div>
   </div>
 
-  <div class="datatable">
-    <label>Licence holder</label>
-    <div class="licenceData">
-      Severn Trent Water Limited</br>
-      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
+  <!-- Licence holder -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Licence holder
     </div>
-    <div class="datatable">
-      <div class="sourceofsupplyqv7">Source of supply</div>
-      <div class="licenceData">Groundwater Midlands Region</div>
+    <div class="data-row__value">
+      Severn Trent Water Limited<br>
+      <a id="showForm" href="/v14/pages/contact_details?wid=1">View licence contact details</a>
     </div>
-    <div class="datatable">
-      <div class="sourceofsupplyqv7">Period of abstraction</div>
-      <div class="licenceData">All year</div>
-    </div>
+  </div>
 
-    <div class="datatable">
-      <label>Points of abstraction</label>
-      <div class="licenceData">
-        Borehold A, Grid reference SO 84742 66590<br>
-        Borehold B, Grid reference SO 84742 66362<br>
-        <a href="/v14/pages/point/points-a?wid=1">View details of points</a>
-      </div>
+  <!-- Source / Supply -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Source of supply
     </div>
+    <div class="data-row__value">
+      Groundwater Midlands Region
+    </div>
+  </div>
 
-    <div class="datatable">
-      <label>Purposes of abstraction</label>
-      <div class="licenceData">
-        Public Water Supply<br>
-        <a href="/v14/pages/purpose/purposes-a?wid=1">View details of purpose</a>
-      </div>
+  <!-- Period of abstraction -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Period of abstraction
     </div>
+    <div class="data-row__value">
+      All year
+    </div>
+  </div>
 
-    <div class="datatable">
-      <div class="sourceofsupplyqv7">Abstraction conditions</div>
-        <div  class="licenceData">
-          General conditions<br>
-          <a href="/v14/pages/conditions/1_condition?wid=1">View details of conditions</a>
-        </div>
-      </div>
+  <!-- Points of abstraction -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Points of abstraction
     </div>
+    <div class="data-row__value">
+      <!-- Multiple points -->
+      <ul class="sub-list">
+        <li>Borehold A, Grid reference SO 842 665</li>
+        <li>Borehold B, Grid reference SO 842 663</li>
+      </ul>
+      <a href="/v14/pages/point/points-a?wid=1">View details of your abstraction points</a>
+    </div>
+  </div>
 
-    <div class="datatable">
-      <label>Abstraction amounts</label>
-      <div class="licenceData">
-        300m cubic metres per hour<br>
-        5,220m cubic metres per day<br>
-        <a href="/v14/pages/amounts/point-a?wid=1">View details of amounts</a>
-      </div>
+  <!-- Purposes -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Purposes of abstraction
     </div>
+    <div class="data-row__value">
+      Public Water Supply<br>
+      <a id="showForm" href="/v14/pages/purpose/purposes-a?wid=1">View details of purpose</a>
+    </div>
+  </div>
+
+  <!-- Abstraction conditions -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Abstraction conditions
+    </div>
+    <div class="data-row__value">
+      General conditions<br>
+      <a id="showForm" href="/v14/pages/conditions/1_condition?wid=1">View details of condtiions</a>
+    </div>
+  </div>
+
+  <!-- Amounts -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Abstraction amounts
+    </div>
+    <div class="data-row__value">
+      <ul class="sub-list">
+        <li>300m cubic metres per hour</li>
+        <li>5,220m cubic metres per day</li>
+      </ul>
+      <a id="showForm" href="/v14/pages/amounts/point-a?wid=1">View details of amounts</a>
+    </div>
+  </div>
+
+  <div class="big-space"></div>
+  <div class="panel panel-border-wide column-two-thirds">
+    <p>
+      The information included in this service doesn’t replace the paper copy of your licence. You should always refer to and comply with the paper copy of your licence when you make decisions about abstracting or impounding water.
+    </p>
+  </div>
 
 {% endif %}
 {% endfor %}

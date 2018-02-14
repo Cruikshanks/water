@@ -18,7 +18,6 @@
     <div class="breadcrumbs">
       <ol role="breadcrumbs">
         <li><a href="/v13/pages/licences">Your licences</a></li>
-        <!-- <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li> -->
         <li><a href="">Licence number: MD/054/0002/031</a></li>
 
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
@@ -27,80 +26,117 @@
     </div>
   </nav>
 
-
   <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
-  <!-- page title -->
-  <!-- <h1  class="heading-large clustered">Licence number {{ pData.LicenceSerialNo }}</h1> -->
-  <!-- <h1  class="heading-large clustered">Licence number MD/054/0002/031</h1> -->
-  <h1  class="heading-large clustered">Lickhill</h1>
-  <p>Starts 31 August 2016 and ends 30 April 2020</p>
-  <p></p>
-  <p></p>
 
-  <div class="datatable datahead">
-    <label>Licence name </label>
-    <div class="licenceData">
-      <!-- <span>No name chosen</span></br> -->
+  <!-- page title -->
+  <h1  class="heading-large clustered">
+    Lickhill
+  </h1>
+  <p class="medium-space">
+    Starts 31 August 2016 and ends 30 April 2020
+  </p>
+
+
+  <!-- Licence name -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Licence name
+    </div>
+    <div class="data-row__value">
       Lickhill<br>
-      <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Rename this licence</a>
+      <a id="showForm" href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Change name</a>
     </div>
   </div>
 
-  <div class="datatable">
-    <label>Licence holder</label>
-    <div class="licenceData">
-      <!-- {{ pData.FirstName }} {{ pData.Surname }}</br> -->
-      Severn Trent Water Limited</br>
-      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
+  <!-- Licence holder -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Licence holder
     </div>
-    <div class="datatable">
-      <div class="sourceofsupplyqv7">Source of supply</div>
-      <div class="licenceData">Inland water known as the River Severn at New Barnes Farm, Lickhill Road North, Stourport-on-Severn, Worcestershire.</div>
+    <div class="data-row__value">
+      Severn Trent Water Limited<br>
+      <a id="showForm" href="/v14/pages/contact_details?wid=1">View licence contact details</a>
     </div>
-    <div class="datatable">
-      <div class="sourceofsupplyqv7">Period of abstraction</div> <div class="licenceData">October to May</div>
-    </div>
+  </div>
 
-    <div class="datatable">
-      <label>Points of abstraction</label>
-      <div class="licenceData">
-        SO 78995 72609<br>
-        <a href="/v13/pages/point/points-b?wid=1">View details of abstraction point</a>
-      </div>
+  <!-- Source / Supply -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Source of supply
     </div>
-
-    <div class="datatable">
-      <label>Purposes of abstraction
-      </label>
-      <div class="licenceData">
-        Public water supply<br>
-        <a href="/v13/pages/purpose/purposes-b?wid=1">View details of purpose</a>
-      </div>
+    <div class="data-row__value">
+      Inland water known as the River Severn at New Barnes Farm, Lickhill Road North, Stourport-on-Severn, Worcestershire.
     </div>
+  </div>
 
-    <div class="datatable">
-      <div class="sourceofsupplyqv7">Abstraction conditions</div>
-      <div  class="licenceData">
-        Chemical cessation condition<br>
-        Rates condition<br>
-        Eel screening condition<br>
-        <a href="/v13/pages/conditions/3_conditions?wid=1">View details of conditions</a>
-
-      </div>
+  <!-- Period of abstraction -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Period of abstraction
     </div>
-
+    <div class="data-row__value">
+      October to May
     </div>
+  </div>
 
-    <div class="datatable">
-      <label>Abstraction amounts</label>
-      <div class="licenceData">
-        At an instantaneous rate not exceeding 1,620.4 litres per second.<br>
-        140,000 cubic metres per day<br>
-        6,500,000 cubic metres per year<br>
-        <a href="/v13/pages/amounts/point-b?wid=1">View details of amounts</a>
-      </div>
+  <!-- Points of abstraction -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Points of abstraction
     </div>
+    <div class="data-row__value">
+      <!-- Multiple points -->
+      <ul class="sub-list">
+        <li>Borehold A, Grid reference SO 785 726</li>
+      </ul>
+      <a href="/v14/pages/point/points-a?wid=1">View details of your abstraction points</a>
+    </div>
+  </div>
+
+  <!-- Purposes -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Purposes of abstraction
+    </div>
+    <div class="data-row__value">
+      Public Water Supply<br>
+      <a id="showForm" href="/v14/pages/purpose/purposes-a?wid=1">View details of purpose</a>
+    </div>
+  </div>
+
+  <!-- Abstraction conditions -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Abstraction conditions
+    </div>
+    <div class="data-row__value">
+      Chemical cessation condition<br>
+      Rates condition<br>
+      Eel screening condition<br>
+      <a id="showForm" href="/v14/pages/conditions/1_condition?wid=1">View details of condtiions</a>
+    </div>
+  </div>
+
+  <!-- Abstraction amounts -->
+  <div class="data-row">
+    <div class="data-row__param">
+      Abstraction conditions
+    </div>
+    <div class="data-row__value">
+      At an instantaneous rate not exceeding 1,620.4 litres per second.<br>
+      140,000 cubic metres per day<br>
+      6,500,000 cubic metres per year<br>
+      <a id="showForm" href="/v14/pages/conditions/1_condition?wid=1">View details of amouts</a>
+    </div>
+  </div>
+
+  <div class="big-space"></div>
+  <div class="panel panel-border-wide column-two-thirds">
+    <p>
+      The information included in this service doesn’t replace the paper copy of your licence. You should always refer to and comply with the paper copy of your licence when you make decisions about abstracting or impounding water.
+    </p>
+  </div>
 
 {% endif %}
 {% endfor %}

@@ -21,7 +21,6 @@
       <ol role="breadcrumbs">
         <li><a href="/v14/pages/licences">Your licences</a></li>
         <li><a href="">Licence number: 03/28/01/0142</a></li>
-          <!-- {{ pData.LicenceSerialNo }}</a></li> -->
 
         <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
         <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
@@ -33,10 +32,12 @@
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
-  <!-- <h1  class="heading-large clustered">Licence number 29/38/01/0041</h1> -->
-  <h1  class="heading-large clustered">Licence number 03/28/01/0142</h1>
-  <!-- <h1  class="heading-large clustered">Licence number {{ pData.LicenceSerialNo }}</h1> -->
-  <p class="medium-space">Starts 9 June 2015</p>
+  <h1  class="heading-large clustered">
+    Licence number 03/28/01/0142
+  </h1>
+  <p class="medium-space">
+    Starts 9 June 2015
+  </p>
 
   <!-- Licence name -->
   <div class="data-row">
@@ -131,6 +132,14 @@
       <a id="showForm" href="/v14/pages/amounts/point-a?wid=1">View details of amounts</a>
     </div>
   </div>
+
+  <div class="big-space"></div>
+  <div class="panel panel-border-wide column-two-thirds">
+    <p>
+      The information included in this service doesn’t replace the paper copy of your licence. You should always refer to and comply with the paper copy of your licence when you make decisions about abstracting or impounding water.
+    </p>
+  </div>
+
 
 {% endif %}
 {% endfor %}
