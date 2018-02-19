@@ -343,17 +343,27 @@ a.password_reset {
     background-color: #F8F8F8;
 }
 
+.sign-out {
+// float: right;
+  margin-left: auto;
+  order: 2;
+  font-size: 0.875em;
+  line-height: 1.14286;
+  margin-left: 0.75em;
+}
+
 .sign-out2 {
-float: right;
-font-size: 0.875em;
-line-height: 1.14286;
-margin-left: 0.75em;
+  // float: right;
+  margin-left: auto;
+  order: 2;
+  font-size: 0.875em;
+  line-height: 1.14286;
+  margin-left: 0.75em;
 }
 
 .change-password {
-float: right;
-font-size: 0.875em;
-line-height: 1.14286;
+  font-size: 0.875em;
+  line-height: 1.14286;
 }
 
 
@@ -535,4 +545,22 @@ details {
     margin: 0;
     border-bottom: 1px solid $panel-colour;
   }
+}
+
+#navigate {
+  display: flex;
+}
+
+#breadcrumbs {
+  width: 70%;
+}
+
+#manage {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  width: 30%;
+}
+
+.right {
+  float: right;
 }
