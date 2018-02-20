@@ -1,0 +1,107 @@
+{% extends "../layout.html" %}
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  {% from "custom_inc/waterdata-severn.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- breadcrumbs -->
+  <nav id="navigate">
+    <div class="breadcrumbs" id="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v15/pages/licences">Your licences</a></li>
+        <li><a href="">Licence number: 03/28/01/0145</a></li>
+      </ol>
+    </div>
+
+    <!-- manage controls -->
+    <div class="manage" id="manage">
+      <div class="right">
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change&nbsp;password</a>
+        <a href="/v12_2/pages/signin" class="sign-out">Sign&nbsp;out</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large clustered">Licence number 03/28/01/0142</h1>
+  <p class="medium-space">Starts 1 July 2006 and ends 31 April 2020</p>
+
+  <div class="datatable datahead">
+    <label>Licence name </label>
+    <div class="licenceAnswerv7">
+      <span>No name chosen</span></br> <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>Licence holder</label>
+    <div class="licenceAnswerv7">
+      {{ pData.FirstName }} {{ pData.Surname }}</br>
+      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
+    </div>
+    <div class="datatable">
+      <div class="sourceofsupplyqv7">Source of supply</div>
+      <div class="licenceAnswerv7">Inland water lake known as Jambodge Brooke Lake at SJ3186124170, surrounding water sources</div>
+    </div>
+    <div class="datatable">
+      <div class="sourceofsupplyqv7">Period of abstraction</div> <div class="licenceAnswerv7">June to Sept</div>
+    </div>
+
+    <div class="datatable">
+      <label>Points of abstraction</label>
+      <div class="licenceAnswerv7">
+        You have 7 abstraction points<br>
+        <a href="/v13/pages/point/points-b?wid=1">View details of abstraction points</a>
+      </div>
+    </div>
+
+    <div class="datatable">
+      <label>Purposes of abstraction
+      </label>
+      <div class="licenceAnswerv7">
+        Irrigation<br>
+        <a href="/v13/pages/purpose/purposes-b?wid=1">View details of abstraction purposes</a>
+      </div>
+    </div>
+
+    <div class="datatable">
+      <div class="sourceofsupplyqv7">Abstraction conditions</div>
+      <div  class="licenceAnswerv7">
+        Rates condition<br>
+        Eel screening condition<br>
+        <a href="/v13/pages/conditions/3_conditions?wid=1">View details of abstraction conditions</a>
+
+      </div>
+    </div>
+
+    </div>
+
+    <div class="datatable">
+      <label>Abstraction amounts</label>
+      <div class="licenceAnswerv7">
+        900m/hour<br>
+        2,500m/day<br>
+        1,250,000m/annum<br>
+        <a href="/v15/pages/amounts/point-c?wid=1">View abstraction amounts by point or purpose</a>
+      </div>
+    </div>
+
+{% endif %}
+{% endfor %}
+
+</main>
+{% endblock %}

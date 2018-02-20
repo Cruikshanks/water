@@ -1,0 +1,127 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+{{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+  {% from "custom_inc/waterdata-severn.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+
+<!--
+
+
+{% extends "../layout.html" %}
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  {% from "custom_inc/waterdatav3.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %} -->
+
+  <nav id="navigate">
+    <!-- breadcrumbs -->
+    <div class="breadcrumbs" id="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v15/pages/licences">Your licences</a></li>
+        <li><a href="/v15/pages/online_licence-b?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+          <!-- {{ pData.LicenceSerialNo }}</a></li> -->
+      </ol>
+    </div>
+
+    <!-- manage controls -->
+    <div class="manage" id="manage">
+      <div class="right">
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change&nbsp;password</a>
+        <a href="/v12_2/pages/signin" class="sign-out">Sign&nbsp;out</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- approved back block -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large">Abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
+  <!--<br>Starts 1 July 2006 and ends 1 July 2018
+  -->
+
+  <!-- notice -->
+  <div class="notice">
+    <i class="icon icon-important">
+      <span class="visually-hidden">Warning</span>
+    </i>
+    <strong class="bold-small column-two-thirds">
+      We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
+    </strong>
+    <p></p>
+  </div>
+
+  <p></p>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h2 class="heading-medium">Chemical cessation condition</h2>
+      <div class="datatable first-datapp">
+        <label>Control sampling site</label>
+        <div class="licenceAnswerv7">
+          Colliters Brook south of the farm grid reference SE 1234 5678
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Concentration</label>
+        <div class="licenceAnswerv7">
+          Manganese should be less than 50 mg/l
+        </div>
+      </div>
+
+      <div class="datatable">
+        <label>Abstraction point</label>
+        <div class="licenceAnswerv7">
+          Acorn farm, 16477</div>
+        </div>
+        <div class="datatable">
+          <label>Other information</label>
+          <div class="licenceAnswerv7">
+            Further notes on the condition.
+          </div>
+        </div>
+        <p></p>
+      </div>
+
+    </div>
+  </div>
+
+  {% endif %}
+
+  {% endfor %}
+
+
+
+
+
+  </main>
+
+  {% endblock %}

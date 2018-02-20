@@ -33,8 +33,11 @@
     <div class="column-two-thirds">
       <!-- page notification -->
       <div class="panel panel-border-wide alert-default medium-space">
-        Some of these licences will expire in the next <strong class="bold-small">6 months</strong>.<br>
-        <a href="expiring-licences">See these licences</a>
+        Some of these licences will expire in the next
+        <strong class="bold-small">6 months</strong>.<br>
+        <a href="expiring-licences">
+          See these licences
+        </a>
       </div>
     </div>
   </div>
@@ -42,30 +45,9 @@
   <!-- page title -->
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h1  class="heading-large">Your licences {{ pData.LicenceSerialNo }}</h1>
-    </div>
-  </div>
-
-  <div class="grid-row">
-
-    <div class="column-two-fifths">
-      <div class="form-group form-group--horizontal">
-        <label class="form-label form-label--bold" for="emailAddress">Search for a licence holder’s account</label>
-        <span class="form-hint">Enter their registered email address</span>
-        <input type="text" class="form-control form-control--block" name="emailAddress" id="emailAddress" />
-      </div>
-    </div>
-
-    <div class="column-two-fifths">
-      <div class="form-group form-group--horizontal">
-        <label class="form-label form-label--bold" for="licenseNumber">Search your licences</label>
-        <span class="form-hint">Enter a licence number or name</span>
-        <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
-      </div>
-    </div>
-
-    <div class="column-one-fifth">
-      <input id="searchButton" class="button button button-license-search" type="submit" value="Search">
+      <h1  class="heading-large">
+        Your licences
+      </h1>
     </div>
   </div>
 
@@ -75,73 +57,49 @@
     <!-- Results page goes here -->
     <div class="license-results" id="results">
 
-      <a href="/v14/pages/online_licence-a?wid=7" class="license-result">
+      <div class="license-results-header">
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence serial number">
+            Licence serial number
+            <span class="sort-icon"> &#x25be;</span>
+          </a>
+        </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">
+            Licence name
+            <span class="sort-icon"> &#x25be;</span>
+          </a>
+        </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">
+            Licence ends
+            <span class="sort-icon"> &#x25be;</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="/v15/pages/online_licence-a?wid=1" class="license-result">
         <h2 class="heading-medium license-result__column">29/38/01/0041</h2>
-        <p class="license-result__column license-result__column--description"><strong class="bold-small">East Hyde</strong></p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+        <p class="license-result__column license-result__column--description"></p>
+        <div class="license-result__column" aria-hidden="true">Ends 2 Feb 2019</div>
       </a>
-      <a href="/v14/pages/online_licence-b?wid=4" class="license-result">
+
+      <a href="/v15/pages/online_licence-b?wid=2" class="license-result">
         <h2 class="heading-medium license-result__column">03/28/01/0142</h2>
-        <p class="license-result__column license-result__column--description">-</p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
-      </a>
-      <a href="/v14/pages/online_licence-c?wid=4" class="license-result">
-        <h2 class="heading-medium license-result__column">MD/054/0002/031</h2>
-        <p class="license-result__column license-result__column--description"><strong class="bold-small">Lickhill</strong></p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
-      </a>
-      <a href="/v14/pages/online_licence-d?wid=7" class="license-result">
-        <h2 class="heading-medium license-result__column">18/54/01/0546</h2>
-        <p class="license-result__column license-result__column--description">-</p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
-      </a>
-      <a href="/v14/pages/online_licence-e?wid=4" class="license-result">
-        <h2 class="heading-medium license-result__column">18/54/01/0548</h2>
-        <p class="license-result__column license-result__column--description">-</p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
-      </a>
-      <a href="/v14/pages/online_licence?wid=4" class="license-result">
-        <h2 class="heading-medium license-result__column">23/71/12/0019</h2>
-        <p class="license-result__column license-result__column--description">-</p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
-      </a>
-      <a href="/v14/pages/online_licence?wid=7" class="license-result">
-        <h2 class="heading-medium license-result__column">03/28/60/0018</h2>
-        <p class="license-result__column license-result__column--description">-</p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
-      </a>
-      <a href="/v14/pages/online_licence?wid=4" class="license-result">
-        <h2 class="heading-medium license-result__column">23/71/11/0011</h2>
-        <p class="license-result__column license-result__column--description">-</p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
-      </a>
-      <a href="/v14/pages/online_licence?wid=4" class="license-result">
-        <h2 class="heading-medium license-result__column">23/71/11/0012</h2>
-        <p class="license-result__column license-result__column--description">-</p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
-      </a>
-      <a href="/v14/pages/online_licence?wid=7" class="license-result">
-        <h2 class="heading-medium license-result__column">03/28/61/0012</h2>
-        <p class="license-result__column license-result__column--description">-</p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
-      </a>
-      <a href="/v14/pages/online_licence?wid=4" class="license-result">
-        <h2 class="heading-medium license-result__column">23/54/04/0002</h2>
-        <p class="license-result__column license-result__column--description">-</p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
-      </a>
-      <a href="/v14/pages/online_licence?wid=4" class="license-result">
-        <h2 class="heading-medium license-result__column">23/54/04/0003</h2>
-        <p class="license-result__column license-result__column--description">-</p>
-        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+        <p class="license-result__column license-result__column--description"></p>
+        <div class="license-result__column" aria-hidden="true">Ends 2 May 2019</div>
       </a>
 
-  </div>
-</div>
+      <a href="/v15/pages/online_licence-b?wid=2" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/01/0145</h2>
+        <p class="license-result__column license-result__column--description"></p>
+        <div class="license-result__column" aria-hidden="true">Ends 31 April 2020</div>
+      </a>
 
-<script src="/public/javascripts/underscore.min.js"></script>
-<script src="/public/javascripts/jquery-1.11.3.js"></script>
-<script src="/public/javascripts/license_results.js"></script>
+  <script src="/public/javascripts/underscore.min.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/license_results.js"></script>
 
 </main>
+
 {% endblock %}
