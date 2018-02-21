@@ -1,0 +1,154 @@
+{% extends "../layout.html" %}
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  {% from "custom_inc/waterdata-severn.html" import permits %}
+
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- breadcrumbs -->
+  <nav id="navigate">
+    <div class="breadcrumbs" id="breadcrumbs">
+      <ol role="breadcrumbs">
+        <li><a href="/v15/pages/licences">Your licences</a></li>
+        <li><a href="">Licence number: 29/38/01/0041</a></li>
+      </ol>
+    </div>
+
+    <!-- manage controls -->
+    <div class="manage" id="manage">
+      <div class="right">
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change&nbsp;password</a>
+        <a href="/v12_2/pages/signin" class="sign-out">Sign&nbsp;out</a>
+      </div>
+    </div>
+  </nav>
+
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- hacky spacing -->
+  <p></p><br>
+  <p></p>
+
+  <!-- page title -->
+  <h1  class="heading-large clustered">Licence number 29/38/01/0041</h1>
+  <p class="medium-space">Starts 1 July 2006 and ends 2 Feb 2019</p>
+
+  <p></p></br>
+
+  <h2 class="heading-medium">
+    Registered licence holder details
+  </h2>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Name</div>
+    <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
+  </div>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Address</div>
+    <div class="licenceAnswer">{{ pData.Addressline1}}</br>{{ pData.Addressline3}}</br>{{ pData.County}}</br>{{ pData.Postcode}}</div>
+  </div>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Telephone</div>
+    <div class="licenceAnswer">{{ pData.tel}}</div>
+  </div>
+
+  <div class="datatablebottom">
+    <div class="licenceLabelv7">Email</div>
+    <div class="licenceAnswer">{{ pData.Email}}</div>
+  </div>
+
+  <p></p></br>
+  <h2 class="heading-medium">
+    Site contact details
+  </h2>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Name</div>
+    <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
+  </div>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Address</div>
+    <div class="licenceAnswer">{{ pData.Addressline1}}</br>{{ pData.Addressline3}}</br>{{ pData.County}}</br>{{ pData.Postcode}}</div>
+  </div>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Telephone</div>
+    <div class="licenceAnswer">{{ pData.tel}}</div>
+  </div>
+
+  <div class="datatablebottom">
+    <div class="licenceLabelv7">Email</div>
+    <div class="licenceAnswer">{{ pData.Email}}</div>
+  </div>
+
+  <p></p></br>
+
+  <h2 class="heading-medium">
+    Billing contact details
+  </h2>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Name</div>
+    <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
+  </div>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Address</div>
+    <div class="licenceAnswer">{{ pData.Addressline1}}</br>{{ pData.Addressline3}}</br>{{ pData.County}}</br>{{ pData.Postcode}}</div>
+  </div>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Telephone</div>
+    <div class="licenceAnswer">{{ pData.tel}}</div>
+  </div>
+  <div class="datatablebottom">
+    <div class="licenceLabelv7">Email</div>
+    <div class="licenceAnswer">{{ pData.Email}}</div>
+  </div>
+
+  <p></p></br>
+
+  <h2 class="heading-medium">
+    Abstraction return contact details
+  </h2>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Name</div>
+    <div class="licenceAnswer">{{ pData.FirstName }} {{ pData.Surname }}</div>
+  </div>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Address</div>
+    <div class="licenceAnswer">{{ pData.Addressline1}}</br>{{ pData.Addressline3}}</br>{{ pData.County}}</br>{{ pData.Postcode}}</div>
+  </div>
+
+  <div class="datatable">
+    <div class="licenceLabelv7">Telephone</div>
+    <div class="licenceAnswer">{{ pData.tel}}</div>
+  </div>
+
+  <div class="datatablebottom">
+    <div class="licenceLabelv7">Email</div>
+    <div class="licenceAnswer">{{ pData.Email}}</div>
+  </div>
+
+  </br><p></p>
+
+</main>
+{% endif %}
+{% endfor %}
+
+{% endblock %}
