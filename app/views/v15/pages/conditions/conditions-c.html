@@ -1,4 +1,4 @@
-{% extends "../layout.html" %}
+{% extends "../../layout.html" %}
 {% block content %}
 
 <main id="content" role="main">
@@ -9,7 +9,7 @@
     </p>
   </div>
 
-  {% from "custom_inc/waterdatav3.html" import permits %}
+  {% from "custom_inc/conditions.html" import permits %}
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 

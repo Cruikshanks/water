@@ -1,8 +1,7 @@
-{% extends "../layout.html" %}
+{% extends "../../layout.html" %}
 {% block content %}
 
 <main id="content" role="main">
-
   <div class="phase-banner-alpha">
     <p>
       <strong class="phase-tag">BETA</strong>
@@ -10,8 +9,7 @@
     </p>
   </div>
 
-  {% from "custom_inc/waterdatav3.html" import permits %}
-
+  {% from "custom_inc/conditions.html" import permits %}
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
@@ -40,11 +38,12 @@
   <!-- page title -->
   <h1  class="heading-large">How much water you can abstract at each point for licence number {{ pData.LicenceSerialNo }}</h1>
 
+  <!-- tabs -->
   <nav class="tabs">
     <ul>
       <li><span class="active">Amounts by point</span></li>
-      <li><a href="/v13/pages/amounts/purpose-b?wid=7">Amounts by purpose</a></li>
-      <li><a href="/v13/pages/amounts/condition-b?wid=7">Conditional amounts</a></li>
+      <li><a href="/v15/pages/amounts/purpose-b?wid=7">Amounts by purpose</a></li>
+      <li><a href="/v15/pages/amounts/condition-b?wid=7">Conditional amounts</a></li>
     </ul>
   </nav>
 

@@ -1,4 +1,4 @@
-{% extends "../../layout.html" %}
+{% extends "../layout.html" %}
 {% block content %}
 
 <main id="content" role="main">
@@ -9,7 +9,7 @@
     </p>
   </div>
 
-  {% from "custom_inc/conditions.html" import permits %}
+  {% from "custom_inc/waterdatav3.html" import permits %}
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
@@ -39,6 +39,8 @@
   <h1  class="heading-large">Abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
   <!--<br>Starts 1 July 2006 and ends 1 July 2018
   -->
+  <p></p>
+  <p></p>
 
   <!-- notice -->
   <div class="notice">
@@ -46,51 +48,14 @@
       <span class="visually-hidden">Warning</span>
     </i>
     <strong class="bold-small column-two-thirds">
-      We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
+      Sorry, we don’t hold any information about your conditions on our system yet. Please check the paper copy of your licence for this information.
     </strong>
     <p></p>
-  </div>
-
-  <p></p>
-
-  <div class="grid-row">
-    <div class="column-full">
-
-      <h2 class="heading-medium">Chemical cessation condition</h2>
-      <div class="datatable first-datapp">
-        <label>Control sampling site</label>
-        <div class="licenceAnswerv7">
-          Colliters Brook south of the farm grid reference SE 1234 5678
-        </div>
-      </div>
-
-      <div class="datatable">
-        <label>Concentration</label>
-        <div class="licenceAnswerv7">
-          Manganese should be less than 50 mg/l
-        </div>
-      </div>
-
-      <div class="datatable">
-        <label>Abstraction point</label>
-        <div class="licenceAnswerv7">
-          Acorn farm, 16477</div>
-        </div>
-        <div class="datatable">
-          <label>Other information</label>
-          <div class="licenceAnswerv7">
-            Further notes on the condition.
-          </div>
-        </div>
-        <p></p>
-      </div>
-
-    </div>
   </div>
 
   {% endif %}
   {% endfor %}
 
 </main>
-<a href="/v13/pages/conditions/no_conditions?wid=1">No abstraction conditions</a>
+
 {% endblock %}

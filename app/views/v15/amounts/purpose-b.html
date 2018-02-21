@@ -1,15 +1,16 @@
-{% extends "../../layout.html" %}
+{% extends "../layout.html" %}
 {% block content %}
 
 <main id="content" role="main">
+
   <div class="phase-banner-alpha">
     <p>
       <strong class="phase-tag">BETA</strong>
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
   </div>
+  {% from "custom_inc/waterdatav3.html" import permits %}
 
-  {% from "custom_inc/conditions.html" import permits %}
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
@@ -40,9 +41,9 @@
   <!-- tabs -->
   <nav class="tabs">
     <ul>
-      <li><a href="/v15/pages/amounts/point-b?wid=7">Amounts by point</a></li>
+      <li><a href="/v13/pages/amounts/point-b?wid=7">Amounts by point</a></li>
       <li><span class="active">Amounts by purpose</span></li>
-      <li><a href="/v15/pages/amounts/condition-b?wid=7">Conditional amounts</a></li>
+      <li><a href="/v13/pages/amounts/condition-b?wid=7">Conditional amounts</a></li>
     </ul>
   </nav>
   <p></p>

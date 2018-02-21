@@ -1,15 +1,16 @@
-{% extends "../../layout.html" %}
+{% extends "../layout.html" %}
 {% block content %}
 
 <main id="content" role="main">
+
   <div class="phase-banner-alpha">
     <p>
       <strong class="phase-tag">BETA</strong>
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
   </div>
+  {% from "custom_inc/waterdatav3.html" import permits %}
 
-  {% from "custom_inc/conditions.html" import permits %}
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
@@ -32,65 +33,51 @@
     </div>
   </nav>
 
-  <!-- approved back block -->
+  <!-- back button -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
-  <h1  class="heading-large">Abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
-  <!--<br>Starts 1 July 2006 and ends 1 July 2018
-  -->
+  <h1  class="heading-large">Other abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
 
-  <!-- notice -->
   <div class="notice">
-    <i class="icon icon-important">
-      <span class="visually-hidden">Warning</span>
-    </i>
-    <strong class="bold-small column-two-thirds">
+    <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
+    <strong class="bold-small">
       We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
     </strong>
-    <p></p>
   </div>
+  <p></p><br>
 
+  <!-- tabs -->
+  <nav class="tabs">
+    <ul>
+      <li><a href="/v13/pages/amounts/point-a?wid=7">Amounts by point</a></li>
+      <li><a href="/v13/pages/amounts/purpose-a?wid=7">Amounts by purpose</a></li>
+      <li><span class="active">Conditional amounts</span></li>
+    </ul>
+  </nav>
   <p></p>
 
+  <!-- conditional amounts -->
   <div class="grid-row">
     <div class="column-full">
 
-      <h2 class="heading-medium">Chemical cessation condition</h2>
-      <div class="datatable first-datapp">
-        <label>Control sampling site</label>
-        <div class="licenceAnswerv7">
-          Colliters Brook south of the farm grid reference SE 1234 5678
-        </div>
+      <div class="datatablepp dataheadpp">
+        <h2 class="heading-medium">Chemical cessation condition</h2>
       </div>
-
-      <div class="datatable">
-        <label>Concentration</label>
-        <div class="licenceAnswerv7">
-          Manganese should be less than 50 mg/l
+      <div class="datatablepp first-datapp">
+        <div class="column-two-thirds data">
+          <p>No abstraction shall take place when the flow in the River Severn as gauged by the Agency at its flow gauging station at Bewdly at National Grid Reference SO 7823 7616 is equal to or less than 1,219 Megalitres per day as may be notified by the Agency. The Agency said gauging of the flow shall be conclusive.
         </div>
-      </div>
-
-      <div class="datatable">
-        <label>Abstraction point</label>
-        <div class="licenceAnswerv7">
-          Acorn farm, 16477</div>
-        </div>
-        <div class="datatable">
-          <label>Other information</label>
-          <div class="licenceAnswerv7">
-            Further notes on the condition.
-          </div>
-        </div>
-        <p></p>
       </div>
 
     </div>
+  </div>
+  <br>
   </div>
 
   {% endif %}
   {% endfor %}
 
 </main>
-<a href="/v13/pages/conditions/no_conditions?wid=1">No abstraction conditions</a>
+
 {% endblock %}
