@@ -14,7 +14,7 @@
     </p>
   </div>
 
-  {% from "custom_inc/waterdata-severn.html" import permits %}
+  {% from "custom_inc/waterdata.html" import permits %}
 
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
@@ -49,6 +49,33 @@
   {% endif %}
 
   <div class="datatable datahead">
+    <label>Licence name</label>
+    <div class="licenceAnswerv7">
+
+      <!-- HOW TO CARRY THE WID ??? -->
+
+      {% if pData.LicenceName %}
+        {{ pData.LicenceName }}</br>
+        <a href="/v15/pages/online_licence_rename?wid=1">Rename this licence</a>
+      {% else %}
+        <!-- <span>No name chosen</span></br>  -->
+        <a href="/v15/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <!-- Licence holder -->
+  <div class="datatable">
+    <label>Licence holder</label>
+    <div class="licenceAnswerv7">
+      {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
+      <a href="/v15/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
+    </div>
+  </div>
+
+
+  <div class="datatable">
     <label>Start date</label>
     <div class="licenceAnswerv7">
       {{ pData.EffectiveDateStart }}
@@ -63,71 +90,49 @@
   </div>
 
   <div class="datatable">
-    <label>Licence name</label>
-    <div class="licenceAnswerv7">
-
-      <!-- HOW TO CARRY THE WID ??? -->
-
-      {% if pData.LicenceName %}
-        {{ pData.LicenceName }}</br>
-        <a href="/v15/pages/online_licence_rename?wid=1">Rename this licence</a>
-      {% else %}
-        <!-- <span>No name chosen</span></br>  -->
-        <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
-      {% endif %}
-
-    </div>
+    <label>Source of supply</label>
+    <div class="licenceAnswerv7">{{ pData.Source}}</div>
   </div>
 
   <div class="datatable">
-    <label>Licence holder</label>
-    <div class="licenceAnswerv7">
-      {{ pData.FirstName }} {{ pData.Surname }}</br>
-      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
-    </div>
-    <div class="datatable">
-      <label>Source of supply</label>
-      <div class="licenceAnswerv7">{{ pData.Source}}</div>
-    </div>
-    <div class="datatable">
-      <label>Period of abstraction</label>
-      <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
-    </div>
+    <label>Period of abstraction</label>
+    <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
+  </div>
 
-    <div class="datatable">
+  <div class="datatable">
 
-            {% if pData.point2 %}
+    {% if pData.Point2 %}
 
-              <label>Points of abstraction</label>
-              <div class="licenceAnswerv7">
+      <label>Points of abstraction</label>
+      <div class="licenceAnswerv7">
 
-                {{ pData.point1 }}<br>
-                {{ pData.point2 }}<br>
+        {{ pData.Point1 }}<br>
+        {{ pData.Point2 }}<br>
 
-                {% if pData.point3 %}
-                  {{ pData.point3 }}<br>
-                {% endif %}
+        {% if pData.Point3 %}
+          {{ pData.Point3 }}<br>
+        {% endif %}
 
-                {% if pData.point4 %}
-                  {{ pData.point4 }}<br>
-                {% endif %}
+        {% if pData.Point4 %}
+          {{ pData.Point4 }}<br>
+        {% endif %}
 
-                {% if pData.point5 %}
-                  {{ pData.point5 }}<br>
-                {% endif %}
-                <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of abstraction points</a>
+        {% if pData.Point5 %}
+          {{ pData.Point5 }}<br>
+        {% endif %}
+        <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of abstraction points</a>
 
-              </div>
+      </div>
 
-            {% else %}
+      {% else %}
 
-            <label>Point of abstraction</label>
-              <div class="licenceAnswerv7">
+      <label>Point of abstraction</label>
+        <div class="licenceAnswerv7">
 
-              {{ pData.point1 }}<br>
-              <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of abstraction point</a>
+        {{ pData.Point1 }}<br>
+        <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of abstraction point</a>
 
-            {% endif %}
+      {% endif %}
 
     </div>
 
@@ -135,22 +140,22 @@
       <label>Purpose of abstraction</label>
       <div class="licenceAnswerv7">
 
-        {{ pData.purpose1 }}</br>
+        {{ pData.Purpose1 }}</br>
 
-        {% if pData.purpose2 %}
-          {{ pData.purpose2 }}</br>
+        {% if pData.Purpose2 %}
+          {{ pData.Purpose2 }}</br>
         {% endif %}
 
-        {% if pData.purpose3 %}
-          {{ pData.purpose3 }}</br>
+        {% if pData.Purpose3 %}
+          {{ pData.Purpose3 }}</br>
         {% endif %}
 
-        {% if pData.purpose4 %}
-          {{ pData.purpose4 }}</br>
+        {% if pData.Purpose4 %}
+          {{ pData.Purpose4 }}</br>
         {% endif %}
 
-        {% if pData.purpose5 %}
-          {{ pData.purpose5 }}</br>
+        {% if pData.Purpose5 %}
+          {{ pData.Purpose5 }}</br>
         {% endif %}
 
         <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of abstraction purposes</a>
@@ -160,22 +165,22 @@
     <div class="datatable">
       <label>Abstraction conditions</label>
       <div class="licenceAnswerv7">
-        {{ pData.condition1 }}</br>
+        {{ pData.Condition1 }}</br>
 
-        {% if pData.condition2 %}
-          {{ pData.condition2 }}</br>
+        {% if pData.Condition2 %}
+          {{ pData.Condition2 }}</br>
         {% endif %}
 
-        {% if pData.condition3 %}
-          {{ pData.condition3 }}</br>
+        {% if pData.Condition3 %}
+          {{ pData.Condition3 }}</br>
         {% endif %}
 
-        {% if pData.condition4 %}
-          {{ pData.condition4 }}</br>
+        {% if pData.Condition4 %}
+          {{ pData.Condition4 }}</br>
         {% endif %}
 
-        {% if pData.condition5 %}
-          {{ pData.condition5 }}</br>
+        {% if pData.Condition5 %}
+          {{ pData.Condition5 }}</br>
         {% endif %}
 
       <a href="/v15/conditions?wid=1">View details of abstraction conditions</a>
@@ -186,22 +191,22 @@
     <label>Abstraction amounts</label>
     <div class="licenceAnswerv7">
 
-      {{ pData.amount1 }}</br>
+      {{ pData.Amount1 }}</br>
 
-      {% if pData.amount2 %}
-        {{ pData.amount2 }}</br>
+      {% if pData.Amount2 %}
+        {{ pData.Amount2 }}</br>
       {% endif %}
 
-      {% if pData.amount3 %}
-        {{ pData.amount3 }}</br>
+      {% if pData.Amount3 %}
+        {{ pData.Amount3 }}</br>
       {% endif %}
 
-      {% if pData.amount4 %}
-        {{ pData.amount4 }}</br>
+      {% if pData.Amount4 %}
+        {{ pData.Amount4 }}</br>
       {% endif %}
 
-      {% if pData.amount5 %}
-        {{ pData.amount5 }}</br>
+      {% if pData.Amount5 %}
+        {{ pData.Amount5 }}</br>
       {% endif %}
 
       <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of amounts</a>
