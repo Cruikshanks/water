@@ -1,11 +1,4 @@
-{% extends "v9/layoutv9.html" %}
-
-{% set title = "Water abstraction licence" %}
-
-{% block page_title %}
-{{title}} - GOV.UK
-{% endblock %}
-
+{% extends "../layout.html" %}
 {% block content %}
 
 <main id="content" role="main">
@@ -15,23 +8,32 @@
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
   </div>
-  
+
   {% from "custom_inc/waterdata.html" import permits %}
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
-  <!-- breadcrumbs -->
-  <nav>
-    <div class="breadcrumbs">
-      <ol role="breadcrumbs">
-        <li><a href="/v13/pages/licences?wid={{ pNumber }}">Your licences</a></li>
-        <li><a href="/v13/pages/online_licence-a?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+  <div class="big-space">
 
-        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
-        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
-      </ol>
-    </div>
-  </nav>
+    <!-- breadcrumbs -->
+    <nav id="navigate">
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v15/pages/licences">Your licences</a></li>
+          <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        </ol>
+      </div>
+
+      <!-- manage controls -->
+      <div class="manage" id="manage">
+        <div class="right">
+          <a href="/v12_2/change_password/new_password.html" class="change-password">Change&nbsp;password</a>
+          <a href="/v12_2/pages/signin" class="sign-out">Sign&nbsp;out</a>
+        </div>
+      </div>
+    </nav>
+
+  </div>
 
   <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
@@ -42,39 +44,62 @@
   <div class="grid-row">
     <div class="column-full">
 
-      <h2 class="heading-medium">Colliters Brook</h2>
+      <h2 class="heading-medium">{{ pData.Point1 }}</h2>
 
       <div class="datatable">
         <label>Grid reference</label>
         <div class="licenceAnswerv7">
-          SE 1234 5678
+          {{ pData.Point1Ref }}
         </div>
       </div>
 
-      <div class="datatable">
+      <div class="datatable medium-space">
         <label>Means of abstraction</label>
         <div class="licenceAnswerv7">
-          Surface Mounted Pump (Mobile)
+          {{ pData.Means1 }}
         </div>
       </div>
 
-      <br>
+      <!-- more points-based data can follow -->
+      {% if pData.Point2 %}
 
-      <h2 class="heading-medium">Drain at Littleport</h2>
+        <h2 class="heading-medium">{{ pData.Point2 }}</h2>
 
-      <div class="datatable">
-        <label>Grid reference</label>
-        <div class="licenceAnswerv7">
-          SE 1234 5647
+        <div class="datatable">
+          <label>Grid reference</label>
+          <div class="licenceAnswerv7">
+            {{ pData.Point2Ref }}
+          </div>
         </div>
-      </div>
 
-      <div class="datatable">
-        <label>Means of abstraction</label>
-        <div class="licenceAnswerv7">
-          Surface Mounted Pump (Mobile)
+        <div class="datatable medium-space">
+          <label>Means of abstraction</label>
+          <div class="licenceAnswerv7">
+            {{ pData.Means2 }}
+          </div>
         </div>
-      </div>
+
+      {% endif %}
+
+      {% if pData.Point3 %}
+
+        <h2 class="heading-medium">{{ pData.Point3 }}</h2>
+
+        <div class="datatable">
+          <label>Grid reference</label>
+          <div class="licenceAnswerv7">
+            {{ pData.Point3Ref }}
+          </div>
+        </div>
+
+        <div class="datatable small-space">
+          <label>Means of abstraction</label>
+          <div class="licenceAnswerv7">
+            {{ pData.Means3 }}
+          </div>
+        </div>
+
+      {% endif %}
 
     </div>
   </div>
