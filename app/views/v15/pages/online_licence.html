@@ -52,11 +52,9 @@
     <label>Licence name</label>
     <div class="licenceAnswerv7">
 
-      <!-- HOW TO CARRY THE WID ??? -->
-
       {% if pData.LicenceName %}
         {{ pData.LicenceName }}</br>
-        <a href="/v15/pages/online_licence_rename?wid=1">Rename this licence</a>
+        <a href="/v15/pages/online_licence_rename?wid={{ query.wid }}">Rename this licence</a>
       {% else %}
         <!-- <span>No name chosen</span></br>  -->
         <a href="/v15/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
