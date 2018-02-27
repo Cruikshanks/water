@@ -15,7 +15,6 @@
   </div>
 
   {% from "custom_inc/waterdata.html" import permits %}
-
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
@@ -57,7 +56,7 @@
         <a href="/v15/pages/online_licence_rename?wid={{ query.wid }}">Rename this licence</a>
       {% else %}
         <!-- <span>No name chosen</span></br>  -->
-        <a href="/v15/online_licence_rename?wid={{query}}">Name this licence</a>
+        <a href="/v15/pages/online_licence_rename?wid={{ query.wid }}">Name this licence</a>
       {% endif %}
 
     </div>
@@ -118,7 +117,7 @@
         {% if pData.Point5 %}
           {{ pData.Point5 }}<br>
         {% endif %}
-        <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of abstraction points</a>
+        <a href="/v15/points/points?wid={{ query.wid }}">View details of abstraction points</a>
 
       </div>
 
@@ -128,7 +127,7 @@
         <div class="licenceAnswerv7">
 
         {{ pData.Point1 }}<br>
-        <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of abstraction point</a>
+        <a href="/v15/points/points?wid={{ query.wid }}">View details of abstraction point</a>
 
       {% endif %}
 
@@ -156,7 +155,7 @@
           {{ pData.Purpose5 }}</br>
         {% endif %}
 
-        <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of abstraction purposes</a>
+        <a href="/v15/purposes/purposes?wid={{ query.wid }}">View details of abstraction purposes</a>
 
       </div>
 
@@ -181,7 +180,8 @@
           {{ pData.Condition5 }}</br>
         {% endif %}
 
-      <a href="/v15/conditions?wid=1">View details of abstraction conditions</a>
+        <a href="/v15/conditions/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+
     </div>
   </div>
 
@@ -207,7 +207,7 @@
         {{ pData.Amount5 }}</br>
       {% endif %}
 
-      <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of amounts</a>
+      <a href="/v15/amounts/points?wid={{ query.wid }}">View details of amounts</a>
   </div>
 
   <br>

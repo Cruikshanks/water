@@ -9,8 +9,8 @@
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
   </div>
-  {% from "custom_inc/waterdatav3.html" import permits %}
 
+  {% from "custom_inc/waterdatav3.html" import permits %}
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
@@ -32,13 +32,13 @@
       </div>
     </div>
   </nav>
+
   <!-- back button -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
   <h1  class="heading-large">Other abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
 
-  <!-- notice -->
   <div class="notice">
     <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
     <strong class="bold-small">
@@ -50,8 +50,8 @@
   <!-- tabs -->
   <nav class="tabs">
     <ul>
-      <li><a href="/v13/pages/amounts/point-b?wid=7">Amounts by point</a></li>
-      <li><a href="/v13/pages/amounts/purpose-b?wid=7">Amounts by purpose</a></li>
+      <li><a href="/v15/amounts/points?wid={{ query.wid }}">Amounts by point</a></li>
+      <li><a href="/v15/amounts/purposes?wid={{ query.wid }}">Amounts by purpose</a></li>
       <li><span class="active">Conditional amounts</span></li>
     </ul>
   </nav>
@@ -64,38 +64,19 @@
       <div class="datatablepp dataheadpp">
         <h2 class="heading-medium">Chemical cessation condition</h2>
       </div>
-
       <div class="datatablepp first-datapp">
         <div class="column-two-thirds data">
-          <p>No abstraction shall take place when the flow in the River Severn as gauged by the Agency at its flow gauging station at Bewdly at National Grid Reference SO 7823 7616 is equal to or less than 1,219 Megalitres per day as may be notified by the Agency. The Agency said gauging of the flow shall be conclusive.</p>
+          <p>No abstraction shall take place when the flow in the River Severn as gauged by the Agency at its flow gauging station at Bewdly at National Grid Reference SO 7823 7616 is equal to or less than 1,219 Megalitres per day as may be notified by the Agency. The Agency said gauging of the flow shall be conclusive.
         </div>
       </div>
 
     </div>
   </div>
-
-  <!-- conditional amounts -->
-  <div class="grid-row">
-    <div class="column-full">
-
-      <div class="datatablepp dataheadpp">
-        <h2 class="heading-medium">Flow condition</h2>
-      </div>
-
-      <div class="datatablepp">
-        <div class="column-two-thirds data">
-          <p>Abstraction shall not exceed 55 Megalitres per day when the flow in the River Severn as gauged by the Agency at its flowauging station at Bewdly at National Grid reference SO 7823 7616 is equal to or less than 1,404 Megalitres per dat as notified by the Agency. The Agency’s said gauging of the flow shall be conclusive.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
   <br>
-</div>
+  </div>
 
-{% endif %}
-{% endfor %}
+  {% endif %}
+  {% endfor %}
 
 </main>
 
