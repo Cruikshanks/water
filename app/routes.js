@@ -1841,6 +1841,7 @@ router.post('/v13/online_licence/wendy_reg/7', function (req, res) {
 router.get('/*', function(req, res, next) {
   const view = req.params[0];
   res.render(view,{
+     query : req.query,
      "chosenPermitID":req.query['wid']
   });
 });
