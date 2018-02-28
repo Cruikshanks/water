@@ -1,11 +1,4 @@
-{% extends "v9/layoutv9.html" %}
-
-{% set title = "Water abstraction licence" %}
-
-{% block page_title %}
-{{title}} - GOV.UK
-{% endblock %}
-
+{% extends "../layout.html" %}
 {% block content %}
 
 <main id="content" role="main">
@@ -15,7 +8,7 @@
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
   </div>
-  
+
   {% from "custom_inc/waterdata.html" import permits %}
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
@@ -37,42 +30,30 @@
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
-  <h1  class="heading-large">Abstraction points for licence number {{ pData.LicenceSerialNo }}</h1>
+  <h1  class="heading-large">impoundment points for licence number {{ pData.LicenceSerialNo }}</h1>
+    <!--<br>Starts 1 July 2006 and ends 1 July 2018
+    -->
 
   <div class="grid-row">
     <div class="column-full">
 
-      <h2 class="heading-medium">Colliters Brook</h2>
+      <h2 class="heading-medium">{{ pData.Point1 }}</h2>
 
-      <div class="datatable">
-        <label>Grid reference</label>
-        <div class="licenceAnswerv7">
-          SE 1234 5678
+      <div class="datatablepp first-datapp">
+        <label>
+          Grid reference
+        </label>
+        <div class="licenceData">
+          {{ pData.Point1Ref }}
         </div>
       </div>
 
-      <div class="datatable">
-        <label>Means of abstraction</label>
-        <div class="licenceAnswerv7">
-          Surface Mounted Pump (Mobile)
-        </div>
-      </div>
-
-      <br>
-
-      <h2 class="heading-medium">Drain at Littleport</h2>
-
-      <div class="datatable">
-        <label>Grid reference</label>
-        <div class="licenceAnswerv7">
-          SE 1234 5647
-        </div>
-      </div>
-
-      <div class="datatable">
-        <label>Means of abstraction</label>
-        <div class="licenceAnswerv7">
-          Surface Mounted Pump (Mobile)
+      <div class="datatablepp">
+        <label>
+          Manner of impoundment
+        </label>
+        <div class="licenceData">
+          {{ pData.Manner1 }}
         </div>
       </div>
 
