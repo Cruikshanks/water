@@ -13,24 +13,27 @@
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
-  <nav id="navigate">
-    <!-- breadcrumbs -->
-    <div class="breadcrumbs" id="breadcrumbs">
-      <ol role="breadcrumbs">
-        <li><a href="/v15/pages/licences">Your licences</a></li>
-        <li><a href="/v15/pages/online_licence-b?wid={{ pNumber }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
-          <!-- {{ pData.LicenceSerialNo }}</a></li> -->
-      </ol>
-    </div>
+  <div class="big-space">
 
-    <!-- manage controls -->
-    <div class="manage" id="manage">
-      <div class="right">
-        <a href="/v12_2/change_password/new_password.html" class="change-password">Change&nbsp;password</a>
-        <a href="/v12_2/pages/signin" class="sign-out">Sign&nbsp;out</a>
+    <!-- breadcrumbs -->
+    <nav id="navigate">
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v15/pages/licences">Your licences</a></li>
+          <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        </ol>
       </div>
-    </div>
-  </nav>
+
+      <!-- manage controls -->
+      <div class="manage" id="manage">
+        <div class="right">
+          <a href="/v12_2/change_password/new_password.html" class="change-password">Change&nbsp;password</a>
+          <a href="/v12_2/pages/signin" class="sign-out">Sign&nbsp;out</a>
+        </div>
+      </div>
+    </nav>
+
+  </div>
 
   <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
@@ -41,97 +44,110 @@
   <div class="grid-row">
     <div class="column-full">
 
-      <h2 class="heading-medium">Machine washing</h2>
+      <h2 class="heading-medium">{{ pData.Purpose1 }}</h2>
 
-      <div class="datatablepp first-datapp">
-        <label>                                                                 Abstraction period
-        </label>
-        <div class="licenceAnswerv12">                                          May to September
+      <div class="small-space">
+
+        <div class="datatablepp first-datapp">
+          <label>                                                                 Abstraction period
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose1Period }}
+          </div>
         </div>
+
+        <div class="datatablepp">
+          <label>                                                                 Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose1Amount1 }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                                 Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose1Amount2 }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                                 Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose1Amount3 }}
+          </div>
+        </div>
+
       </div>
 
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          300m/h
+      {% if pData.Purpose2 %}
+
+      <h2 class="heading-medium">{{ pData.Purpose2 }}</h2>
+
+      <div class="small-space">
+        <div class="datatablepp first-datapp">
+          <label>                                                                 Abstraction period
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose2Period }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                                 Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose2Amount1 }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                                 Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose2Amount2 }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                                 Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose2Amount3 }}
+          </div>
         </div>
       </div>
+      {% endif %}
 
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          5,000m/d
+      {% if pData.Purpose3 %}
+      <h2 class="heading-medium">{{ pData.Purpose3 }}</h2>
+
+      <div class="small-space">
+
+        <div class="datatablepp first-datapp">
+          <label>                                                                 Abstraction period
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose3Period }}
+          </div>
         </div>
-      </div>
 
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          60,000m/a
+        <div class="datatablepp">
+          <label>                                                                 Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose3Amount1 }}
+          </div>
         </div>
-      </div>
 
-      <br>
-
-      <h2 class="heading-medium">Crop irrigation</h2>
-
-      <div class="datatablepp first-datapp">
-        <label>                                                                 Abstraction period
-        </label>
-        <div class="licenceAnswerv12">                                          May to September
+        <div class="datatablepp">
+          <label>                                                                 Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose3Amount2 }}
+          </div>
         </div>
-      </div>
 
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          300m/h
+        <div class="datatablepp">
+          <label>                                                                 Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                          {{ pData.Purpose3Amount3 }}
+          </div>
         </div>
-      </div>
 
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          5,000m/d
-        </div>
       </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          60,000m/a
-        </div>
-      </div>
-
-      <h2 class="heading-medium">Site activity</h2>
-
-      <div class="datatablepp first-datapp">
-        <label>                                                                 Abstraction period
-        </label>
-        <div class="licenceAnswerv12">                                          June to November
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          250m/h
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          4,000m/d
-        </div>
-      </div>
-
-      <div class="datatablepp">
-        <label>                                                                 Abstraction amount
-        </label>
-        <div class="licenceAnswerv12">                                          40,000m/a
-        </div>
-      </div>
+      {% endif %}
 
     </div>
   </div>
