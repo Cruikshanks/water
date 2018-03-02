@@ -1,0 +1,198 @@
+{% extends "../layout.html" %}
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  {% from "custom_inc/waterdata-severn.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <div class="big-space">
+
+    <!-- breadcrumbs -->
+    <nav id="navigate">
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v15/pages/licences">Your licences</a></li>
+          <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        </ol>
+      </div>
+
+      <!-- manage controls -->
+      <div class="manage" id="manage">
+        <div class="right">
+          <a href="/v12_2/change_password/new_password.html" class="change-password">Change&nbsp;password</a>
+          <a href="/v12_2/pages/signin" class="sign-out">Sign&nbsp;out</a>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+  <!-- page title -->
+  {% if pData.LicenceName %}
+    <h1 class="heading-large">{{ pData.LicenceName }}</h1>
+  {% else %}
+    <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
+  {% endif %}
+
+
+  <!-- rename licence form -->
+  <div class="form--well ">
+    <label for="name" class="">
+      <span class="form-label-bold">Licence name</span>
+    </label>
+    <input minlength="2" maxlength="32" style="background: #fff" type="text" class="form-control " id="name" name="name" value="">
+    <p></p>
+    <a class="button" href="/v15/pages/online_licence?wid={{ query.wid }}" role="button" style="margin-bottom:20px;">
+      Save
+    </a>
+    <p class="form-cancel">
+      <a href="#" onclick="history.go(-1)">
+        Cancel
+      </a>
+    </p>
+  </div>
+
+
+  <div class="datatable datahead">
+    <label>Start date</label>
+    <div class="licenceAnswerv7">
+      {{ pData.EffectiveDateStart }}
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>End date</label>
+    <div class="licenceAnswerv7">
+      {{ pData.EffectiveDateEnd }}
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>Licence name</label>
+    <div class="licenceAnswerv7">
+
+      {% if pData.LicenceName %}
+        {{ pData.LicenceName }}</br>
+        <a href="/v15/pages/online_licence_rename?wid=1">Rename this licence</a>
+      {% else %}
+        <!-- <span>No name chosen</span></br>  -->
+        <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>Licence holder</label>
+    <div class="licenceAnswerv7">
+      {{ pData.FirstName }} {{ pData.Surname }}</br>
+      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
+    </div>
+    <div class="datatable">
+      <label>Source of supply</label>
+      <div class="licenceAnswerv7">{{ pData.Source}}</div>
+    </div>
+    <div class="datatable">
+      <label>Period of abstraction</label>
+      <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Point of abstraction</label>
+      <div class="licenceAnswerv7">
+        {{ pData.Pointofabstraction }}
+      </div>
+    </div>
+
+    <div class="datatable">
+      <label>Purpose of abstraction</label>
+      <div class="licenceAnswerv7">
+
+        {{ pData.purpose1 }}</br>
+
+        {% if pData.purpose2 %}
+          {{ pData.purpose2 }}</br>
+        {% endif %}
+
+        {% if pData.purpose3 %}
+          {{ pData.purpose3 }}</br>
+        {% endif %}
+
+        {% if pData.purpose4 %}
+          {{ pData.purpose4 }}</br>
+        {% endif %}
+
+        {% if pData.purpose5 %}
+          {{ pData.purpose5 }}</br>
+        {% endif %}
+
+        <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of abstraction purposes</a>
+
+      </div>
+
+    <div class="datatable">
+      <label>Abstraction conditions</label>
+      <div class="licenceAnswerv7">
+        {{ pData.condition1 }}</br>
+
+        {% if pData.condition2 %}
+          {{ pData.condition2 }}</br>
+        {% endif %}
+
+        {% if pData.condition3 %}
+          {{ pData.condition3 }}</br>
+        {% endif %}
+
+        {% if pData.condition4 %}
+          {{ pData.condition4 }}</br>
+        {% endif %}
+
+        {% if pData.condition5 %}
+          {{ pData.condition5 }}</br>
+        {% endif %}
+
+      <a href="/v15/conditions?wid=1">View details of abstraction conditions</a>
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>Abstraction amounts</label>
+    <div class="licenceAnswerv7">
+
+      {{ pData.amount1 }}</br>
+
+      {% if pData.amount2 %}
+        {{ pData.amount2 }}</br>
+      {% endif %}
+
+      {% if pData.amount3 %}
+        {{ pData.amount3 }}</br>
+      {% endif %}
+
+      {% if pData.amount4 %}
+        {{ pData.amount4 }}</br>
+      {% endif %}
+
+      {% if pData.amount5 %}
+        {{ pData.amount5 }}</br>
+      {% endif %}
+
+      <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of amounts</a>
+  </div>
+
+  <br>
+  <br>
+
+{% endif %}
+{% endfor %}
+
+</main>
+{% endblock %}

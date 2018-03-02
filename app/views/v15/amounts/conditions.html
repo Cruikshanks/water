@@ -42,15 +42,8 @@
   <!-- page title -->
   <h1  class="heading-large">Other abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
 
-  <div class="notice medium-space">
-    <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
-    <strong class="bold-small">
-      We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
-    </strong>
-  </div>
-
   <!-- tabs -->
-  <nav class="tabs">
+  <nav class="tabs big-space">
     <ul>
       <li><a href="/v15/amounts/points?wid={{ query.wid }}">Amounts by point</a></li>
       <li><a href="/v15/amounts/purposes?wid={{ query.wid }}">Amounts by purpose</a></li>
@@ -58,6 +51,18 @@
     </ul>
   </nav>
   <p></p>
+
+  <!-- warning about listed conditions -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="notice medium-space">
+        <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
+        <strong class="bold-small">
+          We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
+        </strong>
+      </div>
+    </div>
+  </div>
 
   <!-- conditional amounts -->
   <div class="grid-row">
