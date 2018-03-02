@@ -1,0 +1,196 @@
+{% extends "../layout.html" %}
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <div class="big-space">
+
+    <!-- breadcrumbs -->
+    <nav id="navigate">
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v15/pages/licences">Your licences</a></li>
+          <li><a href="/v15/pages/online_licence?wid=1">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        </ol>
+      </div>
+
+      <!-- manage controls -->
+      <div class="manage" id="manage">
+        <div class="right">
+          <a href="/v12_2/change_password/new_password.html" class="change-password">Change&nbsp;password</a>
+          <a href="/v12_2/pages/signin" class="sign-out">Sign&nbsp;out</a>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  {% if pData.LicenceName %}
+    <h1 class="heading-large">{{ pData.LicenceName }}</h1>
+  {% else %}
+    <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
+  {% endif %}
+
+  <!-- Licence Holder contact -->
+  <div class="big-space">
+
+    <h2 class="heading-medium">
+      Registered licence holder details
+    </h2>
+
+    <div class="datatable datahead">
+      <label>Name</label>
+      <div class="licenceAnswer">{{ pData.HolderFirstName }} {{ pData.HolderSurname }}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Address</label>
+      <div class="licenceAnswer">
+        {{ pData.HolderAddressline1}}</br>
+        {{ pData.HolderAddressline2}}</br>
+        {{ pData.HolderCounty}}</br>
+        {{ pData.HolderPostcode}}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Telephone</label>
+      <div class="licenceAnswer">{{ pData.HolderTel}}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Email</label>
+      <div class="licenceAnswer">{{ pData.HolderEmail}}</div>
+    </div>
+
+  </div>
+
+  <!-- site contact -->
+  {% if pData.SiteContactFirstName %}
+
+    <div class="big-space">
+
+      <h2 class="heading-medium">
+        Site contact details
+      </h2>
+
+      <div class="datatable datahead">
+        <label>Name</label>
+        <div class="licenceAnswer">{{ pData.SiteContactFirstName }} {{ pData.SiteContactSurname }}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Address</label>
+        <div class="licenceAnswer">
+          {{ pData.SiteContactAddressline1}}</br>
+          {{ pData.SiteContactAddressline2}}</br>
+          {{ pData.SiteContactCounty}}</br>
+          {{ pData.SiteContactPostcode}}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Telephone</label>
+        <div class="licenceAnswer">{{ pData.SiteContactTel}}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Email</label>
+        <div class="licenceAnswer">{{ pData.SiteContactEmail}}</div>
+      </div>
+
+    </div>
+  {% endif %}
+
+
+  <!-- Billings contact -->
+  {% if pData.BillingFirstName %}
+
+    <div class="big-space">
+
+      <h2 class="heading-medium">
+        Billing contact details
+      </h2>
+
+      <div class="datatable datahead">
+        <label>Name</label>
+        <div class="licenceAnswer">{{ pData.BillingFirstName }} {{ pData.BillingSurname }}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Address</label>
+        <div class="licenceAnswer">
+          {{ pData.BillingAddressline1}}</br>
+          {{ pData.BillingAddressline2}}</br>
+          {{ pData.BillingCounty}}</br>
+          {{ pData.BillingPostcode}}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Telephone</label>
+        <div class="licenceAnswer">{{ pData.BillingTel}}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Email</label>
+        <div class="licenceAnswer">{{ pData.BillingEmail}}</div>
+      </div>
+
+    </div>
+  {% endif %}
+
+  <!-- returns contact -->
+  {% if pData.ReturnsFirstName %}
+
+  <div class="big-space">
+
+    <h2 class="heading-medium">
+      Returns contact details
+    </h2>
+
+    <div class="datatable">
+      <label>Name</label>
+      <div class="licenceAnswer">{{ pData.ReturnsFirstName }} {{ pData.ReturnsSurname }}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Address</label>
+      <div class="licenceAnswer">
+        {{ pData.ReturnsAddressline1}}</br>
+        {{ pData.ReturnsAddressline2}}</br>
+        {{ pData.ReturnsCounty}}</br>
+        {{ pData.ReturnsPostcode}}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Telephone</label>
+      <div class="licenceAnswer">{{ pData.ReturnsTel}}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Email</label>
+      <div class="licenceAnswer">{{ pData.ReturnsEmail}}</div>
+    </div>
+
+  </div>
+  {% endif %}
+
+
+</main>
+
+{% endif %}
+{% endfor %}
+
+{% endblock %}
