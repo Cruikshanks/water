@@ -82,7 +82,11 @@ Enter the password you created{% extends "../head.html" %}
         <input onclick="$('#incorrectLogin').hide()" type="submit" value="Sign in" class="button" role="button"/>
       </form>
 
-      <a id="password_reset_link" href="/v12/reset_Password/password_reset" class="password_reset small-space">Forgotten password?</a>
+      <div class="big-space">
+        <a id="password_reset_link" href="/v12/reset_Password/password_reset" class="password_reset small-space">Forgotten password?</a>
+      </div>
+
+      <h3 class="heading-medium">Need an account?</h3>
       <a id="password_reset_link" href="/v15/pages/start" class="password_reset">Create an account to use this service</a>
 
       <script>
