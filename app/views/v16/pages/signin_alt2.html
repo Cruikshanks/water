@@ -1,29 +1,41 @@
 Enter the password you created{% extends "../head.html" %}
-
 {% block content %}
+
 <main id="content" role="main">
 
   <!-- beta banner -->
   <div class="phase-banner-beta big-space">
-    <p>
-      <strong class="phase-tag">BETA</strong>
-      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
-    </p>
+      <p>
+        <strong class="phase-tag">BETA</strong>
+        <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Sign in to view your licences
+      </h1>
+    </div>
   </div>
 
   <div class="grid-row">
 
     <div class="column-one-third">
 
-      <h3 class="heading-medium">Need an account?</h3>
-      <a id="password_reset_link" href="/v15/pages/start" class="password_reset">Create an account to use this service</a>
+      <h3 class="heading-medium medium-space">Need an account?</h3>
+      <p>Create an account to view your water abstraction licences</p>
+
+      <a href="start" class="password_reset">Create an account</a>
 
       <script>
         // the following code overrides the default link click behaviour and adds the
         document.getElementById('password_reset_link').onclick=function(e){
         e.preventDefault();
         var user_id=document.getElementById('user-id').value
-        window.location='/v12/reset_password/password_reset?user_id='+user_id; //redirect to password reset screen
+        window.location='/v16/reset_password/password_reset?user_id='+user_id; //redirect to password reset screen
       }
 
       {% if incorrectLogin == "1" %}
@@ -37,7 +49,8 @@ Enter the password you created{% extends "../head.html" %}
     <div class="column-two-thirds">
 
       <!-- always use method='post' for forms --->
-      <form action="/v12/online_licence/licences_list/licences" method="post" class="form medium-space" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+      <form action="/v16/pages/licences" method="post" class="form medium-space" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+
         {% if incorrectLogin == "1" %}
         <!-- only show this error if incorrectLogin param passed through from route-->
         <div id='incorrectLogin' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
@@ -63,9 +76,9 @@ Enter the password you created{% extends "../head.html" %}
           </ul>
         </div>
 
-        <h1 class="heading-large">
+        <h2 class="heading-medium">
           Sign in
-        </h1>
+        </h2>
 
         <!-- User id -->
         <div class="form-group">
@@ -85,7 +98,7 @@ Enter the password you created{% extends "../head.html" %}
         </div>
 
         <!-- Password -->
-        <div class="form-group">
+        <div class="form-group"> <!-- error class = form-group-error -->
           <label for="password">
             <fieldset>
               <span class="form-label-bold">Password</span>
@@ -97,7 +110,7 @@ Enter the password you created{% extends "../head.html" %}
               </span>
             </fieldset>
           </label>
-          <input type="password" class="form-control" name="password" id="password" required=""/>
+          <input type="password" class="form-control" name="password" id="password" required=""/> <!-- error class = form-control-error -->
         </div>
 
         <!-- <input onclick="$('#incorrectLogin').hide()" type="submit" value="Sign in" class="button button-start" role="button"/> -->
@@ -105,7 +118,7 @@ Enter the password you created{% extends "../head.html" %}
       </form>
 
       <div class="big-space">
-        <a id="password_reset_link" href="/v12/reset_Password/password_reset" class="password_reset small-space">Forgotten password?</a>
+        <a id="password_reset_link" href="/v16/reset_Password/password_reset" class="password_reset small-space">Forgotten password?</a>
       </div>
 
     </div>

@@ -1,0 +1,48 @@
+Enter the password you created{% extends "../head.html" %}
+{% block content %}
+
+<main id="content" role="main">
+
+  <!-- beta banner -->
+  <div class="phase-banner-beta big-space">
+      <p>
+        <strong class="phase-tag">BETA</strong>
+        <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- page title -->
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Sign in to view your abstraction licences
+      </h1>
+    </div>
+  </div>
+
+  <!-- create account -->
+  <div class="grid-row">
+    <div class="column-one-half">
+      <h2 class="heading-medium medium-space">New to this service?</h2>
+      <p>Create an account to view and manage your water abstraction licences</p>
+      <a href="start">
+        <input onclick="" value="Create an account" class="button" role="button" type="submit">
+      </a>
+    </div>
+
+    <!-- sign in to account -->
+    <div class="column-one-half">
+      <h2 class="heading-medium medium-space">Have an account already?</h2>
+      <p>Sign in to your account to view and manage your water abstraction licences</p>
+      <a href="signin">
+        <input onclick="" value="Sign into your account" class="button" role="button" type="submit">
+      </a>
+    </div>
+
+  </div>
+
+</div>
+</main>
+
+{% endblock %}

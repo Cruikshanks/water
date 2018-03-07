@@ -12,6 +12,15 @@ $path: "/public/images/";
 
 @import 'patterns/license-search';
 
+input[type=text], input[type=email], input[type=password] {
+  &.parsley-error {
+    border: 4px solid #b10e1e;
+  }
+}
+
+
+
+
 // version 13 overrides
 .alert-default {
   border-color: #008EC9;
