@@ -1,0 +1,210 @@
+{% extends "../licences.html" %}
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <div class="big-space">
+
+    <!-- breadcrumbs -->
+    <nav id="navigate">
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v15/pages/licences">Your licences</a></li>
+          <li><a href="/v16/pages/online_licence?wid={{ query.wid }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        </ol>
+      </div>
+
+      <!-- manage controls -->
+      <div class="manage" id="manage">
+        <div class="right">
+          <a href="/v12_2/change_password/new_password.html" class="change-password">Change&nbsp;password</a>
+          <a href="/v12_2/pages/signin" class="sign-out">Sign&nbsp;out</a>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+  <!-- approved back block -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large">Abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
+  <!--<br>Starts 1 July 2006 and ends 1 July 2018
+  -->
+
+  {% if pData.Condition1Value1 %} <!-- if there is any data -->
+
+  <!-- notice -->
+  <div class="notice medium-space">
+    <i class="icon icon-important">
+      <span class="visually-hidden">Warning</span>
+    </i>
+    <strong class="bold-small column-two-thirds">
+      We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
+    </strong>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full medium-space">
+
+      <h2 class="heading-medium">{{ pData.Condition1 }}</h2>
+      <div class="datatable first-datapp">
+        <label>{{ pData.Condition1Label1 }}</label>
+        <div class="licenceAnswerv7">
+          {{ pData.Condition1Value1 }}
+        </div>
+      </div>
+
+      {% if pData.Condition1Value2 %}
+        <div class="datatable">
+          <label>{{ pData.Condition1Label2 }}</label>
+          <div class="licenceAnswerv7">
+            {{ pData.Condition1Value2 }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if pData.Condition1Value3 %}
+        <div class="datatable">
+          <label>{{ pData.Condition1Label3 }}</label>
+          <div class="licenceAnswerv7">
+            {{ pData.Condition1Value3 }}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if pData.Condition1Value4 %}
+        <div class="datatable">
+          <label>{{ pData.Condition1Label4 }}</label>
+          <div class="licenceAnswerv7">
+            {{ pData.Condition1Value4 }}
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% if pData.Condition2 %}
+
+    <div class="grid-row">
+      <div class="column-full medium-space">
+
+        <h2 class="heading-medium">{{ pData.Condition2 }}</h2>
+        <div class="datatable first-datapp">
+          <label>{{ pData.Condition2Label1 }}</label>
+          <div class="licenceAnswerv7">
+            {{ pData.Condition2Value1 }}
+          </div>
+        </div>
+
+        {% if pData.Condition2Value2 %}
+          <div class="datatable">
+            <label>{{ pData.Condition2Label2 }}</label>
+            <div class="licenceAnswerv7">
+              {{ pData.Condition2Value2 }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if pData.Condition2Value3 %}
+          <div class="datatable">
+            <label>{{ pData.Condition2Label3 }}</label>
+            <div class="licenceAnswerv7">
+              {{ pData.Condition2Value3 }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if pData.Condition2Value4 %}
+          <div class="datatable">
+            <label>{{ pData.Condition2Label4 }}</label>
+            <div class="licenceAnswerv7">
+              {{ pData.Condition2Value4 }}
+            </div>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+  {% endif %}
+
+
+  {% if pData.Condition3 %}
+
+    <div class="grid-row">
+      <div class="column-full medium-space">
+
+        <h2 class="heading-medium">{{ pData.Condition3 }}</h2>
+        <div class="datatable first-datapp">
+          <label>{{ pData.Condition3Label1 }}</label>
+          <div class="licenceAnswerv7">
+            {{ pData.Condition3Value1 }}
+          </div>
+        </div>
+
+        {% if pData.Condition3Value2 %}
+          <div class="datatable">
+            <label>{{ pData.Condition3Label2 }}</label>
+            <div class="licenceAnswerv7">
+              {{ pData.Condition3Value2 }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if pData.Condition3Value3 %}
+          <div class="datatable">
+            <label>{{ pData.Condition3Label3 }}</label>
+            <div class="licenceAnswerv7">
+              {{ pData.Condition3Value3 }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if pData.Condition3Value4 %}
+          <div class="datatable">
+            <label>{{ pData.Condition3Label4 }}</label>
+            <div class="licenceAnswerv7">
+              {{ pData.Condition3Value4 }}
+            </div>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+    {% endif %}
+
+  {% else %}
+
+    <!-- notice -->
+    <div class="notice">
+      <i class="icon icon-important">
+        <span class="visually-hidden">Warning</span>
+      </i>
+      <strong class="bold-small column-two-thirds">
+        Sorry, we don’t hold any information about your conditions on our system yet. Please check the paper copy of your licence for this information.
+      </strong>
+      <p></p>
+    </div>
+
+  {% endif %}
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+<a href="/v13/pages/conditions/no_conditions?wid=1">No abstraction conditions</a>
+{% endblock %}
