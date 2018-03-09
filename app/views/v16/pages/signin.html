@@ -15,7 +15,7 @@ Enter the password you created{% extends "../head.html" %}
     <div class="column-two-thirds">
 
       <!-- always use method='post' for forms --->
-      <form action="/v12/online_licence/licences_list/licences" method="post" class="form medium-space" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+      <form action="licences" method="post" class="form medium-space" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
         {% if incorrectLogin == "1" %}
         <!-- only show this error if incorrectLogin param passed through from route-->
         <div id='incorrectLogin' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
@@ -83,14 +83,14 @@ Enter the password you created{% extends "../head.html" %}
       </form>
 
       <a id="password_reset_link" href="/v16/reset_Password/password_reset" class="password_reset small-space">Forgotten password?</a>
-      <a id="password_reset_link" href="/v16/pages/start" class="password_reset">Create an account to use this service</a>
+      <!-- <a id="password_reset_link" href="/v16/pages/start" class="password_reset">Create an account to use this service</a> -->
 
       <script>
         // the following code overrides the default link click behaviour and adds the
         document.getElementById('password_reset_link').onclick=function(e){
         e.preventDefault();
         var user_id=document.getElementById('user-id').value
-        window.location='/v12/reset_password/password_reset?user_id='+user_id; //redirect to password reset screen
+        window.location='/v16/change_password/old_password?user_id='+user_id; //redirect to password reset screen
       }
 
       {% if incorrectLogin == "1" %}
