@@ -19,7 +19,7 @@
     <nav id="navigate">
       <div class="breadcrumbs" id="breadcrumbs">
         <ol role="breadcrumbs">
-          <li><a href="/v15/pages/licences">Your licences</a></li>
+          <li><a href="/v16/pages/licences">Your licences</a></li>
           <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li>
         </ol>
       </div>
@@ -40,10 +40,10 @@
 
       {% if pData.LicenceName %}
         {{ pData.LicenceName }}</br>
-        <a href="/v15/pages/online_licence_rename?wid={{ query.wid }}">Rename this licence</a>
+        <a href="/v16/pages/online_licence_rename?wid={{ query.wid }}">Rename this licence</a>
       {% else %}
         <!-- <span>No name chosen</span></br>  -->
-        <a href="/v15/pages/online_licence_rename?wid={{ query.wid }}">Name this licence</a>
+        <a href="/v16/pages/online_licence_rename?wid={{ query.wid }}">Name this licence</a>
       {% endif %}
 
     </div>
@@ -54,7 +54,7 @@
     <label>Licence holder</label>
     <div class="licenceAnswerv7">
       {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
-      <a href="/v15/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
+      <a href="/v16/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
     </div>
   </div>
 
@@ -99,7 +99,7 @@
         {% if pData.Point5 %}
           {{ pData.Point5 }}<br>
         {% endif %}
-        <a href="/v15/impoundment/points?wid={{ query.wid }}">View details of abstraction points</a>
+        <a href="/v16/impoundment/points?wid={{ query.wid }}">View details of abstraction points</a>
 
       </div>
 
@@ -109,7 +109,7 @@
         <div class="licenceAnswerv7">
 
         {{ pData.Point1 }}<br>
-        <a href="/v15/impoundment/points?wid={{ query.wid }}">View details of abstraction point</a>
+        <a href="/v16/impoundment/points?wid={{ query.wid }}">View details of abstraction point</a>
 
       {% endif %}
 
@@ -137,7 +137,7 @@
           {{ pData.MannerType5 }}</br>
         {% endif %}
 
-        <a href="/v15/impoundment/manner?wid={{ query.wid }}">View details of manner of impoundment</a>
+        <a href="/v16/impoundment/manner?wid={{ query.wid }}">View details of manner of impoundment</a>
 
       </div>
 
@@ -162,7 +162,7 @@
           {{ pData.Condition5 }}</br>
         {% endif %}
 
-        <a href="/v15/conditions/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+        <a href="/v16/conditions/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
 
     </div>
   </div>

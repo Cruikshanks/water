@@ -19,7 +19,7 @@
     <nav id="navigate">
       <div class="breadcrumbs" id="breadcrumbs">
         <ol role="breadcrumbs">
-          <li><a href="/v15/pages/licences">Your licences</a></li>
+          <li><a href="/v16/pages/licences">Your licences</a></li>
           <li><a href="">Licence number: {{ pData.LicenceSerialNo }}</a></li>
         </ol>
       </div>
@@ -42,7 +42,7 @@
     </label>
     <input minlength="2" maxlength="32" style="background: #fff" type="text" class="form-control " id="name" name="name" value="">
     <p></p>
-    <a class="button" href="/v15/pages/online_licence?wid={{ query.wid }}" role="button" style="margin-bottom:20px;">
+    <a class="button" href="/v16/pages/online_licence?wid={{ query.wid }}" role="button" style="margin-bottom:20px;">
       Save
     </a>
     <p class="form-cancel">
@@ -73,7 +73,7 @@
 
       {% if pData.LicenceName %}
         {{ pData.LicenceName }}</br>
-        <a href="/v15/pages/online_licence_rename?wid=1">Rename this licence</a>
+        <a href="/v16/pages/online_licence_rename?wid=1">Rename this licence</a>
       {% else %}
         <!-- <span>No name chosen</span></br>  -->
         <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
@@ -126,7 +126,7 @@
           {{ pData.purpose5 }}</br>
         {% endif %}
 
-        <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of abstraction purposes</a>
+        <a href="/v16/pages/points_purposes/tabbed_points?wid=1">View details of abstraction purposes</a>
 
       </div>
 
@@ -151,7 +151,7 @@
           {{ pData.condition5 }}</br>
         {% endif %}
 
-      <a href="/v15/conditions?wid=1">View details of abstraction conditions</a>
+      <a href="/v16/conditions?wid=1">View details of abstraction conditions</a>
     </div>
   </div>
 
@@ -177,7 +177,7 @@
         {{ pData.amount5 }}</br>
       {% endif %}
 
-      <a href="/v15/pages/points_purposes/tabbed_points?wid=1">View details of amounts</a>
+      <a href="/v16/pages/points_purposes/tabbed_points?wid=1">View details of amounts</a>
   </div>
 
   <br>
