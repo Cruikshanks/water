@@ -24,7 +24,6 @@
         </ol>
       </div>
     </nav>
-
   </div>
 
   <!-- page title -->
@@ -34,19 +33,21 @@
     <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
   {% endif %}
 
-  <div class="datatable datahead">
-    <label>Licence name</label>
-    <div class="licenceAnswerv7">
-
-      {% if pData.LicenceName %}
-        {{ pData.LicenceName }}</br>
-        <a href="/v16/pages/online_licence_impoundment_rename?wid={{ query.wid }}">Rename this licence</a>
-      {% else %}
-        <!-- <span>No name chosen</span></br>  -->
-        <a href="/v16/pages/online_licence_impoundment_rename?wid={{ query.wid }}">Name this licence</a>
-      {% endif %}
-
-    </div>
+  <!-- rename licence form -->
+  <div class="form--well ">
+    <label for="name" class="">
+      <span class="form-label-bold">Licence name</span>
+    </label>
+    <input minlength="2" maxlength="32" style="background: #fff" type="text" class="form-control " id="name" name="name" value="">
+    <p></p>
+    <a class="button" href="/v16/pages/online_licence?wid={{ query.wid }}" role="button" style="margin-bottom:20px;">
+      Save
+    </a>
+    <p class="form-cancel">
+      <a href="#" onclick="history.go(-1)">
+        Cancel
+      </a>
+    </p>
   </div>
 
   <!-- Licence holder -->
