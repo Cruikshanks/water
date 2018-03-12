@@ -1,4 +1,4 @@
-{% extends "../licences.html" %}
+{% extends "../view.html" %}
 {% block content %}
 
 <main id="content" role="main">
@@ -30,6 +30,20 @@
       </h1>
     </div>
   </div>
+
+  <!-- add more licences -->
+  <details>
+    <summary><span class="summary">Want to add more licences?</span></summary>
+    <div class="panel panel-border-narrow">
+      <p>
+        You can add licences you manage to your account.
+      </p>
+      <input class="button medium-space" type="submit" value="Add licences" aria-disabled="true">
+    </div>
+  </details>
+
+  <!-- search functionality -->
+  {% include "../partials/search.html" %}
 
   <!-- licence list -->
   <div class="grid-row">

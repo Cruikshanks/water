@@ -1,4 +1,4 @@
-{% extends "../licences.html" %}
+{% extends "../view.html" %}
 {% block content %}
 
 <main id="content" role="main">
@@ -31,23 +31,8 @@
     </div>
   </div>
 
-  <!-- licence search component -->
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <div class="form-group form-group--horizontal">
-        <label class="form-label form-label--bold" for="emailAddress">Search for a licence</label>
-        <span class="form-hint">Search by name, email address or keyword</span>
-
-        <div class="flexy">
-          <input type="text" class="form-control form-control--block column-two-thirds" />
-          <div class="column-one-third">
-            <input id="searchButton" class="button button button-license-search" type="submit" value="Search">
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
+  <!-- search functionality -->
+  {% include "../partials/search.html" %}
 
   <!-- licence list -->
   <div class="grid-row">
