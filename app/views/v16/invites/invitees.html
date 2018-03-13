@@ -1,0 +1,60 @@
+{% extends "../manage.html" %}
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner -->
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- breadcrumbs -->
+  <div class="big-space">
+    <nav id="navigate">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v16/pages/manage">Manage your licences</a></li>
+          <li><a href="">Invite to service</a></li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">Choose which licence holders to invite</h1>
+      <p>Sending a request to licence holders means that they will receive an email invitation to view their licence online. As part of the sign up process any licences they control will be made available for you to see.</p>
+
+      <!-- form -->
+      <form class="medium-space">
+
+        <div class="form-group">
+          <label for="emails">
+            <fieldset class="small-space">
+              <span class="form-label-bold">Add licence holder contacts here</span>
+              <span class="form-hint">Add one or many email addresses here. You can separate your email addresses using spaces, commas, or by entering them on different lines.</span>
+            </fieldset>
+          </label>
+          <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
+        </div>
+
+        <!-- continue button -->
+        <a href="confirmation">
+          <input onclick="" value="Continue" class="button" role="button" type="submit">
+        </a>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

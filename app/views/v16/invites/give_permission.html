@@ -1,0 +1,64 @@
+{% extends "../manage.html" %}
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner -->
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- breadcrumbs -->
+  <div class="big-space">
+
+  </div>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds big-space">
+
+      <h1 class="heading-large">Give access to licences</h1>
+      <p><span class="bold strong">geoff@waterboss.co.uk</span> has requested access to view and manage your licences.</p>
+      <p>Once you accept this invite we will ask you to make an account and add your licences.</p>
+
+      <!-- continue button -->
+      <!-- <a href="add_licences"> This route shows unsupported licences-->
+      <a href="licences_added">
+        <input onclick="" value="Give access and continue" class="button" role="button" type="submit">
+      </a>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds big-space">
+
+      <!-- add more licences -->
+      <details>
+        <summary><span class="summary">Don’t recognise this person?</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>
+            If you do not recognise this person or do not know why you have been sent this request you may get in touch with us.
+          </p>
+          <p>
+            <a href="">
+              water_abstractiondigital@environment-agency.gov.uk.
+            </a>
+          </p>
+
+          <p>
+            Our team will reply to you within 2 working days.
+          </p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
