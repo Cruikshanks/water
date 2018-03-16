@@ -1,4 +1,4 @@
-{% extends "../view.html" %}
+{% extends "../head.html" %}
 {% block content %}
 
 <main id="content" role="main">
@@ -99,7 +99,7 @@
         {% if pData.Point5 %}
           {{ pData.Point5 }}<br>
         {% endif %}
-        <a href="/v16/impoundment/points?wid={{ query.wid }}">View details of abstraction points</a>
+        <a href="/v16/pages/impoundment/points?wid={{ query.wid }}">View details of abstraction points</a>
 
       </div>
 
@@ -109,7 +109,7 @@
         <div class="licenceAnswerv7">
 
         {{ pData.Point1 }}<br>
-        <a href="/v16/impoundment/points?wid={{ query.wid }}">View details of abstraction point</a>
+        <a href="/v16/pages/impoundment/points?wid={{ query.wid }}">View details of abstraction point</a>
 
       {% endif %}
 
@@ -137,7 +137,7 @@
           {{ pData.MannerType5 }}</br>
         {% endif %}
 
-        <a href="/v16/impoundment/manner?wid={{ query.wid }}">View details of manner of impoundment</a>
+        <a href="/v16/pages/impoundment/manner?wid={{ query.wid }}">View details of manner of impoundment</a>
 
       </div>
 
@@ -162,7 +162,7 @@
           {{ pData.Condition5 }}</br>
         {% endif %}
 
-        <a href="/v16/conditions/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+        <a href="/v16/pages/impoundment/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
 
     </div>
   </div>

@@ -1,6 +1,10 @@
-Enter the password you created{% extends "../head.html" %}
-{% block content %}
+{% extends "../head.html" %}
 
+{% block page_title %}
+  Choose an option to view your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
 <main id="content" role="main">
 
   <!-- beta banner -->
@@ -16,7 +20,7 @@ Enter the password you created{% extends "../head.html" %}
   <div class="grid-row small-space">
     <div class="column-two-thirds">
       <h1  class="heading-large">
-        Sign in to view your abstraction licences
+        Choose an option to view your licences
       </h1>
     </div>
   </div>
@@ -24,19 +28,19 @@ Enter the password you created{% extends "../head.html" %}
   <!-- create account -->
   <div class="grid-row">
     <div class="column-one-half">
-      <h2 class="heading-medium medium-space">New to this service?</h2>
-      <p>Create an account to view and manage your water abstraction licences</p>
+      <h2 class="heading-medium medium-space">Create an account</h2>
+      <p>Choose this option if you haven’t used the service before.</p>
       <a href="start">
-        <input onclick="" value="Create an account" class="button" role="button" type="submit">
+        <input onclick="" value="Create account" class="button" role="button" type="submit">
       </a>
     </div>
 
     <!-- sign in to account -->
     <div class="column-one-half">
-      <h2 class="heading-medium medium-space">Have an account already?</h2>
-      <p>Sign in to your account to view and manage your water abstraction licences</p>
+      <h2 class="heading-medium medium-space">Sign in</h2>
+      <p>Choose this option if you’ve already created an account for this service.</p>
       <a href="signin">
-        <input onclick="" value="Sign into your account" class="button" role="button" type="submit">
+        <input onclick="" value="Sign in" class="button" role="button" type="submit">
       </a>
     </div>
   </div>

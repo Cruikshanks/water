@@ -1,4 +1,4 @@
-{% extends "../manage.html" %}
+{% extends "../head.html" %}
 {% block content %}
 <main id="content" role="main">
 
@@ -12,7 +12,15 @@
 
   <!-- breadcrumbs -->
   <div class="big-space">
-
+    <nav id="navigate">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v16/pages/manage">Manage your licences</a></li>
+          <li><a href="">Invite to service</a></li>
+        </ol>
+      </div>
+    </nav>
   </div>
 
   <!-- back -->
@@ -22,17 +30,9 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">
-        Licences added
-      </h1>
-
-      <p>
-        7 licences were added to your account and access for these has been shared with <span class="bold strong">geoff@waterboss.co.uk</span>.
-      </p>
-
-      <div class="medium-space">
-        <a href="../pages/licences">View my licences</a>
-      </div>
+      <h1 class="heading-large">Request sent</h1>
+      <p>An email has been sent to your licence holders and you will see their licences in your list of licences as they sign up to the service.</p>
+      <a href="/v16/pages/licences">Back to view my licences</a>
 
     </div>
   </div>

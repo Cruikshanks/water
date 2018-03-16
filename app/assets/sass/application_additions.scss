@@ -470,6 +470,8 @@ details {
   margin-bottom: 4rem;
 }
 
+// spacing
+
 .small-space {
   margin-bottom: 15px;
 }
@@ -481,6 +483,7 @@ details {
 .big-space {
   margin-bottom: 45px;
 }
+
 
 .clustered { // removes padding / margin underneath a h1 so that a sub-heading can be nearby
   margin-bottom: 0;
@@ -600,4 +603,50 @@ details {
 
 #search-button-hack {
   margin-top: 50px;
+}
+
+
+
+// styles for new GDS navigation style
+
+// subnav container
+.navbar {
+  border-bottom: 1px solid #bfc1c3;
+}
+
+// subnav list
+.navbar__list-items li {
+  font-weight: 700;
+  display: inline-block;
+}
+
+.navlink {
+  display: inline-block;
+  text-decoration: none;
+}
+
+// active link for subnav
+.navbar .navbar__list-items a {
+  margin-right: 15px;
+  color: #0b0c0c;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navbar .navbar__list-items li.active a {
+  box-shadow: inset 0px -5px 0px 0px #005ea5;
+  padding: 15px 5px 10px 5px;
+}
+
+.navbar .navbar__list-items li.active {
+  color: #bfc1c3;
+}
+
+// active link for subnav
+.navbar .navbar__list-items li.active {
+  color: #0b0c0c;
+}
+
+.navbar .navbar__list-items li.active a {
+  color: #005ea5;
 }

@@ -9,33 +9,37 @@
 {% block content %}
 
 <main id="content" role="main">
-  <div class="phase-banner-beta">
+
+  <!-- beta banner -->
+  <div class="phase-banner-beta big-space">
     <p>
       <strong class="phase-tag">BETA</strong>
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
   </div>
+
   <div class="grid-row">
     <div class="column-two-thirds">
-      <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
+      <p></p><br>
 
-        <h1 class="form-title heading-large">
-          Check your email
-        </h1>
+      <a href="signin" class="link-back" onclick="history.go(-1)">Back</a>
 
+      <h1 class="form-title heading-large">
+        Check your email
+      </h1>
 
+      <p class="lede">
+        We’ve sent you an email with instructions about what to do next.
+      </p>
 
-
-          <p class="lede">We’ve sent you an email with instructions about what to do next.</p>
-
-        <a href="resend_email">Haven’t received anything?
-</a>
-
-
+      <a href="resend_email">
+        Haven’t received anything?
+      </a>
 
     </div>
   </div>
+
 </main>
 
 {% endblock %}

@@ -1,5 +1,9 @@
 Enter the password you created{% extends "../head.html" %}
 
+{% block page_title %}
+  Sign in - Manage your water abstraction or impoundment licence - GOV.UK
+{% endblock %}
+
 {% block content %}
 <main id="content" role="main">
 
@@ -13,6 +17,11 @@ Enter the password you created{% extends "../head.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds">
+
+      <div class="big-space">
+        <h3 class="heading-medium clustered">Need an account?</h3>
+        <a id="password_reset_link" href="/v16/pages/start" class="password_reset">Create an account to use this service</a>
+      </div>
 
       <!-- always use method='post' for forms --->
       <form action="licences" method="post" class="form medium-space" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
@@ -86,15 +95,12 @@ Enter the password you created{% extends "../head.html" %}
         <a id="password_reset_link" href="/v12/reset_Password/password_reset" class="password_reset small-space">Forgotten password?</a>
       </div>
 
-      <h3 class="heading-medium">Need an account?</h3>
-      <a id="password_reset_link" href="/v16/pages/start" class="password_reset">Create an account to use this service</a>
-
       <script>
         // the following code overrides the default link click behaviour and adds the
         document.getElementById('password_reset_link').onclick=function(e){
         e.preventDefault();
         var user_id=document.getElementById('user-id').value
-        window.location='/v16/change_password/old_password?user_id='+user_id; //redirect to password reset screen
+        window.location='/v16/change_password/change_password?user_id='+user_id; //redirect to password reset screen
       }
 
       {% if incorrectLogin == "1" %}

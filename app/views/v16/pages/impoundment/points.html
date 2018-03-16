@@ -1,4 +1,4 @@
-{% extends "../view.html" %}
+{% extends "../../view.html" %}
 {% block content %}
 
 <main id="content" role="main">
@@ -21,7 +21,7 @@
       <div class="breadcrumbs" id="breadcrumbs">
         <ol role="breadcrumbs">
           <li><a href="/v16/pages/licences">Your licences</a></li>
-          <li><a href="/v16/pages/online_licence_impoundment?wid={{ query.wid }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+          <li><a href="/v16/pages/online_licence?wid={{ query.wid }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
         </ol>
       </div>
     </nav>
@@ -32,15 +32,29 @@
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
-  <h1  class="heading-large">Manner of impoundment for licence number {{ pData.LicenceSerialNo }}</h1>
+  <h1  class="heading-large">impoundment points for licence number {{ pData.LicenceSerialNo }}</h1>
+    <!--<br>Starts 1 July 2006 and ends 1 July 2018
+    -->
 
   <div class="grid-row">
     <div class="column-full">
+
+      <h2 class="heading-medium">{{ pData.Point1 }}</h2>
+
+      <div class="datatablepp first-datapp">
+        <label>
+          Grid reference
+        </label>
+        <div class="licenceData">
+          {{ pData.Point1Ref }}
+        </div>
+      </div>
+
       <div class="datatablepp">
         <label>
           Manner of impoundment
         </label>
-        <div class="licenceAnswerv12">
+        <div class="licenceData">
           {{ pData.Manner1 }}
         </div>
       </div>
@@ -51,6 +65,10 @@
 {% endif %}
 
 {% endfor %}
+
+
+
+
 
 </main>
 

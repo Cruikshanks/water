@@ -1,4 +1,4 @@
-{% extends "../view.html" %}
+{% extends "../head.html" %}
 {% block content %}
 
 <main id="content" role="main">
@@ -32,15 +32,22 @@
   </div>
 
   <!-- add more licences -->
-  <details>
-    <summary><span class="summary">Want to add more licences?</span></summary>
-    <div class="panel panel-border-narrow">
-      <p>
-        You can add licences you manage to your account.
-      </p>
-      <input class="button medium-space" type="submit" value="Add licences" aria-disabled="true">
-    </div>
-  </details>
+  <div class="big-space">
+    <details>
+      <summary><span class="summary">Want to add more licences?</span></summary>
+      <div class="panel panel-border-narrow">
+        <p>
+          You can add licences you manage to your account.
+        </p>
+        <p>
+          <a href="/v16/pages/add_licence/licence_number">
+            Add licences
+          </a>
+        </p>
+        <!-- <input class="button medium-space" type="submit" value="Add licences" aria-disabled="true"> -->
+      </div>
+    </details>
+  </div>
 
   <!-- search functionality -->
   {% include "../partials/search.html" %}
@@ -67,7 +74,7 @@
         </div>
         <div class="license-results-header__column">
           <a href="#" aria-label="Sort by licence name">
-            Licence ends
+            Licence end date
             <span class="sort-icon"> &#x25be;</span>
           </a>
         </div>

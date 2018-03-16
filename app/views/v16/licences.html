@@ -1,4 +1,4 @@
-{% extends "../layout.html" %}
+{% extends "../head.html" %}
 {% block content %}
 
 <main id="content" role="main">
@@ -19,14 +19,6 @@
             <!-- {{ pData.LicenceSerialNo }}</a></li> -->
         </ol>
       </div>
-
-      <!-- manage controls -->
-      <div class="manage" id="manage">
-        <div class="right">
-          <a href="/v12_2/change_password/new_password.html" class="change-password">Change&nbsp;password</a>
-          <a href="/v12_2/pages/signin" class="sign-out">Sign&nbsp;out</a>
-        </div>
-      </div>
     </nav>
   </div>
 
@@ -39,6 +31,17 @@
     </div>
   </div>
 
+  <!-- add more licences -->
+  <details>
+    <summary><span class="summary">Want to add more licences?</span></summary>
+    <div class="panel panel-border-narrow">
+      <p>
+        You can add licences you manage to your account.
+      </p>
+      <input class="button medium-space" type="submit" value="Add licences" aria-disabled="true">
+    </div>
+  </details>
+
   <!-- licence list -->
   <div class="grid-row">
     <div class="column-full">
@@ -48,55 +51,47 @@
 
       <div class="license-results-header">
         <div class="license-results-header__column">
-          <a href="#" aria-label="Sort by licence number">
             Licence serial number
-            <span class="sort-icon"> &#x25be;</span>
-          </a>
         </div>
         <div class="license-results-header__column">
-          <a href="#" aria-label="Sort by licence name">
-            Licence name
-            <span class="sort-icon"> &#x25be;</span>
-          </a>
+
         </div>
         <div class="license-results-header__column">
-          <a href="#" aria-label="Sort by licence name">
             Licence end date
-            <span class="sort-icon"> &#x25be;</span>
-          </a>
         </div>
       </div>
 
       <!-- find way to pull data in here -->
 
-      <a href="/v15/pages/online_licence?wid=1" class="license-result">
-        <h2 class="heading-medium license-result__column faux-link">03/28/60/0002</h2>
-        <p class="license-result__column license-result__column--description"></p>
-        <div class="license-result__column" aria-hidden="true">15 September 2022</div>
-      </a>
 
-      <a href="/v15/pages/online_licence?wid=2" class="license-result">
-        <h2 class="heading-medium license-result__column faux-link">03/28/60/0003</h2>
-        <p class="license-result__column license-result__column--description"></p>
-        <div class="license-result__column" aria-hidden="true">30 September 2025</div>
-      </a>
-
-      <a href="/v15/pages/online_licence?wid=3" class="license-result">
+      <a href="/v16/pages/online_licence?wid=3" class="license-result">
         <h2 class="heading-medium license-result__column faux-link">03/28/60/0032</h2>
         <p class="license-result__column license-result__column--description"></p>
         <div class="license-result__column" aria-hidden="true">30 April 2021</div>
       </a>
 
-      <a href="/v15/pages/online_licence?wid=4" class="license-result">
-        <h2 class="heading-medium license-result__column faux-link">01/04/12/0047</h2>
+      <a href="/v16/pages/online_licence?wid=1" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">03/28/60/0002</h2>
         <p class="license-result__column license-result__column--description"></p>
-        <div class="license-result__column" aria-hidden="true">1 September 2031</div>
+        <div class="license-result__column" aria-hidden="true">15 September 2022</div>
       </a>
 
-      <a href="/v15/pages/online_licence?wid=5" class="license-result">
+      <a href="/v16/pages/online_licence?wid=2" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">03/28/60/0003</h2>
+        <p class="license-result__column license-result__column--description"></p>
+        <div class="license-result__column" aria-hidden="true">30 September 2025</div>
+      </a>
+
+      <a href="/v16/pages/online_licence?wid=5" class="license-result">
         <h2 class="heading-medium license-result__column faux-link">01/04/12/0047</h2>
         <p class="license-result__column license-result__column--description"></p>
         <div class="license-result__column" aria-hidden="true">1 March 2027</div>
+      </a>
+
+      <a href="/v16/pages/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">01/04/12/0047</h2>
+        <p class="license-result__column license-result__column--description"></p>
+        <div class="license-result__column" aria-hidden="true">1 September 2031</div>
       </a>
 
     </div>

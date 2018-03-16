@@ -1,4 +1,5 @@
-{% extends "../account.html" %}
+{% extends "../head.html" %}
+
 {% block content %}
 
 <main id="content" role="main">
@@ -7,6 +8,27 @@
       <strong class="phase-tag">BETA</strong>
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
+  </div>
+
+  <!-- new GDS navigation pattern -->
+  <div class="content-width">
+    <nav id="nav">
+
+      <div class="navbar">
+        <ul class="navbar__list-items">
+          <li class="navlink">
+            <a href="/v16/pages/licences">View your licences</a>
+          </li>
+          <li class="navlink">
+            <a href="/v16/pages/access">Access to licences</a>
+          </li>
+          <li class="navlink active">
+            <a href="">Account</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
   </div>
 
   <div class="big-space">
@@ -28,7 +50,7 @@
       <div class="column-one-half">
         <h2 class="heading-medium small-space">Need a new password?</h2>
         <p>You can update your account password here</p>
-        <a class="button medium-space" href="/v16/change_password/old_password.html" role="button">Change your account password</a>
+        <a class="button medium-space" href="/v16/change_password/change_password.html" role="button">Change your account password</a>
       </div>
 
       <!-- sign in to account -->

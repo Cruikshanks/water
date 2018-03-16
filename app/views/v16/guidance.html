@@ -1,0 +1,303 @@
+{% extends "../head.html" %}
+
+{% from "custom_inc/waterdata.html" import permits %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence serial number {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+{% for pNumber, pData in permits %}
+{% if pNumber==chosenPermitID %}
+
+<script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+<main id="content" role="main">
+   <div class="phase-banner-alpha">
+     <p>
+       <strong class="phase-tag">BETA</strong>
+       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+     </p>
+   </div>
+
+   <h1 class="header-title">Service Manual</h1>
+
+  <!-- Page title and contact -->
+  <div class="grid-row">
+
+   <div class="column-two-thirds">
+     <div class="page-header">
+       <!-- <p class="page-header__context">Design</p> -->
+       <h1 class="page-header__title">
+         Using the GOV.UK template, frontend toolkit and elements
+       </h1>
+     </div>
+   </div>
+
+   <div class="column-third">
+
+     <div class="community-contact">
+       <p>
+         <a class="feedback" href="/contact/govuk">Give feedback about this page</a>
+       </p>
+     </div>
+   </div>
+  </div>
+
+  <!-- Metadata-->
+  <div class="grid-row">
+   <div class="column-two-thirds">
+
+     <div class="metadata">
+       <dl>
+           <dt>Published by:</dt>
+             <dd>
+               <a href="/service-manual/communities/technology-community-frontend-development">Technology community (frontend development)</a>
+             </dd>
+         <dt>Last updated:</dt>
+         <dd>
+           over 1 year ago
+         </dd>
+       </dl>
+     </div>
+
+   </div>
+  </div>
+
+  <div class="grid-row" data-module="highlight-active-section-heading">
+   <div class="column-third">
+
+     <!--  Page contents -->
+     <div class="page-contents js-page-contents js-stick-at-top-when-scrolling js-sticky-resize">
+       <h2 class="page-contents__title">Page contents:</h2>
+       <ul class="page-contents__list">
+           <li><a href="#meeting-the-service-standard">Meeting the Service Standard</a></li>
+           <li><a href="#working-with-the-govuk-template-govuktemplate">Working with the GOV.UK template (govuk_template)</a></li>
+           <li><a href="#working-with-the-frontend-toolkit">Working with the frontend toolkit</a></li>
+           <li><a href="#working-with-govuk-elements">Working with GOV.UK elements</a></li>
+           <li><a href="#keeping-your-service-up-to-date">Keeping your service up to date</a></li>
+           <li><a href="#related-guides">Related guides</a></li>
+       </ul>
+     </div>
+
+   </div>
+   <div class="column-two-thirds">
+
+     <div class="govspeak-wrapper">
+
+  <div class="govuk-govspeak ">
+   <p>GOV.UK provides 3 repositories to help teams across government design, build and iterate digital services:</p>
+
+  <ul>
+   <li><a rel="external" href="https://github.com/alphagov/govuk_template">GOV.UK template</a></li>
+   <li><a rel="external" href="https://github.com/alphagov/govuk_frontend_toolkit">GOV.UK frontend toolkit</a></li>
+   <li><a rel="external" href="http://govuk-elements.herokuapp.com/">GOV.UK elements</a></li>
+  </ul>
+
+  <p>Designers and developers can use these to:</p>
+
+  <ul>
+   <li>create services with a consistent look and feel</li>
+   <li>prototype, test and get feedback quickly and easily</li>
+   <li>keep their services up to date with improvements from GOV.UK</li>
+  </ul>
+
+<h2 id="meeting-the-service-standard">Meeting the Service Standard</h2>
+
+<p>To pass <a href="https://www.gov.uk/service-manual/service-standard/make-the-user-experience-consistent-with-govuk">point 13 (make the user experience consistent with GOV.UK)</a> in your service assessments, you must show how your team is using the GOV.UK <a href="/service-manual/design/using-adapting-and-creating-patterns">design patterns</a> and repositories.</p>
+
+<h2 id="working-with-the-govuk-template-govuktemplate">Working with the GOV.UK template (govuk_template)</h2>
+
+<p>You must use the GOV.UK template if your service has a gov.uk/myservice or service.gov.uk domain so it looks like the rest of GOV.UK.</p>
+
+<p>You can <a rel="external" href="https://github.com/alphagov/govuk_template">find the GOV.UK template on GitHub</a>. This provides a page template, including the GOV.UK header and footer and its assets.</p>
+
+<p>It’s available in several languages and published to RubyGems and npm so that you can include it as a dependency in your project. For example:</p>
+
+<ul>
+ <li>GOV.UK Verify uses the <a rel="external" href="https://github.com/alphagov/static/blob/release_1994/Gemfile#L27-30">GOV.UK template as a Ruby Gem</a>
+</li>
+ <li>the GOV.UK prototype kit uses the <a rel="external" href="https://github.com/alphagov/govuk_template_jinja">Jinja version of the template</a>
+</li>
+</ul>
+
+<p>We recommend that you use the most recent version of the GOV.UK template. Check that your version is up to date.</p>
+
+<h3 id="adding-the-govuk-header">Adding the GOV.UK header</h3>
+
+<p>You can customise the template depending on the type of header you need.</p>
+
+<p>Before choosing a header:</p>
+
+<ul>
+ <li><a href="/service-manual/design/add-the-govuk-header-and-footer">find out how to use the GOV.UK header and footer</a></li>
+ <li><a rel="external" href="http://alphagov.github.io/govuk_template/">preview the 2 header types</a></li>
+ <li><a href="/service-manual/design/making-your-service-look-like-govuk">learn about making your service look like GOV.UK</a></li>
+</ul>
+
+<h2 id="working-with-the-frontend-toolkit">Working with the frontend toolkit</h2>
+
+<p>You can use the <a rel="external" href="https://github.com/alphagov/govuk_frontend_toolkit">GOV.UK frontend toolkit</a> to start building your frontend. This is a collection of Sass mixins (re-usable blocks of code) and JavaScript files that you can use as the starting point for your frontend. These will help you make your service consistent with GOV.UK.</p>
+
+<p>We provide a variety of mixins including typography, grid layout and Sass variables for dimensions and colours. You’ll need to have Sass available to compile the files.</p>
+
+<p>It’s available as a <a rel="external" href="https://github.com/alphagov/govuk_frontend_toolkit_gem">gem for Ruby</a> and an <a rel="external" href="https://github.com/alphagov/govuk_frontend_toolkit_npm">npm package for Node.js</a>.</p>
+
+<h2 id="working-with-govuk-elements">Working with GOV.UK elements</h2>
+
+<p>Use the <a rel="external" href="http://govuk-elements.herokuapp.com/">GOV.UK elements guide</a> to make your service consistent with GOV.UK. This is a visual style guide for common UI elements (like layout, colour, typography and form elements).</p>
+
+<p>GOV.UK elements uses the Sass variables and mixins from the frontend toolkit and shows you how these can be used in your project. It has code snippets you can copy and paste into the prototype kit, and to ensure your service is accessible.</p>
+
+<h2 id="keeping-your-service-up-to-date">Keeping your service up to date</h2>
+
+<p>You should check the GOV.UK template, frontend toolkit and elements repositories regularly and incorporate changes to keep your service up to date and consistent with the rest of GOV.UK.</p>
+
+<p>These are updated frequently in response to feedback, research and evolving best practice.</p>
+
+<p>You can find good examples of changes to libraries, including:</p>
+
+<ul>
+ <li><a rel="external" href="https://github.com/alphagov/govuk_frontend_toolkit/commit/585b5faffae1cdcf7ae423a6cdce043317360726">improvement to the frontend toolkit for loading JavaScript</a></li>
+ <li><a rel="external" href="https://github.com/alphagov/govuk_template/commit/f0d6fa16a2a77de711220d57ab49c1e6269f4f20">update to library code provided by the template</a></li>
+ <li><a rel="external" href="https://github.com/alphagov/govuk_template/commit/6571b2b82bae467cfbe4e2adc5d5cf189e420432">fix skiplink for voiceover on iOS - accessibility improvements</a></li>
+</ul>
+
+<h3 id="checking-for-updates">Checking for updates</h3>
+
+<p>Each resource on GitHub has a CHANGELOG file with a history of the resource and the changes made in each version. You can use <a rel="external" href="http://semver.org/">semantic versioning</a> to work out when updating this resource might have an impact, for example a breaking change that might need more work to integrate with your application.</p>
+
+<h2 id="related-guides">Related guides</h2>
+
+<p>You may also find these guides useful:</p>
+
+<ul>
+ <li><a href="/service-manual/technology/using-progressive-enhancement">Using progressive enhancement</a></li>
+ <li><a href="/service-manual/technology/designing-for-different-browsers-and-devices">designing for different browsers and devices</a></li>
+</ul>
+
+</div>
+
+   </div>
+
+   <div class="change-history" data-module="toggle">
+     <div class="change-history__latest-change">
+       <dl>
+         <dt>Published by:</dt>
+           <dd>
+             <a href="/service-manual/communities/technology-community-frontend-development">Technology community (frontend development)</a>
+           </dd>
+         <dt>Last update:</dt>
+         <dd>
+           <time datetime="2016-11-08T13:33:52+00:00" class="timestamp"> 8 November 2016</time>
+<p class="change-history__summary">
+ Guidance first published
+</p>
+
+         </dd>
+       </dl>
+     </div>
+   </div>
+
+ </div>
+</div>
+
+   </main>
+
+     <div class="full-page-width-wrapper">
+ <div class="improve-this-page" data-module="improve-this-page">
+   <div class="improve-this-page__prompt js-prompt clearfix" tabindex="-1">
+     <h3 class="improve-this-page__is-useful-question">Is this page useful?</h3>
+     <a class="improve-this-page__page-is-useful-button js-page-is-useful" data-track-category="manualFeedbackForm" data-track-action="ffYesClick" href="/contact/govuk">
+       Yes <span class="visually-hidden"> this page is useful</span>
+</a>      <a class="js-page-is-not-useful" data-track-category="manualFeedbackForm" data-track-action="ffNoClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+       No <span class="visually-hidden"> this page is not useful</span>
+</a>      <a class="js-something-is-wrong improve-this-page__anything-wrong" data-track-category="manualFeedbackForm" data-track-action="ffWrongClick" aria-controls="improveThisPageForm" aria-expanded="false" href="/contact/govuk">
+       Is there anything wrong with this page?
+</a>    </div>
+   <div id="improveThisPageForm" class="improve-this-page__form js-feedback-form js-hidden" data-track-category="manualFeedbackForm" data-track-action="ffFormSubmit">
+     <a href="#" class="improve-this-page__close js-close-feedback-form" aria-controls="improveThisPageForm" aria-expanded="true">Close</a>
+     <div class="grid-row">
+       <div class="column-two-thirds">
+         <div class="js-errors"></div>
+         <form>
+           <input type="hidden" name="url" value="https://www.gov.uk/service-manual/design/using-the-govuk-template-frontend-toolkit-and-elements">
+           <input type="hidden" name="user_agent" value="Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko">
+           <div class="form-group">
+             <label class="form-label-bold" for="description-field">
+               How should we improve this page?
+             </label>
+             <textarea id="description-field" class="form-control" name="description" rows="5" aria-required="true"></textarea>
+           </div>
+           <div class="form-group">
+             <label class="form-label" for="name-field">
+               Name (optional)
+               <span class="form-hint">Include your name and email address if you'd like us to get back to you.</span>
+             </label>
+             <input id="name-field" class="form-control" type="text" name="name">
+           </div>
+           <div class="form-group">
+             <label class="form-label" for="email-field">Email (optional)</label>
+             <input id="email-field" class="form-control" type="text" name="email">
+           </div>
+           <div>
+             <input class="button" type="submit" value="Send message">
+           </div>
+         </form>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+ </div>
+
+
+   <footer class="group js-footer" id="footer" role="contentinfo">
+
+     <div class="footer-wrapper">
+
+
+       <div class="footer-meta">
+         <div class="footer-meta-inner">
+             <h2 class="visuallyhidden">Support links</h2>
+<ul>
+ <li><a href="/help">Help</a></li>
+ <li><a href="/help/cookies">Cookies</a></li>
+ <li><a href="/contact">Contact</a></li>
+ <li><a href="/help/terms-conditions">Terms and conditions</a></li>
+ <li><a href="/cymraeg" lang="cy" hreflang="cy">Rhestr o Wasanaethau Cymraeg</a></li>
+ <li>Built by the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>
+</li>
+</ul>
+
+
+
+           <div class="open-government-licence">
+             <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+               <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+           </div>
+         </div>
+
+         <div class="copyright">
+           <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+         </div>
+       </div>
+     </div>
+   </footer>
+
+   <div id="global-app-error" class="app-error hidden"></div>
+
+   <script src="https://assets.publishing.service.gov.uk/static/govuk-template-d4ba5ab8f60c9df5c733e7d3c7c469ff93dc6b64d2b2a8feb94afa8f77c66193.js" crossorigin="anonymous" integrity="sha256-1LpauPYMnfXHM+fTx8Rp/5Pca2TSsqj+uUr6j3fGYZM="></script>
+
+     <script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-5f1157a433c276bcb98f3651434f7cb1f49ff45fe2ec2808b46ee088e61159b5.js" crossorigin="anonymous" integrity="sha256-XxFXpDPCdry5jzZRQ098sfSf9F/i7CgItG7giOYRWbU="></script>
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-45b84379eb7e705803e25008a3d3f218fd0bd8baf351c5dd6932224f123a099e.js" crossorigin="anonymous" integrity="sha256-RbhDeet+cFgD4lAIo9PyGP0L2LrzUcXdaTIiTxI6CZ4="></script>
+<script src="https://assets.publishing.service.gov.uk/static/surveys-45a0ac80fbe0d4575edebadef38ae2bd1e12b40a0c180c3ebc0f5730b528841a.js" crossorigin="anonymous" integrity="sha256-RaCsgPvg1Fde3rre84rivR4StAoMGAw+vA9XMLUohBo="></script>
+
+
+
+   <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
+ <script src="https://assets.publishing.service.gov.uk/service-manual-frontend/application-432b73174cf45d3fc5143205133613d8e1e6f2afc93d485cece2aaf635f0eeba.js"></script>
+</body>
+</html>

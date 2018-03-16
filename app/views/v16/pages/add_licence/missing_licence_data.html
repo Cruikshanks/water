@@ -1,0 +1,28 @@
+
+
+{% extends "v12/online_licence/reg/2-2_missing_licence_data.html" %}
+
+{% block page_title %}
+  Where should we send your security code? - GOV.UK
+{% endblock %}
+
+{% block john_licence_no_input %}
+{% block john_licence_no_label %}
+{% block john_next_page %}
+{% block john_postcode %}
+{% endblock %}
+{% endblock %}
+{% endblock %}
+{% endblock %}
+
+
+
+  <!-- only show this error if incorrectLicenceNo param passed through from route-->
+        <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+            Some information doesn’t match our records
+          </h2>
+          <ul class="error-summary-list">
+            <li data-parsely-id="licence_no"><a href="#licence_no">Check your licence number(s)</a></li>
+          </ul>
+        </div>

@@ -1,6 +1,15 @@
-{% extends "../view.html" %}
+{% extends "../head.html" %}
+
+{% from "custom_inc/waterdata.html" import permits %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence serial number {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
 
 {% block content %}
+{% for pNumber, pData in permits %}
+{% if pNumber==chosenPermitID %}
 
 <main id="content" role="main">
   <div class="phase-banner-alpha">
@@ -9,10 +18,6 @@
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
   </div>
-
-  {% from "custom_inc/waterdata.html" import permits %}
-  {% for pNumber, pData in permits %}
-  {% if pNumber==chosenPermitID %}
 
   <div class="big-space">
 
@@ -28,7 +33,7 @@
 
   </div>
 
-  <!-- page title -->
+  <!-- page heading -->
   {% if pData.LicenceName %}
     <h1 class="heading-large">{{ pData.LicenceName }}</h1>
   {% else %}
@@ -151,7 +156,7 @@
           {{ pData.Condition5 }}</br>
         {% endif %}
 
-        <a href="/v16/conditions/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+        <a href="v16/pages/impoundment/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
 
     </div>
   </div>

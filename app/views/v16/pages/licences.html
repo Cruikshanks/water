@@ -1,4 +1,9 @@
-{% extends "../view.html" %}
+{% extends "../head.html" %}
+
+{% block page_title %}
+  Your water abstraction or impoundment licences - GOV.UK
+{% endblock %}
+
 {% block content %}
 
 <main id="content" role="main">
@@ -8,6 +13,27 @@
       <strong class="phase-tag">BETA</strong>
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
+  </div>
+
+  <!-- new GDS navigation pattern -->
+  <div class="content-width">
+    <nav id="nav">
+
+      <div class="navbar">
+        <ul class="navbar__list-items">
+          <li class="navlink active">
+            <a href="/v16/pages/licences">View your licences</a>
+          </li>
+          <li class="navlink">
+            <a href="/v16/pages/access">Access to licences</a>
+          </li>
+          <li class="navlink">
+            <a href="/v16/pages/account">Account</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
   </div>
 
   <div class="big-space">
@@ -32,15 +58,22 @@
   </div>
 
   <!-- add more licences -->
-  <details>
-    <summary><span class="summary">Want to add more licences?</span></summary>
-    <div class="panel panel-border-narrow">
-      <p>
-        You can add licences you manage to your account.
-      </p>
-      <input class="button medium-space" type="submit" value="Add licences" aria-disabled="true">
-    </div>
-  </details>
+  <div class="big-space">
+    <details>
+      <summary><span class="summary">Want to add more licences?</span></summary>
+      <div class="panel panel-border-narrow">
+        <p>
+          You can add licences you manage to your account.
+        </p>
+        <p>
+          <a href="/v16/pages/add_licence/licence_number">
+            Add licences
+          </a>
+        </p>
+        <!-- <input class="button medium-space" type="submit" value="Add licences" aria-disabled="true"> -->
+      </div>
+    </details>
+  </div>
 
   <!-- licence list -->
   <div class="grid-row">
@@ -57,7 +90,7 @@
 
         </div>
         <div class="license-results-header__column">
-            Licence ends
+            Licence end date
         </div>
       </div>
 
