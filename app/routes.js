@@ -1842,6 +1842,7 @@ router.get('/*', function(req, res, next) {
   const view = req.params[0];
   res.render(view,{
      query : req.query,
+     permits : require('./permits.json'),
      "chosenPermitID":req.query['wid']
   });
 });
