@@ -1840,6 +1840,16 @@ router.post('/v13/online_licence/wendy_reg/7', function (req, res) {
 /* generic processor for the routes */
 // VERSION 1.0
 
+// router.get('/*', function(req, res, next) {
+//   const view = req.params[0];
+//   res.render(view,{
+//      query : req.query,
+//      permits : require('./permits.json'),
+//      "chosenPermitID":req.query['wid']
+//   });
+// });
+// module.exports = router
+
 router.get('/*', function(req, res, next) {
   const view = req.params[0];
   res.render(view,{
@@ -1849,12 +1859,3 @@ router.get('/*', function(req, res, next) {
   });
 });
 module.exports = router
-
-// VERSION 1.1
-// router.get('/*', function(req, res, next) {
-//   const view = req.params[0];
-//   res.render(view,{
-//      query : req.query,
-//      "chosenPermitID":req.query['wid'],
-//      "permits" : require('/path/to/permits.json')
-//   });
