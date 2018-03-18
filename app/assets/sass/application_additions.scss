@@ -606,7 +606,6 @@ details {
 }
 
 
-
 // styles for new GDS navigation style
 
 // subnav container
@@ -626,20 +625,18 @@ details {
 }
 
 // active link for subnav
-.navbar .navbar__list-items a {
+.navbar .navbar__list-items li a {
   margin-right: 15px;
   color: #0b0c0c;
   display: inline-block;
   text-decoration: none;
+  box-shadow: inset 0px -5px 0px 0px rgba(0,0,0,0);
+  padding: 15px 5px 10px 5px;
 }
 
 .navbar .navbar__list-items li.active a {
   box-shadow: inset 0px -5px 0px 0px #005ea5;
   padding: 15px 5px 10px 5px;
-}
-
-.navbar .navbar__list-items li.active {
-  color: #bfc1c3;
 }
 
 // active link for subnav
@@ -649,4 +646,38 @@ details {
 
 .navbar .navbar__list-items li.active a {
   color: #005ea5;
+}
+
+
+.navbar .navbar__list-items {
+  position:relative;
+}
+
+.navbar__list-items li:nth-last-child(-n+2) {
+  color:red;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navbar ul li{
+  display: inline-block;
+}
+
+#view-your-licence-online {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.new {
+  // background-color: #ffbf47;
+  // border-bottom: 2px solid #ffbf47;
+  color: red;
 }

@@ -1,0 +1,60 @@
+{% extends "../head.html" %}
+
+{% block page_title %}
+  Choose an option to view your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner -->
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <div class="big-space"></div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/v16/pages/signup/give_email" method="get" class="form">
+
+        <h1 class="heading-xlarge">
+          Choose an option to view your licences
+        </h1>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <!-- <legend class="visuallyhidden">Are you 18 or over?</legend> -->
+
+            <div class="multiple-choice">
+              <input id="over18True" type="radio" name="over18" value="true">
+              <label for="over18True"><span class="bold">Create an account</span></label>
+              <p>Choose this option if you haven’t used the service before.</p>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="over18False" type="radio" name="over18" value="false">
+              <label for="over18False"><span class="bold">Sign in</span></label>
+              <p>Choose this option if you’ve already created an account for this service.</p>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -1,4 +1,9 @@
 {% extends "../head.html" %}
+
+{% block page_title %}
+  Which licences do you want to be able to view? - GOV.UK
+{% endblock %}
+
 {% block content %}
 
 <main id="content" role="main">
@@ -31,7 +36,7 @@
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
-  <h1  class="heading-large">Other abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
+  <h1  class="heading-large">Conditions held for {{ pData.LicenceSerialNo }}</h1>
 
   <!-- tabs -->
   <nav class="tabs big-space">

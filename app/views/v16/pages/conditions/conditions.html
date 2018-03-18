@@ -1,4 +1,9 @@
-{% extends "../head.html" %}
+{% extends "../../head.html" %}
+
+{% block page_title %}
+  Conditions held for {{ pData.LicenceSerialNo }} - GOV.UK
+{% endblock %}
+
 {% block content %}
 
 <main id="content" role="main">
@@ -13,6 +18,10 @@
   {% from "custom_inc/waterdata.html" import permits %}
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
+
+
+  <!-- navigation block -->
+  {% include "../../partials/nav_view.html" %}
 
   <div class="big-space">
 
@@ -32,7 +41,7 @@
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
-  <h1  class="heading-large">Abstraction conditions for licence number {{ pData.LicenceSerialNo }}</h1>
+  <h1  class="heading-large">Conditions held for {{ pData.LicenceSerialNo }}</h1>
   <!--<br>Starts 1 July 2006 and ends 1 July 2018
   -->
 

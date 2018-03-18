@@ -1,7 +1,7 @@
 {% extends "v16/head.html" %}
 
 {% block page_title %}
-  We are sending you a letter - GOV.UK
+  We're sending you a letter - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -16,18 +16,16 @@
   </div>
 
   <!-- breadcrumbs -->
-  <nav>
-    <div class="breadcrumbs">
-      <ol role="breadcrumbs">
-        <li><a href="/v14/pages/manage">Manage licences</a></li>
-        <li><a href="">Request to view licences</a></li>
-          <!-- {{ pData.LicenceSerialNo }}</a></li> -->
-
-        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
-        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
-      </ol>
-    </div>
-  </nav>
+  <div class="big-space">
+    <nav id="navigate">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+        <li><a href="access">Request to view licences</a></li>
+        </ol>
+      </div>
+    </nav>
+  </div>
 
   <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
@@ -37,7 +35,7 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-large">
-        We are sending you a letter
+        We're sending you a letter
       </h1>
 
       <p>

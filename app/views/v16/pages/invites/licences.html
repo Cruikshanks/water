@@ -1,14 +1,15 @@
-{% extends "v16/head.html" %}
+{% extends "../../head.html" %}
 
+<!-- page title -->
 {% block page_title %}
-  Which licences do you want to be able to view? - GOV.UK
+  Request to manage licences - GOV.UK ~
 {% endblock %}
 
 {% block content %}
 <main id="content" role="main">
 
-  <!-- alpha banner -->
-  <div class="phase-banner-alpha">
+  <!-- beta banner -->
+  <div class="phase-banner-beta">
     <p>
       <strong class="phase-tag">BETA</strong>
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
@@ -16,16 +17,16 @@
   </div>
 
   <!-- navigation block -->
-  {% include "../../partials/nav_view.html" %}
+  {% include "../../partials/nav_access.html" %}
 
+  <!-- breadcrumbs -->
   <div class="big-space">
     <nav id="navigate">
       <!-- breadcrumbs -->
       <div class="breadcrumbs" id="breadcrumbs">
         <ol role="breadcrumbs">
-          <li><a href="../licences">Your licences</a></li>
-          <li><a href="">Add licences</a></li>
-            <!-- {{ pData.LicenceSerialNo }}</a></li> -->
+          <li><a href="/v16/pages/manage">Manage your licences</a></li>
+          <li><a href="">Request to manage licences</a></li>
         </ol>
       </div>
     </nav>
@@ -38,24 +39,27 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">Which licences do you want to add?</h1>
+      <h1 class="heading-large">Which licences would you like to manage? ~</h1>
+      <p>
+        Tell us which licences you want to manage for <span class="bold">john.waters@gmail.com</span>. ~
+      </p>
 
       <!-- form -->
       <form class="medium-space">
 
         <div class="form-group">
-          <label for="licence_no">
+          <label for="emails">
             <fieldset class="small-space">
-              <span class="form-label-bold">Enter your licence number(s)</span>
+              <span class="form-label-bold">Request to manage these licences ~</span>
               <span class="form-hint">Add one or many licences here. You can separate your licence numbers using spaces, commas, or by entering them on different lines.</span>
             </fieldset>
           </label>
-          <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
+          <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="4" required ></textarea>
         </div>
 
         <!-- continue button -->
-        <a href="select_licences">
-          <input onclick="" type="submit" value="Continue" class="button" role="button"/>
+        <a href="confirmation">
+          <input onclick="" value="Continue" class="button" role="button" type="submit">
         </a>
 
       </form>

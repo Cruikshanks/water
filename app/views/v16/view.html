@@ -1,41 +1,48 @@
 {% extends "govuk_template.html" %}
 
-<!-- {% set title = "Water abstraction licensing service" %}
+<!-- {% set title = "Water abstraction licensing service" %} -->
 
-{% block page_title %}
-{{title}} - GOV.UK
+<!-- {% block page_title %}
+  {{title}} - GOV.UK
 {% endblock %} -->
 
 {% block head %}
   <link href="/public/stylesheets/application_additions.css" media="screen" rel="stylesheet" type="text/css" />
 {% endblock %}
-
+<!--
 {% block cookie_message %}
   <p>{{cookieText | safe }}</p>
-{% endblock %}
+{% endblock %} -->
 
 {% block proposition_header %}
 
   <div class="header-proposition">
     <div class="content">
-      <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
       <nav id="proposition-menu">
         <a href="/" id="proposition-name">Manage your water abstraction or impoundment licence</a>
-
-        <ul id="proposition-links">
-          <li><a href="/v16/pages/licences" class="active">View your licences</a></li>
-          <li><a href="/v16/pages/access">Access to licences</a></li>
-          <li><a href="/v16/pages/account">Account</a></li>
-        </ul>
       </nav>
     </div>
   </div>
 
 {% endblock %}
 
+<!-- {% block header_class %}
+  with-proposition
+{% endblock %} -->
+<!--
 {% block header_class %}
   with-proposition
-{% endblock %}
+{% endblock %} -->
+
+<!-- {% block footer_support_links %}
+  {% if useAutoStoreData %}
+    <ul>
+      <li>
+        <a href="/prototype-admin/clear-data">Clear data</a>
+      </li>
+    </ul>
+  {% endif %}
+{% endblock %} -->
 
 {% block content %}
   <p>No content available</p>

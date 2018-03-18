@@ -1,5 +1,10 @@
 {% extends "../head.html" %}
 
+<!-- page title -->
+{% block page_title %}
+  Your licence contact details - GOV.UK
+{% endblock %}
+
 {% block content %}
 
 <main id="content" role="main">
@@ -32,11 +37,7 @@
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
-  {% if pData.LicenceName %}
-    <h1 class="heading-large">{{ pData.LicenceName }}</h1>
-  {% else %}
-    <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
-  {% endif %}
+  <h1 class="heading-large">Your licence contact details</h1>
 
   <!-- Licence Holder contact -->
   <div class="big-space">

@@ -1,4 +1,10 @@
-{% extends "../head.html" %}
+{% extends "../../head.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Request to manage licences - GOV.UK ~
+{% endblock %}
+
 {% block content %}
 <main id="content" role="main">
 
@@ -10,6 +16,9 @@
     </p>
   </div>
 
+  <!-- navigation block -->
+  {% include "../../partials/nav_access.html" %}
+
   <!-- breadcrumbs -->
   <div class="big-space">
     <nav id="navigate">
@@ -17,7 +26,7 @@
       <div class="breadcrumbs" id="breadcrumbs">
         <ol role="breadcrumbs">
           <li><a href="/v16/pages/manage">Manage your licences</a></li>
-          <li><a href="">Invite to service</a></li>
+          <li><a href="">Request to manage licences</a></li>
         </ol>
       </div>
     </nav>
@@ -30,8 +39,10 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">Choose which licence holders to invite</h1>
-      <p>Sending a request to licence holders means that they will receive an email invitation to view their licence online. As part of the sign up process any licences they control will be made available for you to see.</p>
+      <h1 class="heading-large">Request to manage licences ~</h1>
+      <p>
+        When you send a request we will send a letter to the licence holder. The licence holder can then give you a code to authorise you to manage their licences. ~
+      </p>
 
       <!-- form -->
       <form class="medium-space">
@@ -39,15 +50,15 @@
         <div class="form-group">
           <label for="emails">
             <fieldset class="small-space">
-              <span class="form-label-bold">Add licence holder contacts here</span>
-              <span class="form-hint">Add one or many email addresses here. You can separate your email addresses using spaces, commas, or by entering them on different lines.</span>
+              <span class="form-label-bold">Invite a licence holder ~</span>
+              <span class="form-hint">Add the licence holders contact email address ~</span>
             </fieldset>
           </label>
-          <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
+          <textarea class="form-control form-control-3-4" name="licence_holder" rows="1" required ></textarea>
         </div>
 
         <!-- continue button -->
-        <a href="confirmation">
+        <a href="licences">
           <input onclick="" value="Continue" class="button" role="button" type="submit">
         </a>
 

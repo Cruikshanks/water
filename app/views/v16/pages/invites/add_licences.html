@@ -1,4 +1,10 @@
-{% extends "../head.html" %}
+{% extends "../../head.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Which licences do you want to add? - GOV.UK
+{% endblock %}
+
 {% block content %}
 <main id="content" role="main">
 
@@ -10,6 +16,9 @@
     </p>
   </div>
 
+  <!-- navigation block -->
+  {% include "../../partials/nav_view.html" %}
+
   <!-- breadcrumbs -->
   <div class="big-space">
     <nav id="navigate">
@@ -17,7 +26,6 @@
       <div class="breadcrumbs" id="breadcrumbs">
         <ol role="breadcrumbs">
           <li><a href="/v16/pages/manage">Manage your licences</a></li>
-          <li><a href="">Invite to service</a></li>
         </ol>
       </div>
     </nav>

@@ -19,6 +19,9 @@
     </p>
   </div>
 
+  <!-- navigation block -->
+  {% include "../partials/nav_view.html" %}
+
   <div class="big-space">
 
     <!-- breadcrumbs -->
@@ -119,7 +122,7 @@
         {% if pData.Point5 %}
           {{ pData.Point5 }}<br>
         {% endif %}
-        <a href="/v16/points/points?wid={{ query.wid }}">View details of abstraction points</a>
+        <a href="points/points?wid={{ query.wid }}">View details of abstraction points</a>
 
       </div>
 
@@ -129,7 +132,7 @@
         <div class="licenceAnswerv7">
 
         {{ pData.Point1 }}<br>
-        <a href="/v16/points/points?wid={{ query.wid }}">View details of abstraction point</a>
+        <a href="points/points?wid={{ query.wid }}">View details of abstraction point</a>
 
       {% endif %}
 
@@ -156,7 +159,7 @@
           {{ pData.Condition5 }}</br>
         {% endif %}
 
-        <a href="v16/pages/impoundment/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+        <a href="conditions/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
 
     </div>
   </div>

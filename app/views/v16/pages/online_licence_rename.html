@@ -13,6 +13,9 @@
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
+  <!-- navigation block -->
+  {% include "../partials/nav_view.html" %}
+
   <div class="big-space">
 
     <!-- breadcrumbs -->
@@ -82,74 +85,77 @@
     </div>
   </div>
 
+  <!-- Licence holder -->
   <div class="datatable">
     <label>Licence holder</label>
     <div class="licenceAnswerv7">
-      {{ pData.FirstName }} {{ pData.Surname }}</br>
-      <a href="/v12_2/pages/contact_details?wid={{ pNumber }}">View licence contact details</a></div>
+      {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
+      <a href="/v16/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
     </div>
-    <div class="datatable">
-      <label>Source of supply</label>
-      <div class="licenceAnswerv7">{{ pData.Source}}</div>
+  </div>
+
+  <div class="datatable">
+    <label>Source of supply</label>
+    <div class="licenceAnswerv7">{{ pData.Source}}</div>
+  </div>
+  <div class="datatable">
+    <label>Period of abstraction</label>
+    <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
+  </div>
+
+  <div class="datatable">
+    <label>Point of abstraction</label>
+    <div class="licenceAnswerv7">
+      {{ pData.Pointofabstraction }}
     </div>
-    <div class="datatable">
-      <label>Period of abstraction</label>
-      <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
+  </div>
+
+  <div class="datatable">
+    <label>Purpose of abstraction</label>
+    <div class="licenceAnswerv7">
+
+      {{ pData.purpose1 }}</br>
+
+      {% if pData.purpose2 %}
+        {{ pData.purpose2 }}</br>
+      {% endif %}
+
+      {% if pData.purpose3 %}
+        {{ pData.purpose3 }}</br>
+      {% endif %}
+
+      {% if pData.purpose4 %}
+        {{ pData.purpose4 }}</br>
+      {% endif %}
+
+      {% if pData.purpose5 %}
+        {{ pData.purpose5 }}</br>
+      {% endif %}
+
+      <a href="/v16/pages/points_purposes/tabbed_points?wid=1">View details of abstraction purposes</a>
+
     </div>
 
-    <div class="datatable">
-      <label>Point of abstraction</label>
-      <div class="licenceAnswerv7">
-        {{ pData.Pointofabstraction }}
-      </div>
-    </div>
+  <div class="datatable">
+    <label>Abstraction conditions</label>
+    <div class="licenceAnswerv7">
+      {{ pData.condition1 }}</br>
 
-    <div class="datatable">
-      <label>Purpose of abstraction</label>
-      <div class="licenceAnswerv7">
+      {% if pData.condition2 %}
+        {{ pData.condition2 }}</br>
+      {% endif %}
 
-        {{ pData.purpose1 }}</br>
+      {% if pData.condition3 %}
+        {{ pData.condition3 }}</br>
+      {% endif %}
 
-        {% if pData.purpose2 %}
-          {{ pData.purpose2 }}</br>
-        {% endif %}
+      {% if pData.condition4 %}
+        {{ pData.condition4 }}</br>
+      {% endif %}
 
-        {% if pData.purpose3 %}
-          {{ pData.purpose3 }}</br>
-        {% endif %}
-
-        {% if pData.purpose4 %}
-          {{ pData.purpose4 }}</br>
-        {% endif %}
-
-        {% if pData.purpose5 %}
-          {{ pData.purpose5 }}</br>
-        {% endif %}
-
-        <a href="/v16/pages/points_purposes/tabbed_points?wid=1">View details of abstraction purposes</a>
-
-      </div>
-
-    <div class="datatable">
-      <label>Abstraction conditions</label>
-      <div class="licenceAnswerv7">
-        {{ pData.condition1 }}</br>
-
-        {% if pData.condition2 %}
-          {{ pData.condition2 }}</br>
-        {% endif %}
-
-        {% if pData.condition3 %}
-          {{ pData.condition3 }}</br>
-        {% endif %}
-
-        {% if pData.condition4 %}
-          {{ pData.condition4 }}</br>
-        {% endif %}
-
-        {% if pData.condition5 %}
-          {{ pData.condition5 }}</br>
-        {% endif %}
+      {% if pData.condition5 %}
+        {{ pData.condition5 }}</br>
+      {% endif %}
 
       <a href="/v16/conditions?wid=1">View details of abstraction conditions</a>
     </div>

@@ -2,7 +2,7 @@
 
 <!-- page title -->
 {% block page_title %}
-  Access to licences - GOV.UK
+  Give access to view your licences - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -18,26 +18,8 @@
 
   <!-- <div id="global-header-bar"></div> -->
 
-  <!-- new GDS navigation pattern -->
-  <div class="content-width">
-    <nav id="nav">
-
-      <div class="navbar">
-        <ul class="navbar__list-items">
-          <li class="navlink">
-            <a href="/v16/pages/licences">View your licences</a>
-          </li>
-          <li class="navlink active">
-            <a href="">Access to licences</a>
-          </li>
-          <li class="navlink">
-            <a href="/v16/pages/account">Account</a>
-          </li>
-        </ul>
-      </div>
-
-    </nav>
-  </div>
+  <!-- navigation block -->
+  {% include "../partials/nav_access.html" %}
 
   <div class="big-space">
     <nav id="navigate">
@@ -51,7 +33,7 @@
   </div>
 
   <!-- page title -->
-  <h1 class="heading-large">Access to licences</h1>
+  <h1 class="heading-large">Give access to view your licences</h1>
 
   <div class="grid-row">
     <div class="column-two-thirds">

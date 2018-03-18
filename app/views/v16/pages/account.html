@@ -1,5 +1,10 @@
 {% extends "../head.html" %}
 
+<!-- page title -->
+{% block page_title %}
+  ~ Your online account - GOV.UK
+{% endblock %}
+
 {% block content %}
 
 <main id="content" role="main">
@@ -10,58 +15,31 @@
     </p>
   </div>
 
-  <!-- new GDS navigation pattern -->
-  <div class="content-width">
-    <nav id="nav">
-
-      <div class="navbar">
-        <ul class="navbar__list-items">
-          <li class="navlink">
-            <a href="/v16/pages/licences">View your licences</a>
-          </li>
-          <li class="navlink">
-            <a href="/v16/pages/access">Access to licences</a>
-          </li>
-          <li class="navlink active">
-            <a href="">Account</a>
-          </li>
-        </ul>
-      </div>
-
-    </nav>
-  </div>
+  <!-- navigation block -->
+  {% include "../partials/nav_account.html" %}
 
   <div class="big-space">
     <nav id="navigate">
       <!-- breadcrumbs -->
       <div class="breadcrumbs" id="breadcrumbs">
         <ol role="breadcrumbs">
-          <li><a href="">Your account</a></li>
+          <li><a href="">Change password</a></li>
         </ol>
       </div>
     </nav>
   </div>
 
   <!-- page title -->
-  <h1 class="heading-large big-space">Your online account</h1>
+  <h1 class="heading-large big-space">~ Change your password</h1>
 
-    <!-- create account -->
-    <div class="grid-row">
-      <div class="column-one-half">
-        <h2 class="heading-medium small-space">Need a new password?</h2>
-        <p>You can update your account password here</p>
-        <a class="button medium-space" href="/v16/change_password/change_password.html" role="button">Change your account password</a>
-      </div>
-
-      <!-- sign in to account -->
-      <div class="column-one-half">
-        <h2 class="heading-medium small-space">Sign out</h2>
-        <p>Sign out of the Water Resourcing Licensing Service</p>
-        <a href="signin">
-          <input onclick="" value="Sign out of your account" class="button" role="button" type="submit">
-        </a>
-      </div>
+  <!-- create account -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <!-- <h2 class="heading-medium small-space">Change your password</h2> -->
+      <p>You can change your account password here</p>
+      <a class="button medium-space" href="/v16/pages/change_password/change_password.html" role="button">Change your account password</a>
     </div>
+  </div>
 
   <script src="/public/javascripts/underscore.min.js"></script>
   <script src="/public/javascripts/jquery-1.11.3.js"></script>

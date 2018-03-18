@@ -1,4 +1,4 @@
-{% extends "../head.html" %}
+{% extends "../../head.html" %}
 {% block content %}
 <main id="content" role="main">
 
@@ -10,6 +10,9 @@
     </p>
   </div>
 
+  <!-- navigation block -->
+  {% include "../../partials/nav_access.html" %}
+
   <!-- breadcrumbs -->
   <div class="big-space">
     <nav id="navigate">
@@ -17,7 +20,7 @@
       <div class="breadcrumbs" id="breadcrumbs">
         <ol role="breadcrumbs">
           <li><a href="/v16/pages/manage">Manage your licences</a></li>
-          <li><a href="">Invite to service</a></li>
+          <li><a href="">Request to manage licences</a></li>
         </ol>
       </div>
     </nav>
@@ -30,9 +33,29 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">Request sent</h1>
-      <p>An email has been sent to your licence holders and you will see their licences in your list of licences as they sign up to the service.</p>
-      <a href="/v16/pages/licences">Back to view my licences</a>
+      <h1 class="heading-large">
+        Request sent
+      </h1>
+
+      <p>
+        A letter has been sent to <span class="bold">john.waters@gmail.com</span> with a security code in it. ~
+      </p>
+
+      <p>
+        Once the receive the code, they must tell you the code to allow you to manage these licences. ~
+      </p>
+
+      <p>
+        <a href="/v16/pages/invites/request">
+          Request to manage more licences ~
+        </a>
+      </p>
+
+      <p>
+        <a href="/v16/pages/licences">
+          Back to view my licences~
+        </a>
+      </p>
 
     </div>
   </div>

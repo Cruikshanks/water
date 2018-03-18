@@ -1,6 +1,10 @@
 {% extends "../head.html" %}
-{% block content %}
 
+{% block page_title %}
+  Manage your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
 <main id="content" role="main">
 
   <!-- beta banner -->
@@ -10,6 +14,9 @@
       <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
     </p>
   </div>
+
+  <!-- navigation block -->
+  {% include "../partials/nav_access.html" %}
 
   <div class="big-space">
     <nav id="navigate">
@@ -53,9 +60,12 @@
       <!-- tab title -->
       <h2 class="heading-medium">Request to manage 3rd party licences</h2>
 
-      <p>You can request access to licences owned by a 3rd party so that you may manage these licences.</p>
-      <p>An invitation to the service will be sent and your 3rd party will need to add their licences so that you may see them.</p>
-      <a class="button medium-space" href="/v16/invites/invitees.html" role="button">Request to manage licences</a>
+      <p>Ask licence holders for permission to manage their licences. ~</p>
+
+      <p><a class="button medium-space" href="/v16/pages/invites/request.html" role="button">Request to manage licences</a></p>
+
+      <p><a href="/v16/pages/add_licence/auth_code_access">Use a code to add licences</a></p>
+
     </div>
   </div>
 
