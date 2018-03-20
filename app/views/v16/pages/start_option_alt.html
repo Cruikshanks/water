@@ -18,7 +18,7 @@
 
   <div class="big-space"></div>
 
-  <form>
+  <form data-branching>
     <div class="form-group grid-row small-space">
       <fieldset class="column-two-thirds">
 
@@ -29,13 +29,13 @@
         </div>
 
         <div class="multiple-choice">
-          <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+          <input id="radio-1" type="radio" name="radio-group" value="/v16/pages/start">
           <label for="radio-1" class="heading-medium">Create an account</label>
           <p>Choose this option if you haven’t used the service before.</p>
         </div>
 
         <div class="multiple-choice">
-          <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+          <input id="radio-2" type="radio" name="radio-group" value="/v16/pages/signin">
           <label for="radio-2" class="heading-medium">Sign in</label>
           <p>Choose this option if you’ve already created an account for this service.</p>
         </div>
@@ -44,15 +44,29 @@
           <input onclick="" value="Continue" class="button" role="button" type="submit">
         </a> -->
 
+        <input onclick="" value="Continue" class="button" role="button" type="submit">
+
       </fieldset>
 
     </div>
   </form>
 
-  <a href="start">
-    <input onclick="" value="Continue" class="button" role="button" type="submit">
-  </a>
+  <script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous">
+  </script>
 
+  <script>
+    $(function() {
+      $('form[data-branching]').on('submit', function(ev) {
+        var path = $(this).find('input:checked').val();
+        window.location.href = path;
+        ev.preventDefault();
+        return false;
+      });
+    });
+  </script>
 
 </div>
 </main>

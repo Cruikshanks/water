@@ -11,23 +11,20 @@
     </p>
   </div>
 
-  <nav id="navigate">
-    <!-- breadcrumbs -->
-    <div class="breadcrumbs" id="breadcrumbs">
-      <ol role="breadcrumbs">
-        <li><a href="/v16/pages/licences">Your licences</a></li>
-        <li><a href="">Expiring licences</a></li>
-      </ol>
-    </div>
-
-    <!-- manage controls -->
-    <div class="manage" id="manage">
-      <div class="right">
-        <a href="/v16/reset_Password/new_password.html" class="change-password">Change&nbsp;password</a>
-        <a href="/v16/pages/signin" class="sign-out">Sign&nbsp;out</a>
+  <div class="big-space">
+    <nav id="navigate">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="">Licences</a></li>
+            <!-- {{ pData.LicenceSerialNo }}</a></li> -->
+        </ol>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
+
+  <!-- navigation block -->
+  {% include "../partials/add_licences.html" %}
 
   <!-- change alert -->
   <div class="column-two-thirds">

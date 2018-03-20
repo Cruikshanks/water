@@ -10,12 +10,15 @@
     </p>
   </div>
 
+  <!-- navigation block -->
+  {% include "../partials/nav_view.html" %}
+
   <div class="big-space">
     <nav id="navigate">
       <!-- breadcrumbs -->
       <div class="breadcrumbs" id="breadcrumbs">
         <ol role="breadcrumbs">
-          <li><a href="">Your licences</a></li>
+          <li><a href="">Licences</a></li>
             <!-- {{ pData.LicenceSerialNo }}</a></li> -->
         </ol>
       </div>
@@ -26,28 +29,14 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <h1  class="heading-large">
-        Your licences
+        Licences
       </h1>
     </div>
   </div>
 
-  <!-- add more licences -->
-  <div class="big-space">
-    <details>
-      <summary><span class="summary">Want to add more licences?</span></summary>
-      <div class="panel panel-border-narrow">
-        <p>
-          You can add licences you manage to your account.
-        </p>
-        <p>
-          <a href="/v16/pages/add_licence/licence_number">
-            Add licences
-          </a>
-        </p>
-        <!-- <input class="button medium-space" type="submit" value="Add licences" aria-disabled="true"> -->
-      </div>
-    </details>
-  </div>
+  <!-- navigation block -->
+  {% include "../partials/add_licences.html" %}
+
 
   <!-- search function -->
   {% include "../partials/search.html" %}
