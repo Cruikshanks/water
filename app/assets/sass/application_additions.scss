@@ -605,7 +605,6 @@ details {
   margin-top: 50px;
 }
 
-
 // styles for new GDS navigation style
 
 // subnav container
@@ -616,12 +615,11 @@ details {
 // subnav list
 .navbar__list-items li {
   font-weight: 700;
-  display: inline-block;
+  // display: inline-block;
 }
 
 .navlink {
   display: inline-block;
-  text-decoration: none;
 }
 
 // active link for subnav
@@ -648,13 +646,8 @@ details {
   color: #005ea5;
 }
 
-
 .navbar .navbar__list-items {
   position:relative;
-}
-
-.navbar__list-items li:nth-last-child(-n+2) {
-  color:red;
 }
 
 .navbar {
