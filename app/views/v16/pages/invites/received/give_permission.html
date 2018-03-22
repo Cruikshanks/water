@@ -1,4 +1,4 @@
-{% extends "../../head.html" %}
+{% extends "../../../head.html" %}
 {% block content %}
 <main id="content" role="main">
 
@@ -10,13 +10,7 @@
     </p>
   </div>
 
-  <!-- breadcrumbs -->
-  <div class="big-space">
-
-  </div>
-
-  <!-- back -->
-  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  <div class="big-space"></div>
 
   <!-- main -->
   <div class="grid-row">
@@ -27,10 +21,13 @@
       <p>Once you accept this invite we will ask you to make an account and add your licences.</p>
 
       <!-- continue button -->
-      <!-- <a href="add_licences"> This route shows unsupported licences-->
-      <a href="licences_added">
-        <input onclick="" value="Give access and continue" class="button" role="button" type="submit">
-      </a>
+      <p>
+        <a href="access_shared">
+          <input onclick="" value="Give access and continue" class="button" role="button" type="submit">
+        </a>
+      </p>
+
+      <a href="no_thanks">I do not want to share access to my licences</a>
 
     </div>
   </div>

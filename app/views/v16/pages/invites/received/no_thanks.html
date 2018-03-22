@@ -1,4 +1,10 @@
-{% extends "../../head.html" %}
+{% extends "../../../head.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  We did not share access to your licences - GOV.UK ~
+{% endblock %}
+
 {% block content %}
 <main id="content" role="main">
 
@@ -10,10 +16,7 @@
     </p>
   </div>
 
-  <!-- breadcrumbs -->
-  <div class="big-space">
-
-  </div>
+  <div class="big-space"></div>
 
   <!-- back -->
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
@@ -23,16 +26,22 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-large">
-        Licences added
+        * We did not share access to your licences *
       </h1>
 
       <p>
-        7 licences were added to your account and access for these has been shared with <span class="bold strong">geoff@waterboss.co.uk</span>.
+        * We won’t share access to your licences until you tell us we can. *
       </p>
 
-      <div class="medium-space">
-        <a href="../licences">View my licences</a>
-      </div>
+      <p>
+        * You can view your licences *
+      </p>
+
+      <p>
+        <a href="/v16/pages/registration/create_password">
+          * View my licences *
+        </a>
+      </p>
 
     </div>
   </div>
