@@ -1,8 +1,7 @@
-{% extends "v14/layout.html" %}
-{% set title = "Which licences do you want to add?" %}
+{% extends "v16/head.html" %}
 
 {% block page_title %}
-    {{title}} - GOV.UK
+  Add abstraction licences - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -22,10 +21,6 @@
       <ol role="breadcrumbs">
         <li><a href="/v14/pages/manage">Manage licences</a></li>
         <li><a href="">Request to view licences</a></li>
-          <!-- {{ pData.LicenceSerialNo }}</a></li> -->
-
-        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
-        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
       </ol>
     </div>
   </nav>
@@ -59,7 +54,7 @@
             <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
             <label for="waste-type-2">03/07/256/7001/r01</label>
           </div>
-          
+
           <div class="multiple-choice">
             <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
             <label for="waste-type-3">03/07/256/7001/r02</label>
