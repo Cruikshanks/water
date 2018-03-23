@@ -2,7 +2,7 @@
 
 <!-- page title -->
 {% block page_title %}
-  Request to manage licences - GOV.UK ~
+  Whose licences do you want to manage online? - GOV.UK ~
 {% endblock %}
 
 {% block content %}
@@ -39,9 +39,9 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">* Request to manage licences *</h1>
+      <h1 class="heading-large">Whose licences do you want to manage online?</h1>
       <p>
-        * When you send a request we will send a letter to the licence holder. The licence holder can then give you a code to authorise you to manage their licences. *
+        We need the licence holder's email address so that we can ask their permission to share their licence information with you online.
       </p>
 
       <!-- form -->
@@ -50,18 +50,15 @@
         <div class="form-group">
           <label for="emails">
             <fieldset class="small-space">
-              <span class="form-label-bold">* Invite a licence holder *</span>
-              <span class="form-hint">Add the licence holders contact email address ~</span>
+              <span class="form-label-bold">Enter the licence holder's email address</span>
             </fieldset>
           </label>
           <textarea class="form-control form-control-3-4" name="licence_holder" rows="1" required ></textarea>
         </div>
 
         <!-- continue button -->
-        <a href="licences">
-          <input onclick="" value="Continue" class="button" role="button" type="submit">
-        </a>
-
+        <a href="licences" class="button">Continue</a>
+        
       </form>
 
     </div>

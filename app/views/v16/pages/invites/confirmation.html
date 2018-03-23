@@ -1,4 +1,10 @@
 {% extends "../../head.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  We've emailed your request - GOV.UK ~
+{% endblock %}
+
 {% block content %}
 <main id="content" role="main">
 
@@ -10,6 +16,22 @@
     </p>
   </div>
 
+  <!-- navigation block -->
+  {% include "../../partials/nav_access.html" %}
+
+  <!-- breadcrumbs -->
+  <div class="big-space">
+    <nav id="navigate">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v16/pages/manage">Manage your licences</a></li>
+          <li><a href="/v16/pages/invites/request.html">Access more licences</a></li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+
   <div class="big-space"></div>
 
   <!-- main -->
@@ -17,26 +39,31 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-large">
-        Request sent
+        We've emailed your request to <span class="bold">john.waters@gmail.com</span>
       </h1>
 
       <p>
-        * We sent an email to John to ask for access for Geoff *
+        The next steps are:
       </p>
 
-      <p>
-        * If John accepts they will receive a letter with a security code. Use this code to access these licences *
-      </p>
+      <ol class="list list-number">
+        <li>The licence holder will accept or reject your request to view and manage their licence information online.</li>
+        <li>If they accept, we'll send them a security code to the postal address on their licence to make sure they are the registered licence holder.</li>
+        <li>Once the licence holder receives the code, they can either enter it into our system or ask you to do it for them. Please contact them to agree the best way for this to happen.</li>
+        <li>As soon as the security code has been entered, you'll be able to view the licence information online.</li>
+      </ol>
+
+      <p>We've also emailed this confirmation to you for your records.</p>
 
       <p>
         <a href="/v16/pages/invites/request">
-          * Request to manage more licences *
+          Request to view more licences
         </a>
       </p>
 
       <p>
         <a href="/v16/pages/licences">
-          * Back to view my licences *
+          Back to view your licences
         </a>
       </p>
 
