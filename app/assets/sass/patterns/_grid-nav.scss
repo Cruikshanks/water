@@ -1,20 +1,28 @@
 .gridnav {
 
   display: flex;
+  flex-direction: column;
 
-  &__tile {
-    margin: 1em;
-    background: $highlight-colour;
-    flex-basis: 33%;
-    padding: 1em;
-
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
+  @media screen and (min-width: 641px) {
+    flex-direction: row;
   }
 
+  &__tile {
 
+    background: $highlight-colour;
+    padding: 15px;
+    margin: 0 0 15px 0;
+
+    @media screen and (min-width: 641px) {
+      flex-basis: 33%;
+      margin: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
