@@ -11,6 +11,7 @@ $path: "/public/images/";
 @import 'patterns/task-list';
 
 @import 'patterns/license-search';
+@import 'patterns/grid-nav';
 
 input[type=text], input[type=email], input[type=password] {
   &.parsley-error {
