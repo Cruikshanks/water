@@ -1,0 +1,20 @@
+.gridnav {
+
+  display: flex;
+
+  &__tile {
+    margin: 1em;
+    background: $highlight-colour;
+    flex-basis: 33%;
+    padding: 1em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+
+}
