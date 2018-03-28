@@ -164,7 +164,7 @@
     </div>
   </div>
 
-  <div class="datatable">
+  <div class="datatable big-space">
     <label>Abstraction amounts</label>
     <div class="licenceAnswerv7">
 
@@ -185,11 +185,15 @@
       {% if pData.Amount5 %}
         {{ pData.Amount5 }}</br>
       {% endif %}
+    </div>
 
   </div>
 
-  <br>
-  <br>
+  <!-- bad data block -->
+  {% include "../partials/bad-data.html" %}
+
+  </div>
+
 
 {% endif %}
 {% endfor %}

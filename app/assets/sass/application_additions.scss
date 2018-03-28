@@ -576,6 +576,18 @@ details {
   float: right;
 }
 
+#proposition-links, #proposition-name {
+  float: right;
+}
+
+#global-header .header-proposition #proposition-links li {
+  padding: 0 0 0 15px;
+}
+
+#proposition-menu {
+  padding-right: 15px;
+}
+
 .medium-left {
   padding-left: 15px;
 }
