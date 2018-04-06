@@ -1,0 +1,61 @@
+{% extends "../head.html" %}
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <div class="big-space">
+    <nav id="navigate">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="">Licences</a></li>
+            <!-- {{ pData.LicenceSerialNo }}</a></li> -->
+        </ol>
+      </div>
+    </nav>
+  </div>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Abstraction and impoundment licences
+      </h1>
+    </div>
+  </div>
+
+  <!-- search function -->
+  {% include "../partials/search.html" %}
+
+  <!-- licence list -->
+  <div class="grid-row">
+
+      <!-- external links -->
+      <div class="column-full">
+        <p>
+          <a href="https://datastudio.google.com/embed/reporting/1on24bMHI1dyJqegI40BF7lFFYTsa6YLx/page/lY4N" target="_blank">See the Water Resource dashboard</a>
+        </p>
+      </div>
+
+      <!-- external links -->
+      <div class="column-full">
+        <a href="licences_internal_list">I’m here to do abstraction reform</a>
+      </div>
+
+    </div>
+  </div>
+
+<script src="/public/javascripts/underscore.min.js"></script>
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/license_results.js"></script>
+
+</main>
+
+{% endblock %}

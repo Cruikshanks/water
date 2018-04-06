@@ -1,0 +1,177 @@
+{% extends "../head.html" %}
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav_view.html" %}
+
+  <div class="big-space">
+
+    <!-- breadcrumbs -->
+    <nav id="navigate">
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v17/pages/licences">Your licences</a></li>
+          <li><a href="/v17/pages/online_licence?wid={{ query.wid }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
+        </ol>
+      </div>
+    </nav>
+
+  </div>
+
+  <!-- page title -->
+  {% if pData.LicenceName %}
+    <h1 class="heading-large">{{ pData.LicenceName }}</h1>
+  {% else %}
+    <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
+  {% endif %}
+
+  <div class="datatable datahead">
+    <label>Licence name</label>
+    <div class="licenceAnswerv7">
+
+      {% if pData.LicenceName %}
+        {{ pData.LicenceName }}</br>
+        <a href="/v17/pages/online_licence_impoundment_rename?wid={{ query.wid }}">Rename this licence</a>
+      {% else %}
+        <!-- <span>No name chosen</span></br>  -->
+        <a href="/v17/pages/online_licence_impoundment_rename?wid={{ query.wid }}">Name this licence</a>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <!-- Licence holder -->
+  <div class="datatable">
+    <label>Licence holder</label>
+    <div class="licenceAnswerv7">
+      {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
+      <a href="/v17/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
+    </div>
+  </div>
+
+
+  <div class="datatable">
+    <label>Start date</label>
+    <div class="licenceAnswerv7">
+      {{ pData.EffectiveDateStart }}
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>End date</label>
+    <div class="licenceAnswerv7">
+      {{ pData.EffectiveDateEnd }}
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>Impounded body</label>
+    <div class="licenceAnswerv7">{{ pData.Source}}</div>
+  </div>
+
+  <div class="datatable">
+
+    {% if pData.Point2 %}
+
+      <label>Points of abstraction</label>
+      <div class="licenceAnswerv7">
+
+        {{ pData.Point1 }}<br>
+        {{ pData.Point2 }}<br>
+
+        {% if pData.Point3 %}
+          {{ pData.Point3 }}<br>
+        {% endif %}
+
+        {% if pData.Point4 %}
+          {{ pData.Point4 }}<br>
+        {% endif %}
+
+        {% if pData.Point5 %}
+          {{ pData.Point5 }}<br>
+        {% endif %}
+        <a href="/v17/pages/impoundment/points?wid={{ query.wid }}">View details of abstraction points</a>
+
+      </div>
+
+      {% else %}
+
+      <label>Point of abstraction</label>
+        <div class="licenceAnswerv7">
+
+        {{ pData.Point1 }}<br>
+        <a href="/v17/pages/impoundment/points?wid={{ query.wid }}">View details of abstraction point</a>
+
+      {% endif %}
+
+    </div>
+
+    <div class="datatable">
+      <label>Manner and extent of impoundment</label>
+      <div class="licenceAnswerv7">
+
+        {{ pData.MannerType1 }}</br>
+
+        {% if pData.MannerType2 %}
+          {{ pData.MannerType2 }}</br>
+        {% endif %}
+
+        {% if pData.MannerType3 %}
+          {{ pData.MannerType3 }}</br>
+        {% endif %}
+
+        {% if pData.MannerType4 %}
+          {{ pData.MannerType4 }}</br>
+        {% endif %}
+
+        {% if pData.MannerType5 %}
+          {{ pData.MannerType5 }}</br>
+        {% endif %}
+
+        <a href="/v17/pages/impoundment/manner?wid={{ query.wid }}">View details of manner of impoundment</a>
+
+      </div>
+
+    <div class="datatable">
+      <label>Further conditions</label>
+      <div class="licenceAnswerv7">
+        {{ pData.Condition1 }}</br>
+
+        {% if pData.Condition2 %}
+          {{ pData.Condition2 }}</br>
+        {% endif %}
+
+        {% if pData.Condition3 %}
+          {{ pData.Condition3 }}</br>
+        {% endif %}
+
+        {% if pData.Condition4 %}
+          {{ pData.Condition4 }}</br>
+        {% endif %}
+
+        {% if pData.Condition5 %}
+          {{ pData.Condition5 }}</br>
+        {% endif %}
+
+        <a href="/v17/pages/impoundment/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+
+    </div>
+  </div>
+
+{% endif %}
+{% endfor %}
+
+</main>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "v17/head.html" %}
+
+{% block page_title %}
+  XXX - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- alpha banner -->
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- breadcrumbs -->
+  <div class="big-space">
+    <nav id="navigate">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+        <li><a href="access">Request to view licences</a></li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Add abstraction licences
+      </h1>
+
+      <form>
+        <fieldset>
+
+          <legend>
+            <h3 class="heading-medium">Add these licences?</h3>
+            <span class="body-text">Select all that apply</span>
+            <p></p>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+            <label for="waste-type-1">03/07/256/7001</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+            <label for="waste-type-2">03/07/256/7001/r01</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+            <label for="waste-type-3">03/07/256/7001/r02</label>
+          </div>
+
+        </fieldset>
+      </form>
+      <p></p>
+
+      <!-- continue button -->
+      <a href="choose_address">
+        <input onclick="" type="submit" value="Add these licences" class="button" role="button"/>
+      </a>
+
+      </form>
+      <p></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

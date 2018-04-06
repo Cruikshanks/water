@@ -1,7 +1,7 @@
-{% extends "../view_alt.html" %}
+{% extends "../view.html" %}
 
 {% block page_title %}
-  * Useful links * - GOV.UK
+  Manage your licences - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,7 @@
   </div>
 
   <!-- navigation block -->
-  {% include "../partials/nav_access.html" %}
+  {% include "../partials/nav_manage.html" %}
 
   <div class="big-space">
     <nav id="navigate">
@@ -73,7 +73,7 @@
       <ul class="list list-bullet">
         <li><a href="#">Add more licences to your online account</a></li>
         <li><a href="#">Apply for a new licence</a></li>
-        <li><a href="#">Enter a security code you received by post</a></li>
+        <li><a href="add_licence/auth_code">Enter a security code you received by post</a></li>
       </ul>
     </div>
 
