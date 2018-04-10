@@ -1,4 +1,4 @@
-{% extends "../head.html" %}
+{% extends "../view.html" %}
 
 {% from "custom_inc/waterdata.html" import permits %}
 
@@ -34,6 +34,20 @@
       </div>
     </nav>
 
+  </div>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <!-- code alert -->
+      {% if pData.SecCode %}
+
+        <!-- internal code block -->
+        {% include "../partials/add-code.html" %}
+
+      {% endif %}
+
+    </div>
   </div>
 
   <!-- page heading -->
