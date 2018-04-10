@@ -1,0 +1,59 @@
+{% extends "../view.html" %}
+
+{% block page_title %}
+  Enter your security code - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- alpha banner -->
+  <div class="phase-banner-alpha">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- navigation block -->
+  {% include "../partials/nav_manage.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+         Enter your security code
+      </h1>
+
+      <form class="medium-space">
+        <div class="form-group">
+          <label for="password">
+            <span class="form-hint">We sent this by post to the registered address you chose.</span>
+            <fieldset>
+              <span id="enterPassword" data-parsely-id="password" class="error-message hidden">Please check your code is correct.</span>
+            </fieldset>
+          </label>
+          <input type="password" data-parsley-pattern="x45Tn" class="form-control" data-parsely-trigger="keyup change" name="password" id="password" required />
+        </div>
+
+        <input onclick="$('#incorrectLogin').hide()" type="submit" value="Continue" class="button" role="button"/>
+      </form>
+
+      <details class="closeOnOpen">
+      <summary><span class="summary">Haven’t received your code?</span></summary>
+
+      <p>Please allow up to 5 working days to receive your code by post.</p>
+      <p>If it hasn’t arrived after that time, please email <a href="mailto:water_abstractiondigital@environment-agency.gov.uk">water_abstractiondigital@environment-agency.gov.uk</a> to request a new code.</p>
+
+
+      </details>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
