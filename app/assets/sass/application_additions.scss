@@ -485,9 +485,25 @@ details {
   margin-bottom: 45px;
 }
 
-
 .clustered { // removes padding / margin underneath a h1 so that a sub-heading can be nearby
   margin-bottom: 0;
+}
+
+.spaceless { // removes padding / margin underneath a h1 so that a sub-heading can be nearby
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.sub-head {
+  font-size: 3rem;
+  color: #6f777b;
+}
+
+.sub-head a, .sub-head a:focus, .sub-head a:active, .sub-head a:visited {
+  text-decoration: none;
+  color: #6f777b;
 }
 
 .sub-data {
