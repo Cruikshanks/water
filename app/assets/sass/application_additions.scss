@@ -687,3 +687,16 @@ details {
   // border-bottom: 2px solid #ffbf47;
   color: red;
 }
+
+.text-right {
+  text-align: right;
+}
+
+.top {
+  padding-top: 0.9rem;
+}
+
+.clickable:hover {
+  cursor: pointer;
+  background-color: #f8f8f8;
+}
