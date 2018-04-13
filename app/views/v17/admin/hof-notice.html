@@ -1,0 +1,75 @@
+{% extends "../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- navigation block -->
+  {% include "../partials/nav_admin.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- page title -->
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Send notifications to licence holders
+      </h1>
+    </div>
+  </div>
+
+  <!-- search function -->
+  <div class="grid-row">
+    <div class="column-one-quarter">
+      <ul>
+        <li>Send HOF notice</a></li>
+        <li><a href="expiring-licences">Expiry reminder</a></li>
+      </ul>
+    </div>
+
+    <div class="column-two-thirds">
+
+      <h2 class="bold-medium small-space">Send a HOF notice</h2>
+
+      <!-- search for expiring licences -->
+      <div class="form-group form-group--horizontal">
+
+        <label class="form-label" for="select-box">Region of effect</label>
+        <select class="form-control" id="select-box" name="select-box">
+          <option value="" disabled selected>Select your option</option>
+          <option>Avon</option>
+          <option>Cumbria and Lancashire</option>
+          <option>Devon and Cornwall</option>
+          <option>East Anglia</option>
+          <option>East Midlands</option>
+          <option>Greater Manchester Merseyside and Cheshire</option>
+          <option>Hertfordshire and North London</option>
+          <option>Kent and South London</option>
+          <option>Lincolnshire and Northamptonshire</option>
+          <option>Northumberland Durham and Tees</option>
+          <option>Solent and South Downs</option>
+          <option>Thames</option>
+          <option>Wessex</option>
+          <option>West Midlands</option>
+          <option>Yorkshire</option>
+        </select>
+
+      </div> <!-- form group -->
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
