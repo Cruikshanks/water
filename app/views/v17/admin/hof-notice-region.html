@@ -126,10 +126,11 @@
         })
       </script> -->
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script>
         $(function() {
           // Hide initially
-          $('[data-disclose]').forEach(function() {
+          $('[data-disclose]').each(function() {
             var selector = $(this).attr('data-disclose');
             $(selector).hide();
           });
