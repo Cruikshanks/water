@@ -5,6 +5,10 @@
   Send a notification - GOV.UK
 {% endblock %}
 
+  <script src="/public/javascripts/underscore.min.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/license_results.js"></script>
+
 {% block content %}
 <main id="content" role="main">
 
@@ -43,37 +47,37 @@
       <h2 class="bold-medium small-space">Send a HOF notice</h2>
 
       <!-- search for expiring licences -->
-      <div class="form-group form-group--horizontal" id="region">
-
+      <div class="form-group form-group--horizontal">
         <label class="form-label" for="select-box">Region of effect</label>
-        <select class="form-control" id="select-box" name="select-box">
+
+        <!-- regions -->
+        <select class="form-control" name="region" data-disclose="#catchment" id="select-box" name="select-box">
           <option value="" disabled selected>Select your option</option>
-          <option selected>Avon</option>
-          <option>Cumbria and Lancashire</option>
-          <option>Devon and Cornwall</option>
-          <option>East Anglia</option>
-          <option>East Midlands</option>
-          <option>Greater Manchester Merseyside and Cheshire</option>
-          <option>Hertfordshire and North London</option>
-          <option>Kent and South London</option>
-          <option>Lincolnshire and Northamptonshire</option>
-          <option>Northumberland Durham and Tees</option>
-          <option>Solent and South Downs</option>
-          <option>Thames</option>
-          <option>Wessex</option>
-          <option>West Midlands</option>
-          <option>Yorkshire</option>
+          <option value="1" selected>Avon</option>
+          <option value="2">Cumbria and Lancashire</option>
+          <option value="3">Devon and Cornwall</option>
+          <option value="4">East Anglia</option>
+          <option value="5">East Midlands</option>
+          <option value="6">Greater Manchester Merseyside and Cheshire</option>
+          <option value="7">Hertfordshire and North London</option>
+          <option value="8">Kent and South London</option>
+          <option value="9">Lincolnshire and Northamptonshire</option>
+          <option value="10">Northumberland Durham and Tees</option>
+          <option value="11">Solent and South Downs</option>
+          <option value="12">Thames</option>
+          <option value="13">Wessex</option>
+          <option value="14">West Midlands</option>
+          <option value="15">Yorkshire</option>
         </select>
 
-      </div> <!-- form group -->
+      </div> <!-- form group end of region form -->
 
       <!-- search for expiring licences -->
-      <div class="form-group form-group--horizontal" id="CAMs">
+      <div class="form-group form-group--horizontal" id="catchment">
 
         <label class="form-label" for="select-box">Select a catchment area</label>
 
-        <div="flexy">
-
+        <div class="flexy">
           <div class="small-space">
             <select class="form-control" id="select-box" name="select-box">
               <option value="" disabled selected>Select a catchment</option>
@@ -92,14 +96,50 @@
               <option>Wye</option>
             </select>
           </div>
-
-          <p>
-            <input id="searchButton" class="button button" type="submit" value="Continue">
-          </p>
-
+          <div>
+            <p>
+              <input id="searchButton" class="button button" type="submit" value="Continue">
+            </p>
+          </div>
         </div>
 
-      </div> <!-- form group -->
+      </div>
+
+      <!-- <script>         SHOW / HIDE
+        $(function() {
+          // Hide initially
+          $('[data-disclose]').forEach(function() {
+            var selector = $(this).attr('data-disclose');
+            $(selector).hide();
+          });
+          // Toggle on value change
+          $('[data-disclose]').on('change', function() {
+            var val = $(this).val();
+            var selector = $(this).attr('data-disclose');
+            if(val) {
+              $(selector).show();
+            }
+            else {
+              $(selector).hide();
+            }
+          });
+        })
+      </script> -->
+
+      <script>
+        $(function() {
+          // Hide initially
+          $('[data-disclose]').forEach(function() {
+            var selector = $(this).attr('data-disclose');
+            $(selector).hide();
+          });
+          // Toggle on value change
+          $('[data-disclose]').on('change', function() {
+            var selector = $(this).attr('data-disclose');
+            $(selector).show();
+          });
+        })
+      </script>
 
     </div>
   </div>
