@@ -33,8 +33,9 @@
     </div>
   </div>
 
-  <!-- search function -->
+  <!-- the form to find an audience -->
   <div class="grid-row">
+
     <div class="column-one-quarter">
       <ul>
         <li>Send HOF notice</a></li>
@@ -42,88 +43,96 @@
       </ul>
     </div>
 
-    <div class="column-two-thirds">
+    <div class="split column-two-thirds">
 
-      <h2 class="bold-medium small-space">Send a HOF notice</h2>
-
-      <!-- search for expiring licences -->
-      <div class="form-group form-group--horizontal">
-        <label class="form-label" for="select-box">Region of effect</label>
-
-        <!-- regions -->
-        <select class="form-control" name="region" data-disclose="#catchment" id="select-box" name="select-box">
-          <option value="" disabled selected>Select your option</option>
-          <option value="1" selected>Avon</option>
-          <option value="2">Cumbria and Lancashire</option>
-          <option value="3">Devon and Cornwall</option>
-          <option value="4">East Anglia</option>
-          <option value="5">East Midlands</option>
-          <option value="6">Greater Manchester Merseyside and Cheshire</option>
-          <option value="7">Hertfordshire and North London</option>
-          <option value="8">Kent and South London</option>
-          <option value="9">Lincolnshire and Northamptonshire</option>
-          <option value="10">Northumberland Durham and Tees</option>
-          <option value="11">Solent and South Downs</option>
-          <option value="12">Thames</option>
-          <option value="13">Wessex</option>
-          <option value="14">West Midlands</option>
-          <option value="15">Yorkshire</option>
-        </select>
-
-      </div> <!-- form group end of region form -->
-
-      <!-- search for expiring licences -->
-      <div class="form-group form-group--horizontal" id="catchment">
-
-        <label class="form-label" for="select-box">Select a catchment area</label>
-
-        <div>
-          <div class="small-space">
-            <select class="form-control" id="select-box" name="select-box">
-              <option value="" disabled selected>Select a catchment</option>
-              <option>Avon, Dart and Erme</option>
-              <option>Bristol Avon</option>
-              <option>Bristol Avon, Little Avon, Axe and North Somerset Streams</option>
-              <option>Brue and Axe and North Somerset Streams</option>
-              <option>Little Avon</option>
-              <option>Severn Corridor</option>
-              <option>Severn Uplands</option>
-              <option>Severn Vale</option>
-              <option>Severn Vale East</option>
-              <option>Severn Vale West</option>
-              <option>Stour</option>
-              <option>Worcestershire Middle Severn</option>
-              <option>Wye</option>
-            </select>
-            <p>
-              <input id="searchButton" class="button button" type="submit" value="Continue">
-            </p>
-          </div>
-        </div>
-
+      <div>
+        <h2 class="bold-medium small-space">Send a HOF notice</h2>
       </div>
 
-      <!-- <script>         SHOW / HIDE
-        $(function() {
-          // Hide initially
-          $('[data-disclose]').forEach(function() {
-            var selector = $(this).attr('data-disclose');
-            $(selector).hide();
-          });
-          // Toggle on value change
-          $('[data-disclose]').on('change', function() {
-            var val = $(this).val();
-            var selector = $(this).attr('data-disclose');
-            if(val) {
-              $(selector).show();
-            }
-            else {
-              $(selector).hide();
-            }
-          });
-        })
-      </script> -->
+      <div class="no-space-after">
 
+        <!-- 1st dropper div-->
+        <div class="column-half flush right-small">
+
+          <!-- region dropdown -->
+          <div class="form-group form-group--horizontal">
+            <label class="form-label" for="select-box">Region of effect</label>
+
+            <!-- select region -->
+            <select class="form-control full" name="region" data-disclose="#catchment, #searchButton" id="select-box" name="select-box">
+              <option value="" disabled selected>Select your option</option>
+              <option value="1">Avon</option>
+              <option value="2">Cumbria and Lancashire</option>
+              <option value="3">Devon and Cornwall</option>
+              <option value="4">East Anglia</option>
+              <option value="5">East Midlands</option>
+              <option value="6">Greater Manchester Merseyside and Cheshire</option>
+              <option value="7">Hertfordshire and North London</option>
+              <option value="8">Kent and South London</option>
+              <option value="9">Lincolnshire and Northamptonshire</option>
+              <option value="10">Northumberland Durham and Tees</option>
+              <option value="11">Solent and South Downs</option>
+              <option value="12">Thames</option>
+              <option value="13">Wessex</option>
+              <option value="14">West Midlands</option>
+              <option value="15">Yorkshire</option>
+            </select>
+
+          </div>
+
+        </div>
+        <!-- end 1st dropper -->
+
+
+
+        <!-- 2nd dropper div-->
+        <div class="column-half flush-left">
+
+          <!-- catchment dropdown -->
+          <div class="form-group form-group--horizontal no-space-after" id="catchment">
+            <label class="form-label" for="select-box">Catchment area (optional)</label>
+
+            <!-- select region -->
+            <div class="small-space">
+              <select class="form-control full small-space" id="select-box" name="select-box">
+                <option value="" disabled selected>Select a catchment</option>
+                <option>Avon, Dart and Erme</option>
+                <option>Bristol Avon</option>
+                <option>Bristol Avon, Little Avon, Axe and North Somerset Streams</option>
+                <option>Brue and Axe and North Somerset Streams</option>
+                <option>Little Avon</option>
+                <option>Severn Corridor</option>
+                <option>Severn Uplands</option>
+                <option>Severn Vale</option>
+                <option>Severn Vale East</option>
+                <option>Severn Vale West</option>
+                <option>Stour</option>
+                <option>Worcestershire Middle Severn</option>
+                <option>Wye</option>
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- end 2nd dropper -->
+
+      </div> <!-- end of the form block row -->
+
+
+      <div class="grid-row">
+        <div class="column-one-third">
+
+          <div>
+            <!-- submit button -->
+            <input id="searchButton" class="button button" type="submit" value="Continue">
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- script to show 2nd dropper -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
       <script>
         $(function() {
@@ -132,6 +141,7 @@
             var selector = $(this).attr('data-disclose');
             $(selector).hide();
           });
+
           // Toggle on value change
           $('[data-disclose]').on('change', function() {
             var selector = $(this).attr('data-disclose');
@@ -141,6 +151,7 @@
       </script>
 
     </div>
+
   </div>
 
 </main>

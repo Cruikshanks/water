@@ -19,9 +19,6 @@ input[type=text], input[type=email], input[type=password] {
   }
 }
 
-
-
-
 // version 13 overrides
 .alert-default {
   border-color: #008EC9;
@@ -724,4 +721,30 @@ details {
 
 .task-error {
   background-color: #B10E1E;
+}
+
+.full {
+  width: 100%;
+}
+
+.flush-left {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.right-small {
+  padding-right: 15px;
+}
+
+.sinks {
+  align-self: flex-end;
+}
+
+.flex-column {
+  flex-flow: column;
+}
+
+.no-space-after {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
