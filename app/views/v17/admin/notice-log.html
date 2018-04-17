@@ -1,26 +1,30 @@
 {% extends "../view.html" %}
 
 {% block page_title %}
-  Your water abstraction or impoundment licences - GOV.UK
+  Notification report - GOV.UK
 {% endblock %}
 
 {% block content %}
 <main id="content" role="main">
 
-  <!-- spacer -->
-  <div class="grid-row big-space"></div>
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="medium-space"></div>
+
+  <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
   <div class="grid-row">
     <div class="column-two-thirds medium-space">
       <h2 class="sub-head">
-        <a href="notice-batches">WRLS notifications log</a>
+        <a href="notice-batches">Notification report</a>
       </h2>
       <h1 class="heading-xlarge spaceless">
         HOF2
       </h1>
       <h2 class="heading-small spaceless">
-        13 May 2018, 10.01am
+        13 May 2018, 10:01am
       </h2>
     </div>
   </div>
@@ -42,7 +46,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <details>
-        <summary><span class="summary">Audience selection</span></summary>
+        <summary><span class="summary">Selected recipient(s)</span></summary>
         <div class="panel panel-border-narrow">
           <p>
             River Ayre, between Dibly and Davinport
@@ -99,7 +103,7 @@
             <td class="text">Email</td>
             <td class="text">
               <strong class="task-completed task-error">
-                Bounced
+                Failed
               </strong>
             </td>
           </tr>
@@ -119,7 +123,7 @@
             <td class="text">SMS</td>
             <td class="text">
               <strong class="task-completed task-error">
-                Not delivered
+                Failed
               </strong>
             </td>
           </tr>

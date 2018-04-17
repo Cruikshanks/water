@@ -12,12 +12,8 @@
 {% block content %}
 <main id="content" role="main">
 
-  <div class="phase-banner-beta">
-    <p>
-      <strong class="phase-tag">BETA</strong>
-      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
-    </p>
-  </div>
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
 
   <!-- navigation block -->
   {% include "../partials/nav_admin.html" %}
@@ -59,7 +55,7 @@
             <label class="form-label" for="select-box">Region of effect</label>
 
             <!-- select region -->
-            <select class="form-control full" name="region" data-disclose="#catchment, #searchButton" id="select-box" name="select-box">
+            <select class="form-control full" name="region" data-disclose="#catchment, #submitButton" id="select-box" name="select-box">
               <option value="" disabled selected>Select your option</option>
               <option value="1">Avon</option>
               <option value="2">Cumbria and Lancashire</option>
@@ -125,12 +121,12 @@
 
           <div>
             <!-- submit button -->
-            <input id="searchButton" class="button button" type="submit" value="Continue">
+            <!-- <input id="searchButton" class="button button" type="submit" value="Continue"> -->
+            <a href="select-licences" id="submitButton" class="button button" type="submit" value="Continue">Continue</a>
           </div>
 
         </div>
       </div>
-
 
       <!-- script to show 2nd dropper -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

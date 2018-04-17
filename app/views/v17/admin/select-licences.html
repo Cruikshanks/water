@@ -1,0 +1,66 @@
+{% extends "../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="medium-space"></div>
+
+  <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+            <h1 class="heading-large">
+              Licences for Avon, Bristol Avon
+            </h1>
+
+            <form method="post" action="/v11/online_licence/registrations/4_give_email">
+              <fieldset class="medium-space">
+
+                <legend class="medium-space">
+                  <span class="body-text">We will notify the licence holders for these licences with HOF conditions</span>
+                </legend>
+
+                <div class="multiple-choice">
+                  <input checked name="waste-types" type="checkbox">
+                  <label for="waste-type-1">03/28/60/0001</label>
+                </div>
+                <div class="multiple-choice">
+                  <input checked name="waste-types" type="checkbox">
+                  <label>03/28/60/0002</label>
+                </div>
+                <div class="multiple-choice">
+                  <input checked name="waste-types" type="checkbox">
+                  <label>03/28/60/0003</label>
+                </div>
+                <div class="multiple-choice">
+                  <input checked name="waste-types" type="checkbox">
+                  <label>03/28/60/0004</label>
+                </div>
+                <div class="multiple-choice">
+                  <input checked name="waste-types" type="checkbox">
+                  <label>03/28/60/0005</label>
+                </div>
+                <div class="multiple-choice">
+                  <input checked name="waste-types" type="checkbox">
+                  <label>03/28/60/0006</label>
+                </div>
+
+              </fieldset>
+
+          <input type="submit" value="Continue" class="button" role="button"/></form>
+      </div>
+    </div>
+  </br>
+
+</main>
+
+{% endblock %}
