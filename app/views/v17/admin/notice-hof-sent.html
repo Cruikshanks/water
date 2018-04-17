@@ -1,0 +1,44 @@
+{% extends "../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav_admin.html" %}
+
+  <div class="medium-space"></div>
+
+  <!-- confirmation panel -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-large">
+          HOF sent
+        </h1>
+        <p class="font-medium">
+          A HOF notice was sent to 6 recipients, selected by <span class="bold-medium">Avon, Little Avon</span> catchments<br>
+        </p>
+      </div>
+
+      <p>
+        <a href="notice-batches">
+          See report for notices
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+  </div>
+
+</main>
+{% endblock %}
