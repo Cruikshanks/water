@@ -11,12 +11,15 @@
   <!-- beta banner block -->
   {% include "../partials/beta-banner.html" %}
 
+  <!-- navigation block -->
+  {% include "../partials/nav_admin.html" %}
+
   <div class="medium-space"></div>
 
   <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
 
   <div class="grid-row">
-    <div class="column-two-thirds">
+    <div class="column-full">
 
             <h1 class="heading-large">
               Licences for Avon, Bristol Avon
@@ -29,30 +32,109 @@
                   <span class="body-text">We will notify the licence holders for these licences with HOF conditions</span>
                 </legend>
 
-                <div class="multiple-choice">
-                  <input checked name="waste-types" type="checkbox">
-                  <label for="waste-type-1">03/28/60/0001</label>
-                </div>
-                <div class="multiple-choice">
-                  <input checked name="waste-types" type="checkbox">
-                  <label>03/28/60/0002</label>
-                </div>
-                <div class="multiple-choice">
-                  <input checked name="waste-types" type="checkbox">
-                  <label>03/28/60/0003</label>
-                </div>
-                <div class="multiple-choice">
-                  <input checked name="waste-types" type="checkbox">
-                  <label>03/28/60/0004</label>
-                </div>
-                <div class="multiple-choice">
-                  <input checked name="waste-types" type="checkbox">
-                  <label>03/28/60/0005</label>
-                </div>
-                <div class="multiple-choice">
-                  <input checked name="waste-types" type="checkbox">
-                  <label>03/28/60/0006</label>
-                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        <a href="#">
+                          Licence number
+                          <span class="sort-icon"> &#x25be;</span>
+                        </a>
+                      </th>
+                      <th class="text" scope="col">
+                        <a href="#">
+                          Licence name
+                        </a>
+                      </th>
+                      <th class="text" scope="col">
+                        <a href="#">
+                          Licence holder
+                        </a>
+                      </th>
+                      <th class="text" scope="col">
+                        <a href="#">
+                          Email address
+                        </a>
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <tr>
+                      <th scope="row">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>018/54/0013</label>
+                        </div>
+                      </th>
+                      <td class="text">Big pump</td>
+                      <td class="text">James Twitch</td>
+                      <td class="text">jombodge.twick@massive-water.com</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>101/54/0013</label>
+                        </div>
+                      </th>
+                      <td class="text"></td>
+                      <td class="text">Shuuma Misov</td>
+                      <td class="text">shuuma.misov@live.com</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>034/01/0014</label>
+                        </div>
+                      </th>
+                      <td class="text">Small shed</td>
+                      <td class="text">Dave Briar</td>
+                      <td class="text">thepicklewanderer77@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>028/*22/0013/r001</label>
+                        </div>
+                      </th>
+                      <td class="text">Boathouse</td>
+                      <td class="text">Barry Boaforre</td>
+                      <td class="text">thebiffbaffboff@live.com</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>036/06/0013</label>
+                        </div>
+                      </th>
+                      <td class="text"></td>
+                      <td class="text">Shannon Sufans</td>
+                      <td class="text">sharib.sufans@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>034/81/0131</label>
+                        </div>
+                      </th>
+                      <td class="text"></td>
+                      <td class="text">Dana Picklotan</td>
+                      <td class="text">hello@abstractioneers.com</td>
+                    </tr>
+
+                  </tbody>
+                </table>
 
               </fieldset>
 
