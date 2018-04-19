@@ -1,0 +1,53 @@
+{% extends "../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav_admin.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- confirmation panel -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <!-- page title -->
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h1  class="heading-large">
+            Sending an expiry notice
+          </h1>
+        </div>
+      </div>
+
+      <div class="govuk-box-highlight">
+        <h2 class="heading-large tight">
+          Licence expiry notice sent
+        </h2>
+        <p class="font-medium">
+          A licence expiry notice was sent to 6 recipients, selected by <span class="bold-medium">Avon, Little Avon</span> catchments<br>
+        </p>
+      </div>
+
+      <p>
+        <a href="notice-batches">
+          See report for notices
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+  </div>
+
+</main>
+{% endblock %}

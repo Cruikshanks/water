@@ -624,7 +624,10 @@ details {
 }
 
 .flexy {
-  display: flex;
+  @media screen and (min-width: 641px) {
+    display: flex;
+  }
+  display: 0;
 }
 
 #search-button-hack {
@@ -733,7 +736,10 @@ details {
 }
 
 .right-small {
-  padding-right: 15px;
+  padding-right: 0;
+  @media screen and (min-width: 641px) {
+    padding-right: 15px;
+  }
 }
 
 .sinks {
@@ -769,4 +775,80 @@ details {
 
 .govuk-box-highlight {
   padding: 30px;
+}
+
+.card {
+  background-color: $panel-colour;
+  padding: 15px;
+  height: 100%;
+}
+
+.card ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.tight {
+  margin-top: 15px;
+}
+
+.xsmall {
+  @media screen and (min-width: 641px) {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.old {
+  color: $grey-1;
+}
+
+.oldest {
+  color: $grey-2;
+}
+
+.clickable, a {
+  text-decoration: none;
+}
+
+.table {
+  background-color: #fcfcfc;
+  padding-bottom: 15px;
+  @media (min-width: 768px) {
+    display: table;
+    width: 100%;
+  }
+}
+
+.table-row {
+
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    display: table-row;
+  }
+}
+
+.table-head {
+  display: none;
+  @media (min-width: 768px) {
+    display: table-row;
+  }
+}
+
+.table-cell {
+  color: #0b0c0c;
+  font-size: inherit;
+
+  border-bottom: 1px solid #bfc1c3;
+  padding: 15px;
+  padding-left: 0;
+  @media (min-width: 768px) {
+    display: table-cell;
+  }
+}
+
+.table-cell .multiple-choice {
+  float: none;
 }
