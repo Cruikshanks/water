@@ -13,6 +13,9 @@ $path: "/public/images/";
 @import 'patterns/license-search';
 @import 'patterns/grid-nav';
 
+// flextable behaviour
+ @import "navigation.css";
+
 input[type=text], input[type=email], input[type=password] {
   &.parsley-error {
     border: 4px solid #b10e1e;
@@ -322,7 +325,7 @@ a.password_reset {
   padding-left: 3em;
 }
 
-.licenceData {
+.licencedata {
   display: inline-block;
   width: 50%;
   padding-bottom: 7px;
@@ -813,8 +816,11 @@ details {
   text-decoration: none;
 }
 
+
+// flextable
+// flextable styles
+
 .table {
-  background-color: #fcfcfc;
   padding-bottom: 15px;
   @media (min-width: 768px) {
     display: table;
@@ -823,7 +829,7 @@ details {
 }
 
 .table-row {
-
+  cursor: pointer;
   margin-bottom: 30px;
   @media (min-width: 768px) {
     display: table-row;
@@ -851,4 +857,11 @@ details {
 
 .table-cell .multiple-choice {
   float: none;
+}
+
+.last-row div {
+  border-bottom: 1px solid #bfc1c3;
+  @media (min-width: 768px) {
+    border-bottom: none;
+  }
 }

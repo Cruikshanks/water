@@ -1,0 +1,41 @@
+// flextable styles
+
+.table {
+  background-color: #fcfcfc;
+  padding-bottom: 15px;
+  @media (min-width: 768px) {
+    display: table;
+    width: 100%;
+  }
+}
+
+.table-row {
+  cursor: pointer;
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    display: table-row;
+  }
+}
+
+.table-head {
+  display: none;
+  @media (min-width: 768px) {
+    display: table-row;
+  }
+}
+
+.table-cell {
+  color: #0b0c0c;
+  font-size: inherit;
+
+  border-bottom: 1px solid #bfc1c3;
+  padding: 15px;
+  padding-left: 0;
+  @media (min-width: 768px) {
+    display: table-cell;
+  }
+}
+
+.table-cell .multiple-choice {
+  float: none;
+}
