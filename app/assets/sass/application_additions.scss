@@ -781,7 +781,8 @@ details {
 }
 
 .card {
-  background-color: $panel-colour;
+  // background-color: $panel-colour;
+  border: 3px solid $grey-2;
   padding: 15px;
   height: 100%;
 }
@@ -844,7 +845,6 @@ details {
 }
 
 .table-cell {
-  color: #0b0c0c;
   font-size: inherit;
 
   border-bottom: 1px solid #bfc1c3;
@@ -856,12 +856,36 @@ details {
 }
 
 .table-cell .multiple-choice {
+  white-space:nowrap;
   float: none;
 }
 
-.last-row div {
-  border-bottom: 1px solid #bfc1c3;
+.multiple-choice {
+  padding-top: 11px;
+  // padding-bottom: 0;
+}
+
+// .last-row div {
+//   border-bottom: 1px solid #bfc1c3;
+//   @media (min-width: 768px) {
+//     border-bottom: none;
+//   }
+// }
+//
+// .top {
+//   border-bottom: none;
+//   // background-color: red;
+// }
+
+.context {
+  color: $grey-1;
+  display: block;
+  display: auto;
   @media (min-width: 768px) {
-    border-bottom: none;
+    display: none;
   }
+}
+
+.full {
+  width: 100%;
 }
