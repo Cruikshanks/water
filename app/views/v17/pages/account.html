@@ -1,44 +1,54 @@
-{% extends "../head.html" %}
+{% extends "../view.html" %}
 
-<!-- page title -->
 {% block page_title %}
-  ~ Your online account - GOV.UK
+  Account options - GOV.UK
 {% endblock %}
 
 {% block content %}
 
 <main id="content" role="main">
-  <div class="phase-banner-beta">
-    <p>
-      <strong class="phase-tag">BETA</strong>
-      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
-    </p>
-  </div>
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
 
   <!-- navigation block -->
   {% include "../partials/nav_head.html" %}
 
-  <div class="big-space">
+  <div class="small-space">
     <nav id="navigate">
       <!-- breadcrumbs -->
       <div class="breadcrumbs" id="breadcrumbs">
         <ol role="breadcrumbs">
-          <li><a href="">Change password</a></li>
+          <li><a href="/v17/pages/account">Account options</a></li>
+          <!-- <li><a href="">Change password</a></li> -->
         </ol>
       </div>
     </nav>
   </div>
 
   <!-- page title -->
-  <h1 class="heading-large big-space">~ Change your password</h1>
+  <h1  class="heading-large medium-space">Account options</h1>
 
-  <!-- create account -->
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <!-- <h2 class="heading-medium small-space">Change your password</h2> -->
-      <p>You can change your account password here</p>
-      <a class="button medium-space" href="/v17/pages/change_password/change_password.html" role="button">Change your account password</a>
+  <div id="feature-info" class="grid-row flexy">
+
+    <div class="column-two-thirds medium-space">
+      <div class="card">
+        <!-- <h2 class="heading-medium">Reports</h2> -->
+        <ul class="list list-bullet">
+          <li>
+            <a href="contact-preferences">
+              Choose how we contact you
+            </a>
+          </li>
+          <li>
+            <a href="change_password/change_password.html">
+              Change your account password
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+
   </div>
 
   <script src="/public/javascripts/underscore.min.js"></script>

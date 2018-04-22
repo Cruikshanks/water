@@ -1,0 +1,91 @@
+{% extends "../view.html" %}
+
+{% block page_title %}
+  Choose how we contact you - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- navigation block -->
+  {% include "../partials/nav_head.html" %}
+
+  <div class="small-space">
+    <nav id="navigate">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v17/pages/account">Account options</a></li>
+          <li><a href="">Choose how we contact you</a></li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <h1 class="heading-medium">
+              Choose how we contact you
+            </h1>
+          </legend>
+
+          <p>
+            We will use this to contact you about changes to conditions that may affect your abstraction conditions
+          </p>
+
+          <div class="multiple-choice" data-target="contact-by-email">
+            <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+            <label for="example-contact-by-email">Email</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden medium-space" id="contact-by-email">
+            <label class="form-label" for="contact-email">Email address</label>
+            <p>
+              <input class="form-control" name="contact-email" type="text" id="contact-email">
+            </p>
+            <a href="contact-preference-set" class="button" disabled aria-disabled="true">Use this</a>
+          </div>
+
+          <div class="multiple-choice" data-target="contact-by-phone">
+            <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+            <label for="example-contact-by-phone">Phone</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden medium-space" id="contact-by-phone">
+            <label class="form-label" for="contact-phone">Phone number</label>
+            <p>
+              <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+            </p>
+            <input class="button" type="submit" value="Use this" disabled="disabled" aria-disabled="true">
+          </div>
+
+          <div class="multiple-choice" data-target="contact-by-text">
+            <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+            <label for="example-contact-by-text">Text message</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden medium-space" id="contact-by-text">
+            <label class="form-label" for="contact-text-message">Mobile phone number</label>
+            <p>
+              <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+            </p>
+            <input class="button" type="submit" value="Use this" disabled="disabled" aria-disabled="true">
+          </div>
+
+        </fieldset>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
