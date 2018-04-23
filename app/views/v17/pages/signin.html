@@ -7,13 +7,8 @@ Enter the password you created{% extends "../head.html" %}
 {% block content %}
 <main id="content" role="main">
 
-  <!-- beta banner -->
-  <div class="phase-banner-beta big-space">
-    <p>
-      <strong class="phase-tag">BETA</strong>
-      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
-    </p>
-  </div>
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds">

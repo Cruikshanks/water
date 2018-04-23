@@ -1,4 +1,4 @@
-{% extends "../view.html" %}
+{% extends "../admin.html" %}
 
 <!-- page title -->
 {% block page_title %}
@@ -18,8 +18,6 @@
   <!-- navigation block -->
   {% include "../partials/nav_admin.html" %}
 
-  <div class="medium-space"></div>
-
   <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
 
   <!-- page title -->
@@ -38,7 +36,12 @@
 
         <form>
           <div class="form-group">
-            <label class="form-label-bold">Gauging station reading</label>
+            <label class="form-label-bold">Gauging station</label>
+            <input class="form-control" type="numeric">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold">Daily Mean Flow</label>
             <input class="form-control" type="numeric">
           </div>
         </form>

@@ -1,4 +1,4 @@
-{% extends "../view.html" %}
+{% extends "../admin.html" %}
 
 <!-- page title -->
 {% block page_title %}
@@ -13,8 +13,6 @@
 
   <!-- navigation block -->
   {% include "../partials/nav_admin.html" %}
-
-  <div class="medium-space"></div>
 
   <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
 
@@ -31,7 +29,7 @@
   <div class="grid-row">
     <div class="column-full">
 
-      <form method="post" action="hof-preview">
+      <form method="post" action="hof-add-data">
         <fieldset class="small-space">
 
           <legend class="medium-space">

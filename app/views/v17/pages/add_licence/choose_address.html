@@ -7,26 +7,9 @@
 {% block content %}
 
 <main id="content" role="main">
-  <div class="phase-banner-alpha">
-    <p>
-      <strong class="phase-tag">BETA</strong>
-      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
-    </p>
-  </div>
 
-  <!-- breadcrumbs -->
-  <nav>
-    <div class="breadcrumbs">
-      <ol role="breadcrumbs">
-        <li><a href="/v14/pages/manage">Manage licences</a></li>
-        <li><a href="">Request to view licences</a></li>
-          <!-- {{ pData.LicenceSerialNo }}</a></li> -->
-
-        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
-        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
-      </ol>
-    </div>
-  </nav>
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
 
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
