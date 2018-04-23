@@ -5,29 +5,13 @@
 {% endblock %}
 
 {% block content %}
-
 <main id="content" role="main">
-  <div class="phase-banner-beta">
-    <p>
-      <strong class="phase-tag">BETA</strong>
-      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
-    </p>
-  </div>
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
 
   <!-- navigation block -->
   {% include "../partials/nav_head.html" %}
-
-  <div class="small-space">
-    <nav id="navigate">
-      <!-- breadcrumbs -->
-      <div class="breadcrumbs" id="breadcrumbs">
-        <ol role="breadcrumbs">
-          <li><a href="/v17/pages/account">Account options</a></li>
-          <li><a href="">Choose how we contact you</a></li>
-        </ol>
-      </div>
-    </nav>
-  </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -49,6 +33,7 @@
             <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes" checked="checked">
             <label for="example-contact-by-email">Email</label>
           </div>
+
           <div class="panel panel-border-narrow js-hidden medium-space" id="contact-by-email">
             <label class="form-label" for="contact-email">Email address</label>
             <p>
@@ -57,26 +42,33 @@
             <a href="contact-preference-set" class="button">Use this</a>
           </div>
 
-          <div class="multiple-choice" data-target="contact-by-phone">
+          <!-- <div class="multiple-choice" data-target="contact-by-phone">
             <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
             <label for="example-contact-by-phone">Phone</label>
           </div>
+
           <div class="panel panel-border-narrow js-hidden medium-space" id="contact-by-phone">
             <label class="form-label" for="contact-phone">Phone number</label>
             <p>
               <input class="form-control" name="contact-phone" type="text" id="contact-phone">
             </p>
             <input class="button" type="submit" value="Use this" disabled="disabled" aria-disabled="true">
-          </div>
+          </div> -->
 
           <div class="multiple-choice" data-target="contact-by-text">
             <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
-            <label for="example-contact-by-text">Text message</label>
+            <label for="example-contact-by-text">Letter</label>
           </div>
+
           <div class="panel panel-border-narrow js-hidden medium-space" id="contact-by-text">
-            <label class="form-label" for="contact-text-message">Mobile phone number</label>
+            <label class="form-label" for="contact-text-message">Contact address</label>
             <p>
-              <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+              <!-- <input class="form-control" name="contact-text-message" type="text" id="contact-text-message"> -->
+              <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required >
+Sunnybrooke Farm, Jammingford
+Birmingham,
+B37 6RY
+              </textarea>
             </p>
             <input class="button" type="submit" value="Use this" disabled="disabled" aria-disabled="true">
           </div>
