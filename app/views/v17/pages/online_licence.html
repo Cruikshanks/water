@@ -1,9 +1,5 @@
 {% extends "../view.html" %}
 
-{% from "custom_inc/waterdata.html" import permits %}
-{% for pNumber, pData in permits %}
-{% if pNumber==chosenPermitID %}
-
 <!-- page title -->
 {% block page_title %}
   Licence number {{ pData.LicenceNumber }} - GOV.UK
@@ -12,11 +8,15 @@
 {% block content %}
 <main id="content" role="main">
 
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
   <!-- beta banner block -->
   {% include "../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../partials/nav_view.html" %}
+  {% include "../partials/nav-view.html" %}
 
   <div class="big-space">
 

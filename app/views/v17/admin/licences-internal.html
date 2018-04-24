@@ -1,5 +1,6 @@
 {% extends "../admin.html" %}
 
+<!-- page title -->
 {% block page_title %}
   View licences - GOV.UK
 {% endblock %}
@@ -11,7 +12,7 @@
   {% include "../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../partials/nav_lookup.html" %}
+  {% include "../partials/nav-admin-view.html" %}
 
   <!-- page title -->
   <div class="grid-row">
@@ -23,40 +24,7 @@
   </div>
 
   <!-- search function -->
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <div class="form-group form-group--horizontal">
-        <label class="form-label form-label--bold" for="emailAddress">Search licences</label>
-        <span class="form-hint">Search by licence number, licence name or the licence holder’s email address</span>
-
-        <div class="flexy">
-          <input type="text" class="form-control form-control--block column-two-thirds" />
-          <div class="column-one-third">
-            <a href="licences-internal-list">
-              <input onclick="" value="Search" class="button full" role="button" type="submit">
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- licence list -->
-  <!-- <div class="grid-row">
-
-      <div class="column-full">
-        <p>
-          <a href="https://datastudio.google.com/embed/reporting/1on24bMHI1dyJqegI40BF7lFFYTsa6YLx/page/lY4N" target="_blank">See the Water Resource dashboard</a>
-        </p>
-      </div>
-
-      <div class="column-full">
-        <a href="licences-internal-list">I’m here to do abstraction reform</a>
-      </div>
-
-    </div>
-  </div> -->
+  {% include "../partials/admin-search.html" %}
 
 <script src="/public/javascripts/underscore.min.js"></script>
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
