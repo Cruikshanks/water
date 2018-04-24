@@ -35,11 +35,11 @@
           </div>
 
           <div class="panel panel-border-narrow js-hidden medium-space" id="contact-by-email">
-            <label class="form-label" for="contact-email">Email address</label>
+            <label class="form-label" for="contact-email"><p class="bold-small">Email address</p></label>
             <p>
               <input class="form-control" name="contact-email" type="text" id="contact-email">
             </p>
-            <!-- <a href="contact-preference-set" class="button" disabled aria-disabled="true">Use this</a> -->
+
             <a href="contact-preference-set" class="button">Use this</a>
           </div>
 
@@ -62,7 +62,7 @@
           </div>
 
           <div class="panel panel-border-narrow medium-space" id="contact-by-text">
-            <label class="form-label" for="contact-text-message">Main contact address</label>
+            <label class="form-label" for="contact-text-message"><p class="bold-small">Main postal address</p></label>
             <p>
               <!-- <input class="form-control" name="contact-text-message" type="text" id="contact-text-message"> -->
               <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required >
@@ -71,7 +71,9 @@ Birmingham,
 B37 6RY
               </textarea>
             </p>
-            <input class="button" type="submit" value="Use this" disabled="disabled" aria-disabled="true">
+            <a href="contact-preference-letter-set" class="button">
+              Use this postal address
+            </a>
           </div>
 
         </fieldset>

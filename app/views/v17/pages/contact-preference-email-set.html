@@ -34,12 +34,12 @@
             <label for="example-contact-by-email">Email</label>
           </div>
           <div class="panel panel-border-narrow medium-space" id="contact-by-email">
-            <label class="form-label" for="contact-email">Email address</label>
+            <label class="form-label" for="contact-email"><p class="bold-small">Email address</p></label>
             <p class="bold-small">
               office@abstractioneers.com
               <!-- <input class="form-control" name="contact-email" type="text" id="contact-email"> -->
             </p>
-            <a href="contact-preferences-alt">Choose another email address</a>
+            <a href="contact-preference-email-edit">Choose another email address</a>
           </div>
 
           <!-- <div class="multiple-choice" data-target="contact-by-phone">
@@ -59,21 +59,21 @@
             <label for="example-contact-by-text">Letter</label>
           </div>
 
-          <div class="panel panel-border-narrow js-hidden medium-space" id="contact-by-text">
-            <label class="form-label" for="contact-text-message">Contact address</label>
+          <div class="panel panel-border-narrow medium-space" id="contact-by-text">
+            <label class="form-label" for="contact-text-message"><p class="bold-small">Main postal address</p></label>
             <p>
               <!-- <input class="form-control" name="contact-text-message" type="text" id="contact-text-message"> -->
-              <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required >
-Sunnybrooke Farm, Jammingford
-Birmingham,
-B37 6RY
-              </textarea>
+              <!-- <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required > -->
+                Sunnybrooke Farm, Jammingford<br>
+                Birmingham,<br>
+                B37 6RY<br>
+              <!-- </textarea> -->
             </p>
-            <input class="button" type="submit" value="Use this" disabled="disabled" aria-disabled="true">
+            <!-- <a href="contact-preferences-edit" class="button">
+              Choose another mail address
+            </a> -->
+            <a href="contact-preference-letter-edit">Choose another postal address</a>
           </div>
-
-        </fieldset>
-      </div>
 
     </div>
   </div>
