@@ -1,8 +1,8 @@
-{% extends "../head.html" %}
+{% extends "../view.html" %}
 
 <!-- page title -->
 {% block page_title %}
-  XXXXX - GOV.UK
+  Your licences - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -18,8 +18,12 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <h1  class="heading-large">
-        Licences
+        Your licences
       </h1>
+      <div class="medium-space">
+        <!-- disclaimer block -->
+        {% include "../partials/disclaimer.html" %}
+      </div>
     </div>
   </div>
 
