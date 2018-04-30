@@ -20,16 +20,22 @@
   <div class="big-space"></div>
 
   <!-- back -->
-  <div class="small-space">
-    <a href="#" class="link-back" onclick="history.go(-1)">Licence number {{ pData.LicenceSerialNo }}</a>
+  <div class="medium-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Licence number {{pData.LicenceSerialNo}}</a>
   </div>
 
-  <div class="grid-row">
-    <div class="column-two-thirds medium-space">
-      <!-- page title -->
-      <h1  class="heading-large">Abstraction points for licence number {{ pData.LicenceSerialNo }}</h1>
-    </div>
-  </div>
+  <!-- page heading -->
+  {% if pData.LicenceName %}
+    <!-- page title -->
+    <h1 class="heading-large medium-space">
+      <span class="heading-secondary">
+        Licence number {{pData.LicenceSerialNo}}
+      </span>
+      Abstraction points for {{ pData.LicenceName }}
+    </h1>
+  {% else %}
+    <h1 class="heading-large">Abstraction points for licence number {{ pData.LicenceSerialNo }}</h1>
+  {% endif %}
 
   <div class="grid-row">
     <div class="column-full">

@@ -1,31 +1,41 @@
-{% extends "../../head.html" %}
+{% extends "../../view.html" %}
 
 {% block page_title %}
   Conditions held for {{ pData.LicenceSerialNo }} - GOV.UK
 {% endblock %}
 
 {% block content %}
-
 <main id="content" role="main">
-
-  <!-- beta banner block -->
-  {% include "../../partials/beta-banner.html" %}
 
   {% from "custom_inc/waterdata.html" import permits %}
   {% for pNumber, pData in permits %}
   {% if pNumber==chosenPermitID %}
 
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
   {% include "../../partials/nav-view.html" %}
 
-  <!-- back button -->
-  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  <div class="big-space"></div>
 
-  <!-- page title -->
-  <h1  class="heading-large">Conditions held for {{ pData.LicenceSerialNo }}</h1>
-  <!--<br>Starts 1 July 2006 and ends 1 July 2018
-  -->
+  <!-- back -->
+  <div class="medium-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Licence number {{pData.LicenceSerialNo}}</a>
+  </div>
+
+  <!-- page heading -->
+  {% if pData.LicenceName %}
+    <!-- page title -->
+    <h1 class="heading-large medium-space">
+      <span class="heading-secondary">
+        Licence number {{pData.LicenceSerialNo}}
+      </span>
+      Conditions held for {{ pData.LicenceName }}
+    </h1>
+  {% else %}
+    <h1 class="heading-large">Conditions held for licence number {{ pData.LicenceSerialNo }}</h1>
+  {% endif %}
 
   {% if pData.Condition1Value1 %} <!-- if there is any data -->
 
