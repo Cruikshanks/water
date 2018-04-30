@@ -18,19 +18,7 @@
   <!-- navigation block -->
   {% include "../partials/nav-view.html" %}
 
-  <div class="big-space">
-
-    <!-- breadcrumbs -->
-    <nav id="navigate">
-      <div class="breadcrumbs" id="breadcrumbs">
-        <ol role="breadcrumbs">
-          <li><a href="/v17/pages/licences">Your licences</a></li>
-          <li><a href="/v17/pages/online_licence?wid={{ query.wid }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
-        </ol>
-      </div>
-    </nav>
-
-  </div>
+  <div class="big-space"></div>
 
   <!-- page title -->
   <div class="grid-row">
@@ -48,7 +36,17 @@
 
   <!-- page heading -->
   {% if pData.LicenceName %}
-    <h1 class="heading-large">{{ pData.LicenceName }}</h1>
+    <!-- page title -->
+    <div class="grid-row">
+      <div class="column-two-thirds medium-space">
+        <h2 class="sub-head">
+          <a href="notice-batches">Licence number {{pData.LicenceSerialNo}}</a>
+        </h2>
+        <h1 class="heading-xlarge spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      </div>
+    </div>
   {% else %}
     <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
   {% endif %}
