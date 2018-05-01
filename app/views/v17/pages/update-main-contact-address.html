@@ -38,33 +38,21 @@
       </div>
     </div>
 
-    <div class="datatable datahead">
-      <label>Name</label>
-      <div class="licenceAnswer">{{ pData.HolderFirstName }} {{ pData.HolderSurname }}</div>
-    </div>
-
-    <div class="datatable">
-      <label>Address</label>
-      <div class="licenceAnswer">
-        {{ pData.HolderAddressline1}}</br>
-        {{ pData.HolderAddressline2}}</br>
-        {{ pData.HolderCounty}}</br>
-        {{ pData.HolderPostcode}}</div>
-    </div>
-
-    <div class="datatable">
-      <label>Telephone</label>
-      <div class="licenceAnswer">{{ pData.HolderTel}}</div>
-    </div>
-
-    <div class="datatable medium-space">
-      <label>Email</label>
-      <div class="licenceAnswer">{{ pData.HolderEmail}}</div>
-    </div>
-
-    <div class="big-space">
-      <p><a href="update-main-contact?wid={{query.wid}}">Update this information</a></p>
-      <br>
+    <!-- rename licence form -->
+    <div class="form--well ">
+      <label for="name" class="">
+        <span class="form-label-bold">Address (optional)</span>
+      </label>
+      <textarea class="form-control form-control-3-4" name="licence_no" id="address-field" rows="5" required ></textarea>
+      <p></p>
+      <a class="button" href="update-main-contact-phone?wid={{ query.wid }}" role="button" style="margin-bottom:20px;">
+        Continue
+      </a>
+      <p class="form-cancel">
+        <a href="contact_details?wid={{ query.wid }}">
+          Cancel
+        </a>
+      </p>
     </div>
 
   </div>

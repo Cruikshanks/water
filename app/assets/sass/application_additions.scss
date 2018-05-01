@@ -865,18 +865,6 @@ details {
   // padding-bottom: 0;
 }
 
-// .last-row div {
-//   border-bottom: 1px solid #bfc1c3;
-//   @media (min-width: 768px) {
-//     border-bottom: none;
-//   }
-// }
-//
-// .top {
-//   border-bottom: none;
-//   // background-color: red;
-// }
-
 .context {
   color: $grey-1;
   display: block;
@@ -888,4 +876,12 @@ details {
 
 .full {
   width: 100%;
+}
+
+#address-field {
+  resize: none;
+}
+
+#update-email {
+  width: 75%;
 }

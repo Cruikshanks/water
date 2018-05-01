@@ -1,4 +1,4 @@
-{% extends "../head.html" %}
+{% extends "../view.html" %}
 
 <!-- page title -->
 {% block page_title %}
@@ -18,23 +18,35 @@
   <!-- navigation block -->
   {% include "../partials/nav-view.html" %}
 
-  <div class="big-space">
-
-    <!-- breadcrumbs -->
-    <nav id="navigate">
-      <div class="breadcrumbs" id="breadcrumbs">
-        <ol role="breadcrumbs">
-          <li><a href="/v17/pages/licences">Your licences</a></li>
-          <li><a href="/v17/pages/online_licence?wid={{ query.wid }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
-        </ol>
-      </div>
-    </nav>
-
-  </div>
+  <div class="big-space"></div>
 
   <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <!-- code alert -->
+      {% if pData.SecCode %}
+
+        <!-- internal code block -->
+        {% include "../partials/code-sent.html" %}
+
+      {% endif %}
+
+    </div>
+  </div>
+
+  <!-- page heading -->
   {% if pData.LicenceName %}
-    <h1 class="heading-large">{{ pData.LicenceName }}</h1>
+    <!-- page title -->
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge">
+          <span class="heading-secondary">
+            Licence number {{pData.LicenceSerialNo}}
+          </span>
+          {{ pData.LicenceName }}
+        </h1>
+      </div>
+    </div>
   {% else %}
     <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
   {% endif %}
@@ -58,7 +70,17 @@
   </div>
 
 
-  <div class="datatable datahead">
+  <!-- Licence holder -->
+  <div class="datatable">
+    <label>Licence holder</label>
+    <div class="licenceAnswerv7">
+      {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
+      <a href="/v17/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
+    </div>
+  </div>
+
+
+  <div class="datatable">
     <label>Start date</label>
     <div class="licenceAnswerv7">
       {{ pData.EffectiveDateStart }}
@@ -73,126 +95,123 @@
   </div>
 
   <div class="datatable">
-    <label>Licence name</label>
-    <div class="licenceAnswerv7">
-
-      {% if pData.LicenceName %}
-        {{ pData.LicenceName }}</br>
-        <a href="/v17/pages/online_licence_rename?wid=1">Rename this licence</a>
-      {% else %}
-        <!-- <span>No name chosen</span></br>  -->
-        <a href="/v12_2/online_licence/rename/online_licence_rename?wid=1">Name this licence</a>
-      {% endif %}
-
-    </div>
-  </div>
-
-  <!-- Licence holder -->
-  <div class="datatable">
-    <label>Licence holder</label>
-    <div class="licenceAnswerv7">
-      {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
-      <a href="/v17/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
-    </div>
-  </div>
-
-  <div class="datatable">
     <label>Source of supply</label>
     <div class="licenceAnswerv7">{{ pData.Source}}</div>
-  </div>
-  <div class="datatable">
-    <label>Period of abstraction</label>
-    <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
-  </div>
-
-  <div class="datatable">
-    <label>Point of abstraction</label>
-    <div class="licenceAnswerv7">
-      {{ pData.Pointofabstraction }}
-    </div>
   </div>
 
   <div class="datatable">
     <label>Purpose of abstraction</label>
     <div class="licenceAnswerv7">
 
-      {{ pData.purpose1 }}</br>
+      {{ pData.Purpose1 }}</br>
 
-      {% if pData.purpose2 %}
-        {{ pData.purpose2 }}</br>
-      {% endif %}
-
-      {% if pData.purpose3 %}
-        {{ pData.purpose3 }}</br>
-      {% endif %}
-
-      {% if pData.purpose4 %}
-        {{ pData.purpose4 }}</br>
-      {% endif %}
-
-      {% if pData.purpose5 %}
-        {{ pData.purpose5 }}</br>
-      {% endif %}
-
-      <a href="/v17/pages/points_purposes/tabbed_points?wid=1">View details of abstraction purposes</a>
-
-    </div>
-
-  <div class="datatable">
-    <label>Abstraction conditions</label>
-    <div class="licenceAnswerv7">
-      {{ pData.condition1 }}</br>
-
-      {% if pData.condition2 %}
-        {{ pData.condition2 }}</br>
-      {% endif %}
-
-      {% if pData.condition3 %}
-        {{ pData.condition3 }}</br>
-      {% endif %}
-
-      {% if pData.condition4 %}
-        {{ pData.condition4 }}</br>
-      {% endif %}
-
-      {% if pData.condition5 %}
-        {{ pData.condition5 }}</br>
-      {% endif %}
-
-      <a href="/v17/conditions?wid=1">View details of abstraction conditions</a>
     </div>
   </div>
 
   <div class="datatable">
+    <label>Period of abstraction</label>
+    <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
+  </div>
+
+  <div class="datatable">
+
+    {% if pData.Point2 %}
+
+      <label>Points of abstraction</label>
+      <div class="licenceAnswerv7">
+
+        {{ pData.Point1 }}<br>
+        {{ pData.Point2 }}<br>
+
+        {% if pData.Point3 %}
+          {{ pData.Point3 }}<br>
+        {% endif %}
+
+        {% if pData.Point4 %}
+          {{ pData.Point4 }}<br>
+        {% endif %}
+
+        {% if pData.Point5 %}
+          {{ pData.Point5 }}<br>
+        {% endif %}
+        <a href="points/points?wid={{ query.wid }}">View details of abstraction points</a>
+
+      </div>
+
+      {% else %}
+
+      <label>Point of abstraction</label>
+        <div class="licenceAnswerv7">
+
+        {{ pData.Point1 }}<br>
+        <a href="points/points?wid={{ query.wid }}">View details of abstraction point</a>
+
+      {% endif %}
+
+    </div>
+
+    <div class="datatable">
+      <label>Abstraction conditions</label>
+      <div class="licenceAnswerv7">
+        {{ pData.Condition1 }}</br>
+
+        {% if pData.Condition2 %}
+          {{ pData.Condition2 }}</br>
+        {% endif %}
+
+        {% if pData.Condition3 %}
+          {{ pData.Condition3 }}</br>
+        {% endif %}
+
+        {% if pData.Condition4 %}
+          {{ pData.Condition4 }}</br>
+        {% endif %}
+
+        {% if pData.Condition5 %}
+          {{ pData.Condition5 }}</br>
+        {% endif %}
+
+        <a href="conditions/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+
+    </div>
+  </div>
+
+  <div class="datatable big-space">
     <label>Abstraction amounts</label>
     <div class="licenceAnswerv7">
 
-      {{ pData.amount1 }}</br>
+      {{ pData.Amount1 }}</br>
 
-      {% if pData.amount2 %}
-        {{ pData.amount2 }}</br>
+      {% if pData.Amount2 %}
+        {{ pData.Amount2 }}</br>
       {% endif %}
 
-      {% if pData.amount3 %}
-        {{ pData.amount3 }}</br>
+      {% if pData.Amount3 %}
+        {{ pData.Amount3 }}</br>
       {% endif %}
 
-      {% if pData.amount4 %}
-        {{ pData.amount4 }}</br>
+      {% if pData.Amount4 %}
+        {{ pData.Amount4 }}</br>
       {% endif %}
 
-      {% if pData.amount5 %}
-        {{ pData.amount5 }}</br>
+      {% if pData.Amount5 %}
+        {{ pData.Amount5 }}</br>
       {% endif %}
+    </div>
 
-      <a href="/v17/pages/points_purposes/tabbed_points?wid=1">View details of amounts</a>
   </div>
 
-  <br>
-  <br>
+  <div id="#bad-data">
+    <!-- bad data block -->
+    {% include "../partials/bad-data.html" %}
+  </div>
 
-{% endif %}
-{% endfor %}
 
-</main>
-{% endblock %}
+  </div>
+
+
+  {% endif %}
+  {% endfor %}
+
+  </main>
+  {% endblock %}
