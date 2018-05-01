@@ -18,20 +18,6 @@
   <!-- navigation block -->
   {% include "../partials/nav-view.html" %}
 
-  <div class="big-space">
-
-    <!-- breadcrumbs -->
-    <nav id="navigate">
-      <div class="breadcrumbs" id="breadcrumbs">
-        <ol role="breadcrumbs">
-          <li><a href="/v17/pages/licences">Your licences</a></li>
-          <li><a href="/v17/pages/online_licence?wid={{ query.wid }}">Licence number: {{ pData.LicenceSerialNo }}</a></li>
-        </ol>
-      </div>
-    </nav>
-
-  </div>
-
   <!-- page title -->
   {% if pData.LicenceName %}
     <h1 class="heading-large">{{ pData.LicenceName }}</h1>
