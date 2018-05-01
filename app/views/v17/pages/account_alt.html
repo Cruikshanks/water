@@ -1,0 +1,65 @@
+{% extends "../view_alt.html" %}
+
+{% block page_title %}
+  Account options - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav_head_alt.html" %}
+
+<div class="big-space"></div>
+<!--  <div class="small-space">
+    <nav id="navigate">
+
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v17/pages/account">Account options</a></li>
+          <start comment <li><a href="">Change password</a></li> end comment>
+        </ol>
+      </div>
+    </nav>
+  </div> -->
+
+  <!-- page title -->
+  <h1  class="heading-large medium-space">Account options (alternative nav)</h1>
+
+  <div id="feature-info" class="grid-row flexy">
+
+    <div class="column-two-thirds medium-space">
+      <div class="card">
+        <!-- <h2 class="heading-medium">Reports</h2> -->
+        <ul class="list list-bullet">
+          <li>
+            <a href="contact-preferences">
+              Choose how we contact you
+            </a>
+          </li>
+          <li>
+            <a href="change_password/change_password.html">
+              Change your account password
+            </a>
+          </li>
+          <li>
+            <a href="signin.html">
+              Sign out
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/public/javascripts/underscore.min.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}
