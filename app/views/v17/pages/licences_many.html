@@ -20,10 +20,6 @@
       <h1  class="heading-large">
         Your licences
       </h1>
-      <div class="medium-space">
-        <!-- disclaimer block -->
-        {% include "../partials/disclaimer.html" %}
-      </div>
     </div>
   </div>
 
@@ -35,7 +31,7 @@
     <div class="column-full">
 
     <!-- Results page goes here -->
-    <div class="license-results" id="results">
+    <div class="license-results medium-space" id="results">
 
       <div class="license-results-header">
         <div class="license-results-header__column">
@@ -109,6 +105,16 @@
       </a>
 
     </div>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <div class="medium-space">
+          <!-- disclaimer block -->
+          {% include "../partials/disclaimer.html" %}
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
   <script src="/public/javascripts/underscore.min.js"></script>
