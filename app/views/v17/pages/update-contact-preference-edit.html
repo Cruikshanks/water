@@ -1,4 +1,4 @@
-{% extends "../head.html" %}
+{% extends "../view.html" %}
 
 {% block page_title %}
   Choose how we contact you - GOV.UK
@@ -19,7 +19,7 @@
 
         <legend>
           <h1 class="heading-large">
-            One last thing...
+            Update your contact preferences
           </h1>
         </legend>
 
@@ -31,7 +31,7 @@
 
           <!-- post radio -->
           <div class="multiple-choice" data-target="contact-by-text">
-            <input id="example-contact-by-text" name="radio-contact-group" aria-controls="contact-by-text" aria-expanded="true" type="radio">
+            <input id="example-contact-by-text" name="radio-contact-group" checked aria-controls="contact-by-text" aria-expanded="true" type="radio">
             <label for="example-contact-by-text">Letter</label>
           </div>
 
@@ -46,8 +46,9 @@
                 B37 6RY<br>
               <!-- </textarea> -->
             </p>
-            <a href="licences" class="button">
-              Use my postal address
+
+            <a href="update-contact-preference" class="button">
+              Use this as my postal address
             </a>
           </div>
 

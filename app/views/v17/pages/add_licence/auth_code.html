@@ -8,7 +8,9 @@
 <main id="content" role="main">
 
   <!-- beta banner block -->
-  {% include "../partials/beta-banner.html" %}
+  {% include "../../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
 
   <!-- main -->
   <div class="grid-row">
@@ -29,7 +31,8 @@
           <input type="password" data-parsley-pattern="x45Tn" class="form-control" data-parsely-trigger="keyup change" name="password" id="password" required />
         </div>
 
-        <input onclick="$('#incorrectLogin').hide()" type="submit" value="Continue" class="button" role="button"/>
+        <!-- <input onclick="$('#incorrectLogin').hide()" type="submit" value="Continue" class="button" role="button"/> -->
+        <a href="../contact-preference-default" class="button">Continue</a>
       </form>
 
       <details class="closeOnOpen">

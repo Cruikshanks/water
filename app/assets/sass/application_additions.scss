@@ -13,9 +13,6 @@ $path: "/public/images/";
 @import 'patterns/license-search';
 @import 'patterns/grid-nav';
 
-// flextable behaviour
- @import "navigation.css";
-
 input[type=text], input[type=email], input[type=password] {
   &.parsley-error {
     border: 4px solid #b10e1e;
@@ -884,4 +881,9 @@ details {
 
 #update-email {
   width: 75%;
+}
+
+.alert-success {
+  border-color: $turquoise;
+  background-color: mix(white, $turquoise, 90%);
 }

@@ -1,0 +1,38 @@
+{% extends "../view.html" %}
+
+{% block page_title %}
+  Contact preference updated - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-large">
+          Your contact preference has been updated
+        </h1>
+        <p class="font-large">
+          We will contact you on <br>
+          <strong class="bold">big-dave@devlife.com</strong>
+      </div>
+
+      <p>
+        We will use this address to contact you if we need to about conditions that may affect your abstraction.
+      </p>
+
+    </div>
+  </div>
+
+  <a href="online_licence?wid=3" class="button">
+    Back to your licence
+  </a>
+
+</main>
+
+{% endblock %}
