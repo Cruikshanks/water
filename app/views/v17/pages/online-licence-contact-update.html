@@ -60,7 +60,7 @@
 
   <div class="datatable datahead">
     <label>Licence name</label>
-    <div class="licenceAnswerv7">
+    <div class="dataText">
 
       {% if pData.LicenceName %}
         {{ pData.LicenceName }}</br>
@@ -76,7 +76,7 @@
   <!-- Licence holder -->
   <div class="datatable">
     <label>Licence holder</label>
-    <div class="licenceAnswerv7">
+    <div class="dataText">
       {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
       <a href="/v17/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
     </div>
@@ -85,26 +85,26 @@
 
   <div class="datatable">
     <label>Start date</label>
-    <div class="licenceAnswerv7">
+    <div class="dataText">
       {{ pData.EffectiveDateStart }}
     </div>
   </div>
 
   <div class="datatable">
     <label>End date</label>
-    <div class="licenceAnswerv7">
+    <div class="dataText">
       {{ pData.EffectiveDateEnd }}
     </div>
   </div>
 
   <div class="datatable">
     <label>Source of supply</label>
-    <div class="licenceAnswerv7">{{ pData.Source}}</div>
+    <div class="dataText">{{ pData.Source}}</div>
   </div>
 
   <div class="datatable">
     <label>Purpose of abstraction</label>
-    <div class="licenceAnswerv7">
+    <div class="dataText">
 
       {{ pData.Purpose1 }}</br>
 
@@ -113,7 +113,7 @@
 
   <div class="datatable">
     <label>Period of abstraction</label>
-    <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
+    <div class="dataText">{{ pData.PeriodofAbstraction }}</div>
   </div>
 
   <div class="datatable">
@@ -121,7 +121,7 @@
     {% if pData.Point2 %}
 
       <label>Points of abstraction</label>
-      <div class="licenceAnswerv7">
+      <div class="dataText">
 
         {{ pData.Point1 }}<br>
         {{ pData.Point2 }}<br>
@@ -144,7 +144,7 @@
       {% else %}
 
       <label>Point of abstraction</label>
-        <div class="licenceAnswerv7">
+        <div class="dataText">
 
         {{ pData.Point1 }}<br>
         <a href="points/points?wid={{ query.wid }}">View details of abstraction point</a>
@@ -155,7 +155,7 @@
 
     <div class="datatable">
       <label>Abstraction conditions</label>
-      <div class="licenceAnswerv7">
+      <div class="dataText">
         {{ pData.Condition1 }}</br>
 
         {% if pData.Condition2 %}
@@ -181,7 +181,7 @@
 
   <div class="datatable big-space">
     <label>Abstraction amounts</label>
-    <div class="licenceAnswerv7">
+    <div class="dataText">
 
       {{ pData.Amount1 }}</br>
 

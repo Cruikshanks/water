@@ -24,42 +24,82 @@
     <a href="#" class="link-back" onclick="history.go(-1)">Licence number {{pData.LicenceSerialNo}}</a>
   </div>
 
-  <div class="medium-space">
+  <div class="big-space">
     <!-- page heading -->
-    {% if pData.LicenceName %}
-      <!-- page title -->
-      <h1 class="heading-large medium-space">
-        <span class="heading-secondary">
-          {{ pData.GaugingStationType }} for {{ pData.LicenceName }}
-        </span>
-         {{ pData.GaugingStationMeasures }} at {{ pData.GaugingStationName }}
-      </h1>
+      <div class="medium-space">
+
+        <!-- page title -->
+        <h1 class="heading-large clustered">
+          <span class="heading-secondary">
+
+            {% if pData.LicenceName %}
+              {{ pData.GaugingStationType }} for {{ pData.LicenceName }}
+            {% else %}
+              {{ pData.GaugingStationType }} for {{ pData.LicenceSerialNo }}
+            {% endif %}
+
+          </span>
+           {{ pData.GaugingStationMeasures }} at {{ pData.GaugingStationName }}
+        </h1>
+
+        <!-- Grid reference <a href="">{{ pData.GaugingStationGridReference }}</a> -->
+        Grid reference {{ pData.GaugingStationGridReference }}
+
+      </div>
+
       <div class="data">
         <span class="data-item bold-xxlarge">{{ pData.GaugingStationValue }}</span>
         <span class="data-item">Recorded <span class="bold-small">{{ pData.GaugingStationRecorded }}</span></span>
       </div>
-
-      <a href="">Grid reference {{ pData.GaugingStationGridReference }}</a>
-
-    {% else %}
-
-      <h1 class="heading-large medium-space">
-        <span class="heading-secondary">
-          Gauging station for licence number {{ pData.LicenceSerialNo }}
-        </span>
-         {{ pData.GaugingStationMeasures }} at {{ pData.GaugingStationName }}
-      </h1>
-      <div class="data">
-        <span class="data-item bold-xxlarge">{{ pData.GaugingStationValue }}</span>
-        <span class="data-item">Recorded <span class="bold-small">{{ pData.GaugingStationRecorded }}</span></span>
-      </div>
-
-      <!-- Grid reference <a href="">{{ pData.GaugingStationGridReference }}</a> -->
-      <a href="">Grid reference {{ pData.GaugingStationGridReference }}</a>
-
-    {% endif %}
 
   </div>
+
+  <h3 class="lede medium-space">Conditions of this licence</h3>
+
+  <div class="panel panel-border-wide">
+    <div class="data-row-group">
+
+      <div class="data-row data-row--section">
+        <div class="data-row__param" id="label-0-1-purpose">
+       Purpose
+        </div>
+        <div class="data-row__value" aria-labelledby="label-0-1-purpose">
+          Make-Up Or Top Up Water
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-row__param" id="label-0-1-param1">
+          Gauging station
+        </div>
+        <div class="data-row__value" aria-labelledby="label-0-1-param1">
+        {{ pData.GaugingStationName }}<br>
+        {{ pData.GaugingStationGridReference }}
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-row__param" id="label-0-1-param2">
+        Threshold level
+        </div>
+        <div class="data-row__value" aria-labelledby="label-0-1-param2">
+        0.73m ODN
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-row__param" id="label-0-1-info">
+        Other information
+        </div>
+        <div class="data-row__value" aria-labelledby="label-0-1-info">
+          No abstraction shall take place from the Denton New Cut when the water level in the Cut as measured at {{ pData.GaugingStationName }} ({{ pData.GaugingStationGridReference }}) is at or below 0.73m ODN.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <a href="conditions?wid={{query.wid}}">Full licence conditions</a>
 
   <!-- <p>
     Latest recorded level <span class="bold-small">0.13m</span> at <span class="bold-small">5:00am Friday 4 May 2018</span>.

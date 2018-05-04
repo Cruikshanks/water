@@ -37,60 +37,64 @@
     <h1 class="heading-large">Conditions held for licence number {{ pData.LicenceSerialNo }}</h1>
   {% endif %}
 
+
+
+  <!-- IF 1 -->
   {% if pData.Condition1Value1 %} <!-- if there is any data -->
 
-  <!-- notice -->
-  <div class="notice medium-space">
-    <i class="icon icon-important">
-      <span class="visually-hidden">Warning</span>
-    </i>
-    <strong class="bold-small column-two-thirds">
-      We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
-    </strong>
-  </div>
-
-  <div class="grid-row">
-    <div class="column-full medium-space">
-
-      <h2 class="heading-medium">{{ pData.Condition1 }}</h2>
-      <div class="datatable first-datapp">
-        <label>{{ pData.Condition1Label1 }}</label>
-        <div class="licenceAnswerv7">
-          {{ pData.Condition1Value1 }}
-        </div>
-      </div>
-
-      {% if pData.Condition1Value2 %}
-        <div class="datatable">
-          <label>{{ pData.Condition1Label2 }}</label>
-          <div class="licenceAnswerv7">
-            {{ pData.Condition1Value2 }}
-          </div>
-        </div>
-      {% endif %}
-
-      {% if pData.Condition1Value3 %}
-        <div class="datatable">
-          <label>{{ pData.Condition1Label3 }}</label>
-          <div class="licenceAnswerv7">
-            {{ pData.Condition1Value3 }}
-          </div>
-        </div>
-      {% endif %}
-
-      {% if pData.Condition1Value4 %}
-        <div class="datatable">
-          <label>{{ pData.Condition1Label4 }}</label>
-          <div class="licenceAnswerv7">
-            {{ pData.Condition1Value4 }}
-          </div>
-        </div>
-      {% endif %}
-
+    <!-- notice -->
+    <div class="notice medium-space">
+      <i class="icon icon-important">
+        <span class="visually-hidden">Warning</span>
+      </i>
+      <strong class="bold-small column-two-thirds">
+        We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
+      </strong>
     </div>
-  </div>
 
-  {% if pData.Condition2 %}
+    <div class="grid-row">
+      <div class="column-full medium-space">
+
+        <h2 class="heading-medium">{{ pData.Condition1 }}</h2>
+        <div class="datatable first-datapp">
+          <label>{{ pData.Condition1Label1 }}</label>
+          <div class="dataText">
+            {{ pData.Condition1Value1 }}
+          </div>
+        </div>
+
+        {% if pData.Condition1Value2 %}
+          <div class="datatable">
+            <label>{{ pData.Condition1Label2 }}</label>
+            <div class="dataText">
+              {{ pData.Condition1Value2 }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if pData.Condition1Value3 %}
+          <div class="datatable">
+            <label>{{ pData.Condition1Label3 }}</label>
+            <div class="dataText">
+              {{ pData.Condition1Value3 }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if pData.Condition1Value4 %}
+          <div class="datatable">
+            <label>{{ pData.Condition1Label4 }}</label>
+            <div class="dataText">
+              {{ pData.Condition1Value4 }}
+            </div>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+
+    {% if pData.Condition2 %}
 
     <div class="grid-row">
       <div class="column-full medium-space">
@@ -98,7 +102,7 @@
         <h2 class="heading-medium">{{ pData.Condition2 }}</h2>
         <div class="datatable first-datapp">
           <label>{{ pData.Condition2Label1 }}</label>
-          <div class="licenceAnswerv7">
+          <div class="dataText">
             {{ pData.Condition2Value1 }}
           </div>
         </div>
@@ -106,7 +110,7 @@
         {% if pData.Condition2Value2 %}
           <div class="datatable">
             <label>{{ pData.Condition2Label2 }}</label>
-            <div class="licenceAnswerv7">
+            <div class="dataText">
               {{ pData.Condition2Value2 }}
             </div>
           </div>
@@ -115,7 +119,7 @@
         {% if pData.Condition2Value3 %}
           <div class="datatable">
             <label>{{ pData.Condition2Label3 }}</label>
-            <div class="licenceAnswerv7">
+            <div class="dataText">
               {{ pData.Condition2Value3 }}
             </div>
           </div>
@@ -124,7 +128,7 @@
         {% if pData.Condition2Value4 %}
           <div class="datatable">
             <label>{{ pData.Condition2Label4 }}</label>
-            <div class="licenceAnswerv7">
+            <div class="dataText">
               {{ pData.Condition2Value4 }}
             </div>
           </div>
@@ -135,51 +139,49 @@
 
   {% endif %}
 
+  {% if pData.HOFCondition %}
+  <div class="grid-row">
+    <div class="column-full medium-space">
 
-  {% if pData.Condition3 %}
+      <h2 class="heading-medium">{{ pData.HOFCondition }}</h2>
+      <div class="datatable first-datapp">
+        <label>{{ pData.HOFLabel1 }}</label>
+        <div class="dataText">
+          {{ pData.HOFValue1 }}
+        </div>
+      </div>
 
-    <div class="grid-row">
-      <div class="column-full medium-space">
-
-        <h2 class="heading-medium">{{ pData.Condition3 }}</h2>
-        <div class="datatable first-datapp">
-          <label>{{ pData.Condition3Label1 }}</label>
-          <div class="licenceAnswerv7">
-            {{ pData.Condition3Value1 }}
+      {% if pData.GaugingStationName %}
+        <div class="datatable">
+          <label>{{ pData.HOFLabel2 }}</label>
+          <div class="dataText">
+            <a href="gauging-station?wid={{query.wid}}">
+              {{ pData.GaugingStationName }}
+            </a><br>
+            {{ pData.GaugingStationGridReference }}
           </div>
         </div>
+      {% endif %}
 
-        {% if pData.Condition3Value2 %}
-          <div class="datatable">
-            <label>{{ pData.Condition3Label2 }}</label>
-            <div class="licenceAnswerv7">
-              {{ pData.Condition3Value2 }}
-            </div>
+      {% if pData.HOFValue3 %}
+        <div class="datatable">
+          <label>{{ pData.HOFLabel3 }}</label>
+          <div class="dataText">
+            {{ pData.HOFValue3 }}
           </div>
-        {% endif %}
+        </div>
+      {% endif %}
 
-        {% if pData.Condition3Value3 %}
-          <div class="datatable">
-            <label>{{ pData.Condition3Label3 }}</label>
-            <div class="licenceAnswerv7">
-              {{ pData.Condition3Value3 }}
-            </div>
+      {% if pData.HOFValue4 %}
+        <div class="datatable">
+          <label>{{ pData.HOFLabel4 }}</label>
+          <div class="dataText">
+            {{ pData.HOFValue4 }}
           </div>
-        {% endif %}
-
-        {% if pData.Condition3Value4 %}
-          <div class="datatable">
-            <label>{{ pData.Condition3Label4 }}</label>
-            <div class="licenceAnswerv7">
-              {{ pData.Condition3Value4 }}
-            </div>
-          </div>
-        {% endif %}
-
-      </div>
+        </div>
+      {% endif %}
     </div>
-
-    {% endif %}
+  </div>
 
   {% else %}
 
@@ -195,7 +197,7 @@
     </div>
 
   {% endif %}
-
+  {% endif %}
   {% endif %}
   {% endfor %}
 
