@@ -135,7 +135,7 @@
         {% if pData.Point5 %}
           {{ pData.Point5 }}<br>
         {% endif %}
-        <a href="points/points?wid={{ query.wid }}">View details of abstraction points</a>
+        <a href="licence/points?wid={{ query.wid }}">View details of abstraction points</a>
 
       </div>
 
@@ -145,11 +145,36 @@
         <div class="licenceAnswerv7">
 
         {{ pData.Point1 }}<br>
-        <a href="points/points?wid={{ query.wid }}">View details of abstraction point</a>
+        <a href="licence/points?wid={{ query.wid }}">View details of abstraction point</a>
 
       {% endif %}
 
     </div>
+
+    <!-- gauging station here -->
+    {% if pData.GaugingStationName %}
+    <div class="datatable">
+
+        <label>Gauging station</label>
+        <div class="licenceAnswerv7">
+          <!-- {{ pData.GaugingStationName}}<br> -->
+          <a href="licence/gauging-station?wid={{query.wid}}">{{pData.GaugingStationName}}</a><br>
+          <!-- <a href="">{{ pData.GaugingStationGridReference}}</a> -->
+          Located at {{ pData.GaugingStationGridReference}}
+        </div>
+    </div>
+    {% endif %}
+
+  <!--
+
+    "GaugingStationName": "Huntsford",
+    "GaugingStationGridReference": "SX 426725",
+    "GaugingStationType": "Ultrasonic gauging station",
+    "GaugingStationValue": "002",
+
+  -->
+
+    <!-- end gauging station -->
 
     <div class="datatable">
       <label>Abstraction conditions</label>
@@ -172,7 +197,7 @@
           {{ pData.Condition5 }}</br>
         {% endif %}
 
-        <a href="conditions/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+        <a href="licence/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
 
     </div>
   </div>
