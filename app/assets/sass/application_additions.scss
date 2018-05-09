@@ -894,3 +894,41 @@ details {
   border-color: $turquoise;
   background-color: mix(white, $turquoise, 90%);
 }
+
+#special-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+#special-links ul li {
+  list-style: none;
+  flex-basis: 33.33%;
+  margin-bottom: 15px;
+}
+
+#special-links ul li a {
+  display: block;
+  text-decoration: none;
+  // color: $text-colour;
+  color: $link-colour;
+  background: #f4f4f4;
+  margin-left: 15px;
+  padding: 30px;
+}
+
+#special-links ul li:nth-child(1) a, #special-links ul li:nth-child(4) a {
+ margin-left: 0;
+}
+
+#special-links ul li a:focus {
+    background-color: #ffbf47;
+    outline: 3px solid #ffbf47;
+}
+
+/* behaviour */
+#special-links ul li a:hover {
+  color: white;
+  background: $link-colour;
+}
