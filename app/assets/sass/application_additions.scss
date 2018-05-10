@@ -920,10 +920,10 @@ details {
 
 #special-links ul li a {
 
-  // still need a way to vertically align the link text…
-  // specifically when some blocks are on two lines and some on one
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-  display: block;
   text-decoration: none;
   // color: $text-colour;
   color: $link-colour;
@@ -933,6 +933,7 @@ details {
   @media screen and (min-width: 641px) {
     margin-left: 15px;
   }
+  min-height: 4rem;
 }
 
 #special-links ul li:nth-child(1) a, #special-links ul li:nth-child(4) a {
