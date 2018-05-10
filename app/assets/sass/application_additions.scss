@@ -904,22 +904,41 @@ details {
 
 #special-links ul li {
   list-style: none;
-  flex-basis: 33.33%;
+  display: block;
+  flex-basis: 100%;
   margin-bottom: 15px;
+  @media screen and (min-width: 641px) {
+    flex-basis: 33.33%;
+  }
+}
+
+#special-links ul li div {
+  display: inline-grid;
+  width: 100%;
+  height: 100%;
 }
 
 #special-links ul li a {
+
+  // still need a way to vertically align the link text…
+  // specifically when some blocks are on two lines and some on one
+
   display: block;
   text-decoration: none;
   // color: $text-colour;
   color: $link-colour;
   background: #f4f4f4;
-  margin-left: 15px;
+  margin-left: 0;
   padding: 30px;
+  @media screen and (min-width: 641px) {
+    margin-left: 15px;
+  }
 }
 
 #special-links ul li:nth-child(1) a, #special-links ul li:nth-child(4) a {
- margin-left: 0;
+  @media screen and (min-width: 641px) {
+    margin-left: 0;
+  }
 }
 
 #special-links ul li a:focus {
