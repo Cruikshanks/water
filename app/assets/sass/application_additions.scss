@@ -1060,3 +1060,9 @@ details {
 .ar-input, .full {
   width: 100%;
 }
+
+#ar-edit-field-hack {
+  resize: none;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+}
