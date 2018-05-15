@@ -741,9 +741,7 @@ details {
 }
 
 .task-completed {
-  border-radius: 0.3rem;
-  line-height: 2.25rem;
-  line-height: 3rem; // this fixes a table layout issue, v v hacky right here
+  line-height: 2rem; // not exactly the task list style but increases readability and affordance
   white-space: nowrap;
 }
 
@@ -1008,10 +1006,11 @@ details {
 
 .not-completed {
   background: $orange;
+  background: $button-colour;
 }
 
 .open-task {
-  background: $focus-colour;
+  background: $secondary-text-colour;
 }
 
 .approve {
@@ -1061,7 +1060,8 @@ details {
   width: 100%;
 }
 
-#ar-edit-field-hack {
+#ar-edit-field-hack { // this helps one field in the AR work to look like it's a standard edit field
+                      // when it is actually a multiline input field
   resize: none;
   padding: 5px 4px 4px;
   border: 2px solid #0b0c0c;
