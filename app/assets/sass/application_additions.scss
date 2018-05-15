@@ -535,7 +535,7 @@ details {
   &--section {
     border-color: $border-colour;
   }
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 768px) {
     display: flex;
   }
   // Abstraction point heading
@@ -544,13 +544,13 @@ details {
   }
   &__param {
     font-weight: bold;
-    @media screen and (min-width: 641px) {
+    @media screen and (min-width: 768px) {
         flex: 0 0 33%;
         font-weight: normal;
     }
   }
   &__value {
-    @media screen and (min-width: 641px) {
+    @media screen and (min-width: 768px) {
         flex: 0 0 67%;
     }
   }
@@ -566,7 +566,7 @@ details {
 .sub-list {
   width: 100%;
   margin-bottom: 0.5em;
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 768px) {
     position: relative;
     top: -0.5em;
     margin-bottom: 0;
@@ -631,14 +631,26 @@ details {
 }
 
 .flexy {
-  @media screen and (min-width: 641px) {
-    display: flex;
-  }
-  display: 0;
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  // }
+  // display: 0;
+  display: flex;
+}
+
+.middler {
+  margin: auto;
 }
 
 #search-button-hack {
   margin-top: 50px;
+}
+
+.search-button {
+  padding: 15px 0;
+  @media screen and (min-width: 768px) {
+    padding: 0 15px;
+  }
 }
 
 // styles for new GDS navigation style
@@ -724,9 +736,15 @@ details {
   background-color: #f8f8f8;
 }
 
+.hidden {
+  display: hidden;
+}
+
 .task-completed {
   border-radius: 0.3rem;
   line-height: 2.25rem;
+  line-height: 3rem; // this fixes a table layout issue, v v hacky right here
+  white-space: nowrap;
 }
 
 .task-error {
@@ -744,7 +762,7 @@ details {
 
 .right-small {
   padding-right: 0;
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 768px) {
     padding-right: 15px;
   }
 }
@@ -771,7 +789,8 @@ details {
 }
 
 .inline {
-  background-color: #efefef;
+  //background-color: #efefef;
+  padding-left: 15px;
 }
 
 .notification {
@@ -801,7 +820,7 @@ details {
 }
 
 .xsmall {
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 768px) {
     font-size: 19px;
     line-height: 1.31579;
   }
@@ -851,12 +870,23 @@ details {
 .table-cell {
   font-size: inherit;
 
+  // media query this
   border-bottom: 1px solid #bfc1c3;
   padding: 15px;
   padding-left: 0;
   @media (min-width: 768px) {
     display: table-cell;
   }
+  white-space: nowrap;
+  // line-height: 3rem;
+  vertical-align: middle;
+}
+
+.status-column {
+  @media (min-width: 768px) {
+    border-bottom: 1px solid #bfc1c3;
+  }
+  border-bottom: 0;
 }
 
 .table-cell .multiple-choice {
@@ -907,7 +937,7 @@ details {
   display: block;
   flex-basis: 100%;
   margin-bottom: 15px;
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 768px) {
     flex-basis: 33.33%;
   }
 }
@@ -930,14 +960,14 @@ details {
   background: #f4f4f4;
   margin-left: 0;
   padding: 30px;
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 768px) {
     margin-left: 15px;
   }
   min-height: 4rem;
 }
 
 #special-links ul li:nth-child(1) a, #special-links ul li:nth-child(4) a {
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 768px) {
     margin-left: 0;
   }
 }
@@ -951,4 +981,82 @@ details {
 #special-links ul li a:hover {
   color: white;
   background: $link-colour;
+}
+
+
+// ar views
+
+#licences-as-tasks {
+
+}
+
+#ar-name-column {
+  width: 40%;
+}
+
+#ar-status-column {
+  width: 15%;
+}
+
+.hang-left {
+  float: left;
+}
+
+.bunched {
+  margin-bottom: 0.25em;
+}
+
+.not-completed {
+  background: $orange;
+}
+
+.open-task {
+  background: $focus-colour;
+}
+
+.approve {
+  background: $turquoise;
+  background: $button-colour;
+}
+
+.highlight {
+  // background-color: $yellow;
+  background-color: yellow;
+  // background-color: $focus-colour;
+}
+
+// the list of tasks
+.ar-tasks {
+
+}
+
+.ar-review {
+  margin-bottom: 15px;
+  @media (min-width: 768px) {
+    padding-left: 15px;
+  }
+}
+
+// .center { // vertically centering
+// 	display: -ms-flexbox;
+// 	display: -webkit-flex;
+// 	display: flex;
+//
+// 	-ms-flex-align: center;
+// 	-webkit-align-items: center;
+// 	-webkit-box-align: center;
+//
+// 	align-items: center;
+// }
+
+.middle {
+  vertical-align: middle;
+}
+
+.task-completed {
+  margin: auto;
+}
+
+.ar-input, .full {
+  width: 100%;
 }

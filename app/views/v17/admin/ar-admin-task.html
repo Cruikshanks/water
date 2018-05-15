@@ -1,0 +1,281 @@
+{% extends "../admin.html" %}
+
+{% block page_title %}
+Reports and notifications - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-admin-view.html" %}
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <!-- <h1 class="heading-large">
+        Data review for Licence number {{ pData.LicenceSerialNo }}
+      </h1> -->
+
+      <!-- page title -->
+      <div class="grid-row">
+        <div class="column-two-thirds medium-space">
+          <h2 class="sub-head">
+            <a href="notice-batches">Abstraction reform work</a>
+          </h2>
+          <h1 class="heading-xlarge spaceless">
+            Data review for Licence number {{ pData.LicenceSerialNo }}
+          </h1>
+          <h2 class="heading-small spaceless">
+            11 May 2018, 10:01am
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="column-two-thirds medium-space">
+
+          <details>
+
+            <summary><span class="summary">Notes taken on 11 May 2018</span></summary>
+
+            <div class="panel panel-border-wide">                                     <!-- notes for the admin -->
+              <p>
+                I found seven licences covering the full period of this licence, it’s unclear but there were three abstraction points listed on the original licence but I only see two in the latest.
+              </p>
+              <h2 class="heading-small spaceless">
+                B Jucks, 11 May 2018
+              </h2>
+            </div>
+
+          </details>
+
+        </div>
+      </div>
+
+      <div class="table big-space" id="licences-as-tasks">                      <!-- table starts -->
+
+        <div class="table-row table-head">                                      <!-- tablehead starts -->
+
+          <div class="table-cell bold-small">
+            NALD field
+          </div>
+          <div class="table-cell bold-small" id="ar-name-column">
+            Value
+          </div>
+          <div class="table-cell bold-small">
+            Edit
+          </div>
+          <div class="table-cell bold-small" id="ar-status-column">
+            Approve
+          </div>
+        </div>                                                                  <!-- tablehead ends -->
+
+        <div class="big-space"></div>
+
+        <h2 class="lede">                                                       <!-- data group -->
+          AR status
+        </h2>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            state_code
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            NEW
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Edit
+            </label>
+          </div>
+          <div class="table-cell status-column">
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            modified_date
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            2018-05-08T09:17:53.533Z
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Edit
+            </label>
+          </div>
+          <div class="table-cell status-column">
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            ar_review
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            NONE
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              Edit
+            </label>
+            Yes
+          </div>
+          <div class="table-cell status-column center middle">
+            <div class="form-group ar-review">
+              <fieldset>
+                <div class="multiple-choice">
+                  <input name="" type="checkbox" value="" checked>
+                  <label for="this-checkbox"></label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="big-space"></div>
+
+        <h2 class="lede">                                                       <!-- data group -->
+          Licence
+        </h2>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            CODE
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            FULL
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              Edit
+            </label>
+            Full
+          </div>
+
+          <div class="table-cell status-column center middle">
+            <div class="form-group ar-review">
+              <fieldset>
+                <div class="multiple-choice">
+                  <input name="" type="checkbox" value="" checked>
+                  <label for="this-checkbox"></label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            DECR
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            Full licence (>=28 days)
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              Edit
+            </label>
+            28days+
+          </div>
+
+          <div class="table-cell status-column center middle">
+            <div class="form-group ar-review">
+              <fieldset>
+                <div class="multiple-choice">
+                  <input name="" type="checkbox" value="" checked>
+                  <label for="this-checkbox"></label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            Party
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Edit
+            </label>
+            <input class="full" type="text">
+          </div>
+          <div class="table-cell status-column">
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+      </div>                                                                    <!-- table ends -->
+
+      <div class="form-group">
+        <label class="form-label" for="textarea">
+          Notes about these changes
+        </label>
+        <textarea class="form-control form-control-3-4" name="textarea" id="comments" rows="5"></textarea>
+      </div>
+
+      <a href="licences-internal-list" class="button">
+        Submit for approval
+      </a>
+
+    </div>
+  </div>
+
+  <script src="/public/javascripts/underscore.min.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/license_results.js"></script>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

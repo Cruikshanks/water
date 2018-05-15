@@ -1,0 +1,274 @@
+{% extends "../admin.html" %}
+
+{% block page_title %}
+Reports and notifications - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-admin-view.html" %}
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <!-- <h1 class="heading-large">
+        Data review for Licence number {{ pData.LicenceSerialNo }}
+      </h1> -->
+
+      <!-- page title -->
+      <div class="grid-row">
+        <div class="column-two-thirds medium-space">
+          <h2 class="sub-head">
+            <a href="licences-internal-list">Abstraction reform work</a>
+          </h2>
+          <h1 class="heading-xlarge spaceless">
+            Data review for Licence number {{ pData.LicenceSerialNo }}
+          </h1>
+          <h2 class="heading-small spaceless">
+            Last edited 12 June 2018
+          </h2>
+        </div>
+      </div>
+
+      <div class="table medium-space" id="licences-as-tasks">                                <!-- table starts -->
+
+        <!-- <form action=""> -->
+
+        <div class="table-row table-head">                                      <!-- tablehead starts -->
+
+          <div class="table-cell bold-small">
+            NALD field
+          </div>
+          <div class="table-cell bold-small" id="ar-name-column">
+            Value
+          </div>
+          <div class="table-cell bold-small">
+            Edit
+          </div>
+        </div>                                                                  <!-- tablehead ends -->
+
+        <div class="big-space"></div>
+
+        <h2 class="lede">                                                       <!-- data group -->
+          AR status
+        </h2>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            state_code
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              Value
+            </label>
+            NEW
+          </div>
+          <div class="table-cell">
+            <form>
+              <label class="context">
+                Edit
+              </label>
+              <!-- <input class="form-control ar-input" type="text"> -->
+           </form>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            modified_date
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              Value
+            </label>
+            2018-05-08T09:17:53.533Z
+          </div>
+          <div class="table-cell">
+            <form>
+              <label class="context">
+                Edit
+              </label>
+              <!-- <input class="form-control ar-input" type="text"> -->
+           </form>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <!-- added row -->
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            ar_review
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              Value
+            </label>
+            NONE
+          </div>
+          <div class="table-cell">
+            <form>
+              <label class="context">
+                Edit
+              </label>
+              <input class="form-control ar-input" type="text" value="Yes">
+            </form>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Choose which data to add
+            </label>
+            <div class="form-group clustered">
+              <label class="form-label" for="select-box">Choose which data to add</label>
+              <select class="form-control ar-input" id="select-box" name="select-box">
+                <option>Purpose</option>
+                <option>Point</option>
+                <option>Condition</option>
+              </select>
+            </div><br>
+            <a href="" class="inline">
+              Cancel
+            </a>
+          </div>
+
+          <div class="table-cell">
+          </div>
+          <div class="table-cell">
+          </div>
+        </div>
+
+        <div class="small-space"></div>
+
+        <p>
+          <a href="">Add data to this section</a>
+        </p>
+
+        <div class="medium-space"></div>
+
+
+        <div class="big-space"></div>
+
+        <h2 class="lede">                                                       <!-- data group -->
+          Licence
+        </h2>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            CODE
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              Value
+            </label>
+            FULL
+          </div>
+          <div class="table-cell">
+            <form>
+              <label class="context">
+                Edit
+              </label>
+              <input class="form-control ar-input" type="text" value="Full">
+            </form>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            DECR
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              Value
+            </label>
+            Full licence (>=28 days)
+          </div>
+          <div class="table-cell">
+            <form>
+              <label class="context">
+                Edit
+              </label>
+              <input class="form-control ar-input" type="text" value="28days+">
+            </form>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Value
+            </label>
+            Party
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              Value
+            </label>
+            <!-- no value -->
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Edit
+            </label>
+            <input class="full" type="text">
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="small-space"></div>
+
+        <p>
+          <a href="">Add data to this section</a>
+        </p>
+
+      </div>                                                                    <!-- table ends -->
+
+
+      <div class="form-group">
+        <label class="form-label" for="textarea">
+          Notes about these changes
+        </label>
+        <textarea class="form-control form-control-3-4" name="textarea" id="comments" rows="5"></textarea>
+      </div>
+
+
+      <a href="licences-internal-list" class="button">
+        Submit for approval
+      </a>
+
+
+    </div>
+  </div>
+
+  <script src="/public/javascripts/underscore.min.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/license_results.js"></script>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}
