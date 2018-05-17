@@ -43,16 +43,39 @@
 
       </div>
 
-      <div class="data">
-        <span class="data-item bold-xxlarge">{{ pData.GaugingStationValue }}</span>
-        <span class="data-item">Recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
-      </div>
+      {% if pData.GaugingStationValue %}
+        <!-- GAUGE DATA -->
+        <div class="data">
+          <span class="data-item bold-xxlarge">{{ pData.GaugingStationValue }}</span>
+          <span class="data-item">Recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
+        </div>
+      {% else %}
+        <!-- NO DATA -->
+        <div class="data">
+          <span class="data-item bold-xxlarge">Sorry, there is no data available</span>
+          <span class="data-item">
+            Please contact your <a href="https://www.gov.uk/government/organisations/environment-agency/about/access-and-opening" target="_blank">local Environment Agency office</a> (link opens in a new tab) for the latest information.
+          </span>
+        </div>
+      {% endif %}
+      
+  </div>
 
+  <div class="grid-row big-space">
+    <div class="column-two-thirds">
+      <div class="notice">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Warning</span>
+        </i>
+        <strong class="bold-small">
+          This data is for reference only. You should continue to use your current monitoring methods to make abstraction decisions.
+        </strong>
+      </div>
+    </div>
   </div>
 
   <details>
-
-  <summary><span class="summary">When will this reading be updated?</span></summary>
+    <summary><span class="summary">When will this reading be updated?</span></summary>
     <div class="panel panel-border-narrow">
       <p>
         Readings from this gauging station are updated each day at {{ pData.GaugingStationRecordedTime }}
@@ -119,19 +142,6 @@
     <a href="conditions?wid={{query.wid}}">
       View all conditions information held for this licence
     </a>
-  </div>
-
-  <div class="grid-row big-space">
-    <div class="column-two-thirds">
-      <div class="notice">
-        <i class="icon icon-important">
-          <span class="visually-hidden">Warning</span>
-        </i>
-        <strong class="bold-small">
-          This data is for reference only. You should continue to use your current monitoring methods to make abstraction decisions.
-        </strong>
-      </div>
-    </div>
   </div>
 
 </main>
