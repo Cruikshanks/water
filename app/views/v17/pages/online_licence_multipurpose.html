@@ -117,6 +117,19 @@
 
     </div>
 
+    <!-- gauging station here -->
+    {% if pData.GaugingStationName %}
+    <div class="datatable">
+
+        <label>Gauging station</label>
+        <div class="dataText">
+          <!-- {{ pData.GaugingStationName}}<br> -->
+          At National Grid Reference {{ pData.GaugingStationGridReference}}<br>
+          <a href="licence/gauging-station?wid={{query.wid}}">View data from {{pData.GaugingStationName}}</a>
+        </div>
+    </div>
+    {% endif %}
+
     <div class="datatable">
       <label>Abstraction conditions</label>
       <div class="dataText">
@@ -212,6 +225,21 @@
       {% endif %}
 
     </div>
+
+    <!-- gauging station here -->
+    {% if pData.GaugingStationName %}
+    <div class="datatable">
+
+        <label>Gauging station</label>
+        <div class="dataText">
+          <!-- {{ pData.GaugingStationName}}<br> -->
+          At National Grid Reference {{ pData.GaugingStationGridReference}}<br>
+          <a href="licence/gauging-station?wid={{query.wid}}">View details at {{pData.GaugingStationName}}</a>
+          <!-- <a href="">{{ pData.GaugingStationGridReference}}</a> -->
+
+        </div>
+    </div>
+    {% endif %}
 
     <div class="datatable">
       <label>Abstraction conditions</label>

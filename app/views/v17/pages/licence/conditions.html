@@ -155,10 +155,8 @@
         <div class="datatable">
           <label>{{ pData.HOFLabel2 }}</label>
           <div class="dataText">
-            <a href="gauging-station?wid={{query.wid}}">
-              {{ pData.GaugingStationName }}
-            </a><br>
-            {{ pData.GaugingStationGridReference }}
+            At National Grid Reference {{ pData.GaugingStationGridReference}}<br>
+            <a href="gauging-station?wid={{query.wid}}">View details at {{pData.GaugingStationName}}</a>
           </div>
         </div>
       {% endif %}

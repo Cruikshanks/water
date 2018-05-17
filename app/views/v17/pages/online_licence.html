@@ -158,9 +158,10 @@
         <label>Gauging station</label>
         <div class="dataText">
           <!-- {{ pData.GaugingStationName}}<br> -->
-          <a href="licence/gauging-station?wid={{query.wid}}">{{pData.GaugingStationName}}</a><br>
+          At National Grid Reference {{ pData.GaugingStationGridReference}}<br>
+          <a href="licence/gauging-station?wid={{query.wid}}">View details at {{pData.GaugingStationName}}</a>
           <!-- <a href="">{{ pData.GaugingStationGridReference}}</a> -->
-          Located at {{ pData.GaugingStationGridReference}}
+
         </div>
     </div>
     {% endif %}

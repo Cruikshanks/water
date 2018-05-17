@@ -50,15 +50,21 @@
       </div>
 
       <div class="data">
-        <span class="data-item bold-xxlarge">{{ pData.GaugingStationValue }}</span>
-        <span class="data-item">Recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
+        <span class="data-item bold-xxlarge">Sorry, there is no data available</span>
+        <span class="data-item">
+          Please contact your <a href="https://www.gov.uk/government/organisations/environment-agency/about/access-and-opening" target="_blank">local Environment Agency office</a> (link opens in a new tab) for the latest information.
+        </span>
       </div>
 
   </div>
 
   <details>
 
-  <summary><span class="summary">When will this reading be updated?</span></summary>
+    <summary>
+      <span class="summary">
+        When will this reading be updated?
+      </span>
+    </summary>
     <div class="panel panel-border-narrow">
       <p>
         Readings from this gauging station are updated each day at {{ pData.GaugingStationRecordedTime }}
@@ -73,6 +79,7 @@
       </h2>
     </div>
   </div>
+
 
   <div class="small-space">
     <h3 class="lede">Cessation condition</h3>
@@ -105,7 +112,7 @@
         Threshold level
         </div>
         <div class="data-row__value" aria-labelledby="label-0-1-param2">
-        0.73m Ordnance Datum Newlyn (the sea level benchmark)
+          0.73m Ordnance Datum Newlyn (the sea level benchmark)
         </div>
       </div>
 
@@ -139,6 +146,10 @@
       </div>
     </div>
   </div>
+
+  <!-- <p>
+    Latest recorded level <span class="bold-small">0.13m</span> at <span class="bold-small">5:00am Friday 4 May 2018</span>.
+  </p> -->
 
 </main>
 
