@@ -31,13 +31,7 @@
         <!-- page title -->
         <h1 class="heading-large clustered">
           <span class="heading-secondary">
-
-            {% if pData.LicenceName %}
-              {{ pData.GaugingStationType }} for {{ pData.LicenceName }}
-            {% else %}
-              {{ pData.GaugingStationType }} for {{ pData.LicenceSerialNo }}
-            {% endif %}
-
+            At National Grid Reference {{ pData.GaugingStationGridReference }}
           </span>
            Data from {{ pData.GaugingStationName }}
         </h1>
@@ -45,7 +39,7 @@
         <div class="clustered">Source of supply: {{ pData.Source}}</div>
 
         <!-- Grid reference <a href="">{{ pData.GaugingStationGridReference }}</a> -->
-        At National Grid Reference {{ pData.GaugingStationGridReference }}
+        <!-- At National Grid Reference {{ pData.GaugingStationGridReference }} -->
 
       </div>
 
