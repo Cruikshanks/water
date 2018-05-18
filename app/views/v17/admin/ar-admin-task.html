@@ -1,7 +1,7 @@
 {% extends "../admin.html" %}
 
 {% block page_title %}
-Reports and notifications - GOV.UK
+  Review licence {{ pData.LicenceSerialNo }} - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -28,10 +28,12 @@ Reports and notifications - GOV.UK
       <div class="grid-row">
         <div class="column-two-thirds medium-space">
           <h2 class="sub-head">
-            <a href="notice-batches">Abstraction reform work</a>
+            <a href="notice-batches">
+              Review licence data
+            </a>
           </h2>
           <h1 class="heading-xlarge spaceless">
-            Data review for Licence number {{ pData.LicenceSerialNo }}
+            {{ pData.LicenceSerialNo }}
           </h1>
           <h2 class="heading-small spaceless">
             11 May 2018, 10:01am
@@ -44,7 +46,7 @@ Reports and notifications - GOV.UK
 
           <details>
 
-            <summary><span class="summary">Notes taken on 11 May 2018</span></summary>
+            <summary><span class="summary">Notes about these edits</span></summary>
 
             <div class="panel panel-border-wide">                                     <!-- notes for the admin -->
               <p>
@@ -302,26 +304,26 @@ Reports and notifications - GOV.UK
         <fieldset>
 
           <legend>
-            <h1 class="heading-medium">Set the status for this record</h1>
+            <h1 class="heading-medium">Do you approve these edits?</h1>
           </legend>
 
           <div class="multiple-choice">
             <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
-            <label for="radio-1">Return to review</label>
+            <label for="radio-1">Not approved</label>
           </div>
           <div class="multiple-choice">
             <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
-            <label for="radio-2">Approved, ready for NALD</label>
+            <label for="radio-2">Approved</label>
           </div>
           <div class="multiple-choice">
             <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
-            <label for="radio-2">Full licence review</label>
+            <label for="radio-2">Licence must be reviewed</label>
           </div>
         </fieldset>
       </div>
 
       <a href="licences-internal-list" class="button">
-        Update status
+        Save decision
       </a>
 
     </div>
