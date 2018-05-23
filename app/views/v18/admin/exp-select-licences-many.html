@@ -1,0 +1,505 @@
+{% extends "../admin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-admin-manage.html" %}
+
+  <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Send an expiry notification
+      </h1>
+    </div>
+  </div>
+
+  <!-- search function -->
+  <div class="grid-row">
+    <div class="column-full">
+
+      <form method="post" action="exp-preview">
+        <fieldset class="medium-space">
+
+          <legend class="medium-space">
+            <p>
+              You selected all licences in <span class="bold-small">Avon, Little Avon</span> that will expire before <span class="bold-small">1 June 2020</span>.
+            </p>
+            <p>
+              You can remove any licences you want to exclude from this notification below.
+            </p>
+          </legend>
+
+        <details>
+            <summary><span class="summary">11 licences to verify</span></summary>
+              <div class="panel panel-border-narrow">
+
+                <!-- flextable function -->
+                <div class="grid-row">
+                  <div class="column-full">
+
+                    <div class="table">
+
+                      <div class="table-row table-head">
+                        <div class="table-cell bold-small">
+                          Licence number
+                        </div>
+                        <div class="table-cell bold-small">
+                          Licence holder
+                        </div>
+                        <!-- <div class="table-cell bold-small">
+                          Contact information
+                        </div> -->
+                        <div class="table-cell bold-small">
+                          Licence end
+                        </div>
+                        <div class="table-cell bold-small">
+                          Contact
+                        </div>
+                      </div>
+
+                      <div class="table-row medium-space">
+                        <div class="table-cell">
+                          <div class="multiple-choice">
+                            <input checked type="checkbox">
+                            <label>
+                              <h2 class="bold-small">
+                                018/54/13/04
+                              <h2>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="table-cell">
+                          <label class="context">
+                            Licence holder
+                          </label>
+                          Mr J twitch
+                        </div>
+                        <!-- <div class="table-cell">
+                          jombodge.twick@massive-water.com
+                        </div> -->
+                        <div class="table-cell">
+                          <label class="context">
+                            Licence end
+                          </label>
+                          31 May 2022
+                        </div>
+                        <div class="table-cell">
+                          <label class="context">
+                            Contact
+                          </label>
+                          2 weeks ago
+                        </div>
+                      </div>
+
+
+                    <div class="table-row medium-space">
+                      <div class="table-cell">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>
+                            <h2 class="bold-small">
+                              022/54/56/01
+                            <h2>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence holder
+                        </label>
+                        Miss Shuuma Misov
+                      </div>
+                      <!-- <div class="table-cell">
+                        shuuma.misov@live.com
+                      </div> -->
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence end
+                        </label>
+                        31 May 2022
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Contact
+                        </label>
+                        2 weeks ago
+                      </div>
+                    </div>
+
+                    <div class="table-row medium-space">
+                      <div class="table-cell">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>
+                            <h2 class="bold-small">
+                              034/01/44/0014
+                            <h2>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence holder
+                        </label>
+                        Mr Dave Briar
+                      </div>
+                      <!-- <div class="table-cell">
+                        thepicklewanderer77@gmail.com
+                      </div> -->
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence end
+                        </label>
+                        1 June 2019
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Contact
+                        </label>
+                        3 weeks ago
+                      </div>
+                    </div>
+
+                    <div class="table-row medium-space">
+                      <div class="table-cell">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>
+                            <h2 class="bold-small">
+                              038/*22/0013/r001
+                            <h2>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence holder
+                        </label>
+                        Barry Boaforre
+                      </div>
+                      <!-- <div class="table-cell">
+                        07724 134 574
+                      </div> -->
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence end
+                        </label>
+                        31 June 2019
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Contact
+                        </label>
+                        Last month
+                      </div>
+                    </div>
+
+                    <div class="table-row medium-space">
+                      <div class="table-cell">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>
+                            <h2 class="bold-small">
+                              044/06/03/0013
+                            <h2>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence holder
+                        </label>
+                        Mr Shannon Sufans
+                      </div>
+                      <!-- <div class="table-cell">
+                        01745 651 422
+                      </div> -->
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence end
+                        </label>
+                        31 June 2019
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Contact
+                        </label>
+                        Last year
+                      </div>
+                    </div>
+
+                    <div class="table-row medium-space last-row">
+                      <div class="table-cell">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>
+                            <h2 class="bold-small">
+                              49/81/01/0131
+                            <h2>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence holder
+                        </label>
+                        Dana Picklotan
+                      </div>
+                      <!-- <div class="table-cell">
+                        <label class="context">
+                          Contact information
+                        </label>
+                        hello@abstractioneers.com
+                      </div> -->
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence end
+                        </label>
+                        04 July 2019
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Contact
+                        </label>
+                        Last year
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="table-row medium-space last-row">
+                      <div class="table-cell">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>
+                            <h2 class="bold-small">
+                              052/13/131/22
+                            <h2>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence holder
+                        </label>
+                        Bigger Bean Farm
+                      </div>
+                      <!-- <div class="table-cell">
+                        <label class="context">
+                          Contact information
+                        </label>
+                        hello@abstractioneers.com
+                      </div> -->
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence end
+                        </label>
+                        17 July 2019
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Contact
+                        </label>
+                        Last year
+                      </div>
+                    </div>
+
+
+
+                    <div class="table-row medium-space last-row">
+                      <div class="table-cell">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>
+                            <h2 class="bold-small">
+                              64/001/34/01/11
+                            <h2>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence holder
+                        </label>
+                        Pommadore Ltd
+                      </div>
+                      <!-- <div class="table-cell">
+                        <label class="context">
+                          Contact information
+                        </label>
+                        hello@abstractioneers.com
+                      </div> -->
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence end
+                        </label>
+                        31 July 2019
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Contact
+                        </label>
+                        Last year
+                      </div>
+                    </div>
+
+
+
+                    <div class="table-row medium-space last-row">
+                      <div class="table-cell">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>
+                            <h2 class="bold-small">
+                              074/11/01/29
+                            <h2>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence holder
+                        </label>
+                        J Peach
+                      </div>
+                      <!-- <div class="table-cell">
+                        <label class="context">
+                          Contact information
+                        </label>
+                        hello@abstractioneers.com
+                      </div> -->
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence end
+                        </label>
+                        31 Sept 2019
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Contact
+                        </label>
+                        Last year
+                      </div>
+                    </div>
+
+
+
+                    <div class="table-row medium-space last-row">
+                      <div class="table-cell">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>
+                            <h2 class="bold-small">
+                              074/11/01/30
+                            <h2>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence holder
+                        </label>
+                        J Peach
+                      </div>
+                      <!-- <div class="table-cell">
+                        <label class="context">
+                          Contact information
+                        </label>
+                        hello@abstractioneers.com
+                      </div> -->
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence end
+                        </label>
+                        31 Sept 2019
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Contact
+                        </label>
+                        Last year
+                      </div>
+                    </div>
+
+
+
+                    <div class="table-row medium-space last-row">
+                      <div class="table-cell">
+                        <div class="multiple-choice">
+                          <input checked type="checkbox">
+                          <label>
+                            <h2 class="bold-small">
+                              074/11/01/31
+                            <h2>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence holder
+                        </label>
+                        J Peach
+                      </div>
+                      <!-- <div class="table-cell">
+                        <label class="context">
+                          Contact information
+                        </label>
+                        hello@abstractioneers.com
+                      </div> -->
+                      <div class="table-cell">
+                        <label class="context">
+                          Licence end
+                        </label>
+                        31 Sept 2019
+                      </div>
+                      <div class="table-cell">
+                        <label class="context">
+                          Contact
+                        </label>
+                        Last year
+                      </div>
+                    </div>
+
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+
+            <!-- end of progressive disclosure -->
+            </div>
+          </details>
+
+          <div class="grid-row">
+            <div class="column-one-third">
+
+              <div>
+                <a href="exp-preview" id="submitButton" class="button button" type="submit">Continue</a>
+              </div>
+
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </br>
+
+</main>
+
+{% endblock %}

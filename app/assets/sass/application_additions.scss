@@ -267,7 +267,7 @@ a.password_reset {
 }
 
 .first-datapp {
-  border-top: 2px solid #bfc1c3;
+  border-top: 1px solid #bfc1c3;
 }
 
 .datatablebottom {
@@ -521,7 +521,7 @@ details {
   padding-top: 0;
 }
 
-.sub-data-bottom {
+.sub-data-bottom .no-border-bottom {
   border-bottom: none;
 }
 
@@ -749,10 +749,6 @@ details {
   background-color: #B10E1E;
 }
 
-.full {
-  width: 100%;
-}
-
 .flush-left {
   margin-left: 0;
   padding-left: 0;
@@ -856,7 +852,7 @@ details {
   padding-bottom: 30px;
   @media (min-width: 768px) {
     display: table-row;
-      padding-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -874,6 +870,23 @@ details {
   border-bottom: 1px solid #bfc1c3;
   padding: 15px;
   padding-left: 0;
+  min-height: 30px;
+  @media (min-width: 768px) {
+    display: table-cell;
+    min-height: auto;
+  }
+  white-space: nowrap;
+  // line-height: 3rem;
+  vertical-align: middle;
+}
+
+.first-cell {
+  font-size: inherit;
+
+  // media query this
+  border-bottom: none;
+  padding: 15px;
+  padding-left: 0;
   @media (min-width: 768px) {
     display: table-cell;
   }
@@ -887,6 +900,35 @@ details {
     border-bottom: 1px solid #bfc1c3;
   }
   border-bottom: 0;
+}
+
+// evenly spaced table columns
+// by default
+
+#column1of5
+#column2of5
+#column3of5
+#column4of5
+#column5of5 {
+  width: 25%;
+}
+
+#column1of4
+#column2of4
+#column3of4
+#column4of4 {
+  width: 25%;
+}
+
+#column1of4
+#column2of3
+#column3of3 {
+  width: 33%;
+}
+
+#column1of2
+#column2of2 {
+  width: 50%;
 }
 
 .table-cell .multiple-choice {
@@ -906,10 +948,6 @@ details {
   @media (min-width: 768px) {
     display: none;
   }
-}
-
-.full {
-  width: 100%;
 }
 
 #address-field {
@@ -1072,4 +1110,9 @@ details {
 
 #unbroken-link {
   white-space: nowrap;
+}
+
+
+.pink {
+  background-color: rgba(255, 77, 166, 0.15);
 }

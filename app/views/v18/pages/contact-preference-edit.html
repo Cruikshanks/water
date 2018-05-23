@@ -1,0 +1,54 @@
+{% extends "../head.html" %}
+
+{% block page_title %}
+  Choose how we contact you - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="big-space">
+
+        <legend>
+          <h1 class="heading-large">
+            Notifications for licence conditions
+          </h1>
+        </legend>
+
+        <p>
+          We will send notifications to this address:
+        </p>
+
+        <div class="panel panel-border-narrow medium-space" id="contact-by-email">
+          <label class="form-label" for="contact-email"><p class="bold-small">Email address</p></label>
+          <p>
+            <input class="form-control" name="contact-email" type="text" id="contact-email" value="hello@abstractioneers.com">
+          </p>
+          <a href="contact-preference-email-set" class="button">Use this email address</a>
+        </div>
+
+        <a href="contact-preference-letter-edit">
+          Update to an email address
+        </a>
+
+      </div>
+
+
+
+      <a href="licences" class="button">
+        View my licences
+      </a>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

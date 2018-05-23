@@ -1,0 +1,65 @@
+{% extends "../admin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-admin-manage.html" %}
+
+  <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large tight">
+        Check and confirm your hands off flow notice
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="medium-space">
+        <p>
+          You’re about to send this notification to <span class="bold-small">6 licence holders</span> regarding <span class="bold-small">8 licences</span> in <span class="bold-small">Avon, Little Avon</span>.
+        </p>
+      </div>
+
+
+      <div class="medium-space">
+
+        <div class="notification">
+          <p class="lede">
+            The river at the <span class="bold-medium">Little Spanton</span> gauging station has daily mean flow of <span class="bold-medium">128m³/s</span>.
+          </p>
+          <p class="lede">
+            Please refer to the paper copy of your licence to check this flow against your relevant conditions.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-one-third">
+
+      <div>
+        <a href="hof-sent" id="submitButton" class="button button" type="submit">Send notification</a>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

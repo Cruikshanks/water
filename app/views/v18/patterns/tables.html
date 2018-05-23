@@ -1,0 +1,127 @@
+{% extends "../admin.html" %}
+
+{% block page_title %}
+  Mobile optimised tables - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h1 class="heading-large">
+        Mobile optimised tables
+      </h1>
+
+      <!-- table with four columns -->
+      <div class="table big-space">                                             <!-- the whole table -->
+
+        <div class="table-row table-head">                                      <!-- the table head -->
+          <div class="table-cell bold-small" id="column1of4">
+            Column A
+          </div>
+          <div class="table-cell bold-small" id="column2of4">
+            Column B
+          </div>
+          <div class="table-cell bold-small" id="column3of4">
+            Column C
+          </div>
+          <div class="table-cell bold-small" id="column4of4">
+            Select
+          </div>
+        </div>
+
+
+        <div class="table-row">                                                 <!-- data group -->
+          <!-- <div class="table-cell"> -->
+            <h2 class="heading-medium">
+              AR status
+            </h2>
+          <!-- </div> -->
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell pink">
+            <label class="context">
+              Column A
+            </label>
+            Red
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Column B
+            </label>
+            Green
+          </div>
+          <div class="table-cell pink">
+            <label class="context">
+              Column C
+            </label>
+            Blue
+          </div>
+          <div class="table-cell status-column">
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              Column A
+            </label>
+            Red
+          </div>
+          <div class="table-cell pink">
+            <label class="context">
+              Column B
+            </label>
+            Green
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Column C
+            </label>
+            Blue
+          </div>
+          <div class="table-cell status-column pink">
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell pink">
+            <label class="context">
+              Column A
+            </label>
+            Red
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Column B
+            </label>
+            Green
+          </div>
+          <div class="table-cell pink">
+            <label class="context">
+              Column C
+            </label>
+            Blue
+          </div>
+          <div class="table-cell status-column">
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+      </div>
+
+      <a href="licences-internal-list" class="button">
+        Save decision
+      </a>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

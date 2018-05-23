@@ -1,0 +1,83 @@
+{% extends "v17/head.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Request to view licences - GOV.UK ~
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds big-space">
+
+      <h1 class="heading-large">
+        Which licences do you give permission for <span class="bold">geoff@waterboss.com</span> to view and manage online?
+      </h1>
+      <p>Please don't select licence numbers that you don't want to share, or that don't belong to you.</p>
+
+      <details>
+
+        <summary><span class="summary">What happens if I give permission for this person to view my licence information online?</span></summary>
+
+        <div class="panel panel-border-narrow">
+
+          <p>
+            If you approve this request, this person will be able to:
+          </p>
+
+          <ul class="list list-bullet">
+            <li>view information about the points, periods, purposes and conditions of abstraction for each licence number listed above</li>
+            <li>view the contact details associated with your licence</li>
+          </ul>
+
+          <p>
+            In the future, you can also give them permission to xx.
+          </p>
+
+          <p>
+            You can remove this person's access to your licence information at any time by using our online service. You'll need to create an account to do this.
+          </p>
+
+        </div>
+
+      </details>
+
+      <!-- licences list -->
+      <form class="medium-space">
+        <fieldset>
+
+          <div class="multiple-choice">
+            <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+            <label for="waste-type-1">03/07/256/7001</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+            <label for="waste-type-2">03/07/256/7001/r01</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+            <label for="waste-type-3">03/07/256/7001/r02</label>
+          </div>
+
+        </fieldset>
+      </form>
+
+      <p>
+        <!-- continue button -->
+        <a href="choose_address">
+          <input onclick="" type="submit" value="Add these licences" class="button" role="button"/>
+        </a>
+      </p>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

@@ -1,0 +1,244 @@
+{% extends "../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence number {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-view.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- page title -->
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- <div class="panel panel-border-wide alert-default big-space">
+        Notifications for this licence will be sent by post<br>
+        <a href="auth_code">Update the contact method for this licence</a>
+      </div> -->
+
+      <div class="panel panel-border-wide">
+        <p>
+          Notifications for this licence will be sent by post<br>
+          <a href="update-contact-preference">Update your contact preference for this licence</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- page heading -->
+  {% if pData.LicenceName %}
+    <!-- page title -->
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge">
+          <span class="heading-secondary">
+            Licence number {{pData.LicenceSerialNo}}
+          </span>
+          {{ pData.LicenceName }}
+        </h1>
+      </div>
+    </div>
+  {% else %}
+    <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
+  {% endif %}
+
+  <div class="datatable datahead">
+    <label>Licence name</label>
+    <div class="dataText">
+
+      {% if pData.LicenceName %}
+        {{ pData.LicenceName }}</br>
+        <a href="/v17/pages/online_licence_rename?wid={{ query.wid }}">Rename this licence</a>
+      {% else %}
+        <!-- <span>No name chosen</span></br>  -->
+        <a href="/v17/pages/online_licence_rename?wid={{ query.wid }}">Name this licence</a>
+      {% endif %}
+
+    </div>
+  </div>
+
+  <!-- Licence holder -->
+  <div class="datatable">
+    <label>Licence holder</label>
+    <div class="dataText">
+      {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
+      <a href="/v17/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
+    </div>
+  </div>
+
+
+  <div class="datatable">
+    <label>Start date</label>
+    <div class="dataText">
+      {{ pData.EffectiveDateStart }}
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>End date</label>
+    <div class="dataText">
+      {{ pData.EffectiveDateEnd }}
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>Source of supply</label>
+    <div class="dataText">{{ pData.Source}}</div>
+  </div>
+
+  <div class="datatable">
+    <label>Purpose of abstraction</label>
+    <div class="dataText">
+
+      {{ pData.Purpose1 }}</br>
+
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>Period of abstraction</label>
+    <div class="dataText">{{ pData.PeriodofAbstraction }}</div>
+  </div>
+
+  <div class="datatable">
+
+    {% if pData.Point2 %}
+
+      <label>Points of abstraction</label>
+      <div class="dataText">
+
+        {{ pData.Point1 }}<br>
+        {{ pData.Point2 }}<br>
+
+        {% if pData.Point3 %}
+          {{ pData.Point3 }}<br>
+        {% endif %}
+
+        {% if pData.Point4 %}
+          {{ pData.Point4 }}<br>
+        {% endif %}
+
+        {% if pData.Point5 %}
+          {{ pData.Point5 }}<br>
+        {% endif %}
+        <a href="licence/points?wid={{ query.wid }}">View details of abstraction points</a>
+
+      </div>
+
+      {% else %}
+
+      <label>Point of abstraction</label>
+        <div class="dataText">
+
+        {{ pData.Point1 }}<br>
+        <a href="licence/points?wid={{ query.wid }}">View details of abstraction point</a>
+
+      {% endif %}
+
+    </div>
+
+    <!-- gauging station here -->
+    {% if pData.GaugingStationName %}
+    <div class="datatable">
+
+        <label>Gauging station</label>
+        <div class="dataText">
+          <!-- {{ pData.GaugingStationName}}<br> -->
+          At National Grid Reference {{ pData.GaugingStationGridReference}}<br>
+          <a href="licence/gauging-station?wid={{query.wid}}">View data from {{pData.GaugingStationName}}</a>
+          <!-- <a href="">{{ pData.GaugingStationGridReference}}</a> -->
+
+        </div>
+    </div>
+    {% endif %}
+
+  <!--
+
+    "GaugingStationName": "Huntsford",
+    "GaugingStationGridReference": "SX 426725",
+    "GaugingStationType": "Ultrasonic gauging station",
+    "GaugingStationValue": "002",
+
+  -->
+
+    <!-- end gauging station -->
+
+    <div class="datatable">
+      <label>Abstraction conditions</label>
+      <div class="dataText">
+        {{ pData.Condition1 }}</br>
+
+        {% if pData.Condition2 %}
+          {{ pData.Condition2 }}</br>
+        {% endif %}
+
+        {% if pData.Condition3 %}
+          {{ pData.Condition3 }}</br>
+        {% endif %}
+
+        {% if pData.Condition4 %}
+          {{ pData.Condition4 }}</br>
+        {% endif %}
+
+        {% if pData.Condition5 %}
+          {{ pData.Condition5 }}</br>
+        {% endif %}
+
+        <a href="licence/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+
+    </div>
+  </div>
+
+  <div class="datatable big-space">
+    <label>Abstraction amounts</label>
+    <div class="dataText">
+
+      {{ pData.Amount1 }}</br>
+
+      {% if pData.Amount2 %}
+        {{ pData.Amount2 }}</br>
+      {% endif %}
+
+      {% if pData.Amount3 %}
+        {{ pData.Amount3 }}</br>
+      {% endif %}
+
+      {% if pData.Amount4 %}
+        {{ pData.Amount4 }}</br>
+      {% endif %}
+
+      {% if pData.Amount5 %}
+        {{ pData.Amount5 }}</br>
+      {% endif %}
+    </div>
+
+  </div>
+
+  <div id="#bad-data">
+    <!-- bad data block -->
+    {% include "../partials/bad-data.html" %}
+  </div>
+
+
+  </div>
+
+
+{% endif %}
+{% endfor %}
+
+</main>
+{% endblock %}

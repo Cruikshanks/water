@@ -1,0 +1,100 @@
+{% extends "../view.html" %}
+
+{% block page_title %}
+  Choose how we contact you - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="big-space">
+
+        <legend>
+          <h1 class="heading-large">
+            Update your contact preferences for all licences
+          </h1>
+        </legend>
+
+        <p>
+          Please tell us how you would like to receive notifications about changes to your abstraction conditions.
+        </p>
+
+        <fieldset>
+
+          <!-- post radio -->
+          <div class="multiple-choice" data-target="contact-by-post">
+            <input id="example-contact-by-text" name="radio-contact-group" aria-controls="contact-by-post" aria-expanded="true" type="radio" checked>
+            <label for="example-contact-by-text">Letter</label>
+          </div>
+
+          <!-- address input panel -->
+          <div class="medium-space" id="contact-by-post" aria-hidden="false">
+            <div class="panel panel-border-narrow">
+              <label class="form-label" for="contact-text-message"><p class="bold-small">Main postal address</p></label>
+              <p>
+                <!-- <input class="form-control" name="contact-text-message" type="text" id="contact-text-message"> -->
+                <!-- <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="" required > -->
+                  Sunnybrooke Farm, Jammingford<br>
+                  Birmingham,<br>
+                  B37 6RY<br>
+                <!-- </textarea> -->
+              </p>
+            </div>
+
+
+
+            <div class="big-space">
+              <details>
+                <summary><span class="summary">Update my postal address</span></summary>
+
+                <div class="panel panel-border-narrow">
+                  <p>To update your postal address for this account, please contact us by:</p>
+
+                  <p><a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a></p>
+
+                  <p>Telephone: <a href="tel:+03708506506">03708 506 506</a></p>
+
+                  <p>Telephone from outside the UK: <a href="tel:+441142825312">+44 (0) 114 282 5312</a></p>
+
+                  <p>Minicom (for the hard of hearing): <a href="tel:+441142825312">+44 (0) 114 282 5312</a></p>
+
+                  <p>Lines are open Monday to Friday, 8am to 6pm (GMT).</p>
+                </div>
+              </details>
+            </div>
+
+          </div>
+
+          <!-- email radio -->
+          <div class="multiple-choice" data-target="contact-by-email">
+            <input id="example-contact-by-email" name="radio-contact-group" aria-controls="contact-by-email" aria-expanded="false" type="radio">
+            <label for="example-contact-by-email">Email</label>
+          </div>
+
+          <!-- email input panel -->
+          <div class="panel panel-border-narrow medium-space js-hidden" id="contact-by-email" aria-hidden="true">
+            <label class="form-label" for="contact-email"><p class="bold-small">Email address</p></label>
+            <p>
+              <input class="form-control" name="contact-email" id="contact-email" type="text">
+            </p>
+
+            <a href="licences-updated?wid=2" class="button">Use this email</a>
+          </div>
+
+        </fieldset>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

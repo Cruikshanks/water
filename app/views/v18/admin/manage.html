@@ -1,0 +1,59 @@
+{% extends "../admin.html" %}
+
+{% block page_title %}
+Reports and notifications - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-admin-manage.html" %}
+
+  <!-- page title -->
+  <h1  class="heading-large medium-space">Reports and notifications</h1>
+
+  <div id="feature-info" class="grid-row flexy">
+
+    <div class="column-one-third medium-space">
+      <!-- <div class="card"> -->
+        <h2 class="heading-medium">View a report</h2>
+        <ul class="list list-bullet">
+          <li><a href="notice-batches">Notifcations report</a></li>
+          <a href="https://datastudio.google.com/embed/reporting/1on24bMHI1dyJqegI40BF7lFFYTsa6YLx/page/lY4N" target="_blank">View service performance (opens in a new tab)</a>
+        </ul>
+      <!-- </div> -->
+    </div>
+
+    <div class="column-one-third medium-space">
+      <!-- <div class="card"> -->
+        <h2 class="heading-medium">Send a notification</h2>
+        <ul class="list list-bullet">
+          <li><a href="hof-notice">Hands off flow warning</a></li>
+          <li><a href="hof-notice">Hands off flow stop</a></li>
+          <li><a href="hof-notice">Hands off flow resume</a></li>
+          <li><a href="exp-notice">Expiry notice</a></li>
+        </ul>
+      <!-- </div> -->
+    </div>
+
+    <div class="column-one-third medium-space">
+      <!-- <div class="card"> -->
+        <h2 class="heading-medium">Abstraction reform</h2>
+        <ul class="list list-bullet">
+          <li><a href="licences-internal-list">Check licence data</a></li>
+        </ul>
+      <!-- </div> -->
+    </div>
+
+  </div>
+
+  <script src="/public/javascripts/underscore.min.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}

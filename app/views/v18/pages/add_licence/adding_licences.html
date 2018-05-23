@@ -1,0 +1,73 @@
+{% extends "v17/head.html" %}
+
+{% block page_title %}
+  Some licences could not be added - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <div class="medium-space"></div>
+
+  <!-- back -->
+  <div class="small-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  </div>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        * Some licences could not be added *
+      </h1>
+
+      <h2 class="heading-medium">
+        * Some of your licences could not be added at this time: *
+      </h2>
+
+      <ul class="list list-bullet text">
+        <li>
+          TH/039/0943/024
+        </li>
+        <li>
+          TH/039/0943/025
+        </li>
+        <li>
+          TH/039/0943/026
+        </li>
+      </ul>
+
+      <p>
+        * If you believe that you might have input any of the licence numbers incorrectly you could go back and try to resolve this. *
+      </p>
+
+      <div class="medium-space">
+        <a href="#" onclick="history.go(-1)">* Go back and try adding your licences again *</a>
+      </div>
+
+      <h2 class="heading-medium">
+        * We were able to find 7 licences *
+      </h2>
+
+      <p>
+        * These licences will be added to your account. *
+      </p>
+
+
+      <!-- continue button -->
+      <a href="choose_address" class="button">Continue</a>
+      </a>
+
+      </form>
+      <p></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,161 @@
+{% extends "../admin.html" %}
+
+{% block page_title %}
+  Notification report - GOV.UK
+{% endblock %}
+
+<head>
+  <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-admin-manage.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-xlarge">
+        Notification report
+      </h1>
+    </div>
+  </div>
+
+  <!-- batches -->
+  <div class="grid-row">
+    <div class="column-full">
+
+      <table>
+        <tdead>
+          <tr class="clickable">
+            <td class="text" scope="col">
+              <a href="#">
+                Date
+                <span class="sort-icon"> &#x25be;</span>
+              </a>
+            </th>
+            <td scope="col">
+              <a href="#">
+                Notification
+                <!-- <span class="sort-icon"> &#x25be;</span> -->
+              </a>
+            </th>
+            <td class="text" scope="col">
+              <a href="#">
+                Sent by
+                <!-- <span class="sort-icon"> &#x25be;</span> -->
+              </a>
+            </th>
+            <td class="numeric" scope="col">
+              <a href="#">
+                Recipients
+                <!-- <span class="sort-icon"> &#x25be;</span> -->
+              </a>
+            </th>
+            <td class="text text-right" scope="col">
+              <a href="#">
+                Status
+                <!-- <span class="sort-icon"> &#x25be;</span> -->
+              </a>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr class="clickable">
+            <td class="text">13 May 2018</td>
+            <td scope="row"><a href="notice-log">HOF stop</a></th>
+            <td class="text">tim.teace@defra.gsi.gov.uk</td>
+            <td class="numeric">6</td>
+            <td class="centext">
+
+            </td>
+          </tr>
+
+          <tr class="clickable">
+            <td class="text">13 May 2018</td>
+            <td scope="row"><a href="notice-log">Expire final</a></th>
+            <td class="text">mozoile.barrapa@environment-agency.com</td>
+            <td class="numeric">1,245</td>
+            <td class="centext">
+              <strong class="task-completed task-error badge">
+                11
+              </strong>
+            </td>
+          </tr>
+
+          <tr class="clickable">
+            <td class="text">13 May 2018</td>
+            <td scope="row"><a href="notice-log">Expire prompt</a></th>
+            <td class="text">rachael.ways@environment-agency.com</td>
+            <td class="numeric">1</td>
+            <td class="centext">
+
+            </td>
+          </tr>
+
+          <tr class="clickable">
+            <td class="text">11 May 2018</td>
+            <td scope="row"><a href="notice-log">HOF start</a></th>
+            <td class="text">mozoile.barrapa@environment-agency.com</td>
+            <td class="numeric">6</td>
+            <td class="centext">
+              <strong class="task-completed task-error badge">
+                1
+              </strong>
+            </td>
+          </tr>
+
+          <tr class="clickable">
+            <td class="text">10 May 2018</td>
+            <td scope="row"><a href="notice-log">HOF stop</a></th>
+            <td class="text">rachael.ways@environment-agency.com</td>
+            <td class="numeric">8</td>
+            <td class="centext">
+              <strong class="task-completed task-error badge">
+                1
+              </strong>
+            </td>
+          </tr>
+
+          <tr class="clickable">
+            <td class="text">10 May 2018</td>
+            <td scope="row"><a href="notice-log">HOF warning</a></th>
+            <td class="text">rachael.ways@environment-agency.com</td>
+            <td class="numeric">108</td>
+            <td class="centext">
+              <strong class="task-completed task-error badge">
+                5
+              </strong>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- clickble JS -->
+  <!-- to make data table rows stylable -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    // Custom
+    $(function () {
+      // Click on licence list clicks inner link
+      $('tr.clickable').on('click', function (ev) {
+        window.location.href = $(this).find('a:first').attr('href');
+        ev.preventDefault();
+      });
+    });
+  </script>
+
+
+</main>
+{% endblock %}

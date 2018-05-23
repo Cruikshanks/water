@@ -1,0 +1,65 @@
+{% extends "../../head.html" %}
+
+{% block page_title %}
+  Create a password for your online account - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      {% if data.noneselected == "1" %}
+        <!-- only show this error if incorrectLicenceNo param passed through from route-->
+        <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+            You must select how to confirm your identity
+          </h2>
+        </div>
+      {% endif %}
+
+      <h1 class="heading-large">
+        How do you want to confirm your identity?
+      </h1>
+
+      <form method="post" action="/v17/pages/registration/by_phone">
+
+        <div class="form-group">
+
+          <legend>
+            <p class="lede">
+              You need to complete a security check before you can access licence information online.
+            </p>
+          </legend>
+
+          <div class="form-group">
+            <fieldset>
+              <div class="multiple-choice">
+                <input name="contact" id="radio-1" type="radio"  value="by-phone">
+                <label for="radio-1">Call our team to answer some security questions, then receive a security code by email</label>
+              </div>
+              <div class="multiple-choice">
+                <input name="contact"  id="radio-2" type="radio" value="by-post">
+                <label for="radio-2">Request a security code by post</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <input type="submit" value="Continue" class="button" role="button"/>
+
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

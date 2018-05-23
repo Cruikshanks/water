@@ -1,0 +1,95 @@
+{% extends "v17/head.html" %}
+
+{% block page_title %}
+  Enter your security code - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "v17/partials/nav-view.html" %}
+
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <!-- always use method='post' for forms --->
+      <form action="/v17/pages/licences_added" method="get" class="form" id="password_reset" data-parsley-validate data-parsley-errors-messages-disabled>
+
+        {% if incorrectLogin == "1" %}
+        <!-- only show this error if incorrectLogin param passed through from route-->
+        <div id='incorrectLogin' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+            Your code is incorrect
+          </h2>
+          <ul class="error-summary-list">
+           <li data-parsely-id="password"><a href="#password">Re-enter your code</a></li>
+          </ul>
+        </div>
+        {% endif %}
+
+        <div class="error-summary hidden" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+            You need to enter the code we sent you
+          </h2>
+          <ul class="error-summary-list">
+            <li data-parsely-id="password"><a href="#password">Re-enter your confirmation code</a></li>
+          </ul>
+        </div>
+
+        <br>
+
+        <h1 class="heading-large">
+          Enter your security code
+        </h1>
+
+        <!-- code -->
+        <div class="form-group">
+          <label for="password">
+            <span class="form-hint">
+              We sent this by post to the registered address you chose.
+            </span>
+
+            <fieldset>
+              <span id="enterPassword" data-parsely-id="password" class="error-message hidden">
+                Please check your code is correct.
+              </span>
+            </fieldset>
+          </label>
+
+          <input type="text" data-parsley-pattern="x45Tn" class="form-control form-control-1-4" data-parsely-trigger="keyup change" name="password" id="password" required />
+        </div>
+
+        <input onclick="$('#incorrectLogin').hide()" type="submit" value="Continue" class="button" role="button"/>
+
+      </form>
+    </div>
+
+    <script>
+      // the following code overrides the default link click behaviour and adds the
+      document.getElementById('password_reset_link').onclick=function(e){
+        e.preventDefault();
+        var user_id=document.getElementById('user-id').value
+        window.location='/v12/password_reset?user_id='+user_id; //redirect to password reset screen
+      }
+
+      {% if incorrectLogin == "1" %}
+      document.getElementById("enterPassword").className = "error-message"
+
+      {% endif %}
+
+    </script>
+
+  </div>
+
+</main>
+
+<p class="form-hint">Code is x45Tn</p>
+
+{% endblock %}

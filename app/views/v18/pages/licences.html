@@ -1,0 +1,91 @@
+{% extends "../view.html" %}
+
+{% block page_title %}
+  Your water abstraction or impoundment licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-view.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1  class="heading-large">
+        Your licences
+      </h1>
+
+    </div>
+  </div>
+
+  <!-- licence list -->
+  <div class="grid-row">
+    <div class="column-full">
+
+      <!-- table header -->
+      <div class="license-results medium-space" id="results">
+
+        <div class="license-results-header">
+          <div class="license-results-header__column">
+              Licence serial number
+          </div>
+          <div class="license-results-header__column">
+
+          </div>
+          <div class="license-results-header__column">
+              Licence end date
+          </div>
+        </div>
+
+        <!-- table content -->
+        <a href="/v17/pages/online_licence?wid=3" class="license-result">
+          <h2 class="heading-medium license-result__column faux-link">03/28/60/0032</h2>
+          <p class="license-result__column license-result__column--description"></p>
+          <div class="license-result__column" aria-hidden="true">30 April 2021</div>
+        </a>
+
+        <a href="/v17/pages/online_licence?wid=1" class="license-result">
+          <h2 class="heading-medium license-result__column faux-link">03/28/60/0002</h2>
+          <p class="license-result__column license-result__column--description"></p>
+          <div class="license-result__column" aria-hidden="true">15 September 2022</div>
+        </a>
+
+        <a href="/v17/pages/online_licence?wid=2" class="license-result">
+          <h2 class="heading-medium license-result__column faux-link">03/28/60/0003</h2>
+          <p class="license-result__column license-result__column--description"></p>
+          <div class="license-result__column" aria-hidden="true">30 September 2025</div>
+        </a>
+
+        <a href="/v17/pages/online_licence?wid=5" class="license-result">
+          <h2 class="heading-medium license-result__column faux-link">01/04/12/0047</h2>
+          <p class="license-result__column license-result__column--description"></p>
+          <div class="license-result__column" aria-hidden="true">1 March 2027</div>
+        </a>
+
+        <a href="/v17/pages/online_licence?wid=4" class="license-result">
+          <h2 class="heading-medium license-result__column faux-link">01/04/12/0047</h2>
+          <p class="license-result__column license-result__column--description"></p>
+          <div class="license-result__column" aria-hidden="true">1 September 2031</div>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- disclaimer block -->
+  {% include "../partials/disclaimer.html" %}
+
+  <script src="/public/javascripts/underscore.min.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/license_results.js"></script>
+
+</main>
+
+{% endblock %}

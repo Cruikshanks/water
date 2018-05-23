@@ -1,0 +1,29 @@
+{% extends "../head.html" %}
+
+{% block page_title %}
+  Access removed - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+      <h1 class="heading-large">
+        Access removed
+      </h1>
+
+      <p class="lede"><span class="bold-medium">long_email_address@test.co.uk</span> can no longer view your licences. They won’t be notified about this change.</p>
+
+      <a href="/v12/online_licence/licence_access/manage_licences_views_wendy">Give someone access to view your licences</a>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,126 @@
+Enter the password you created{% extends "../head.html" %}
+
+{% block page_title %}
+  Sign in - Manage your water abstraction or impoundment licence - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Sign in to view your licences
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-one-third">
+
+      <h3 class="heading-medium medium-space">Need an account?</h3>
+      <p>Create an account to view your water abstraction licences</p>
+
+      <a href="start" class="password_reset">Create an account</a>
+
+      <script>
+        // the following code overrides the default link click behaviour and adds the
+        document.getElementById('password_reset_link').onclick=function(e){
+        e.preventDefault();
+        var user_id=document.getElementById('user-id').value
+        window.location='/v17/reset_password/password_reset?user_id='+user_id; //redirect to password reset screen
+      }
+
+      {% if incorrectLogin == "1" %}
+        document.getElementById("enterEmail").className = "error-message"
+        document.getElementById("enterPassword").className = "error-message"
+      {% endif %}
+    </script>
+
+  </div>
+
+    <div class="column-two-thirds">
+
+      <!-- always use method='post' for forms --->
+      <form action="/v17/pages/licences" method="post" class="form medium-space" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+
+        {% if incorrectLogin == "1" %}
+        <!-- only show this error if incorrectLogin param passed through from route-->
+        <div id='incorrectLogin' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+            Your email address or password is incorrect
+          </h2>
+
+          <ul class="error-summary-list">
+            <li data-parsely-id="user-id"><a href="#user-id">Re-enter your email address</a></li>
+            <li data-parsely-id="password"><a href="#password">Re-enter your password</a></li>
+          </ul>
+        </div>
+        {% endif %}
+
+        <div class="error-summary hidden medium-space" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+            You need to enter both your email and password
+          </h2>
+
+          <ul class="error-summary-list">
+            <li data-parsely-id="user-id"><a href="#user-id">Re-enter your email address</a></li>
+            <li data-parsely-id="password"><a href="#password">Re-enter your password</a></li>
+          </ul>
+        </div>
+
+        <h2 class="heading-medium">
+          Sign in
+        </h2>
+
+        <!-- User id -->
+        <div class="form-group">
+          <label for="user-id">
+            <fieldset>
+              <span class="form-label-bold">Email address</span>
+              <span class="form-hint">
+                This is the email address used to create your account.
+              </span>
+              <span id="enterEmail" data-parsely-id="user-id" class="error-message hidden">
+                Please enter the email address you registered with us.
+              </span>
+            </fieldset>
+          </label>
+
+          <input type="email" class="form-control" name="user-id" id="user-id" required=""/>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group"> <!-- error class = form-group-error -->
+          <label for="password">
+            <fieldset>
+              <span class="form-label-bold">Password</span>
+              <span class="form-hint">
+                Enter the password you created.
+              </span>
+              <span id="enterPassword" data-parsely-id="password" class="error-message hidden">
+                Please check and enter the password you created.
+              </span>
+            </fieldset>
+          </label>
+          <input type="password" class="form-control" name="password" id="password" required=""/> <!-- error class = form-control-error -->
+        </div>
+
+        <!-- <input onclick="$('#incorrectLogin').hide()" type="submit" value="Sign in" class="button button-start" role="button"/> -->
+        <input onclick="$('#incorrectLogin').hide()" type="submit" value="Sign in" class="button" role="button"/>
+      </form>
+
+      <div class="big-space">
+        <a id="password_reset_link" href="/v17/change_Password/change_password" class="password_reset small-space">Forgotten password?</a>
+      </div>
+
+    </div>
+
+</div>
+</main>
+
+{% endblock %}
