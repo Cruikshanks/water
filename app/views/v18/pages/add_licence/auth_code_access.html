@@ -1,4 +1,4 @@
-{% extends "v17/head.html" %}
+{% extends "v18/head.html" %}
 
 {% block page_title %}
   Enter your security code - GOV.UK
@@ -12,7 +12,7 @@
   {% include "../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "v17/partials/nav-view.html" %}
+  {% include "v18/partials/nav-view.html" %}
 
   <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
 
@@ -20,7 +20,7 @@
     <div class="column-two-thirds">
 
       <!-- always use method='post' for forms --->
-      <form action="/v17/pages/licences_added" method="get" class="form" id="password_reset" data-parsley-validate data-parsley-errors-messages-disabled>
+      <form action="/v18/pages/licences_added" method="get" class="form" id="password_reset" data-parsley-validate data-parsley-errors-messages-disabled>
 
         {% if incorrectLogin == "1" %}
         <!-- only show this error if incorrectLogin param passed through from route-->

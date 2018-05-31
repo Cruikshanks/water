@@ -1,4 +1,4 @@
-{% extends "../head.html" %}
+{% extends "../admin.html" %}
 
 {% block page_title %}
   Add your contact information - GOV.UK
@@ -23,7 +23,7 @@
         This is the information that will be available to your public contacts.
       </p>
 
-      <form method="POST" action="/admin/notifications/1/data">
+      <form method="POST" action="hof-notice-search">
         <input type="hidden" name="csrf_token" value="40f93089-3091-7648-f159-f6009e405748" />
 
           <div class="form-group ">
@@ -61,7 +61,7 @@
             <textarea maxlength="8000" class="form-control form-control-3-4" name="sender_address" id="sender_address" rows="7" value=""></textarea>
           </div>
 
-        <button type="submit" class="button">Continue</button>
+        <button type="submit" class="button big-space">Continue</button>
 
       </form>
 

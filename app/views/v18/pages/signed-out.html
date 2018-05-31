@@ -1,0 +1,36 @@
+{% extends "../head.html" %}
+
+{% block page_title %}
+  Manage your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- navigation block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <br>
+        <h1 class="heading-xlarge clustered">
+          Thank you
+        </h1>
+        <p class="font-large">
+          You are signed out.
+        </p>
+      </div>
+
+      <p>You can <a href="licences">sign back in here</a><br></p>
+
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

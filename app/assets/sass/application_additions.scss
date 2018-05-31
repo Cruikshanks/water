@@ -1152,3 +1152,58 @@ details {
  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
  overflow: hidden !important;
 }
+
+// pagination list-style-position
+
+.page-numbers-container {
+    border-top: 1px solid #bfc1c3;
+    margin-top: 0px;
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+.page-numbers-container .previous {
+    float: left;
+    text-align: left;
+}
+
+.page-navigation .previous {
+    margin-right: 2%;
+}
+
+.page-navigation .previous, .page-navigation .next {
+    width: 49%;
+}
+
+.page-numbers-container .next {
+    float: right;
+    text-align: right;
+}
+
+.page-numbers-container .previous {
+    text-align: left;
+}
+
+.page-numbers-container .next a, .page-numbers-container .previous a {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 17px 14px;
+}
+
+.page-numbers-container .previous a {
+    padding-left: 30px;
+    background-image: url("../images/arrow-pagination-left.svg");
+    background-position: 0 4px;
+}
+
+.page-numbers-container .next a {
+    padding-right: 30px;
+    background-image: url("../images/arrow-pagination-right.svg");
+    background-position: 100% 4px;
+}
+
+.page-numbers-container .next a, .page-numbers-container .previous a {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 17px 14px;
+}

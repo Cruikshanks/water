@@ -32,7 +32,7 @@ Enter the password you created{% extends "../head.html" %}
         document.getElementById('password_reset_link').onclick=function(e){
         e.preventDefault();
         var user_id=document.getElementById('user-id').value
-        window.location='/v17/reset_password/password_reset?user_id='+user_id; //redirect to password reset screen
+        window.location='/v18/reset_password/password_reset?user_id='+user_id; //redirect to password reset screen
       }
 
       {% if incorrectLogin == "1" %}
@@ -46,7 +46,7 @@ Enter the password you created{% extends "../head.html" %}
     <div class="column-two-thirds">
 
       <!-- always use method='post' for forms --->
-      <form action="/v17/pages/licences" method="post" class="form medium-space" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+      <form action="/v18/pages/licences" method="post" class="form medium-space" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
 
         {% if incorrectLogin == "1" %}
         <!-- only show this error if incorrectLogin param passed through from route-->
@@ -115,7 +115,7 @@ Enter the password you created{% extends "../head.html" %}
       </form>
 
       <div class="big-space">
-        <a id="password_reset_link" href="/v17/change_Password/change_password" class="password_reset small-space">Forgotten password?</a>
+        <a id="password_reset_link" href="/v18/change_Password/change_password" class="password_reset small-space">Forgotten password?</a>
       </div>
 
     </div>
