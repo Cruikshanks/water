@@ -24,42 +24,27 @@
       </p>
 
       <form method="POST" action="hof-notice-search">
-        <input type="hidden" name="csrf_token" value="40f93089-3091-7648-f159-f6009e405748" />
 
-          <div class="form-group ">
-            <label class="form-label" for="contact_name">
-              <span class="form-label-bold">Your name</span>
-            </label>
-            <input class="form-control" id="contact_name" type="text" name="contact_name" value="">
-          </div>
+        <div class="form-group ">
+          <label class="form-label" for="contact_email">
+            <span class="form-label-bold">Contact email</span>
+          </label>
+          <input class="form-control" id="contact_email" type="text" name="contact_email" value="">
+        </div>
 
-          <div class="form-group ">
-            <label class="form-label" for="contact_role">
-              <span class="form-label-bold">Job title</span>
-            </label>
-            <input class="form-control" id="contact_role" type="text" name="contact_role" value="">
-          </div>
+        <div class="form-group ">
+          <label class="form-label" for="contact_phone">
+            <span class="form-label-bold">Contact phone number</span>
+          </label>
+          <input class="form-control" id="contact_phone" type="text" name="contact_phone" value="">
+        </div>
 
-          <div class="form-group ">
-            <label class="form-label" for="contact_email">
-              <span class="form-label-bold">Contact email</span>
-            </label>
-            <input class="form-control" id="contact_email" type="text" name="contact_email" value="">
-          </div>
-
-          <div class="form-group ">
-            <label class="form-label" for="contact_phone">
-              <span class="form-label-bold">Contact phone number</span>
-            </label>
-            <input class="form-control" id="contact_phone" type="text" name="contact_phone" value="">
-          </div>
-
-          <div class="form-group ">
-            <label class="form-label" for="sender_address">
-              <span class="form-label-bold">Contact postal address</span>
-            </label>
-            <textarea maxlength="8000" class="form-control form-control-3-4" name="sender_address" id="sender_address" rows="7" value=""></textarea>
-          </div>
+        <div class="form-group ">
+          <label class="form-label" for="sender_address">
+            <span class="form-label-bold">Contact postal address</span>
+          </label>
+          <textarea maxlength="8000" class="form-control form-control-3-4" name="sender_address" id="sender_address" rows="7" value=""></textarea>
+        </div>
 
         <button type="submit" class="button big-space">Continue</button>
 
