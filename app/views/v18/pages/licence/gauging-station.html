@@ -45,10 +45,35 @@
 
       {% if pData.GaugingStationValue %}
         <!-- GAUGE DATA -->
-        <div class="data">
-          <span class="data-item bold-xxlarge">{{ pData.GaugingStationValue }}</span>
-          <span class="data-item">Recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
+        <div class="grid-row medium-space" id="special">
+          <div class="column-two-thirds flexy extra-flex small-space">
+            <div class="inner-flex flex-static">
+              <span class="bold-xxlarge">
+                {{ pData.GaugingStationValue }}
+              </span>
+            </div>
+            <div class="inner-flex">
+              <label class="bold-small">Flow rate</span><br>
+              <select class="form-control unit-dropper" id="select-box" name="select-box">
+                <option>m³/s</option>
+                <option>gal.³/s</option>
+                <option>buckets/s</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="column-two-thirds">
+            <!-- recorded at -->
+            <span class="data-item medium-space">Recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
+          </div>
+
+
+          <div class="column-two-thirds">
+            <a href="">See level data at this gauging station</a>
+          </div>
+
         </div>
+
       {% else %}
         <!-- NO DATA -->
         <div class="data">
@@ -61,6 +86,7 @@
 
   </div>
 
+  <!-- legal -->
   <div class="grid-row big-space">
     <div class="column-two-thirds">
       <div class="notice">
@@ -73,15 +99,6 @@
       </div>
     </div>
   </div>
-
-  <details>
-    <summary><span class="summary">When will this reading be updated?</span></summary>
-    <div class="panel panel-border-narrow">
-      <p>
-        Readings from this gauging station are updated each day at {{ pData.GaugingStationRecordedTime }}
-      </p>
-    </div>
-  </details>
 
   <div class="grid-row">
     <div class="column-two-thirds">

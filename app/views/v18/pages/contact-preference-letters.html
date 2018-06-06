@@ -17,70 +17,51 @@
     <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
   </div>
 
-  <form data-branching>
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
-    <div class="form-group grid-row small-space">
-
-      <fieldset class="column-two-thirds medium-space">
-
-        <div class="medium-space">
+        <legend>
           <h1 class="heading-large">
             How would you prefer us to contact you about your licence?
           </h1>
-        </div>
+        </legend>
 
         <p>
-          We will use this method to send you notifications if possible. We are in the process of updating our IT systems, so you may still receive communication by other methods too.
+          We will send notifications to the registered address for each of your licences.
         </p>
 
-        <div class="medium-space">
+        <p>
+          You can view the address in the contact details section of your licence.
+        </p>
 
-          <div class="multiple-choice">
-            <input id="radio-1" type="radio" name="radio-group" value="licences-contact-letter">
-            <label for="radio-1">
-              Sunnybrooke Farm, Jammingford<br>
-              Birmingham,<br>
-              B37 6RY<br>
-            </label>
-          </div>
+        <a href="licences" class="button">
+          Confirm
+        </a>
 
-          <div class="multiple-choice">
-            <input id="radio-2" type="radio" name="radio-group" value="licences-contact-letter">
-            <label for="radio-2">
-              Habingdon Lodge<br>
-              Oxford,<br>
-              OX22 8AH<br>
-            </label>
-          </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="contact-preference-letter">If there is just one postal address</a>
 
-        </div>
-
-      </fieldset>
-
-      <div class="column-two-thirds">
-        <input onclick="" value="Use this postal address" class="button" role="button" type="submit">
-      </div>
 
     </div>
-  </form>
-
-  <script
-    src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous">
-  </script>
-
-  <script>
-    $(function() {
-      $('form[data-branching]').on('submit', function(ev) {
-        var path = $(this).find('input:checked').val();
-        window.location.href = path;
-        ev.preventDefault();
-        return false;
-      });
-    });
-  </script>
-
+  </div>
 </main>
 
 {% endblock %}

@@ -1030,8 +1030,8 @@ details {
 }
 
 #special-links ul li a:focus {
-    background-color: #ffbf47;
-    outline: 3px solid #ffbf47;
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
 }
 
 /* behaviour */
@@ -1206,4 +1206,29 @@ details {
     display: block;
     background-repeat: no-repeat;
     background-size: 17px 14px;
+}
+
+.unit-dropper {
+  width: auto;
+  // @media (min-width: 768px) {
+  //   width: 25%;
+  // }
+}
+
+// extra flex styles for the gauging station data
+
+.extra-flex {
+  flex-flow: wrap;
+}
+
+.inner-flex {
+  // flex: 0 0 50%;
+
+  flex-grow: 1;
+  // min-width: 25%;
+}
+
+.flex-static {
+  flex-grow: 0;
+  padding-right: 15px;
 }
