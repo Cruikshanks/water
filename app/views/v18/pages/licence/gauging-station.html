@@ -43,22 +43,35 @@
 
       </div>
 
-      {% if pData.GaugingStationValue %}
+      {% if pData.GaugingStationData %}
         <!-- GAUGE DATA -->
         <div class="grid-row medium-space" id="special">
           <div class="column-two-thirds flexy extra-flex small-space">
             <div class="inner-flex flex-static">
               <span class="bold-xxlarge">
-                {{ pData.GaugingStationValue }}
+                {% if pData.LicenceHasFlow %}
+                  {{ pData.GaugingStationFlowValue }}
+                {% else %}
+                  {{ pData.GaugingStationLevelValue }}
+                {% endif %}
               </span>
             </div>
             <div class="inner-flex">
-              <label class="bold-small">Flow rate</span><br>
-              <select class="form-control unit-dropper" id="select-box" name="select-box">
-                <option>m³/s</option>
-                <option>gal.³/s</option>
-                <option>buckets/s</option>
-              </select>
+              {% if pData.LicenceHasFlow %}
+                <label class="bold-small">Flow rate</span><br>
+                <select class="form-control unit-dropper" id="select-box" name="select-box">
+                  <option>m³/s</option>
+                  <option>gal.³/s</option>
+                  <option>buckets/s</option>
+                </select>
+              {% else %}
+                <label class="bold-small">Level reading</span><br>
+                <select class="form-control unit-dropper" id="select-box" name="select-box">
+                  <option>cm</option>
+                  <option>m</option>
+                  <option>ft</option>
+                </select>
+              {% endif %}
             </div>
           </div>
 
@@ -139,7 +152,7 @@
         Threshold level
         </div>
         <div class="data-row__value" aria-labelledby="label-0-1-param2">
-        0.73m Ordnance Datum Newlyn (the sea level benchmark)
+         {{ pData.HOFlimit }}
         </div>
       </div>
 
@@ -148,7 +161,7 @@
         Other information
         </div>
         <div class="data-row__value" aria-labelledby="label-0-1-info">
-          No abstraction shall take place from the Denton New Cut when the water level in the Cut as measured at {{ pData.GaugingStationName }} ({{ pData.GaugingStationGridReference }}) is at or below 0.73m Ordnance Datum Newlyn (the sea level benchmark).
+          No abstraction shall take place from the Denton New Cut when the water level in the Cut as measured at {{ pData.GaugingStationName }} ({{ pData.GaugingStationGridReference }}) is at or below {{ pData.HOFlimit }}.
         </div>
       </div>
 

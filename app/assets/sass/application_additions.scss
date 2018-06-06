@@ -1210,9 +1210,9 @@ details {
 
 .unit-dropper {
   width: auto;
-  // @media (min-width: 768px) {
-  //   width: 25%;
-  // }
+  @media (min-width: 768px) {
+    min-width: 25%;
+  }
 }
 
 // extra flex styles for the gauging station data
