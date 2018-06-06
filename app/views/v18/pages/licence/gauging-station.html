@@ -82,7 +82,11 @@
 
 
           <div class="column-two-thirds">
-            <a href="">See level data at this gauging station</a>
+            {% if pData.LicenceHasFlow %}
+              <a href="">See level data at this gauging station</a>
+            {% else %}
+              <a href="">See flow data at this gauging station</a>
+            {% endif %}
           </div>
 
         </div>
