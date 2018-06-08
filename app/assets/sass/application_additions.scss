@@ -1232,3 +1232,14 @@ details {
   flex-grow: 0;
   padding-right: 15px;
 }
+
+.river-flow-graph {
+  background-color: red;
+  text-indent: -9999px;
+  width: 100%;
+  background: url(../images/river-flow.svg);
+  background-size: cover;
+  height: 0;
+  padding: 0; /* reset */
+  padding-bottom: calc(100% * 3 / 5.8);
+}

@@ -1,7 +1,7 @@
  {% extends "../../view.html" %}
 
 {% block page_title %}
-  Gauging station for {{ pData.LicenceSerialNo }} - GOV.UK
+  Gauging station for {{pData.LicenceSerialNo}} - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -43,9 +43,21 @@
 
       </div>
 
+      <!-- graph here -->
+      <div class="grid-row medium-space" id="special">
+        <div class="column-one-third flexy extra-flex small-space">
+
+          <a href="river-flow-graph" class="river-flow-graph">
+            River Flow for seven days
+          </a>
+
+        </div>
+      <!-- </div> -->
+
       {% if pData.GaugingStationData %}
-        <!-- GAUGE DATA -->
-        <div class="grid-row medium-space" id="special">
+
+        <!-- data here -->
+        <!-- <div class="grid-row medium-space" id="special"> -->
           <div class="column-two-thirds flexy extra-flex small-space">
             <div class="inner-flex flex-static">
               <span class="bold-xxlarge">
@@ -56,6 +68,7 @@
                 {% endif %}
               </span>
             </div>
+
             <div class="inner-flex">
               {% if pData.LicenceHasFlow %}
                 <label class="bold-small">Flow rate</span><br>
@@ -68,7 +81,7 @@
                 <label class="bold-small">Level reading</span><br>
                 <select class="form-control unit-dropper" id="select-box" name="select-box">
                   <option>cm</option>
-                  <option>m</option>
+                  <option selected>m</option>
                   <option>ft</option>
                 </select>
               {% endif %}
@@ -79,7 +92,6 @@
             <!-- recorded at -->
             <span class="data-item medium-space">Recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
           </div>
-
 
           <div class="column-two-thirds">
             {% if pData.LicenceHasFlow %}

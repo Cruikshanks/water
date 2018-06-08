@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="942px" height="402px" viewBox="0 0 942 402" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="River-flow" transform="translate(-77.000000, -31.000000)">
+            <g id="Group-3" transform="translate(9.000000, 28.000000)">
+                <g id="7-days-flow">
+                    <rect id="frame" stroke="#D5D5D5" x="115.5" y="33.1439145" width="719" height="339"></rect>
+                    <g id="Group-2" transform="translate(865.000000, 293.000000)">
+                        <text id="7-day-trend" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#4A4A4A">
+                            <tspan x="1" y="109">7 day trend</tspan>
+                        </text>
+                        <g id="Group">
+                            <rect id="frame" stroke="#D5D5D5" x="0.5" y="0.5" width="144" height="79"></rect>
+                            <path d="M13.0742188,38.0703125 C18.4801495,32.4384031 24.4815791,28.918466 31.0785074,27.5105011 C37.6754358,26.1025363 70.6779125,33.8386192 130.085938,50.71875" id="Path-2" stroke="#005EA7" stroke-width="4" stroke-linecap="round"></path>
+                        </g>
+                    </g>
+                    <text id="Todays-mean-flow" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#4A4A4A">
+                        <tspan x="866" y="209.5">Todays mean flow</tspan>
+                    </text>
+                    <text id="0.9m³/s" font-family="GDSTransportWebsite-Bold, GDS Transport Website" font-size="36" font-weight="bold" fill="#4A4A4A">
+                        <tspan x="866" y="188">0.9m³/s</tspan>
+                    </text>
+                    <g id="legend" transform="translate(879.000000, 26.000000)">
+                        <text id="1st-hands-off-level" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="31" y="59.8192675">1st hands off </tspan>
+                            <tspan x="31" y="78.8192675">level</tspan>
+                        </text>
+                        <rect id="orange" fill="#F5752B" x="0" y="54.7868826" width="18" height="4"></rect>
+                        <text id="River-level" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="31" y="13">River level</tspan>
+                        </text>
+                        <rect id="blue" fill="#005EA7" x="0" y="7" width="18" height="4"></rect>
+                    </g>
+                    <g id="labels">
+                        <rect id="v8" fill="#D8D8D8" x="834" y="33" width="1" height="340"></rect>
+                        <rect id="v7" fill="#D8D8D8" x="738.428571" y="33" width="1" height="340"></rect>
+                        <rect id="v6" fill="#D8D8D8" x="642.857143" y="33" width="1" height="340"></rect>
+                        <rect id="v5" fill="#D8D8D8" x="547.285714" y="33" width="1" height="340"></rect>
+                        <rect id="v4" fill="#D8D8D8" x="451.714286" y="33" width="1" height="340"></rect>
+                        <rect id="v3" fill="#D8D8D8" x="356.142857" y="33" width="1" height="340"></rect>
+                        <rect id="v2" fill="#D8D8D8" x="260.571429" y="33" width="1" height="340"></rect>
+                        <rect id="v1" fill="#D8D8D8" x="165" y="33" width="1" height="340"></rect>
+                        <text id="Fri,-13-Jun" font-family="GDSTransportWebsite-Bold, GDS Transport Website" font-size="14" font-weight="bold" fill="#0B0C0C">
+                            <tspan x="753.016811" y="402">Fri, 13 Jun</tspan>
+                        </text>
+                        <text id="Thu,-14-Jun" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="655.449916" y="402">Thu, 14 Jun</tspan>
+                        </text>
+                        <text id="Wed,-13-Jun" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="558.019741" y="402">Wed, 13 Jun</tspan>
+                        </text>
+                        <text id="Tue,-12-Jun" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="465.832729" y="402">Tue, 12 Jun</tspan>
+                        </text>
+                        <text id="Mon,-11-Jun" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="369.978237" y="402">Mon, 11 Jun</tspan>
+                        </text>
+                        <text id="Sun,-10-Jun" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="274.930385" y="402">Sun, 10 Jun</tspan>
+                        </text>
+                        <text id="Sat,-9-Jun" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="183.494699" y="402">Sat, 9 Jun</tspan>
+                        </text>
+                        <text id="0m" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="80.2031617" y="376.625822">0m</tspan>
+                        </text>
+                        <text id="0.5m" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="68.2334352" y="288.344572">0.5m</tspan>
+                        </text>
+                        <text id="1.0m" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="71.3369508" y="200.344572">1.0m</tspan>
+                        </text>
+                        <text id="1.5m" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="71.856482" y="112.344572">1.5m</tspan>
+                        </text>
+                        <text id="2.0m" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="68.1719117" y="39">2.0m</tspan>
+                        </text>
+                        <text id="Now" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
+                            <tspan x="783.916985" y="13">Now</tspan>
+                        </text>
+                    </g>
+                    <g id="licence-data" transform="translate(115.000000, 252.000000)" fill="#F5752B">
+                        <text id="0.72m" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300">
+                            <tspan x="734.714286" y="13.348406">0.72m</tspan>
+                        </text>
+                        <rect id="HOF-line" x="0" y="8.78688261" width="720" height="2"></rect>
+                    </g>
+                    <g id="now" transform="translate(792.000000, 25.000000)" fill="#000000">
+                        <rect x="6.42857143" y="7" width="1" height="340"></rect>
+                        <polygon id="now-pointer" points="0.968111436 0 12.9674354 0 6.96777344 8.91748047"></polygon>
+                    </g>
+                    <g id="river-data" transform="translate(115.000000, 68.000000)">
+                        <path d="M0.8828125,147.148437 L12.1468172,152.765625 C17.6637113,156.114583 22.6772723,157.789062 27.1875,157.789062 C31.6977277,157.789062 38.2836652,137.28776 46.9453125,96.2851562 L58.0429688,59.5195313 C65.7351648,24.4004044 70.6362065,5.50066484 72.7460938,2.8203125 C74.855981,0.13996016 81.715356,0.13996016 93.3242188,2.8203125 C99.3541922,16.5007276 103.816432,23.9590609 106.710938,25.1953125 C111.052696,27.0496899 116.384417,14.4832838 118.237716,13.4609375 C120.091014,12.4385912 123.601927,2.8203125 127.796875,2.8203125 C131.991823,2.8203125 129.762454,13.3481589 133.542969,25.1953125 C137.323483,37.0424661 135.65702,37.6674728 142.488281,48.859375 C149.319543,60.0512772 160.882812,48.859375 169.96875,70.5703125 C179.054688,92.28125 181.137296,104.566406 181.137296,110.476562 C181.137296,114.416667 186.579124,117.207031 197.462779,118.847656 L223.888087,118.847656 L235.96933,118.847656 L248.328125,110.476562 L257.833423,124.414062 C263.004123,120.669271 267.393564,118.796875 271.001746,118.796875 C276.41402,118.796875 277.984053,124.414062 289.3125,124.414062 C300.640947,124.414062 309.055308,138.096075 318.316193,133.648438 C327.577078,129.2008 328.571217,126.598985 330.529711,125.827474 C331.835374,125.313133 335.578074,124.841996 341.757812,124.414062 C354.061299,133.414062 362.317816,137.914063 366.527362,137.914063 C372.84168,137.914063 387.797847,135.419922 391.466146,133.629557 C395.134445,131.839193 399.488437,127.375 403.688554,124.414062 C407.888672,121.453125 409.050781,123.940496 414.694281,124.414062 C420.337781,124.887629 426.93099,129.189453 440.703776,126.849609 C449.885634,125.289714 455.658811,119.832031 458.023307,110.476562 C461.60065,101.184896 466.681402,101.184896 473.265563,110.476562 C479.849725,119.768229 490.987803,124.414062 506.679798,124.414062 L524.805516,124.414062 L542.57273,137.914063 L564.88872,137.914063 C572.855504,131.285156 579.410111,129.114583 584.552542,131.402344 C592.266188,134.833984 604.401399,128.679687 604.401399,137.914063 C604.401399,147.148437 615.588306,147.148437 615.588306,147.148437 C615.588306,147.148437 628.311054,149.595261 639.130153,157.789062 C649.949252,165.982864 656.261719,170.276367 661.545898,174.165039" id="river-level" stroke="#005EA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <g id="spot" transform="translate(654.545898, 166.665039)">
+                            <circle id="Oval" stroke="#005EA7" fill="#FFFFFF" cx="6.02197266" cy="6.74560547" r="5.82080078"></circle>
+                            <circle id="Oval" fill="#005EA7" cx="6.02197266" cy="6.74560547" r="3.51852742"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
