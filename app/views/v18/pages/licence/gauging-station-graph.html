@@ -54,7 +54,7 @@
         </div>
       </div>
 
-      <div class="grid-row medium-space">
+      <div class="grid-row small-space">
       {% if pData.GaugingStationData %}
         <!-- data here -->
         <!-- <div class="grid-row medium-space" id="special"> -->
@@ -73,9 +73,9 @@
               {% if pData.LicenceHasFlow %}
                 <label class="bold-small">Flow rate</span><br>
                 <select class="form-control unit-dropper" id="select-box" name="select-box">
-                  <option>m³/s</option>
-                  <option>gal.³/s</option>
-                  <option>buckets/s</option>
+                  <option>metres³/s</option>
+                  <option>litres</option>
+                  <option>megalitres</option>
                 </select>
               {% else %}
                 <label class="bold-small">Level reading</span><br>
@@ -90,9 +90,25 @@
 
           <div class="column-two-thirds">
             <!-- recorded at -->
-            <span class="data-item medium-space">Recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
+            {% if pData.LicenceHasFlow %}
+              <span class="data-item medium-space">Instantaneous flow recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
+            {% else %}
+              <span class="data-item medium-space">Instantaneous level recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
+            {% endif %}
           </div>
 
+
+        </div>
+
+        <div class="column-two-thirds small-space">
+          <div class="panel panel-border-wide">
+            <p>
+              Please convert this reading if your condition is based on a different unit of measurement.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-row medium-space">
           <div class="column-two-thirds">
             {% if pData.LicenceHasFlow %}
               <a href="">See level data at this gauging station</a>
@@ -100,13 +116,16 @@
               <a href="">See flow data at this gauging station</a>
             {% endif %}
           </div>
-
         </div>
 
       {% else %}
         <!-- NO DATA -->
         <div class="data">
-          <span class="data-item bold-xxlarge">Sorry, there is no data available</span>
+          <span class="data-item bold-xxlarge">Sorry, there is no accurate data available</span>
+        </div>
+      </div>
+      <div class="grid-row medium-space">
+          <div class="column-two-thirds">
           <span class="data-item">
             Please contact your <a href="https://www.gov.uk/government/organisations/environment-agency/about/access-and-opening" target="_blank">local Environment Agency office</a> (link opens in a new tab) for the latest information.
           </span>
