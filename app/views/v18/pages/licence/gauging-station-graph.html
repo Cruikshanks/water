@@ -45,16 +45,19 @@
 
       <!-- graph here -->
       <div class="grid-row medium-space" id="special">
+        <div class="column-full flexy extra-flex small-space">
 
-        <div class="column-one-third flexy extra-flex small-space">
-          <a href="gauging-station-graph?wid={{query.wid}}" class="river-flow-graph">
-            River Flow data for seven days
+          <a href="gauging-station?wid={{query.wid}}" class="river-flow-graph">
+            River Flow for seven days
           </a>
+
         </div>
+      </div>
 
-        {% if pData.GaugingStationData %}
-
-          <!-- data here -->
+      <div class="grid-row medium-space">
+      {% if pData.GaugingStationData %}
+        <!-- data here -->
+        <!-- <div class="grid-row medium-space" id="special"> -->
           <div class="column-two-thirds flexy extra-flex small-space">
             <div class="inner-flex flex-static">
               <span class="bold-xxlarge">

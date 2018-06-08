@@ -1216,14 +1216,12 @@ details {
 }
 
 // extra flex styles for the gauging station data
-
 .extra-flex {
   flex-flow: wrap;
 }
 
 .inner-flex {
   // flex: 0 0 50%;
-
   flex-grow: 1;
   // min-width: 25%;
 }
@@ -1234,7 +1232,6 @@ details {
 }
 
 .river-flow-graph {
-  background-color: red;
   text-indent: -9999px;
   width: 100%;
   background: url(../images/river-flow.svg);
@@ -1242,4 +1239,10 @@ details {
   height: 0;
   padding: 0; /* reset */
   padding-bottom: calc(100% * 3 / 5.8);
+}
+
+.river-flow-graph, a:focus {
+  color: none;
+  background-color: none;
+  outline: none;
 }
