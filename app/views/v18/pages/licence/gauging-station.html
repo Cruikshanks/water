@@ -44,12 +44,19 @@
       </div>
 
       <!-- graph here -->
-      <div class="grid-row medium-space" id="special">
+      <div class="grid-row medium-space">
 
         <div class="column-one-third flexy extra-flex small-space">
-          <a href="gauging-station-graph?wid={{query.wid}}" class="river-flow-graph">
-            River Flow data for seven days
+
+          <a href="gauging-station-graph?wid={{query.wid}}" class="river-flow-graph small-space">
+            <div class="container">
+              <img src="../images/river-flow-preview.svg"/>
+            </div>
           </a>
+          <a href="gauging-station-graph?wid={{query.wid}}" class="small-space">
+            <caption>River Flow data for seven days</caption>
+          </a>
+
         </div>
 
         {% if pData.GaugingStationData %}
@@ -70,16 +77,16 @@
               {% if pData.LicenceHasFlow %}
                 <label class="bold-small">Flow rate</span><br>
                 <select class="form-control unit-dropper" id="select-box" name="select-box">
-                  <option>metres³/s</option>
+                  <option selected>metres cubed per second</option>
                   <option>litres</option>
                   <option>megalitres</option>
                 </select>
               {% else %}
                 <label class="bold-small">Level reading</span><br>
                 <select class="form-control unit-dropper" id="select-box" name="select-box">
-                  <option>cm</option>
-                  <option selected>m</option>
-                  <option>ft</option>
+                  <option>centimetres</option>
+                  <option selected>metres</option>
+                  <option>feet</option>
                 </select>
               {% endif %}
             </div>
