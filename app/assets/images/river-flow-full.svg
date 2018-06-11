@@ -9,23 +9,6 @@
             <rect id="base" fill="#FFFFFF" opacity="0.01" x="0" y="0.682499197" width="1024" height="480"></rect>
             <g id="7-days-flow" transform="translate(0.000000, 11.000000)">
                 <rect id="frame" stroke="#D5D5D5" x="59.5" y="33.1439145" width="719" height="339"></rect>
-                <g id="trend" transform="translate(809.000000, 293.000000)">
-                    <text id="7-day-trend" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#4A4A4A">
-                        <tspan x="1" y="109">7 day trend</tspan>
-                    </text>
-                    <g id="Group">
-                        <rect id="frame" stroke="#D5D5D5" x="0.5" y="0.5" width="144" height="79"></rect>
-                        <path d="M13.0742188,38.0703125 C18.4801495,32.4384031 24.4815791,28.918466 31.0785074,27.5105011 C37.6754358,26.1025363 70.6779125,33.8386192 130.085938,50.71875" id="Path-2" stroke="#005EA7" stroke-width="4" stroke-linecap="round"></path>
-                    </g>
-                </g>
-                <g id="daily-mean-flow" transform="translate(810.000000, 153.000000)" fill="#4A4A4A">
-                    <text id="Todays-mean-flow" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300">
-                        <tspan x="0" y="56.5">Todays mean flow</tspan>
-                    </text>
-                    <text id="0.9m³/s" font-family="GDSTransportWebsite-Bold, GDS Transport Website" font-size="36" font-weight="bold">
-                        <tspan x="0" y="35">0.9m³/s</tspan>
-                    </text>
-                </g>
                 <g id="legend" transform="translate(823.000000, 26.000000)">
                     <text id="1st-hands-off-level" font-family="GDSTransportWebsite, GDS Transport Website" font-size="14" font-weight="300" fill="#0B0C0C">
                         <tspan x="31" y="59.8192675">1st hands off </tspan>
