@@ -97,11 +97,11 @@
         <span class="data-item">Instantaneous level recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
       {% endif %}
 
-      {% if pData.LicenceHasFlow %}
+      <!-- {% if pData.LicenceHasFlow %}
         <a href="">See level data at this gauging station</a>
       {% else %}
         <a href="">See flow data at this gauging station</a>
-      {% endif %}
+      {% endif %} -->
     </div>
 
     </div>
@@ -157,7 +157,11 @@
   <div class="grid-row big-space">
     <div class="column-one-third flexy">
       <a href="gauging-station-graph?wid={{query.wid}}" class="small-space">
-        <caption>See river flow data for seven days</caption>
+        {% if pData.LicenceHasFlow %}
+          <caption>See river flow data for seven days</caption>
+        {% else %}
+          <caption>See river level data for seven days</caption>
+        {% endif %}
       </a>
     </div>
   </div>
