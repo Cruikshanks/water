@@ -39,6 +39,10 @@
     <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
   {% endif %}
 
+  <p>
+    Current licence version started on <span class="bold-small">{{ pData.EffectiveDateStart }}</span> and ends on <span class="bold-small">{{ pData.EffectiveDateEnd }}</span>.
+  </p>
+
   <div class="datatable datahead">
     <label>Licence name</label>
     <div class="licenceAnswerv7">
@@ -63,9 +67,15 @@
     </div>
   </div>
 
-
-  <div class="datatable">
+  <!-- <div class="datatable">
     <label>Start date</label>
+    <div class="licenceAnswerv7">
+      {{ pData.StartDate }}
+    </div>
+  </div> -->
+
+  <!-- <div class="datatable">
+    <label>Effective from</label>
     <div class="licenceAnswerv7">
       {{ pData.EffectiveDateStart }}
     </div>
@@ -76,7 +86,7 @@
     <div class="licenceAnswerv7">
       {{ pData.EffectiveDateEnd }}
     </div>
-  </div>
+  </div> -->
 
   <div class="datatable">
     <label>Source of supply</label>
@@ -186,7 +196,7 @@
   </div>
 
   <!-- bad data block -->
-  {% include "../partials/bad-data.html" %}
+  {% include "../partials/versions.html" %}
 
   </div>
 

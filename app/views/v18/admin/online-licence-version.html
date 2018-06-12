@@ -1,8 +1,8 @@
-{% extends "../view.html" %}
+{% extends "../admin.html" %}
 
 <!-- page title -->
 {% block page_title %}
-  Licence number {{ pData.LicenceNumber }} - GOV.UK
+  Licence serial number {{ pData.LicenceNumber }} - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -18,47 +18,45 @@
   <!-- navigation block -->
   {% include "../partials/nav-view.html" %}
 
-  <div class="big-space"></div>
-
   <!-- page title -->
-  <div class="grid-row medium-space">
+  <div class="grid-row">
     <div class="column-two-thirds">
+      <!-- code alert -->
+      {% if pData.SecCode %}
 
-      <!-- <div class="panel panel-border-wide alert-default big-space">
-        Notifications for this licence will be sent by post<br>
-        <a href="auth_code">Update the contact method for this licence</a>
-      </div> -->
+        <!-- internal code block -->
+        {% include "../partials/admin-code-sent.html" %}
 
-      <div class="panel panel-border-wide">
-        <p>
-          Notifications for this licence will be sent by post<br>
-          <a href="update-contact-preference">Update your contact preference for this licence</a>
-        </p>
-      </div>
+      {% endif %}
 
     </div>
   </div>
 
-  <!-- page heading -->
-  {% if pData.LicenceName %}
-    <!-- page title -->
-    <div class="grid-row">
-      <div class="column-two-thirds">
-        <h1 class="heading-xlarge">
-          <span class="heading-secondary">
-            Licence number {{pData.LicenceSerialNo}}
-          </span>
-          {{ pData.LicenceName }}
-        </h1>
-      </div>
-    </div>
-  {% else %}
-    <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
-  {% endif %}
+  <div class="medium-space">
+    <!-- page heading -->
+    {% if pData.LicenceName %}
+      <h1 class="heading-large">{{ pData.LicenceName }}</h1>
+    {% else %}
+      <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
+    {% endif %}
+  </div>
+
+  <div class="notice medium-space">
+    <i class="icon icon-important">
+      <span class="visually-hidden">Warning</span>
+    </i>
+    <strong class="bold-small">
+      This licence version is expired.
+    </strong>
+  </div>
+
+  <p>
+    This licence version started on <span class="bold-small">{{ pData.EffectiveDateStart }}</span> and ends on <span class="bold-small">{{ pData.EffectiveDateEnd }}</span>.
+  </p>
 
   <div class="datatable datahead">
     <label>Licence name</label>
-    <div class="dataText">
+    <div class="licenceAnswerv7">
 
       {% if pData.LicenceName %}
         {{ pData.LicenceName }}</br>
@@ -74,35 +72,34 @@
   <!-- Licence holder -->
   <div class="datatable">
     <label>Licence holder</label>
-    <div class="dataText">
+    <div class="licenceAnswerv7">
       {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
       <a href="/v18/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
     </div>
   </div>
 
-
-  <div class="datatable">
-    <label>Start date</label>
-    <div class="dataText">
+  <!-- <div class="datatable">
+    <label>Effective from</label>
+    <div class="licenceAnswerv7">
       {{ pData.EffectiveDateStart }}
     </div>
   </div>
 
   <div class="datatable">
     <label>End date</label>
-    <div class="dataText">
+    <div class="licenceAnswerv7">
       {{ pData.EffectiveDateEnd }}
     </div>
-  </div>
+  </div> -->
 
   <div class="datatable">
     <label>Source of supply</label>
-    <div class="dataText">{{ pData.Source}}</div>
+    <div class="licenceAnswerv7">{{ pData.Source}}</div>
   </div>
 
   <div class="datatable">
     <label>Purpose of abstraction</label>
-    <div class="dataText">
+    <div class="licenceAnswerv7">
 
       {{ pData.Purpose1 }}</br>
 
@@ -111,7 +108,7 @@
 
   <div class="datatable">
     <label>Period of abstraction</label>
-    <div class="dataText">{{ pData.PeriodofAbstraction }}</div>
+    <div class="licenceAnswerv7">{{ pData.PeriodofAbstraction }}</div>
   </div>
 
   <div class="datatable">
@@ -119,7 +116,7 @@
     {% if pData.Point2 %}
 
       <label>Points of abstraction</label>
-      <div class="dataText">
+      <div class="licenceAnswerv7">
 
         {{ pData.Point1 }}<br>
         {{ pData.Point2 }}<br>
@@ -135,51 +132,25 @@
         {% if pData.Point5 %}
           {{ pData.Point5 }}<br>
         {% endif %}
-        <a href="licence/points?wid={{ query.wid }}">View details of abstraction points</a>
+        <a href="points/points?wid={{ query.wid }}">View details of abstraction points</a>
 
       </div>
 
       {% else %}
 
       <label>Point of abstraction</label>
-        <div class="dataText">
+        <div class="licenceAnswerv7">
 
         {{ pData.Point1 }}<br>
-        <a href="licence/points?wid={{ query.wid }}">View details of abstraction point</a>
+        <a href="points/points?wid={{ query.wid }}">View details of abstraction point</a>
 
       {% endif %}
 
     </div>
 
-    <!-- gauging station here -->
-    {% if pData.GaugingStationName %}
-    <div class="datatable">
-
-        <label>Gauging station</label>
-        <div class="dataText">
-          <!-- {{ pData.GaugingStationName}}<br> -->
-          At National Grid Reference {{ pData.GaugingStationGridReference}}<br>
-          <a href="licence/gauging-station?wid={{query.wid}}">View data from {{pData.GaugingStationName}}</a>
-          <!-- <a href="">{{ pData.GaugingStationGridReference}}</a> -->
-
-        </div>
-    </div>
-    {% endif %}
-
-  <!--
-
-    "GaugingStationName": "Huntsford",
-    "GaugingStationGridReference": "SX 426725",
-    "GaugingStationType": "Ultrasonic gauging station",
-    "GaugingStationValue": "002",
-
-  -->
-
-    <!-- end gauging station -->
-
     <div class="datatable">
       <label>Abstraction conditions</label>
-      <div class="dataText">
+      <div class="licenceAnswerv7">
         {{ pData.Condition1 }}</br>
 
         {% if pData.Condition2 %}
@@ -198,14 +169,14 @@
           {{ pData.Condition5 }}</br>
         {% endif %}
 
-        <a href="licence/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+        <a href="conditions/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
 
     </div>
   </div>
 
   <div class="datatable big-space">
     <label>Abstraction amounts</label>
-    <div class="dataText">
+    <div class="licenceAnswerv7">
 
       {{ pData.Amount1 }}</br>
 
@@ -228,13 +199,18 @@
 
   </div>
 
-  <div id="#bad-data">
-    <!-- bad data block -->
-    {% include "../partials/bad-data.html" %}
+  <!-- bad data block -->
+  {% include "../partials/versions.html" %}
+
   </div>
+
+
+
 
 {% endif %}
 {% endfor %}
 
 </main>
+
+
 {% endblock %}
