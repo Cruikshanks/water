@@ -54,55 +54,67 @@
 
   {% if pData.GaugingStationData %}
 
-  <div class="grid-row medium-space">
-
-    <!-- data here -->
-    <div class="column-two-thirds flexy small-space">
-
-      <div class="inner-flex flex-static">
-        <span class="bold-xxlarge">
+    <!-- section title -->
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h2 class="bold-medium clustered">
           {% if pData.LicenceHasFlow %}
-            {{ pData.GaugingStationFlowValue }}
+            Daily mean flow
           {% else %}
-            {{ pData.GaugingStationLevelValue }}
+            Daily mean level
           {% endif %}
-        </span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid-row medium-space">
+      <div class="column-two-thirds">
+        <!-- <div class="inner-flex"> -->
+          {% if pData.LicenceHasFlow %}
+            <select class="form-control unit-dropper" id="select-box" name="select-box">
+              <option selected>metres cubed per second</option>
+              <option>litres</option>
+              <option>megalitres</option>
+            </select>
+          {% else %}
+            <select class="form-control unit-dropper" id="select-box" name="select-box">
+              <option>centimetres</option>
+              <option selected>metres</option>
+              <option>feet</option>
+            </select>
+          {% endif %}
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <div class="grid-row medium-space">
+      <!-- data here -->
+      <div class="column-two-thirds small-space">
+        <!-- <div class="inner-flex flex-static"> -->
+          <span class="bold-xxlarge">
+            {% if pData.LicenceHasFlow %}
+              {{ pData.GaugingStationFlowValue }}
+            {% else %}
+              {{ pData.GaugingStationLevelValue }}
+            {% endif %}
+          </span>
+        <!-- </div> -->
       </div>
 
-      <div class="inner-flex">
+      <div class="column-two-thirds">
+        <!-- recorded at -->
         {% if pData.LicenceHasFlow %}
-          <label class="bold-small">Daily mean flow</span><br>
-          <select class="form-control unit-dropper" id="select-box" name="select-box">
-            <option selected>metres cubed per second</option>
-            <option>litres</option>
-            <option>megalitres</option>
-          </select>
+          <span class="data-item">Daily mean flow recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
         {% else %}
-          <label class="bold-small">Daily mean level</span><br>
-          <select class="form-control unit-dropper" id="select-box" name="select-box">
-            <option>centimetres</option>
-            <option selected>metres</option>
-            <option>feet</option>
-          </select>
+          <span class="data-item">Daily mean level recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
+        {% endif %}
+
+        {% if pData.LicenceHasFlow %}
+          <a href="">See level data at this gauging station</a>
+        {% else %}
+          <a href="">See flow data at this gauging station</a>
         {% endif %}
       </div>
-
-    </div>
-
-    <div class="column-two-thirds">
-      <!-- recorded at -->
-      {% if pData.LicenceHasFlow %}
-        <span class="data-item">Instantaneous flow recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
-      {% else %}
-        <span class="data-item">Instantaneous level recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
-      {% endif %}
-
-      <!-- {% if pData.LicenceHasFlow %}
-        <a href="">See level data at this gauging station</a>
-      {% else %}
-        <a href="">See flow data at this gauging station</a>
-      {% endif %} -->
-    </div>
 
     </div>
 
