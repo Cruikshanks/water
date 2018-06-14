@@ -31,7 +31,11 @@
       <span class="heading-secondary">
         At National Grid Reference {{ pData.GaugingStationGridReference }}
       </span>
-       Last seven days data from {{ pData.GaugingStationName }}
+      {% if pData.LicenceHasFlow %}
+        Recent flow data from {{ pData.GaugingStationName }}
+      {% else %}
+        Recent level data from {{ pData.GaugingStationName }}
+      {% endif %}
     </h1>
 
     <div class="clustered">Source of supply: {{ pData.Source}}</div>
@@ -60,7 +64,7 @@
 
     <div class="column-full">
       <a href="gauging-station?wid={{query.wid}}" class="small-space">
-        <caption>Back to gauging station reading</caption>
+        <caption>Back to the latest data from this gauging station</caption>
       </a>
     </div>
 

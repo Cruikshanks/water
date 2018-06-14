@@ -59,9 +59,9 @@
       <div class="column-two-thirds">
         <h2 class="bold-medium clustered">
           {% if pData.LicenceHasFlow %}
-            Daily mean flow
+            Mean daily flow
           {% else %}
-            Daily mean level
+            Mean daily flow
           {% endif %}
         </h2>
       </div>
@@ -72,13 +72,12 @@
         <!-- <div class="inner-flex"> -->
           {% if pData.LicenceHasFlow %}
             <select class="form-control unit-dropper" id="select-box" name="select-box">
-              <option selected>metres cubed per second</option>
-              <option>litres</option>
-              <option>megalitres</option>
+              <option selected>cubic metres per second</option>
+              <option>cubic metres per day</option>
+              <option>megalitres per day</option>
             </select>
           {% else %}
             <select class="form-control unit-dropper" id="select-box" name="select-box">
-              <option>centimetres</option>
               <option selected>metres</option>
               <option>feet</option>
             </select>
@@ -102,12 +101,22 @@
       </div>
 
       <div class="column-two-thirds">
+        <p>
         <!-- recorded at -->
         {% if pData.LicenceHasFlow %}
           <span class="data-item">Daily mean flow recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
         {% else %}
           <span class="data-item">Daily mean level recorded at <span class="bold-small">{{ pData.GaugingStationRecordedTime }} on {{ pData.GaugingStationRecordedDate }}</span></span>
         {% endif %}
+        </p>
+
+        <div class="column-full">
+          <div class="panel panel-border-wide column-two-thirds">
+            <p>
+              Please convert this reading if your condition is based on a different unit of measurement.
+            </p>
+          </div>
+        </div>
 
         {% if pData.LicenceHasFlow %}
           <a href="">See level data at this gauging station</a>
@@ -118,18 +127,12 @@
 
     </div>
 
-    <div class="column-full medium-space">
-      <div class="panel panel-border-wide column-two-thirds">
-        <p>
-          Please convert this reading if your condition is based on a different unit of measurement.
-        </p>
-      </div>
-    </div>
+
   {% else %}
 
     <!-- NO DATA -->
     <div class="data">
-      <span class="data-item bold-xxlarge">Sorry, there is no data available</span>
+      <span class="data-item bold-xxlarge">Sorry, there is no accurate data available</span>
     </div>
 
     <div class="grid-row ">
@@ -146,7 +149,12 @@
 
     <div class="column-two-thirds">
       <h2 class="small-space bold-medium">
-        Recent data for this gauging station
+        {% if pData.LicenceHasFlow %}
+          Recent flow data for this gauging station
+        {% else %}
+          Recent level data for this gauging station
+        {% endif %}
+
       </h2>
     </div>
 
@@ -170,9 +178,9 @@
     <div class="column-one-third flexy">
       <a href="gauging-station-graph?wid={{query.wid}}" class="small-space">
         {% if pData.LicenceHasFlow %}
-          <caption>See river flow data for seven days</caption>
+          <caption>View data for the past 7 days</caption>
         {% else %}
-          <caption>See river level data for seven days</caption>
+          <caption>View data for the past 7 days</caption>
         {% endif %}
       </a>
     </div>

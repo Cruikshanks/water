@@ -1243,7 +1243,7 @@ details {
 
 .river-flow-graph-full {
   background: url(../images/river-flow-full.svg);
-  padding-bottom: calc(100% * 3 / 7);
+  padding-bottom: calc(100% * 3 / 6.5);
 }
 
 .river-flow-graph, a:focus {
@@ -1273,7 +1273,3 @@ details {
 //   color: $secondary-text-colour;
 //   font-size: 220px;
 // }
-
-.strike {
-  text-decoration: line-through;
-}
