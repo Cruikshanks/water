@@ -20,18 +20,29 @@
 
   <!-- page title -->
   <div class="grid-row">
-    <div class="column-two-thirds">
-      <!-- code alert -->
-      {% if pData.SecCode %}
+    <div class="column-two-thirds big-space">
 
-        <!-- internal code block -->
-        {% include "../partials/admin-code-sent.html" %}
+      <div class="banner bold-medium">
+        <div class="notice">
+          <i class="icon icon-important">
+            <span class="visually-hidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            This licence version expired on 3 March 2011.
+          </strong>
+        </div>
 
-      {% endif %}
+      </div>
 
     </div>
   </div>
 
+  <div class="strike-wrapper">
+    <div class="strike">
+    </div>
+  </div>
+
+  <!-- page title -->
   <div class="medium-space">
     <!-- page heading -->
     {% if pData.LicenceName %}
@@ -41,33 +52,17 @@
     {% endif %}
   </div>
 
-  <div class="notice medium-space">
-    <i class="icon icon-important">
-      <span class="visually-hidden">Warning</span>
-    </i>
-    <strong class="bold-small">
-      This licence version is expired.
-    </strong>
-  </div>
-
-  <p>
+  <!-- <p>
     This licence version started on <span class="bold-small">{{ pData.EffectiveDateStart }}</span> and ends on <span class="bold-small">{{ pData.EffectiveDateEnd }}</span>.
-  </p>
+  </p> -->
 
-  <div class="datatable datahead">
-    <label>Licence name</label>
-    <div class="licenceAnswerv7">
-
-      {% if pData.LicenceName %}
-        {{ pData.LicenceName }}</br>
-        <a href="/v18/pages/online_licence_rename?wid={{ query.wid }}">Rename this licence</a>
-      {% else %}
-        <!-- <span>No name chosen</span></br>  -->
-        <a href="/v18/pages/online_licence_rename?wid={{ query.wid }}">Name this licence</a>
-      {% endif %}
-
-    </div>
-  </div>
+  <!-- navigation block -->
+  <nav class="page-numbers-container page-navigation medium-space" aria-label="Pagination">
+    <div class="previous">
+      <a href="" rel="prev">Previous version</a>    </div>
+    <div class="next">
+    <a href="" rel="next">Following version</a>    </div>
+  </nav>
 
   <!-- Licence holder -->
   <div class="datatable">
@@ -75,6 +70,20 @@
     <div class="licenceAnswerv7">
       {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
       <a href="/v18/pages/contact_details?wid={{ pNumber }}">View licence contact details</a>
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>Effective start date</label>
+    <div class="licenceAnswerv7">
+        {{ pData.EffectiveDateStart }}
+    </div>
+  </div>
+
+  <div class="datatable">
+    <label>Expiry date</label>
+    <div class="licenceAnswerv7">
+        {{ pData.EffectiveDateEnd }}
     </div>
   </div>
 
@@ -204,13 +213,9 @@
 
   </div>
 
-
-
-
-{% endif %}
-{% endfor %}
+  {% endif %}
+  {% endfor %}
 
 </main>
-
 
 {% endblock %}
