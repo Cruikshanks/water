@@ -131,11 +131,27 @@
 <script>
   $(function() {
 
+    var ctrlKey = false;
+
+    $(window).keydown(function(ev){
+      if(ev.ctrlKey || ev.keyCode === 224 || ev.keyCode === 17 || ev.keyCode === 91 || ev.keyCode === 93) {
+        ctrlKey = true;
+      }
+    });
+
+    $(window).keyup(function(){
+      ctrlKey = false;
+    });
+
     $('a').parents('.table-row').addClass('clickable');
 
-  // Click on licence list clicks inner link
+    // Click on licence list clicks inner link
     $('.table-row').on('click', function (ev) {
-      window.location.href = $(this).find('a:first').attr('href');
+      var href = $(this).find('a:first').attr('href');
+      console.log(ctrlKey);
+      ctrlKey ? window.open.blur(href) : window.location.href = href;
+      window.focus();
+      // window.location.href = $(this).find('a:first').attr('href');
       $(this).addClass('active');
       ev.preventDefault();
     });
