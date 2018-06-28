@@ -80,7 +80,7 @@ input[type=search] {
       padding: 15px;
       border-bottom: 1px solid $border-colour;
       &:first-child {
-        width: 40%;
+        width: 30%; /* returns hack */
         padding-left: 0;
       }
       &:last-child {

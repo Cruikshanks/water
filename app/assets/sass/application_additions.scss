@@ -793,7 +793,7 @@ details {
 }
 
 .badge {
-  width: 4rem;
+  // width: 4rem;
 }
 
 .centext {
@@ -862,25 +862,30 @@ details {
     display: table;
     width: 100%;
   }
+
 }
 
 .table-row {
-  // cursor: pointer;
   margin-bottom: 0;
   @media (min-width: 768px) {
     display: table-row;
     padding-bottom: 0;
     margin-bottom: 30px;
+
   }
   @media screen and (max-width: 767px) {
     margin-bottom: 30px;
   }
 }
 
-.table-head {
+.table-head, .table-head .table-row {
   display: none;
   @media (min-width: 768px) {
     display: table-row;
+
+  }
+  :hover {
+    background-color: none;
   }
 }
 
@@ -926,6 +931,10 @@ details {
 // evenly spaced table columns
 // by default
 
+.column-15 {
+  width: 15%;
+}
+
 .column-20 {
   width: 20%;
 }
@@ -955,7 +964,7 @@ details {
 .context {
   color: $grey-1;
   display: block;
-  display: auto;
+  // display: auto;
   @media (min-width: 768px) {
     position: absolute;
     height: 1px;
@@ -1114,6 +1123,7 @@ details {
 
 .task-completed {
   margin: auto;
+  float: none;
 }
 
 .ar-input, .full {
