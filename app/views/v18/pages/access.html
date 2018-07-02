@@ -15,63 +15,194 @@
   {% include "../partials/nav-manage.html" %}
 
   <!-- page title -->
-  <h1 class="heading-large">Give access to view your licences</h1>
-
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <!-- smaller title -->
-      <!-- <h2 class="heading-medium">Share your licence access</h2> -->
+      <h1 class="heading-large">
+        Give access to view your licences
+      </h1>
 
-      <p>You can give other people access to view your licences too. Tell us their email address and we’ll send them a link to create an account.</p>
-      <p>You can remove their access at any time.</p>
-      <input class="button medium-space" type="submit" value="Add user" aria-disabled="true">
     </div>
   </div>
 
   <div class="grid-row">
-    <div class="column-full">
-      <div class="license-results" id="results">
-
-        <div class="license-results-header">
-          <div class="license-results-header__column">
-            <a href="#" aria-label="Sort by licence serial number">People with access<span class="sort-icon"> &#x25be;</span></a>
-          </div>
-          <div class="license-results-header__column">
-            <a href="#" aria-label="Sort by licence name">Date</a>
-          </div>
-          <div class="license-results-header__column"></div>
-          <div class="license-results-header__column"></div>
-        </div>
-
-        <div class="license-result">
-          <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
-          <p class="license-result__column license-result__column--description">12 March 2015</p>
-          <p class="license-result__column license-result__column--description"></p>
-          <a href="/v18/pages/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove</a>
-        </div>
-        <div class="license-result">
-          <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
-          <p class="license-result__column license-result__column--description">28 June 2015</p>
-          <p class="license-result__column license-result__column--description"></p>
-          <a href="/v18/pages/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove</a>
-        </div>
-        <div class="license-result">
-          <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
-          <p class="license-result__column license-result__column--description">1 May 2014</p>
-          <p class="license-result__column license-result__column--description"></p>
-          <a href="/v18/pages/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove</a>
-        </div>
-        <div class="license-result">
-          <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
-          <p class="license-result__column license-result__column--description">4 July 2016</p>
-          <p class="license-result__column license-result__column--description"></p>
-          <a href="/v18/pages/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove</a>
-        </div>
-
-      </div>
+    <div class="column-two-thirds medium-space">
+      <p>You can give other people access to view your licences too. Tell us their email address and we’ll send them a link to create an account.</p>
+      <p>Persons with access will be able to see your licence data.</p>
+      <p>You can remove their access at any time.</p>
+      <a href="give-access">Add user</a>
     </div>
   </div>
+
+  <!-- table with four columns -->
+  <div class="table medium-space">                                          <!-- a table -->
+
+    <div class="table-row table-head">                                      <!-- the table head -->
+      <div class="table-cell bold-small column-40">
+        People with access
+      </div>
+      <div class="table-cell bold-small column-25">
+        Date
+      </div>
+      <div class="table-cell bold-small column-15">
+        Manage returns
+      </div>
+      <div class="table-cell bold-small column-20">
+        <!-- no title -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h3 class="sr-only">
+          People with access
+        </h3>
+        <h4 class="context">
+          site-manager@abstraction-bros.co.uk
+        </h4>
+        marigold.bidbod@abstraction-bros.co.uk
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Date
+        </h4>
+        12 March 2015
+      </div>
+      <div class="table-cell checkbox-cell">
+        <h4 class="context">
+          Manage returns
+        </h4>
+        <div class="multiple-choice">
+          <input type="checkbox">
+          <label aria-label="Can do returns">
+            <!-- can do returns -->
+          </label>
+        </div>
+      </div>
+      <div class="table-cell big-column-right">
+        <h4 class="context">
+          <!-- no title -->
+        </h4>
+        <a href="/v18/pages/remove_access?user_id=long_email_address@test.co.uk">
+          Remove
+        </a>
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 2
+        </h3>
+        <h4 class="context">
+          People with access
+        </h4>
+        office@abstraction-bros.co.uk
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Date
+        </h4>
+        28 June 2015
+      </div>
+      <div class="table-cell checkbox-cell">
+        <h4 class="context">
+          Manage returns
+        </h4>
+        <div class="multiple-choice">
+          <input type="checkbox">
+          <label aria-label="Can do returns">
+            <!-- can do returns -->
+          </label>
+        </div>
+      </div>
+      <div class="table-cell big-column-right">
+        <h4 class="context">
+          <!-- no title -->
+        </h4>
+        <a href="/v18/pages/remove_access?user_id=long_email_address@test.co.uk">
+          Remove
+        </a>
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 3
+        </h3>
+        <h4 class="context">
+          People with access
+        </h4>
+        office@abstraction-bros.co.uk
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Date
+        </h4>
+        1 May 2014
+      </div>
+      <div class="table-cell  checkbox-cell">
+        <h4 class="context">
+          Manage returns
+        </h4>
+        <div class="multiple-choice">
+          <input type="checkbox">
+          <label aria-label="Can do returns">
+            <!-- can do returns -->
+          </label>
+        </div>
+      </div>
+      <div class="table-cell big-column-right">
+        <h4 class="context">
+          <!-- no title -->
+        </h4>
+        <a href="/v18/pages/remove_access?user_id=long_email_address@test.co.uk">
+          Remove
+        </a>
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 3
+        </h3>
+        <h4 class="context">
+          People with access
+        </h4>
+        admin@abstraction-bros.co.uk
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Date
+        </h4>
+        4 July 2016
+      </div>
+      <div class="table-cell  checkbox-cell">
+        <h4 class="context">
+          Manage returns
+        </h4>
+        <div class="multiple-choice">
+          <input type="checkbox">
+          <label aria-label="Can do returns">
+            <!-- can do returns -->
+          </label>
+        </div>
+      </div>
+      <div class="table-cell big-column-right">
+        <h4 class="context">
+          <!-- no title -->
+        </h4>
+        <a href="/v18/pages/remove_access?user_id=long_email_address@test.co.uk">
+          Remove
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <input class="button medium-space" type="submit" value="Save" aria-disabled="true">
 
   <script src="/public/javascripts/underscore.min.js"></script>
   <script src="/public/javascripts/jquery-1.11.3.js"></script>

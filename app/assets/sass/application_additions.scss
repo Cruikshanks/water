@@ -94,21 +94,21 @@ line-height: 0px;
 }
 
 .search-boxes {
-    display: inline-block;
-    position: relative;
-      align-content: left;
-      margin-right: 59px;
-      margin-bottom: 20px;
-      margin-top: 10px;
+  display: inline-block;
+  position: relative;
+  align-content: left;
+  margin-right: 59px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .licences-search {
-    display: inline-block;
-    position: relative;
-      align-content: left;
-      margin-right: 53px;
-      margin-bottom: 20px;
-      margin-top: 10px;
+  display: inline-block;
+  position: relative;
+  align-content: left;
+  margin-right: 53px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .contains {
@@ -119,9 +119,8 @@ line-height: 0px;
 }
 
 .name_info {
-padding:21px;
-margin-top: 30px;
-
+  padding:21px;
+  margin-top: 30px;
 }
 
 .Licence-holder-email {
@@ -133,40 +132,40 @@ margin-top: 30px;
 }
 
 main.search .search-header input {
-    -webkit-appearance: none;
-    border-radius: 0;
-    font-family: "nta", Arial, sans-serif;
-    font-weight: 400;
-    text-transform: none;
-    font-size: 16px;
-    line-height: 1.25;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 0 0 0 10px;
-    display: block;
-    height: 50px;
-    border: 1px solid #bfc1c3;
-    border-right: none;
-    line-height: 48px !important;
+  -webkit-appearance: none;
+  border-radius: 0;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 0 10px;
+  display: block;
+  height: 50px;
+  border: 1px solid #bfc1c3;
+  border-right: none;
+  line-height: 48px !important;
 }
 
 .visually-hidden {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 a.password_reset {
@@ -615,6 +614,12 @@ details {
   float: right;
 }
 
+.big-column-right {
+  @media screen and (min-width: 768px) {
+    text-align: right;
+  }
+}
+
 #proposition-links, #proposition-name {
   float: right;
 }
@@ -847,7 +852,7 @@ details {
 .oldest {
   color: $grey-2;
 }
-// 
+//
 // .clickable a {
 //   text-decoration: none;
 // }
@@ -1297,4 +1302,30 @@ details {
   height: 2px;
   background: #000;
   transform: rotate(-45deg);
+}
+
+.checkbox input {
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  z-index: 1;
+  margin: 0;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  margin-bottom: 10px;
+}
+
+.checkbox-cell {
+  padding-bottom: 35px;
+  h4 {
+    padding-bottom: 10px;
+  }
+  @media (min-width: 768px) {
+    padding-bottom: 15px;
+    padding-top: 0;
+  }
 }

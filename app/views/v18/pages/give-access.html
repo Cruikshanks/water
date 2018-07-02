@@ -1,0 +1,41 @@
+{% extends "../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Give access to view your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-manage.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large clustered">
+        Give access to view your licences
+      </h1>
+
+      <p class="lede">Enter the person’s email address and we’ll send them a link to create an account. This will give them access to view your licences.</p>
+      <p class="lede">You can remove their access at any time.</p>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-one-third">
+      <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
+      <a class="button" href="access" role="button" style="margin-top:20px;">Add user</a>
+    </div>
+  </div>
+
+  <script src="/public/javascripts/underscore.min.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}
