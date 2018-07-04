@@ -1,24 +1,22 @@
-{% extends "v18/head.html" %}
+{% extends "../../view.html" %}
 
 {% block page_title %}
-  Enter your security code - GOV.UK
+  Manage your licences - GOV.UK
 {% endblock %}
 
 {% block content %}
 <main id="content" role="main">
 
-  <!-- beta banner block -->
+  <!-- navigation block -->
   {% include "../../partials/beta-banner.html" %}
 
-  <div class="big-space"></div>
+  <!-- navigation block -->
+  {% include "../../partials/nav-manage.html" %}
 
-  <!-- main -->
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
-      <h1 class="heading-large">
-         Enter your security code
-      </h1>
+  <!-- page title -->
+  <h1  class="heading-large medium-space">
+    Enter your security code
+  </h1>
 
       <form class="medium-space">
         <div class="form-group">

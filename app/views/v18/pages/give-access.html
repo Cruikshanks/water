@@ -27,9 +27,17 @@
   </div>
 
   <div class="grid-row">
-    <div class="column-one-third">
-      <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
-      <a class="button" href="access" role="button" style="margin-top:20px;">Add user</a>
+    <div class="column-half small-space">
+      <input type="text" class="form-control form-control--block small-space" name="licenseNumber" id="licenseNumber" />
+      <div class="multiple-choice">
+        <input type="checkbox">
+        <label aria-label="Can do returns">
+          This person can manage licence returns
+        </label>
+      </div>
+    </div>
+    <div class="column-full">
+      <a class="button" href="access" role="button">Add user</a>
     </div>
   </div>
 

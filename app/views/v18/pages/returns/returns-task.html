@@ -1,4 +1,4 @@
-{% extends "../../admin.html" %}
+{% extends "../../view.html" %}
 
 <!-- page title -->
 {% block page_title %}
@@ -15,7 +15,7 @@
   {% include "../../partials/nav-returns.html" %}
 
   <h1 class="heading-large">
-    Returns due for your licences
+    Your returns
   </h1>
 
   <!-- table with four columns -->
@@ -29,7 +29,7 @@
         Licence name
       </div>
       <div class="table-cell bold-small column-20">
-        Data return
+        Status
       </div>
     </div>
 
@@ -54,7 +54,7 @@
       </div>
       <div class="table-cell">
         <h3 class="context">
-          Data return
+          Status
         </h3>
         <strong class="task-completed badge">
           Completed
@@ -83,7 +83,7 @@
       </div>
       <div class="table-cell">
         <h3 class="context">
-          Data return
+          Status
         </h3>
         <strong class="task-completed open-task badge">
           Return due
@@ -112,7 +112,7 @@
       </div>
       <div class="table-cell">
         <h3 class="context">
-          Data return
+          Status
         </h3>
         <strong class="task-completed open-task badge">
           Return due
