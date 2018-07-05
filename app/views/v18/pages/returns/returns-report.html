@@ -1,0 +1,56 @@
+{% extends "../../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-returns.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds medium-space">
+      <h2 class="sub-head">
+        <a href="notice-batches">Abstraction record</a>
+      </h2>
+      <h1 class="heading-xlarge spaceless">
+        {{pData.LicenceSerialNo}}
+      </h1>
+      <h2 class="heading-small spaceless">
+        Completed 11 May 2018
+      </h2>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <details>
+        <summary><span class="summary">Details of record</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>
+            Purpose 
+          </p>
+        </div>
+
+      </details>
+    </div>
+  </div>
+
+
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}
