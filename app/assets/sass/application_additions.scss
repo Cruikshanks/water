@@ -541,6 +541,10 @@ details {
   }
 }
 
+.panel .table .table-row .table-cell {
+  padding: 0;
+}
+
 .data-row-group:last-child {
   border-bottom: 1px solid $border-colour;
 }

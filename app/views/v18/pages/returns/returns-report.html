@@ -244,6 +244,10 @@
 
   </div>
 
+
+
+
+
   <div class="grid-row">
     <div class="column-two-thirds small-space">
       <h3 class="bold-medium">
@@ -252,33 +256,55 @@
     </div>
   </div>
 
-  <div class="panel panel-border-wide">
+  <div class="panel panel-border-wide medium-space">
 
-    <div class="datatable big-space">
-      <label>Abstraction amounts</label>
-      <div class="dataText">
+    <!-- table starts -->
+    <div class="table">                                          <!-- a table -->
 
-        {{ pData.Amount1 }}</br>
+      <div class="table-row">                                    <!-- a data row starts -->
 
-        {% if pData.Amount2 %}
-          {{ pData.Amount2 }}</br>
-        {% endif %}
+        <div class="table-cell tight">
 
-        {% if pData.Amount3 %}
-          {{ pData.Amount3 }}</br>
-        {% endif %}
+          {{ pData.Amount1 }}</br>
 
-        {% if pData.Amount4 %}
-          {{ pData.Amount4 }}</br>
-        {% endif %}
+          {% if pData.Amount2 %}
+            {{ pData.Amount2 }}</br>
+          {% endif %}
 
-        {% if pData.Amount5 %}
-          {{ pData.Amount5 }}</br>
-        {% endif %}
+          {% if pData.Amount3 %}
+            {{ pData.Amount3 }}</br>
+          {% endif %}
+
+          {% if pData.Amount4 %}
+            {{ pData.Amount4 }}</br>
+          {% endif %}
+
+          {% if pData.Amount5 %}
+            {{ pData.Amount5 }}</br>
+          {% endif %}
+        </div>
       </div>
+
     </div>
 
   </div>
+
+  <!-- navigation block -->
+  <nav class="page-numbers-container page-navigation" aria-label="Pagination">
+    <div class="previous">
+      <a href="" rel="prev">
+        The previous return in the series<br>
+        (if there is one)
+      </a>
+    </div>
+    <div class="next">
+      <a href="" rel="next">
+        See the next return in the series<br>
+        (if there is one)
+      </a>
+    </div>
+  </nav>
+
 
   {% endif %}
   {% endfor %}
