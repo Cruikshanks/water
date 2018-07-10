@@ -19,8 +19,8 @@
   {% include "../../partials/nav-returns.html" %}
 
   <!-- page title -->
-  <div class="grid-row">
-    <div class="column-two-thirds medium-space">
+  <!-- <div class="grid-row">
+    <div class="column-two-thirds small-space">
       <h2 class="sub-head">
         <a href="notice-batches">Abstraction record</a>
       </h2>
@@ -28,26 +28,257 @@
         {{pData.LicenceSerialNo}}
       </h1>
       <h2 class="heading-small spaceless">
-        Completed 11 May 2018
+        For the purpose of spray irrigation
       </h2>
+    </div>
+  </div> -->
+
+  <div class="grid-row">
+    <div class="column-two-thirds small-space">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          <a href="returns">Abstraction record for {{ pData.LicenceSerialNo }}</a>
+        </h2>
+        <h1 class="heading-xlarge spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+        <h2 class="heading-small spaceless">
+          For the purpose of {{ pData.Purpose1 }}
+        </h2>
+      {% else %}
+        <h2 class="sub-head">
+          <a href="returns">Abstraction record</a>
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+        <h2 class="heading-small spaceless">
+          For the purpose of {{ pData.Purpose1 }}
+        </h2>
+      {% endif %}
     </div>
   </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <details>
-        <summary><span class="summary">Details of record</span></summary>
-        <div class="panel panel-border-narrow">
-          <p>
-            Purpose 
-          </p>
-        </div>
-
-      </details>
+      <div class="panel panel-border-wide">
+        <p>
+          The conditions of this licence and purpose require weekly records and monthly returns submitted each year.
+        </p>
+      </div>
     </div>
   </div>
 
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <!-- <p>
+        This abstraction record was submitted by <span class="bold-small">jan.fizbold@abstraction-bros.co.uk</span><br>
+        This abstraction record was submitted <span class="bold-small">11 October 2018</span><br>
+        Approved <span class="bold-small">10 September 2018</span>
+      </p> -->
 
+      <ul class="list list-bullet">
+        <li>This abstraction record was submitted by <span class="bold-small">jan.fizbold@abstraction-bros.co.uk</span></li>
+        <li>This abstraction record was submitted <span class="bold-small">11 September 2018</span></li>
+        <li>Approved <span class="bold-small">10 October 2018</span></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h3 class="heading-medium">
+        Approved return data
+      </h3>
+    </div>
+  </div>
+
+  <!-- table starts -->
+  <div class="table medium-space">                                          <!-- a table -->
+
+    <div class="table-row table-head">                                      <!-- the table head -->
+      <div class="table-cell bold-small column-75">
+        Months
+      </div>
+      <div class="table-cell bold-small column-25">
+        Abstraction amounts
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          April
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        April
+      </div>
+      <div class="table-cell">
+        <h5 class="context">
+          Abstraction amount
+        </h5>
+        2,140 cubic meters
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          May
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        May
+      </div>
+      <div class="table-cell">
+        <h5 class="context">
+          Abstraction amount
+        </h5>
+        2,118 cubic meters
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          June
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        June
+      </div>
+      <div class="table-cell">
+        <h5 class="context">
+          Abstraction amount
+        </h5>
+        3,614 cubic meters
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          July
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        July
+      </div>
+      <div class="table-cell">
+        <h5 class="context">
+          Abstraction amount
+        </h5>
+        3,991 cubic meters
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          August
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        August
+      </div>
+      <div class="table-cell">
+        <h5 class="context">
+          Abstraction amount
+        </h5>
+        4,211 cubic meters
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          September
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        September
+      </div>
+      <div class="table-cell">
+        <h5 class="context">
+          Abstraction amount
+        </h5>
+        3,045 cubic meters
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          Total row
+        </h4>
+        <h5 class="bold-small">
+          Total abstraction amount
+        </h5>
+      </div>
+      <div class="table-cell">
+        <h5 class="context">
+          Total abstraction amount
+        </h5>
+        <span class="bold-small">
+          19,119 cubic meters
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds small-space">
+      <h3 class="bold-medium">
+        <span class="">Abstraction amounts for this purpose for this licence</span>
+      </h3>
+    </div>
+  </div>
+
+  <div class="panel panel-border-wide">
+
+    <div class="datatable big-space">
+      <label>Abstraction amounts</label>
+      <div class="dataText">
+
+        {{ pData.Amount1 }}</br>
+
+        {% if pData.Amount2 %}
+          {{ pData.Amount2 }}</br>
+        {% endif %}
+
+        {% if pData.Amount3 %}
+          {{ pData.Amount3 }}</br>
+        {% endif %}
+
+        {% if pData.Amount4 %}
+          {{ pData.Amount4 }}</br>
+        {% endif %}
+
+        {% if pData.Amount5 %}
+          {{ pData.Amount5 }}</br>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
 
   {% endif %}
   {% endfor %}
