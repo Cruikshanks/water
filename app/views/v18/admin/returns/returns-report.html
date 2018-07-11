@@ -16,7 +16,7 @@
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-returns.html" %}
+  {% include "../../partials/nav-admin-manage.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds small-space">
@@ -89,9 +89,13 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <p>
-        <a href="/v18/pages/online_licence?wid={{ query.wid }}">View the associated licence for this return</a>
+        <a href="../online-licence?wid={{ query.wid }}">View the associated licence for this return</a>
       </p>
     </div>
+  </div>
+
+  <div class="big-space">
+    <a href="returns-form?wid={{ query.wid }}" class="button">Edit return</a>
   </div>
 
   <!-- detect nill return -->
@@ -308,8 +312,51 @@
       </div>
     </div>
 
+    <div class="grid-row">
+      <div class="column-two-thirds versions">
+        <details>
+          <summary><span class="summary">Notes on this returns version</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              Last year abstraction was around 30% use. This year use is up to 90%. We should flag this for EOs.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+
   {% endif %}
 
+  <!-- <div class="grid-row medium-space">
+    <div class="column-two-thirds versions">
+      <div class="multiple-choice">
+        <input type="checkbox">
+        <label aria-label="Can do returns">
+          Flag compliance
+        </label>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="grid-row">
+    <div class="column-two-thirds versions">
+      <h3 class="heading-medium">
+        Versions of this return
+      </h3>
+      <p class="spaceless bold-small">
+        <a href="#">11 September 2018</a> - 65432123<br>
+        jan.fizbold@abstraction-bros.co.uk
+      </p>
+      <p class="spaceless">
+        <a href="#">02 September 2018</a> - 65422205<br>
+        lee.minko@environment-agency.gov.uk<br>
+      </p>
+      <p class="spaceless">
+        <a href="#">30 August 2018</a> - 65422323<br>
+        desmond.yukoob@abstraction-bros.co.uk</p><br>
+      </p>
+    </div>
+  </div>
 
   {% endif %}
   {% endfor %}

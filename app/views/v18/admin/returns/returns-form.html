@@ -1,0 +1,129 @@
+{% extends "../../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-admin-manage.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds small-space">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          <a href="returns">Abstraction record for {{ pData.LicenceSerialNo }}</a>
+        </h2>
+        <h1 class="heading-xlarge spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+        <h2 class="heading-small spaceless">
+          For the purpose of {{ pData.Purpose1 }}
+        </h2>
+      {% else %}
+        <h2 class="sub-head">
+          <a href="returns">Abstraction record</a>
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+        <h2 class="heading-small spaceless">
+          For the purpose of {{ pData.Purpose1 }}
+        </h2>
+      {% endif %}
+    </div>
+  </div>
+
+  <p>
+    This abstraction record is due by <span class="bold-small">September 01 2018</span><br>
+  </p>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="panel panel-border-wide">
+        <p>
+          The conditions of this licence and purpose require weekly records and monthly returns submitted each year.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <fieldset class="inline">
+
+      <legend>
+        <h2 class="heading-medium">
+          This record is made up in
+        </h2>
+      </legend>
+
+      <div class="multiple-choice">
+        <input id="radio-inline-1" type="radio" name="radio-inline-group" value="">
+        <label for="radio-inline-1">Megalitres</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="" checked="checked">
+        <label for="radio-inline-2">Litres</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="">
+        <label for="radio-inline-2">Gallons</label>
+      </div>
+    </fieldset>
+  </div>
+
+  <legend>
+    <h2 class="heading-medium">
+      Abstraction amounts in litres
+    </h2>
+  </legend>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="form-group">
+        <label class="form-label" for="first-name-2">April</label>
+        <input class="form-control" id="first-name-2" name="first-name-2" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">May</label>
+        <input class="form-control" id="last-name-2" name="last-name-2" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">June</label>
+        <input class="form-control" id="last-name-2" name="last-name-2" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="first-name-2">July</label>
+        <input class="form-control" id="first-name-2" name="first-name-2" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">August</label>
+        <input class="form-control" id="last-name-2" name="last-name-2" type="text">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">September</label>
+        <input class="form-control" id="last-name-2" name="last-name-2" type="text">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

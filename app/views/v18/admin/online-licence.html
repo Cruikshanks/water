@@ -16,7 +16,7 @@
   {% include "../partials/feedback-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../partials/nav-view.html" %}
+  {% include "../partials/nav-admin-view.html" %}
 
   <!-- page title -->
   <div class="grid-row">
@@ -198,6 +198,30 @@
   <!-- bad data block -->
   {% include "../partials/versions.html" %}
 
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds versions">
+      <h3 class="heading-medium">
+        Returns for this licence
+      </h3>
+      <p class="spaceless">
+        <a href="returns/returns-report?wid={{ query.wid }}">11 September 2018</a> - 65432123<br>
+        {{ pData.Purpose1 }}
+      </p>
+      <p class="spaceless">
+        <a href="returns/returns-report?wid={{ query.wid }}">02 September 2017</a> - 65432123<br>
+        {{ pData.Purpose1 }}
+      </p>
+      <p class="spaceless">
+        <a href="returns/returns-report?wid={{ query.wid }}">04 October 2016</a> - 65432123<br>
+        {{ pData.Purpose1 }}
+      </p>
+      <p class="spaceless">
+        <a href="returns/returns-report?wid={{ query.wid }}">30 August 2015</a> - 65432123<br>
+        {{ pData.Purpose1 }}
+      </p>
+    </div>
   </div>
 
 
