@@ -77,12 +77,12 @@
     </div>
   </div>
 
-  <div class="big-space">
-    <a href="returns-form-edit?wid={{ query.wid }}" class="button">Edit return</a>
-  </div>
-
   <!-- detect nill return -->
   {% if pData.NilReturn %}
+
+    <div class="big-space">
+      <a href="returns-route-unit?wid={{ query.wid }}" class="button">Edit return</a>
+    </div>
 
     <div class="grid-row">
       <div class="column-two-thirds">
@@ -93,6 +93,10 @@
     </div>
 
   {% else %}
+
+    <div class="big-space">
+      <a href="returns-form-edit?wid={{ query.wid }}" class="button">Edit return</a>
+    </div>
 
     <div class="grid-row">
       <div class="column-two-thirds">

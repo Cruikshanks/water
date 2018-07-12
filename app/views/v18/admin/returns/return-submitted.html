@@ -16,9 +16,9 @@
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-admin-manage.html" %}
+  {% include "../../partials/nav-returns.html" %}
 
-  <div class="grid-row medium-space">
+  <div class="grid-row small-space">
     <div class="column-two-thirds">
 
       <!-- page heading -->
@@ -46,42 +46,39 @@
     </div>
   </div>
 
+  <!-- confirmation panel -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h2 class="heading-large tight">
+          Thank you
+        </h2>
+        <p class="font-medium">
+          The return for this licence has been submitted
+        </p>
+      </div>
+
+    </div>
+  </div>
+
   <div class="grid-row small-space">
     <div class="column-two-thirds">
       <p>
-        <a href="../online-licence?wid={{ query.wid }}">View the associated licence for this return</a>
+        <a href="returns-report?wid={{ query.wid }}">See the submitted return</a>
       </p>
     </div>
   </div>
 
-  <div class="grid-row">
-    <div class="column-full">
-
-      <div class="form-group">
-        <fieldset>
-
-          <legend>
-            <h2 class="heading-medium">
-              Do you have amounts to report for this return?
-            </h2>
-          </legend>
-
-          <div class="multiple-choice">
-            <input id="return-form" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-1">Yes</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="nil-return" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-2">No (Nil return)</label>
-          </div>
-        </fieldset>
-      </div>
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        We are always trying to improve our service.<br>
+        <a href="#">Tell us what you thought of the new returns process</a>
+      </p>
     </div>
   </div>
 
-  <a href="returns-route-unit?wid={{ query.wid }}" class="button">
-    Continue
-  </a>
 
   {% endif %}
   {% endfor %}
