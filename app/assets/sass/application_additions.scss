@@ -1373,3 +1373,8 @@ details {
 .versions p {
   margin-bottom: 10px;
 }
+
+.selected {
+  background-color: $focus-colour;
+  padding: 10px;
+}

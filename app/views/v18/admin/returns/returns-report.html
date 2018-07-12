@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  <div class="small-space">
+  <div class="medium-space">
     <dl>
       <dt class="meta-label">
         EA region:
@@ -69,22 +69,10 @@
     </dl>
   </div>
 
-  <div class="small-space">
-    <dl>
-      <dt class="meta-label">
-        Submitted by:
-      </dt>
-      <dd class="meta-description">
-        <span class="bold-small">jan.fizbold@abstraction-bros.co.uk</span>
-      </dd>
-      <dt class="meta-label">
-        Submitted on:
-      </dt>
-      <dd class="meta-description">
-        <span class="bold-small">11 September 2018</span>
-      </dd>
-    </dl>
-  </div>
+  <ul class="list list-bullet">
+    <li>Submitted by jan.fizbold@abstraction-bros.co.uk</li>
+    <li>Submitted on 11 September 2018</li>
+  </ul>
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -343,15 +331,15 @@
       <h3 class="heading-medium">
         Versions of this return
       </h3>
-      <p class="spaceless bold-small">
+      <p class="version spaceless selected">
         <a href="#">11 September 2018</a> - 65432123<br>
         jan.fizbold@abstraction-bros.co.uk
       </p>
-      <p class="spaceless">
+      <p class="version spaceless">
         <a href="#">02 September 2018</a> - 65422205<br>
         lee.minko@environment-agency.gov.uk<br>
       </p>
-      <p class="spaceless">
+      <p class="version spaceless">
         <a href="#">30 August 2018</a> - 65422323<br>
         desmond.yukoob@abstraction-bros.co.uk</p><br>
       </p>
@@ -362,4 +350,23 @@
   {% endfor %}
 
 </main>
+
+<script src="/public/javascripts/underscore.min.js"></script>
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/license_results.js"></script>
+
+<script>
+  $(function() {
+
+    $('a').parents('.version').addClass('clickable');
+
+  // Click on licence list clicks inner link
+    $('.version').on('click', function (ev) {
+      window.location.href = $(this).find('a:first').attr('href');
+      $(this).addClass('active');
+      ev.preventDefault();
+    });
+  });
+</script>
+
 {% endblock %}
