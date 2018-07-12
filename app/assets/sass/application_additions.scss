@@ -1370,11 +1370,15 @@ details {
   ;
 }
 
-.versions p {
+.version {
+  padding: 10px;
   margin-bottom: 10px;
 }
 
-.selected {
-  background-color: $focus-colour;
-  padding: 10px;
+.this-version {
+  border-color: $text-colour;
+}
+
+.amount-input {
+  margin-right: 15px;
 }
