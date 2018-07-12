@@ -18,8 +18,8 @@
   <!-- navigation block -->
   {% include "../../partials/nav-admin-manage.html" %}
 
-  <div class="grid-row">
-    <div class="column-two-thirds medium-space">
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
 
       <!-- page heading -->
       {% if pData.LicenceName %}
@@ -46,6 +46,15 @@
     </div>
   </div>
 
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View the associated licence for this return</a>
+      </p>
+    </div>
+  </div>
+
+
   <div class="grid-row">
     <div class="column-full">
 
@@ -54,7 +63,7 @@
 
           <legend>
             <h2 class="heading-medium">
-              This record is made up in
+              What units are your reported return amounts in?
             </h2>
           </legend>
 
@@ -63,7 +72,7 @@
             <label for="radio-inline-1">Megalitres</label>
           </div>
           <div class="multiple-choice">
-            <input id="radio-inline-2" type="radio" name="radio-inline-group" value="" checked="checked">
+            <input id="radio-inline-2" type="radio" name="radio-inline-group" value="">
             <label for="radio-inline-2">Litres</label>
           </div>
           <div class="multiple-choice">
@@ -75,44 +84,10 @@
     </div>
   </div>
 
-  <legend>
-    <h2 class="heading-medium">
-      Abstraction amounts in litres
-    </h2>
-  </legend>
-
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <div class="form-group">
-        <label class="form-label" for="april-amount">April</label>
-        <input class="form-control amount-input" id="april-amount" name="april-amount" type="text" value="1,234">litres
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">May</label>
-        <input class="form-control amount-input" id="may-amount" name="may-amount" type="text" value="972">litres
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">June</label>
-        <input class="form-control amount-input" id="june-amount" name="june-amount" type="text" value="1,004">litres
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="first-name-2">July</label>
-        <input class="form-control amount-input" id="july-amount" name="july-amount" type="text" value="1,712">litres
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">August</label>
-        <input class="form-control amount-input" id="august-amount" name="august-amount" type="text" value="2,007">litres
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">September</label>
-        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="0">litres
-      </div>
-    </div>
-  </div>
-
-  <a href="returns-report-updated?wid={{ query.wid }}" class="button">
-    Update return
+  <a href="returns-form?wid={{ query.wid }}" class="button">
+    Continue
   </a>
+
 
 
   {% endif %}
