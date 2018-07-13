@@ -25,6 +25,12 @@ input[type=text], input[type=email], input[type=password] {
   background-color: #E8F4FA;
 }
 
+.alert-warning {
+  border-color: $red;
+  background-color: mix(white, $mellow-red, 90%);
+}
+
+
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 
