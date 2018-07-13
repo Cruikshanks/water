@@ -54,33 +54,43 @@
     </div>
   </div>
 
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <h3 class="heading-medium">
+        Confirm this return information
+      </h3>
+    </div>
+  </div>
+
   <div class="grid-row">
-    <div class="column-full">
-
-      <div class="form-group">
-        <fieldset>
-
-          <legend>
-            <h2 class="heading-medium">
-              Do you have amounts to report for this return?
-            </h2>
-          </legend>
-
-          <div class="multiple-choice">
-            <input id="return-form" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-1">Yes</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="nil-return" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-2">No</label>
-          </div>
-        </fieldset>
+    <div class="column-two-thirds">
+      <div class="notice">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Warning</span>
+        </i>
+        <strong class="bold-small">
+          You are about to submit return information and will be liable for the numbers you provide. Please check and confirm the numbers you have provided.
+        </strong>
       </div>
     </div>
   </div>
 
-  <a href="returns-route-unit?wid={{ query.wid }}" class="button">
-    Continue
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h3 class="heading-large">
+        No return information provided
+      </h3>
+    </div>
+  </div>
+
+  <div class="panel panel-border-wide big-space">
+    <p>
+      Back-up meter, not used this year.
+    </p>
+  </div>
+
+  <a href="return-submitted?wid={{ query.wid }}" class="button">
+    Confirm this return information
   </a>
 
   {% endif %}

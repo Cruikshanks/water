@@ -18,14 +18,28 @@
   <!-- navigation block -->
   {% include "../partials/nav-view.html" %}
 
-  <!-- <div class="grid-row">
-    <div class="column-two-thirds small-space">
-      <div class="panel panel-border-wide alert-default">
-        A data return for this licence is due <strong class="bold-small">January 2018</strong>.<br>
-        <a href="returns/returns-form">Start your data return</a>
+  <!-- returns notices -->
+  {% if pData.Purpose1Due %}
+    <div class="grid-row">
+      <div class="column-two-thirds small-space">
+        <div class="panel panel-border-wide alert-default">
+          A return is due for {{ pData.Purpose1 }} on this licence.<br>
+          <a href="returns/returns-route-return?wid={{ query.wid }}">Start your return</a>
+        </div>
       </div>
     </div>
-  </div> -->
+  {% endif %}
+
+  {% if pData.Purpose2Due %}
+    <div class="grid-row">
+      <div class="column-two-thirds small-space">
+        <div class="panel panel-border-wide alert-default">
+          A return is due for {{ pData.Purpose2 }} on this licence.<br>
+          <a href="returns/returns-route-return?wid={{ query.wid }}">Start your return</a>
+        </div>
+      </div>
+    </div>
+  {% endif %}
 
   <!-- page heading -->
   {% if pData.LicenceName %}

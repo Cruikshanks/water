@@ -54,34 +54,33 @@
     </div>
   </div>
 
-  <div class="grid-row">
-    <div class="column-full">
+  <legend>
+    <h3 class="heading-medium">
+      Submitting a nil return
+    </h3>
+  </legend>
 
-      <div class="form-group">
+  <!-- form -->
+  <form class="medium-space">
+
+    <div class="form-group">
+      <label for="licence_no">
         <fieldset>
-
-          <legend>
-            <h2 class="heading-medium">
-              Do you have amounts to report for this return?
-            </h2>
-          </legend>
-
-          <div class="multiple-choice">
-            <input id="return-form" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-1">Yes</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="nil-return" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-2">No</label>
-          </div>
+          <span class="form-label">Tell us why you are submitting no return information</span>
         </fieldset>
-      </div>
+      </label>
+      <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
     </div>
-  </div>
 
-  <a href="returns-route-unit?wid={{ query.wid }}" class="button">
-    Continue
-  </a>
+    <!-- continue button -->
+    <a href="confirm-no-return?wid={{ query.wid }}">
+      <input onclick="" type="submit" value="Submit return" class="button" role="button"/>
+    </a>
+
+  <!-- <a href="return-submitted?wid={{ query.wid }}" class="button">
+    Submit return
+  </a> -->
+
 
   {% endif %}
   {% endfor %}

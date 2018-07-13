@@ -69,7 +69,7 @@
     </dl>
   </div>
 
-  <div class="grid-row">
+  <div class="grid-row small-space">
     <div class="column-two-thirds">
       <p>
         <a href="/v18/pages/online-licence?wid={{ query.wid }}">View the associated licence for this return</a>
@@ -80,18 +80,12 @@
   <!-- detect nill return -->
   {% if pData.NilReturn %}
 
-    <div class="grid-row medium-space">
+    <div class="grid-row">
       <div class="column-two-thirds">
-        <h3 class="heading-xlarge clustered">
+        <h3 class="heading-xlarge">
           Nil return submitted
         </h3>
       </div>
-    </div>
-
-    <div class="panel panel-border-wide big-space">
-      <p>
-        Back-up meter, not used this year.
-      </p>
     </div>
 
   {% else %}
@@ -299,22 +293,25 @@
 
   {% endif %}
 
-  <details>
-    <summary><span class="summary">Update returns information shown here</span></summary>
-    <div class="panel panel-border-narrow">
-      <p>
-        To update returns information that has been submitted email <a href="">water_abstractiondigital@environment-agency.gov.uk</a> or call us on <a href="tel:+44177325412">+44 (0) 177 325 412</a>.</p>
-    </div>
-  </details>
-
   <!-- reported by -->
   <div class="grid-row">
     <div class="column-two-thirds versions">
 
+      <h3 class="heading-medium">
+        Records of this return
+      </h3>
+
+      <div class="panel panel-border-wide this-version">
+        <p class="spaceless selected">
+          Edited by the Environment Agency in consultation with a licence holder<br>
+          <a href="returns-report?wid={{ query.wid }}">21 September 2017</a>
+        </p>
+      </div>
+
       <div>
         <p class="spaceless">
-          Submitted by <span class="">jan.fizbold@abstraction-bros.co.uk<br>
-          <a href="returns-report-version?wid={{ query.wid }}">11 September 2018</a><br>
+          Original submission by <span class="">jan.fizbold@abstraction-bros.co.uk<br>
+          <a href="returns-report-version?wid={{ query.wid }}">14 September 2017</a>
         </p>
       </div>
 
