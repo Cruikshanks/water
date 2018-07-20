@@ -1,0 +1,72 @@
+{% extends "../layout.html" %}
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+  <!-- breadcrumbs -->
+  <nav>
+    <div class="breadcrumbs">
+      <ol role="breadcrumbs">
+        <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+        <a href="/v12_2/change_password/new_password.html" class="change-password">Change password</a>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- page title -->
+  <h1  class="heading-large">Your licences {{ pData.LicenceSerialNo }}</h1>
+
+  <div class="grid-row">
+    <div class="column-two-thirds small-space">
+      <div class="panel panel-border-wide alert-default">
+        Some of these licences will expire within the next <strong class="bold-small">12 months</strong>.
+      </div>
+    </div>
+  </div>
+
+  <!-- licence list -->
+  <div class="grid-row">
+    <div class="column-full">
+    <!-- Results page goes here -->
+    <div class="license-results" id="results">
+
+      <div class="license-results-header">
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence serial number">Licence serial number<span class="sort-icon"> &#x25be;</span></a>
+        </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">Licence name</a>
+        </div>
+        <div class="license-results-header__column"></div>
+      </div>
+      <a href="/v13/pages/online_licence-a?wid=1" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence-b?wid=2" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0003</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v13/pages/online_licence?wid=3" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0004</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+  </div>
+</div>
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}

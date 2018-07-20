@@ -2,7 +2,7 @@
 
 ## Download the kit as a zip
 
-The simplest way to get the kit is to [download it as a zip](/prototype-admin/download-latest). You'll use a new copy of the kit for each new prototype you make. That way your prototypes don’t interfere with each other.
+The simplest way to get the kit is to <a href="/prototype-admin/download-latest" data-link="download">download it as a zip</a>. You'll use a new copy of the kit for each new prototype you make. That way your prototypes don’t interfere with each other.
 
 ### Decide where you want to keep your prototypes
 
@@ -20,7 +20,7 @@ Create a folder called `projects` in your `Documents` or `My Documents` folder.
 
 ### Unzip the kit
 
-Unzip the kit you downloaded - you should end up with a folder called `govuk_prototype_kit-3.0.0`
+Unzip the kit you downloaded - you should end up with a folder called `govuk-prototype-kit-3.0.0`
 
 ### Rename the kit
 

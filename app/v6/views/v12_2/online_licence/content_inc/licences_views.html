@@ -1,0 +1,379 @@
+{% extends "v9/layoutv9.html" %}
+
+{% set title = "Water abstraction licence" %}
+
+{% block page_title %}
+    {{title}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  <div class="phase-banner-beta">
+    <p>
+      <strong class="phase-tag">BETA</strong>
+      <span>This is an BETA prototype, details may be missing whilst we build the service. Your feedback will help us improve this service.</span>
+    </p>
+  </div>
+
+
+<nav>
+    <div class="breadcrumbs">
+    	  <ol role="breadcrumbs">
+          <li><a href="#">Your service</a></li>
+    	    <li>Abstraction licences</li>
+          <li></li>
+
+          <a href="/v12_2/pages/signin" class="sign-out2">Sign out</a>
+          <a href="/v12_2/pages/your_account.html" class="change-password">Your account</a>
+
+</ol>
+</nav>
+</div>
+    {% block page_heading %}
+<div class="grid-row">
+  <div class="column-two-thirds" style="margin-top:45px;">
+<span style="font-size: 36px;font-weight:bold;">
+  Your licences
+</span>
+    </div>
+        </div>
+        {% endblock %}
+    {% block manage_licences_link %}
+    </div>
+
+    <div class="grid-row">
+        <div class="column-full" style="margin-top:35px;margin-bottom:35px;">
+    <nav class="tabs">
+        	  <ul>
+              <li><span class="active">Licence list</span></li>
+        	    <li><a href="/v12_2/online_licence/licence_access/manage_licences_views_wendy">Manage licence access</a></li>
+        	    <li><a href="/v12_2/online_licence/licence_requests/manage_licences_wendy">Licence requests</a></li>
+
+
+    </ul>
+    </nav>
+    </div>
+
+        </div>
+
+      {% endblock %}
+
+      {% block manage_licence_permissions %}
+      </div>
+      <div class="grid-row">
+          <div class="column-full" style="margin-top:35px;margin-bottom:35px;">
+      <nav class="tabs">
+          	  <ul>
+                <li><a href="/v12_2/online_licence/licences_list/personas/licence_holder_wendy">Licence list</a></li>
+          	    <li><span class="active">Manage licence access</span></li>
+          	    <li><a href="/v12_2/online_licence/licence_requests/manage_licences_wendy">Licence requests</a></li>
+      </ul>
+      </nav>
+      </div>
+    </br>
+          </div>
+
+        {% endblock %}
+
+        {% block manage_licences_wendy %}
+        </div>
+        <div class="grid-row">
+            <div class="column-full" style="margin-top:35px;margin-bottom:35px;">
+        <nav class="tabs">
+            	  <ul>
+                  <li><span class="active">Licence list</span></li>
+            	    <li><a href="/v12_2/online_licence/licence_access/manage_licences_views_wendy">Manage licence access</a></li>
+            	    <li><a href="/v12_2/online_licence/licence_requests/manage_licences_wendy">Licence requests</a></li>
+        </ul>
+        </nav>
+        </div>
+            </div>
+
+          {% endblock %}
+
+          {% block add_licences_wendy %}
+          </div>
+          <div class="grid-row">
+              <div class="column-full" style="margin-top:35px;margin-bottom:35px;">
+          <nav class="tabs">
+                  <ul>
+                    <li><a href="/v12_2/online_licence/licences_list/personas/licence_holder_wendy">Licence list</a></li>
+                    <li><a href="/v12_2/online_licence/licence_access/manage_licences_views_wendy">Manage licence access</a></li>
+                    <li><span class="active">Licence requests</span></li>
+
+          </ul>
+          </nav>
+          </div>
+        </br>
+              </div>
+
+            {% endblock %}
+
+</br>
+
+
+
+{% block page_heading_in_tabs %}
+<div class="grid-row">
+  <div class="column-full">
+  {% block manage_licences_new_wendy %}
+<h1 class="heading-large">Request to view more licences</h1>
+
+
+<p>You can view more of your existing water abstraction or impoundment licences by requesting access to them here.<p></p>
+Before we give you access, we need to do some security checks to confirm you’re the licence holder or their official representative.<p></p>You can track the status of your requests below.
+</p>
+{% block enter_confirmation_codes_wendy %}
+<a class="button" href="/v12_2/online_licence/new_wendy_reg/auth_code" role="button" style="margin-bottom:20px;">Enter confirmation code</a>
+{% endblock %}
+
+</br><a class="button" href="/v12_2/online_licence/new_wendy_reg/licence_number" role="button" style="margin-bottom:20px;">Add licence</a>
+
+<div class="license-results" id="results">
+
+  <div class="license-results-header">
+    <div class="license-results-header__column">
+      <a href="#" aria-label="Sort by licence serial number">Licence number<span class="sort-icon"> &#x25be;</span></a>
+    </div>
+    <div class="license-results-header__column">
+      <a href="#" aria-label="Sort by licence name">Status</a>
+    </div>
+    <div class="license-results-header__column">
+  </div>
+  </div>
+  {% block awaiting_code_wendy %}
+  <div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
+    <a href="/v12_2/online_licence/new_wendy_reg/auth_code" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+  </div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0003</h2>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0004</h2>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">03/28/60/0005</h2>
+  <p class="license-result__column license-result__column--description">Awaiting code</p>
+  <a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+{% endblock %}
+{% block confirmed_code_wendy %}
+<div class="license-result">
+<h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+<p class="license-result__column license-result__column--description">Confirmed</p>
+  <a href="/v12_2/online_licence/new_wendy_reg/auth_code" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+<div class="license-result">
+<h2 class="heading-medium license-result__column">03/28/60/0003</h2>
+<p class="license-result__column license-result__column--description">Confirmed</p>
+<a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+<div class="license-result">
+<h2 class="heading-medium license-result__column">03/28/60/0004</h2>
+<p class="license-result__column license-result__column--description">Confirmed</p>
+<a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+<div class="license-result">
+<h2 class="heading-medium license-result__column">03/28/60/0005</h2>
+<p class="license-result__column license-result__column--description">Confirmed</p>
+<a href="remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true"></a>
+</div>
+{% endblock %}
+
+          </div>
+                  {% endblock %}
+        </div>
+
+      </div>
+  {% block wendy_licenc_list_header %}
+<h1 class="heading-large">Your licences</h1>
+    {% endblock %}
+    {% endblock %}
+{% block searchform %}
+<div class="grid-row">
+
+  {% block emailfield %}
+  <div class="column-two-fifths">
+    <div class="form-group form-group--horizontal">
+      <label class="form-label form-label--bold" for="emailAddress">Search for a licence holder’s account</label>
+      <span class="form-hint">Enter their registered email address.</span>
+      <input type="text" class="form-control form-control--block" name="emailAddress" id="emailAddress" />
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block search %}
+  <div class="column-two-fifths">
+    <div class="form-group form-group--horizontal">
+      <label class="form-label form-label--bold" for="licenseNumber">Search your licences</label>
+      <span class="form-hint">Enter a licence number or name.</span>
+      <input type="text" class="form-control form-control--block" name="licenseNumber" id="licenseNumber" />
+    </div>
+  </div>
+
+  <div class="column-one-fifth">
+    <input id="searchButton" class="button button button-license-search" type="submit" value="Search">
+  </div>
+</div>
+{% endblock %}
+{% endblock %}
+
+
+
+</div>
+{% block results_header %}
+<div class="grid-row">
+  <div class="column-full">
+{% block no_results_header %}
+<h1 class="heading-large">Your licences</h1>
+</p>Add licences, or enter a verification code on the <a href="/v12_2/online_licence/new_wendy_reg/first_log_in/manage_licences_wendy">licences requests.</a></p>
+{% endblock %}
+    <!-- Results page goes here -->
+    <div class="license-results" id="results">
+
+      <div class="license-results-header">
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence serial number">Licence number<span class="sort-icon"> &#x25be;</span></a>
+        </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">Licence name</a>
+        </div>
+        <div class="license-results-header__column"></div>
+      </div>
+
+      {% endblock %}
+{% block geoff_instruct %}
+      </div>
+
+    <div class="license-result" id="results" aria-hidden="true">
+<div style="margin-top: 10px">Search for an account holder, licence name or number.</div>
+</div>
+      </div>
+
+{% endblock %}
+{% block share_licences %}
+<h1 class="heading-large">Manage access to your licences</h1>
+<p>You can give other people access to view your licences too. Tell us their email address and we’ll send them a link to create an account.</p>
+<p>You can remove their access at any time.</p>
+
+</div>
+
+{% block share_licences_button %}
+<a class="button" href="/v12_2/online_licence/new_wendy_reg/permissions/add_users_wendy" role="button" style="margin-bottom:20px;">Add user</a>
+{% endblock %}
+
+{% block new_wendy_share_licences_button %}
+<a class="button" href="/v12_2/online_licence/new_wendy_reg/permissions/add_users" role="button" style="margin-bottom:20px;">Add user</a>
+{% endblock %}
+
+<div class="license-results" id="results">
+
+  <div class="license-results-header">
+    <div class="license-results-header__column">
+      <a href="#" aria-label="Sort by licence serial number">People with access<span class="sort-icon"> &#x25be;</span></a>
+    </div>
+    <div class="license-results-header__column">
+      <a href="#" aria-label="Sort by licence name">Date</a>
+    </div>
+    <div class="license-results-header__column">
+
+    </div>
+    <div class="license-results-header__column"></div>
+  </div>
+        {% block no_users_new_user_results %}
+  <div class="license-result">
+  <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
+  <p class="license-result__column license-result__column--description">12 March 2015</p>
+    <p class="license-result__column license-result__column--description"></p>
+    <a href="/v12_2/permissions/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
+  </div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
+  <p class="license-result__column license-result__column--description">28 June 2015</p>
+  <p class="license-result__column license-result__column--description"></p>
+  <a href="/v12_2/permissions/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
+  <p class="license-result__column license-result__column--description">1 May 2014</p>
+  <p class="license-result__column license-result__column--description"></p>
+  <a href="/v12_2/permissions/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
+</div>
+<div class="license-result">
+  <h2 class="heading-medium license-result__column">long_email_address@test.co.uk</h2>
+  <p class="license-result__column license-result__column--description">4 July 2016</p>
+  <p class="license-result__column license-result__column--description"></p>
+  <a href="/v12_2/permissions/remove_access?user_id=long_email_address@test.co.uk" class="license-result__column license-result__column--description" aria-hidden="true">Remove access</a>
+</div>
+        {% endblock %}
+          </div>
+          {% block no_users_new_user %}
+        <div class="grid-row">
+          <div class="column-two-thirds">
+          <p style="padding-top:5px;">You've not shared your licences with any users so far.</p>
+          </div>
+        </div>
+          {% endblock %}
+        </br>
+
+
+
+{% endblock %}
+{% block new_user_no_licences %}
+{% block searchresults %}
+
+      <a href="/v12_2/pages/online_licence?wid=1" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0002</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v12_2/pages/online_licence?wid=1" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0003</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v12_2/pages/online_licence?wid=1" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0004</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+      <a href="/v12_2/pages/online_licence?wid=1" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/60/0005</h2>
+        <p class="license-result__column license-result__column--description">-</p>
+        <div class="license-result__column license-result__column--view" aria-hidden="true">View</div>
+      </a>
+
+{% endblock %}
+{% endblock %}
+
+    </div>
+    {% block no_licences_new_user %}
+    <p style="padding-top:5px;">You don't have access to any licences yet.<p>
+    {% endblock %}
+  </div>
+</div>
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+<details class="closeOnOpen">
+          <summary><span class="summary">Content</span></summary>
+<h4 class="heading-small">Manage licence access</h4>
+          <a href="/v12_2/online_licence/licence_access/manage_licences_views_wendy">Access granted list</a>
+  </br>   <a href="/v12_2/online_licence/licence_access/manage_licences_views_wendy">Empty list, no requests made</a>
+<p></p>
+<h4 class="heading-small">Licence requests</h4>
+          <a href="/v12_2/online_licence/new_wendy_reg/first_log_in/manage_licences_awaiting_code_wendy">Licence requests awaiting authorisation</a>
+        </br>  <a href="/v12_2/online_licence/new_wendy_reg/first_log_in/manage_licences_wendy">Licences with confirmed authorisation</a>
+
+</details>
+
+{% endblock %}
