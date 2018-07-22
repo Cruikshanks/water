@@ -53,7 +53,7 @@
           {{ pData.LicenceName }}
         </h1>
         <p class="heading-small spaceless">
-          NALD reference: 65432123
+          NALD reference 65432123
         </p>
       {% else %}
         <h2 class="sub-head">
@@ -63,7 +63,7 @@
           Licence number {{pData.LicenceSerialNo}}
         </h1>
         <p class="heading-small spaceless">
-          NALD reference: 01032123
+          NALD reference 01032123
         </p>
       {% endif %}
     </div>
@@ -72,19 +72,19 @@
   <div class="medium-space">
     <dl>
       <dt class="meta-label">
-        EA region:
+        EA region
       </dt>
       <dd class="meta-description">
         Anglian Region
       </dd>
       <dt class="meta-label">
-        Site description:
+        Site description
       </dt>
       <dd class="meta-description">
         Great Ouse at Bedford College (Heat pump - cooling only)
       </dd>
       <dt class="meta-label">
-        Purpose:
+        Purpose
       </dt>
       <dd class="meta-description">
         {{ pData.Purpose1 }}
@@ -100,7 +100,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <p>
-        <a href="../online-licence?wid={{ query.wid }}">View the associated licence for this return</a>
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
       </p>
     </div>
   </div>
@@ -135,7 +135,7 @@
 
       <div class="table-row table-head">                                      <!-- the table head -->
         <div class="table-cell bold-small column-50">
-          Months
+          Month
         </div>
         <div class="table-cell bold-small column-35">
           Gallons
@@ -354,18 +354,18 @@
       </h3>
       <p class="version spaceless selected">
         jan.fizbold@abstraction-bros.co.uk<br>
-        <a href="returns-report">11 September 2018</a> - 65432123
+        <a href="returns-report?wid={{ query.wid }}">11 September 2018</a> - 65432123
       </p>
       <div class="panel panel-border-wide this-version version">
         <span class="sr-only">This version</span>
         <p class="version spaceless">
           lee.minko@environment-agency.gov.uk<br>
-          <a href="returns-report-version">02 September 2018</a> - 65422205
+          <a href="returns-report-version?wid={{ query.wid }}">02 September 2018</a> - 65422205
         </p>
       </div>
       <p class="version spaceless">
         desmond.yukoob@abstraction-bros.co.uk<br>
-        <a href="returns-report-version">30 August 2018</a> - 65422323
+        <a href="returns-report-version-origin?wid={{ query.wid }}">30 August 2018</a> - 65422323
       </p>
     </div>
   </div>

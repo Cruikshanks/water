@@ -965,16 +965,6 @@ details {
   width: 50%;
 }
 
-.table-cell .multiple-choice {
-  white-space:nowrap;
-  float: none;
-}
-
-.multiple-choice {
-  padding-top: 11px;
-  // padding-bottom: 0;
-}
-
 .context {
   color: $grey-1;
   display: block;
@@ -1388,3 +1378,13 @@ details {
 .amount-input {
   margin-right: 15px;
 }
+
+// .table-cell .multiple-choice {
+//   white-space:nowrap;
+//   float: none;
+// }
+//
+// .radio-fix {
+//   background-color: red;
+//   padding-top: 0;
+// }
