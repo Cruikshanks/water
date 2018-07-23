@@ -1,0 +1,82 @@
+{% extends "../head.html" %}
+
+{% block page_title %}
+  Choose how we contact you - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="big-space">
+
+        <legend>
+          <h1 class="heading-large">
+            How would you prefer us to contact you about your licence?
+          </h1>
+        </legend>
+
+        <p>
+          We will use this method to send you notifications if possible. We are in the process of updating our IT systems, so you may still receive communication by other methods too.
+        </p>
+
+        <fieldset>
+
+          <!-- post radio -->
+          <div class="multiple-choice" data-target="contact-by-text">
+            <input id="example-contact-by-text" name="radio-contact-group" aria-controls="contact-by-text" aria-expanded="true" type="radio">
+            <label for="example-contact-by-text">Letter</label>
+          </div>
+
+          <!-- address input panel -->
+          <div class="panel panel-border-narrow medium-space js-hidden" id="contact-by-text" aria-hidden="false">
+            <label class="form-label" for="contact-text-message"><p class="bold-small">Your registered licence address</p></label>
+
+            <!-- if there are two or more addresses -->
+            <!-- Choose one of your registered licence addresses -->
+
+            <p>
+              <!-- <input class="form-control" name="contact-text-message" type="text" id="contact-text-message"> -->
+              <!-- <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="" required > -->
+                Sunnybrooke Farm, Jammingford<br>
+                Birmingham,<br>
+                B37 6RY<br>
+              <!-- </textarea> -->
+            </p>
+            <a href="licences" class="button">
+              Use my postal address
+            </a>
+          </div>
+
+          <!-- email radio -->
+          <div class="multiple-choice" data-target="contact-by-email">
+            <input id="example-contact-by-email" name="radio-contact-group" aria-controls="contact-by-email" aria-expanded="false" type="radio">
+            <label for="example-contact-by-email">Email</label>
+          </div>
+
+          <!-- email input panel -->
+          <div class="panel panel-border-narrow medium-space js-hidden" id="contact-by-email" aria-hidden="true">
+            <label class="form-label" for="contact-email"><p class="bold-small">Email address</p></label>
+            <p>
+              <input class="form-control" name="contact-email" id="contact-email" type="text">
+            </p>
+
+            <a href="licences-updated" class="button">Use this email</a>
+          </div>
+
+        </fieldset>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "../head.html" %}
+
+{% block page_title %}
+  You are signed out - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- navigation block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="grid-row big-space">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">
+        You are signed out
+      </h1>
+
+      <p><a href="licences" class="button">Sign in</a><br></p>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds small-space">
+      <div class="panel panel-border-wide">
+        <p>
+          Our feedback survey does not currently meet the same accessibility standards as the rest of our service. We are working with the software provider to improve accessibility on this page.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  (feedback form goes here)
+
+</main>
+{% endblock %}

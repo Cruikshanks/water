@@ -1,0 +1,36 @@
+{% extends "../view.html" %}
+
+{% block page_title %}
+  Access removed - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-manage.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Access removed
+      </h1>
+
+      <div class="grid-row">
+        <div class="column-two-thirds medium-space">
+          <p><span class="bold-small">long_email_address@test.co.uk</span> can no longer access your licence information.</p>
+          <p>They will not be notified about this change.</p>
+          <!-- <a href="/v19/pages/give-access">Give someone access to your licences</a> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

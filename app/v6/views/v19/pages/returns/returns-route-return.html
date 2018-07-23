@@ -1,0 +1,90 @@
+{% extends "../../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-returns.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          <a href="returns">Abstraction record for {{ pData.LicenceSerialNo }}</a>
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+        <h2 class="heading-small spaceless">
+          For the purpose of {{ pData.Purpose1 }}
+        </h2>
+      {% else %}
+        <h2 class="sub-head">
+          <a href="returns">Abstraction record</a>
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+        <h2 class="heading-small spaceless">
+          For the purpose of {{ pData.Purpose1 }}
+        </h2>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View the associated licence for this return</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="form-group">
+        <fieldset>
+
+          <legend>
+            <h2 class="heading-medium">
+              Do you have amounts to report for this return?
+            </h2>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="return-form" type="radio" name="radio-inline-group" value="">
+            <label for="radio-inline-1">Yes</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="nil-return" type="radio" name="radio-inline-group" value="">
+            <label for="radio-inline-2">No</label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <a href="returns-route-unit?wid={{ query.wid }}" class="button">
+    Continue
+  </a>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

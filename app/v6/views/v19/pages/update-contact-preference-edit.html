@@ -1,0 +1,79 @@
+{% extends "../view.html" %}
+
+{% block page_title %}
+  Choose how we contact you - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="big-space">
+
+        <legend>
+          <h1 class="heading-large">
+            Update your contact preferences
+          </h1>
+        </legend>
+
+        <p>
+          Please tell us how you would like to receive notifications about changes to your abstraction conditions.
+        </p>
+
+        <fieldset>
+
+          <!-- post radio -->
+          <div class="multiple-choice" data-target="contact-by-text">
+            <input id="example-contact-by-text" name="radio-contact-group" checked aria-controls="contact-by-text" aria-expanded="true" type="radio">
+            <label for="example-contact-by-text">Letter</label>
+          </div>
+
+          <!-- address input panel -->
+          <div class="panel panel-border-narrow medium-space js-hidden" id="contact-by-text" aria-hidden="false">
+            <label class="form-label" for="contact-text-message"><p class="bold-small">Main postal address</p></label>
+            <p>
+              <!-- <input class="form-control" name="contact-text-message" type="text" id="contact-text-message"> -->
+              <!-- <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="" required > -->
+                Sunnybrooke Farm, Jammingford<br>
+                Birmingham,<br>
+                B37 6RY<br>
+              <!-- </textarea> -->
+            </p>
+
+            <a href="update-contact-preference" class="button">
+              Use this as my postal address
+            </a>
+          </div>
+
+          <!-- email radio -->
+          <div class="multiple-choice" data-target="contact-by-email">
+            <input id="example-contact-by-email" name="radio-contact-group" aria-controls="contact-by-email" aria-expanded="false" type="radio">
+            <label for="example-contact-by-email">Email</label>
+          </div>
+
+          <!-- email input panel -->
+          <div class="panel panel-border-narrow medium-space js-hidden" id="contact-by-email" aria-hidden="true">
+            <label class="form-label" for="contact-email"><p class="bold-small">Email address</p></label>
+            <p>
+              <input class="form-control" name="contact-email" id="contact-email" type="text">
+            </p>
+
+            <a href="/v19/pages/online-licence-contact-update?wid=3" class="button">Use this email</a>
+          </div>
+
+        </fieldset>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

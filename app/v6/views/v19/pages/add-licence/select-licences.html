@@ -1,0 +1,58 @@
+{% extends "v18/head.html" %}
+
+{% block page_title %}
+  Which licences do you want to be able to view? - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-manage.html" %}
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Add abstraction licences
+      </h1>
+
+      <form class="medium-space">
+        <fieldset>
+
+          <legend>
+            <h3 class="heading-medium">Add these licences?</h3>
+            <span class="body-text">Select all that apply</span>
+            <p></p>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+            <label for="waste-type-1">03/07/256/7001</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+            <label for="waste-type-2">03/07/256/7001/r01</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+            <label for="waste-type-3">03/07/256/7001/r02</label>
+          </div>
+
+        </fieldset>
+      </form>
+
+      <!-- continue button -->
+      <a href="choose-address">
+        <input onclick="" type="submit" value="Add these licences" class="button" role="button"/>
+      </a>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

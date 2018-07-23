@@ -1,0 +1,89 @@
+{% extends "../view.html" %}
+
+{% block page_title %}
+  Manage your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- navigation block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-manage.html" %}
+
+  <!-- page title -->
+  <h1  class="heading-large medium-space">
+    Add more of your licences or authorise access
+  </h1>
+
+  <div id="special-links" class="grid-row">
+    <div class="column-full">
+      <ul>
+        <li>
+          <div>
+            <a href="add-licence/licence-number">
+              Add more licences to view and to complete returns.
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="add-licence/auth-code">
+              Enter the code we sent you to link your licence to your account.
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="access">
+              Give or remove access to your licence information.
+            </a>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- <div id="feature-info" class="grid-row">
+
+    <div class="column-third medium-space">
+      <h2 class="heading-medium">Add licences</h2>
+      <ul class="list list-bullet">
+        <li><a href="request-access">View more of your current licences</a></li>
+        <li><a href="add_licence/auth_code">Enter a security code you've received by post</a></li>
+        <li><a href="#" target="_blank">Apply for a new abstraction or impoundment licence (opens in a new tab)</a></li>
+      </ul>
+    </div>
+
+    <div class="column-third medium-space">
+      <h2 class="heading-medium">Manage current licences</h2>
+      <ul class="list-bullet">
+        <li><a href="#" target="_blank">Change a licence (opens in a new tab)</a></li>
+        <li><a href="#" target="_blank">Measure, record or report your water abstraction (opens in a new tab)</a></li>
+        <li><a href="update-contact-preferences" target="_blank">Update contact preferences for all licences</a></li>
+      </ul>
+    </div>
+
+    <div class="column-third big-space">
+      <h2 class="heading-medium">Share access</h2>
+      <ul class="list list-bullet">
+        <li><a href="give-access">Share access to your licence information</a></li>
+        <li><a href="access">Manage licence access and provide returns access</a></li>
+      </ul>
+    </div>
+
+  </div> -->
+
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}

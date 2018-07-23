@@ -1,0 +1,481 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Manage your water abstraction or impoundment licence online prototype — GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class='column-two-thirds'>
+
+      <h1 class="heading-xlarge">
+        Manage your water abstraction or impoundment licence online prototype
+      </h1>
+
+      <h2 class="heading-medium">Prototype version 19</h2>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class='column-two-thirds'>
+
+      <h3 class="heading-small">An internal person can submit returns data</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/admin/online-licence-return-due?wid=32">Internal view of a licence with a return due</a></li>
+        <li><a href="/v18/admin/returns/returns-route-return?wid=32">Say whether there is data for a return</a></li>
+        <li><a href="/v18/admin/returns/returns-route-unit?wid=32">Select units for this return</a></li>
+        <li><a href="/v18/admin/returns/returns-form?wid=32">An internal user can fill in a return</a></li>
+        <li><a href="/v18/admin/returns/return-submitted?wid=32">Thank you for your return, a confirmation</a></li>
+      </ul>
+
+      <h3 class="heading-small">An internal user can see returns reports and update data</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/admin/online-licence?wid=32">A licence with returns</a></li>
+        <li><a href="/v18/admin/returns/returns-report?wid=33">A returns report</a></li>
+        <li><a href="/v18/admin/returns/returns-form-edit?wid=33">An internal user can edit a return</a></li>
+        <li><a href="/v18/admin/returns/returns-report-updated?wid=33">An updated return (complience flag)</a></li>
+        <li><a href="/v18/admin/returns/returns-report?wid=43">A 'Nil returns' report</a></li>
+      </ul>
+
+      <h3 class="heading-small">Returns MVP (external)</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/pages/licences">Licences with alert for due returns</a></li>
+        <li><a href="/v18/pages/returns/returns">Returns view</a></li>
+        <li><a href="/v18/pages/returns/returns-report-edited?wid=32">A historical and edited returns report</a></li>
+        <li><a href="/v18/pages/returns/returns-route-return?wid=33">Routing to see if there is any returns information</a></li>
+        <li><a href="/v18/pages/returns/returns-route-unit?wid=33">Routing returns units</a></li>
+        <li><a href="/v18/pages/returns/returns-form?wid=33">Making a return</a></li>
+        <li><a href="/v18/pages/returns/confirm-return?wid=33">Confirming a return</a></li>
+        <li><a href="/v18/pages/returns/return-submitted?wid=33">Return submitted</a></li>
+        <li><a href="/v18/pages/returns/returns-report?wid=33">The returns report</a></li>
+        <li><a href="/v18/pages/returns/returns-nil-return?wid=33">Tell us about your nil return</a></li>
+        <li><a href="/v18/pages/returns/confirm-no-return?wid=33">Confirming a nil return</a></li>
+        <li><a href="/v18/pages/returns/returns-report?wid=43">A nil returns report</a></li>
+      </ul>
+
+      <h3 class="heading-small">Licence access</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/pages/manage">User manage view</a></li>
+        <li><a href="/v18/pages/access">Share access to returns</a></li>
+        <li><a href="/v18/pages/give-access">Give licence access</a></li>
+        <li><a href="/v18/pages/access-removed">Access to licences removed</a></li>
+      </ul>
+
+      <h3 class="heading-small">Licence versions</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/admin/online-licence-version?wid=5">An old licence version</a></li>
+      </ul>
+
+      <h3 class="heading-small">Notification improvements</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/admin/manage">User manage view</a></li>
+        <li><a href="/v18/admin/contact-information">The first time an EO fills creates a notification</a></li>
+        <li><a href="/v18/admin/contact-information2">The next time an EO fills creates a notification</a></li>
+      </ul>
+
+      <h3 class="heading-small">River levels and flows</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/pages/online_licence?wid=1">A licence with a linked gauging station</a></li>
+        <li><a href="/v18/pages/licence/gauging-station?wid=1">Gauging station linked to a licence</a></li>
+        <li><a href="/v18/pages/licence/gauging-station-graph?wid=1">Last 7 days data for gauging station</a></li>
+        <li><a href="/v18/pages/licence/gauging-station?wid=4">Gauging station with no data</a></li>
+        <li><a href="/v18/pages/licence/conditions?wid=1">Licence conditions referring to a linked gauging station</a></li>
+      </ul>
+
+      <h3 class="heading-small">1st time user updates their notification preferences</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/pages/contact-preference-choice">Right after passing the security code</a></li>
+        <li><a href="/v18/pages/contact-preference-letter">If there is one linked address</a></li>
+        <li><a href="/v18/pages/contact-preference-letters">Multiple linked addresses</a></li>
+        <li><a href="/v18/pages/licences-contact-letter">Light confirmation of notification by letter</a></li>
+        <li><a href="/v18/pages/contact-preference-email">Selecting to add email</a></li>
+        <li><a href="/v18/pages/licences-contact-email">Light confirmation of notification by email</a></li>
+      </ul>
+
+      <h3 class="heading-small">Feedback links</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/admin/manage">Internal user feedback</a></li>
+        <li><a href="/v18/pages/signed-out">External user feedback</a></li>
+      </ul>
+
+      <h3 class="heading-small">Update to notifications</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/admin/manage">Internal user manage view</a></li>
+        <li><a href="/v18/admin/contact-role">First time an EO sends a Hands off flow notification</a></li>
+        <li><a href="/v18/admin/contact-information">EO adds their contact information</a></li>
+        <li><a href="/v18/admin/hof-notice-search">Internal user sends a hands off flow notification</a></li>
+        <li><a href="/v18/admin/hof-gauges">A list of nearby gauging stations</a></li>
+      </ul>
+
+      <h3 class="heading-small">Internal account updates</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/admin/contact-information-update">Internal user updates contact information</a></li>
+        <li><a href="/v18/admin/change-password">Internal user changes password</a></li>
+      </ul>
+
+      <h3 class="heading-small">Abstraction reform work</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/admin/manage">Admin manage options</a></li>
+        <li><a href="/v18/admin/licence-schema">Update the EPR schema</a></li>
+        <li><a href="/v18/admin/licences-internal-list">Abstraction reform tasklist</a></li>
+        <li><a href="/v18/admin/ar-task?wid=1">Abstraction reform user reviews data on a licence</a></li>
+        <li><a href="/v18/admin/licences-internal-list-admin">Abstraction reform administrator tasklist</a></li>
+        <li><a href="/v18/admin/ar-admin-task?wid=1">Abstraction reform administrator approves a licence review</a></li>
+      </ul>
+
+      <h3 class="heading-small">Technical legal additions</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v18/pages/licences?wid=1">Legal disclaimer</a></li>
+        <li><a href="/v18/pages/licences_many?wid=1">Legal disclaimer on a view with many licences</a></li>
+        <li><a href="/v18/pages/online_licence?wid=1">Reporting problems with licence data</a></li>
+      </ul>
+
+      <!-- previously on index -->
+      <!------------------------->
+
+      <details class="closeOnOpen">
+        <summary><span class="summary">Carried over from previous version</span></summary>
+
+        <h3 class="heading-small">Admin views</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/admin/licences-internal">Search for licences</a></li>
+          <li><a href="/v18/admin/licences-internal-list">Licences</a></li>
+          <li><a href="/v18/admin/manage">Manage customer accounts</a></li>
+        </ul>
+
+        <h3 class="heading-small">Send hands off flow notice</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/admin/hof-notice">Send a hands off flow notice, select area</a></li>
+          <li><a href="/v18/admin/hof-select-licences">Check & refine audience</a></li>
+          <li><a href="/v18/admin/hof-add-data">Add HOF specific data</a></li>
+          <li><a href="/v18/admin/hof-preview">Preview the hands off flow notification</a></li>
+          <li><a href="/v18/admin/hof-sent">Hands off flow notice sent, confirmation</a></li>
+
+          <li><a href="/v18/admin/hof-notice-location">Deferred HOF area selection view</a></li>
+        </ul>
+
+        <h3 class="heading-small">Send expiry notice</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/admin/exp-notice">Send an expiry notice, select area</a></li>
+          <li><a href="/v18/admin/exp-notice-dates">Use expiry date to find licences</a></li>
+          <li><a href="/v18/admin/exp-select-licences">Check & refine audience</a></li>
+          <li><a href="/v18/admin/exp-select-licences-many">Check & refine audience (more than 10)</a></li>
+          <li><a href="/v18/admin/exp-preview">Preview the expiry notification</a></li>
+          <li><a href="/v18/admin/exp-sent">Expiry notice sent, confirmation</a></li>
+        </ul>
+
+        <h3 class="heading-small">Notifications log view</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/admin/notice-batches">Notification batches</a></li>
+          <li><a href="/v18/admin/notice-log">Log for a batch</a></li>
+        </ul>
+
+        <h3 class="heading-small">New Information Architecture</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/pages/licences">View licences</a></li>
+          <li><a href="/v18/pages/manage">Manage your licence (useful links)</a></li>
+          <li><a href="/v18/pages/access">Access to licences (sharing)</a></li>
+        </ul>
+
+        <h3 class="heading-small">Security code sent</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/admin/online-licence?wid=22">Licences with outstanding code (internal view)</a></li>
+          <li><a href="/v18/pages/online_licence?wid=22">Licences with outstanding code</a></li>
+        </ul>
+
+        <h3 class="heading-small">Entry points</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/guidance?wid=1">Guidance page</a></li>
+          <li><a href="/v18/pages/start_option?wid=1">Start option</a></li>
+          <li><a href="/v18/pages/start?wid=1">Create start</a></li>
+          <li><a href="/v18/pages/signup/give_email?wid=1">Create account</a></li>
+          <li><a href="/v18/pages/registration/create_password">Opens link from 1st email</a></li>
+        </ul>
+
+        <h3 class="heading-small">Different views for different roles</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/pages/licences?wid=1">Five licences</a></li>
+          <li><a href="/v18/pages/licences_many?wid=1">More than five licences (named licences)</a></li>
+          <li><a href="/v18/admin/licences-internal?wid=1">Licences (internal view, single search)</a></li>
+          <li><a href="/v18/admin/licences-internal-list?wid=1">Abstraction reform view</a></li>
+        </ul>
+
+        <h3 class="heading-small">Licence views (Amounts / Points & Purpose)</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/pages/online_licence?wid=1">A licence with one purpose</a></li>
+          <li><a href="/v18/pages/online_licence_multipurpose?wid=1">A licence with multiple purposes</a></li>
+          <li><a href="/v18/pages/online_licence_impoundment?wid=6">An impoundment licence</a></li>
+        </ul>
+
+        <h3 class="heading-small">Beta service is now closed</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/pages/private-beta-closed">Private Beta closed</a></li>
+        </ul>
+
+        <h3 class="heading-small">Improvements</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v18/pages/add_licence/adding_licences">Unsupported licences</a></li>
+          <li><a href="/v18/pages/change_password/change_password">Change password update (post-pentest)</a></li>
+          <li><a href="/v18/pages/manage-concept">Concept for tiered links in the manage view</a></li>
+        </ul>
+
+        <!-- moved at version 18 -->
+
+        <h3 class="heading-small">Geoff invites John to the service</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v17/pages/manage">Request to manage licences</a></li>
+          <li><a href="/v17/pages/invites/request">Add invitee</a></li>
+          <li><a href="/v17/pages/invites/licences">Add licences</a></li>
+          <li><a href="/v17/pages/invites/confirmation">Invite sent</a></li>
+        </ul>
+
+        <ul class="list list-bullet">
+          <li><a href="/v17/pages/invites/received/give_permission">John selects licences to grant access to</a></li>
+          <li><a href="/v17/pages/invites/received/access_shared">John has given access</a></li>
+          <li><a href="/v17/pages/invites/received/create_password">John creates an account</a></li>
+          <li><a href="/v17/pages/add_licence/auth_code">Use security code</a></li>
+        </ul>
+
+        <!-- end of Sprint 10 -->
+
+        <h3 class="heading-small">Abstraction licences</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v15/pages/start?wid=1">Start page</a></li>
+          <li><a href="/v15/pages/signupgive_email?wid=1">Create account</a></li>
+          <li><a href="/v15/pages/signin?wid=1">Sign in</a></li>
+          <li><a href="/v15/pages/licences?wid=1">Licences</a></li>
+          <li><a href="/v15/pages/online_licence?wid=1">Licence 1</a></li>
+          <li><a href="/v15/pages/online_licence?wid=2">Licence 2</a></li>
+          <li><a href="/v15/pages/online_licence?wid=3">Licence 3</a></li>
+          <li><a href="/v15/pages/online_licence?wid=4">Licence 4</a></li>
+          <li><a href="/v15/pages/online_licence?wid=5">Licence 5</a></li>
+        </ul>
+
+        <h3 class="heading-small">Severn licences</h3>
+
+        <ul class="list list-bullet">
+          <li><a href="/v14/pages/licences?wid=1">Licences</a></li>
+          <li><a href="/v14/pages/online_licence-a?wid=1">Severn licence A</a></li>
+          <li><a href="/v14/pages/online_licence-b?wid=2">Severn licence B</a></li>
+          <li><a href="/v14/pages/online_licence-c?wid=3">Severn licence C</a></li>
+          <li><a href="/v14/pages/online_licence-d?wid=3">Severn licence D</a></li>
+          <li><a href="/v14/pages/online_licence-e?wid=3">Random licence E</a></li>
+          <li><a href="/v14/pages/expiring-licences?wid=3">Expiring licences</a></li>
+        </ul>
+
+        <h3 class="heading-small">Add licences</h3>
+        <ul class="list list-bullet">
+          <li><a href="/v14/pages/manage?wid=2">Request access</a></li>
+          <li><a href="/v14/pages/add_licence/licence_number?wid=3">Add licence numbers</a></li>
+          <li><a href="/v14/pages/add_licence/select_licences?wid=3">Which licences?</a></li>
+          <li><a href="/v14/pages/add_licence/choose_address?wid=3">Choose address</a></li>
+          <li><a href="/v14/pages/add_licence/post_confirm?wid=3">We sent you a letter</a></li>
+          <li><a href="/v14/pages/manage-auth">Code is sent</a></li>
+        </ul>
+
+        <h3 class="heading-small">Share access</h3>
+        <ul class="list list-bullet">
+          <li><a href="/v14/pages/access">Share licence access</a></li>
+
+        </ul>
+
+          <h3 class="heading-small">Licence summary & details</h3>
+          <ul class="list list-bullet">
+            <li><a href="/v13/pages/online_licence-a?wid=1">Simple licence</a></li>
+            <li><a href="/v13/pages/online_licence-b?wid=2">Complex licence</a></li>
+
+          </ul>
+          <ul class="list list-bullet">
+            <li><a href="/v13/pages/point/points-a?wid=1">2 abstraction points</a></li>
+            <li><a href="/v13/pages/point/points-b?wid=1">7 abstraction points</a></li>
+            <li><a href="/v13/pages/purpose/purposes-b?wid=1">4 abstraction purposes</a></li>
+            <li><a href="/v13/pages/conditions/1_condition?wid=1">1 abstraction condition</a></li>
+            <li><a href="/v13/pages/conditions/no_conditions?wid=1">No abstraction conditions on file</a></li>
+            <li><a href="/v13/pages/amounts/point-a?wid=1">Amounts by point</a></li>
+            <li><a href="/v13/pages/amounts/purpose-a?wid=1">Amounts by purpose</a></li>
+            <li><a href="/v13/pages/amounts/condition-a?wid=1">Amounts by condition</a></li>
+          </ul>
+
+          <h3 class="heading-small">Time-limited conditions</h3>
+          <ul class="list list-bullet">
+            <li><a href="/v13/pages/licences?wid=7">Renewal notice</a></li>
+            <li><a href="/v13/pages/online_licence?wid=7">Time-limited licence condtions</a></li>
+            <li><a href="/v13/pages/variation_summary?wid=7">Summary of temporary conditions</a></li>
+          </ul>
+
+          <h3 class="heading-small">Add licences</h3>
+          <ul class="list list-bullet">
+            <li><a href="/v13/pages/water_abstraction?wid=7">Manage your licences</a></li>
+            <li><a href="/v13/pages/licences_alt?wid=7">Manage your licences, another way</a></li>
+            <li><a href="/v13/pages/add_licence/licence_number?wid=7">Add abstraction licences</a></li>
+            <li><a href="/v13/pages/add_licence/select_licences?wid=7">Picking licences to add</a></li>
+            <li><a href="/v13/pages/add_licence/choose_address?wid=7">Choose address to send the code</a></li>
+            <li><a href="/v13/pages/add_licence/post_confirm?wid=7">Where to send your letter</a></li>
+            <li><a href="/v13/pages/add_licence/auth_code?wid=7">Use a security code</a></li>
+            <li><a href="/v13/pages/manage_licences?wid=7">Access to licences</a></li>
+            <li><a href="/v13/pages/licences?wid=7">Your licences</a></li>
+          </ul>
+
+
+          <h3 class="heading-small">Licence pages (as John)</h3>
+          <ul class="list list-bullet">
+            <li>
+              <a href="/v12/pages/signin">
+                Sign in
+              </a>
+            </li>
+
+            <li>
+              <a href="/v12/online_licence/licences_list/licences">
+                Abstraction licences
+              </a>
+            </li>
+
+            <li>
+              <a href="/v12/pages/online_licence?wid=1">
+                Licence
+              </a>
+            </li>
+
+            <li>
+              <a href="/v12/pages/terms?wid=1">
+                Licence terms
+              </a>
+  			    </li>
+
+            <li>
+    					<a href="/v12_2/pages/contact_details?wid=1">
+    						Contact details
+    					</a>
+    				</li>
+  		    </ul>
+
+          <h4 class="heading-small">User change password</h4>
+      		<ul class="list list-bullet">
+            <li><a href="/v12/change_password/new_password">Change password</a></li>
+            <li><a href="/v12/change_password/new_password_confirm?">Password changed</a></li>
+          </ul>
+
+          <h4 class="heading-small">User reset password</h4>
+      		<ul class="list list-bullet">
+            <li>
+              <a href="/v12/reset_password/password_reset">
+                Password reset
+              </a>
+            </li>
+
+            <li>
+              <a href="/v12/reset_password/check_email?">
+                Check your email
+              </a>
+            </li>
+            <li>
+              <a href="/v12/reset_password/resend_password">
+                Ask for another email
+              </a>
+            </li>
+            <li>
+              <a href="/v12/reset_password/resent_password">
+                Check your email, or contact us
+              </a>
+            </li>
+          </ul>
+
+          <h4 class="heading-small">Licences list page</h4>
+          <ul class="list list-bullet">
+            <li>
+              <a href="/v12/online_licence/licences_list/personas/licence_holder_john">
+                Licences list landing page for John
+              </a>
+            </li>
+
+            <li>
+              <a href="/v12/online_licence/licences_list/personas/licence_holder_wendy">
+                Licences list landing page for Wendy
+              </a>
+            </li>
+
+            <li>
+              <a href="/v12/online_licence/licences_list/personas/licence_holder_geoff">
+                Licences list landing page for Geoff
+              </a>
+            </li>
+          </ul>
+
+          <h4 class="heading-small">User feedback</h4>
+          <ul class="list list-bullet">
+            <li><a href="/v12/pages/feedback">User feedback page (smart survey iframe)</a></li>
+          </ul>
+
+          <h4 class="heading-small">Registration process - Wendy</h4>
+          <ul class="list list-bullet">
+            <li><a href="/v12/online_licence/new_wendy_reg/guidance">Registration guidance</a></li>
+            <li><a href="/v12/online_licence/new_wendy_reg/give_email">Tell us your email</a></li>
+            <li><a href="/v12/online_licence/new_wendy_reg/check_email">Check your email</a></li>
+            <li><a href="/v12/online_licence/new_wendy_reg/resend_email">Resend email</a></li>
+            <li><a href="/v12/online_licence/new_wendy_reg/resent_email">Check your email again</a></li>
+            <li><a href="/v12/online_licence/new_wendy_reg/create_password">Create a password for your account</a></li>
+            <li><a href="/v12/online_licence/new_wendy_reg/licence_number">Tell us your licence numbers</a></li>
+            <li><a href="/v12/online_licence/new_wendy_reg/select_licences">Confirm these are your licences</a></li>
+            <li><a href="/v12/online_licence/new_wendy_reg/choose_address">Where should we send your code?</a></li>
+            <li><a href="/v12/online_licence/new_wendy_reg/post_confirm">Code requested</a></li>
+            <li><a href="/v12/online_licence/new_wendy_reg/auth_code">Tell us your security code</a></li>
+            <li><a href="/v12/online_licence/licences_list/personas/licence_holder_wendy">Licences list page</a></li>
+          </ul>
+
+        </details>
+
+      </div>
+
+      <div class="column-third">
+        <aside class="related">
+
+          <h3 class="heading-small">
+            UI patterns
+          </h3>
+          <div role="navigation">
+            <ul>
+              <li>
+                <a href="/v18/patterns/tables">
+                  Mobile optimised tables
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  {% endblock %}

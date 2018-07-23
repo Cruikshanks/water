@@ -1,0 +1,51 @@
+{% extends "../admin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-admin-manage.html" %}
+
+  <!-- confirmation panel -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <!-- page title -->
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h1  class="heading-large">
+            Your expiry notification has been sent
+          </h1>
+        </div>
+      </div>
+
+      <div class="govuk-box-highlight">
+        <h2 class="heading-large tight">
+          Notification sent
+        </h2>
+        <p class="font-medium">
+          You sent this notification to <span class="bold-medium">6 licence holders</span> with licences due to expire before <span class="bold-medium">1 June 2020</span>.
+        </p>
+      </div>
+
+      <p>
+        <a href="notice-batches">
+          See report for notices
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+  </div>
+
+</main>
+{% endblock %}

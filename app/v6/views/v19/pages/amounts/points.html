@@ -1,0 +1,127 @@
+{% extends "../head.html" %}
+{% block content %}
+
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}  
+
+  <!-- back button -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large">How much water you can abstract at each point for licence number {{ pData.LicenceSerialNo }}</h1>
+
+  <nav class="tabs medium-space">
+    <ul>
+      <li><span class="active">Amounts by point</span></li>
+      <li><a href="/v19/amounts/purposes?wid={{ query.wid }}">Amounts by purpose</a></li>
+      <li><a href="/v19/amounts/conditions?wid={{ query.wid }}">Conditional amounts</a></li>
+    </ul>
+  </nav>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h2 class="heading-medium">
+        {{ pData.Point1 }}
+      </h2>
+
+      <div class="medium-space">
+
+        <div class="datatablepp first-datapp">
+          <label>                                                               Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                        {{ pData.Point1Amount1 }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                               Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                        {{ pData.Point1Amount2 }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                               Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                        {{ pData.Point1Amount3 }}
+          </div>
+        </div>
+
+      </div>
+
+      {% if pData.Point2 %}
+      <h2 class="heading-medium">
+        {{ pData.Point2 }}
+      </h2>
+      <div class="medium-space">
+
+        <div class="datatablepp first-datapp">
+          <label>                                                               Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                        {{ pData.Point2Amount1 }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                               Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                        {{ pData.Point2Amount2 }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                               Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                        {{ pData.Point2Amount3 }}
+          </div>
+        </div>
+
+      </div>
+      {% endif %}
+
+      {% if pData.Point3 %}
+      <h2 class="heading-medium">
+        {{ pData.Point3 }}
+      </h2>
+      <div class="medium-space">
+
+        <div class="datatablepp first-datapp">
+          <label>                                                               Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                        {{ pData.Point3Amount1 }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                               Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                        {{ pData.Point3Amount2 }}
+          </div>
+        </div>
+
+        <div class="datatablepp">
+          <label>                                                               Abstraction amount
+          </label>
+          <div class="licenceAnswerv12">                                        {{ pData.Point3Amount3 }}
+          </div>
+        </div>
+
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+
+  </main>
+
+{% endblock %}

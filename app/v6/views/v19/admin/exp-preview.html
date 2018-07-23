@@ -1,0 +1,62 @@
+{% extends "../admin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-admin-manage.html" %}
+
+  <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large tight">
+        Check and confirm your expiry notice
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <legend class="medium-space">
+        <span class="body-text">A notice will be sent to <span class="bold-small">6 licence holders</span> in <span class="bold-small">Avon, Little Avon</span> that have a licence that will expire before <span class="bold-small">1 June 2020</span> </span>
+      </legend>
+
+      <div class="medium-space">
+        <div class="notification">
+          <p class="lede">
+            You’re about to send this notification to <span class="bold-medium">6 licence holders</span> regarding licences due to expire before <span class="bold-medium">1 June 2020</span>.
+          </p>
+          <p class="lede">
+            Please consider renewal of this licence six months before this date.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-one-third">
+
+      <div>
+        <a href="exp-sent" id="submitButton" class="button button" type="submit">
+          Send notification
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

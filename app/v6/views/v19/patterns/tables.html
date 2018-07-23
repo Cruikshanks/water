@@ -1,0 +1,266 @@
+{% extends "../admin.html" %}
+
+{% block page_title %}
+  Mobile optimised tables - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h1 class="heading-large">
+        Mobile optimised tables
+      </h1>
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="heading-medium">
+            A chunk of data
+          </h2>
+        </div>
+      </div>
+
+      <!-- table with four columns -->
+      <div class="table medium-space">                                          <!-- a table -->
+
+        <div class="table-row table-head">                                      <!-- the table head -->
+          <div class="table-cell bold-small column-33">
+            Column A
+          </div>
+          <div class="table-cell bold-small column-33">
+            Column B
+          </div>
+          <div class="table-cell bold-small column-33">
+            Column C
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+          <div class="table-cell">
+            <h3 class="sr-only">
+              Row 1
+            </h3>
+            <h4 class="context">
+              Column A
+            </h4>
+            Plug one
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column B
+            </h4>
+            Plug two
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column C
+            </h4>
+            Plug three
+          </div>
+        </div>
+
+      </div>
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="heading-medium">
+            This chunk of data
+          </h2>
+        </div>
+      </div>
+
+      <!-- table with four columns -->
+      <div class="table medium-space">                                          <!-- a table -->
+
+        <div class="table-row table-head">                                      <!-- the table head -->
+          <div class="table-cell bold-small column-25">
+            Column A
+          </div>
+          <div class="table-cell bold-small column-25">
+            Column B
+          </div>
+          <div class="table-cell bold-small column-25">
+            Column C
+          </div>
+          <div class="table-cell bold-small column-25">
+            Column D
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h3 class="sr-only">
+              Row 1
+            </h3>
+            <h4 class="context">
+              Column A
+            </h4>
+            Cyan
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column B
+            </h4>
+            Magenta
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column C
+            </h4>
+            Yellow
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column D
+            </h4>
+            Black
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h3 class="sr-only">
+              Row 2
+            </h3>
+            <h4 class="context">
+              Column A
+            </h4>
+            Cyan
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column B
+            </h4>
+            Magenta
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column C
+            </h4>
+            Yellow
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column D
+            </h4>
+            Black
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h3 class="sr-only">
+              Row 3
+            </h3>
+            <h4 class="context">
+              Column A
+            </h4>
+            Cyan
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column B
+            </h4>
+            Magenta
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column C
+            </h4>
+            Yellow
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column D
+            </h4>
+            Black
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="grid-row">                                                    <!-- another table -->
+        <div class="column-two-thirds">
+          <h2 class="heading-medium">
+            Another chunk of data
+          </h2>
+        </div>
+      </div>
+
+      <!-- table with five columns -->
+      <div class="table">
+
+        <div class="table-row table-head">
+          <div class="table-cell bold-small column-20">
+            Column A
+          </div>
+          <div class="table-cell bold-small column-20">
+            Column B
+          </div>
+          <div class="table-cell bold-small column-20">
+            Column C
+          </div>
+          <div class="table-cell bold-small column-20">
+            Column D
+          </div>
+          <div class="table-cell bold-small column-20">
+            Column E
+          </div>
+        </div>
+
+        <div class="table-row last-row">
+          <div class="table-cell">
+            <h3 class="sr-only">
+              Row 1
+            </h3>
+            <h4 class="context">
+              Column A
+            </h4>
+            Wood
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column B
+            </h4>
+            Fire
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column C
+            </h4>
+            Earth
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column D
+            </h4>
+            Metal
+          </div>
+          <div class="table-cell">
+            <h4 class="context">
+              Column E
+            </h4>
+            Water
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

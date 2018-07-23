@@ -1,0 +1,35 @@
+{% extends "../admin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  View licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-admin-view.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        View licences
+      </h1>
+    </div>
+  </div>
+
+  <!-- search function -->
+  {% include "../partials/admin-search.html" %}
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+
+{% endblock %}
