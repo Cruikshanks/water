@@ -1379,12 +1379,14 @@ details {
   margin-right: 15px;
 }
 
-// .table-cell .multiple-choice {
-//   white-space:nowrap;
-//   float: none;
-// }
-//
-// .radio-fix {
-//   background-color: red;
-//   padding-top: 0;
-// }
+// override fix for radio form layout
+.multiple-choice label {
+  float: none;
+  display: block;
+  padding: 0;
+  padding-left: 15px;
+}
+
+.multiple-choice p {
+  margin-left: 15px;
+}
