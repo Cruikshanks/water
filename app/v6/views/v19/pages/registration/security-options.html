@@ -1,7 +1,7 @@
 {% extends "../../head.html" %}
 
 {% block page_title %}
-  Create a password for your online account - GOV.UK
+  How do you want to confirm your identity? - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -10,25 +10,31 @@
   <!-- beta banner block -->
   {% include "../../partials/beta-banner.html" %}
 
-  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  <div class="big-space"></div>
+
+  <div class="small-space">
+    <a href="signin" class="link-back" onclick="history.go(-1)">Back</a>
+  </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      {% if data.noneselected == "1" %}
-        <!-- only show this error if incorrectLicenceNo param passed through from route-->
-        <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
-          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
-            You must select how to confirm your identity
-          </h2>
-        </div>
-      {% endif %}
+      <form action="licence-number" method="post" class="form" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+
+        {% if data.noneselected == "1" %}
+          <!-- only show this error if incorrectLicenceNo param passed through from route-->
+          <div id='incorrectLicenceNo' class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+            <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+              You must select how to confirm your identity
+            </h2>
+          </div>
+        {% endif %}
 
       <h1 class="heading-large">
         How do you want to confirm your identity?
       </h1>
 
-      <form method="post" action="/v19/pages/registration/by_phone">
+      <form method="post" action="/v19/pages/registration/by-phone">
 
         <div class="form-group">
 
