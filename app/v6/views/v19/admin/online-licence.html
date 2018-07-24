@@ -43,7 +43,15 @@
     Current licence version started on <span class="bold-small">{{ pData.EffectiveDateStart }}</span> and ends on <span class="bold-small">{{ pData.EffectiveDateEnd }}</span>.
   </p>
 
-  <div class="datatable datahead">
+  <!-- navigation block -->
+  <nav class="page-numbers-container page-navigation medium-space" aria-label="Pagination">
+    <div class="previous">
+      <a href="online-licence-version?wid={{ query.wid }}" rel="prev">Previous version</a>    </div>
+    <div class="next">
+    <!-- <a href="online-licence?wid={{ query.wid }}" rel="next">Following version</a>    </div> -->
+  </nav>
+
+  <div class="datatable">
     <label>Licence name</label>
     <div class="licenceAnswerv7">
 
@@ -196,7 +204,7 @@
   </div>
 
   <!-- bad data block -->
-  {% include "../partials/versions.html" %}
+  {% include "../partials/version-current.html" %}
 
   </div>
 

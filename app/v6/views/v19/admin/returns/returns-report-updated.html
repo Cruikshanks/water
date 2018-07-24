@@ -21,8 +21,8 @@
   <div class="grid-row">
     <div class="column-two-thirds small-space">
 
-      <div class="panel panel-border-wide alert-warning medium-space">
-        <p>This return has been flagged for a complience check</p>
+      <div class="panel panel-border-wide alert-warning big-space">
+        You must check this return for compliance
       </div>
 
       <!-- page heading -->
@@ -33,9 +33,6 @@
         <h2 class="heading-large spaceless">
           {{ pData.LicenceName }}
         </h2>
-        <p class="heading-small spaceless">
-          NALD reference 65432123
-        </p>
       {% else %}
         <h2 class="sub-head">
           <a href="returns">Abstraction return</a>
@@ -43,9 +40,6 @@
         <h1 class="heading-large spaceless">
           Licence number {{pData.LicenceSerialNo}}
         </h1>
-        <p class="heading-small spaceless">
-          NALD reference 01032123
-        </p>
       {% endif %}
     </div>
   </div>
@@ -53,36 +47,44 @@
   <div class="small-space">
     <dl>
       <dt class="meta-label">
-        EA region:
+        NALD reference
       </dt>
       <dd class="meta-description">
-        Anglian Region
+        65432123
       </dd>
       <dt class="meta-label">
-        Site description:
+        Region
+      </dt>
+      <dd class="meta-description">
+        Anglia
+      </dd>
+      <dt class="meta-label">
+        Site description
       </dt>
       <dd class="meta-description">
         Great Ouse at Bedford College (Heat pump - cooling only)
       </dd>
       <dt class="meta-label">
-        Purpose:
+        Purpose
       </dt>
       <dd class="meta-description">
         {{ pData.Purpose1 }}
       </dd>
+      <dt class="meta-label">
+        Return period
+      </dt>
+      <dd class="meta-description">
+        May to June 2018
+      </dd>
     </dl>
   </div>
 
-  <div class="grid-row small-space">
+  <div class="grid-row medium-space">
     <div class="column-two-thirds">
       <p>
         <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
       </p>
     </div>
-  </div>
-
-  <div class="big-space">
-    <a href="returns-form-edit?wid={{ query.wid }}" class="button">Edit return</a>
   </div>
 
   <!-- detect nill return -->
@@ -100,9 +102,12 @@
 
     <div class="grid-row">
       <div class="column-two-thirds">
-        <h3 class="heading-medium">
-          Return information
+        <h3 class="heading-medium small-space">
+          Abstraction amounts
         </h3>
+        <div class="big-space">
+          <a href="returns-form?wid={{ query.wid }}" class="button">Edit return</a>
+        </div>
       </div>
     </div>
 

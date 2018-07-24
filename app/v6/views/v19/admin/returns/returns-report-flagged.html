@@ -33,9 +33,6 @@
         <h2 class="heading-large spaceless">
           {{ pData.LicenceName }}
         </h2>
-        <p class="heading-small spaceless">
-          NALD reference 65432123
-        </p>
       {% else %}
         <h2 class="sub-head">
           <a href="returns">Abstraction return</a>
@@ -43,15 +40,18 @@
         <h1 class="heading-large spaceless">
           Licence number {{pData.LicenceSerialNo}}
         </h1>
-        <p class="heading-small spaceless">
-          NALD reference 01032123
-        </p>
       {% endif %}
     </div>
   </div>
 
   <div class="small-space">
     <dl>
+      <dt class="meta-label">
+        NALD reference
+      </dt>
+      <dd class="meta-description">
+        65432123
+      </dd>
       <dt class="meta-label">
         Region
       </dt>
@@ -79,7 +79,7 @@
     </dl>
   </div>
 
-  <div class="grid-row small-space">
+  <div class="grid-row medium-space">
     <div class="column-two-thirds">
       <p>
         <a href="../online-licence?wid={{ query.wid }}">View this licence</a>

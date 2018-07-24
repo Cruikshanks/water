@@ -29,9 +29,6 @@
         <h2 class="heading-large spaceless">
           {{ pData.LicenceName }}
         </h2>
-        <p class="heading-small spaceless">
-          NALD reference 65432123
-        </p>
       {% else %}
         <h2 class="sub-head">
           <a href="returns">Abstraction return</a>
@@ -39,15 +36,18 @@
         <h1 class="heading-large spaceless">
           Licence number {{pData.LicenceSerialNo}}
         </h1>
-        <p class="heading-small spaceless">
-          NALD reference 01032123
-        </p>
       {% endif %}
     </div>
   </div>
 
   <div class="small-space">
     <dl>
+      <dt class="meta-label">
+        NALD reference
+      </dt>
+      <dd class="meta-description">
+        65432123
+      </dd>
       <dt class="meta-label">
         Region
       </dt>
@@ -65,6 +65,12 @@
       </dt>
       <dd class="meta-description">
         {{ pData.Purpose1 }}
+      </dd>
+      <dt class="meta-label">
+        Return period
+      </dt>
+      <dd class="meta-description">
+        May to June 2018
       </dd>
     </dl>
   </div>
@@ -101,7 +107,7 @@
     <div class="grid-row">
       <div class="column-two-thirds">
         <h3 class="heading-medium">
-          Return information
+          Abstraction amounts
         </h3>
       </div>
     </div>
@@ -317,7 +323,7 @@
   <div class="grid-row">
     <div class="column-two-thirds versions">
       <h3 class="heading-medium">
-        Editions of this return
+        Submitted by
       </h3>
 
       <div class="panel panel-border-wide this-version version">
