@@ -1852,7 +1852,7 @@ router.post('/v13/online_licence/wendy_reg/7', function (req, res) {
 
 router.get('/*', function(req, res, next) {
   const view = req.params[0];
-  console.log('its me!', view);
+  // console.log('its me!', view);
   res.render(view,{
      query : req.query,
      permits : require('./permits.json'),
