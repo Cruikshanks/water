@@ -12,9 +12,9 @@
 
   <div class="big-space"></div>
 
-  <div class="small-space">
+  <!-- <div class="small-space">
     <a href="signin" class="link-back" onclick="history.go(-1)">Back</a>
-  </div>
+  </div> -->
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -22,33 +22,18 @@
       <form action="post-confirm" method="get" class="form" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
 
         <h1 class="heading-large">
-          We are about to send a code in the post
+          Whose attention should the security code be for?
         </h1>
 
-        <div class="medium-space">
-
-          <p>We will send the code to this address.</p>
-
-          <div class="panel panel-border-wide">
-            <p>
-              111 Abbey House,<br>
-              Abingdon-on-Thames,<br>
-              Oxfordshire,<br>
-              RE1 1GA<br>
-            </p>
-          </div>
-
-        </div>
-
-        <p>Tell us if you have any specific instructions for this code.</p>
-
-        <!-- User id -->
+        <!-- input -->
         <div class="form-group">
           <label for="password">
-          <label class="form-label-bold" for="fao">For the attention of (optional)</label>
-          <span class="form-hint">
+          <label class="form-label-bold" for="fao">
+            Enter a name and, or department (optional)
+          </label>
+          <!-- <span class="form-hint">
             <p>For example: Michelle Sopp, Account team</p>
-          </span>
+          </span> -->
           <input type="text" class="form-control" id="fao"/>
         </div>
 

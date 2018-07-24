@@ -30,11 +30,11 @@
 
       {% block wendy_next_page %}
         <!-- <form method="post" action="/v14/pages/add_licence/post_confirm.html"> -->
-        <form action="post-confirm">
+        <form action="fao">
       {% endblock %}
 
       {% block new_wendy_next_page %}
-        <form method="post" action="post-confirm/">
+        <form method="post" action="fao/">
       {% endblock %}
 
       <div class="form-group">
@@ -44,7 +44,7 @@
               <summary><span class="summary">Why do we need to post you a code?</span></summary>
               <p>We post a security code to a registered address to make sure you’re the licence holder or an official representative.</p>
             </details>
-            <p class="lede"> Choose one of your licence addresses:</p>
+            <p class="lede">Choose one of your licence addresses:</p>
           </legend>
 
           <div class="form-group">
@@ -62,18 +62,6 @@
                 <label for="113-Abbey-House">113 Abbey House, Abingdon-on-Thames, Oxfordshire, RE1 1GA</label>
               </div>
             </fieldset>
-          </div>
-
-          <!-- User id -->
-          <div class="form-group">
-            <label for="password">
-            <label class="form-label-bold" for="fao">
-              Enter a contact name (optional)
-            </label>
-            <span class="form-hint">
-              <p>For example: Michelle Sopp, Account team</p>
-            </span>
-            <input type="text" class="form-control" id="fao"/>
           </div>
 
           <input type="submit" value="Continue" class="button" role="button"/>
