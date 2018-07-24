@@ -1,44 +1,129 @@
-
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-  GOV.UK Prototype Kit
+{% block page_title %}
+  GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <h1 class="heading-xlarge">Manage your water abstraction or impoundment licence online prototype<h1>
+      <h2 class="heading-medium"><a href="/versions/v18">Current test version</a></h2>
+      <p></p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+      <h2 class="heading-medium">Protoype of the standard water resource view my permit journey</h2>
+      <p><a href="/changelog">Prototype change log</a></li></p>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
+      <h2 class="heading-medium">Versions</h2>
 
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
+      <ul class="list list-bullet">
         <li>
-          <a href="https://design-system.service.gov.uk">
-            GOV.UK Design System
+          <a href="/versions/v18">
+            Version 18 pages
           </a>
         </li>
-      </ul>
+        <li>
+          <a href="/versions/v17">
+            Version 17 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v16">
+            Version 16 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v15">
+            Version 15 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v14">
+            Version 14 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v13">
+            Version 13 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v12">
+            Version 12 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v11">
+            Version 11 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v10">
+            Version 10 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v9">
+            Version 9 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v8">
+            Version 8 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v7">
+            Version 7 pages
+          </a>
+        </li>
+
+        <li>
+          <a href="/versions/v6">
+            Version 6 pages
+          </a>
+        </li>
+
+        <li>
+          <a href="/versions/v5">
+            Version 5 pages
+          </a>
+        </li>
+
+
+        <li>
+          <a href="/versions/v4">
+            Version 4 pages
+          </a>
+        </li>
+
+        <li>
+          <a href="/versions/v3">
+            Version 3 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v2">
+            Version 2 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v1">
+            Version 1 pages
+          </a>
+        </li>
+        <li>
+          <a href="/versions/v0">
+            Version 0 pages
+          </a>
+        </li>
+			</ul>
+
     </div>
-</div>
+  </div>
+</main>
 
 {% endblock %}

@@ -1,0 +1,116 @@
+{% extends "v19/admin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  WRLS roles - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="big-space"></div>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        Water resource licensing service roles
+      </h1>
+      <div class="medium-space"></div>
+    </div>
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">
+        Super user
+      </h2>
+    </div>
+    <div class="column-full">
+      <!-- navigation block -->
+      {% include "v19/roles-nav/nav-admin-view.html" %}
+    </div>
+    <div class="column-two-thirds">
+      <p class="lede big-space">
+        The super user can do everything.
+        <br>
+        <br>
+      </p>
+
+      <h2 class="heading-medium">
+        Data & Returns
+      </h2>
+    </div>
+
+    <div class="column-full">
+      <!-- navigation block -->
+      {% include "v19/roles-nav/nav-officer-head.html" %}
+    </div>
+    <div class="column-two-thirds">
+      <p class="lede big-space">
+        Data & Returns users can view licences, see versions of licences and see reports about notifications that have been sent.
+        <br>
+        <br>
+      </p>
+      <h2 class="heading-medium">
+        Returns entry
+      </h2>
+    </div>
+    <div class="column-full">
+      <!-- navigation block -->
+      {% include "v19/roles-nav/nav-returns-head.html" %}
+    </div>
+    <div class="column-two-thirds">
+      <p class="lede big-space">
+        Returns entry users can view licences and enter returns data.
+        <br>
+        <br>
+      </p>
+      <h2 class="heading-medium">
+        Abstraction reform operator
+      </h2>
+    </div>
+
+    <div class="column-full">
+      <!-- navigation block -->
+      {% include "v19/roles-nav/nav-reform-head.html" %}
+    </div>
+    <div class="column-two-thirds">
+      <p class="lede big-space">
+        Abstraction reform operator can view licences and they can see a list of licence records so that they may compare these with NALD data and make edits.
+        <br>
+        <br>
+      </p>
+      <h2 class="heading-medium">
+        Abstraction reform approver
+      </h2>
+    </div>
+
+    <div class="column-full">
+      <!-- navigation block -->
+      {% include "v19/roles-nav/nav-reform-head.html" %}
+    </div>
+    <div class="column-two-thirds">
+      <p class="lede big-space">
+        Abstraction reform approver can view licences and they can see a list of edited licence records so that they may approve them or send them back to editors for more edits.
+        <br>
+        <br>
+      </p>
+      <h2 class="heading-medium">
+        Environment Officer
+      </h2>
+    </div>
+
+    <div class="column-full">
+      <!-- navigation block -->
+      {% include "v19/roles-nav/nav-officer-head.html" %}
+    </div>
+    <div class="column-two-thirds">
+      <p class="lede big-space">
+        The Environment Officer can view licences, send notifications to licence holders and they can also see reports.
+        <br>
+        <br>
+      </p>
+    </div>
+  </div>
+
+
+</main>
+{% endblock %}
