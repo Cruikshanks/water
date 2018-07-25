@@ -29,9 +29,6 @@
         <h1 class="heading-large spaceless">
           {{ pData.LicenceName }}
         </h1>
-        <h2 class="heading-small spaceless">
-          For the purpose of {{ pData.Purpose1 }}
-        </h2>
       {% else %}
         <h2 class="sub-head">
           <a href="returns">Abstraction return</a>
@@ -39,12 +36,12 @@
         <h1 class="heading-large spaceless">
           Licence number {{pData.LicenceSerialNo}}
         </h1>
-        <h2 class="heading-small spaceless">
-          For the purpose of {{ pData.Purpose1 }}
-        </h2>
       {% endif %}
     </div>
   </div>
+
+  <!-- navigation block -->
+  {% include "../../partials/return-internal-meta.html" %}
 
   <div class="grid-row small-space">
     <div class="column-two-thirds">

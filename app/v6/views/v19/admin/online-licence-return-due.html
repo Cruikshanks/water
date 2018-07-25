@@ -1,4 +1,4 @@
-{% extends "../admin.html" %}
+{% extends "../view.html" %}
 
 <!-- page title -->
 {% block page_title %}
@@ -38,10 +38,6 @@
   {% else %}
     <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
   {% endif %}
-
-  <p>
-    Current licence version started on <span class="bold-small">{{ pData.EffectiveDateStart }}</span> and ends on <span class="bold-small">{{ pData.EffectiveDateEnd }}</span>.
-  </p>
 
   <div class="datatable datahead">
     <label>Licence name</label>
@@ -215,17 +211,17 @@
 
       <p>
         {{ pData.Purpose1 }}<br>
-        <a href="returns/returns-report?wid={{ query.wid }}">02 September 2017</a> - 65432123
+        <a href="returns/returns-report?wid={{ query.wid }}">02 September 2017</a>
       </p>
 
       <p>
         {{ pData.Purpose1 }}<br>
-        <a href="returns/returns-report?wid={{ query.wid }}">04 October 2016</a> - 65432123
+        <a href="returns/returns-report?wid={{ query.wid }}">04 October 2016</a>
       </p>
 
       <p>
         {{ pData.Purpose1 }}<br>
-        <a href="returns/returns-report?wid={{ query.wid }}">30 August 2015</a> - 65432123
+        <a href="returns/returns-report?wid={{ query.wid }}">30 August 2015</a>
       </p>
     </div>
   </div>
