@@ -1,0 +1,43 @@
+{% extends "../../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-returns.html" %}
+
+
+  <!-- confirmation panel -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h2 class="heading-large tight">
+          Thank you
+        </h2>
+        <p class="font-medium">
+          We have received your XML file and will process this within 30 days
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="returns">Back to returns</a>
+      </p>
+    </div>
+  </div>
+
+</main>
+{% endblock %}

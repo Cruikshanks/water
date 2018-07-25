@@ -1,0 +1,50 @@
+{% extends "../../view.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  XML for your returns - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-returns.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Upload XML for your returns
+      </h1>
+
+      <p class="lede">We will use the data in the file to complete your licence returns.</p>
+
+      <!-- form -->
+      <form class="medium-space">
+
+        <div class="form-group">
+          <label class="form-label" for="file-input">
+            Select a file to upload
+          </label>
+          <input type="file" id="file-input">
+        </div>
+
+        <!-- continue button -->
+        <a href="xml-done?wid={{ query.wid }}" class="button">
+          Upload
+        </a>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
