@@ -39,56 +39,46 @@
 
   {% if pData.Condition1Value1 %} <!-- if there is any data -->
 
-  <!-- notice -->
-  <div class="notice medium-space">
-    <i class="icon icon-important">
-      <span class="visually-hidden">Warning</span>
-    </i>
-    <strong class="bold-small column-two-thirds">
-      We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
-    </strong>
-  </div>
+    <div class="grid-row">
+      <div class="column-full medium-space">
 
-  <div class="grid-row">
-    <div class="column-full medium-space">
-
-      <h2 class="heading-medium">{{ pData.Condition1 }}</h2>
-      <div class="datatable first-datapp">
-        <label>{{ pData.Condition1Label1 }}</label>
-        <div class="dataText">
-          {{ pData.Condition1Value1 }}
+        <h2 class="heading-medium">{{ pData.Condition1 }}</h2>
+        <div class="datatable first-datapp">
+          <label>{{ pData.Condition1Label1 }}</label>
+          <div class="dataText">
+            {{ pData.Condition1Value1 }}
+          </div>
         </div>
+
+        {% if pData.Condition1Value2 %}
+          <div class="datatable">
+            <label>{{ pData.Condition1Label2 }}</label>
+            <div class="dataText">
+              {{ pData.Condition1Value2 }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if pData.Condition1Value3 %}
+          <div class="datatable">
+            <label>{{ pData.Condition1Label3 }}</label>
+            <div class="dataText">
+              {{ pData.Condition1Value3 }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if pData.Condition1Value4 %}
+          <div class="datatable">
+            <label>{{ pData.Condition1Label4 }}</label>
+            <div class="dataText">
+              {{ pData.Condition1Value4 }}
+            </div>
+          </div>
+        {% endif %}
+
       </div>
-
-      {% if pData.Condition1Value2 %}
-        <div class="datatable">
-          <label>{{ pData.Condition1Label2 }}</label>
-          <div class="dataText">
-            {{ pData.Condition1Value2 }}
-          </div>
-        </div>
-      {% endif %}
-
-      {% if pData.Condition1Value3 %}
-        <div class="datatable">
-          <label>{{ pData.Condition1Label3 }}</label>
-          <div class="dataText">
-            {{ pData.Condition1Value3 }}
-          </div>
-        </div>
-      {% endif %}
-
-      {% if pData.Condition1Value4 %}
-        <div class="datatable">
-          <label>{{ pData.Condition1Label4 }}</label>
-          <div class="dataText">
-            {{ pData.Condition1Value4 }}
-          </div>
-        </div>
-      {% endif %}
-
     </div>
-  </div>
 
   {% if pData.Condition2 %}
 

@@ -166,7 +166,7 @@
     </div>
   </div>
 
-  <div class="datatable big-space">
+  <div class="datatable">
     <label>Abstraction amounts</label>
     <div class="licenceAnswerv7">
 
@@ -188,6 +188,30 @@
         {{ pData.Amount5 }}</br>
       {% endif %}
     </div>
+  </div>
+
+  <div class="datatable big-space">
+    <label>Returns for this licence</label>
+    <div class="licenceAnswerv7">
+      {{ pData.Purpose1 }}<br>
+
+      {% if pData.Purpose2 %}
+        {{ pData.Purpose2 }}</br>
+      {% endif %}
+
+      {% if pData.Purpose3 %}
+        {{ pData.Purpose3 }}</br>
+      {% endif %}
+
+      {% if pData.Purpose4 %}
+        {{ pData.Purpose4 }}</br>
+      {% endif %}
+
+      {% if pData.Purpose5 %}
+        {{ pData.Purpose5 }}</br>
+      {% endif %}
+      <a href="returns/returns?wid={{ query.wid }}">View returns for this licence</a>
+    </div>
 
   </div>
 
@@ -195,37 +219,6 @@
   {% include "../partials/version-current.html" %}
 
   </div>
-
-  <div class="grid-row">
-    <div class="column-two-thirds versions">
-      <h3 class="heading-medium">
-        Returns for this licence
-      </h3>
-
-      <p>
-        {{ pData.Purpose1 }}<br>
-        <a href="/v19/admin/returns/returns-route-return?wid={{ query.wid }}">
-          Submit a return for 2018
-        </a>
-      </p>
-
-      <p>
-        {{ pData.Purpose1 }}<br>
-        <a href="returns/returns-report?wid={{ query.wid }}">02 September 2017</a>
-      </p>
-
-      <p>
-        {{ pData.Purpose1 }}<br>
-        <a href="returns/returns-report?wid={{ query.wid }}">04 October 2016</a>
-      </p>
-
-      <p>
-        {{ pData.Purpose1 }}<br>
-        <a href="returns/returns-report?wid={{ query.wid }}">30 August 2015</a>
-      </p>
-    </div>
-  </div>
-
 
 {% endif %}
 {% endfor %}

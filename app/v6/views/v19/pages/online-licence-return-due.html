@@ -19,14 +19,14 @@
   {% include "../partials/nav-view.html" %}
 
   {% if pData.Purpose1 %}
-    <div class="grid-row">
+    <!-- <div class="grid-row">
       <div class="column-two-thirds small-space">
         <div class="panel panel-border-wide alert-default">
           A return is due for {{ pData.Purpose1 }} on this licence.<br>
-          <a href="returns/returns-form">Start your return</a>
+          <a href="returns/returns-route-return?wid={{ query.wid }}">Start your return</a>
         </div>
       </div>
-    </div>
+    </div> -->
   {% endif %}
 
   {% if pData.Purpose2 %}
@@ -34,7 +34,7 @@
       <div class="column-two-thirds small-space">
         <div class="panel panel-border-wide alert-default">
           A return is due for {{ pData.Purpose2 }} on this licence.<br>
-          <a href="returns/returns-form">Start your return</a>
+          <a href="returns/returns-route-return?wid={{ query.wid }}">Start your return</a>
         </div>
       </div>
     </div>
@@ -119,6 +119,7 @@
     <div class="dataText">
 
       {{ pData.Purpose1 }}</br>
+      {{ pData.Purpose2 }}
 
     </div>
   </div>
@@ -179,16 +180,6 @@
         </div>
     </div>
     {% endif %}
-
-  <!--
-
-    "GaugingStationName": "Huntsford",
-    "GaugingStationGridReference": "SX 426725",
-    "GaugingStationType": "Ultrasonic gauging station",
-    "GaugingStationValue": "002",
-
-  -->
-
     <!-- end gauging station -->
 
     <div class="datatable">
@@ -239,8 +230,8 @@
         {{ pData.Amount5 }}</br>
       {% endif %}
     </div>
-
   </div>
+
 
   <div id="#bad-data">
     <!-- bad data block -->
