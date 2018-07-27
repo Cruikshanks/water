@@ -40,14 +40,13 @@
   {% endif %}
 
   <!-- navigation block -->
-  <nav class="page-numbers-container page-navigation medium-space" aria-label="Pagination">
+  <!-- <nav class="page-numbers-container page-navigation medium-space" aria-label="Pagination">
     <div class="previous">
       <a href="online-licence-version?wid={{ query.wid }}" rel="prev">Previous version</a>    </div>
     <div class="next">
-    <!-- <a href="online-licence?wid={{ query.wid }}" rel="next">Following version</a>    </div> -->
-  </nav>
+  </nav> -->
 
-  <div class="datatable">
+  <div class="datatable datahead">
     <label>Licence name</label>
     <div class="licenceAnswerv7">
 
@@ -194,7 +193,10 @@
   <div class="datatable big-space">
     <label>Returns for this licence</label>
     <div class="licenceAnswerv7">
-      {{ pData.Purpose1 }}<br>
+
+      {% if pData.Purpose1Due %}
+        {{ pData.Purpose1 }}</br>
+      {% endif %}
 
       {% if pData.Purpose2 %}
         {{ pData.Purpose2 }}</br>
@@ -211,7 +213,9 @@
       {% if pData.Purpose5 %}
         {{ pData.Purpose5 }}</br>
       {% endif %}
+
       <a href="returns/returns?wid={{ query.wid }}">View returns</a>
+
     </div>
   </div>
 

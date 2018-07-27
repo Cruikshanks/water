@@ -1398,3 +1398,11 @@ details {
 .striker {
   background: linear-gradient(to top right, #fff calc(50% - 2px), #000, #fff calc(50% + 1px) )
 }
+
+#summary-table .table-cell {
+  border-bottom: 1px solid #bfc1c3;
+}
+
+.numbers {
+  text-align: right;
+}

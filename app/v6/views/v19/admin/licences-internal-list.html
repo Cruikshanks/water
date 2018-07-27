@@ -18,13 +18,25 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <h1  class="heading-large">
-        Review licence data
+        View licences
       </h1>
     </div>
   </div>
 
-  <!-- search function -->
-  {% include "../partials/admin-search.html" %}
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <label class="form-label form-label" for="licenceSearch">Search for a licence</label>
+      <span class="form-hint">Search by registered email address or licence number</span>
+
+      <div class="flexy">
+        <input type="text" class="form-control form-control--block column-two-thirds" />
+        <div class="column-one-third search-button">
+          <a href="licences-internal-list" class="button">Search</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- flextable function -->
   <div class="grid-row medium-space">
@@ -35,32 +47,23 @@
 
         <div class="table-row table-head">                                      <!-- tablehead starts -->
 
-          <div class="table-cell bold-small">
+          <div class="table-cell bold-small column-40" id="ar-number-column">
             <a href="#" aria-label="Sort by licence number">
               Licence number
             </a>
           </div>
-          <div class="table-cell bold-small" id="ar-name-column">
+          <div class="table-cell bold-small column-40" id="ar-name-column">
             <a href="#" aria-label="Sort by licence number">
-              Last editor
+              Licence name
             </a>
           </div>
-          <!-- <div class="table-cell bold-small">
-            Contact information
-          </div> -->
-          <div class="table-cell bold-small">
-            <a href="#" aria-label="Sort by licence number">
+          <div class="table-cell bold-small column-20" id="ar-end-date-column">
+            <a href="#" aria-label="Sort by end date">
               Last edit
-            </a>
-          </div>
-          <div class="table-cell bold-small" id="ar-status-column">
-            <a href="#" aria-label="Sort by licence number">
-              Status
               <span class="sort-icon"> &#x25be;</span>
             </a>
-          </div>
-        </div>                                                                  <!-- tablehead ends -->
-
+          </div>                                                                <!-- tablehead ends -->
+        </div>
         <div class="table-row medium-space">                                    <!-- a data row starts -->
           <div class="table-cell">
             <a href="/v19/admin/ar-task?wid=3">
@@ -80,11 +83,6 @@
               Last edited
             </label>
             2 July 2018
-          </div>
-          <div class="table-cell status-column center">
-            <strong class="task-completed open-task hang-left">
-              In progress
-            </strong>
           </div>
         </div>                                                                  <!-- a data row ends -->
 
@@ -108,11 +106,6 @@
             </label>
             1 July 2018
           </div>
-          <div class="table-cell status-column center">
-            <strong class="task-completed open-task hang-left">
-              In progress
-            </strong>
-          </div>
         </div>                                                                  <!-- a data row ends -->
 
         <div class="table-row medium-space">                                    <!-- a data row starts -->
@@ -134,11 +127,6 @@
               Last edited
             </label>
             12 July 2018
-          </div>
-          <div class="table-cell status-column center">
-            <strong class="task-completed open-task hang-left">
-              In progress
-            </strong>
           </div>
         </div>                                                                  <!-- a data row ends -->
 
@@ -162,9 +150,6 @@
             </label>
             16 June 2018
           </div>
-          <div class="table-cell status-column center">
-
-          </div>
         </div>                                                                  <!-- a data row ends -->
 
         <div class="table-row medium-space">                                    <!-- a data row starts -->
@@ -185,10 +170,6 @@
             <label class="context">
               Last edited
             </label>
-
-          </div>
-          <div class="table-cell status-column center">
-
           </div>
         </div>                                                                  <!-- a data row ends -->
 
@@ -212,11 +193,6 @@
             </label>
             31 May 2018
           </div>
-          <div class="table-cell status-column center">
-            <!-- <strong class="task-completed hang-left">
-              Completed
-            </strong> -->
-          </div>
         </div>                                                                  <!-- a data row ends -->
 
       </div>                                                                    <!-- table ends -->
@@ -227,6 +203,36 @@
   <script src="/public/v6/javascripts/underscore.min.js"></script>
   <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
   <script src="/public/v6/javascripts/license_results.js"></script>
+
+  <script>
+    $(function() {
+
+      var ctrlKey = false;
+
+      $(window).keydown(function(ev){
+        if(ev.ctrlKey || ev.keyCode === 224 || ev.keyCode === 17 || ev.keyCode === 91 || ev.keyCode === 93) {
+          ctrlKey = true;
+        }
+      });
+
+      $(window).keyup(function(){
+        ctrlKey = false;
+      });
+
+      $('a').parents('.table-row').addClass('clickable');
+
+      // Click on licence list clicks inner link
+      $('.table-row').on('click', function (ev) {
+        var href = $(this).find('a:first').attr('href');
+        console.log(ctrlKey);
+        ctrlKey ? window.open.blur(href) : window.location.href = href;
+        window.focus();
+        // window.location.href = $(this).find('a:first').attr('href');
+        $(this).addClass('active');
+        ev.preventDefault();
+      });
+    });
+  </script>
 
 </main>
 
