@@ -27,9 +27,9 @@
           Return submitted
         </h1>
         {% if pData.LicenceName %}
-          <h2 class="medium">Your {{ pData.Purpose1 }} return for {{ pData.LicenceName }}</h2>
+          <h2 class="medium">Your {{ pData.Return1 }} return for {{ pData.LicenceName }}</h2>
         {% else %}
-          <h2 class="medium">Your {{ pData.Purpose1 }} return for licence number {{ pData.LicenceSerialNo }}</h2>
+          <h2 class="medium">Your {{ pData.Return1 }} return for licence number {{ pData.LicenceSerialNo }}</h2>
         {% endif %}
       </div>
 
@@ -39,7 +39,7 @@
   <div class="grid-row small-space">
     <div class="column-two-thirds">
       <p>
-        <a href="returns-report?wid={{ query.wid }}">View the return</a>
+        <a href="returns-report?wid={{ query.wid }}">View this return</a>
       </p>
     </div>
   </div>
