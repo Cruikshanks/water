@@ -24,7 +24,7 @@
       <!-- page heading -->
       {% if pData.LicenceName %}
         <h2 class="sub-head">
-          Abstraction record for {{ pData.LicenceSerialNo }}
+          Abstraction return for {{ pData.LicenceSerialNo }}
         </h2>
         <h1 class="heading-large spaceless">
           {{ pData.LicenceName }}
@@ -50,7 +50,7 @@
 
   <legend>
     <h3 class="heading-medium">
-      Submitting a nil return
+      You are about to submit a nil return
     </h3>
   </legend>
 
@@ -60,7 +60,9 @@
     <div class="form-group">
       <label for="licence_no">
         <fieldset>
-          <span class="form-label">Tell us why you are submitting no return information</span>
+          <span class="form-label">
+            Tell us why there are no abstraction amounts to report
+          </span>
         </fieldset>
       </label>
       <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>

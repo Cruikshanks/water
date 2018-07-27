@@ -29,9 +29,6 @@
         <h1 class="heading-large spaceless">
           {{ pData.LicenceName }}
         </h1>
-        <h2 class="heading-small spaceless">
-          For the purpose of {{ pData.Purpose1 }}
-        </h2>
       {% else %}
         <h2 class="sub-head">
           <a href="returns">Abstraction return</a>
@@ -39,12 +36,33 @@
         <h1 class="heading-large spaceless">
           Licence number {{pData.LicenceSerialNo}}
         </h1>
-        <h2 class="heading-small spaceless">
-          For the purpose of {{ pData.Purpose1 }}
-        </h2>
       {% endif %}
     </div>
   </div>
+
+  <div class="small-space">
+    <dl>
+      <dt class="meta-label">
+        Site description
+      </dt>
+      <dd class="meta-description">
+        Great Ouse at Bedford College (Heat pump - cooling only)
+      </dd>
+      <dt class="meta-label">
+        Purpose
+      </dt>
+      <dd class="meta-description">
+        {{ pData.Purpose1 }}
+      </dd>
+      <dt class="meta-label">
+        Return period
+      </dt>
+      <dd class="meta-description">
+        April 2018 to march 2019
+      </dd>
+    </dl>
+  </div>
+
 
   <div class="grid-row small-space">
     <div class="column-two-thirds">
@@ -62,7 +80,7 @@
 
           <legend>
             <h2 class="heading-medium">
-              Do you have amounts to report for this return?
+              Are there any abstraction amounts to report?
             </h2>
           </legend>
 
@@ -72,7 +90,7 @@
           </div>
           <div class="multiple-choice">
             <input id="nil-return" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-2">No (Nil return)</label>
+            <label for="radio-inline-2">No</label>
           </div>
         </fieldset>
       </div>

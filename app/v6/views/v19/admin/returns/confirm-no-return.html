@@ -24,7 +24,7 @@
       <!-- page heading -->
       {% if pData.LicenceName %}
         <h2 class="sub-head">
-          Abstraction record for {{ pData.LicenceSerialNo }}
+          Abstraction return for {{ pData.LicenceSerialNo }}
         </h2>
         <h1 class="heading-large spaceless">
           {{ pData.LicenceName }}
@@ -54,7 +54,7 @@
   <div class="grid-row small-space">
     <div class="column-two-thirds">
       <h3 class="heading-medium">
-        Confirm this return information
+        Now submit this return
       </h3>
     </div>
   </div>
@@ -66,7 +66,7 @@
           <span class="visually-hidden">Warning</span>
         </i>
         <strong class="bold-small">
-          You are about to submit return information and will be liable for the numbers you provide. Please check and confirm the numbers you have provided.
+          By submitting this return you are confirming that all the details you are providing are correct, to the best of your knowledge.
         </strong>
       </div>
     </div>
@@ -87,7 +87,7 @@
   </div>
 
   <a href="return-submitted?wid={{ query.wid }}" class="button">
-    Confirm this return information
+    Submit return
   </a>
 
   {% endif %}
