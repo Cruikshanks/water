@@ -8,6 +8,8 @@
 {% block content %}
 <main id="content" role="main">
 
+  {% from "custom_inc/waterdata.html" import permits %}
+
   <!-- internal beta banner block -->
   {% include "../partials/feedback-banner.html" %}
 
@@ -59,74 +61,30 @@
           </div>
           <div class="table-cell bold-small column-20" id="ar-end-date-column">
             <a href="#" aria-label="Sort by end date">
-              Last edit
+              End date
               <span class="sort-icon"> &#x25be;</span>
             </a>
           </div>                                                                <!-- tablehead ends -->
         </div>
         <div class="table-row medium-space">                                    <!-- a data row starts -->
           <div class="table-cell">
-            <a href="/v19/admin/online-licence?wid=3">
+            <a href="/v19/admin/online-licence?wid=1">
               <h2 class="faux-link">
-                018/54/13/04
+                {{ permits[1].LicenceSerialNo }}
               </h2>
             </a>
           </div>
           <div class="table-cell">
             <label class="context">
-              Last editor
+              Licence name
             </label>
-            J Mipps
+            {{ permits[1].LicenceName }}
           </div>
           <div class="table-cell">
             <label class="context">
-              Last edited
+              End date
             </label>
-            2 July 2018
-          </div>
-        </div>                                                                  <!-- a data row ends -->
-
-        <div class="table-row medium-space">                                    <!-- a data row starts -->
-          <div class="table-cell">
-            <h2 class="faux-link">
-              <a href="/v19/admin/online-licence?wid=3">
-                012/14/22/06
-              </a>
-            <h2>
-          </div>
-          <div class="table-cell">
-            <label class="context">
-              Last editor
-            </label>
-            Celeste Fishood
-          </div>
-          <div class="table-cell">
-            <label class="context">
-              Last edited
-            </label>
-            1 July 2018
-          </div>
-        </div>                                                                  <!-- a data row ends -->
-
-        <div class="table-row medium-space">                                    <!-- a data row starts -->
-          <div class="table-cell">
-            <h2 class="faux-link">
-              <a href="/v19/admin/online-licence?wid=1">
-                011/21/01/76
-              </a>
-            <h2>
-          </div>
-          <div class="table-cell">
-            <label class="context">
-              Last editor
-            </label>
-            Ben Jucks
-          </div>
-          <div class="table-cell">
-            <label class="context">
-              Last edited
-            </label>
-            12 July 2018
+            {{ permits[1].EffectiveDateEnd }}
           </div>
         </div>                                                                  <!-- a data row ends -->
 
@@ -134,21 +92,21 @@
           <div class="table-cell">
             <h2 class="faux-link">
               <a href="/v19/admin/online-licence?wid=2">
-                016/001/11/22
+                {{ permits[2].LicenceSerialNo }}
               </a>
             <h2>
           </div>
           <div class="table-cell">
             <label class="context">
-              Last editor
+              Licence name
             </label>
-            J Mipps
+            {{ permits[2].LicenceName }}
           </div>
           <div class="table-cell">
             <label class="context">
-              Last edited
+              End date
             </label>
-            16 June 2018
+            {{ permits[2].EffectiveDateEnd }}
           </div>
         </div>                                                                  <!-- a data row ends -->
 
@@ -156,20 +114,21 @@
           <div class="table-cell">
             <h2 class="faux-link">
               <a href="/v19/admin/online-licence?wid=3">
-                12/21/11/001r01
+                {{ permits[3].LicenceSerialNo }}
               </a>
             <h2>
           </div>
           <div class="table-cell">
             <label class="context">
-              Last editor
+              Licence name
             </label>
-            <!-- no editor -->
+            {{ permits[3].LicenceName }}
           </div>
           <div class="table-cell">
             <label class="context">
-              Last edited
+              End date
             </label>
+            {{ permits[3].EffectiveDateEnd }}
           </div>
         </div>                                                                  <!-- a data row ends -->
 
@@ -177,21 +136,67 @@
           <div class="table-cell">
             <h2 class="faux-link">
               <a href="/v19/admin/online-licence?wid=4">
-                100/001/03/14
+                {{ permits[4].LicenceSerialNo }}
               </a>
             <h2>
           </div>
           <div class="table-cell">
             <label class="context">
-              Last editor
+              Licence name
             </label>
-            J Mipps
+            {{ permits[4].LicenceName }}
           </div>
           <div class="table-cell">
             <label class="context">
-              Last edited
+              End date
             </label>
-            31 May 2018
+            {{ permits[4].EffectiveDateEnd }}
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="/v19/admin/online-licence?wid=5">
+                {{ permits[5].LicenceSerialNo }}
+              </a>
+            <h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Licence name
+            </label>
+            {{ permits[5].LicenceName }}
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              End date
+            </label>
+            {{ permits[5].EffectiveDateEnd }}
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="/v19/admin/online-licence?wid=6">
+                {{ permits[6].LicenceSerialNo }}
+              </a>
+            <h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Licence name
+            </label>
+            {{ permits[6].LicenceName }}
+            <!-- Licence name -->
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              End date
+            </label>
+            {{ permits[6].EffectiveDateEnd }}
+            <!-- 1 Jan 2033 -->
           </div>
         </div>                                                                  <!-- a data row ends -->
 

@@ -43,7 +43,7 @@
 
   <!-- page heading -->
   {% if pData.LicenceName %}
-    <!-- page title -->
+    <!-- licence with a name -->
     <div class="grid-row">
       <div class="column-two-thirds">
         <h1 class="heading-large">
@@ -55,6 +55,7 @@
       </div>
     </div>
   {% else %}
+    <!-- licence with no name -->
     <h1 class="heading-large">Licence number {{ pData.LicenceSerialNo }}</h1>
   {% endif %}
 
