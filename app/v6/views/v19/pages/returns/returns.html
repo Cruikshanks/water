@@ -1,505 +1,241 @@
 {% extends "../../view.html" %}
 
-<!-- page title -->
 {% block page_title %}
-  Your abstraction returns - GOV.UK
+  Returns for {{ pData.LicenceSerialNo }} - GOV.UK
 {% endblock %}
 
 {% block content %}
 <main id="content" role="main">
 
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
   <!-- beta banner block -->
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-returns.html" %}
+  {% include "../../partials/nav-admin-view.html" %}
 
-  <h1 class="heading-large medium-space">
-    Your returns
-  </h1>
+  <div class="big-space"></div>
 
-  <div class="big-space">
-    <a href="returns-xml">
-      Upload XML for your returns</a>
+  <!-- back -->
+  <div class="medium-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Licence number {{pData.LicenceSerialNo}}</a>
   </div>
 
-  <h2 class="bold-medium small-space">
-    2018
-  </h2>
+  <!-- page heading -->
+  {% if pData.LicenceName %}
+    <!-- page title -->
+    <h1 class="heading-large medium-space">
+      <span class="heading-secondary">
+        Licence number {{pData.LicenceSerialNo}}
+      </span>
+      Returns for {{ pData.LicenceName }}
+    </h1>
+  {% else %}
+    <h1 class="heading-large">Returns for {{ pData.LicenceSerialNo }}</h1>
+  {% endif %}
 
-  <!-- table with four columns -->
-  <div class="table big-space">                                          <!-- a table -->
+  <div class="grid-row">
+    <div class="column-full">
 
-    <div class="table-row table-head">                                      <!-- the table head -->
-      <div class="table-cell bold-small column-33">
-        Licence number
-      </div>
-      <div class="table-cell bold-small">
-        Licence name
-      </div>
-      <div class="table-cell bold-small">
-        Purpose
-      </div>
-      <div class="table-cell bold-small column-15">
-        Status
-      </div>
-    </div>
+      <!-- table with four columns -->
+      <div class="table">                                                       <!-- a table -->
 
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 1
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-report?wid=32">
-          03/28/60/0032
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Scrifford Pike
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Spray irrigation
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <!-- <strong class="task-completed open-task badge">
-          Return due
-        </strong> -->
-      </div>
-    </div>
+        <div class="table-row table-head">                                      <!-- the table head -->
+          <div class="table-cell bold-small column-33">
+            Return period
+          </div>
+          <div class="table-cell bold-small">
+            Purpose
+          </div>
+          <div class="table-cell bold-small">
+            Amount
+          </div>
+          <div class="table-cell bold-small column-15">
+            Status
+          </div>
+        </div>
 
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 1
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-route-return?wid=42">
-          03/28/60/0032
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Scrifford Pike
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Trickle irrigation
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <strong class="task-completed open-task badge">
-          Return due
-        </strong>
-      </div>
-    </div>
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-route-return?wid=32">
+              April 2018 to March 2019
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Total reported
+            </h3>
+            <!-- total abstracted -->
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <strong class="task-completed open-task badge">
+              Return due
+            </strong>
+          </div>
+        </div>
 
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-report?wid=32">
+              April 2017 to March 2018
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Total reported
+            </h3>
+            10,0105 gallons
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <!-- <strong class="task-completed open-task badge">
+              Return due
+            </strong> -->
+          </div>
+        </div>
 
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 2
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-route-return?wid=33">
-          03/28/60/0033
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Honeydew Crescent
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Machine washing
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <strong class="task-completed open-task badge">
-          Return due
-        </strong>
-      </div>
-    </div>
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-report?wid=32">
+              April 2016 to March 2017
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Total reported
+            </h3>
+            9,942 gallons
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <!-- <strong class="task-completed open-task badge">
+              Return due
+            </strong> -->
+          </div>
+        </div>
 
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-report?wid=32">
+              April 2015 to March 2016
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Total reported
+            </h3>
+            8,175 gallons
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <!-- <strong class="task-completed open-task badge">
+              Return due
+            </strong> -->
+          </div>
+        </div>
 
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 2
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-route-return?wid=34">
-          03/28/60/0034/r002
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Bridge Farm
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Trickle irrigation
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <strong class="task-completed open-task badge">
-          Return due
-        </strong>
-      </div>
-    </div>
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-report?wid=32">
+              April 2014 to March 2015
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Total reported
+            </h3>
+            7,781 gallons
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <!-- <strong class="task-completed open-task badge">
+              Return due
+            </strong> -->
+          </div>
+        </div>
 
-  </div>
-
-  <h2 class="bold-medium small-space">
-    2017
-  </h2>
-
-  <!-- table with four columns -->
-  <div class="table big-space">                                          <!-- a table -->
-
-    <div class="table-row table-head">                                      <!-- the table head -->
-      <div class="table-cell bold-small column-33">
-        Licence number
       </div>
-      <div class="table-cell bold-small">
-        Licence name
-      </div>
-      <div class="table-cell bold-small">
-        Purpose
-      </div>
-      <div class="table-cell bold-small column-15">
-        Status
-      </div>
-    </div>
-
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 1
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-report-edited?wid=32">
-          03/28/60/0032
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        <!-- Licence name -->
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Spray irrigation
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <!-- <strong class="task-completed open-task badge">
-          Return due
-        </strong> -->
-      </div>
-    </div>
-
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 1
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-report-edited?wid=32">
-          03/28/60/0032
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        <!-- Licence name -->
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Trickle irrigation
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <!-- <strong class="task-completed open-task badge">
-          Return due
-        </strong> -->
-      </div>
-    </div>
-
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
-
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 2
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-report-edited?wid=33">
-          03/28/60/0033
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        <!-- Licence name -->
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Machine washing
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <!-- <strong class="task-completed open-task badge">
-          Return due
-        </strong> -->
-      </div>
-    </div>
-
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
-
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 2
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-report?wid=34">
-          03/28/60/0034/r002
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        <!-- Bridge Farm -->
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Trickle irrigation
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <!-- <strong class="task-completed open-task badge">
-          Return due
-        </strong> -->
-      </div>
-    </div>
 
   </div>
-
-  <h2 class="bold-medium small-space">
-    2016
-  </h2>
-
-  <!-- table with four columns -->
-  <div class="table big-space">                                          <!-- a table -->
-
-    <div class="table-row table-head">                                      <!-- the table head -->
-      <div class="table-cell bold-small column-33">
-        Licence number
-      </div>
-      <div class="table-cell bold-small">
-        Licence name
-      </div>
-      <div class="table-cell bold-small">
-        Purpose
-      </div>
-      <div class="table-cell bold-small column-15">
-        Status
-      </div>
-    </div>
-
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 1
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-report?wid=32">
-          03/28/60/0032
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        <!-- Licence name -->
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Spray irrigation
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <!-- <strong class="task-completed open-task badge">
-          Return due
-        </strong> -->
-      </div>
-    </div>
-
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
-
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 2
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-report?wid=33">
-          03/28/60/0033
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        <!-- Licence name -->
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Machine washing
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <!-- <strong class="task-completed open-task badge">
-          Return due
-        </strong> -->
-      </div>
-    </div>
-
-  </div>
-
-  <h2 class="bold-medium small-space">
-    2015
-  </h2>
-
-  <!-- table with four columns -->
-  <div class="table big-space">                                          <!-- a table -->
-
-    <div class="table-row table-head">                                      <!-- the table head -->
-      <div class="table-cell bold-small column-33">
-        Licence number
-      </div>
-      <div class="table-cell bold-small">
-        Licence name
-      </div>
-      <div class="table-cell bold-small">
-        Purpose
-      </div>
-      <div class="table-cell bold-small column-15">
-        Status
-      </div>
-    </div>
-
-    <div class="table-row medium-space">                                    <!-- a data row starts -->
-      <div class="table-cell">
-        <h3 class="sr-only">
-          Row 1
-        </h3>
-        <h4 class="context">
-          Licence number
-        </h4>
-        <a href="returns-report?wid=32">
-          03/28/60/0032
-        </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        <!-- Licence name -->
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Purpose
-        </h4>
-        Spray irrigation
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Status
-        </h4>
-        <!-- <strong class="task-completed open-task badge">
-          Return due
-        </strong> -->
-      </div>
-    </div>
-
-  </div>
-
 
 </main>
+
+{% endif %}
+{% endfor %}
 
 <script src="/public/v6/javascripts/underscore.min.js"></script>
 <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>

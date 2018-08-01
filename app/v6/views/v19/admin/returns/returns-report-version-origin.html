@@ -37,10 +37,6 @@
     </div>
   </div>
 
-  <div class="strike-wrapper">
-    <div class="strike"></div>
-  </div>
-
   <div class="grid-row">
     <div class="column-two-thirds small-space">
 
@@ -113,22 +109,18 @@
         <h3 class="heading-xlarge">
           Nil return
         </h3>
-        <div class="big-space">
-          <a href="returns-report-return?wid={{ query.wid }}" class="button">Edit return</a>
-        </div>
       </div>
     </div>
 
   {% else %}
+
+  <div class="striker">
 
     <div class="grid-row">
       <div class="column-two-thirds">
         <h3 class="heading-medium small-space">
           Abstraction amounts
         </h3>
-        <div class="big-space">
-          <a href="returns-form?wid={{ query.wid }}" class="button">Edit return</a>
-        </div>
       </div>
     </div>
 
@@ -136,13 +128,13 @@
     <div class="table medium-space">                                          <!-- a table -->
 
       <div class="table-row table-head">                                      <!-- the table head -->
-        <div class="table-cell bold-small column-50">
+        <div class="table-cell bold-small column-33">
           Month
         </div>
-        <div class="table-cell bold-small column-35">
+        <div class="table-cell bold-small column-33 numbers">
           Gallons
         </div>
-        <div class="table-cell bold-small column-15">
+        <div class="table-cell bold-small column-33 numbers">
           Cubic metres
         </div>
       </div>
@@ -158,13 +150,13 @@
           </h5>
           April
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Gallons
           </h5>
           47,073,419,136
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -183,13 +175,13 @@
           </h5>
           May
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Gallons
           </h5>
           465,894,867,897
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -208,13 +200,13 @@
           </h5>
           June
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Gallons
           </h5>
           794,968,863,353
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -233,13 +225,13 @@
           </h5>
           July
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Gallons
           </h5>
           877,897,269,962
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -258,13 +250,13 @@
           </h5>
           August
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Gallons
           </h5>
           926,290,504,587
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -283,13 +275,13 @@
           </h5>
           September
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Litres
           </h5>
           0
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -308,13 +300,13 @@
           </h5>
           October
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Litres
           </h5>
           0
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -333,13 +325,13 @@
           </h5>
           November
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Litres
           </h5>
           0
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -358,13 +350,13 @@
           </h5>
           December
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Litres
           </h5>
           0
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -383,13 +375,13 @@
           </h5>
           January
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Litres
           </h5>
           0
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -408,13 +400,13 @@
           </h5>
           February
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Litres
           </h5>
           0
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -433,13 +425,13 @@
           </h5>
           March
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Litres
           </h5>
           0
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Cubic metres
           </h5>
@@ -460,11 +452,11 @@
           <h5 class="context">
             Gallons
           </h5>
-          <span class="bold-small">
+          <span class="bold-small numbers">
             420,559,205,823
           </span>
         </div>
-        <div class="table-cell">
+        <div class="table-cell numbers">
           <h5 class="context">
             Total
           </h5>
@@ -487,6 +479,8 @@
         </div>
       </div>
     </div>
+
+  </div> <!-- end striker -->
 
   {% endif %}
 

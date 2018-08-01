@@ -218,30 +218,57 @@
     </div>
   </div>
 
-  <div class="datatable big-space">
+  <div class="datatable">
     <label>Abstraction amounts</label>
-    <div class="dataText">
+    <div class="licenceAnswerv7">
+
+      {{ pData.Amount1 }}</br>
+
+      {% if pData.Amount2 %}
+        {{ pData.Amount2 }}</br>
+      {% endif %}
+
+      {% if pData.Amount3 %}
+        {{ pData.Amount3 }}</br>
+      {% endif %}
+
+      {% if pData.Amount4 %}
+        {{ pData.Amount4 }}</br>
+      {% endif %}
+
+      {% if pData.Amount5 %}
+        {{ pData.Amount5 }}</br>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="datatable big-space">
+    <label>Returns for this licence</label>
+    <div class="licenceAnswerv7">
+
       {% if pData.Purpose1Due %}
         {{ pData.Purpose1 }}</br>
       {% endif %}
 
-      {% if pData.Purpose2Due %}
+      {% if pData.Purpose2 %}
         {{ pData.Purpose2 }}</br>
       {% endif %}
 
-      {% if pData.Purpose3Due %}
+      {% if pData.Purpose3 %}
         {{ pData.Purpose3 }}</br>
       {% endif %}
 
-      {% if pData.Purpose4Due %}
+      {% if pData.Purpose4 %}
         {{ pData.Purpose4 }}</br>
       {% endif %}
 
-      {% if pData.Purpose5Due %}
+      {% if pData.Purpose5 %}
         {{ pData.Purpose5 }}</br>
       {% endif %}
-    </div>
 
+      <a href="returns/returns?wid={{ query.wid }}">View returns</a>
+
+    </div>
   </div>
 
   <div id="#bad-data">

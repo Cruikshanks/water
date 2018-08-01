@@ -27,9 +27,11 @@
           Return submitted
         </h1>
         {% if pData.LicenceName %}
-          <h2 class="medium">Your {{ pData.Return1 }} return for {{ pData.LicenceName }}</h2>
+          <p>Purpose: <span="bold">{{ pData.Return1 }}</span><br>
+          {{ pData.LicenceName }}</p>
         {% else %}
-          <h2 class="medium">Your {{ pData.Return1 }} return for licence number {{ pData.LicenceSerialNo }}</h2>
+          <p class="bold">Purpose: {{ pData.Return1 }}<br>
+          Licence number: {{ pData.LicenceSerialNo }}</p>
         {% endif %}
       </div>
 
