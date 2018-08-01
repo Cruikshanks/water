@@ -27,11 +27,11 @@
           Return submitted
         </h1>
         {% if pData.LicenceName %}
-          <p>Purpose: <span="bold">{{ pData.Return1 }}</span><br>
-          {{ pData.LicenceName }}</p>
+          <p>Purpose <span class="bold">{{ pData.Purpose1 }}</span><br>
+          Licence name <span class="bold">{{ pData.LicenceName }}</span></p>
         {% else %}
-          <p class="bold">Purpose: {{ pData.Return1 }}<br>
-          Licence number: {{ pData.LicenceSerialNo }}</p>
+          <p>Purpose <span class="bold">{{ pData.Purpose1 }}</span><br>
+          Licence number <span class="bold">{{ pData.LicenceSerialNo }}</span></p>
         {% endif %}
       </div>
 

@@ -18,42 +18,21 @@
   <!-- navigation block -->
   {% include "../../partials/nav-returns.html" %}
 
-  <div class="grid-row small-space">
-    <div class="column-two-thirds">
-
-      <!-- page heading -->
-      {% if pData.LicenceName %}
-        <h2 class="sub-head">
-          Abstraction record for {{ pData.LicenceSerialNo }}
-        </h2>
-        <h1 class="heading-large spaceless">
-          {{ pData.LicenceName }}
-        </h1>
-      {% else %}
-        <h2 class="sub-head">
-          Abstraction record
-        </h2>
-        <h1 class="heading-large spaceless">
-          Licence number {{pData.LicenceSerialNo}}
-        </h1>
-      {% endif %}
-    </div>
-  </div>
-
-  <!-- meta data block -->
-  {% include "../../partials/return-external-meta.html" %}
-
   <!-- confirmation panel -->
   <div class="grid-row">
     <div class="column-two-thirds">
 
       <div class="govuk-box-highlight">
-        <h2 class="heading-large tight">
-          Thank you
-        </h2>
-        <p class="font-medium">
-          The return for this licence has been submitted
-        </p>
+        <h1 class="heading-large tight">
+          Return submitted
+        </h1>
+        {% if pData.LicenceName %}
+          <p>Purpose <span class="bold">{{ pData.Purpose1 }}</span><br>
+          Licence name <span class="bold">{{ pData.LicenceName }}</span></p>
+        {% else %}
+          <p>Purpose <span class="bold">{{ pData.Purpose1 }}</span><br>
+          Licence number <span class="bold">{{ pData.LicenceSerialNo }}</span></p>
+        {% endif %}
       </div>
 
     </div>
@@ -62,7 +41,7 @@
   <div class="grid-row small-space">
     <div class="column-two-thirds">
       <p>
-        <a href="returns-report?wid={{ query.wid }}">See the submitted return</a>
+        <a href="returns-report?wid={{ query.wid }}">View this return</a>
       </p>
     </div>
   </div>
