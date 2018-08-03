@@ -1,0 +1,165 @@
+{% extends "../br/head-signedin.html" %}
+
+{% block page_title %}
+  Notification report - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-br-manage.html" %}
+
+  <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds medium-space">
+      <h2 class="sub-head">
+        <a href="notice-batches">Notification report</a>
+      </h2>
+      <h1 class="heading-xlarge spaceless">
+        HOF2
+      </h1>
+      <h2 class="heading-small spaceless">
+        11 May 2018, 10:01am
+      </h2>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <details>
+        <summary><span class="summary">River level</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>
+            River flow level 122.5
+          </p>
+        </div>
+
+      </details>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <details>
+        <summary><span class="summary">Selected recipient(s)</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>
+            A licence hands off flow notice was sent to 6 recipients, selected by <span class="bold-small">Avon, Little Avon</span> catchments<br>
+          </p>
+          <!-- <p>
+            Removed 3 licence holders
+          </p> -->
+        </div>
+
+      </details>
+    </div>
+  </div>
+
+
+  <!-- batches -->
+  <div class="grid-row">
+    <div class="column-full">
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">
+              <a href="#">
+                Sent to
+                <!-- <span class="sort-icon"> &#x25be;</span> -->
+              </a>
+            </th>
+            <th class="text" scope="col">
+              <!-- <a href="#"> -->
+                Licence number
+                <!-- <span class="sort-icon"> &#x25be;</span> -->
+              <!-- </a> -->
+            </th>
+            <th class="text" scope="col">
+              <a href="#">
+                Method
+                <span class="sort-icon"> &#x25be;</span>
+              </a>
+            </th>
+            <th class="numeric" scope="col">
+              <a href="#">
+                Status
+                <!-- <span class="sort-icon"> &#x25be;</span> -->
+              </a>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <th class="text">jombodge.twick@massive-water.com</th>
+            <td scope="row">018/54/0013</td>
+            <td class="text">Email</td>
+            <td class="text">
+
+            </td>
+          </tr>
+
+          <tr>
+            <th class="text">shuuma.misov@live.com</th>
+            <td scope="row">101/54/0013</td>
+            <td class="text">Email</td>
+            <td class="text">
+
+            </td>
+          </tr>
+
+          <tr>
+            <th class="text">thepicklewanderer77@gmail.com</th>
+            <td scope="row">034/01/0014</td>
+            <td class="text">SMS</td>
+            <td class="text">
+              <strong class="task-completed task-error">
+                Failed
+              </strong>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="text">thebiffbaffboff@live.com</th>
+            <td scope="row">028/*22/0013/r001</td>
+            <td class="text">SMS</td>
+            <td class="text">
+
+            </td>
+          </tr>
+
+          <tr>
+            <th class="text">sharib.sufans@gmail.com</th>
+            <td scope="row">036/06/0013</td>
+            <td class="text">SMS</td>
+            <td class="text">
+
+            </td>
+          </tr>
+
+          <tr>
+            <th class="text">hello@abstractioneers.com</th>
+            <td scope="row">034/81/0131</td>
+            <td class="text">SMS</td>
+            <td class="text">
+
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+
+</main>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "../head.html" %}
+
+{% block page_title %}
+  Request to view other people’s licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-ex-manage.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page title -->
+      <h1  class="heading-large">Request to view other people’s licences</h1>
+
+      <p>If you manage licences for other people (as an agent or consultant, for example), you can use this service to view information about those licences online.</p>
+
+      <details>
+
+        <summary><span class="summary">How does the request process work?</span></summary>
+
+        <div class="panel panel-border-narrow">
+          <ol class="list list-number">
+            <li>We'll ask you for licence holder's email address and licence number(s).</li>
+            <li>We'll email the licence holder to ask permission to share their licence information with you online. The licence holder can accept or reject your request.</li>
+            <li>If they accept, we'll send them a security code to the postal address on their licence to make sure they are the registered licence holder. They should receive the code within 5 working days.</li>
+            <li>Once the licence holder receives the code, they can either enter it into our system or ask you to do it for them. Please contact them to agree the best way for this to happen.</li>
+            <li>As soon as the security code has been entered, you'll be able to view the licence information online.</li>
+          </ol>
+        </div>
+
+      </details>
+
+      <p><a class="button medium-space" href="/v20/ex/invites/request.html" role="button">Request to manage licences</a></p>
+
+    </div>
+  </div>
+
+    <!-- Enter your security code
+  We sent this by post to the registered address you chose. -->
+
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}

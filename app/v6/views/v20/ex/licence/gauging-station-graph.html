@@ -1,0 +1,78 @@
+{% extends "../../head-signedin.html" %}
+
+{% block page_title %}
+  Gauging station for {{pData.LicenceSerialNo}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-view.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- back -->
+  <div class="medium-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Licence number {{pData.LicenceSerialNo}}</a>
+  </div>
+
+  <div class="medium-space">
+
+    <!-- page title -->
+    <h1 class="heading-large clustered">
+      <span class="heading-secondary">
+        At National Grid Reference {{ pData.GaugingStationGridReference }}
+      </span>
+      {% if pData.LicenceHasFlow %}
+        Recent flow data from {{ pData.GaugingStationName }}
+      {% else %}
+        Recent level data from {{ pData.GaugingStationName }}
+      {% endif %}
+    </h1>
+
+    <div class="clustered">Source of supply: {{ pData.Source}}</div>
+
+  </div>
+
+  <!-- legal -->
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <div class="notice">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Warning</span>
+        </i>
+        <strong class="bold-small">
+          This data is for reference only. You should continue to use your current monitoring methods to make abstraction decisions.
+        </strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- graph here -->
+  <div class="grid-row medium-space">
+    <div class="column-full flexy extra-flex" id="big-graph">
+      <div class="river-flow-graph-full small-space"></div>
+    </div>
+
+    <div class="column-full">
+      <a href="gauging-station?wid={{query.wid}}" class="small-space">
+        <caption>Back to the latest data from this gauging station</caption>
+      </a>
+    </div>
+
+  </div>
+
+</main>
+
+{% endif %}
+{% endfor %}
+
+{% endblock %}

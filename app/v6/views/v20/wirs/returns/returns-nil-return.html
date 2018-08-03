@@ -1,0 +1,85 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-wirs-returns.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          Abstraction return for {{ pData.LicenceSerialNo }}
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          Abstraction record
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
+      </p>
+    </div>
+  </div>
+
+  <legend>
+    <h3 class="heading-medium">
+      You are about to submit a nil return
+    </h3>
+  </legend>
+
+  <!-- form -->
+  <form class="medium-space">
+
+    <div class="form-group">
+      <label for="licence_no">
+        <fieldset>
+          <span class="form-label">
+            Tell us why there are no abstraction amounts to report
+          </span>
+        </fieldset>
+      </label>
+      <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
+    </div>
+
+    <!-- continue button -->
+    <a href="confirm-no-return?wid={{ query.wid }}">
+      <input onclick="" type="submit" value="Submit return" class="button" role="button"/>
+    </a>
+
+  <!-- <a href="return-submitted?wid={{ query.wid }}" class="button">
+    Submit return
+  </a> -->
+
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

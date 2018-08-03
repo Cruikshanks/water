@@ -1,0 +1,63 @@
+{% extends "../head.html" %}
+
+{% block page_title %}
+  Choose an option to view your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+    <div class="grid-row medium-space">
+      <div class="column-two-thirds">
+
+        <div class="big-space">
+          <h1 class="heading-large">
+            Choose an option to view your licences
+          </h1>
+        </div>
+
+        <div class="multiple-choice radios">
+          <input id="radio-1" type="radio" name="radio-group" value="/v20/ex/start">
+          <label for="radio-1" class="heading-medium">Create an account</label>
+          <p>Choose this option if you haven’t used the service before.</p>
+        </div>
+
+        <div class="multiple-choice radios">
+          <input id="radio-2" type="radio" name="radio-group" value="/v20/signin">
+          <label for="radio-2" class="heading-medium">Sign in</label>
+          <p>Choose this option if you’ve already created an account for this service.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <a href="/v20/ex/start" class="button">Continue</a>
+
+  </form>
+
+  <script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous">
+  </script>
+
+  <script>
+    $(function() {
+      $('form[data-branching]').on('submit', function(ev) {
+        var path = $(this).find('input:checked').val();
+        window.location.href = path;
+        ev.preventDefault();
+        return false;
+      });
+    });
+  </script>
+
+
+</main>
+
+{% endblock %}

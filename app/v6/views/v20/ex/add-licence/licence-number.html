@@ -1,0 +1,46 @@
+{% extends "v18/head.html" %}
+
+{% block page_title %}
+  Which licences do you want to be able to view? - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-manage.html" %}
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">Which licences do you want to add?</h1>
+
+      <!-- form -->
+      <form class="medium-space">
+
+        <div class="form-group">
+          <label for="licence_no">
+            <fieldset class="small-space">
+              <span class="form-label">Enter your licence number(s)</span>
+              <span class="form-hint">Add one or many licences here. You can separate your licence numbers using spaces, commas, or by entering them on different lines.</span>
+            </fieldset>
+          </label>
+          <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
+        </div>
+
+        <!-- continue button -->
+        <a href="select-licences">
+          <input onclick="" type="submit" value="Continue" class="button" role="button"/>
+        </a>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

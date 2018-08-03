@@ -1,0 +1,60 @@
+{% extends "../../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Give access to view your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- back button -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large">impoundment points for licence number {{ pData.LicenceSerialNo }}</h1>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h2 class="heading-medium">{{ pData.Point1 }}</h2>
+
+      <div class="datatablepp first-datapp">
+        <label>
+          Grid reference
+        </label>
+        <div class="licenceData">
+          {{ pData.Point1Ref }}
+        </div>
+      </div>
+
+      <div class="datatablepp">
+        <label>
+          Manner of impoundment
+        </label>
+        <div class="licenceData">
+          {{ pData.Manner1 }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endif %}
+
+{% endfor %}
+
+
+
+
+
+</main>
+
+{% endblock %}

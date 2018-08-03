@@ -1,0 +1,281 @@
+{% extends "../ar/head-signedin.html" %}
+
+{% block page_title %}
+  Review licence {{ pData.LicenceSerialNo }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-ar-view.html" %}
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <!-- <h1 class="heading-large">
+        Data review for Licence number {{ pData.LicenceSerialNo }}
+      </h1> -->
+
+      <!-- page title -->
+      <div class="grid-row">
+        <div class="column-two-thirds medium-space">
+          <h2 class="sub-head">
+            <a href="licences-list">
+              Review licence data
+            </a>
+          </h2>
+          <h1 class="heading-xlarge spaceless">
+            {{ pData.LicenceSerialNo }}
+          </h1>
+          <h2 class="heading-small spaceless">
+            Last edited 12 June 2018
+          </h2>
+        </div>
+      </div>
+
+      <div class="table" id="licences-as-tasks">                                <!-- table starts -->
+
+        <!-- <form action=""> -->
+
+        <div class="table-row table-head">                                      <!-- tablehead starts -->
+
+          <div class="first-cell bold-small no-border-bottom">
+            NALD field
+          </div>
+          <div class="first-cell bold-small no-border-bottom" id="ar-name-column">
+            NALD data
+          </div>
+          <div class="first-cell no-border-bottom bold-small">
+            <!-- Edit -->
+          </div>
+        </div>                                                                  <!-- tablehead ends -->
+
+        <div class="table-row">                                                 <!-- table title cell -->
+          <div class="first-cell">
+            <h2 class="lede">
+              AR status
+            </h2>
+          </div>
+        </div>                                                                  <!-- table title cell ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell first-datapp">
+            <label class="context">
+              NALD data
+            </label>
+            state_code
+          </div>
+          <div class="table-cell first-datapp highlight">
+            <label class="context">
+              NALD data
+            </label>
+            NEW
+          </div>
+          <div class="table-cell first-datapp">
+            <form>
+              <label class="context">
+                <!-- Edit -->
+              </label>
+              <!-- <input class="form-control ar-input" type="text"> -->
+           </form>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              NALD field
+            </label>
+            modified_date
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              NALD data
+            </label>
+            2018-05-08T09:17:53.533Z
+          </div>
+          <div class="table-cell">
+            <form>
+              <label class="context">
+                <!-- Edit -->
+              </label>
+              <!-- <input class="form-control ar-input" type="text"> -->
+           </form>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <!-- added row -->
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              NALD field
+            </label>
+            ar_review
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              NALD data
+            </label>
+            NONE
+          </div>
+          <div class="table-cell">
+            <form>
+              <label class="context">
+                <!-- Edit -->
+              </label>
+              <input class="form-control ar-input" type="text" value="Yes">
+            </form>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="small-space"></div>
+
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <a href="" id="unbroken-link">Add data to this section</a>
+          </div>
+        </div>
+
+        <div class="big-space"></div>
+
+        <div class="table-row">                                                 <!-- table title cell -->
+          <div class="first-cell">
+            <h2 class="lede">
+              Licence
+            </h2>
+          </div>
+        </div>                                                                  <!-- table title cell ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell first-datapp">
+            <label class="context">
+              NALD field
+            </label>
+            CODE
+          </div>
+          <div class="table-cell first-datapp highlight">
+            <label class="context">
+              NALD data
+            </label>
+            FULL
+          </div>
+          <div class="table-cell first-datapp">
+            <form>
+              <label class="context">
+                <!-- Edit -->
+              </label>
+              <input class="form-control ar-input" type="text" value="Full">
+            </form>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              NALD field
+            </label>
+            DECR
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              NALD data
+            </label>
+            Full licence (>=28 days)
+          </div>
+          <div class="table-cell">
+            <form>
+              <label class="context">
+                Edit
+              </label>
+              <input class="form-control ar-input" type="text" value="28days+">
+            </form>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <label class="context">
+              NALD field
+            </label>
+            Party
+          </div>
+          <div class="table-cell highlight">
+            <label class="context">
+              NALD data
+            </label>
+            <!-- no value -->
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Edit
+            </label>
+            <input class="full" type="text">
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+      </div>                                                                    <!-- table ends -->
+
+
+      <div class="grid-row medium-space">
+        <div class="column-two-thirds">
+
+          <div class="faux-table-row">
+            <div class="form-group clustered">
+              <label class="form-label" for="select-box">Choose which data to add</label>
+              <select class="form-control" id="select-box" name="select-box">
+                <option>Purpose</option>
+                <option>Point</option>
+                <option>Condition</option>
+              </select>
+              <div class="small-space"></div>
+              <a href="" >
+                Cancel
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="big-space"></div>
+
+      <div class="form-group">
+        <label class="form-label" for="textarea">
+          Notes about these edits
+        </label>
+        <textarea class="form-control form-control-3-4" name="textarea" id="comments" rows="5"></textarea>
+      </div>
+
+
+      <a href="licences-list">
+        Save edits
+      </a>
+
+      <br>
+      <div class="medium-space"></div>
+
+      <a href="licences-list" class="button">
+        Submit for approval
+      </a>
+
+
+    </div>
+  </div>
+
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}
