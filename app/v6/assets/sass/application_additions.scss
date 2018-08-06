@@ -1076,14 +1076,16 @@ details {
   margin-bottom: 0.25em;
 }
 
-.not-completed {
-  background: $orange;
-  background: $button-colour;
-}
-
 .open-task {
   // background: $secondary-text-colour;
   background: $button-colour;
+}
+
+.not-completed {
+  background: $orange;
+  // background: $button-colour;
+  margin: auto;
+  float: none;
 }
 
 .approve {
