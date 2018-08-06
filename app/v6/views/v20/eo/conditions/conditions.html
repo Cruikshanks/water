@@ -1,4 +1,4 @@
-{% extends "../head-signedin.html" %}
+{% extends "../../head-signedin.html" %}
 
 {% block page_title %}
   Conditions held for {{ pData.LicenceSerialNo }} - GOV.UK
@@ -15,7 +15,7 @@
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-ex-view.html" %}
+  {% include "../../partials/nav-br-view.html" %}
 
   <div class="big-space"></div>
 
@@ -37,20 +37,7 @@
     <h1 class="heading-large">Conditions held for licence number {{ pData.LicenceSerialNo }}</h1>
   {% endif %}
 
-
-
-  <!-- IF 1 -->
   {% if pData.Condition1Value1 %} <!-- if there is any data -->
-
-    <!-- notice -->
-    <div class="notice medium-space">
-      <i class="icon icon-important">
-        <span class="visually-hidden">Warning</span>
-      </i>
-      <strong class="bold-small column-two-thirds">
-        We may not be able to show a full list of your conditions, because we don’t hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
-      </strong>
-    </div>
 
     <div class="grid-row">
       <div class="column-full medium-space">
@@ -93,8 +80,7 @@
       </div>
     </div>
 
-
-    {% if pData.Condition2 %}
+  {% if pData.Condition2 %}
 
     <div class="grid-row">
       <div class="column-full medium-space">
@@ -139,47 +125,51 @@
 
   {% endif %}
 
-  {% if pData.HOFCondition %}
-  <div class="grid-row">
-    <div class="column-full medium-space">
 
-      <h2 class="heading-medium">{{ pData.HOFCondition }}</h2>
-      <div class="datatable first-datapp">
-        <label>{{ pData.HOFLabel1 }}</label>
-        <div class="dataText">
-          {{ pData.HOFValue1 }}
+  {% if pData.Condition3 %}
+
+    <div class="grid-row">
+      <div class="column-full medium-space">
+
+        <h2 class="heading-medium">{{ pData.Condition3 }}</h2>
+        <div class="datatable first-datapp">
+          <label>{{ pData.Condition3Label1 }}</label>
+          <div class="dataText">
+            {{ pData.Condition3Value1 }}
+          </div>
         </div>
+
+        {% if pData.Condition3Value2 %}
+          <div class="datatable">
+            <label>{{ pData.Condition3Label2 }}</label>
+            <div class="dataText">
+              {{ pData.Condition3Value2 }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if pData.Condition3Value3 %}
+          <div class="datatable">
+            <label>{{ pData.Condition3Label3 }}</label>
+            <div class="dataText">
+              {{ pData.Condition3Value3 }}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if pData.Condition3Value4 %}
+          <div class="datatable">
+            <label>{{ pData.Condition3Label4 }}</label>
+            <div class="dataText">
+              {{ pData.Condition3Value4 }}
+            </div>
+          </div>
+        {% endif %}
+
       </div>
-
-      {% if pData.GaugingStationName %}
-        <div class="datatable">
-          <label>{{ pData.HOFLabel2 }}</label>
-          <div class="dataText">
-            At National Grid Reference {{ pData.GaugingStationGridReference}}<br>
-            <a href="gauging-station?wid={{query.wid}}">View details at {{pData.GaugingStationName}}</a>
-          </div>
-        </div>
-      {% endif %}
-
-      {% if pData.HOFValue3 %}
-        <div class="datatable">
-          <label>{{ pData.HOFLabel3 }}</label>
-          <div class="dataText">
-            {{ pData.HOFValue3 }}
-          </div>
-        </div>
-      {% endif %}
-
-      {% if pData.HOFValue4 %}
-        <div class="datatable">
-          <label>{{ pData.HOFLabel4 }}</label>
-          <div class="dataText">
-            {{ pData.HOFValue4 }}
-          </div>
-        </div>
-      {% endif %}
     </div>
-  </div>
+
+    {% endif %}
 
   {% else %}
 
@@ -195,10 +185,10 @@
     </div>
 
   {% endif %}
-  {% endif %}
+
   {% endif %}
   {% endfor %}
 
 </main>
-<a href="/v13/ex/conditions/no_conditions?wid=1">No abstraction conditions</a>
+<a href="/v13/br/conditions/no_conditions?wid=1">No abstraction conditions</a>
 {% endblock %}

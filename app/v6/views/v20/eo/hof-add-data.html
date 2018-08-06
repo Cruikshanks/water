@@ -1,0 +1,60 @@
+{% extends "./head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-eo-manage.html" %}
+
+  <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Enter the current flow measure
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <div class="form-group">
+
+        <form>
+          <div class="form-group">
+            <label class="form-label">Gauging station</label>
+            <input class="form-control" type="numeric">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Daily Mean Flow</label>
+            <input class="form-control" type="numeric">
+          </div>
+        </form>
+
+        <!-- <input type="submit" value="Continue" class="button" role="button"/> -->
+        <a href="hof-preview">
+          <input onclick="" value="Continue" class="button" role="button" type="submit">
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

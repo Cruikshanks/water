@@ -1,0 +1,59 @@
+{% extends "./head-signedin.html" %}
+
+{% block page_title %}
+  Add your contact information - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-eo-manage.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Add your contact information
+      </h1>
+
+      <p>
+        This is the information that will be available to your public contacts.
+      </p>
+
+      <form method="POST" action="hof-notice-search">
+
+        <div class="form-group ">
+          <label class="form-label" for="contact_email">
+            <span class="form-label">Contact email</span>
+          </label>
+          <input class="form-control" id="contact_email" type="text" name="contact_email" value="">
+        </div>
+
+        <div class="form-group ">
+          <label class="form-label" for="contact_phone">
+            <span class="form-label">Contact phone number</span>
+          </label>
+          <input class="form-control" id="contact_phone" type="text" name="contact_phone" value="">
+        </div>
+
+        <div class="form-group ">
+          <label class="form-label" for="sender_address">
+            <span class="form-label">Contact postal address</span>
+          </label>
+          <textarea maxlength="8000" class="form-control form-control-3-4" name="sender_address" id="sender_address" rows="7" value=""></textarea>
+        </div>
+
+        <button type="submit" class="button big-space">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

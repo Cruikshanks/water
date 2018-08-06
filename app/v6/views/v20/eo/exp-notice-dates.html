@@ -1,0 +1,74 @@
+{% extends "./head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-eo-manage.html" %}
+
+  <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Send an expiry notification
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="lede medium-space">
+        Find licences that will expire before:
+      </h2>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-one-half">
+
+      <!-- search for expiring licences -->
+      <div class="form-group form-group--horizontal">
+        <ul class="form-date">
+          <li class="form-group form-group-month">
+            <label for="q1-dob-month">
+              Day
+            </label>
+            <input class="form-control" maxlength="2" data-rule-required="true" autocomplete="off" pattern="[0-9]*" aria-required="true" type="tel">
+          </li>
+          <li class="form-group form-group-month">
+            <label for="q1-dob-month">
+              Month
+            </label>
+            <input class="form-control" id="q1-dob-month" name="q1-dob-month" value="" maxlength="2" data-rule-required="true" autocomplete="off" pattern="[0-9]*" aria-required="true" type="tel">
+          </li>
+          <li class="form-group form-group-year">
+            <label for="q1-dob-year">Year</label>
+            <input class="form-control" id="q1-dob-year" name="q1-dob-year" value="" minlength="4" maxlength="4" data-rule-required="true" autocomplete="off" pattern="[0-9]*" aria-required="true" type="tel">
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="exp-select-licences" id="submitButton" class="button button" type="submit">Find licences</a>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

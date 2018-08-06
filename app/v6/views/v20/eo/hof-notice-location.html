@@ -1,0 +1,144 @@
+{% extends "./head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-eo-manage.html" %}
+
+  <!-- <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a> -->
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Send a hands off flow notification
+      </h1>
+    </div>
+  </div>
+
+  <h2 class="lede medium-space">
+    Choose an area to send this notification to.
+  </h2>
+
+  <!-- the form to find an audience -->
+  <div class="grid-row">
+
+    <div class="split column-full">
+
+      <div class="no-space-after">
+
+        <!-- 1st dropper div-->
+        <div class="column-half flush right-small">
+
+          <!-- region dropdown -->
+          <div class="form-group form-group--horizontal">
+            <label class="form-label" for="select-box">Area</label>
+
+            <!-- select region -->
+            <select class="form-control full" name="region" data-disclose="#catchment, #submitButton" id="select-box" name="select-box">
+              <option value="" disabled selected>Select an area</option>
+              <option value="1">Avon</option>
+              <option value="2">Cumbria and Lancashire</option>
+              <option value="3">Devon and Cornwall</option>
+              <option value="4">East Anglia</option>
+              <option value="5">East Midlands</option>
+              <option value="6">Greater Manchester Merseyside and Cheshire</option>
+              <option value="7">Hertfordshire and North London</option>
+              <option value="8">Kent and South London</option>
+              <option value="9">Lincolnshire and Northamptonshire</option>
+              <option value="10">Northumberland Durham and Tees</option>
+              <option value="11">Solent and South Downs</option>
+              <option value="12">Thames</option>
+              <option value="13">Wessex</option>
+              <option value="14">West Midlands</option>
+              <option value="15">Yorkshire</option>
+            </select>
+
+          </div>
+
+        </div>
+        <!-- end 1st dropper -->
+
+        <!-- 2nd dropper div-->
+        <div class="column-half flush-left">
+
+          <!-- catchment dropdown -->
+          <div class="form-group form-group--horizontal no-space-after" id="catchment">
+            <label class="form-label" for="select-box">Catchment area (optional)</label>
+
+            <!-- select region -->
+            <div class="small-space">
+              <select class="form-control full small-space" id="select-box" name="select-box">
+                <option value="" disabled selected>Select a catchment area</option>
+                <option>Avon, Dart and Erme</option>
+                <option>Bristol Avon</option>
+                <option>Bristol Avon, Little Avon, Axe and North Somerset Streams</option>
+                <option>Brue and Axe and North Somerset Streams</option>
+                <option>Little Avon</option>
+                <option>Severn Corridor</option>
+                <option>Severn Uplands</option>
+                <option>Severn Vale</option>
+                <option>Severn Vale East</option>
+                <option>Severn Vale West</option>
+                <option>Stour</option>
+                <option>Worcestershire Middle Severn</option>
+                <option>Wye</option>
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- end 2nd dropper -->
+
+      </div> <!-- end of the form block row -->
+
+
+      <div class="grid-row">
+        <div class="column-one-third">
+
+          <div>
+            <a href="hof-select-licences" id="submitButton" class="button button" type="submit">Continue</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- script to show 2nd dropper -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script>
+        $(function() {
+          // Hide initially
+          $('[data-disclose]').each(function() {
+            var selector = $(this).attr('data-disclose');
+            $(selector).hide();
+          });
+
+          // Toggle on value change
+          $('[data-disclose]').on('change', function() {
+            var selector = $(this).attr('data-disclose');
+            $(selector).show();
+          });
+        })
+      </script>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

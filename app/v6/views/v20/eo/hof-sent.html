@@ -1,4 +1,4 @@
-{% extends "../br/head-signedin.html" %}
+{% extends "./head-signedin.html" %}
 
 <!-- page title -->
 {% block page_title %}
@@ -12,27 +12,27 @@
   {% include "../partials/feedback-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../partials/nav-br-manage.html" %}
+  {% include "../partials/nav-eo-manage.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Your hands off flow notification has been sent
+      </h1>
+    </div>
+  </div>
 
   <!-- confirmation panel -->
   <div class="grid-row">
     <div class="column-two-thirds">
-
-      <!-- page title -->
-      <div class="grid-row">
-        <div class="column-two-thirds">
-          <h1  class="heading-large">
-            Your expiry notification has been sent
-          </h1>
-        </div>
-      </div>
 
       <div class="govuk-box-highlight">
         <h2 class="heading-large tight">
           Notification sent
         </h2>
         <p class="font-medium">
-          You sent this notification to <span class="bold-medium">6 licence holders</span> with licences due to expire before <span class="bold-medium">1 June 2020</span>.
+          You sent this notification to <span class="bold-medium">6 licence holders</span> in <span class="bold-medium">Avon, Little Avon</span>.<br>
         </p>
       </div>
 
@@ -43,8 +43,6 @@
       </p>
 
     </div>
-
-  </div>
   </div>
 
 </main>
