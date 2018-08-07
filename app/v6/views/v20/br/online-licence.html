@@ -8,24 +8,19 @@
 {% block content %}
 <main id="content" role="main">
 
-  {% from "custom_inc/waterdata.html" import permits %}
-  {% for pNumber, pData in permits %}
-  {% if pNumber==chosenPermitID %}
-
   <!-- internal beta banner block -->
   {% include "../partials/feedback-banner.html" %}
 
   <!-- navigation block -->
   {% include "../partials/nav-br-view.html" %}
 
-  <!-- page title -->
   <div class="grid-row">
     <div class="column-two-thirds">
       <!-- code alert -->
-      {% if pData.SecCode %}
+      {% if pData.Return1Due %}
 
         <!-- internal code block -->
-        {% include "../partials/admin-code-sent.html" %}
+        {% include "../partials/licence-return-due.html" %}
 
       {% endif %}
 
@@ -83,6 +78,14 @@
     <div class="licenceAnswerv7">
 
       {{ pData.Purpose1 }}</br>
+
+      {% if pData.Purpose2 %}
+        {{ pData.Purpose2 }}<br>
+      {% endif %}
+
+      {% if pData.Purpose3 %}
+        {{ pData.Purpose3 }}<br>
+      {% endif %}
 
     </div>
   </div>
@@ -179,28 +182,27 @@
     </div>
   </div>
 
+  {% if pData.Return1Due %}
   <div class="datatable big-space">
     <label>Returns for this licence</label>
     <div class="licenceAnswerv7">
 
-      {% if pData.Purpose1Due %}
-        {{ pData.Purpose1 }}</br>
+      {{ pData.Return1Due }}</br>
+
+      {% if pData.Return2Due %}
+        {{ pData.Return2Due }}</br>
       {% endif %}
 
-      {% if pData.Purpose2 %}
-        {{ pData.Purpose2 }}</br>
+      {% if pData.Return3Due %}
+        {{ pData.Return3Due }}</br>
       {% endif %}
 
-      {% if pData.Purpose3 %}
-        {{ pData.Purpose3 }}</br>
+      {% if pData.Return4Due %}
+        {{ pData.Return4Due }}</br>
       {% endif %}
 
-      {% if pData.Purpose4 %}
-        {{ pData.Purpose4 }}</br>
-      {% endif %}
-
-      {% if pData.Purpose5 %}
-        {{ pData.Purpose5 }}</br>
+      {% if pData.Return5Due %}
+        {{ pData.Return5Due }}</br>
       {% endif %}
 
       <a href="returns/returns?wid={{ query.wid }}">View returns</a>
@@ -208,13 +210,14 @@
     </div>
   </div>
 
+  {% endif %}
+
+  <div class="big-space"></div>
+
   <!-- bad data block -->
   {% include "../partials/version-current.html" %}
 
   </div>
-
-{% endif %}
-{% endfor %}
 
 </main>
 {% endblock %}
