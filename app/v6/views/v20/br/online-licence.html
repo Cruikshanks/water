@@ -16,13 +16,39 @@
 
   <div class="grid-row">
     <div class="column-two-thirds">
-      <!-- code alert -->
+
+      <!-- return alert -->
       {% if pData.Return1Due %}
 
-        <!-- internal code block -->
-        {% include "../partials/licence-return-due.html" %}
+        <div class="panel panel-border-wide alert-default small-space">
+          A return is due for this licence for {{ pData.Return1Due | lower }}<br>
+          <a href="./returns/returns-route-return?wid={{ query.wid }}">Start this return</a>
+        </div>
 
       {% endif %}
+
+      <!-- return alert -->
+      {% if pData.Return2Due %}
+
+        <div class="panel panel-border-wide alert-default small-space">
+          A return is due for this licence for {{ pData.Return2Due | lower }}<br>
+          <a href="./returns/returns-route-return?wid={{ query.wid }}">Start this return</a>
+        </div>
+
+      {% endif %}
+
+      <!-- return alert -->
+      {% if pData.Return3Due %}
+
+        <div class="panel panel-border-wide alert-default big-space">
+          A return is due for this licence for {{ pData.Return3Due | lower }}<br>
+          <a href="./returns/returns-route-return?wid={{ query.wid }}">Start this return</a>
+        </div>
+
+      {% endif %}
+
+      <div class="big-space"></div>
+
 
     </div>
   </div>

@@ -8,10 +8,6 @@
 {% block content %}
 <main id="content" role="main">
 
-  {% from "custom_inc/waterdata.html" import permits %}
-  {% for pNumber, pData in permits %}
-  {% if pNumber==chosenPermitID %}
-
   <!-- beta banner block -->
   {% include "../../partials/beta-banner.html" %}
 
@@ -51,37 +47,34 @@
     </div>
   </div>
 
-  <div class="grid-row">
-    <div class="column-full">
+  <div class="form-group">
+    <fieldset>
 
-      <div class="form-group">
-        <fieldset>
+      <legend>
+        <h1 class="heading-medium">
+          Are there any abstraction amounts to report?
+        </h1>
+      </legend>
 
-          <legend>
-            <h2 class="heading-medium">
-              Are there any abstraction amounts to report?
-            </h2>
-          </legend>
-
-          <div class="multiple-choice">
-            <input id="return-form" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-1">Yes</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="nil-return" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-2">No</label>
-          </div>
-        </fieldset>
+      <div class="multiple-choice">
+        <input id="return-form" type="radio" name="radio-inline-group" value="Yes">
+        <label for="return-form">Yes</label>
       </div>
-    </div>
+      <div class="multiple-choice">
+        <input id="nil-return" type="radio" name="radio-inline-group" value="No">
+        <label for="nil-return">No</label>
+      </div>
+
+    </fieldset>
   </div>
 
   <a href="returns-route-unit?wid={{ query.wid }}" class="button">
     Continue
   </a>
 
-  {% endif %}
-  {% endfor %}
-
 </main>
+
+<a href="/v20/br/returns/confirm-no-return?wid=43">Nil return</a>
+
+
 {% endblock %}
