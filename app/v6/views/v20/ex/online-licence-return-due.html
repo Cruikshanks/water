@@ -8,10 +8,6 @@
 {% block content %}
 <main id="content" role="main">
 
-  {% from "custom_inc/waterdata.html" import permits %}
-  {% for pNumber, pData in permits %}
-  {% if pNumber==chosenPermitID %}
-
   <!-- beta banner block -->
   {% include "../partials/beta-banner.html" %}
 
@@ -19,14 +15,14 @@
   {% include "../partials/nav-ex-view.html" %}
 
   {% if pData.Purpose1 %}
-    <!-- <div class="grid-row">
+    <div class="grid-row">
       <div class="column-two-thirds small-space">
         <div class="panel panel-border-wide alert-default">
           A return is due for {{ pData.Purpose1 }} on this licence.<br>
           <a href="returns/returns-route-return?wid={{ query.wid }}">Start your return</a>
         </div>
       </div>
-    </div> -->
+    </div>
   {% endif %}
 
   {% if pData.Purpose2 %}
@@ -237,9 +233,6 @@
     <!-- bad data block -->
     {% include "../partials/bad-data.html" %}
   </div>
-
-{% endif %}
-{% endfor %}
 
 </main>
 {% endblock %}

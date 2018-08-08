@@ -8,10 +8,6 @@
 {% block content %}
 <main id="content" role="main">
 
-  {% from "custom_inc/waterdata.html" import permits %}
-  {% for pNumber, pData in permits %}
-  {% if pNumber==chosenPermitID %}
-
   <!-- internal beta banner block -->
   {% include "../partials/feedback-banner.html" %}
 
@@ -19,18 +15,35 @@
   {% include "../partials/nav-br-view.html" %}
 
   <!-- page title -->
-  <div class="grid-row">
+  <!-- <div class="grid-row">
     <div class="column-two-thirds">
-      <!-- code alert -->
       {% if pData.SecCode %}
-
-        <!-- internal code block -->
         {% include "../partials/admin-code-sent.html" %}
-
       {% endif %}
-
     </div>
-  </div>
+  </div> -->
+
+  {% if pData.Purpose1 %}
+    <div class="grid-row">
+      <div class="column-two-thirds small-space">
+        <div class="panel panel-border-wide alert-default">
+          A return is due for {{ pData.Purpose1 | lower }} on this licence.<br>
+          <a href="returns/returns-route-return?wid={{ query.wid }}">Start your return</a>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if pData.Purpose2 %}
+    <div class="grid-row">
+      <div class="column-two-thirds small-space">
+        <div class="panel panel-border-wide alert-default">
+          A return is due for {{ pData.Purpose2 | lower }} on this licence.<br>
+          <a href="returns/returns-route-return?wid={{ query.wid }}">Start your return</a>
+        </div>
+      </div>
+    </div>
+  {% endif %}
 
   <!-- page heading -->
   {% if pData.LicenceName %}
@@ -204,25 +217,27 @@
   <div class="datatable big-space">
     <label>Returns for this licence</label>
     <div class="licenceAnswerv7">
-      {% if pData.Purpose1Due %}
-        {{ pData.Purpose1 }}</br>
+
+      {% if pData.Return1Due %}
+        {{ pData.Return1Due }}</br>
       {% endif %}
 
-      {% if pData.Purpose2Due %}
+      {% if pData.Return2Due %}
         {{ pData.Purpose2 }}</br>
       {% endif %}
 
-      {% if pData.Purpose3Due %}
+      {% if pData.Return3Due %}
         {{ pData.Purpose3 }}</br>
       {% endif %}
 
-      {% if pData.Purpose4Due %}
+      {% if pData.Return4Due %}
         {{ pData.Purpose4 }}</br>
       {% endif %}
 
-      {% if pData.Purpose5Due %}
+      {% if pData.Return5Due %}
         {{ pData.Purpose5 }}</br>
       {% endif %}
+
       <a href="returns/returns?wid={{ query.wid }}">View returns</a>
     </div>
   </div>
@@ -231,9 +246,6 @@
   {% include "../partials/version-current.html" %}
 
   </div>
-
-{% endif %}
-{% endfor %}
 
 </main>
 {% endblock %}

@@ -48,7 +48,10 @@
   </div>
 
   <div class="form-group">
-    <fieldset>
+
+    <form data-routing="1">
+
+    <fieldset class="medium-space">
 
       <legend>
         <h1 class="heading-medium">
@@ -57,24 +60,37 @@
       </legend>
 
       <div class="multiple-choice">
-        <input id="return-form" type="radio" name="radio-inline-group" value="Yes">
+        <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-unit?wid={{ query.wid }}">
         <label for="return-form">Yes</label>
       </div>
       <div class="multiple-choice">
-        <input id="nil-return" type="radio" name="radio-inline-group" value="No">
+        <input id="nil-return" type="radio" name="radio-inline-group" value="/v20/br/returns/confirm-no-return?wid={{ query.wid }}">
         <label for="nil-return">No</label>
       </div>
 
     </fieldset>
-  </div>
 
-  <a href="returns-route-unit?wid={{ query.wid }}" class="button">
-    Continue
-  </a>
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </div>
 
 </main>
 
-<a href="/v20/br/returns/confirm-no-return?wid=43">Nil return</a>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
 
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
 
 {% endblock %}
