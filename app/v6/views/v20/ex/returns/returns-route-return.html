@@ -8,10 +8,6 @@
 {% block content %}
 <main id="content" role="main">
 
-  {% from "custom_inc/waterdata.html" import permits %}
-  {% for pNumber, pData in permits %}
-  {% if pNumber==chosenPermitID %}
-
   <!-- beta banner block -->
   {% include "../../partials/beta-banner.html" %}
 
@@ -55,33 +51,52 @@
     <div class="column-full">
 
       <div class="form-group">
-        <fieldset>
+
+        <form data-routing="1">
+
+        <fieldset class="medium-space">
 
           <legend>
-            <h2 class="heading-medium">
-              Do you have amounts to report for this return?
-            </h2>
+            <h1 class="heading-medium">
+              Are there any abstraction amounts to report?
+            </h1>
           </legend>
 
           <div class="multiple-choice">
-            <input id="return-form" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-1">Yes</label>
+            <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-method?wid={{ query.wid }}">
+            <label for="return-form">Yes</label>
           </div>
           <div class="multiple-choice">
-            <input id="nil-return" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-2">No</label>
+            <input id="nil-return" type="radio" name="radio-inline-group" value="confirm-no-return?wid={{ query.wid }}">
+            <label for="nil-return">No</label>
           </div>
+
         </fieldset>
+
+          <button type="submit" class="button">Submit</button>
+        </form>
       </div>
+
     </div>
   </div>
 
-  <a href="returns-route-unit?wid={{ query.wid }}" class="button">
-    Continue
-  </a>
-
-  {% endif %}
-  {% endfor %}
-
 </main>
+
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
+
 {% endblock %}
