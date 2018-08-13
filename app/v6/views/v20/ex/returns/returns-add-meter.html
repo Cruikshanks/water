@@ -51,49 +51,31 @@
     </div>
   </div>
 
-  <div class="grid-row medium-space">
+  <div class="grid-row">
     <div class="column-two-thirds">
 
       <h3 class="heading-medium">
-        Tell us about your meter
+        Add a meter to this return
       </h3>
 
-      <h4 class="heading-small">
-        First meter
-      </h4>
-
       <div class="form-group">
-        <label class="form-label" for="meter-make">Manufacturer used</label>
-        <input class="form-control small-space" id="meter-make" name="meter-make" type="text" value="">
+        <label class="form-label" for="start-reading">Current meter end reading</label>
+        <input class="form-control small-space" id="start-reading" name="start-reading" type="text" value="">
 
-        <label class="form-label" for="meter-serial">Serial number</label>
-        <input class="form-control small-space" id="meter-serial" name="meter-serial" type="text" value="">
+        <label class="form-label" for="start-reading-2">New meter start reading</label>
+        <input class="form-control medium-space" id="start-reading-2" name="start-reading-2" type="text" value="">
 
-        <label class="form-label" for="start-reading">Abstraction period start reading</label>
-        <input class="form-control" id="start-reading" name="start-reading" type="text" value="">
+        <label class="form-label" for="meter-make-2">Manufacturer used</label>
+        <input class="form-control small-space" id="meter-make-2" name="meter-make-2" type="text" value="">
+
+        <label class="form-label" for="meter-serial-2">Serial number</label>
+        <input class="form-control small-space" id="meter-serial-2" name="meter-serial-2" type="text" value="">
       </div>
-
-      <h4 class="heading-small">
-        Second meter
-      </h4>
-
-      <div class="form-group">
-        <label class="form-label" for="meter-make">Manufacturer used</label>
-        <input class="form-control small-space" id="meter-make" name="meter-make" type="text" value="">
-
-        <label class="form-label" for="meter-serial">Serial number</label>
-        <input class="form-control small-space" id="meter-serial" name="meter-serial" type="text" value="">
-
-        <label class="form-label" for="start-reading">Abstraction period start reading</label>
-        <input class="form-control" id="start-reading" name="start-reading" type="text" value="">
-      </div>
-
-      <a href="returns-route-meters-add-meter?wid={{ query.wid }}">Add another meter to this return</a>
 
     </div>
   </div>
 
-  <a href="returns-form-meter?wid={{ query.wid }}" class="button">
+  <a href="returns-form-meter-continue?wid={{ query.wid }}" class="button">
     Continue
   </a>
 
