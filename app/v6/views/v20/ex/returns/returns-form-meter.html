@@ -55,9 +55,28 @@
     <div class="column-two-thirds">
 
       <legend>
-        <h2 class="heading-medium">
+        <h3 class="heading-medium">
           Meter readings
-        </h2>
+        </h3>
+
+        <div class="panel panel-border-wide">
+          Meter SN76451280
+          <br>
+          Initial reading
+          <!-- <br> -->
+          <!-- <span class="bold-small"> -->
+            00001112
+          <!-- </span> -->
+        </div>
+
+        <!-- <p>
+          Initial reading
+          <br>
+          <span class="bold-small">
+            0011121
+          </span>
+        </p> -->
+
       </legend>
 
       <div class="form-group">
@@ -161,27 +180,19 @@
       </p>
       <div class="form-group">
         <label class="form-label" for="last-name-2">March</label>
-        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
+        <input class="form-control amount-input medium-space" id="september-amount" name="september-amount" type="text" value="">
+      </div>
+
+      <div class="form-group total-input">
+        <label class="form-label total-label" for="total-abstracted">Total water abstracted</label>
+        <input class="form-control small-space" id="total-abstracted" name="total-abstracted" type="text" value="">
       </div>
     </div>
-  </div>
-
-  <h2 class="heading-medium">
-    End meter reading
-  </h2>
-
-  <div class="form-group">
-    <label class="form-label" for="end-reading">Abstraction period end reading</label>
-    <input class="form-control small-space" id="end-reading" name="end-reading" type="text" value="">
-
-    <label class="form-label" for="total-abstracted">Total water abstracted</label>
-    <input class="form-control small-space" id="total-abstracted" name="total-abstracted" type="text" value="">
   </div>
 
   <a href="confirm-return?wid={{ query.wid }}" class="button">
     Submit return
   </a>
-
 
   {% endif %}
   {% endfor %}

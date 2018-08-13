@@ -1410,3 +1410,12 @@ details {
     text-align: right;
   }
 }
+
+.total-label, .total-input input {
+  font-weight: 700;
+}
+
+.total-input input {
+  border-left: 0;
+  border-right: 0;
+}
