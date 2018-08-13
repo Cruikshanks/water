@@ -8,6 +8,10 @@
 {% block content %}
 <main id="content" role="main">
 
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
   <!-- beta banner block -->
   {% include "../../partials/beta-banner.html" %}
 
@@ -47,56 +51,36 @@
     </div>
   </div>
 
-  <div class="grid-row">
-    <div class="column-full">
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <h3 class="heading-medium">
+        Tell us about your meter
+      </h3>
 
       <div class="form-group">
+        <label class="form-label" for="meter-make">Manufacturer used</label>
+        <input class="form-control small-space" id="meter-make" name="meter-make" type="text" value="">
 
-        <form data-routing="1">
+        <label class="form-label" for="meter-serial">Serial number</label>
+        <input class="form-control small-space" id="meter-serial" name="meter-serial" type="text" value="">
 
-        <fieldset class="medium-space">
-
-          <legend>
-            <h1 class="heading-medium">
-              How do you want to report your return?
-            </h1>
-          </legend>
-
-          <div class="multiple-choice">
-            <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-meters?wid={{ query.wid }}">
-            <label for="return-form">Meter readings</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="nil-return" type="radio" name="radio-inline-group" value="returns-route-unit?wid={{ query.wid }}">
-            <label for="nil-return">Amounts</label>
-          </div>
-
-        </fieldset>
-
-          <button type="submit" class="button">Submit</button>
-        </form>
+        <label class="form-label" for="start-reading">Abstraction period start reading</label>
+        <input class="form-control" id="start-reading" name="start-reading" type="text" value="">
       </div>
+
+      <a href="returns-route-meters-add-meter?wid={{ query.wid }}">Add another meter to this return</a>
 
     </div>
   </div>
 
+  <a href="returns-form-meter?wid={{ query.wid }}" class="button">
+    Continue
+  </a>
+
+
+  {% endif %}
+  {% endfor %}
+
 </main>
-
-<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
-
-<script>
-  $(function() {
-    $('form[data-routing]').on('submit', function(ev) {
-      // FInd selected radio button
-      const url = $(this).find('input:checked').val();
-
-      if(url) {
-        ev.preventDefault();
-        window.location.href = url;
-        return false;
-      }
-    });
-  })
-</script>
-
 {% endblock %}
