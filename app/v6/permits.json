@@ -22,6 +22,7 @@
 
          "Purpose1": "Spray irrigation",
          "Return1Due": "Spray irrigation",
+         "Purpose1Due": "Spray irrigation",
 
          "Purpose1Period": "All year",
          "Purpose1Amount1": "900 cubic metres per hour",
