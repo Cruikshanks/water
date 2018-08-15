@@ -18,7 +18,7 @@
     <div class="column-two-thirds">
 
       <!-- return alert -->
-      {% if pData.Return1Due %}
+      {% if pData.Purpose1Due %}
 
         <div class="panel panel-border-wide alert-default small-space">
           A return is due for this licence for {{ pData.Return1Due | lower }}<br>
@@ -28,7 +28,7 @@
       {% endif %}
 
       <!-- return alert -->
-      {% if pData.Return2Due %}
+      {% if pData.Purpose2Due %}
 
         <div class="panel panel-border-wide alert-default small-space">
           A return is due for this licence for {{ pData.Return2Due | lower }}<br>
@@ -208,35 +208,34 @@
     </div>
   </div>
 
-  {% if pData.Return1Due %}
   <div class="datatable big-space">
     <label>Returns for this licence</label>
     <div class="licenceAnswerv7">
 
-      {{ pData.Return1Due }}</br>
-
-      {% if pData.Return2Due %}
-        {{ pData.Return2Due }}</br>
+      {% if pData.Purpose1Due %}
+        {{ pData.Purpose1 }}</br>
       {% endif %}
 
-      {% if pData.Return3Due %}
-        {{ pData.Return3Due }}</br>
+      {% if pData.Purpose2Due %}
+        {{ pData.Purpose2 }}</br>
       {% endif %}
 
-      {% if pData.Return4Due %}
-        {{ pData.Return4Due }}</br>
+      {% if pData.Purpose3Due %}
+        {{ pData.Purpose3 }}</br>
       {% endif %}
 
-      {% if pData.Return5Due %}
-        {{ pData.Return5Due }}</br>
+      {% if pData.Purpose4Due %}
+        {{ pData.Purpose4 }}</br>
+      {% endif %}
+
+      {% if pData.Purpose5Due %}
+        {{ pData.Purpose5 }}</br>
       {% endif %}
 
       <a href="returns/returns?wid={{ query.wid }}">View returns</a>
 
     </div>
   </div>
-
-  {% endif %}
 
   <div class="big-space"></div>
 
