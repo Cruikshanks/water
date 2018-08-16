@@ -54,28 +54,33 @@
 
         <form data-routing="1">
 
-        <fieldset class="medium-space">
+          <fieldset class="medium-space">
 
-          <legend>
-            <h1 class="heading-medium">
-              How do you want to report your return?
-            </h1>
-          </legend>
+            <legend>
+              <h1 class="heading-medium">
+                What is your estimate based on?
+              </h1>
+            </legend>
 
-          <div class="multiple-choice">
-            <input id="return-form" type="radio" name="radio-inline-group" value="returns-meter-unit?wid={{ query.wid }}">
-            <label for="return-form">Meter readings</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="nil-return" type="radio" name="radio-inline-group" value="returns-route-unit?wid={{ query.wid }}">
-            <label for="nil-return">Recorded amounts</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="nil-return" type="radio" name="radio-inline-group" value="returns-route-estimate?wid={{ query.wid }}">
-            <label for="nil-return">Estimated amounts based on flow rate or herd numbers</label>
-          </div>
+            <div class="multiple-choice" data-target="estimated-flow-rate">
+              <input id="radio-flow-rate" type="radio" name="radio-contact-group" value="returns-route-unit?wid={{ query.wid }}">
+              <label for="radio-flow-rate">Flow rate</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="estimated-flow-rate">
+              <label class="form-label" for="contact-email">Equipment flow rate</label>
+              <input class="form-control" name="contact-email" type="text" id="contact-email">
+            </div>
 
-        </fieldset>
+            <div class="multiple-choice" data-target="estimate-herd-number">
+              <input id="radio-herd-number" type="radio" name="radio-contact-group" value="returns-route-unit?wid={{ query.wid }}">
+              <label for="radio-herd-number">Herd numbers</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="estimate-herd-number">
+              <label class="form-label" for="herd-number">What is your herd size</label>
+              <input class="form-control" name="herd-number" type="text" id="herd-number">
+            </div>
+
+          </fieldset>
 
           <button type="submit" class="button">Submit</button>
         </form>

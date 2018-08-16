@@ -1419,3 +1419,11 @@ details {
   border-left: 0;
   border-right: 0;
 }
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 250px;
+}
