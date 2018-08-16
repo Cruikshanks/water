@@ -16,7 +16,7 @@
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-ex-returns.html" %}
+  {% include "../../partials/nav-br-view.html" %}
 
   <div class="grid-row medium-space">
     <div class="column-two-thirds">
@@ -24,14 +24,14 @@
       <!-- page heading -->
       {% if pData.LicenceName %}
         <h2 class="sub-head">
-          Abstraction record for {{ pData.LicenceSerialNo }}
+          Abstraction return for {{ pData.LicenceSerialNo }}
         </h2>
         <h1 class="heading-large spaceless">
           {{ pData.LicenceName }}
         </h1>
       {% else %}
         <h2 class="sub-head">
-          Abstraction record
+          Abstraction return
         </h2>
         <h1 class="heading-large spaceless">
           Licence number {{pData.LicenceSerialNo}}
@@ -41,7 +41,7 @@
   </div>
 
   <!-- meta data block -->
-  {% include "../../partials/return-external-meta.html" %}
+  {% include "../../partials/return-internal-meta.html" %}
 
   <div class="grid-row small-space">
     <div class="column-two-thirds">
@@ -98,105 +98,96 @@
 
       <div class="form-group">
         <label class="form-label" for="last-name-2">June</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
         <input class="form-control amount-input" id="june-amount" name="june-amount" type="text" value="">
       </div>
-
+      <p>
+        <a href="returns-add-meter?wid={{ query.wid }}">
+          Meter change
+        </a>
+      </p>
       <div class="form-group">
         <label class="form-label" for="first-name-2">July</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
         <input class="form-control amount-input" id="july-amount" name="july-amount" type="text" value="">
       </div>
-
+      <p>
+        <a href="returns-add-meter?wid={{ query.wid }}">
+          Meter change
+        </a>
+      </p>
       <div class="form-group">
         <label class="form-label" for="last-name-2">August</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
         <input class="form-control amount-input" id="august-amount" name="august-amount" type="text" value="">
       </div>
-
+      <p>
+        <a href="returns-add-meter?wid={{ query.wid }}">
+          Meter change
+        </a>
+      </p>
       <div class="form-group">
         <label class="form-label" for="last-name-2">September</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
         <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
       </div>
-
+      <p>
+        <a href="returns-add-meter?wid={{ query.wid }}">
+          Meter change
+        </a>
+      </p>
       <div class="form-group">
         <label class="form-label" for="last-name-2">October</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
         <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
       </div>
-
+      <p>
+        <a href="returns-add-meter?wid={{ query.wid }}">
+          Meter change
+        </a>
+      </p>
       <div class="form-group">
         <label class="form-label" for="last-name-2">November</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
         <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
       </div>
-
+      <p>
+        <a href="returns-add-meter?wid={{ query.wid }}">
+          Meter change
+        </a>
+      </p>
       <div class="form-group">
         <label class="form-label" for="last-name-2">December</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
         <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
       </div>
-
+      <p>
+        <a href="returns-add-meter?wid={{ query.wid }}">
+          Meter change
+        </a>
+      </p>
       <div class="form-group">
         <label class="form-label" for="last-name-2">January</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
         <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
       </div>
-
+      <p>
+        <a href="returns-add-meter?wid={{ query.wid }}">
+          Meter change
+        </a>
+      </p>
       <div class="form-group">
         <label class="form-label" for="last-name-2">February</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
         <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
       </div>
-
+      <p>
+        <a href="returns-add-meter?wid={{ query.wid }}">
+          Meter change
+        </a>
+      </p>
       <div class="form-group">
         <label class="form-label" for="last-name-2">March</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
         <input class="form-control amount-input medium-space" id="september-amount" name="september-amount" type="text" value="">
       </div>
 
+      <div class="form-group total-input">
+        <label class="form-label total-label" for="total-abstracted">Total water abstracted</label>
+        <input class="form-control small-space" id="total-abstracted" name="total-abstracted" type="text" value="">
+      </div>
     </div>
+
   </div>
 
   <a href="confirm-return?wid={{ query.wid }}" class="button">
