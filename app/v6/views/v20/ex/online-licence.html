@@ -8,10 +8,6 @@
 {% block content %}
 <main id="content" role="main">
 
-  {% from "custom_inc/waterdata.html" import permits %}
-  {% for pNumber, pData in permits %}
-  {% if pNumber==chosenPermitID %}
-
   <!-- beta banner block -->
   {% include "../partials/beta-banner.html" %}
 
@@ -19,23 +15,12 @@
   {% include "../partials/nav-ex-view.html" %}
 
   <!-- returns notices -->
-  {% if pData.Purpose1Due %}
+  {% if pData.Return1Due %}
     <div class="grid-row">
       <div class="column-two-thirds small-space">
         <div class="panel panel-border-wide alert-default">
-          A return is due for {{ pData.Purpose1 }} on this licence.<br>
-          <a href="returns/returns-route-return?wid={{ query.wid }}">Start your return</a>
-        </div>
-      </div>
-    </div>
-  {% endif %}
-
-  {% if pData.Purpose2Due %}
-    <div class="grid-row">
-      <div class="column-two-thirds small-space">
-        <div class="panel panel-border-wide alert-default">
-          A return is due for {{ pData.Purpose2 }} on this licence.<br>
-          <a href="returns/returns-route-return?wid={{ query.wid }}">Start your return</a>
+          A return for {{ pData.Return1Due }} is due<br>
+          <a href="returns/returns-route-return?wid={{ query.wid }}">Complete return</a>
         </div>
       </div>
     </div>
@@ -62,7 +47,7 @@
     </div>
   </div>
 
-  <div class="grid-row medium-space">
+  <div class="grid-row small-space">
     <div class="column-two-thirds">
       <div class="panel panel-border-wide">
         <p>
@@ -253,9 +238,6 @@
     <!-- bad data block -->
     {% include "../partials/bad-data.html" %}
   </div>
-
-{% endif %}
-{% endfor %}
 
 </main>
 {% endblock %}
