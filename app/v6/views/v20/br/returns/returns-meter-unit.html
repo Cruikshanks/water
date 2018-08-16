@@ -56,36 +56,42 @@
     <div class="column-full">
 
       <div class="form-group">
-        <fieldset>
-          <legend>
-            <h2 class="heading-medium">
-              What units does your meter use?
-            </h2>
-          </legend>
 
-          <div class="multiple-choice">
-            <input id="radio-inline-1" type="radio" name="radio-inline-1" value="">
-            <label for="radio-inline-1">cubic metres</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="radio-inline-2" type="radio" name="radio-inline-2" value="">
-            <label for="radio-inline-2">gallons</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="radio-inline-3" type="radio" name="radio-inline-3" value="">
-            <label for="radio-inline-3">litres</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="radio-inline-4" type="radio" name="radio-inline-4" value="">
-            <label for="radio-inline-4">megalitres</label>
-          </div>
-        </fieldset>
+        <form>
+
+          <fieldset>
+            <legend>
+              <h2 class="heading-medium">
+                What units does your meter use?
+              </h2>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="amounts-in-cubic-metres" type="radio" name="amount-unit" value="1" />
+              <label for="amounts-in-cubic-metres">cubic metres</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="amounts-in-gallons" type="radio" name="amount-unit" value="2" />
+              <label for="amounts-in-gallons">gallons</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="amounts-in-litres" type="radio" name="amount-unit" value="3" />
+              <label for="amounts-in-litres">litres</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="amounts-in-megalitres" type="radio" name="amount-unit" value="4" />
+              <label for="amounts-in-megalitres">megalitres</label>
+            </div>
+          </fieldset>
+
+        </form>
+
       </div>
 
     </div>
   </div>
 
-  <a href="returns-route-meters?wid={{ query.wid }}" class="button">
+  <a href="returns-form-meter?wid={{ query.wid }}" class="button">
     Continue
   </a>
 

@@ -63,16 +63,12 @@
           </legend>
 
           <div class="multiple-choice">
-            <input id="return-form" type="radio" name="radio-inline-group" value="returns-meter-unit?wid={{ query.wid }}">
+            <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-meters?wid={{ query.wid }}">
             <label for="return-form">Meter readings</label>
           </div>
           <div class="multiple-choice">
             <input id="nil-return" type="radio" name="radio-inline-group" value="returns-route-unit?wid={{ query.wid }}">
-            <label for="nil-return">Recorded amounts</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="nil-return" type="radio" name="radio-inline-group" value="returns-route-estimate?wid={{ query.wid }}">
-            <label for="nil-return">Estimated amounts based on flow rate or herd numbers</label>
+            <label for="nil-return">Amounts</label>
           </div>
 
         </fieldset>
