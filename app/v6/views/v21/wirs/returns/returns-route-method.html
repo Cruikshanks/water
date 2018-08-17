@@ -47,31 +47,56 @@
     </div>
   </div>
 
-  <div class="grid-row small-space">
-    <div class="column-two-thirds">
-      <h3 class="heading-medium">
-        Now submit this return
-      </h3>
-    </div>
-  </div>
-
   <div class="grid-row">
-    <div class="column-two-thirds">
-      <h3 class="heading-large">
-        Nil return
-      </h3>
+    <div class="column-full">
+
+      <div class="form-group">
+
+        <form data-routing="1">
+
+        <fieldset class="medium-space">
+
+          <legend>
+            <h1 class="heading-medium">
+              How do you want to report your return?
+            </h1>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-meters?wid={{ query.wid }}">
+            <label for="return-form">Meter readings</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="nil-return" type="radio" name="radio-inline-group" value="returns-route-unit?wid={{ query.wid }}">
+            <label for="nil-return">Amounts</label>
+          </div>
+
+        </fieldset>
+
+          <button type="submit" class="button">Submit</button>
+        </form>
+      </div>
+
     </div>
   </div>
-
-  <div class="panel panel-border-wide big-space">
-    <p>
-      Back-up meter, not used this year.
-    </p>
-  </div>
-
-  <a href="return-submitted?wid={{ query.wid }}" class="button">
-    Submit return
-  </a>
 
 </main>
+
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
+
 {% endblock %}

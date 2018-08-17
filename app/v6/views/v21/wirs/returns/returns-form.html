@@ -16,7 +16,7 @@
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-wirs-returns.html" %}
+  {% include "../../partials/nav-wirs-view.html" %}
 
   <div class="grid-row medium-space">
     <div class="column-two-thirds">
@@ -106,12 +106,7 @@
       </div>
       <div class="form-group big-space">
         <label class="form-label" for="march-amount">March</label>
-        <input class="form-control amount-input" id="march-amount" name="march-amount" type="text" value="">litres
-      </div>
-
-      <div class="form-group big-space">
-        <label class="form-label-bold" for="march-amount">Total</label>
-        <input class="form-control amount-input" id="total-amount" name="total-amount" type="text" value="">litres
+        <input class="form-control amount-input medium-space" id="march-amount" name="march-amount" type="text" value="">litres
       </div>
 
       <div class="form-group">
@@ -122,10 +117,11 @@
         </label>
         <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
       </div>
+
     </div>
   </div>
 
-  <a href="return-submitted?wid={{ query.wid }}" class="button">
+  <a href="returns-route-estimates?wid={{ query.wid }}" class="button">
     Submit return
   </a>
 

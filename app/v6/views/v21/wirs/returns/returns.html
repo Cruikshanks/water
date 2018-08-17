@@ -15,7 +15,9 @@
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-wirs-returns.html" %}
+  {% include "../../partials/nav-wirs-view.html" %}
+
+  <div class="big-space"></div>
 
   <!-- back -->
   <div class="medium-space">
@@ -38,6 +40,12 @@
   <div class="grid-row">
     <div class="column-full">
 
+      <!-- reminder button -->
+      <!-- only show this if there are returns due -->
+      <a href="send-reminder" class="button medium-space">
+        Send a returns reminder
+      </a>
+
       <!-- table with four columns -->
       <div class="table">                                                       <!-- a table -->
 
@@ -49,7 +57,7 @@
             Purpose
           </div>
           <div class="table-cell bold-small">
-            Amount
+            Site description
           </div>
           <div class="table-cell bold-small column-15">
             Status
@@ -76,9 +84,9 @@
           </div>
           <div class="table-cell">
             <h3 class="context">
-              Total reported
+              Site description
             </h3>
-            <!-- total abstracted -->
+            Borehole at Chiverton Grove
           </div>
           <div class="table-cell">
             <h3 class="context">
@@ -110,9 +118,9 @@
           </div>
           <div class="table-cell">
             <h3 class="context">
-              Total reported
+              Site description
             </h3>
-            10,0105 gallons
+            Borehole at Eye Bund
           </div>
           <div class="table-cell">
             <h3 class="context">
@@ -144,9 +152,9 @@
           </div>
           <div class="table-cell">
             <h3 class="context">
-              Total reported
+              Site description
             </h3>
-            9,942 gallons
+            Gazoile Fern West
           </div>
           <div class="table-cell">
             <h3 class="context">
@@ -178,9 +186,9 @@
           </div>
           <div class="table-cell">
             <h3 class="context">
-              Total reported
+              Site description
             </h3>
-            8,175 gallons
+            Squab Brooke
           </div>
           <div class="table-cell">
             <h3 class="context">
@@ -212,9 +220,9 @@
           </div>
           <div class="table-cell">
             <h3 class="context">
-              Total reported
+              Site description
             </h3>
-            7,781 gallons
+            Borehole at Point A, Barn
           </div>
           <div class="table-cell">
             <h3 class="context">
@@ -228,6 +236,7 @@
 
       </div>
 
+    </div>
   </div>
 
 </main>

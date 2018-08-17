@@ -8,6 +8,10 @@
 {% block content %}
 <main id="content" role="main">
 
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
   <!-- beta banner block -->
   {% include "../../partials/beta-banner.html" %}
 
@@ -47,31 +51,38 @@
     </div>
   </div>
 
-  <div class="grid-row small-space">
-    <div class="column-two-thirds">
-      <h3 class="heading-medium">
-        Now submit this return
-      </h3>
-    </div>
-  </div>
-
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h3 class="heading-large">
-        Nil return
+
+      <h3 class="heading-medium">
+        Tell us about your meter
       </h3>
+
+      <div class="form-group">
+        <label class="form-label" for="meter-make">Manufacturer used</label>
+        <input class="form-control small-space" id="meter-make" name="meter-make" type="text" value="">
+
+        <label class="form-label" for="meter-serial">Serial number</label>
+        <input class="form-control small-space" id="meter-serial" name="meter-serial" type="text" value="">
+
+        <label class="form-label" for="start-reading">Abstraction period start reading</label>
+        <input class="form-control" id="start-reading" name="start-reading" type="text" value="">
+      </div>
+
+      <p>
+        If you used more than one meter you can tell us about this in the returns form.
+      </p>
+
     </div>
   </div>
 
-  <div class="panel panel-border-wide big-space">
-    <p>
-      Back-up meter, not used this year.
-    </p>
-  </div>
-
-  <a href="return-submitted?wid={{ query.wid }}" class="button">
-    Submit return
+  <a href="returns-meter-unit?wid={{ query.wid }}" class="button">
+    Continue
   </a>
+
+
+  {% endif %}
+  {% endfor %}
 
 </main>
 {% endblock %}

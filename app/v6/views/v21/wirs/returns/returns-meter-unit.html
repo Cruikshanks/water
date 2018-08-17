@@ -31,7 +31,7 @@
         </h1>
       {% else %}
         <h2 class="sub-head">
-          <a href="returns">Abstraction return</a>
+          Abstraction return
         </h2>
         <h1 class="heading-large spaceless">
           Licence number {{pData.LicenceSerialNo}}
@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <!-- navigation block -->
+  <!-- meta data block -->
   {% include "../../partials/return-internal-meta.html" %}
 
   <div class="grid-row small-space">
@@ -56,36 +56,42 @@
     <div class="column-full">
 
       <div class="form-group">
-        <fieldset>
-          <legend>
-            <h2 class="heading-medium">
-              What is the unit of measurement?
-            </h2>
-          </legend>
 
-          <div class="multiple-choice">
-            <input id="radio-inline-1" type="radio" name="amount-unit" value="1">
-            <label for="radio-inline-1">Cubic metres</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="radio-inline-2" type="radio" name="amount-unit" value="2">
-            <label for="radio-inline-2">Litres</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="radio-inline-3" type="radio" name="amount-unit" value="3">
-            <label for="radio-inline-3">Megalitres</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="radio-inline-4" type="radio" name="amount-unit" value="4">
-            <label for="radio-inline-4">Gallons</label>
-          </div>
-        </fieldset>
+        <form>
+
+          <fieldset>
+            <legend>
+              <h2 class="heading-medium">
+                What units does your meter use?
+              </h2>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="amounts-in-cubic-metres" type="radio" name="amount-unit" value="1" />
+              <label for="amounts-in-cubic-metres">cubic metres</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="amounts-in-litres" type="radio" name="amount-unit" value="3" />
+              <label for="amounts-in-litres">litres</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="amounts-in-megalitres" type="radio" name="amount-unit" value="4" />
+              <label for="amounts-in-megalitres">megalitres</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="amounts-in-gallons" type="radio" name="amount-unit" value="2" />
+              <label for="amounts-in-gallons">gallons</label>
+            </div>
+          </fieldset>
+
+        </form>
+
       </div>
 
     </div>
   </div>
 
-  <a href="returns-route-total?wid={{ query.wid }}" class="button">
+  <a href="returns-form-meter?wid={{ query.wid }}" class="button">
     Continue
   </a>
 

@@ -16,7 +16,7 @@
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-wirs-returns.html" %}
+  {% include "../../partials/nav-wirs-view.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds small-space">
@@ -40,40 +40,8 @@
     </div>
   </div>
 
-  <div class="small-space">
-    <dl>
-      <dt class="meta-label">
-        NALD reference
-      </dt>
-      <dd class="meta-description">
-        65432123
-      </dd>
-      <dt class="meta-label">
-        Region
-      </dt>
-      <dd class="meta-description">
-        Anglia
-      </dd>
-      <dt class="meta-label">
-        Site description
-      </dt>
-      <dd class="meta-description">
-        Great Ouse at Bedford College (Heat pump - cooling only)
-      </dd>
-      <dt class="meta-label">
-        Purpose
-      </dt>
-      <dd class="meta-description">
-        {{ pData.Purpose1 }}
-      </dd>
-      <dt class="meta-label">
-        Return period
-      </dt>
-      <dd class="meta-description">
-        April 2017 to March 2018
-      </dd>
-    </dl>
-  </div>
+  <!-- navigation block -->
+  {% include "../../partials/return-internal-meta.html" %}
 
   <div class="grid-row small-space">
     <div class="column-two-thirds">
@@ -102,7 +70,7 @@
     <div class="grid-row">
       <div class="column-two-thirds">
         <h3 class="heading-medium">
-          Abstraction amounts
+          Abstraction amount
         </h3>
         <div class="big-space">
           <a href="returns-form-edit?wid={{ query.wid }}" class="button">Edit return</a>

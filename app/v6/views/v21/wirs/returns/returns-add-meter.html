@@ -8,6 +8,10 @@
 {% block content %}
 <main id="content" role="main">
 
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
   <!-- beta banner block -->
   {% include "../../partials/beta-banner.html" %}
 
@@ -47,31 +51,40 @@
     </div>
   </div>
 
-  <div class="grid-row small-space">
-    <div class="column-two-thirds">
-      <h3 class="heading-medium">
-        Now submit this return
-      </h3>
-    </div>
-  </div>
-
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h3 class="heading-large">
-        Nil return
+
+      <h3 class="heading-medium">
+        Last meter reading
       </h3>
+
+      <div class="form-group">
+        <label class="form-label" for="start-reading">Last meter SN76451280 end reading</label>
+        <input class="form-control medium-space" id="start-reading" name="start-reading" type="text" value="">
+
+        <h3 class="heading-medium">
+          Meter changed to
+        </h3>
+
+        <label class="form-label" for="meter-make-2">Manufacturer used</label>
+        <input class="form-control small-space" id="meter-make-2" name="meter-make-2" type="text" value="">
+
+        <label class="form-label" for="meter-serial-2">Serial number</label>
+        <input class="form-control small-space" id="meter-serial-2" name="meter-serial-2" type="text" value="">
+
+        <label class="form-label" for="start-reading-2">New meter start reading</label>
+        <input class="form-control small-space" id="start-reading-2" name="start-reading-2" type="text" value="">
+      </div>
+
+      <a href="returns-form-meter-continue?wid={{ query.wid }}#new-meter" class="button">
+        Continue
+      </a>
+
     </div>
   </div>
 
-  <div class="panel panel-border-wide big-space">
-    <p>
-      Back-up meter, not used this year.
-    </p>
-  </div>
-
-  <a href="return-submitted?wid={{ query.wid }}" class="button">
-    Submit return
-  </a>
+  {% endif %}
+  {% endfor %}
 
 </main>
 {% endblock %}

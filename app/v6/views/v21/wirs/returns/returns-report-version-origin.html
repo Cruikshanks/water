@@ -16,7 +16,7 @@
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-wirs-returns.html" %}
+  {% include "../../partials/nav-wirs-view.html" %}
 
   <!-- notice -->
   <div class="grid-row">
@@ -29,7 +29,7 @@
           </i>
           <strong class="bold-small">
             This return was updated on the 11 September 2018.<br>
-            <a href="/v20/wirs/returns/returns-report?wid={{ query.wid }}">See the current Return</a>
+            <a href="/v20/br/returns/returns-report?wid={{ query.wid }}">See the current Return</a>
           </strong>
         </div>
       </div>
@@ -59,34 +59,8 @@
     </div>
   </div>
 
-  <div class="medium-space">
-    <dl>
-      <dt class="meta-label">
-        Region
-      </dt>
-      <dd class="meta-description">
-        Anglia
-      </dd>
-      <dt class="meta-label">
-        Site description
-      </dt>
-      <dd class="meta-description">
-        Great Ouse at Bedford College (Heat pump - cooling only)
-      </dd>
-      <dt class="meta-label">
-        Purpose
-      </dt>
-      <dd class="meta-description">
-        {{ pData.Purpose1 }}
-      </dd>
-      <dt class="meta-label">
-        Return period
-      </dt>
-      <dd class="meta-description">
-        May 2018 to June 2018
-      </dd>
-    </dl>
-  </div>
+  <!-- navigation block -->
+  {% include "../../partials/return-internal-meta.html" %}
 
   <ul class="list list-bullet">
     <li>Submitted by jan.fizbold@abstraction-bros.co.uk</li>
@@ -119,7 +93,7 @@
     <div class="grid-row">
       <div class="column-two-thirds">
         <h3 class="heading-medium small-space">
-          Abstraction amounts
+          Abstraction amount
         </h3>
       </div>
     </div>
