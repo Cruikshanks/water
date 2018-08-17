@@ -43,6 +43,14 @@
   <!-- navigation block -->
   {% include "../../partials/return-internal-meta.html" %}
 
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
+      </p>
+    </div>
+  </div>
+
   <div class="grid-row">
     <div class="column-full">
 
@@ -51,17 +59,13 @@
 
           <legend>
             <h2 class="heading-medium">
-              This record is made up in
+              Unit of measurement
             </h2>
           </legend>
 
           <div class="multiple-choice">
             <input id="radio-inline-1" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-1">Cubic litres</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="radio-inline-2" type="radio" name="radio-inline-group" value="">
-            <label for="radio-inline-2">Gallons</label>
+            <label for="radio-inline-1">Cubic metres</label>
           </div>
           <div class="multiple-choice">
             <input id="radio-inline-2" type="radio" name="radio-inline-group" value="" checked="checked">
@@ -71,6 +75,10 @@
             <input id="radio-inline-1" type="radio" name="radio-inline-group" value="">
             <label for="radio-inline-1">Megalitres</label>
           </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2" type="radio" name="radio-inline-group" value="">
+            <label for="radio-inline-2">Gallons</label>
+          </div>
         </fieldset>
       </div>
     </div>
@@ -78,7 +86,7 @@
 
   <legend>
     <h2 class="heading-medium">
-      Abstraction amounts
+      Abstraction amount
     </h2>
   </legend>
 
