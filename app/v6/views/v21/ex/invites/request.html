@@ -1,0 +1,63 @@
+{% extends "../../head.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Whose licences do you want to manage online? - GOV.UK ~
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-manage.html" %}
+
+  <!-- breadcrumbs -->
+  <div class="big-space">
+    <nav id="navigate">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v20/ex/manage">Manage your licences</a></li>
+          <li><a href="/v20/ex/invites/request.html">Access more licences</a></li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">Whose licences do you want to manage online?</h1>
+      <p>
+        We need the licence holder's email address so that we can ask their permission to share their licence information with you online.
+      </p>
+
+      <!-- form -->
+      <form class="medium-space">
+
+        <div class="form-group">
+          <label for="emails">
+            <fieldset class="small-space">
+              <span class="form-label">Enter the licence holder's email address</span>
+            </fieldset>
+          </label>
+          <textarea class="form-control form-control-3-4" name="licence_holder" rows="1" required ></textarea>
+        </div>
+
+        <!-- continue button -->
+        <a href="licences" class="button">Continue</a>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

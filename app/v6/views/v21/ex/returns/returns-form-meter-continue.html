@@ -1,0 +1,211 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-returns.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          Abstraction record for {{ pData.LicenceSerialNo }}
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          Abstraction record
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- meta data block -->
+  {% include "../../partials/return-external-meta.html" %}
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <legend>
+        <h2 class="heading-medium">
+          Meter readings
+        </h2>
+      </legend>
+
+      <div class="panel panel-border-wide">
+        Meter SN76451280
+        <br>
+        Initial reading
+        <!-- <br> -->
+        <!-- <span class="bold-small"> -->
+          00001112
+        <!-- </span> -->
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="april-amount">April</label>
+        <input class="form-control amount-input" id="april-amount" name="april-amount" type="text" value="0012635">
+      </div>
+      <p>
+        <!-- <a href="returns-add-meter?wid={{ query.wid }}">
+          Meter change
+        </a> -->
+      </p>
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">May</label>
+        <input class="form-control amount-input" id="may-amount" name="may-amount" type="text" value="0014756">
+      </div>
+
+      <div class="panel panel-border-wide">
+        Meter SN76451280
+        <br>
+        Final reading 00152129
+      </div>
+
+      <div id="new-meter" class="panel panel-border-wide">
+        Meter SN65236651
+        <br>
+        Initial reading 00000001
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">June</label>
+        <p>
+          <a href="returns-add-meter?wid={{ query.wid }}">
+            Meter change
+          </a>
+        </p>
+        <input class="form-control amount-input" id="june-amount" name="june-amount" type="text" value="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="first-name-2">July</label>
+        <p>
+          <a href="returns-add-meter?wid={{ query.wid }}">
+            Meter change
+          </a>
+        </p>
+        <input class="form-control amount-input" id="july-amount" name="july-amount" type="text" value="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">August</label>
+        <p>
+          <a href="returns-add-meter?wid={{ query.wid }}">
+            Meter change
+          </a>
+        </p>
+        <input class="form-control amount-input" id="august-amount" name="august-amount" type="text" value="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">September</label>
+        <p>
+          <a href="returns-add-meter?wid={{ query.wid }}">
+            Meter change
+          </a>
+        </p>
+        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">October</label>
+        <p>
+          <a href="returns-add-meter?wid={{ query.wid }}">
+            Meter change
+          </a>
+        </p>
+        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">November</label>
+        <p>
+          <a href="returns-add-meter?wid={{ query.wid }}">
+            Meter change
+          </a>
+        </p>
+        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">December</label>
+        <p>
+          <a href="returns-add-meter?wid={{ query.wid }}">
+            Meter change
+          </a>
+        </p>
+        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">January</label>
+        <p>
+          <a href="returns-add-meter?wid={{ query.wid }}">
+            Meter change
+          </a>
+        </p>
+        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">February</label>
+        <p>
+          <a href="returns-add-meter?wid={{ query.wid }}">
+            Meter change
+          </a>
+        </p>
+        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="last-name-2">March</label>
+        <p>
+          <a href="returns-add-meter?wid={{ query.wid }}">
+            Meter change
+          </a>
+        </p>
+        <input class="form-control amount-input medium-space" id="september-amount" name="september-amount" type="text" value="">
+      </div>
+
+    </div>
+  </div>
+
+  <a href="confirm-return?wid={{ query.wid }}" class="button">
+    Submit return
+  </a>
+
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

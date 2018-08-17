@@ -1,0 +1,426 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-returns.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          Abstraction record for {{ pData.LicenceSerialNo }}
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          Abstraction record
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- meta data block -->
+  {% include "../../partials/return-external-meta.html" %}
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <h3 class="heading-medium">
+        Confirm this return information
+      </h3>
+    </div>
+  </div>
+
+  <!-- table starts -->
+  <div class="table medium-space">                                          <!-- a table -->
+
+    <div class="table-row table-head">                                      <!-- the table head -->
+      <div class="table-cell bold-small column-33">
+        Months
+      </div>
+      <div class="table-cell bold-small column-33 numbers">
+        Gallons
+      </div>
+      <div class="table-cell bold-small column-33 numbers">
+        Cubic metres
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          April
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        April
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        47,073,419,136
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        2,140
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          May
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        May
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        465,894,867,897
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        2,118
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          June
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        June
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        794,968,863,353
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        3,614
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          July
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        July
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        877,897,269,962
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        3,991
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          August
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        August
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        926,290,504,587
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        4,211
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          September
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        September
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        669,806,361,071
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        3,045
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          October
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        October
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        0
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        0
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          November
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        November
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        0
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        0
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          December
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        December
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        0
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        0
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          January
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        January
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        0
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        0
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          February
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        February
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        0
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        0
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h4 class="sr-only">
+          March
+        </h4>
+        <h5 class="context">
+          Month
+        </h5>
+        March
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        0
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Cubic metres
+        </h5>
+        0
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h4 class="sr-only">
+          Total row
+        </h4>
+        <h5 class="bold-small">
+          Total
+        </h5>
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Gallons
+        </h5>
+        <span class="bold-small">
+          420,559,205,823
+        </span>
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Total
+        </h5>
+        <span class="bold-small">
+          19,119
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="notice big-space">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Warning</span>
+        </i>
+        <strong class="bold-small">
+          You are about to submit return information and will be liable for the information you provide. Please check and confirm the information you have provided.
+        </strong>
+      </div>
+    </div>
+  </div>
+
+  <a href="return-submitted?wid={{ query.wid }}" class="button">
+    Confirm this return information
+  </a>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

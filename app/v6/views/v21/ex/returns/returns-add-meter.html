@@ -1,0 +1,86 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-returns.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          Abstraction record for {{ pData.LicenceSerialNo }}
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          Abstraction record
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- meta data block -->
+  {% include "../../partials/return-external-meta.html" %}
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h3 class="heading-medium">
+        Add a meter to this return
+      </h3>
+
+      <div class="form-group">
+        <label class="form-label" for="start-reading">Last meter SN76451280 end reading</label>
+        <input class="form-control medium-space" id="start-reading" name="start-reading" type="text" value="">
+
+        <label class="form-label" for="meter-make-2">Manufacturer used</label>
+        <input class="form-control small-space" id="meter-make-2" name="meter-make-2" type="text" value="">
+
+        <label class="form-label" for="meter-serial-2">Serial number</label>
+        <input class="form-control small-space" id="meter-serial-2" name="meter-serial-2" type="text" value="">
+
+        <label class="form-label" for="start-reading-2">New meter start reading</label>
+        <input class="form-control small-space" id="start-reading-2" name="start-reading-2" type="text" value="">
+      </div>
+
+      <a href="returns-form-meter-continue?wid={{ query.wid }}#new-meter" class="button">
+        Continue
+      </a>
+
+    </div>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

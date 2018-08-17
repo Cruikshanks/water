@@ -1,0 +1,35 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  XML file uploaded  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-returns.html" %}
+
+
+  <!-- confirmation panel -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h2 class="heading-large tight">
+          XML file uploaded
+        </h2>
+        <p class="font-medium">
+          You will be able to view it in 30 days
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

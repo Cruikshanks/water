@@ -1,0 +1,281 @@
+{% extends "../ar/head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Review licence data - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-ar-view.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        View licences
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <label class="form-label form-label" for="licenceSearch">Search for a licence</label>
+      <span class="form-hint">Search by registered email address or licence number</span>
+
+      <div class="flexy">
+        <input type="text" class="form-control form-control--block column-two-thirds" />
+        <div class="column-one-third search-button">
+          <a href="licences-list" class="button">Search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- flextable function -->
+  <div class="grid-row medium-space">
+    <div class="column-full">
+
+
+      <div class="table" id="licences-as-tasks">                                <!-- table starts -->
+
+        <div class="table-row table-head">                                      <!-- tablehead starts -->
+
+          <div class="table-cell bold-small">
+            <a href="#" aria-label="Sort by licence number">
+              Licence number
+            </a>
+          </div>
+          <div class="table-cell bold-small" id="ar-name-column">
+            <a href="#" aria-label="Sort by licence number">
+              Last editor
+            </a>
+          </div>
+          <!-- <div class="table-cell bold-small">
+            Contact information
+          </div> -->
+          <div class="table-cell bold-small">
+            <a href="#" aria-label="Sort by licence number">
+              Last edit
+            </a>
+          </div>
+          <div class="table-cell bold-small" id="ar-status-column">
+            <a href="#" aria-label="Sort by licence number">
+              Status
+              <span class="sort-icon"> &#x25be;</span>
+            </a>
+          </div>
+        </div>                                                                  <!-- tablehead ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+
+            <h2 class="faux-link">
+              <a href="/v17/admin/ar-task?wid=1">
+                {{ permits[1].LicenceSerialNo }}
+              </a>
+            </h2>
+
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last editor
+            </label>
+            J Mipps
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last edited
+            </label>
+            2 July 2018
+          </div>
+          <div class="table-cell status-column center">
+            <strong class="task-completed open-task hang-left">
+              In progress
+            </strong>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="/v17/admin/ar-admin-task?wid=2">
+                {{ permits[2].LicenceSerialNo }}
+              </a>
+            <h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last editor
+            </label>
+            Celeste Fishood
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last edited
+            </label>
+            1 July 2018
+          </div>
+          <div class="table-cell status-column center">
+            <strong class="task-completed not-completed hang-left">
+              For NALD approval
+            </strong>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="/v17/admin/ar-task?wid=3">
+                {{ permits[3].LicenceSerialNo }}
+              </a>
+            </h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last editor
+            </label>
+            Ben Jucks
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last edited
+            </label>
+            12 July 2018
+          </div>
+          <div class="table-cell status-column center">
+            <strong class="task-completed not-completed hang-left">
+              For NALD approval
+            </strong>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="/v17/admin/ar-task?wid=4">
+                {{ permits[4].LicenceSerialNo }}
+              </a>
+            </h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last editor
+            </label>
+            J Mipps
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last edited
+            </label>
+            16 June 2018
+          </div>
+          <div class="table-cell status-column center">
+            <strong class="task-completed not-completed hang-left">
+              For NALD approval
+            </strong>
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="/v17/admin/ar-task?wid=5">
+                {{ permits[5].LicenceSerialNo }}
+              </a>
+            </h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last editor
+            </label>
+            <!-- no editor -->
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last edited
+            </label>
+
+          </div>
+          <div class="table-cell status-column center">
+
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="/v17/admin/ar-task?wid=6">
+                {{ permits[6].LicenceSerialNo }}
+              </a>
+            </h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last editor
+            </label>
+            J Mipps
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Last edited
+            </label>
+            31 May 2018
+          </div>
+          <div class="table-cell status-column center">
+            <!-- <strong class="task-completed hang-left">
+              Completed
+            </strong> -->
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        </div>                                                                    <!-- table ends -->
+
+    </div>
+  </div>
+
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+  <script>
+    $(function() {
+
+      var ctrlKey = false;
+
+      $(window).keydown(function(ev){
+        if(ev.ctrlKey || ev.keyCode === 224 || ev.keyCode === 17 || ev.keyCode === 91 || ev.keyCode === 93) {
+          ctrlKey = true;
+        }
+      });
+
+      $(window).keyup(function(){
+        ctrlKey = false;
+      });
+
+      $('a').parents('.table-row').addClass('clickable');
+
+      // Click on licence list clicks inner link
+      $('.table-row').on('click', function (ev) {
+        var href = $(this).find('a:first').attr('href');
+        console.log(ctrlKey);
+        ctrlKey ? window.open.blur(href) : window.location.href = href;
+        window.focus();
+        // window.location.href = $(this).find('a:first').attr('href');
+        $(this).addClass('active');
+        ev.preventDefault();
+      });
+    });
+  </script>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-returns.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          Abstraction record for {{ pData.LicenceSerialNo }}
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          Abstraction record
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- meta data block -->
+  {% include "../../partials/return-external-meta.html" %}
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h3 class="heading-medium">
+        Tell us about your meter
+      </h3>
+
+      <div class="form-group">
+        <label class="form-label" for="meter-make">Manufacturer used</label>
+        <input class="form-control small-space" id="meter-make" name="meter-make" type="text" value="">
+
+        <label class="form-label" for="meter-serial">Serial number</label>
+        <input class="form-control small-space" id="meter-serial" name="meter-serial" type="text" value="">
+
+        <label class="form-label" for="start-reading">Abstraction period start reading</label>
+        <input class="form-control" id="start-reading" name="start-reading" type="text" value="">
+      </div>
+
+      <p>
+        If you used more than one meter you can tell us about this in the returns form.
+      </p>
+
+    </div>
+  </div>
+
+  <a href="returns-form-meter?wid={{ query.wid }}" class="button">
+    Continue
+  </a>
+
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "../ex/head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Give access to view your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-ex-manage.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        Give access to your licences
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full medium-space">
+
+      <div class="form-group">
+        <label class="form-label" for="full-name-f1">
+          Enter their email address and we will send them a link to create an account.
+        </label>
+        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+      </div>
+
+      <div class="multiple-choice">
+        <input type="checkbox">
+        <label aria-label="Can do returns">
+          I allow them to manage my returns
+        </label>
+      </div>
+    </div>
+    <div class="column-full">
+      <a class="button" href="access" role="button">
+        Give access
+      </a>
+    </div>
+  </div>
+
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}

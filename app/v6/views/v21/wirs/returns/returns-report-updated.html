@@ -1,0 +1,528 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-wirs-returns.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds small-space">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h1 class="sub-head">
+          <a href="returns">Abstraction return for {{ pData.LicenceSerialNo }}</a>
+        </h1>
+        <h2 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h2>
+      {% else %}
+        <h2 class="sub-head">
+          <a href="returns">Abstraction return</a>
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="small-space">
+    <dl>
+      <dt class="meta-label">
+        NALD reference
+      </dt>
+      <dd class="meta-description">
+        65432123
+      </dd>
+      <dt class="meta-label">
+        Region
+      </dt>
+      <dd class="meta-description">
+        Anglia
+      </dd>
+      <dt class="meta-label">
+        Site description
+      </dt>
+      <dd class="meta-description">
+        Great Ouse at Bedford College (Heat pump - cooling only)
+      </dd>
+      <dt class="meta-label">
+        Purpose
+      </dt>
+      <dd class="meta-description">
+        {{ pData.Purpose1 }}
+      </dd>
+      <dt class="meta-label">
+        Return period
+      </dt>
+      <dd class="meta-description">
+        May 2018 to June 2018
+      </dd>
+    </dl>
+  </div>
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- detect nill return -->
+  {% if pData.NilReturn %}
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h3 class="heading-xlarge">
+          Nil return
+        </h3>
+        <div class="big-space">
+          <a href="returns-report-return?wid={{ query.wid }}" class="button">Edit return</a>
+        </div>
+      </div>
+    </div>
+
+  {% else %}
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h3 class="heading-medium small-space">
+          Abstraction amounts
+        </h3>
+        <div class="big-space">
+          <a href="returns-form?wid={{ query.wid }}" class="button">Edit return</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- table starts -->
+    <div class="table medium-space">                                          <!-- a table -->
+
+      <div class="table-row table-head">                                      <!-- the table head -->
+        <div class="table-cell bold-small column-33">
+          Months
+        </div>
+        <div class="table-cell bold-small column-33 numbers">
+          Litres
+        </div>
+        <div class="table-cell bold-small column-33 numbers">
+          Cubic metres
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            April
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          April
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          12,340
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          12.34
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            May
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          May
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          9,720
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          9.72
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            June
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          June
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          10,040
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          10.04
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            July
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          July
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          17,120
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          17.12
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            August
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          August
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          2,007
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          2.00
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            September
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          September
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          0
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          0
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            October
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          October
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          0
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          0
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            November
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          November
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          0
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          0
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            December
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          December
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          0
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          0
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            January
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          January
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          0
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          0
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            February
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          February
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          0
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          0
+        </div>
+      </div>
+
+      <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+        <div class="table-cell">
+          <h4 class="sr-only">
+            March
+          </h4>
+          <h5 class="context">
+            Month
+          </h5>
+          March
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Litres
+          </h5>
+          0
+        </div>
+        <div class="table-cell numbers">
+          <h5 class="context">
+            Cubic metres
+          </h5>
+          0
+        </div>
+      </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h4 class="sr-only">
+          Total row
+        </h4>
+        <h5 class="bold-small">
+          Total
+        </h5>
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Litres
+        </h5>
+        <span class="bold-small">
+          94,400
+        </span>
+      </div>
+      <div class="table-cell numbers">
+        <h5 class="context">
+          Total
+        </h5>
+        <span class="bold-small">
+          94.40
+        </span>
+      </div>
+    </div>
+  </div>
+
+    <div class="grid-row medium-space">
+      <div class="column-two-thirds versions">
+        <h3 class="heading-medium">
+          Comments
+        </h3>
+        <div class="panel panel-border-wide">
+          <p>
+            Last year abstraction was around 30% use. This year use is up to 90%. We should flag this for EOs.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  {% endif %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds versions">
+      <h3 class="heading-medium">
+        Submitted by
+      </h3>
+
+      <div class="panel panel-border-wide this-version version">
+        <p class="version spaceless selected">
+          <span class="sr-only">This version</span>
+          andrea.whittard@environment-agency.gov.uk<br>
+          <a href="returns-report?wid={{ query.wid }}">30 September 2018</a><br>
+        </p>
+      </div>
+      <div class="version">
+        <p class="spaceless">
+          jan.fizbold@abstraction-bros.co.uk<br>
+          <a href="returns-report-version?wid={{ query.wid }}">11 September 2018</a><br>
+        </p>
+      </div>
+      <div class="version">
+        <p class="spaceless">
+          lee.minko@environment-agency.gov.uk<br>
+          <a href="returns-report-version?wid={{ query.wid }}">02 September 2018</a><br>
+        </p>
+      </div>
+      <div class="version">
+        <p class="spaceless">
+          desmond.yukoob@abstraction-bros.co.uk<br>
+          <a href="returns-report-version?wid={{ query.wid }}">30 August 2018</a><br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+<script>
+  $(function() {
+
+    $('a').parents('.version').addClass('clickable');
+
+  // Click on licence list clicks inner link
+    $('.version').on('click', function (ev) {
+      window.location.href = $(this).find('a:first').attr('href');
+      $(this).addClass('active');
+      ev.preventDefault();
+    });
+  });
+</script>
+
+{% endblock %}

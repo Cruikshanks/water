@@ -1,0 +1,104 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-br-view.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          Abstraction return for {{ pData.LicenceSerialNo }}
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          Abstraction return
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- meta data block -->
+  {% include "../../partials/return-internal-meta.html" %}
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="form-group">
+
+        <form>
+
+          <fieldset>
+            <legend>
+              <h2 class="heading-medium">
+                What units does your meter use?
+              </h2>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="amounts-in-cubic-metres" type="radio" name="amount-unit" value="1" />
+              <label for="amounts-in-cubic-metres">cubic metres</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="amounts-in-litres" type="radio" name="amount-unit" value="3" />
+              <label for="amounts-in-litres">litres</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="amounts-in-megalitres" type="radio" name="amount-unit" value="4" />
+              <label for="amounts-in-megalitres">megalitres</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="amounts-in-gallons" type="radio" name="amount-unit" value="2" />
+              <label for="amounts-in-gallons">gallons</label>
+            </div>
+          </fieldset>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+  <a href="returns-form-meter?wid={{ query.wid }}" class="button">
+    Continue
+  </a>
+
+
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

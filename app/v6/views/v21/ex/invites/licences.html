@@ -1,0 +1,63 @@
+{% extends "../../head.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Which licences do you want to manage? - GOV.UK ~
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-manage.html" %}
+
+  <!-- breadcrumbs -->
+  <div class="big-space">
+    <nav id="navigate">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ol role="breadcrumbs">
+          <li><a href="/v20/ex/manage">Manage your licences</a></li>
+          <li><a href="/v20/ex/invites/request.html">Access more licences</a></li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+
+  <!-- back -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">Which licences do you want to manage?</h1>
+      <p>
+        Enter the water abstraction licence numbers you want permission to view online. We'll include these in the email request we send to <span class="bold">john.waters@gmail.com</span>.
+      </p>
+
+      <!-- form -->
+      <form class="medium-space">
+
+        <div class="form-group">
+          <label for="emails">
+            <fieldset class="small-space">
+              <h2><span class="form-label">Enter the licence numbers you want to manage online</span></h2>
+              <span class="form-hint">You can separate the licence numbers using spaces, commas, or by entering them on different lines.</span>
+            </fieldset>
+          </label>
+          <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="4" required ></textarea>
+        </div>
+
+        <a href="confirmation" class="button">Continue</a>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

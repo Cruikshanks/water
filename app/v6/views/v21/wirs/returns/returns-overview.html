@@ -1,0 +1,314 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Your abstraction returns - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-wirs-returns.html" %}
+
+  <!-- back -->
+  <div class="medium-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Regions</a>
+  </div>
+
+  <h1 class="heading-large big-space">
+    Anglia returns
+  </h1>
+
+  <div class="medium-space return-summary">
+
+    <h2 class="bold-medium small-space">
+      Unreleased cycles
+    </h2>
+
+    <!-- table with four columns -->
+    <div class="table small-space">                                     <!-- a table -->
+
+      <div class="table-row table-head">
+        <div class="table-cell bold-small column-40">
+          Period
+        </div>
+        <div class="table-cell bold-small column-20 numbers">
+          Returns due
+        </div>
+        <div class="table-cell bold-small column-15 numbers">
+          Monthly
+        </div>
+        <div class="table-cell bold-small column-15 numbers">
+          Weekly
+        </div>
+        <div class="table-cell bold-small column-10 numbers">
+          Daily
+        </div>
+      </div>
+
+      <div class="table-row" id="summary-table">
+        <div class="table-cell">
+          <h3 class="sr-only">
+            Row 1
+          </h3>
+          <h4 class="context">
+            Period
+          </h4>
+            November 2018 to October 2018
+        </div>
+        <div class="table-cell numbers">
+          <h4 class="context">
+            Returns due
+          </h4>
+          427
+        </div>
+        <div class="table-cell numbers">
+          <h4 class="context">
+            Monthly
+          </h4>
+          304
+        </div>
+        <div class="table-cell numbers">
+          <h4 class="context">
+            Weekly
+          </h4>
+          108
+        </div>
+        <div class="table-cell numbers">
+          <h4 class="context">
+            Daily
+          </h4>
+          15
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid-row small-space">
+      <div class="column-two-thirds">
+        <a href="">Download CSV file</a>
+      </div>
+    </div>
+
+    <div class="grid-row big-space">
+      <div class="column-two-thirds">
+        <a href="" class="button">
+          Activate this return cycle
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="bold-medium small-space">
+    Previous cycles
+  </h2>
+
+  <!-- table with five columns -->
+  <div class="table">
+
+    <div class="table-row table-head">
+      <div class="table-cell bold-small column-40">
+        Period
+      </div>
+      <div class="table-cell bold-small column-15 numbers">
+        Monthly
+      </div>
+      <div class="table-cell bold-small column-15 numbers">
+        Weekly
+      </div>
+      <div class="table-cell bold-small column-15 numbers">
+        Daily
+      </div>
+      <div class="table-cell bold-small column-15 numbers">
+        Status
+      </div>
+    </div>
+
+    <div class="table-row">
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 1
+        </h3>
+        <h4 class="context">
+          Period
+        </h4>
+        <a href="returns-summary">April 2017 to March 2018</a>
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Monthly
+        </h4>
+        347
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Weekly
+        </h4>
+        114
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Daily
+        </h4>
+        59
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Returns due
+        </h4>
+        98%
+      </div>
+    </div>
+
+    <div class="table-row">
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 2
+        </h3>
+        <h4 class="context">
+          Period
+        </h4>
+        <a href="returns-summary">November 2016 to October 2017</a>
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Monthly
+        </h4>
+        476
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Weekly
+        </h4>
+        312
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Daily
+        </h4>
+        51
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Returns due
+        </h4>
+        99%
+      </div>
+    </div>
+
+    <div class="table-row">
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 3
+        </h3>
+        <h4 class="context">
+          Period
+        </h4>
+        <a href="returns-summary">April 2016 to March 2017</a>
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Monthly
+        </h4>
+        344
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Weekly
+        </h4>
+        110
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Daily
+        </h4>
+        62
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Returns due
+        </h4>
+        100%
+      </div>
+    </div>
+
+    <div class="table-row last-row">
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 2
+        </h3>
+        <h4 class="context">
+          Period
+        </h4>
+        <a href="returns-summary">November 2015 to October 2016</a>
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Monthly
+        </h4>
+        341
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Weekly
+        </h4>
+        109
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Daily
+        </h4>
+        61
+      </div>
+      <div class="table-cell numbers">
+        <h4 class="context">
+          Returns due
+        </h4>
+        99%
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+<script>
+  $(function() {
+
+    var ctrlKey = false;
+
+    $(window).keydown(function(ev){
+      if(ev.ctrlKey || ev.keyCode === 224 || ev.keyCode === 17 || ev.keyCode === 91 || ev.keyCode === 93) {
+        ctrlKey = true;
+      }
+    });
+
+    $(window).keyup(function(){
+      ctrlKey = false;
+    });
+
+    $('a').parents('.table-row').addClass('clickable');
+
+    // Click on licence list clicks inner link
+    $('.table-row').on('click', function (ev) {
+      var href = $(this).find('a:first').attr('href');
+      console.log(ctrlKey);
+      ctrlKey ? window.open.blur(href) : window.location.href = href;
+      window.focus();
+      // window.location.href = $(this).find('a:first').attr('href');
+      $(this).addClass('active');
+      ev.preventDefault();
+    });
+  });
+</script>
+
+{% endblock %}

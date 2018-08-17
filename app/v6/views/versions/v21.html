@@ -1,0 +1,205 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Manage your water abstraction or impoundment licence online prototype — GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class='column-two-thirds'>
+
+      <h1 class="heading-xlarge">
+        Manage your water abstraction or impoundment licence online prototype
+      </h1>
+
+      <h2 class="heading-medium">Prototype version 21</h2>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class='column-two-thirds'>
+
+      <h3 class="heading-small">Manage access</h3>
+
+      <ul class="list list-bullet">
+
+        <li><a href="/v21/ex/access">Manage access view</a></li>
+        <li><a href="/v21/ex/give-access">Give access</a></li>
+        <li><a href="/v21/ex/access-change">Change access view</a></li>
+        <li><a href="/v21/ex/access-remove-confirm">Confirm remove access</a></li>
+        <li><a href="/v21/ex/access-removed">Access removed</a></li>
+      </ul>
+
+      <h3 class="heading-small">Roles</h3>
+
+      <ul class="list list-bullet">
+
+        <li><a href="/v21/br/licences">Billing & Returns</a></li>
+        <li><a href="/v21/wirs/licences">WIRS</a></li>
+        <li><a href="/v21/eo/licences">Environment Officers</a></li>
+        <li><a href="/v21/ar/licences?wid=1">Abstraction Reform</a></li>
+        <li><a href="/v21/ar/ar-admin-task?wid=1">Abstraction Reform Admin</a></li>
+        <li><a href="/v21/ex/licences">External user</a></li>
+      </ul>
+
+      <h3 class="heading-small">Registration for returns</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v21/ex/returns-registration/start">Start page for returns</a></li>
+        <li><a href="/v21/signup/give-email">Tell us your email address</a></li>
+        <li><a href="/v21/signup/check-email">Check your email</a></li>
+        <li><a href="/v21/ex/returns-registration/create-password">Create a password for your online account</a></li>
+        <li><a href="/v21/ex/returns-registration/return-routing">Routing for returns</a></li>
+        <li><a href="/v21/ex/returns-registration/use-code">Use the code</a></li>
+        <li><a href="/v21/ex/returns-registration/added-licences">Select licences</a></li>
+        <li><a href="/v21/ex/returns/returns-list">Your returns</a></li>
+      </ul>
+
+      <h3 class="heading-small">Upload returns XML</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/ex/returns/returns-list?wid=1">Returns list link to upload XML</a></li>
+        <li><a href="/v20/ex/returns/returns-xml">Upload XML UI</a></li>
+        <li><a href="/v20/ex/returns/xml-done">XML uploaded (confirmation view)</a></li>
+      </ul>
+
+      <h3 class="heading-small">Roles information architecture</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/roles">Internal roles navigation</a></li>
+      </ul>
+
+      <h3 class="heading-small">Billing & returns, returns</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/br/returns/returns-region">Returns regions (the returns tab)</a></li>
+        <li><a href="/v20/br/returns/returns-overview">Returns overview for a region</a></li>
+        <li><a href="/v20/br/returns/returns-summary">Returns summary</a></li>
+      </ul>
+
+      <h3 class="heading-small">Returns for a licence</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/br/online-licence-return-due?wid=32">Links to returns for a licence</a></li>
+        <li><a href="/v20/br/returns/returns?wid=32">View past returns for a licence</a></li>
+      </ul>
+
+      <h3 class="heading-small">Improvements to registration</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/ex/start-option">Starting options</a></li>
+        <li><a href="/v20/ex/signup/start">Start to register</a></li>
+        <li><a href="/v20/ex/signup/give-email">Tell us your email address</a></li>
+      </ul>
+
+      User gets an email…<br><br>
+      they could see something like this:<br>
+      <ul class="list list-bullet">
+        <!-- <li><a href="/v20/ex/registration/create-password">Create a password for your online account</a></li> -->
+        <li><a href="/v20/ex/registration/security-options">How do you want to confirm your identity</a></li>
+        <li><a href="/v20/ex/registration/security-options">Call our team to confirm your identity</a></li>
+      </ul>
+
+      This is what we have right now…<br>
+      <ul class="list list-bullet">
+        <li><a href="/v20/ex/registration/create-password">Create a password for your online account</a></li>
+        <li><a href="/v20/ex/registration/licence-number">Add licences</a></li>
+        <li><a href="/v20/ex/registration/select-licences">Select licences</a></li>
+        <li><a href="/v20/ex/registration/choose-address">Choose address for code</a></li>
+        <li><a href="/v20/ex/registration/fao">Optional FAO</a></li>
+        <li><a href="/v20/ex/registration/post-confirm">Letter sent</a></li>
+      </ul>
+
+      <h3 class="heading-small">An internal person can see past returns and submit returns data</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/br/online-licence?wid=32">A licence with returns</a></li>
+        <li><a href="/v20/br/returns/returns-report?wid=33">A returns report</a></li>
+        <li><a href="/v20/br/returns/returns-report?wid=43">A 'Nil returns' report</a></li>
+        <li><a href="/v20/br/returns/returns-form-edit?wid=33">An internal user can edit a return</a></li>
+        <li><a href="/v20/br/returns/returns-report-updated?wid=33">An updated return (complience flag)</a></li>
+        <li><a href="/v20/br/online-licence-return-due?wid=32">Internal view of a licence with a return due</a></li>
+        <li><a href="/v20/br/returns/returns-route-return?wid=32">Say whether there is data for a return</a></li>
+        <li><a href="/v20/br/returns/confirm-no-return?wid=43">Confirming a nil return</a></li>
+        <li><a href="/v20/br/returns/returns-route-unit?wid=32">Select units for this return</a></li>
+        <li><a href="/v20/br/returns/returns-form-amounts?wid=32">An internal user can add return amounts</a></li>
+        <li><a href="/v20/br/returns/return-submitted?wid=32">Thank you for your return, a confirmation</a></li>
+      </ul>
+
+      <h3 class="heading-small">Returns MVP (external)</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/ex/licences">Licences with alert for due returns</a></li>
+        <li><a href="/v20/ex/returns/returns-list?wid=32">Returns view</a></li>
+        <li><a href="/v20/ex/returns/returns-report-edited?wid=32">A historical and edited returns report</a></li>
+        <li><a href="/v20/ex/returns/returns-route-return?wid=33">Routing to see if there is any returns information</a></li>
+        <li><a href="/v20/ex/returns/returns-route-unit?wid=33">Routing returns units</a></li>
+        <li><a href="/v20/ex/returns/returns-form-amounts?wid=33">Making a return</a></li>
+        <li><a href="/v20/ex/returns/confirm-return?wid=33">Confirming a return</a></li>
+        <li><a href="/v20/ex/returns/return-submitted?wid=33">Return submitted</a></li>
+        <li><a href="/v20/ex/returns/returns-report?wid=33">The returns report</a></li>
+        <li><a href="/v20/ex/returns/returns-nil-return?wid=43">Tell us about your nil return</a></li>
+        <li><a href="/v20/ex/returns/confirm-no-return?wid=43">Confirming a nil return</a></li>
+        <li><a href="/v20/ex/returns/returns-report?wid=43">A nil returns report</a></li>
+      </ul>
+
+      <h3 class="heading-small">Licence access</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/ex/manage">User manage view</a></li>
+        <li><a href="/v20/ex/access">Share access to returns</a></li>
+        <li><a href="/v20/ex/give-access">Give licence access</a></li>
+        <li><a href="/v20/ex/access-removed">Access to licences removed</a></li>
+      </ul>
+
+      <h3 class="heading-small">Licence versions</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/br/online-licence-version?wid=5">An old licence version</a></li>
+      </ul>
+
+      <h3 class="heading-small">Notification improvements</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/br/manage">Internal manage view</a></li>
+        <li><a href="/v20/br/contact-role">The first time an EO fills creates a notification</a></li>
+        <li><a href="/v20/br/contact-information">The first time an EO fills creates a notification - 2nd step</a></li>
+        <!-- <li><a href="/v20/br/contact-information2">The next time an EO fills creates a notification</a></li> -->
+      </ul>
+
+      <h3 class="heading-small">River levels and flows</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v20/ex/online-licence?wid=1">A licence with a linked gauging station</a></li>
+        <li><a href="/v20/ex/licence/gauging-station?wid=1">Gauging station linked to a licence</a></li>
+        <li><a href="/v20/ex/licence/gauging-station-graph?wid=1">Last 7 days data for gauging station</a></li>
+        <li><a href="/v20/ex/licence/gauging-station?wid=4">Gauging station with no data</a></li>
+        <li><a href="/v20/ex/licence/conditions?wid=1">Licence conditions referring to a linked gauging station</a></li>
+      </ul>
+
+      <div class="column-third">
+        <aside class="related">
+
+          <h3 class="heading-small">
+            UI patterns
+          </h3>
+          <div role="navigation">
+            <ul>
+              <li>
+                <a href="/v20/patterns/tables">
+                  Mobile optimised tables
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  {% endblock %}

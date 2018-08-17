@@ -1,0 +1,38 @@
+{% extends "../ex/head-signedin.html" %}
+
+{% block page_title %}
+  Access removed - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-ex-manage.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        You are about to remove access
+      </h1>
+
+      <div class="grid-row">
+        <div class="column-two-thirds medium-space">
+          <p>This will remove access to licence information for <span class="bold-small">mark.turny@aquafall.com</span>.</p>
+          <p>They will not be notified about this change.</p>
+
+          <a href="/v20/ex/access-removed" class="button">Remove access</a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

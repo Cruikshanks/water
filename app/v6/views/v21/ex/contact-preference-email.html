@@ -1,0 +1,50 @@
+{% extends "../ex/head-signedin.html" %}
+
+{% block page_title %}
+  Choose how we contact you - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- back -->
+  <div class="small-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        <legend>
+          <h1 class="heading-large">
+            How would you prefer us to contact you about your licence?
+          </h1>
+        </legend>
+
+        <p>
+          We will use this method to send you notifications if possible. We are in the process of updating our IT systems, so you may still receive communication by other methods too.
+        </p>
+
+        <div class="medium-space">
+          <label class="form-label" for="contact-email">
+            <div class="bold-small">
+              Email address
+            </div>
+          </label>
+          <input class="form-control" name="contact-email" id="contact-email" type="text">
+        </div>
+
+        <a href="licences-contact-email" class="button">
+          Use this email
+        </a>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

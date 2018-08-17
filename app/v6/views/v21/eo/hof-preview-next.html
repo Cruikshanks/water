@@ -1,0 +1,148 @@
+{% extends "./head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-eo-manage.html" %}
+
+  <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large tight">
+        Check and confirm your hands off flow notice
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="medium-space">
+        <p>
+          You’re about to send this notification to <span class="bold-small">6 licence holders</span> regarding <span class="bold-small">8 licences</span> linked to <span class="bold-small">Shuthonger</span>.
+        </p>
+      </div>
+
+
+      <div class="medium-space">
+
+        <!-- navigation block -->
+        <nav class=" medium-space page-numbers-container page-navigation" aria-label="Pagination">
+          <div class="previous">
+            <a href="hof-preview" rel="prev">
+              Previous notice
+            </a>
+          </div>
+          <div class="next">
+            <a href="hof-preview-next" rel="next">
+              Next notice
+            </a>
+          </div>
+        </nav>
+
+        <div class="notification">
+          <p class="lede">
+            Our reference: SAMPLE
+          </p>
+
+          <p>
+            Date: 31 May 2018
+          </p>
+
+          <p>
+            Water Resources Act 1991
+          </p>
+
+          <p>
+            Dear licence holder,
+          </p>
+
+          <p>
+            We need to enforce the hands off flow condition of your licences because river levels are very low.
+          </p>
+
+          <p>
+            <span class="bold-small">
+              Why you are receiving this notification
+            </span><br>
+            You have a ‘hands off flow’ condition in your water abstraction licences. That condition authorises and restricts how much water you can abstract when the flow in the relevant watercourse has fallen below a certain level.
+          </p>
+
+          <p>
+            The effect that the condition has on your abstraction is explained in your licences. You must comply with this condition and you should contact us if you are not sure how your abstraction will be affected.
+          </p>
+
+          <p>
+            <span class="bold-small">
+              What happens next
+            </span><br>
+            We will write to you again when the watercourse level is high enough for you to abstract without the hands off flow restriction, if the other conditions of your licences allow this.
+          </p>
+
+          <p>
+            <span class="bold-small">
+              How to contact us
+            </span><br>
+            If you have any questions about this notification, please contact Tim Teace on 01234 567 890.
+          </p>
+
+          <p>
+            Yours faithfully Tim Teace,<br>
+            <span class="bold-small">
+              Area Officer at the Environment Agency
+            </span>
+          </p>
+
+          <p>
+            <span class="bold-small">
+              Your hands off flow details
+            </span><br>
+            Watercourse: Shuthonger Gauging station<br>
+            Flow restriction threshold: <span class="bold-small">0.2m³/s</span>
+          </p>
+
+          <span class="bold-small">
+            Effect of restriction
+          </span><br>
+            Licence number: <span class="bold-small">03/28/01/0203</span>
+          </p>
+
+          <p>
+            The river at the <span class="bold-small">Shuthonger</span> gauging station has flow of <span class="bold-small">0.123m³/s</span>.
+          </p>
+
+          <p>
+            Please refer to the paper copy of your licence to check this flow against your relevant conditions.
+          </p>
+        </div>
+
+        <!-- <div class="small-space"></div> -->
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-one-third">
+
+      <div>
+        <a href="hof-sent" id="submitButton" class="button button" type="submit">Send notification</a>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

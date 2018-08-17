@@ -1,0 +1,272 @@
+{% extends "../head-signedin.html" %}
+
+{% block page_title %}
+  Returns for {{ pData.LicenceSerialNo }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-wirs-returns.html" %}
+
+  <!-- back -->
+  <div class="medium-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Licence number {{pData.LicenceSerialNo}}</a>
+  </div>
+
+  <!-- page heading -->
+  {% if pData.LicenceName %}
+    <!-- page title -->
+    <h1 class="heading-large medium-space">
+      <span class="heading-secondary">
+        Licence number {{pData.LicenceSerialNo}}
+      </span>
+      Returns for {{ pData.LicenceName }}
+    </h1>
+  {% else %}
+    <h1 class="heading-large">Returns for {{ pData.LicenceSerialNo }}</h1>
+  {% endif %}
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <!-- table with four columns -->
+      <div class="table">                                                       <!-- a table -->
+
+        <div class="table-row table-head">                                      <!-- the table head -->
+          <div class="table-cell bold-small column-33">
+            Return period
+          </div>
+          <div class="table-cell bold-small">
+            Purpose
+          </div>
+          <div class="table-cell bold-small">
+            Amount
+          </div>
+          <div class="table-cell bold-small column-15">
+            Status
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-route-return?wid=32">
+              April 2018 to March 2019
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Total reported
+            </h3>
+            <!-- total abstracted -->
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <strong class="task-completed open-task badge">
+              Return due
+            </strong>
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-report?wid=32">
+              April 2017 to March 2018
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Total reported
+            </h3>
+            10,0105 gallons
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <!-- <strong class="task-completed open-task badge">
+              Return due
+            </strong> -->
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-report?wid=32">
+              April 2016 to March 2017
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Total reported
+            </h3>
+            9,942 gallons
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <!-- <strong class="task-completed open-task badge">
+              Return due
+            </strong> -->
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-report?wid=32">
+              April 2015 to March 2016
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Total reported
+            </h3>
+            8,175 gallons
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <!-- <strong class="task-completed open-task badge">
+              Return due
+            </strong> -->
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-report?wid=32">
+              April 2014 to March 2015
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Total reported
+            </h3>
+            7,781 gallons
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <!-- <strong class="task-completed open-task badge">
+              Return due
+            </strong> -->
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+
+</main>
+
+{% endif %}
+{% endfor %}
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+<script>
+  $(function() {
+
+    var ctrlKey = false;
+
+    $(window).keydown(function(ev){
+      if(ev.ctrlKey || ev.keyCode === 224 || ev.keyCode === 17 || ev.keyCode === 91 || ev.keyCode === 93) {
+        ctrlKey = true;
+      }
+    });
+
+    $(window).keyup(function(){
+      ctrlKey = false;
+    });
+
+    $('a').parents('.table-row').addClass('clickable');
+
+    // Click on licence list clicks inner link
+    $('.table-row').on('click', function (ev) {
+      var href = $(this).find('a:first').attr('href');
+      console.log(ctrlKey);
+      ctrlKey ? window.open.blur(href) : window.location.href = href;
+      window.focus();
+      // window.location.href = $(this).find('a:first').attr('href');
+      $(this).addClass('active');
+      ev.preventDefault();
+    });
+  });
+</script>
+
+{% endblock %}

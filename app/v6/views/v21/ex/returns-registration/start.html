@@ -1,0 +1,71 @@
+{% extends "../../head.html" %}
+
+{% block page_title %}
+  Returns start - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Create an account to manage your water abstraction licence online
+      </h1>
+
+      <p>
+        You need to create an online account and confirm your identity to access your licence information.
+      </p>
+
+      <p>
+        Impoundment licences are not yet part of this service.
+      </p>
+
+      <p>
+        Once registered you will be able to:
+      </p>
+
+      <ul class="list list-bullet">
+        <li>
+          submit your abstraction returns
+        </li>
+        <li>
+          view your abstraction licence information
+        </li>
+        <li>
+          allow others to access your abstraction licence information
+        </li>
+      </ul>
+
+      <h2 class="heading-medium">
+        Before you start
+      </h2>
+
+      <p>
+        You will need:
+      </p>
+
+      <ul class="list list-bullet">
+        <li>
+          your security code
+        </li>
+        <li>
+          your email address
+        </li>
+      </ul>
+
+      <!-- Primary button -->
+      <a class="button button-start" href="../../signup/give-email">Create account</a>
+
+    </div>
+  </div>
+</main>
+
+
+{% endblock %}
