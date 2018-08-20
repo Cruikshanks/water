@@ -11,6 +11,7 @@
 
          "Source": "Inland water lake known as Featherall Lake at SJ3185632865",
          "PeriodofAbstraction": "All year",
+         "SiteDescription": "Small Barn and lower shed next to the river",
 
          "Point1": "At National Grid Reference SK 496332",
          "Point1Ref": "SK 496332",
@@ -143,6 +144,7 @@
 
         "Source": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
         "PeriodofAbstraction": "March to September",
+        "SiteDescription": "Red House",
 
         "Point1": "At National Grid Reference SK 675124",
         "Point1Ref": "SK 675124",
@@ -242,6 +244,7 @@
      "Source": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
 
      "PeriodofAbstraction": "All year",
+     "SiteDescription": "Far bank pump",
 
      "Point1": "At National Grid Reference SK 496332",
      "Point1Ref": "SK 496332",
@@ -345,6 +348,7 @@
 
      "Source": "Inland Lake at Anarea, Atown.",
      "PeriodofAbstraction": "June to September",
+     "SiteDescription": "Small colliery shed",
 
      "Point1": "At National Grid Reference SK 814602",
      "Point1Ref": "SK 496 332",
@@ -403,6 +407,7 @@
 
      "Source": "The Avon",
      "PeriodofAbstraction": "June to September",
+     "SiteDescription": "Hill View Shed",
 
      "Point1": "At National Grid Reference SB 542134",
      "Point1Ref": "SK 496332",
@@ -466,6 +471,7 @@
 
      "Source": "Inland water knows as the River Thames at Cleaton Weir, Reading, Berkshire.",
      "PeriodofAbstraction": "May to September",
+     "SiteDescription": "Yellow Barn",
 
      "Point1": "At National Grid Reference SK 496332",
      "Point1Ref": "SK 496332",
@@ -496,6 +502,47 @@
      "HolderPostcode": "RD15 2PP"
    },
 
+   "7":
+    {
+     "LicenceSerialNo": "DC/054/0132/011",
+     "LicenceName": "Chuffleford Bridge",
+     "EffectiveDateStart": "1 Jan 2004",
+     "EffectiveDateEnd": "1 Jan 2033",
+     "HolderFirstName": "Dave",
+     "HolderSurname": "Gouldan",
+
+     "Source": "Inland water knows as the River Chuffle, Didcot, Wiltshire.",
+     "PeriodofAbstraction": "May to September",
+     "SiteDescription": "Yellow Barn",
+
+     "Point1": "At National Grid Reference SK 496332",
+     "Point1Ref": "SK 120317",
+
+
+     "Purpose1": "Spray irrigation",
+
+     "Amount1": "500 cubic metres per hour",
+     "Amount2": "1,200 cubic metres per day",
+     "Amount3": "500,000 cubic metres per year",
+
+     "Purpose1Amount1": "500 cubic metres per hour",
+     "Purpose1Amount2": "1,200 cubic metres per day",
+     "Purpose1Amount3": "500,000 cubic metres per year",
+
+     "Point1": "At National Grid Reference SU 554189",
+     "Point1Ref": "SK 121941",
+     "Means1": "Borehole A",
+     "MannerType1": "Groundpump",
+     "Manner1": "",
+     "Condition1": "Hands-off cessation condition",
+
+     "HolderTel": "01544121645",
+     "HolderEmail": "d.gouldan72@gmail.com",
+     "HolderAddressline1": "7 Fitton Lane",
+     "HolderAddressline2": "Walliamson Court",
+     "HolderCounty": "Wilthire",
+     "HolderPostcode": "SN8 2PL"
+   },
 
    "22":
       {
@@ -509,6 +556,7 @@
 
         "Source": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
         "PeriodofAbstraction": "March to September",
+        "SiteDescription": "Little Durns",
 
         "Point1": "At National Grid Reference SK 675124",
         "Point1Ref": "SK 675124",
@@ -586,6 +634,7 @@
 
         "Source": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
         "PeriodofAbstraction": "March to September",
+        "SiteDescription": "Mudstone Bridge shed",
 
         "Point1": "At National Grid Reference SK 675124",
         "Point1Ref": "SK 675124",
@@ -685,6 +734,7 @@
 
         "Source": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
         "PeriodofAbstraction": "March to September",
+        "SiteDescription": "Small Barn and lower shed next to the river",
 
         "Point1": "At National Grid Reference SK 675124",
         "Point1Ref": "SK 675124",
@@ -784,6 +834,7 @@
 
         "Source": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
         "PeriodofAbstraction": "March to September",
+        "SiteDescription": "Yard borehole",
 
         "Point1": "At National Grid Reference SK 675124",
         "Point1Ref": "SK 675124",
@@ -885,6 +936,7 @@
 
         "Source": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
         "PeriodofAbstraction": "March to September",
+        "SiteDescription": "Honeybank West",
 
         "Point1": "At National Grid Reference SK 675124",
         "Point1Ref": "SK 675124",
@@ -980,6 +1032,7 @@
 
         "Source": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
         "PeriodofAbstraction": "March to September",
+        "SiteDescription": "The Lodge",
 
         "Point1": "At National Grid Reference SK 675124",
         "Point1Ref": "SK 675124",
@@ -1075,6 +1128,7 @@
 
         "Source": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
         "PeriodofAbstraction": "March to September",
+        "SiteDescription": "Barrowford Miller",
 
         "Point1": "At National Grid Reference SK 675124",
         "Point1Ref": "SK 675124",
@@ -1174,6 +1228,7 @@
 
         "Source": "Underground strata comprising of Mercia Mudstone at Anarea, Atown.",
         "PeriodofAbstraction": "March to September",
+        "SiteDescription": "Lower Mudstone",
 
         "Point1": "At National Grid Reference SK 675124",
         "Point1Ref": "SK 675124",

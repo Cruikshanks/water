@@ -36,13 +36,13 @@
 
     <div class="table-row table-head">                                      <!-- the table head -->
       <div class="table-cell bold-small column-33">
-        Licence number
-      </div>
-      <div class="table-cell bold-small">
-        Licence name
+        Licence
       </div>
       <div class="table-cell bold-small">
         Purpose
+      </div>
+      <div class="table-cell bold-small">
+        Site description
       </div>
       <div class="table-cell bold-small column-15">
         Status
@@ -55,23 +55,27 @@
           Row 1
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=1">
-          {{ permits[1].LicenceSerialNo }}
+          {% if permits[1].LicenceName %}
+            {{ permits[1].LicenceName }}
+          {% else %}
+            {{ permits[1].LicenceSerialNo }}
+          {% endif %}
         </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        {{ permits[1].LicenceName }}
       </div>
       <div class="table-cell">
         <h4 class="context">
           Purpose
         </h4>
-        Spray irrigation
+        {{ permits[1].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[1].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -89,23 +93,27 @@
           Row 2
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=2">
-          {{ permits[2].LicenceSerialNo }}
+          {% if permits[2].LicenceName %}
+            {{ permits[2].LicenceName }}
+          {% else %}
+            {{ permits[2].LicenceSerialNo }}
+          {% endif %}
         </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Scrifford Pike
       </div>
       <div class="table-cell">
         <h4 class="context">
           Purpose
         </h4>
-        Trickle irrigation
+        {{ permits[2].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[2].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -124,23 +132,27 @@
           Row 3
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=3">
-          {{ permits[3].LicenceSerialNo }}
+          {% if permits[3].LicenceName %}
+            {{ permits[3].LicenceName }}
+          {% else %}
+            {{ permits[3].LicenceSerialNo }}
+          {% endif %}
         </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Honeydew Crescent
       </div>
       <div class="table-cell">
         <h4 class="context">
           Purpose
         </h4>
-        Machine washing
+        {{ permits[3].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[3].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -159,23 +171,27 @@
           Row 4
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=4">
-          {{ permits[4].LicenceSerialNo }}
+          {% if permits[4].LicenceName %}
+            {{ permits[4].LicenceName }}
+          {% else %}
+            {{ permits[4].LicenceSerialNo }}
+          {% endif %}
         </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Bridge Farm
       </div>
       <div class="table-cell">
         <h4 class="context">
           Purpose
         </h4>
-        Trickle irrigation
+        {{ permits[4].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[4].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -194,23 +210,27 @@
           Row 5
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=5">
-          {{ permits[5].LicenceSerialNo }}
+          {% if permits[5].LicenceName %}
+            {{ permits[5].LicenceName }}
+          {% else %}
+            {{ permits[5].LicenceSerialNo }}
+          {% endif %}
         </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Anglian water 4
       </div>
       <div class="table-cell">
         <h4 class="context">
           Purpose
         </h4>
-        Public water supply
+        {{ permits[5].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[5].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -229,23 +249,27 @@
           Row 6
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=6">
-          {{ permits[6].LicenceSerialNo }}
+          {% if permits[6].LicenceName %}
+            {{ permits[6].LicenceName }}
+          {% else %}
+            {{ permits[6].LicenceSerialNo }}
+          {% endif %}
         </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Anglian water 5
       </div>
       <div class="table-cell">
         <h4 class="context">
           Purpose
         </h4>
-        Public water supply
+        {{ permits[6].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[6].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -264,23 +288,27 @@
           Row 7
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=34">
-          03/28/60/0741
+          {% if permits[7].LicenceName %}
+            {{ permits[7].LicenceName }}
+          {% else %}
+            {{ permits[7].LicenceSerialNo }}
+          {% endif %}
         </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Anglian water 6
       </div>
       <div class="table-cell">
         <h4 class="context">
           Purpose
         </h4>
-        Public water supply
+        {{ permits[7].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[7].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -299,23 +327,27 @@
           Row 8
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=34">
-          03/28/60/0759
+          {% if permits[30].LicenceName %}
+            {{ permits[30].LicenceName }}
+          {% else %}
+            {{ permits[30].LicenceSerialNo }}
+          {% endif %}
         </a>
-      </div>
-      <div class="table-cell">
-        <h4 class="context">
-          Licence name
-        </h4>
-        Anglian water 7
       </div>
       <div class="table-cell">
         <h4 class="context">
           Purpose
         </h4>
-        Public water supply
+        {{ permits[30].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[30].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -334,7 +366,7 @@
           Row 9
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=34">
           03/28/60/0974
@@ -342,15 +374,15 @@
       </div>
       <div class="table-cell">
         <h4 class="context">
-          Licence name
+          Purpose
         </h4>
-        Anglian water 8
+        {{ permits[31].Purpose1 }}
       </div>
       <div class="table-cell">
         <h4 class="context">
-          Purpose
+          Site description
         </h4>
-        Public water supply
+        {{ permits[31].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -369,7 +401,7 @@
           Row 10
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=34">
           03/28/60/9970
@@ -377,15 +409,15 @@
       </div>
       <div class="table-cell">
         <h4 class="context">
-          Licence name
+          Purpose
         </h4>
-        Simmons Farm
+        {{ permits[32].Purpose1 }}
       </div>
       <div class="table-cell">
         <h4 class="context">
-          Purpose
+          Site description
         </h4>
-        Special irrigation
+        {{ permits[32].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -401,10 +433,10 @@
 
       <div class="table-cell">
         <h3 class="sr-only">
-          Row 4
+          Row 11
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=34">
           03/28/60/0034/r002
@@ -412,15 +444,15 @@
       </div>
       <div class="table-cell">
         <h4 class="context">
-          Licence name
+          Purpose
         </h4>
-        <!-- Bridge Farm -->
+        {{ permits[33].Purpose1 }}
       </div>
       <div class="table-cell">
         <h4 class="context">
-          Purpose
+          Site description
         </h4>
-        Trickle irrigation
+        {{ permits[33].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
@@ -436,10 +468,10 @@
 
       <div class="table-cell">
         <h3 class="sr-only">
-          Row 4
+          Row 12
         </h3>
         <h4 class="context">
-          Licence number
+          Licence
         </h4>
         <a href="returns-report?wid=34">
           03/28/60/0034/r002
@@ -447,15 +479,15 @@
       </div>
       <div class="table-cell">
         <h4 class="context">
-          Licence name
+          Purpose
         </h4>
-        <!-- Bridge Farm -->
+        {{ permits[43].Purpose1 }}
       </div>
       <div class="table-cell">
         <h4 class="context">
-          Purpose
+          Site description
         </h4>
-        Trickle irrigation
+        {{ permits[34].SiteDescription }}
       </div>
       <div class="table-cell">
         <h4 class="context">
