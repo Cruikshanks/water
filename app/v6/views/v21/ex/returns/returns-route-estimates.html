@@ -12,7 +12,7 @@
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-br-view.html" %}
+  {% include "../../partials/nav-ex-returns.html" %}
 
   <div class="grid-row medium-space">
     <div class="column-two-thirds">
@@ -58,16 +58,16 @@
 
             <legend>
               <h1 class="heading-medium">
-                What is your return total based on?
+                What are your return amounts based on?
               </h1>
             </legend>
 
             <div class="multiple-choice">
-              <input id="recorded-amount" type="radio" name="radio-contact-group" value="confirm-return-derived?wid={{ query.wid }}">
+              <input id="recorded-amount" type="radio" name="radio-contact-group" value="confirm-return?wid={{ query.wid }}">
               <label for="recorded-amount">Records</label>
             </div>
             <div class="multiple-choice" data-target="estimated-flow-rate">
-              <input id="radio-flow-rate" type="radio" name="radio-contact-group" value="confirm-return-derivedwid={{ query.wid }}">
+              <input id="radio-flow-rate" type="radio" name="radio-contact-group" value="confirm-return?wid={{ query.wid }}">
               <label for="radio-flow-rate">Abstraction rate</label>
             </div>
             <div class="panel panel-border-narrow js-hidden" id="estimated-flow-rate">
@@ -78,7 +78,7 @@
             </div>
 
             <div class="multiple-choice" data-target="estimate-herd-number">
-              <input id="radio-herd-number" type="radio" name="radio-contact-group" value="confirm-return-derived?wid={{ query.wid }}">
+              <input id="radio-herd-number" type="radio" name="radio-contact-group" value="confirm-return?wid={{ query.wid }}">
               <label for="radio-herd-number">Herd numbers</label>
             </div>
             <div class="panel panel-border-narrow js-hidden" id="estimate-herd-number">
