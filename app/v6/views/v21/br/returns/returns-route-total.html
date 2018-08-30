@@ -58,27 +58,31 @@
 
           <legend>
             <h1 class="heading-medium">
-              How was this amount provided?
+              Is it a single amount?
             </h1>
           </legend>
 
           <div class="multiple-choice" data-target="total-amount">
             <input id="radio-flow-rate" type="radio" name="radio-contact-group" value="returns-route-estimate?wid={{ query.wid }}">
-            <label for="radio-flow-rate">A single total amount</label>
+            <label for="radio-flow-rate">Yes</label>
           </div>
           <div class="panel panel-border-narrow js-hidden" id="total-amount">
-            <label class="form-label" for="contact-email">Total amount provided</label>
+            <label class="form-label" for="contact-email">
+              Enter total amount
+            </label>
             <input class="form-control" name="contact-email" type="text" id="contact-email">
           </div>
 
           <div class="multiple-choice" data-target="estimate-herd-number">
             <input id="radio-herd-number" type="radio" name="radio-contact-group" value="returns-form?wid={{ query.wid }}">
-            <label for="radio-herd-number">A number of amounts</label>
+            <label for="radio-herd-number">No</label>
           </div>
 
         </fieldset>
 
-          <button type="submit" class="button">Submit</button>
+          <button type="submit" class="button">
+            Continue
+          </button>
         </form>
       </div>
 
