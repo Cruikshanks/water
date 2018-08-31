@@ -821,8 +821,13 @@ details {
 }
 
 .notification {
-  background-color: #005ea5;
+  background-color: $panel-colour;
   color: white;
+  padding: 30px;
+}
+
+.notification-preview {
+  background-color: #DEE0E2;
   padding: 30px;
 }
 
