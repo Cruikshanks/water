@@ -1,4 +1,4 @@
-{% extends "../br/head-signedin.html" %}
+{% extends "../ar/head-signedin.html" %}
 
 <!-- page title -->
 {% block page_title %}
@@ -14,7 +14,7 @@
   {% include "../partials/feedback-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../partials/nav-ar-view.html" %}
+  {% include "../partials/nav-ar-inbox.html" %}
 
   <!-- page title -->
   <div class="grid-row">
@@ -49,158 +49,195 @@
 
         <div class="table-row table-head">                                      <!-- tablehead starts -->
 
-          <div class="table-cell bold-small column-40" id="ar-number-column">
+          <div class="table-cell bold-small">
             <a href="#" aria-label="Sort by licence number">
               Licence number
             </a>
           </div>
-          <div class="table-cell bold-small column-40" id="ar-name-column">
+          <div class="table-cell bold-small" id="ar-name-column">
             <a href="#" aria-label="Sort by licence number">
-              Licence name
+              Last editor
             </a>
           </div>
-          <div class="table-cell bold-small column-20" id="ar-end-date-column">
-            <a href="#" aria-label="Sort by end date">
-              End date
-              <span class="sort-icon">&#x25be;</span>
+          <!-- <div class="table-cell bold-small">
+            Contact information
+          </div> -->
+          <div class="table-cell bold-small">
+            <a href="#" aria-label="Sort by licence number">
+              Last edit
             </a>
-          </div>                                                                <!-- tablehead ends -->
-        </div>
+          </div>
+          <div class="table-cell bold-small" id="ar-status-column">
+            <a href="#" aria-label="Sort by licence number">
+              Status
+              <span class="sort-icon"> &#x25be;</span>
+            </a>
+          </div>
+        </div>                                                                  <!-- tablehead ends -->
+
         <div class="table-row medium-space">                                    <!-- a data row starts -->
           <div class="table-cell">
+
             <h2 class="faux-link">
-              <a href="./online-licence?wid=1">
+              <a href="./ar-task?wid=1">
                 {{ permits[1].LicenceSerialNo }}
               </a>
             </h2>
+
           </div>
           <div class="table-cell">
             <label class="context">
-              Licence name
+              Last editor
             </label>
-            {{ permits[1].LicenceName }}
+            J Mipps
           </div>
           <div class="table-cell">
             <label class="context">
-              End date
+              Last edited
             </label>
-            {{ permits[1].EffectiveDateEnd }}
+            2 July 2018
+          </div>
+          <div class="table-cell status-column center">
+            <strong class="task-completed open-task hang-left">
+              In progress
+            </strong>
           </div>
         </div>                                                                  <!-- a data row ends -->
 
         <div class="table-row medium-space">                                    <!-- a data row starts -->
           <div class="table-cell">
             <h2 class="faux-link">
-              <a href="./online-licence?wid=2">
+              <a href="./ar-admin-task?wid=2">
                 {{ permits[2].LicenceSerialNo }}
               </a>
             <h2>
           </div>
           <div class="table-cell">
             <label class="context">
-              Licence name
+              Last editor
             </label>
-            {{ permits[2].LicenceName }}
+            Celeste Fishood
           </div>
           <div class="table-cell">
             <label class="context">
-              End date
+              Last edited
             </label>
-            {{ permits[2].EffectiveDateEnd }}
+            1 July 2018
+          </div>
+          <div class="table-cell status-column center">
+            <strong class="task-completed not-completed hang-left">
+              For NALD approval
+            </strong>
           </div>
         </div>                                                                  <!-- a data row ends -->
 
         <div class="table-row medium-space">                                    <!-- a data row starts -->
           <div class="table-cell">
             <h2 class="faux-link">
-              <a href="./online-licence?wid=3">
+              <a href="./ar-task?wid=3">
                 {{ permits[3].LicenceSerialNo }}
               </a>
-            <h2>
+            </h2>
           </div>
           <div class="table-cell">
             <label class="context">
-              Licence name
+              Last editor
             </label>
-            {{ permits[3].LicenceName }}
+            Ben Jucks
           </div>
           <div class="table-cell">
             <label class="context">
-              End date
+              Last edited
             </label>
-            {{ permits[3].EffectiveDateEnd }}
+            12 July 2018
+          </div>
+          <div class="table-cell status-column center">
+            <strong class="task-completed not-completed hang-left">
+              For NALD approval
+            </strong>
           </div>
         </div>                                                                  <!-- a data row ends -->
 
         <div class="table-row medium-space">                                    <!-- a data row starts -->
           <div class="table-cell">
             <h2 class="faux-link">
-              <a href="./online-licence?wid=4">
+              <a href="./ar-task?wid=4">
                 {{ permits[4].LicenceSerialNo }}
               </a>
-            <h2>
+            </h2>
           </div>
           <div class="table-cell">
             <label class="context">
-              Licence name
+              Last editor
             </label>
-            {{ permits[4].LicenceName }}
+            J Mipps
           </div>
           <div class="table-cell">
             <label class="context">
-              End date
+              Last edited
             </label>
-            {{ permits[4].EffectiveDateEnd }}
+            16 June 2018
+          </div>
+          <div class="table-cell status-column center">
+            <strong class="task-completed not-completed hang-left">
+              For NALD approval
+            </strong>
           </div>
         </div>                                                                  <!-- a data row ends -->
 
         <div class="table-row medium-space">                                    <!-- a data row starts -->
           <div class="table-cell">
             <h2 class="faux-link">
-              <a href="./online-licence?wid=5">
+              <a href="./ar-task?wid=5">
                 {{ permits[5].LicenceSerialNo }}
               </a>
-            <h2>
+            </h2>
           </div>
           <div class="table-cell">
             <label class="context">
-              Licence name
+              Last editor
             </label>
-            {{ permits[5].LicenceName }}
+            <!-- no editor -->
           </div>
           <div class="table-cell">
             <label class="context">
-              End date
+              Last edited
             </label>
-            {{ permits[5].EffectiveDateEnd }}
+
+          </div>
+          <div class="table-cell status-column center">
+
           </div>
         </div>                                                                  <!-- a data row ends -->
 
         <div class="table-row medium-space">                                    <!-- a data row starts -->
           <div class="table-cell">
             <h2 class="faux-link">
-              <a href="./online-licence?wid=6">
+              <a href="./ar-task?wid=6">
                 {{ permits[6].LicenceSerialNo }}
               </a>
-            <h2>
+            </h2>
           </div>
           <div class="table-cell">
             <label class="context">
-              Licence name
+              Last editor
             </label>
-            {{ permits[6].LicenceName }}
-            <!-- Licence name -->
+            J Mipps
           </div>
           <div class="table-cell">
             <label class="context">
-              End date
+              Last edited
             </label>
-            {{ permits[6].EffectiveDateEnd }}
-            <!-- 1 Jan 2033 -->
+            31 May 2018
+          </div>
+          <div class="table-cell status-column center">
+            <!-- <strong class="task-completed hang-left">
+              Completed
+            </strong> -->
           </div>
         </div>                                                                  <!-- a data row ends -->
 
-      </div>                                                                    <!-- table ends -->
+        </div>                                                                    <!-- table ends -->
 
     </div>
   </div>
