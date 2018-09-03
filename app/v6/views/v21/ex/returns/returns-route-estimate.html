@@ -58,26 +58,30 @@
 
             <legend>
               <h1 class="heading-medium">
-                What is your estimate based on?
+                What is your return total based on?
               </h1>
             </legend>
 
+            <div class="multiple-choice">
+              <input id="recorded-amount" type="radio" name="radio-contact-group" value="confirm-return-derived?wid={{ query.wid }}">
+              <label for="recorded-amount">Records</label>
+            </div>
             <div class="multiple-choice" data-target="estimated-flow-rate">
-              <input id="radio-flow-rate" type="radio" name="radio-contact-group" value="returns-route-unit?wid={{ query.wid }}">
+              <input id="radio-flow-rate" type="radio" name="radio-contact-group" value="confirm-return-derivedwid={{ query.wid }}">
               <label for="radio-flow-rate">Abstraction rate</label>
             </div>
             <div class="panel panel-border-narrow js-hidden" id="estimated-flow-rate">
               <label class="form-label" for="estimated-flow-rate">Pump capacity</label>
-              <input class="form-control small-space" name="estimated-hours-run" type="text" id="estimated-hours-run">
-              <label class="form-label" for="estimated-hours-run">Hours run</label>
-              <input class="form-control" name="estimated-hours-run" type="text" id="estimated-hours-run">
+              <input class="form-control small-space" name="hours-run" type="text" id="flow-rate">
+              <label class="form-label" for="hours-run">Hours run</label>
+              <input class="form-control" name="hours-run" type="text" id="hours-run">
             </div>
 
             <div class="multiple-choice" data-target="estimated-herd-number">
-              <input id="estimated-herd-number" type="radio" name="radio-contact-group" value="returns-route-unit?wid={{ query.wid }}">
-              <label for="estimated-herd-number">Herd numbers</label>
+              <input id="radio-herd-number" type="radio" name="radio-contact-group" value="confirm-return-derived?wid={{ query.wid }}">
+              <label for="radio-herd-number">Herd numbers</label>
             </div>
-            <div class="panel panel-border-narrow js-hidden" id="estimate-herd-number">
+            <div class="panel panel-border-narrow js-hidden" id="estimated-herd-number">
               <label class="form-label" for="herd-number">Number of head of livestock</label>
               <input class="form-control small-space" name="herd-number" type="text" id="herd-number">
             </div>
