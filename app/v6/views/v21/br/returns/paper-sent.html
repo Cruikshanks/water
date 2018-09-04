@@ -1,0 +1,34 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Paper forms sent - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-br-view.html" %}
+
+  <!-- confirmation panel -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-large tight">
+          Paper forms have been sent
+        </h1>
+        <p>
+          They should arrive within the next five days
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}
