@@ -1,0 +1,48 @@
+{% extends "./../head-signedin.html" %}
+
+{% block page_title %}
+  We're sending you a paper return form - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "./../../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "./../../partials/nav-ex-view.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        We're sending you a paper form for your return
+      </h1>
+
+      <p>
+        Your return form will be sent by 2nd Class mail to:
+      </p>
+
+      <div class="panel panel-border-wide">
+        <p>
+          Davina Johns,<br>
+          111 Abbey House,<br>
+          Abingdon-on-Thames,<br>
+          Oxfordshire,<br>
+          RE1 1GA<br>
+        </p>
+      </div>
+
+      <p>
+        You should receive it within 5 working days.
+      </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
