@@ -47,39 +47,37 @@
     </div>
   </div>
 
-  <div class="grid-row">
-    <div class="column-full">
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
 
-      <div class="form-group">
-
-        <form data-routing="1">
+      <form data-routing="1">
 
         <fieldset class="medium-space">
 
           <legend>
             <h3 class="heading-medium">
-              How are you reporting your return?
+              Readings from more than one meter
             </h3>
           </legend>
 
+          <p>
+            You must report your return in abstraction volumes instead of meter readings. Alternatively, you can complete a paper form.
+          </p>
+
           <div class="multiple-choice">
-            <input id="return-form" type="radio" name="radio-inline-group" value="returns-meter-unit?wid={{ query.wid }}">
-            <label for="return-form">Readings from one meter</label>
+            <input id="volumes-route" type="radio" name="route-multiple-meters" value="returns-route-unit?wid={{ query.wid }}">
+            <label for="volumes-route">Report abstraction volumes</label>
           </div>
+
           <div class="multiple-choice">
-            <input id="reroute" type="radio" name="radio-inline-group" value="returns-reroute?wid={{ query.wid }}">
-            <label for="reroute">Readings from more than one meter</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="nil-return" type="radio" name="radio-inline-group" value="returns-route-unit?wid={{ query.wid }}">
-            <label for="nil-return">Abstraction volumes</label>
+            <input id="paper-route" type="radio" name="route-multiple-meters" value="post-preview?wid={{ query.wid }}">
+            <label for="paper-route">Request a paper form</label>
           </div>
 
         </fieldset>
 
-          <button type="submit" class="button">Continue</button>
-        </form>
-      </div>
+        <button type="submit" class="button">Continue</button>
+      </form>
 
     </div>
   </div>
