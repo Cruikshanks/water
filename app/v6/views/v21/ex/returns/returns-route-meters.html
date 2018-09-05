@@ -51,7 +51,7 @@
     </div>
   </div>
 
-  <div class="grid-row">
+  <div class="grid-row medium-space">
     <div class="column-two-thirds">
 
       <h3 class="heading-medium">
@@ -60,18 +60,26 @@
 
       <div class="form-group">
         <label class="form-label" for="meter-make">Manufacturer used</label>
-        <input class="form-control small-space" id="meter-make" name="meter-make" type="text" value="">
+        <input class="form-control small-space" id="meter-make" name="meter-info" type="text" value="">
 
         <label class="form-label" for="meter-serial">Serial number</label>
-        <input class="form-control small-space" id="meter-serial" name="meter-serial" type="text" value="">
+        <input class="form-control small-space" id="meter-serial" name="meter-info" type="text" value="">
 
         <label class="form-label" for="start-reading">Abstraction period start reading</label>
-        <input class="form-control" id="start-reading" name="start-reading" type="text" value="">
+        <input class="form-control" id="start-reading" name="meter-info" type="text" value="">
+
       </div>
 
       <p>
-        If you used more than one meter you can tell us about this in the returns form.
+        Some meters are marked with ×10. You should enter the actual figure that you see on the display. You do not need to multiply the volume by 10.
       </p>
+
+      <div class="multiple-choice">
+        <input type="checkbox">
+        <label aria-label="Can do returns">
+          This meter has a ×10 display
+        </label>
+      </div>
 
     </div>
   </div>
