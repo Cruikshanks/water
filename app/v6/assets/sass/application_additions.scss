@@ -1105,7 +1105,7 @@ details {
 
 .highlight {
   // background-color: $yellow;
-  background-color: yellow;
+  background-color: #E8F4FA;
   // background-color: $focus-colour;
 }
 
@@ -1419,6 +1419,10 @@ details {
   @media (min-width: 768px) {
     text-align: right;
   }
+}
+
+.ntatabularnumbers {
+  font-family: monospace;
 }
 
 .total-label, .total-input input {

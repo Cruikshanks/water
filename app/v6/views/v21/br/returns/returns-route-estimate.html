@@ -36,17 +36,6 @@
     </div>
   </div>
 
-  <!-- meta data block -->
-  {% include "../../partials/return-internal-meta.html" %}
-
-  <div class="grid-row small-space">
-    <div class="column-two-thirds">
-      <p>
-        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
-      </p>
-    </div>
-  </div>
-
   <div class="grid-row">
     <div class="column-full">
 
@@ -67,7 +56,7 @@
               <label for="recorded-amount">Records</label>
             </div>
             <div class="multiple-choice" data-target="estimated-flow-rate">
-              <input id="radio-flow-rate" type="radio" name="radio-contact-group" value="confirm-return-derivedwid={{ query.wid }}">
+              <input id="radio-flow-rate" type="radio" name="radio-contact-group" value="confirm-return-derived?wid={{ query.wid }}">
               <label for="radio-flow-rate">Abstraction rate</label>
             </div>
             <div class="panel panel-border-narrow js-hidden" id="estimated-flow-rate">
