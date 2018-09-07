@@ -40,17 +40,6 @@
     </div>
   </div>
 
-  <!-- meta data block -->
-  {% include "../../partials/return-internal-meta.html" %}
-
-  <div class="grid-row small-space">
-    <div class="column-two-thirds">
-      <p>
-        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
-      </p>
-    </div>
-  </div>
-
   <div class="grid-row">
     <div class="column-two-thirds">
 
@@ -79,123 +68,71 @@
 
       </legend>
 
-      <div class="form-group">
-        <label class="form-label" for="april-amount">April</label>
-        <input class="form-control amount-input" id="april-amount" name="april-amount" type="text" value="">
+      <div id="return-amounts">
+
+        <div class="form-group">
+          <label class="form-label" for="april-amount">April</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="april-amount" name="april-amount" type="text" value="">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">May</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="may-amount" name="may-amount" type="text" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">June</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="june-amount" name="june-amount" type="text" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="first-name-2">July</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="july-amount" name="july-amount" type="text" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">August</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="august-amount" name="august-amount" type="text" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">September</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="september-amount" name="september-amount" type="text" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">October</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="september-amount" name="september-amount" type="text" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">November</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="september-amount" name="september-amount" type="text" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">December</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="september-amount" name="september-amount" type="text" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">January</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="september-amount" name="september-amount" type="text" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">February</label>
+          <input class="form-control amount-input numbers ntatabularnumbers" id="september-amount" name="september-amount" type="text" value="">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="last-name-2">March</label>
+          <input class="form-control amount-input medium-space" id="september-amount" name="september-amount" type="text" value="">
+        </div>
+
+        <div class="form-group total-input" id="total-abstracted">
+          <label class="form-label total-label" for="total-abstracted">Total water abstracted</label>
+          <input class="form-control small-space" name="total-abstracted" type="text" value="">
+        </div>
+
       </div>
 
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">May</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input" id="may-amount" name="may-amount" type="text" value="">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">June</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input" id="june-amount" name="june-amount" type="text" value="">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="first-name-2">July</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input" id="july-amount" name="july-amount" type="text" value="">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">August</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input" id="august-amount" name="august-amount" type="text" value="">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">September</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">October</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">November</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">December</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">January</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">February</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input" id="september-amount" name="september-amount" type="text" value="">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="last-name-2">March</label>
-        <p>
-          <a href="returns-add-meter?wid={{ query.wid }}">
-            Meter change
-          </a>
-        </p>
-        <input class="form-control amount-input medium-space" id="september-amount" name="september-amount" type="text" value="">
-      </div>
-
-      <div class="form-group total-input">
-        <label class="form-label total-label" for="total-abstracted">Total water abstracted</label>
-        <input class="form-control small-space" id="total-abstracted" name="total-abstracted" type="text" value="">
-      </div>
+      <a href="confirm-return?wid={{ query.wid }}" class="button">
+        Continue
+      </a>
 
     </div>
-
   </div>
-
-  <a href="confirm-return?wid={{ query.wid }}" class="button">
-    Submit return
-  </a>
 
   {% endif %}
   {% endfor %}

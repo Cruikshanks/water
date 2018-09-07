@@ -1,0 +1,46 @@
+{% extends "../head-signedin.html" %}
+
+{% block page_title %}
+  Check in a return - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- navigation block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-wirs-manage.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- page title -->
+  <h1  class="heading-large medium-space">
+    Check in a return
+  </h1>
+
+  <div class="grid-row">
+    <div class="column-two-thirds medium-space">
+
+      <div class="form-group">
+
+        <fieldset>
+          <div class="form-group">
+            <label class="form-label" for="august-amount">Find the return using a return code</label>
+            <input class="form-control amount-input numbers"id="august-amount" name="august-amount" type="text" value="">
+          </div>
+
+        </fieldset>
+
+        <!-- <input onclick="$('#incorrectLogin').hide()" type="submit" value="Continue" class="button" role="button"/> -->
+        <a href="confirm-check-in?wid=32" class="button">Continue</a>
+
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

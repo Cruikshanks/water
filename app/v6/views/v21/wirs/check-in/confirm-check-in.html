@@ -1,0 +1,93 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Confirm receipt of return number {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-wirs-manage.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Confirm receipt of return 65432123
+      </h1>
+
+    </div>
+  </div>
+
+  <div class="small-space">
+    <dl>
+      <dt class="meta-label">
+        Region
+      </dt>
+      <dd class="meta-description">
+        Anglian
+      </dd>
+      <dt class="meta-label">
+        Site description
+      </dt>
+      <dd class="meta-description">
+        Great Ouse at Bedford College (Heat pump - cooling only)
+      </dd>
+      <dt class="meta-label">
+        Purpose
+      </dt>
+      <dd class="meta-description">
+        {{ pData.Purpose1 }}
+      </dd>
+      <dt class="meta-label">
+        Return period
+      </dt>
+      <dd class="meta-description">
+        3 April 2018 to 31 March 2019
+      </dd>
+      <dt class="meta-label">
+        Abstraction period
+      </dt>
+      <dd class="meta-description">
+        3 April 2018 to 31 September 2018
+      </dd>
+    </dl>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <p class="medium-space">
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
+      </p>
+
+      <a href="checked-in?wid=32" class="button">Check in this return</a>
+
+    </div>
+  </div>
+
+
+</main>
+
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
+
+{% endblock %}
