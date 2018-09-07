@@ -1425,6 +1425,14 @@ details {
   font-family: monospace;
 }
 
+#return-amounts input {
+  width: 16rem;
+}
+
+#total-abstracted input {
+  width: 20rem;
+}
+
 .total-label, .total-input input {
   font-weight: 700;
 }
@@ -1456,4 +1464,8 @@ details {
 
 #form-edit-fields input {
   width: 10em;
+}
+
+#meter-readings input {
+  width: 4em;
 }

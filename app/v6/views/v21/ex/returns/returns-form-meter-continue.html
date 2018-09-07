@@ -24,7 +24,7 @@
       <!-- page heading -->
       {% if pData.LicenceName %}
         <h2 class="sub-head">
-          Abstraction record for {{ pData.LicenceSerialNo }}
+          Abstraction return for  {{ pData.LicenceSerialNo }}
         </h2>
         <h1 class="heading-large spaceless">
           {{ pData.LicenceName }}
@@ -37,17 +37,6 @@
           Licence number {{pData.LicenceSerialNo}}
         </h1>
       {% endif %}
-    </div>
-  </div>
-
-  <!-- meta data block -->
-  {% include "../../partials/return-external-meta.html" %}
-
-  <div class="grid-row small-space">
-    <div class="column-two-thirds">
-      <p>
-        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
-      </p>
     </div>
   </div>
 
