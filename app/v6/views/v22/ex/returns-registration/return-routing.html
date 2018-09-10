@@ -1,0 +1,75 @@
+{% extends "../../head.html" %}
+
+{% block page_title %}
+  Have you got a security code? - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="form-group">
+
+        <form data-routing="1">
+
+          <fieldset class="medium-space">
+
+            <legend>
+              <h1 class="heading-medium">
+                Have you got a security code?
+              </h1>
+            </legend>
+
+            <p class="form-hint">
+              We may have sent you one in the post with a return reminder.
+            </p>
+
+            <div class="multiple-choice">
+              <input id="return-form" type="radio" name="radio-inline-group" value="use-code">
+              <label for="return-form">Yes</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="nil-return" type="radio" name="radio-inline-group" value="add-licences">
+              <label for="nil-return">No</label>
+            </div>
+
+          </fieldset>
+
+          <button type="submit" class="button">Continue</button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
+
+</main>
+
+{% endblock %}

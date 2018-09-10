@@ -1,7 +1,7 @@
 {% extends "../head-signedin.html" %}
 
 {% block page_title %}
-  Check in a return - GOV.UK
+  Find a return - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,7 @@
 
   <!-- page title -->
   <h1  class="heading-large medium-space">
-    Check in a return
+    Find a return
   </h1>
 
   <div class="grid-row">
@@ -28,13 +28,14 @@
         <fieldset>
           <div class="form-group">
             <label class="form-label" for="august-amount">Find the return using a return code</label>
+            <span class="form-hint">Sometimes known as a Form ID or a Table ID</span>
             <input class="form-control amount-input"id="return-code" name="return-code" type="text" value="">
           </div>
 
         </fieldset>
 
         <!-- <input onclick="$('#incorrectLogin').hide()" type="submit" value="Continue" class="button" role="button"/> -->
-        <a href="confirm-check-in?wid=32" class="button">Continue</a>
+        <a href="return-status?wid=32" class="button">Continue</a>
 
       </div>
 

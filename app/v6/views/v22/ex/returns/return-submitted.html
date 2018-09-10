@@ -1,0 +1,72 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-returns.html" %}
+
+  <!-- confirmation panel -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-large tight">
+          Return submitted
+        </h1>
+        {% if pData.LicenceName %}
+          <p>Purpose <span class="bold">{{ pData.Purpose1 }}</span><br>
+          Licence name <span class="bold">{{ pData.LicenceName }}</span></p>
+        {% else %}
+          <p>Purpose <span class="bold">{{ pData.Purpose1 }}</span><br>
+          Licence number <span class="bold">{{ pData.LicenceSerialNo }}</span></p>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+
+      <p>
+        We have sent you a confirmation email.
+      </p>
+
+      <p>
+        <a href="returns-report?wid={{ query.wid }}">View this return</a>
+      </p>
+
+
+    </div>
+  </div>
+
+
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        We are always trying to improve our service.<br>
+        <a href="#">Tell us what you thought of the new returns process</a>
+      </p>
+    </div>
+  </div>
+
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

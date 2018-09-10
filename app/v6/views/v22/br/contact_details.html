@@ -1,0 +1,220 @@
+{% extends "../ex/head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Your licence contact details - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-br-head.html" %}
+
+  <div class="small-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  </div>
+
+  <!-- page title -->
+  <h1 class="heading-large">Your licence contact details</h1>
+
+  <!-- Main contact for notifications -->
+  <div class="big-space">
+
+    <h2 class="heading-medium">
+      Main contact
+    </h2>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <p class="lede">We will use the main contact to get in touch about conditions and changes to this licence</p>
+      </div>
+    </div>
+
+    <div class="datatable datahead">
+      <label>Name</label>
+      <div class="licenceAnswer">{{ pData.HolderFirstName }} {{ pData.HolderSurname }}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Address</label>
+      <div class="licenceAnswer">
+        {{ pData.HolderAddressline1}}</br>
+        {{ pData.HolderAddressline2}}</br>
+        {{ pData.HolderCounty}}</br>
+        {{ pData.HolderPostcode}}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Telephone</label>
+      <div class="licenceAnswer">{{ pData.HolderTel}}</div>
+    </div>
+
+    <div class="datatable medium-space">
+      <label>Email</label>
+      <div class="licenceAnswer">{{ pData.HolderEmail}}</div>
+    </div>
+
+    <div class="big-space">
+      <p><a href="update-main-contact?wid={{query.wid}}">Update this information</a></p>
+      <br>
+    </div>
+
+  </div>
+
+  <!-- Licence Holder contact -->
+  <div class="big-space">
+
+    <h2 class="heading-medium">
+      Registered licence holder details
+    </h2>
+
+    <div class="datatable datahead">
+      <label>Name</label>
+      <div class="licenceAnswer">{{ pData.HolderFirstName }} {{ pData.HolderSurname }}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Address</label>
+      <div class="licenceAnswer">
+        {{ pData.HolderAddressline1}}</br>
+        {{ pData.HolderAddressline2}}</br>
+        {{ pData.HolderCounty}}</br>
+        {{ pData.HolderPostcode}}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Telephone</label>
+      <div class="licenceAnswer">{{ pData.HolderTel}}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Email</label>
+      <div class="licenceAnswer">{{ pData.HolderEmail}}</div>
+    </div>
+    <br>
+  </div>
+
+  <!-- site contact -->
+  {% if pData.SiteContactFirstName %}
+
+    <div class="big-space">
+
+      <h2 class="heading-medium">
+        Site contact details
+      </h2>
+
+      <div class="datatable datahead">
+        <label>Name</label>
+        <div class="licenceAnswer">{{ pData.SiteContactFirstName }} {{ pData.SiteContactSurname }}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Address</label>
+        <div class="licenceAnswer">
+          {{ pData.SiteContactAddressline1}}</br>
+          {{ pData.SiteContactAddressline2}}</br>
+          {{ pData.SiteContactCounty}}</br>
+          {{ pData.SiteContactPostcode}}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Telephone</label>
+        <div class="licenceAnswer">{{ pData.SiteContactTel}}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Email</label>
+        <div class="licenceAnswer">{{ pData.SiteContactEmail}}</div>
+      </div>
+      <br>
+    </div>
+  {% endif %}
+
+
+  <!-- Billings contact -->
+  {% if pData.BillingFirstName %}
+
+    <div class="big-space">
+
+      <h2 class="heading-medium">
+        Billing contact details
+      </h2>
+
+      <div class="datatable datahead">
+        <label>Name</label>
+        <div class="licenceAnswer">{{ pData.BillingFirstName }} {{ pData.BillingSurname }}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Address</label>
+        <div class="licenceAnswer">
+          {{ pData.BillingAddressline1}}</br>
+          {{ pData.BillingAddressline2}}</br>
+          {{ pData.BillingCounty}}</br>
+          {{ pData.BillingPostcode}}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Telephone</label>
+        <div class="licenceAnswer">{{ pData.BillingTel}}</div>
+      </div>
+
+      <div class="datatable">
+        <label>Email</label>
+        <div class="licenceAnswer">{{ pData.BillingEmail}}</div>
+      </div>
+      <br>
+    </div>
+  {% endif %}
+
+  <!-- returns contact -->
+  {% if pData.ReturnsFirstName %}
+
+  <div class="big-space">
+
+    <h2 class="heading-medium">
+      Returns contact details
+    </h2>
+
+    <div class="datatable">
+      <label>Name</label>
+      <div class="licenceAnswer">{{ pData.ReturnsFirstName }} {{ pData.ReturnsSurname }}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Address</label>
+      <div class="licenceAnswer">
+        {{ pData.ReturnsAddressline1}}</br>
+        {{ pData.ReturnsAddressline2}}</br>
+        {{ pData.ReturnsCounty}}</br>
+        {{ pData.ReturnsPostcode}}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Telephone</label>
+      <div class="licenceAnswer">{{ pData.ReturnsTel}}</div>
+    </div>
+
+    <div class="datatable">
+      <label>Email</label>
+      <div class="licenceAnswer">{{ pData.ReturnsEmail}}</div>
+    </div>
+    <br>
+  </div>
+  {% endif %}
+
+
+</main>
+
+{% endif %}
+{% endfor %}
+
+{% endblock %}

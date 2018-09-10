@@ -1,0 +1,84 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-br-view.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <div class="form-group">
+
+        <form data-routing="1">
+
+          <fieldset class="medium-space">
+
+            <legend class="medium-space">
+              <!-- <h1 class="heading-medium">
+                Are there any abstraction amounts to report?
+              </h1> -->
+
+              <!-- page heading -->
+              {% if pData.LicenceName %}
+
+                <h1 class="heading-large spaceless">
+                  What do you want to do with this return due for {{ pData.LicenceName }}?
+                </h1>
+
+              {% else %}
+
+                <h1 class="heading-large spaceless">
+                  What do you want to do with this return due for licence number {{pData.LicenceSerialNo}}?
+                </h1>
+
+              {% endif %}
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="make-return" type="radio" name="radio-inline-group" value="returns-route-return?wid={{ query.wid }}">
+              <label for="make-return">Submit return data</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="paper-forms" type="radio" name="radio-inline-group" value="/v21/br/returns/send-paper-form-preview?wid={{ query.wid }}">
+              <label for="paper-forms">Send paper forms</label>
+            </div>
+
+          </fieldset>
+
+          <button type="submit" class="button">Continue</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
+
+{% endblock %}

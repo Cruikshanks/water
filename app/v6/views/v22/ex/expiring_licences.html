@@ -1,0 +1,80 @@
+{% extends "../head.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  XXXXX - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/add_licences.html" %}
+
+  <!-- change alert -->
+  <div class="column-two-thirds">
+    <div class="grid-row">
+      <div class="panel panel-border-wide alert-default medium-space">
+        These licences will expire soon. Please make sure you are aware of any coming changes to your abstraction conditions.
+      </div>
+    </div>
+  </div>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">Licences due to change</h1>
+    </div>
+  </div>
+
+  <!-- licence list -->
+  <div class="grid-row">
+    <div class="column-full">
+    <!-- Results page goes here -->
+    <div class="license-results" id="results">
+
+      <div class="license-results-header">
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence serial number">
+            Licence serial number
+            <span class="sort-icon"> &#x25be;</span>
+          </a>
+        </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">
+            Licence name
+            <span class="sort-icon"> &#x25be;</span>
+          </a>
+        </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">
+            Licence end date
+            <span class="sort-icon"> &#x25be;</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="/v21/ex/online_licence?wid=1" class="license-result">
+        <h2 class="heading-medium license-result__column">29/38/01/0041</h2>
+        <p class="license-result__column license-result__column--description"></p>
+        <div class="license-result__column" aria-hidden="true">Ends 2 Feb 2019</div>
+      </a>
+
+      <a href="/v21/ex/online_licence?wid=2" class="license-result">
+        <h2 class="heading-medium license-result__column">03/28/01/0142</h2>
+        <p class="license-result__column license-result__column--description"></p>
+        <div class="license-result__column" aria-hidden="true">Ends 2 May 2019</div>
+      </a>
+
+  </div>
+</div>
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}

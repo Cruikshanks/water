@@ -1,0 +1,58 @@
+{% extends "./../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "./../../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "./../../partials/nav-ex-view.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large tight">
+        Readings from more than one meter
+      </h1>
+
+      <p lede="heading-medium">
+        You must report your return in abstraction volumes instead of meter readings.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="grid-row medium-space">
+    <div class="column-one-third">
+
+      <div>
+        <a href="returns-route-unit?wid={{ query.wid }}" id="submitButton" class="button" type="submit">
+          Report abstraction volumes
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <p>
+        Alternatively, you can complete a paper form.
+      </p>
+
+      <a href="post-preview?wid={{ query.wid }}">
+        Request a paper form by post
+      </a>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

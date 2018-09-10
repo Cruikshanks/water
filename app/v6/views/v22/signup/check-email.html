@@ -1,0 +1,37 @@
+{% extends "../head.html" %}
+
+{% block page_title %}
+    We have sent you an email with a link - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <p></p><br>
+
+      <a class="link-back" onclick="history.go(-1)">Back</a>
+
+      <h1 class="form-title heading-large">
+        We have sent you an email with a link
+      </h1>
+
+      <p class="lede">
+        Click on the link in the email to finish setting up your account.
+      </p>
+
+      <a href="resend-email">
+        Not received the email?
+      </a>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "v18/head.html" %}
+
+{% block page_title %}
+  Your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Your licences
+      </h1>
+
+      <div class="small-space">
+
+        <p lede="heading-medium">
+          We have added the following licences to your account.
+        </p>
+
+        <p>
+          If you have more than one security code you can <a href="use-code">keep adding them to see more of your licences</a>.
+        </p>
+
+        <p>
+          You will be able to add more of your licences later if they are not listed here.
+        </p>
+
+        <ul class="list list-bullet text">
+          <li>
+            03/28/60/0031
+          </li>
+          <li>
+            03/28/60/0032
+          </li>
+          <li>
+            03/28/60/0033
+          </li>
+          <li>
+            03/28/60/0034
+          </li>
+          <li>
+            01/04/12/0047
+          </li>
+          <li>
+            01/04/12/0048
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- continue button -->
+      <a href="../returns/returns-list" class="button medium-space">
+        View returns
+      </a>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
