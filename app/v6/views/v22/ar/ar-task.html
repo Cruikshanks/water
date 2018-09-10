@@ -1,4 +1,4 @@
-{% extends "../ar/head-signedin.html" %}
+{% extends "ar/head-signedin.html" %}
 
 {% block page_title %}
   Review licence {{ pData.LicenceSerialNo }} - GOV.UK
@@ -6,10 +6,6 @@
 
 {% block content %}
 <main id="content" role="main">
-
-  {% from "custom_inc/waterdata.html" import permits %}
-  {% for pNumber, pData in permits %}
-  {% if pNumber==chosenPermitID %}
 
   <!-- internal beta banner block -->
   {% include "../partials/feedback-banner.html" %}
@@ -273,9 +269,6 @@
   <script src="/public/v6/javascripts/underscore.min.js"></script>
   <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
   <script src="/public/v6/javascripts/license_results.js"></script>
-
-  {% endif %}
-  {% endfor %}
 
 </main>
 {% endblock %}
