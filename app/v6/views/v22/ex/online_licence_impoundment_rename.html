@@ -32,7 +32,7 @@
     </label>
     <input minlength="2" maxlength="32" style="background: #fff" type="text" class="form-control " id="name" name="name" value="">
     <p></p>
-    <a class="button" href="/v21/ex/online_licence?wid={{ query.wid }}" role="button" style="margin-bottom:20px;">
+    <a class="button" href="/v22/ex/online_licence?wid={{ query.wid }}" role="button" style="margin-bottom:20px;">
       Save
     </a>
     <p class="form-cancel">
@@ -47,7 +47,7 @@
     <label>Licence holder</label>
     <div class="dataText">
       {{ pData.HolderFirstName }} {{ pData.HolderSurname }}</br>
-      <a href="/v21/ex/contact_details?wid={{ pNumber }}">View licence contact details</a>
+      <a href="/v22/ex/contact_details?wid={{ pNumber }}">View licence contact details</a>
     </div>
   </div>
 
@@ -92,7 +92,7 @@
         {% if pData.Point5 %}
           {{ pData.Point5 }}<br>
         {% endif %}
-        <a href="/v21/ex/impoundment/points?wid={{ query.wid }}">View details of abstraction points</a>
+        <a href="/v22/ex/impoundment/points?wid={{ query.wid }}">View details of abstraction points</a>
 
       </div>
 
@@ -102,7 +102,7 @@
         <div class="dataText">
 
         {{ pData.Point1 }}<br>
-        <a href="/v21/ex/impoundment/points?wid={{ query.wid }}">View details of abstraction point</a>
+        <a href="/v22/ex/impoundment/points?wid={{ query.wid }}">View details of abstraction point</a>
 
       {% endif %}
 
@@ -130,7 +130,7 @@
           {{ pData.MannerType5 }}</br>
         {% endif %}
 
-        <a href="/v21/ex/impoundment/manner?wid={{ query.wid }}">View details of manner of impoundment</a>
+        <a href="/v22/ex/impoundment/manner?wid={{ query.wid }}">View details of manner of impoundment</a>
 
       </div>
 
@@ -155,7 +155,7 @@
           {{ pData.Condition5 }}</br>
         {% endif %}
 
-        <a href="/v21/ex/impoundment/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
+        <a href="/v22/ex/impoundment/conditions?wid={{ query.wid }}">View details of abstraction conditions</a>
 
     </div>
   </div>

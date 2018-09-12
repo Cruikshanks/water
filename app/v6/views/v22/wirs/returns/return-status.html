@@ -49,41 +49,6 @@
   <!-- navigation block -->
   {% include "../../partials/return-internal-meta.html" %}
 
-  <!-- <div class="small-space">
-    <dl>
-      <dt class="meta-label">
-        Region
-      </dt>
-      <dd class="meta-description">
-        Anglian
-      </dd>
-      <dt class="meta-label">
-        Purpose
-      </dt>
-      <dd class="meta-description">
-        {{ pData.Purpose1 }}
-      </dd>
-      <dt class="meta-label">
-        Site description
-      </dt>
-      <dd class="meta-description">
-        Great Ouse at Bedford College (Heat pump - cooling only)
-      </dd>
-      <dt class="meta-label">
-        Return period
-      </dt>
-      <dd class="meta-description">
-        1 April 2018 to 31 March 2019
-      </dd>
-      <dt class="meta-label">
-        Abstraction period
-      </dt>
-      <dd class="meta-description">
-        1 April 2018 to 31 September 2018
-      </dd>
-    </dl>
-  </div> -->
-
   <div class="grid-row">
     <div class="column-two-thirds">
       <p class="medium-space">
@@ -105,12 +70,16 @@
         </legend>
 
         <div class="multiple-choice">
-          <input id="return-form" type="radio" name="radio-inline-group" value="../check-in/return-check-in?wid={{ query.wid }}">
-          <label for="return-form">Check in this return</label>
+          <input id="return-check-in" type="radio" name="return-status" value="../check-in/return-check-in?wid={{ query.wid }}">
+          <label for="return-check-in">Check in this return</label>
         </div>
         <div class="multiple-choice">
-          <input id="nil-return" type="radio" name="radio-inline-group" value="/v21/wirs/returns/returns-route-return?wid={{ query.wid }}">
-          <label for="nil-return">Report this return</label>
+          <input id="report-return" type="radio" name="return-status" value="returns-route-return?wid={{ query.wid }}">
+          <label for="report-return">Report this return</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="return-query" type="radio" name="return-status" value="return-query?wid={{ query.wid }}">
+          <label for="return-query">Query this return</label>
         </div>
 
       </fieldset>

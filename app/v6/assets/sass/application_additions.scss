@@ -1469,3 +1469,13 @@ details {
 #meter-readings input {
   width: 4em;
 }
+
+/* updates for confirmation boxes */
+.govuk-box-highlight {
+  h1 {
+    font-size: 48px;
+  }
+  p {
+    font-size: 36px;
+  }
+}

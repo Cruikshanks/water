@@ -2,7 +2,7 @@
 
 <!-- page title -->
 {% block page_title %}
-  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+  Confirm receipt of return number {{ pData.LicenceNumber }} - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,7 @@
   {% include "../../partials/beta-banner.html" %}
 
   <!-- navigation block -->
-  {% include "../../partials/nav-wirs-view.html" %}
+  {% include "../../partials/nav-wirs-manage.html" %}
 
   <div class="grid-row medium-space">
     <div class="column-two-thirds">
@@ -36,45 +36,41 @@
     </div>
   </div>
 
-  <!-- navigation block -->
-  <!-- {% include "../../partials/return-internal-meta.html" %} -->
-
-  <div class="grid-row small-space">
-    <div class="column-two-thirds">
-      <p>
-        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
-      </p>
-    </div>
-  </div>
+  <p class="lede">
+    This return will be marked for query
+  </p>
 
   <div class="form-group">
-
     <form data-routing="1">
 
-      <fieldset class="medium-space">
-
-        <legend>
-          <h1 class="heading-medium">
-            Are there any abstraction amounts to report?
-          </h1>
+      <fieldset>
+        <legend class="small-space">
+          <span class="form-label-bold">
+            What date was this return received?
+          </span>
         </legend>
-
-        <div class="multiple-choice">
-          <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-method?wid={{ query.wid }}">
-          <label for="return-form">Yes</label>
+        <div class="form-date"> <!-- prefilled with today’s date -->
+          <div class="form-group form-group-day">
+            <label class="form-label" for="checked-in-day">Day</label>
+            <input class="form-control" id="checked-in-day" name="checked-in-day" pattern="[0-9]*" type="number" value="9">
+          </div>
+          <div class="form-group form-group-month">
+            <label class="form-label" for="checked-in-month">Month</label>
+            <input class="form-control" id="checked-in-month" name="checked-in-month" pattern="[0-9]*" type="number" value="11">
+          </div>
+          <div class="form-group form-group-year">
+            <label class="form-label" for="checked-in-year">Year</label>
+            <input class="form-control" id="checked-in-year" name="checked-in-year" pattern="[0-9]*" type="number" value="2018">
+          </div>
         </div>
-        <div class="multiple-choice">
-          <input id="nil-return" type="radio" name="radio-inline-group" value="/v22/br/returns/confirm-no-return?wid={{ query.wid }}">
-          <label for="nil-return">No</label>
-        </div>
-
       </fieldset>
 
-      <button type="submit" class="button">Continue</button>
-
     </form>
-
   </div>
+
+  <a href="marked-for-query?wid={{ query.wid }}" class="button">
+    Mark this return
+  </a>
 
 </main>
 
