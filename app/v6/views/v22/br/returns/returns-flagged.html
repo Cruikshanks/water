@@ -1,0 +1,293 @@
+{% extends "../head-signedin.html" %}
+
+{% block page_title %}
+  Returns for {{ pData.LicenceSerialNo }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-br-manage.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- page heading -->
+  <h1 class="heading-large medium-space">
+    Returns marked for query
+  </h1>
+
+  <p class="lede">
+    These returns have been marked for query and have not been processed.
+  </p>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <!-- table with four columns -->
+      <div class="table">                                                       <!-- a table -->
+
+        <div class="table-row table-head">                                      <!-- the table head -->
+          <div class="table-cell bold-small column-33">
+            Return period
+          </div>
+          <div class="table-cell bold-small">
+            Purpose
+          </div>
+          <div class="table-cell bold-small">
+            Site description
+          </div>
+          <div class="table-cell bold-small column-15">
+            Status
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 1
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-route-flagged?wid=6">
+              April 2018 to March 2019
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Site description
+            </h3>
+            Sally Leigh, high side
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <strong class="task-completed task-error badge">
+              Under query
+            </strong>
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 2
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-route-flagged?wid=1">
+              April 2018 to March 2019
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Site description
+            </h3>
+            Eye Bund
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <strong class="task-completed task-error badge">
+              Under query
+            </strong>
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 3
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-route-flagged?wid=2">
+              April 2018 to March 2019
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Spray irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Site description
+            </h3>
+            Fern Bank South
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <strong class="task-completed task-error badge">
+              Under query
+            </strong>
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 4
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-route-flagged?wid=3">
+              April 2018 to March 2019
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Chemical washing
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Site description
+            </h3>
+            Brommlin Brooke
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <strong class="task-completed task-error badge">
+              Under query
+            </strong>
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 5
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-route-flagged?wid=4">
+              April 2018 to March 2019
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Irrigation
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Site description
+            </h3>
+            Top field barn
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <strong class="task-completed task-error badge">
+              Under query
+            </strong>
+          </div>
+        </div>
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="sr-only">
+              Row 6
+            </h2>
+            <h3 class="context">
+              Return period
+            </h3>
+            <a href="returns-route-flagged?wid=5">
+              April 2018 to March 2019
+            </a>
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Purpose
+            </h3>
+            Potable water
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Site description
+            </h3>
+            Sand bank shed
+          </div>
+          <div class="table-cell">
+            <h3 class="context">
+              Status
+            </h3>
+            <strong class="task-completed task-error badge">
+              Under query
+            </strong>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+<script>
+  $(function() {
+
+    var ctrlKey = false;
+
+    $(window).keydown(function(ev){
+      if(ev.ctrlKey || ev.keyCode === 224 || ev.keyCode === 17 || ev.keyCode === 91 || ev.keyCode === 93) {
+        ctrlKey = true;
+      }
+    });
+
+    $(window).keyup(function(){
+      ctrlKey = false;
+    });
+
+    $('a').parents('.table-row').addClass('clickable');
+
+    // Click on licence list clicks inner link
+    $('.table-row').on('click', function (ev) {
+      var href = $(this).find('a:first').attr('href');
+      console.log(ctrlKey);
+      ctrlKey ? window.open.blur(href) : window.location.href = href;
+      window.focus();
+      // window.location.href = $(this).find('a:first').attr('href');
+      $(this).addClass('active');
+      ev.preventDefault();
+    });
+  });
+</script>
+
+{% endblock %}
