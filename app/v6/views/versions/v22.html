@@ -14,7 +14,7 @@
         Manage your water abstraction or impoundment licence online prototype
       </h1>
 
-      <h2 class="heading-medium">Prototype version 21</h2>
+      <h2 class="heading-medium">Prototype version 22</h2>
 
     </div>
   </div>
@@ -22,14 +22,31 @@
   <div class="grid-row">
     <div class='column-two-thirds'>
 
+      <h3 class="heading-small">Returns may be queried by WIRS</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v22/wirs/returns/find-return">Find a return by ID</a></li>
+        <li><a href="/v22/wirs/returns/return-status?wid=32">The return can be marked for query</a></li>
+        <li><a href="/v22/wirs/returns/return-query?wid=32">Comments and received date for queries</a></li>
+        <li><a href="/v22/wirs/returns/marked-for-query?wid=32">Return is marked for query</a></li>
+      </ul>
+
+      <h3 class="heading-small">Queried returns are seen by Billing & Returns</h3>
+
+      <ul class="list list-bullet">
+        <li><a href="/v22/br/manage">Manage view for Billing & Returns</a></li>
+        <li><a href="/v22/br/returns/returns-flagged">See marked returns</a></li>
+        <li><a href="/v22/br/returns/returns-route-flagged?wid=1">Action on the queried return</a></li>
+      </ul>
+
       <h3 class="heading-small">Check-in a return</h3>
 
       <ul class="list list-bullet">
 
         <li><a href="/v22/wirs/returns/find-return">Find a return by ID</a></li>
-        <li><a href="/v21/wirs/returns/return-status?wid=32">Return status</a></li>
-        <li><a href="/v21/wirs/check-in/return-check-in?wid=32">Check in this return</a></li>
-        <li><a href="/v21/wirs/check-in/checked-in?wid=32">Return checked in</a></li>
+        <li><a href="/v22/wirs/returns/return-status?wid=32">Return status</a></li>
+        <li><a href="/v22/wirs/check-in/return-check-in?wid=32">Check in this return</a></li>
+        <li><a href="/v22/wirs/check-in/checked-in?wid=32">Return checked in</a></li>
       </ul>
 
       <h3 class="heading-small">Manage access</h3>
