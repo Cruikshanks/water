@@ -24,7 +24,7 @@
       </p>
 
       <form class="medium-space">
-        <div class="form-group">
+        <div class="form-group" id="security-code">
           <label for="password">
             <span class="form-hint">
               Add one of your codes now
@@ -33,11 +33,11 @@
               <span id="enterPassword" data-parsely-id="password" class="error-message hidden">Check your code is correct.</span>
             </fieldset>
           </label>
-          <input type="text" data-parsley-pattern="x45Tn" class="form-control" data-parsely-trigger="keyup change" name="password" id="password" required />
+          <input type="text" class="form-control" name="security-code" />
         </div>
 
         <!-- <input onclick="$('#incorrectLogin').hide()" type="submit" value="Continue" class="button" role="button"/> -->
-        <a href="added-licences" class="button">Continue</a>
+        <a href="code-used" class="button">Continue</a>
       </form>
 
     </div>
