@@ -2,7 +2,7 @@
 
 <!-- page title -->
 {% block page_title %}
-  Confirm receipt of return number {{ pData.LicenceNumber }} - GOV.UK
+  Abstraction return - enter date received - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -42,9 +42,11 @@
       <fieldset>
         <legend class="small-space">
           <span class="form-label-bold">
-            What date do you want to use for this check in?
+            Enter date received
           </span>
+          <span class="form-hint">For example, 31 3 2018</span>
         </legend>
+
         <div class="form-date"> <!-- prefilled with today’s date -->
           <div class="form-group form-group-day">
             <label class="form-label" for="checked-in-day">Day</label>
@@ -65,7 +67,7 @@
   </div>
 
   <a href="checked-in?wid={{ query.wid }}" class="button">
-    Check in this return
+    Submit
   </a>
 
 </main>
