@@ -1,0 +1,120 @@
+{% extends "../ex/head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-ex-view.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Your licences
+      </h1>
+    </div>
+  </div>
+
+  <!-- search function -->
+  {% include "../partials/search.html" %}
+
+  <!-- licence list -->
+  <div class="grid-row">
+    <div class="column-full">
+
+    <!-- Results page goes here -->
+    <div class="license-results medium-space" id="results">
+
+      <div class="license-results-header">
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence number">
+            Licence serial number
+            <span class="sort-icon"> &#x25be;</span>
+          </a>
+        </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">
+            Licence name
+            <span class="sort-icon"> &#x25be;</span>
+          </a>
+        </div>
+        <div class="license-results-header__column">
+          <a href="#" aria-label="Sort by licence name">
+            Licence end date
+            <span class="sort-icon"> &#x25be;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- find way to pull data in here -->
+
+      <a href="/v22/ex/online_licence?wid=1" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">03/28/60/0002</h2>
+        <p class="license-result__column license-result__column--description">Linton Valley</p>
+        <div class="license-result__column" aria-hidden="true">15 September 2022</div>
+      </a>
+
+      <a href="/v22/ex/online_licence?wid=2" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">03/28/60/0003</h2>
+        <p class="license-result__column license-result__column--description">Linton Lake</p>
+        <div class="license-result__column" aria-hidden="true">30 September 2025</div>
+      </a>
+
+      <a href="/v22/ex/online_licence?wid=3" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">03/28/60/0032</h2>
+        <p class="license-result__column license-result__column--description">Collingford Bridge</p>
+        <div class="license-result__column" aria-hidden="true">30 April 2021</div>
+      </a>
+
+      <a href="/v22/ex/online_licence?wid=4" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">01/04/12/0047</h2>
+        <p class="license-result__column license-result__column--description">Clippington Weir</p>
+        <div class="license-result__column" aria-hidden="true">1 September 2031</div>
+      </a>
+
+      <a href="/v22/ex/online_licence?wid=5" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">01/04/12/0048</h2>
+        <p class="license-result__column license-result__column--description">Lickhill Licence</p>
+        <div class="license-result__column" aria-hidden="true">1 March 2027</div>
+      </a>
+
+      <a href="/v22/ex/online_licence?wid=5" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">01/04/12/0049</h2>
+        <p class="license-result__column license-result__column--description">Butterworth Brooke</p>
+        <div class="license-result__column" aria-hidden="true">1 March 2027</div>
+      </a>
+
+      <a href="/v22/ex/online_licence?wid=6" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">32/04/88/0010</h2>
+        <p class="license-result__column license-result__column--description">Duke & Fosters</p>
+        <div class="license-result__column" aria-hidden="true">No end</div>
+      </a>
+
+      <a href="/v22/ex/online_licence?wid=7" class="license-result">
+        <h2 class="heading-medium license-result__column faux-link">33/04/88/0011</h2>
+        <p class="license-result__column license-result__column--description">River at Lorrington</p>
+        <div class="license-result__column" aria-hidden="true">30 June 2026</div>
+      </a>
+
+    </div>
+
+    <!-- disclaimer block -->
+    {% include "../partials/disclaimer.html" %}
+
+  </div>
+</div>
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+
+{% endblock %}

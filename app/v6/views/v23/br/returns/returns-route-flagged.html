@@ -1,0 +1,128 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-br-manage.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+
+        <h1 class="heading-large">
+          What do you want to do with this return due for {{ pData.LicenceName }}?
+        </h1>
+
+      {% else %}
+
+        <h1 class="heading-large">
+          What do you want to do with this return due for licence number {{pData.LicenceSerialNo}}?
+        </h1>
+
+      {% endif %}
+
+      <div class="panel panel-border-wide medium-space">
+        <p>
+          Single figure given but the licence requires weekly records and volumes.
+        </p>
+      </div>
+
+      <div class="medium-space">
+        <a href="../online-licence?wid=6" target="_blank">
+          See the licence
+        </a>
+      </div>
+
+      <details>
+
+        <summary>
+          <span class="summary">
+            Main contact for this licence
+          </span>
+        </summary>
+
+        <div class="panel panel-border-narrow">
+
+          <div class="datatable datahead">
+            <label>Name</label>
+            <div class="licenceAnswer">{{ pData.HolderFirstName }} {{ pData.HolderSurname }}</div>
+          </div>
+
+          <div class="datatable">
+            <label>Address</label>
+            <div class="licenceAnswer">
+              {{ pData.HolderAddressline1}}</br>
+              {{ pData.HolderAddressline2}}</br>
+              {{ pData.HolderCounty}}</br>
+              {{ pData.HolderPostcode}}</div>
+          </div>
+
+          <div class="datatable">
+            <label>Telephone</label>
+            <div class="licenceAnswer">{{ pData.HolderTel}}</div>
+          </div>
+
+          <div class="datatable big-space">
+            <label>Email</label>
+            <div class="licenceAnswer">{{ pData.HolderEmail}}</div>
+          </div>
+
+        </div>
+
+      </details>
+
+      <div class="form-group">
+
+        <form data-routing="1">
+
+          <fieldset class="medium-space">
+
+            <div class="multiple-choice">
+              <input id="make-return" type="radio" name="radio-inline-group" value="returns-route-return?wid={{ query.wid }}">
+              <label for="make-return">Submit return data</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="paper-forms" type="radio" name="radio-inline-group" value="/v22/br/returns/send-paper-form-preview?wid={{ query.wid }}">
+              <label for="paper-forms">Send paper forms</label>
+            </div>
+
+          </fieldset>
+
+          <button type="submit" class="button">Continue</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
+
+{% endblock %}

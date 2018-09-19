@@ -1,0 +1,540 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Your abstraction returns - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-eo-returns.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large medium-space">
+        Compliance checking
+      </h1>
+
+      <p class="lede big-space">
+        These returns have potential compliance issues that should be checked.
+      </p>
+
+      <h2 class="bold-medium small-space">
+        April 2017 to March 2018
+      </h2>
+    </div>
+  </div>
+
+  <!-- table with four columns -->
+  <div class="table big-space">                                          <!-- a table -->
+
+    <div class="table-row table-head">                                      <!-- the table head -->
+      <div class="table-cell bold-small column-33">
+        Licence
+      </div>
+      <div class="table-cell bold-small">
+        Purpose
+      </div>
+      <div class="table-cell bold-small">
+        Site description
+      </div>
+      <div class="table-cell bold-small column-15">
+        Status
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 1
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=1">
+          {% if permits[1].LicenceName %}
+            {{ permits[1].LicenceName }}
+          {% else %}
+            {{ permits[1].LicenceSerialNo }}
+          {% endif %}
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[1].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[1].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 2
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=2">
+          {% if permits[2].LicenceName %}
+            {{ permits[2].LicenceName }}
+          {% else %}
+            {{ permits[2].LicenceSerialNo }}
+          {% endif %}
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[2].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[2].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 3
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=3">
+          {% if permits[3].LicenceName %}
+            {{ permits[3].LicenceName }}
+          {% else %}
+            {{ permits[3].LicenceSerialNo }}
+          {% endif %}
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[3].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[3].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 4
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=4">
+          {% if permits[4].LicenceName %}
+            {{ permits[4].LicenceName }}
+          {% else %}
+            {{ permits[4].LicenceSerialNo }}
+          {% endif %}
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[4].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[4].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <strong class="task-completed open-task not-completed">
+          In progress
+        </strong>
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 5
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=5">
+          {% if permits[5].LicenceName %}
+            {{ permits[5].LicenceName }}
+          {% else %}
+            {{ permits[5].LicenceSerialNo }}
+          {% endif %}
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[5].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[5].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 6
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=6">
+          {% if permits[6].LicenceName %}
+            {{ permits[6].LicenceName }}
+          {% else %}
+            {{ permits[6].LicenceSerialNo }}
+          {% endif %}
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[6].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[6].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 7
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=34">
+          {% if permits[7].LicenceName %}
+            {{ permits[7].LicenceName }}
+          {% else %}
+            {{ permits[7].LicenceSerialNo }}
+          {% endif %}
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[7].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[7].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 8
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=34">
+          {% if permits[30].LicenceName %}
+            {{ permits[30].LicenceName }}
+          {% else %}
+            {{ permits[30].LicenceSerialNo }}
+          {% endif %}
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[30].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[30].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 9
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=34">
+          03/28/60/0974
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[31].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[31].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 10
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=34">
+          03/28/60/9970
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[32].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[32].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 11
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=34">
+          03/28/60/0034/r002
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[33].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[33].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 12
+        </h3>
+        <h4 class="context">
+          Licence
+        </h4>
+        <a href="returns-report?wid=34">
+          03/28/60/0034/r002
+        </a>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Purpose
+        </h4>
+        {{ permits[43].Purpose1 }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Site description
+        </h4>
+        {{ permits[34].SiteDescription }}
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Status
+        </h4>
+        <!-- <strong class="task-completed open-task badge">
+          Return due
+        </strong> -->
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+<script>
+  $(function() {
+
+    var ctrlKey = false;
+
+    $(window).keydown(function(ev){
+      if(ev.ctrlKey || ev.keyCode === 224 || ev.keyCode === 17 || ev.keyCode === 91 || ev.keyCode === 93) {
+        ctrlKey = true;
+      }
+    });
+
+    $(window).keyup(function(){
+      ctrlKey = false;
+    });
+
+    $('a').parents('.table-row').addClass('clickable');
+
+    // Click on licence list clicks inner link
+    $('.table-row').on('click', function (ev) {
+      var href = $(this).find('a:first').attr('href');
+      console.log(ctrlKey);
+      ctrlKey ? window.open.blur(href) : window.location.href = href;
+      window.focus();
+      // window.location.href = $(this).find('a:first').attr('href');
+      $(this).addClass('active');
+      ev.preventDefault();
+    });
+  });
+</script>
+
+{% endblock %}

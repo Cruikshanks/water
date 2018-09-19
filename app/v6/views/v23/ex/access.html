@@ -1,0 +1,262 @@
+{% extends "../ex/head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Give access to view your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-ex-manage.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Give access to your licences
+      </h1>
+
+    </div>
+  </div>
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+      <p>You can let others view your licence information. You can also allow them to complete your returns on your behalf.</p>
+
+      <div class="notice medium-space">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Warning</span>
+        </i>
+        <strong class="bold-small">
+          You will still be legally responsible for your returns
+        </strong>
+      </div>
+
+      <p>You will be able to remove their access at any time.</p>
+
+      <a href="give-access" class="button">Give access</a>
+    </div>
+  </div>
+
+  <!-- table with four columns -->
+  <div class="table small-space">                                          <!-- a table -->
+
+    <div class="table-row table-head">                                      <!-- the table head -->
+      <div class="table-cell bold-small column-40">
+        Permission to access
+      </div>
+      <div class="table-cell bold-small column-20">
+        Date
+      </div>
+      <div class="table-cell bold-small column-15">
+        View returns
+      </div>
+      <div class="table-cell bold-small column-15">
+        Manage returns
+      </div>
+      <div class="table-cell bold-small column-10">
+        <!-- no title -->
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 1
+        </h3>
+        <h4 class="context">
+          Permission to access
+        </h4>
+        frank.marigold@aquafall.com
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Date
+        </h4>
+        12 March 2015
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          View returns
+        </h4>
+        <div>
+          <label>
+            Yes
+          </label>
+        </div>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Manage returns
+        </h4>
+        <div>
+          <label>
+            Yes
+          </label>
+        </div>
+      </div>
+      <div class="table-cell big-column-right">
+        <h4 class="context">
+          <!-- no title -->
+        </h4>
+        <a href="/v22/ex/access-change">
+          Change
+        </a>
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 2
+        </h3>
+        <h4 class="context">
+          Permission to access
+        </h4>
+        mark.turny@aquafall.com
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Date
+        </h4>
+        28 June 2015
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          View returns
+        </h4>
+        <div>
+          <label>
+            Yes
+          </label>
+        </div>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Manage returns
+        </h4>
+        <div>
+          <label aria-label="Can do returns">
+            Yes
+          </label>
+        </div>
+      </div>
+      <div class="table-cell big-column-right">
+        <h4 class="context">
+          <!-- no title -->
+        </h4>
+        <a href="/v22/ex/access-change">
+          Change
+        </a>
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 3
+        </h3>
+        <h4 class="context">
+          Permission to access
+        </h4>
+        office@aquafall.com
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Date
+        </h4>
+        1 May 2014
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          View returns
+        </h4>
+        <div>
+          <label>
+            Yes
+          </label>
+        </div>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Manage returns
+        </h4>
+        <div>
+          <label aria-label="Can do returns">
+
+          </label>
+        </div>
+      </div>
+      <div class="table-cell big-column-right">
+        <h4 class="context">
+          <!-- no title -->
+        </h4>
+        <a href="/v22/ex/access-change">
+          Change
+        </a>
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h3 class="sr-only">
+          Row 3
+        </h3>
+        <h4 class="context">
+          Permission to access
+        </h4>
+        admin@aquafall.com
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Date
+        </h4>
+        4 July 2016
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          View returns
+        </h4>
+        <div>
+          <label>
+            Yes
+          </label>
+        </div>
+      </div>
+      <div class="table-cell">
+        <h4 class="context">
+          Manage returns
+        </h4>
+        <div>
+          <label aria-label="Can do returns">
+            Yes
+          </label>
+        </div>
+      </div>
+
+      <div class="table-cell big-column-right">
+        <h4 class="context">
+          <!-- no title -->
+        </h4>
+        <a href="/v22/ex/access-change">
+          Change
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}

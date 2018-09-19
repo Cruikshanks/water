@@ -1,0 +1,53 @@
+{% extends "../../head.html" %}
+
+{% block page_title %}
+  Enter the code we sent you - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- navigation block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <div class="medium-space"></div>
+
+  <!-- back -->
+  <div class="small-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  </div>
+
+  <!-- page title -->
+  <h1  class="heading-large medium-space">
+    Enter the security code
+  </h1>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <p>
+        If you have more than one security code you can add the others after.
+      </p>
+
+      <form class="medium-space">
+        <div class="form-group" id="security-code">
+          <label for="password">
+            <span class="form-hint">
+              Add one of your codes now
+            </span>
+            <fieldset>
+              <span id="enterPassword" data-parsely-id="password" class="error-message hidden">Check your code is correct.</span>
+            </fieldset>
+          </label>
+          <input type="text" class="form-control" name="security-code" />
+        </div>
+
+        <!-- <input onclick="$('#incorrectLogin').hide()" type="submit" value="Continue" class="button" role="button"/> -->
+        <a href="code-used" class="button">Continue</a>
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
