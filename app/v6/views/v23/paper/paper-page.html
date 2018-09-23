@@ -59,45 +59,8 @@
 
       /* end of old broswer support */
 
-      /* styles for the form */
 
-      body {
-        /* background-image: url("./print-guide.png"); */
-        /* background-color: lightpink; */
-        font-family: Arial, sans-serif;
-      }
-
-      p {
-        font-size: 10pt;
-        line-height: 5mm;
-      }
-
-      .lede {
-        font-size: 12pt;
-      }
-
-      .focus {
-        border: 1px solid red;
-      }
-
-      #title-container {
-        position: absolute;
-        top: 4.3mm;
-        left: 15mm;
-        width: 180mm;
-        height: 30mm;
-      }
-
-      #title-block {
-        margin-bottom: 5mm;
-      }
-
-      h1 {
-        font-size: 22px;
-        font-family: sans-serif;
-        font-weight: 800;
-        padding-bottom: 2mm;
-      }
+      /* test styles */
 
       #registration-1 {
         position: absolute;
@@ -116,30 +79,52 @@
         border: 1px solid red;
       }
 
-      #address-container {
-        position: absolute;
-        left: 24.6mm;
-        top: 39.5mm;
-        display: block;
-        width: 95.4mm;
-        height: 26.8mm;
-        background-color: white;
-        border: 1px;
+      .focus {
+        border: 1px solid red;
       }
 
-      .address-block {
+
+      /* styles for the form */
+
+      body {
+        /* background-image: url("./print-guide.png"); */
+        /* background-color: lightpink; */
+        /* font-family: Arial, sans-serif; */
+        font-family: GDSTransportWebsite;
+      }
+
+      p {
+        font-size: 10pt;
+        line-height: 5mm;
+      }
+
+      .lede {
+        font-size: 12pt;
+      }
+
+      #title-container {
         position: absolute;
-        bottom: 0;
-        font-size: 8.5pt;
-        background-color: powderblue;
+        top: 4.3mm;
+        left: 15mm;
+        width: 180mm;
+        height: 30mm;
+      }
+
+      #title-block {
+        margin-bottom: 5mm;
+      }
+
+      h1 {
+        font-size: 22px;
+        padding-bottom: 2mm;
       }
 
       #content-container {
         position: absolute;
         left: 15mm;
-        top: 85mm;
+        top: 39.5mm;
         width: 180mm;
-        height: 202mm;
+        height: 242mm;
         background-color: white;
         border: 1px solid;
       }
@@ -161,15 +146,27 @@
         border: 1px solid green;
       }
 
-
       div {
         /* border-style: solid; */
         /* border-width: 1mm; */
       }
 
+
+      /* typograhic styles */
+
+      @font-face {
+        font-family: GDSTransportWebsite;
+        src: url(./GDSTransportWebsite.ttf);
+        font-weight:400;
+      }
+
       .bold {
         font-weight: 800;
       }
+
+
+
+
 
     </style>
   </head>
@@ -183,7 +180,7 @@
     <!-- title area -->
     <div class="focus" id="title-container">
       <div id="title-block">
-        <h1>Water abstraction monthly return form</h1>
+        <h1 class="bold">Water abstraction monthly return form</h1>
         <p class="lede">Environment Act 1995, Water Resources Act 1991</p>
       </div>
       <div id="meta-block">
@@ -198,21 +195,7 @@
     </div>
 
 
-    <!-- address area -->
-    <div id="address-container">
-      <div class="address-block">
-        M. Phipps<br>
-        Toval House,<br>
-        Toaverton Road,<br>
-        Toaverton,<br>
-        Bigford<br>
-        Devon<br>
-        BG12 2PP
-      </div>
-    </div>
-
-
-    <!-- cover content area -->
+    <!-- page content area -->
     <div id="content-container">
       <div id="content-left">
         Hello
