@@ -68,16 +68,34 @@
         top: 0;
         width: 210mm;
         height: 297mm;
-        border: 1px solid red;
+        border: 1pt solid red;
       }
 
       #registration-2 {
         position: absolute;
         left: 0mm;
-        top: 297mm;
+        top: 298mm;
         width: 210mm;
         height: 297mm;
-        border: 1px solid red;
+        border: 1pt solid red;
+      }
+
+      #registration-3 {
+        position: absolute;
+        left: 0mm;
+        top: 595mm;
+        width: 210mm;
+        height: 297mm;
+        border: 1pt solid red;
+      }
+
+      #registration-4 {
+        position: absolute;
+        left: 0mm;
+        top: 892mm;
+        width: 210mm;
+        height: 297mm;
+        border: 1pt solid red;
       }
 
       /* end of test styles */
@@ -119,7 +137,7 @@
         position: absolute;
         top: 4.3mm;
         top: 12mm;
-        left: 10mm;
+        left: 15mm;
         width: 180mm;
         height: 30mm;
       }
@@ -172,7 +190,7 @@
 
       #content-container-1 {
         position: absolute;
-        left: 10mm;
+        left: 15mm;
         top: 85mm;
         width: 180mm;
         height: 185mm;
@@ -181,9 +199,19 @@
 
       #content-container-2 {
         position: absolute;
-        left: 10mm;
+        left: 15mm;
         /* top: 85mm; */
         top: 309mm;
+        width: 185mm;
+        height: 258mm;
+        /* border: 1px solid green; */
+      }
+
+      #content-container-3 {
+        position: absolute;
+        left: 15mm;
+        /* top: 85mm; */
+        top: 606mm;
         width: 185mm;
         height: 258mm;
         /* border: 1px solid green; */
@@ -194,7 +222,7 @@
         width: 85mm;
         height: 100%;
         padding-right: 5mm;
-        /* border: 1px solid blue; */
+        border: 1px solid blue;
       }
 
       .content-right {
@@ -203,7 +231,7 @@
         width: 90mm;
         height: 100%;
         padding-left: 5mm;
-        /* border: 1px solid green; */
+        border: 1px solid green;
       }
 
       .block {
@@ -213,13 +241,26 @@
       .input {
         /* border-top: 1mm solid lightgrey; */
         background-color: WhiteSmoke;
-        border-bottom: 1mm solid black;
-
+        border-bottom: 1pt solid black;
+        margin-top: 1mm;
         padding-top: 2mm;
         padding-bottom: 2mm;
 
         height: 7.5mm;
 
+      }
+
+      .number-input {
+        display: inline-block;
+        margin-top: 2mm;
+        border: 1pt solid black;
+        border-right: 0;
+        width: 6mm;
+        height: 7.5mm;
+      }
+
+      .last-digit {
+        border-right: 1pt solid black;
       }
 
       .input p {
@@ -229,7 +270,7 @@
 
       .stacked {
         margin-bottom: 0mm;
-        border-bottom: 1mm solid grey;
+        border-bottom: 1pt solid grey;
       }
 
       .label {
@@ -243,7 +284,7 @@
 
        .checkbox {
          display: inline-block;
-         border: 2pt solid black;
+         border: 1pt solid black;
          width: 5mm;
          height: 5mm;
          position: relative;
@@ -276,7 +317,7 @@
       }
 
       .item {
-        margin-bottom: 4mm;
+        margin-bottom: 3mm;
       }
 
       .hint {
@@ -291,22 +332,29 @@
 
       #footer-container-1 {
         position: absolute;
-        left: 10mm;
+        left: 15mm;
         top: 277mm;
         height: 10mm;
       }
 
       #footer-container-2 {
         position: absolute;
-        left: 10mm;
+        left: 15mm;
         top: 574mm;
+        height: 10mm;
+      }
+
+      #footer-container-3 {
+        position: absolute;
+        left: 15mm;
+        top: 871mm;
         height: 10mm;
       }
 
       #pagination-1 {
         position: absolute;
         text-align: right;
-        top: 280mm;
+        top: 288mm;
         /* top: 277mm; */
         left: 165mm;
         /* right: 10mm; */
@@ -319,7 +367,20 @@
       #pagination-2 {
         position: absolute;
         text-align: right;
-        top: 577mm;
+        top: 585mm;
+        /* top: 277mm; */
+        left: 165mm;
+        /* right: 10mm; */
+        width: 30mm;
+        /* border: 1px solid yellow; */
+
+        page-break-after: always;
+      }
+
+      #pagination-3 {
+        position: absolute;
+        text-align: right;
+        top: 882mm;
         /* top: 277mm; */
         left: 165mm;
         /* right: 10mm; */
@@ -473,7 +534,7 @@
               • consult the public, public organisations and other organisations (for example, the Health & Safety Executive, local authorities, the emergency services, the Department, Food and Rural Affairs) on environment issues
             </p>
             <p class="bullet">
-              • carry out resaerch and development work on environment issues
+              • carry out research and development work on environment issues
             </p>
             <p class="bullet">
               • manage and assess present and likely future demand for water, or allow others to do so
@@ -556,7 +617,7 @@
 
           <div class="item">
             <p class="label">
-              Return contact forename<br>
+              Print contact forename<br>
               <div class="input">
                 <p class="bold">
 
@@ -567,7 +628,7 @@
 
           <div class="item">
             <p class="label">
-              Return contact surname<br>
+              Print contact surname<br>
               <div class="input">
 
               </div>
@@ -586,7 +647,7 @@
           <div class="item">
             <p class="label">
               Contact email<br>
-              <span class="hint">(e.g. yourname@example.com)</span><br>
+              <span class="hint">For example yourname@example.com</span><br>
               <div class="input">
 
               </div>
@@ -605,6 +666,9 @@
     <div id="footer-container-1">
       <div class="text-block">
         <p>
+          Return ID <span class="bold">10042736</span>
+        </p>
+        <p>
           <span class="bold">WR71</span> — August 2017
         </p>
         <p>
@@ -614,7 +678,7 @@
     </div>
 
     <p id="pagination-1">
-      Page 1 of 2
+      Page 1 of 3
     </p>
 
     <!-- page 2 -->
@@ -676,7 +740,7 @@
 
         </div>
 
-        <div class="black">
+        <div class="block">
           <div class="block-head bold">
             4.1 Meter details (if known)
           </div>
@@ -722,11 +786,9 @@
       <div class="content-right">
 
         <div class="block">
-
           <div class="block-head bold">
             5. Further information
           </div>
-
           <p class="label">
             Are you attaching further information?<br>
             <div>
@@ -736,12 +798,88 @@
               </p>
             </div>
           </p>
-
           <p class="guide">
             If you need to explain any entry or want to give us other information please do so on a seperate sheet of paper.
             Please write the Licence number and Return ID (you will find this in Section 1 - Return details) on any attachment
           </p>
+        </div>
 
+        <div class="block">
+          <div class="block-head bold">
+            6. Start meter reading
+          </div>
+          <div class="item">
+            <p class="label">
+              Date (immediately before abstraction starts)
+            </p>
+            <span class="hint">For example 01 03 2019</span><br>
+            <div class="number-input"></div><div class="number-input last-digit"></div> <div class="number-input"></div><div class="number-input last-digit"></div> <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+          </div>
+          <div class="item">
+            <p class="label">
+              Reading<br>
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="block-head bold">
+            7. Return lines
+          </div>
+          <div class="item">
+            <p class="label">
+              The information that follows are
+            </p>
+            <p class="key-data">
+              <span class="checkbox"></span>
+              Meter readings
+            </p>
+            <p class="key-data">
+              <span class="checkbox"></span>
+              Abstraction volumes
+            </p>
+          </div>
+          <div class="item">
+            <p class="label">
+              Unit of measurement
+            </p>
+            <p class="key-data">
+              <span class="checkbox"></span>
+              Cubic meters
+            </p>
+            <p class="key-data">
+              <span class="checkbox"></span>
+              Litres
+            </p>
+            <p class="key-data">
+              <span class="checkbox"></span>
+              Megalitres
+            </p>
+            <p class="key-data">
+              <span class="checkbox"></span>
+              Gallons
+            </p>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="block-head bold">
+            8. End meter reading
+          </div>
+          <div class="item">
+            <p class="label">
+              Date (immediately after abstraction ends)
+            </p>
+            <span class="hint">For example 30 11 2019</span><br>
+            <div class="number-input"></div><div class="number-input last-digit"></div> <div class="number-input"></div><div class="number-input last-digit"></div> <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+          </div>
+          <div class="item">
+            <p class="label">
+              Reading<br>
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+          </div>
         </div>
 
       </div>
@@ -753,6 +891,9 @@
     <!-- footer -->
     <div id="footer-container-2">
       <div class="text-block">
+      <p>
+        Return ID <span class="bold">10042736</span>
+      </p>
         <p>
           <span class="bold">WR71</span> — August 2017
         </p>
@@ -763,8 +904,60 @@
     </div>
 
     <p id="pagination-2">
-      Page 2 of 2
+      Page 2 of 3
     </p>
+
+
+
+    <!-- page 3 -->
+
+    <!-- remove these before production -->
+    <div id="registration-3"></div>
+
+    <!-- content for page 2 -->
+    <div id="content-container-3">
+
+      <!-- left column -->
+      <div class="content-left">
+
+        <!-- left -->
+
+      </div>
+
+      <!-- right column -->
+      <div class="content-right">
+
+        <!-- right -->
+
+      </div>
+      <!-- column right end -->
+
+    </div>
+    <!-- column end -->
+
+    <!-- footer -->
+    <div id="footer-container-3">
+      <div class="text-block">
+        <p>
+          Return ID <span class="bold">10042736</span>
+        </p>
+        <p>
+          <span class="bold">WR71</span> — August 2017
+        </p>
+        <p>
+          Licence number <span class="bold">AN/033/0012/007</span>
+        </p>
+      </div>
+    </div>
+
+    <p id="pagination-3">
+      Page 3 of 3
+    </p>
+
+
+
+
+
 
   </body>
 
