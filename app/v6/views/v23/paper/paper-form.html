@@ -66,23 +66,17 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 3mm;
-        height: 3mm;
-        border-top: 1px solid red;
-        border-left: 1px solid red;
+        width: 210mm;
+        height: 297mm;
+        border: 1px solid red;
       }
 
       #registration-2 {
         position: absolute;
-        right: 0mm;
-        top: 293.5mm;
-        width: 3mm;
-        height: 3mm;
-        border-bottom: 1px solid red;
-        border-right: 1px solid red;
-      }
-
-      .focus {
+        left: 0mm;
+        top: 297mm;
+        width: 210mm;
+        height: 297mm;
         border: 1px solid red;
       }
 
@@ -102,23 +96,29 @@
       }
 
       p {
-        font-size: 14pt;
+        font-size: 12pt;
         line-height: 6mm;
       }
 
-      #text-block p {
+      .text-block p {
         font-size: 10pt;
-        line-height: 5mm;
+        line-height: 4mm;
         max-width: 120mm;
+        margin-bottom: 2mm;
       }
 
       .lede {
         font-size: 5;
       }
 
+      .bullet {
+        padding-left: 2mm;
+      }
+
       #title-container {
         position: absolute;
         top: 4.3mm;
+        top: 12mm;
         left: 10mm;
         width: 180mm;
         height: 30mm;
@@ -158,17 +158,19 @@
         font-size: 8.5pt;
       }
 
-      #legals-container {
+      /* not currently used */
+      /* the space to the right of the address */
+
+      /* #legals-container {
         position: absolute;
         left: 125mm;
         top: 39.5mm;
         display: block;
         width: 75mm;
         height: 26.8mm;
-        /* border: 1px solid black; */
-      }
+      } */
 
-      #content-container {
+      #content-container-1 {
         position: absolute;
         left: 10mm;
         top: 85mm;
@@ -177,7 +179,17 @@
         /* border: 1px solid; */
       }
 
-      #content-left {
+      #content-container-2 {
+        position: absolute;
+        left: 10mm;
+        /* top: 85mm; */
+        top: 309mm;
+        width: 185mm;
+        height: 258mm;
+        /* border: 1px solid green; */
+      }
+
+      .content-left {
         position: absolute;
         width: 85mm;
         height: 100%;
@@ -185,7 +197,7 @@
         /* border: 1px solid blue; */
       }
 
-      #content-right {
+      .content-right {
         position: absolute;
         left: 90mm;
         width: 90mm;
@@ -207,7 +219,7 @@
         padding-bottom: 2mm;
 
         height: 7.5mm;
-        margin-bottom: 5mm;
+
       }
 
       .input p {
@@ -215,13 +227,40 @@
         padding-top: 1.4mm;
       }
 
+      .stacked {
+        margin-bottom: 0mm;
+        border-bottom: 1mm solid grey;
+      }
+
       .label {
-        margin-bottom: 2mm;
+        margin-bottom: 0;
       }
 
        .key-data {
-         font-size: 18pt;
+         padding-top: 1mm;
+         font-size: 14pt;
        }
+
+       .checkbox {
+         display: inline-block;
+         border: 2pt solid black;
+         width: 5mm;
+         height: 5mm;
+         position: relative;
+         top: 1mm;
+         margin-right: 2mm;
+       }
+
+      .guide {
+        font-size: 10pt;
+        margin-top: 2mm;
+        font-style: italic;
+      }
+
+      /* .guide {
+        margin-top: 2mm;
+        font-style: italic;
+      } */
 
       /* typographic style */
 
@@ -230,9 +269,10 @@
       }
 
       .block-head {
-        font-size: 14pt;
+        /* font-size: 12pt; */
+        font-size: 16pt;
         margin-bottom: 2.5mm;
-        margin-bottom: 7.5mm;
+        /* margin-bottom: 4.5mm; */
       }
 
       .item {
@@ -245,22 +285,48 @@
         /* font-weight: 800; */
       }
 
-      #footer-container {
+      .faux-link {
+        text-decoration: underline;
+      }
+
+      #footer-container-1 {
         position: absolute;
         left: 10mm;
         top: 277mm;
         height: 10mm;
       }
 
-      #pagination {
+      #footer-container-2 {
+        position: absolute;
+        left: 10mm;
+        top: 574mm;
+        height: 10mm;
+      }
+
+      #pagination-1 {
         position: absolute;
         text-align: right;
         top: 280mm;
         /* top: 277mm; */
-        left: 170mm;
+        left: 165mm;
         /* right: 10mm; */
         width: 30mm;
         /* border: 1px solid yellow; */
+
+        page-break-after: always;
+      }
+
+      #pagination-2 {
+        position: absolute;
+        text-align: right;
+        top: 577mm;
+        /* top: 277mm; */
+        left: 165mm;
+        /* right: 10mm; */
+        width: 30mm;
+        /* border: 1px solid yellow; */
+
+        page-break-after: always;
       }
 
     </style>
@@ -270,15 +336,12 @@
 
     <!-- remove these before final pressing -->
     <div id="registration-1"></div>
-    <div id="registration-2"></div>
 
     <!-- title area -->
     <div id="title-container">
 
+      <!-- Environment Agency logo -->
       <div id="logo">
-
-        <!-- SVG here please -->
-
         <svg width="60mm" height="17mm" viewBox="0 0 384 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <title>Enviromnet Agency logo</title>
             <desc>A tree with a person infront of it and the words Environment Agency</desc>
@@ -339,165 +402,93 @@
                 </g>
             </g>
         </svg>
-
-
-
       </div>
 
+      <!-- Title -->
       <div id="title-block">
         <h1 class="bold">Water abstraction monthly return form</h1>
         <p class="lede">Environment Act 1995, Water Resources Act 1991</p>
       </div>
 
-      <div id="text-block">
-        <p>
-          Return period <span class="bold">01 September 2018</span> to <span class="bold">31 July 2018</span>
-        </p>
-        <p>
-          Your return should be submitted by <span class="bold">28 April 2018</span>.
-        </p>
-        <p class="bold">
-          Failure to comply with these dates may result in enforcement action.
-        </p>
-      </div>
-
     </div>
-
 
     <!-- address area -->
     <div id="address-container">
       <div class="address-block">
-        M. Phipps<br>
-        Toval House,<br>
-        Toaverton Road,<br>
-        Toaverton,<br>
-        Bigford<br>
-        Devon<br>
-        BG12 2PP
+        FAO: Steve / James<br>
+        Water team<br>
+        Horizon House,<br>
+        Deanery Road,<br>
+        Near College Green<br>
+        Bristol<br>
+        BS1 5AH
       </div>
     </div>
 
-    <!-- title area -->
-    <div id="legals-container">
-
-      <!-- <div id="text-block">
-        <p>
-          Return period <span class="bold">01 September 2018</span> to <span class="bold">31 July 2018</span>
-        </p>
-        <p>
-          Your return should be submitted by <span class="bold">28 April 2018</span>.
-        </p>
-        <p class="bold">
-          Failure to comply with these dates may result in enforcement action.
-        </p>
-      </div> -->
-
-    </div>
-
-
-
-    <!-- cover content area -->
-    <div id="content-container">
+    <!-- content for page 1 -->
+    <div id="content-container-1">
 
       <!-- left column -->
-      <div id="content-left">
+      <div class="content-left">
+
+        <div class="block">
+
+          <div class="text-block">
+            <p>
+              Return period <span class="bold">01 September 2018</span> to <span class="bold">31 July 2018</span>
+            </p>
+            <p>
+              Your return should be submitted by <span class="bold">28 April 2018</span>.
+            </p>
+            <p class="bold">
+              Failure to comply with these dates may result in enforcement action.
+            </p>
+            <p class="bold">
+              Please read the Water Abstraction Return Guidance Note before completing this return.
+            </p>
+            <p>
+              If you have any queries please ring 03708 506 506.
+            </p>
+          </div>
+
+        </div>
 
         <div class="block">
 
           <div class="block-head bold">
-            1. Return details
+            The Data Protection Act 1998
           </div>
 
-          <!-- <div class="item">
-            <p class="label">
-              Licence number
-            </p>
-            <p class="bold key-data">
-              AN/033/0012/007
-            </p>
-          </div> -->
-
-          <!-- <div class="item">
-            <p class="label">
-              Return ID
-            </p>
-            <p class="bold key-data">
-              10042736
-            </p>
-          </div> -->
-
-          <!-- <div class="item">
-            <p class="bold key-data">
-              Standard tariff
-            </p>
-          </div> -->
-
-          <!-- minimal pattern change -->
-
-          <div class="item">
+          <div class="text-block">
             <p>
-              Return ID<br>
-              <div class="input">
-                <p class="bold">
-                  10042736
-                </p>
-              </div>
+              We, the Environment Agency, will process the information you provide so that we can deal with your abstraction return, make sure you keep to the conditions if your licence, permit or registration and process renewals.
             </p>
-          </div>
-
-          <div class="item">
             <p>
-              Licence number<br>
-              <div class="input">
-                <p class="bold">
-                  AN/033/0012/007
-                </p>
-              </div>
+              We may also process or release the information to:
             </p>
-          </div>
-
-          <div class="item">
-            <p>
-              Return ID<br>
-              <div class="input">
-                <p class="bold">
-                  10042736
-                </p>
-              </div>
+            <p class="bullet">
+              • offer you documents or services relating to environment matters
             </p>
-          </div>
-
-          <div class="item">
-            <p>
-              Tarrif<br>
-              <div class="input">
-                <p class="bold">
-                  Standard tariff
-                </p>
-              </div>
+            <p class="bullet">
+              • consult the public, public organisations and other organisations (for example, the Health & Safety Executive, local authorities, the emergency services, the Department, Food and Rural Affairs) on environment issues
             </p>
-          </div>
-
-
-          <div class="item">
-            <p>
-              Site description<br>
-              <div class="input">
-                <p class="bold">
-                  Great Ouse at Bedford College
-                </p>
-              </div>
+            <p class="bullet">
+              • carry out resaerch and development work on environment issues
             </p>
-          </div>
+            <p class="bullet">
+              • manage and assess present and likely future demand for water, or allow others to do so
+            </p>
+            <p class="bullet">
+              • prevent anyone from breaking environmental law, investigate cases where environmental law may have been broken, and take any action that is needed
+            </p>
+            <p class="bullet">
+              • assess whether customers are satisfied with our service, and to improve our service, and
+            </p>
+            <p class="bullet">
+              • respond to requests for information under the Freedom of Information Act 200 and the Environmental Information Regulations 2004 (if the Data Protection Act allows)
+            </p>
 
-          <p>
-            Purpose<br>
-            <div class="input">
-              <p class="bold">
-                Heat pump cooling water
-              </p>
-            </div>
-          </p>
+          </div>
 
         </div>
 
@@ -505,44 +496,102 @@
       <!-- column end -->
 
       <!-- right column -->
-      <div id="content-right">
+      <div class="content-right">
 
+        <!-- contact information -->
+        <div class="block">
+          <div class="block-head bold">
+            1. Return details
+          </div>
+
+          <div class="item">
+            <p class="label">
+              Licence number
+            </p>
+            <p class="bold key-data">
+              AN/033/0012/007
+            </p>
+          </div>
+
+          <div class="item">
+            <p class="label">
+              Return ID
+            </p>
+            <p class="bold key-data">
+              10042736
+            </p>
+          </div>
+
+          <div class="item">
+            <p class="bold key-data">
+              Standard tariff
+            </p>
+          </div>
+
+          <div class="item">
+            <p class="label">
+              Site description
+            </p>
+            <p class="bold key-data">
+              Great Ouse at Bedford College
+            </p>
+          </div>
+
+          <div class="item">
+            <p class="label">
+              Purpose
+            </p>
+            <p class="bold key-data">
+              Heat pump cooling water
+            </p>
+          </div>
+        </div>
+
+        <!-- contact information -->
         <div class="block">
 
           <div class="block-head bold">
             2. Return contact details
           </div>
 
-          <p>
-            Return contact forename<br>
-            <div class="input">
-              <p class="bold">
+          <div class="item">
+            <p class="label">
+              Return contact forename<br>
+              <div class="input">
+                <p class="bold">
 
-              </p>
-            </div>
-          </p>
+                </p>
+              </div>
+            </p>
+          </div>
 
-          <p>
-            Return contact surname<br>
-            <div class="input">
+          <div class="item">
+            <p class="label">
+              Return contact surname<br>
+              <div class="input">
 
-            </div>
-          </p>
+              </div>
+            </p>
+          </div>
 
-          <p>
-            Contact telephone<br>
-            <div class="input">
+          <div class="item">
+            <p class="label">
+              Contact telephone<br>
+              <div class="input">
 
-            </div>
-          </p>
+              </div>
+            </p>
+          </div>
 
-          <p>
-            Contact email<br>
-            <span class="hint">(e.g. yourname@example.com)</span><br>
-            <div class="input">
+          <div class="item">
+            <p class="label">
+              Contact email<br>
+              <span class="hint">(e.g. yourname@example.com)</span><br>
+              <div class="input">
 
-            </div>
-          </p>
+              </div>
+            </p>
+          </div>
 
         </div>
 
@@ -552,8 +601,9 @@
     </div>
     <!-- content container -->
 
-    <div id="footer-container">
-      <div id="text-block">
+    <!-- footer -->
+    <div id="footer-container-1">
+      <div class="text-block">
         <p>
           <span class="bold">WR71</span> — August 2017
         </p>
@@ -563,10 +613,158 @@
       </div>
     </div>
 
-    <p id="pagination">
+    <p id="pagination-1">
       Page 1 of 2
     </p>
 
+    <!-- page 2 -->
+
+    <!-- remove these before production -->
+    <div id="registration-2"></div>
+
+    <!-- content for page 2 -->
+    <div id="content-container-2">
+
+      <!-- left column -->
+      <div class="content-left">
+
+        <div class="block">
+
+          <!-- <div class="item"> -->
+
+            <div class="block-head bold">
+              3. Nil return
+            </div>
+
+            <p class="label">
+              Are you submitting a nil return?
+            </p>
+            <p class="key-data">
+              <span class="checkbox"></span>
+              Yes
+            </p>
+            <p class="key-data">
+              <span class="checkbox"></span>
+              No
+            </p>
+            <p class="guide">
+              If yes, go to section 10, if no, go to section 4
+            </p>
+          <!-- </div> -->
+        </div>
+
+        <div class="block">
+
+          <div class="block-head bold">
+            4. Measurement details
+          </div>
+
+          <p class="label">
+            Was a meter used?
+          </p>
+          <p class="key-data">
+            <span class="checkbox"></span>
+            Yes
+          </p>
+          <p class="key-data">
+            <span class="checkbox"></span>
+            No
+          </p>
+          <p class="guide">
+            If yes, go to section 4.1, if no, go to section 4.2
+          </p>
+
+        </div>
+
+        <div class="black">
+          <div class="block-head bold">
+            4.1 Meter details (if known)
+          </div>
+          <div class="item">
+            <p class="label">
+              Manufacturer used<br>
+              <div class="input">
+              </div>
+            </p>
+          </div>
+          <div class="item">
+            <p class="label">
+              Serial number<br>
+              <div class="input">
+              </div>
+            </p>
+          </div>
+          <div class="item">
+            <p class="guide">
+              Go to section 5.
+            </p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="block-head bold">
+            4.2 Assessment details
+          </div>
+          <p class="label">
+            Method of non-meter assessment. For example, pump capacity by hours run, number of livestock
+            <div class="input stacked">
+            </div>
+            <div class="input stacked">
+            </div>
+            <div class="input">
+            </div>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- right column -->
+      <div class="content-right">
+
+        <div class="block">
+
+          <div class="block-head bold">
+            5. Further information
+          </div>
+
+          <p class="label">
+            Are you attaching further information?<br>
+            <div>
+              <p class="key-data">
+                <span class="checkbox"></span>
+                Please tick if Yes
+              </p>
+            </div>
+          </p>
+
+          <p class="guide">
+            If you need to explain any entry or want to give us other information please do so on a seperate sheet of paper.
+            Please write the Licence number and Return ID (you will find this in Section 1 - Return details) on any attachment
+          </p>
+
+        </div>
+
+      </div>
+      <!-- column right end -->
+
+    </div>
+    <!-- column end -->
+
+    <!-- footer -->
+    <div id="footer-container-2">
+      <div class="text-block">
+        <p>
+          <span class="bold">WR71</span> — August 2017
+        </p>
+        <p>
+          Licence number <span class="bold">AN/033/0012/007</span>
+        </p>
+      </div>
+    </div>
+
+    <p id="pagination-2">
+      Page 2 of 2
+    </p>
 
   </body>
 
