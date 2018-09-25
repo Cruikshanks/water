@@ -119,15 +119,35 @@
         page-break-after: always;
       }
 
-      .text-block p {
-        font-size: 10pt;
-        line-height: 4mm;
-        max-width: 120mm;
+      h1 {
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      h2 {
+        font-size: 14pt;
+        font-weight: 800;
+        margin-bottom: 3mm;
+      }
+
+      h3 {
+        font-size: 12pt;
+        font-weight: 800;
+        margin-top: 4mm;
         margin-bottom: 2mm;
       }
 
-      .lede {
-        font-size: 5;
+      .text-block p {
+        font-size: 10pt;
+        line-height: 4mm;
+        /* max-width: 120mm; */
+        margin-bottom: 2mm;
+      }
+
+      .text-block .lede {
+        padding-top: 2mm;
+        padding-bottom: 2mm;
+        font-size: 14pt;
       }
 
       .bullet {
@@ -145,13 +165,6 @@
 
       #title-block {
         margin-bottom: 5mm;
-      }
-
-      h1 {
-        font-size: 22px;
-        font-family: sans-serif;
-        font-weight: 800;
-        padding-bottom: 2mm;
       }
 
       #logo {
@@ -231,8 +244,8 @@
       .input {
         /* border-top: 1mm solid lightgrey; */
         /* background-color: WhiteSmoke; */
-        border-bottom: 1pt solid black;
-        border: 1pt solid black;
+        /* border-bottom: 1pt solid gray; */
+        border: 1pt solid gray;
         margin-top: 1mm;
         /* padding-top: 2mm; */
         padding-bottom: 2mm;
@@ -252,14 +265,19 @@
       .number-input {
         display: inline-block;
         margin-top: 2mm;
-        border: 1pt solid black;
+        border: 1pt solid gray;
         border-right: 0;
         width: 6mm;
         height: 7.5mm;
       }
 
+      .number-group {
+        display: inline-block;
+        padding-right: 3mm;
+      }
+
       .last-digit {
-        border-right: 1pt solid black;
+        border-right: 1pt solid gray;
       }
 
       .input p {
@@ -273,6 +291,7 @@
       }
 
       .label {
+        /* color: grey; */
         margin-bottom: 0;
       }
 
@@ -292,9 +311,8 @@
        }
 
       .guide {
-        font-size: 10pt;
+        font-size: 12pt;
         margin-top: 2mm;
-        font-style: italic;
       }
 
       /* .guide {
@@ -442,8 +460,7 @@
 
         <!-- Title -->
         <div id="title-block">
-          <h1 class="bold">Water abstraction monthly return form</h1>
-          <p class="lede">Environment Act 1995, Water Resources Act 1991</p>
+          <h1 class="bold">Water abstraction monthly return</h1>
         </div>
 
       </div>
@@ -470,63 +487,68 @@
           <div class="block">
 
             <div class="text-block">
+              <h2 class="bold">
+                Tell us how much water you used
+              </h2>
               <p>
-                Return period <span class="bold">01 September 2018</span> to <span class="bold">31 July 2018</span>
+                For the period <span class="bold">01 September 2018</span> to <span class="bold">31 July 2018</span>
               </p>
-              <p>
-                Your return should be submitted by <span class="bold">28 April 2018</span>.
+              <p class="lede">
+                We need your return by <span class="bold">28 April 2018</span>
               </p>
-              <p class="bold">
-                Failure to comply with these dates may result in enforcement action.
-              </p>
-              <p class="bold">
-                Please read the Water Abstraction Return Guidance Note before completing this return.
-              </p>
-              <p>
-                If you have any queries please ring 03708 506 506.
-              </p>
+            </div>
+
+            <div class="item">
+              <div class="item">
+                <p class="label">
+                  Site
+                </p>
+                <p class="bold key-data">
+                  Great Ouse at Bedford College
+                </p>
+              </div>
+
+              <div class="item">
+                <p class="label">
+                  Purpose
+                </p>
+                <p class="bold key-data">
+                  Heat pump cooling water
+                </p>
+              </div>
             </div>
 
           </div>
 
-          <div class="block">
+          <div class="text-block">
 
-            <div class="block-head bold">
-              The Data Protection Act 1998
-            </div>
+            <p class="bold">
+              If you do not send your return in time, we may take enforcement action.
+            </p>
+            <p class="bold">
+              If you need help to complete this form:
+            </p>
 
-            <div class="text-block">
-              <p>
-                We, the Environment Agency, will process the information you provide so that we can deal with your abstraction return, make sure you keep to the conditions if your licence, permit or registration and process renewals.
-              </p>
-              <p>
-                We may also process or release the information to:
-              </p>
-              <p class="bullet">
-                • offer you documents or services relating to environment matters
-              </p>
-              <p class="bullet">
-                • consult the public, public organisations and other organisations (for example, the Health & Safety Executive, local authorities, the emergency services, the Department, Food and Rural Affairs) on environment issues
-              </p>
-              <p class="bullet">
-                • carry out research and development work on environment issues
-              </p>
-              <p class="bullet">
-                • manage and assess present and likely future demand for water, or allow others to do so
-              </p>
-              <p class="bullet">
-                • prevent anyone from breaking environmental law, investigate cases where environmental law may have been broken, and take any action that is needed
-              </p>
-              <p class="bullet">
-                • assess whether customers are satisfied with our service, and to improve our service, and
-              </p>
-              <p class="bullet">
-                • respond to requests for information under the Freedom of Information Act 200 and the Environmental Information Regulations 2004 (if the Data Protection Act allows)
-              </p>
+            <p>
+              • read the water abstraction guidance on www.gov.uk/government/collections/water-abstraction-returns
+            </p>
 
-            </div>
+            <p>
+              • call our customer help center on 03708 506 506
+            </p>
 
           </div>
+
+          <br>
+
+          <div class="text-block">
+
+            <p>
+              When you send this return, you give the Environment Agency personal data such as your name and email address. Our privacy statement at the end of this form explains how we use your personal data.
+            </p>
+
+          </div>
+
 
         </div>
         <!-- column end -->
@@ -536,9 +558,9 @@
 
           <!-- contact information -->
           <div class="block">
-            <div class="block-head bold">
-              1. Return details
-            </div>
+            <h2>
+              Return details
+            </h2>
 
             <div class="item">
               <p class="label">
@@ -551,7 +573,7 @@
 
             <div class="item">
               <p class="label">
-                Return ID
+                Return reference
               </p>
               <p class="bold key-data">
                 10042736
@@ -560,39 +582,28 @@
 
             <div class="item">
               <p class="bold key-data">
-                Standard tariff
+                Two-part tariff
               </p>
             </div>
 
-            <div class="item">
-              <p class="label">
-                Site description
-              </p>
-              <p class="bold key-data">
-                Great Ouse at Bedford College
-              </p>
-            </div>
-
-            <div class="item">
-              <p class="label">
-                Purpose
-              </p>
-              <p class="bold key-data">
-                Heat pump cooling water
-              </p>
-            </div>
           </div>
 
           <!-- contact information -->
           <div class="block">
 
             <div class="block-head bold">
-              2. Return contact details
+              1. Return contact details
             </div>
+
+            <p>
+              Write in CAPITAL LETTERS
+            </p>
+
+            <br>
 
             <div class="item">
               <p class="label">
-                Print contact forename<br>
+                First name<br>
                 <div class="input">
                   <div class="input-mask">
                     <p class="bold">
@@ -605,7 +616,7 @@
 
             <div class="item">
               <p class="label">
-                Print contact surname<br>
+                Last name<br>
                 <div class="input">
                   <div class="input-mask">
                   </div>
@@ -615,7 +626,7 @@
 
             <div class="item">
               <p class="label">
-                Contact telephone<br>
+                Telephone<br>
                 <div class="input">
                   <div class="input-mask">
                   </div>
@@ -625,8 +636,8 @@
 
             <div class="item">
               <p class="label">
-                Contact email<br>
-                <span class="hint">For example yourname@example.com</span><br>
+                Email<br>
+                <!-- <span class="hint">For example yourname@example.com</span><br> -->
                 <div class="input">
                   <div class="input-mask">
                   </div>
@@ -645,10 +656,10 @@
       <!-- footer -->
       <div class="footer">
         <p>
-          Return ID <span class="bold">10042736</span>
+          EA Area <span class="bold">Central area</span>
         </p>
         <p>
-          <span class="bold">WR71</span> — August 2017
+          Return reference <span class="bold">10042736</span>
         </p>
         <p>
           Licence number <span class="bold">AN/033/0012/007</span>
@@ -680,22 +691,19 @@
             <!-- <div class="item"> -->
 
               <div class="block-head bold">
-                3. Nil return
+                2. Did you abstract water?
               </div>
 
-              <p class="label">
-                Are you submitting a nil return?
-              </p>
               <p class="key-data">
                 <span class="checkbox"></span>
                 Yes
               </p>
               <p class="key-data">
                 <span class="checkbox"></span>
-                No
+                No (a ‘nil return’)
               </p>
               <p class="guide">
-                If yes, go to section 10, if no, go to section 4
+                If yes, go to section 10 on page 4
               </p>
             <!-- </div> -->
           </div>
@@ -703,12 +711,9 @@
           <div class="block">
 
             <div class="block-head bold">
-              4. Measurement details
+              3. Did you use a meter?
             </div>
 
-            <p class="label">
-              Was a meter used?
-            </p>
             <p class="key-data">
               <span class="checkbox"></span>
               Yes
@@ -718,18 +723,39 @@
               No
             </p>
             <p class="guide">
-              If yes, go to section 4.1, if no, go to section 4.2
+              If yes, go to section 5
             </p>
 
           </div>
 
           <div class="block">
             <div class="block-head bold">
-              4.1 Meter details (if known)
+              4. Assessment without a meter
+            </div>
+            <p class="label">
+              How did you make the assessment? For example, pump capacity by hours run or numbers of livestock.
+              <!-- <div class="input stacked">
+                <div class="input-mask"></div>
+              </div>
+              <div class="input stacked">
+                <div class="input-mask"></div>
+              </div> -->
+              <div class="input">
+                <div class="input-mask"></div>
+              </div>
+            </p>
+            <p class="guide">
+              Go to section 8
+            </p>
+          </div>
+
+          <div class="block">
+            <div class="block-head bold">
+              5. Meter details (if known)
             </div>
             <div class="item">
               <p class="label">
-                Manufacturer used<br>
+                Manufacturer<br>
                 <div class="input">
                   <div class="input-mask">
                   </div>
@@ -739,35 +765,11 @@
             <div class="item">
               <p class="label">
                 Serial number<br>
-                <div class="input">
-                  <div class="input-mask"></div>
-                </div>
-              </p>
-            </div>
-            <div class="item">
-              <p class="guide">
-                Go to section 5.
+                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
               </p>
             </div>
           </div>
 
-          <div class="item">
-            <div class="block-head bold">
-              4.2 Assessment details
-            </div>
-            <p class="label">
-              Method of non-meter assessment. For example, pump capacity by hours run, number of livestock
-              <div class="input stacked">
-                <div class="input-mask"></div>
-              </div>
-              <div class="input stacked">
-                <div class="input-mask"></div>
-              </div>
-              <div class="input">
-                <div class="input-mask"></div>
-              </div>
-            </p>
-          </div>
 
         </div>
 
@@ -776,33 +778,22 @@
 
           <div class="block">
             <div class="block-head bold">
-              5. Further information
-            </div>
-            <p class="label">
-              Are you attaching further information?<br>
-              <div>
-                <p class="key-data">
-                  <span class="checkbox"></span>
-                  Please tick if Yes
-                </p>
-              </div>
-            </p>
-            <p class="guide">
-              If you need to explain any entry or want to give us other information please do so on a seperate sheet of paper.
-              Please write the Licence number and Return ID (you will find this in Section 1 - Return details) on any attachment
-            </p>
-          </div>
-
-          <div class="block">
-            <div class="block-head bold">
-              6. Start meter reading
+              6. Start date for meter reading
             </div>
             <div class="item">
               <p class="label">
-                Date (immediately before abstraction starts)
+                The date when abstraction starts
               </p>
-              <span class="hint">For example 01 03 2019</span><br>
-              <div class="number-input"></div><div class="number-input last-digit"></div> <div class="number-input"></div><div class="number-input last-digit"></div> <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+              <span class="hint">For example 19 03 2019</span><br>
+              <div class="number-group">
+                <div class="number-input"></div><div class="number-input last-digit"></div>
+              </div>
+              <div class="number-group">
+                <div class="number-input"></div><div class="number-input last-digit"></div>
+              </div>
+              <div class="number-group">
+                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+              </div>
             </div>
             <div class="item">
               <p class="label">
@@ -814,20 +805,34 @@
 
           <div class="block">
             <div class="block-head bold">
-              7. Return lines
+              7. End date for meter reading
             </div>
             <div class="item">
               <p class="label">
-                The information that follows are
+                The date when abstraction ends
               </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Meter readings
+              <span class="hint">For example 21 11 2019</span><br>
+              <div class="number-group">
+                <div class="number-input"></div><div class="number-input last-digit"></div>
+              </div>
+              <div class="number-group">
+                <div class="number-input"></div><div class="number-input last-digit"></div>
+              </div>
+              <div class="number-group">
+                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+              </div>
+            </div>
+            <div class="item">
+              <p class="label">
+                Reading<br>
+                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
               </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Abstraction volumes
-              </p>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="block-head bold">
+              8. Return lines
             </div>
             <div class="item">
               <p class="label">
@@ -852,25 +857,6 @@
             </div>
           </div>
 
-          <div class="block">
-            <div class="block-head bold">
-              8. End meter reading
-            </div>
-            <div class="item">
-              <p class="label">
-                Date (immediately after abstraction ends)
-              </p>
-              <span class="hint">For example 30 11 2019</span><br>
-              <div class="number-input"></div><div class="number-input last-digit"></div> <div class="number-input"></div><div class="number-input last-digit"></div> <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-            </div>
-            <div class="item">
-              <p class="label">
-                Reading<br>
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -879,10 +865,10 @@
       <!-- footer -->
       <div class="footer">
         <p>
-          Return ID <span class="bold">10042736</span>
+          EA Area <span class="bold">Central area</span>
         </p>
         <p>
-          <span class="bold">WR71</span> — August 2017
+          Return reference <span class="bold">10042736</span>
         </p>
         <p>
           Licence number <span class="bold">AN/033/0012/007</span>
@@ -908,6 +894,88 @@
         <!-- left column -->
         <div class="content-left">
 
+          <div class="block">
+            <div class="block-head bold">
+              9. Total water abstracted
+            </div>
+            <p class="label">
+              Amount abstracted
+              <!-- <div class="input">
+                <div class="input-mask"></div>
+              </div> -->
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+          </div>
+
+          <div class="block">
+            <div class="block-head bold">
+              10. Further information
+            </div>
+            <p class="label">
+              If you need to explain an entry or give more information, send this on a seperate sheet. Write the return reference <span class="bold">10042736</span> on each sheet.
+              <div>
+                <p class="key-data">
+                  <span class="checkbox"></span>
+                  I am sending further information
+                </p>
+              </div>
+            </p>
+          </div>
+
+          <div class="item">
+            <div class="block-head bold">
+              11. Declaration
+            </div>
+            <p>
+              I confirm that the information in this return is correct.
+            </p>
+            <br>
+            <p class="label">
+              Signed
+            </p>
+            <div class="input">
+              <div class="input-mask"></div>
+            </div>
+
+          </div>
+
+          <br>
+          <br>
+
+          <div class="block">
+
+            <div class="block-head bold">
+              How we use your personal data
+            </div>
+
+            <div class="text-block">
+
+              <h3>
+                Privacy Notice
+              </h3>
+
+              <p>
+                The Environment Agency is the data controller collecting this personal data. You can contact our Data Protection Officer at:
+                <br>
+                Address: Data Protection team
+                Environment Agency
+                Horizon House
+                Deanery Road
+                Bristol
+                BS1 5AH
+                Email: dataprotection@environment-agency.gov.uk
+              </p>
+
+              <p>
+                Why we are collecting personal data and what we will do with it?
+              </p>
+              <p>
+                We are collecting and processing personal data to process your application, including any enquiries you make through the pre-application service, for a water abstraction licence or impoundment licence, to amend or renew your existing licence, to manage your licence, keep public registers up to date, to contact you to advise of actions you need to take to manage your licence or inform you of changes in policy and to register for and use our online water resources service. This includes your name, address and contact details, and any records of abstracted quantities of water you submit to the Environment Agency.
+              </p>
+
+            </div>
+
+          </div>
 
 
         </div>
@@ -915,7 +983,70 @@
         <!-- right column -->
         <div class="content-right">
 
+          <div class="block">
 
+            <div class="text-block">
+
+              <p>
+                Processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the data controller. Namely to undertake our responsibilities for managing water resources in England through our abstraction and impoundment licensing system.
+              </p>
+
+              <p>
+                Sharing and transferring personal data
+              </p>
+              <p>
+                We may pass the information on to our agents or representatives to do these things for us.
+              </p>
+              <p>
+                We will not share or disclose your personal data to any party outside of the Environment Agency without your explicit consent, unless lawfully able to do so.
+              </p>
+              <p>
+                We will not transfer the personal data that you provide outside the European Economic Area.
+              </p>
+              <p>
+                How long we hold personal data for
+              </p>
+              <p>
+                We will keep your personal data as required by law to keep public registers.
+              </p>
+
+              <p>
+                We will keep your personal data required so you can access our online water resources service for as long as you require access to the service.
+              </p>
+
+              <p>
+                We will keep other personal data for 7 years once the abstraction or impoundment licence ceases to have effect. After 7 years we will review retention in line with our standard information retention policy.
+              </p>
+
+              <h3>
+                Automated decision making and profiling
+              </h3>
+              <p>
+                We will not use the information you provide for automated individual decision making (making a decision solely by automated means without any human involvement) or profiling (automated processing of personal data to evaluate certain things about an individual).
+              </p>
+
+              <h3>
+                Your rights
+              </h3>
+              <p>
+              You have rights under the General Data Protection Regulation (GDPR) and the Data Protection Act 2018 (DPA 2018). The Information Commissioner's Office (ICO) is the supervisory authority for data protection legislation.
+              </p>
+
+              <p>
+                The ICO website has a full list of your rights under data protection legislation, you can access this here: https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/individual-rights
+              </p>
+
+              <p>
+                You have the right to lodge a complaint with the ICO at any time. Should you wish to exercise that right full details are available at: https://ico.org.uk/make-a-complaint
+              </p>
+
+              <p>
+                For general information on how the Environment Agency treats your personal data and how to contact us, see our Personal Information Charter: https://www.gov.uk/government/organisations/environment-agency/about/personal-information-charter
+              </p>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -925,10 +1056,10 @@
       <!-- footer -->
       <div class="footer">
         <p>
-          Return ID <span class="bold">10042736</span>
+          EA Area <span class="bold">Central area</span>
         </p>
         <p>
-          <span class="bold">WR71</span> — August 2017
+          Return reference <span class="bold">10042736</span>
         </p>
         <p>
           Licence number <span class="bold">AN/033/0012/007</span>
