@@ -32,26 +32,38 @@
         <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
       </div>
 
-      <div class="multiple-choice small-space">
-        <input type="checkbox">
-        <label aria-label="Can do returns">
-          I allow them to view my returns
-        </label>
+      <div class="form-group">
+
+        <form data-routing="1">
+
+          <fieldset class="medium-space">
+
+            <legend>
+              <h1 class="heading-medium">
+                Are there any abstraction amounts to report?
+              </h1>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="access-view-only" type="radio" name="radio-inline-group" value="access" checked="checked">
+              <label for="access-view-only">View licences only</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="access-view-all" type="radio" name="radio-inline-group" value="access">
+              <label for="access-view-all">View licences and returns</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="access-manage" type="radio" name="radio-inline-group" value="access">
+              <label for="access-manage">View licences and manage returns</label>
+            </div>
+
+          </fieldset>
+
+          <!-- <button type="submit" class="button">Give access</button> -->
+          <a href="access" class="button">Give access</a>
+        </form>
       </div>
 
-      <div class="multiple-choice">
-        <input type="checkbox">
-        <label aria-label="Can do returns">
-          I allow them to manage my returns
-        </label>
-      </div>
-    </div>
-
-    <div class="column-full">
-      <a class="button" href="access" role="button">
-        Give access
-      </a>
-    </div>
   </div>
 
   <script src="/public/v6/javascripts/underscore.min.js"></script>
