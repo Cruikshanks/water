@@ -119,6 +119,16 @@
         page-break-after: always;
       }
 
+      #page-5 {
+        position: absolute;
+        left: 0mm;
+        top: 1188mm;
+        width: 210mm;
+        height: 297mm;
+        /* border: 1pt solid red; */
+        page-break-after: always;
+      }
+
       h1 {
         font-size: 22px;
         font-weight: 800;
@@ -135,11 +145,12 @@
         font-weight: 800;
         margin-top: 4mm;
         margin-bottom: 2mm;
+        line-height: 5mm;
       }
 
       .text-block p {
-        font-size: 10pt;
-        line-height: 4mm;
+        font-size: 12pt;
+        line-height: 5mm;
         /* max-width: 120mm; */
         margin-bottom: 2mm;
       }
@@ -336,7 +347,7 @@
         /* font-size: 12pt; */
         font-size: 16pt;
         margin-bottom: 2.5mm;
-        /* margin-bottom: 4.5mm; */
+        line-height: 8mm;
       }
 
       .item {
@@ -388,6 +399,10 @@
         left: 165mm;
         width: 30mm;
       } */
+
+      #page-5-block-hack {
+        top: 12mm;
+      }
 
     </style>
   </head>
@@ -491,9 +506,30 @@
         <div class="content-left">
 
           <div class="block">
-            <!-- <h2>
-              Tell us how much water you used
-            </h2> -->
+
+            <div class="item">
+              <p class="label">
+                Licence number
+              </p>
+              <p class="bold key-data">
+                AN/033/0012/007
+              </p>
+            </div>
+
+            <div class="item">
+              <p class="label">
+                Return reference
+              </p>
+              <p class="bold key-data">
+                10042736
+              </p>
+            </div>
+
+            <div class="item">
+              <p class="bold key-data">
+                Two-part tariff
+              </p>
+            </div>
 
             <div class="item">
               <p class="label">
@@ -524,17 +560,24 @@
 
             <div class="item">
               <p class="key-data">
-                We need your return by <span class="bold">28 April 2018</span>
+                We need your return by <span class="bold">28 April 2019</span>
               </p>
             </div>
 
           </div>
+
+        </div>
+        <!-- column end -->
+
+        <!-- right column -->
+        <div class="content-right">
 
           <div class="text-block">
 
             <p class="bold">
               If you do not send your return in time, we may take enforcement action.
             </p>
+
             <p class="bold">
               If you need help to complete this form:
             </p>
@@ -549,54 +592,69 @@
 
           </div>
 
-          <br>
-
           <div class="text-block">
 
             <p>
               When you send this return, you give the Environment Agency personal data such as your name and email address. Our privacy statement at the end of this form explains how we use your personal data.
             </p>
+            <br>
+            <p class="bold">
+              Please return completed form to:
+            </p>
+
+            <p>
+              National Operator Returns Team<br>
+              Environment Agency<br>
+              Quadrant 2<br>
+              99 Parkway Avenue<br>
+              Sheffield<br>
+              S9 4WF<br>
+            </p>
+
+            <p>
+              national-operator-returns<br>@environment-agency.gov.uk
+            </p>
 
           </div>
-
 
         </div>
-        <!-- column end -->
+        <!-- column right end -->
 
-        <!-- right column -->
-        <div class="content-right">
+      </div>
+      <!-- content container -->
 
-          <!-- contact information -->
-          <div class="block">
-            <!-- <h2>
-              Return details
-            </h2> -->
+      <!-- footer -->
+      <div class="footer">
+        <p>
+          EA Area <span class="bold">Central area</span>
+        </p>
+        <p>
+          Return reference <span class="bold">10042736</span>
+        </p>
+        <p>
+          Licence number <span class="bold">AN/033/0012/007</span>
+        </p>
+      </div>
 
-            <div class="item">
-              <p class="label">
-                Licence number
-              </p>
-              <p class="bold key-data">
-                AN/033/0012/007
-              </p>
-            </div>
+      <div class="pagination">
+        <p>
+          Page 1 of 5
+        </p>
+      </div>
 
-            <div class="item">
-              <p class="label">
-                Return reference
-              </p>
-              <p class="bold key-data">
-                10042736
-              </p>
-            </div>
+    </div>
+    <!-- page end -->
 
-            <div class="item">
-              <p class="bold key-data">
-                Two-part tariff
-              </p>
-            </div>
 
-          </div>
+
+    <!-- page 2 -->
+    <div id="page-2">
+
+      <!-- content for page 2 -->
+      <div class="content">
+
+        <!-- left column -->
+        <div class="content-left">
 
           <!-- contact information -->
           <div class="block">
@@ -646,7 +704,7 @@
 
             <div class="item">
               <p class="label">
-                Email<br>
+                Email (all lowercase)<br>
                 <!-- <span class="hint">For example yourname@example.com</span><br> -->
                 <div class="input">
                   <div class="input-mask">
@@ -657,71 +715,32 @@
 
           </div>
 
-        </div>
-        <!-- column right end -->
+          <div class="text-block">
 
-      </div>
-      <!-- content container -->
+            <p class="bold">
+              How we use your personal data
+            </p>
 
-      <!-- footer -->
-      <div class="footer">
-        <p>
-          EA Area <span class="bold">Central area</span>
-        </p>
-        <p>
-          Return reference <span class="bold">10042736</span>
-        </p>
-        <p>
-          Licence number <span class="bold">AN/033/0012/007</span>
-        </p>
-      </div>
+            <p>
+              This could be a brief outline on how we use your data and pointing you to a place with the full text if you want to go further.
+            </p>
 
-      <div class="pagination">
-        <p>
-          Page 1 of 4
-        </p>
-      </div>
+            <p>
+              You may read our full privacy statement at www.gov.uk/privacy-statement
+            </p>
 
-    </div>
-    <!-- page end -->
-
-
-
-    <!-- page 2 -->
-    <div id="page-2">
-
-      <!-- content for page 2 -->
-      <div class="content">
-
-        <!-- left column -->
-        <div class="content-left">
-
-          <div class="block">
-
-            <!-- <div class="item"> -->
-
-              <div class="block-head bold">
-                2. Did you abstract water?
-              </div>
-
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Yes
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                No (a ‘nil return’)
-              </p>
-              <p class="guide">
-                If yes, go to section 10 on page 4
-              </p>
-            <!-- </div> -->
           </div>
+
+
+        </div>
+
+        <!-- right column -->
+        <div class="content-right">
 
           <div class="block">
 
             <div class="block-head bold">
-              3. Did you use a meter?
+              2. Did you abstract water?
             </div>
 
             <p class="key-data">
@@ -730,33 +749,56 @@
             </p>
             <p class="key-data">
               <span class="checkbox"></span>
-              No
+              No (a ‘nil return’)
             </p>
             <p class="guide">
-              If yes, go to section 5
+              If no, go to section 10 on page 4
             </p>
 
           </div>
 
           <div class="block">
             <div class="block-head bold">
-              4. Assessment without a meter
+              3. Unit of measurement
             </div>
-            <p class="label">
-              How did you make the assessment? For example, pump capacity by hours run or numbers of livestock.
-              <!-- <div class="input stacked">
-                <div class="input-mask"></div>
-              </div>
-              <div class="input stacked">
-                <div class="input-mask"></div>
-              </div> -->
-              <div class="input">
-                <div class="input-mask"></div>
-              </div>
+            <div class="item">
+              <p class="key-data">
+                <span class="checkbox"></span>
+                Cubic metres
+              </p>
+              <p class="key-data">
+                <span class="checkbox"></span>
+                Litres
+              </p>
+              <p class="key-data">
+                <span class="checkbox"></span>
+                Megalitres
+              </p>
+              <p class="key-data">
+                <span class="checkbox"></span>
+                Gallons
+              </p>
+            </div>
+          </div>
+
+          <div class="block">
+
+            <div class="block-head bold">
+              4. What are the numbers you are reporting?
+            </div>
+
+            <p class="key-data">
+              <span class="checkbox"></span>
+              Meter readings
+            </p>
+            <p class="key-data">
+              <span class="checkbox"></span>
+              Volume estimates
             </p>
             <p class="guide">
-              Go to section 8
+              If they are volumes, go to section 7
             </p>
+
           </div>
 
           <div class="block">
@@ -779,12 +821,6 @@
               </p>
             </div>
           </div>
-
-
-        </div>
-
-        <!-- right column -->
-        <div class="content-right">
 
           <div class="block">
             <div class="block-head bold">
@@ -813,9 +849,9 @@
             </div>
           </div>
 
-          <div class="block">
+          <!-- <div class="block">
             <div class="block-head bold">
-              7. End date for meter reading
+              6. End date for meter reading
             </div>
             <div class="item">
               <p class="label">
@@ -838,34 +874,7 @@
                 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
               </p>
             </div>
-          </div>
-
-          <div class="block">
-            <div class="block-head bold">
-              8. Return lines
-            </div>
-            <div class="item">
-              <p class="label">
-                Unit of measurement
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Cubic meters
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Litres
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Megalitres
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Gallons
-              </p>
-            </div>
-          </div>
+          </div> -->
 
         </div>
 
@@ -887,7 +896,7 @@
 
       <div class="pagination">
         <p>
-          Page 2 of 4
+          Page 2 of 5
         </p>
       </div>
 
@@ -899,7 +908,7 @@
     <!-- page 3 -->
     <div id="page-3">
 
-      <!-- content for page 2 -->
+      <!-- content for page 3 -->
       <div class="content">
 
         <!-- left column -->
@@ -907,7 +916,7 @@
 
           <div class="block">
             <div class="block-head bold">
-              10. Return details
+              7. Return details
             </div>
             <p>
               Month ending meter readings / volumes
@@ -988,7 +997,7 @@
       </div>
       <div class="pagination">
         <p>
-          Page 3 of 4
+          Page 3 of 5
         </p>
       </div>
 
@@ -1000,7 +1009,7 @@
     <!-- page 4 -->
     <div id="page-4">
 
-      <!-- content for page 2 -->
+      <!-- content for page 4 -->
       <div class="content">
 
         <!-- left column -->
@@ -1008,7 +1017,20 @@
 
           <div class="block">
             <div class="block-head bold">
-              10. Total water abstracted
+              8. Assessment without a meter
+            </div>
+            <p class="label">
+              How did you make the assessment? For example, pump capacity by hours run or numbers of livestock.
+
+              <div class="input">
+                <div class="input-mask"></div>
+              </div>
+            </p>
+          </div>
+
+          <div class="block">
+            <div class="block-head bold">
+              9. Total water abstracted
             </div>
             <p class="label">
               Amount abstracted
@@ -1021,7 +1043,7 @@
 
           <div class="block">
             <div class="block-head bold">
-              11. Further information
+              10. Further information
             </div>
             <p class="label">
               If you need to explain an entry or give more information, send this on a seperate sheet. Write the return reference <span class="bold">10042736</span> on each sheet.
@@ -1034,9 +1056,14 @@
             </p>
           </div>
 
-          <div class="item">
+        </div>
+
+        <!-- right column -->
+        <div class="content-right">
+
+          <div class="block">
             <div class="block-head bold">
-              12. Declaration
+              11. Declaration
             </div>
             <p>
               I confirm that the information in this return is correct.
@@ -1048,116 +1075,6 @@
             <div class="input">
               <div class="input-mask"></div>
             </div>
-
-          </div>
-
-          <br>
-          <br>
-
-          <div class="block">
-
-            <div class="block-head bold">
-              How we use your personal data
-            </div>
-
-            <div class="text-block">
-
-              <h3>
-                Privacy Notice
-              </h3>
-
-              <p>
-                The Environment Agency is the data controller collecting this personal data. You can contact our Data Protection Officer at:
-                <br>
-                Address: Data Protection team
-                Environment Agency
-                Horizon House
-                Deanery Road
-                Bristol
-                BS1 5AH
-                Email: dataprotection@environment-agency.gov.uk
-              </p>
-
-              <p>
-                Why we are collecting personal data and what we will do with it?
-              </p>
-              <p>
-                We are collecting and processing personal data to process your application, including any enquiries you make through the pre-application service, for a water abstraction licence or impoundment licence, to amend or renew your existing licence, to manage your licence, keep public registers up to date, to contact you to advise of actions you need to take to manage your licence or inform you of changes in policy and to register for and use our online water resources service. This includes your name, address and contact details, and any records of abstracted quantities of water you submit to the Environment Agency.
-              </p>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-        <!-- right column -->
-        <div class="content-right">
-
-          <div class="block">
-
-            <div class="text-block">
-
-              <p>
-                Processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the data controller. Namely to undertake our responsibilities for managing water resources in England through our abstraction and impoundment licensing system.
-              </p>
-
-              <p>
-                Sharing and transferring personal data
-              </p>
-              <p>
-                We may pass the information on to our agents or representatives to do these things for us.
-              </p>
-              <p>
-                We will not share or disclose your personal data to any party outside of the Environment Agency without your explicit consent, unless lawfully able to do so.
-              </p>
-              <p>
-                We will not transfer the personal data that you provide outside the European Economic Area.
-              </p>
-              <p>
-                How long we hold personal data for
-              </p>
-              <p>
-                We will keep your personal data as required by law to keep public registers.
-              </p>
-
-              <p>
-                We will keep your personal data required so you can access our online water resources service for as long as you require access to the service.
-              </p>
-
-              <p>
-                We will keep other personal data for 7 years once the abstraction or impoundment licence ceases to have effect. After 7 years we will review retention in line with our standard information retention policy.
-              </p>
-
-              <h3>
-                Automated decision making and profiling
-              </h3>
-              <p>
-                We will not use the information you provide for automated individual decision making (making a decision solely by automated means without any human involvement) or profiling (automated processing of personal data to evaluate certain things about an individual).
-              </p>
-
-              <h3>
-                Your rights
-              </h3>
-              <p>
-              You have rights under the General Data Protection Regulation (GDPR) and the Data Protection Act 2018 (DPA 2018). The Information Commissioner's Office (ICO) is the supervisory authority for data protection legislation.
-              </p>
-
-              <p>
-                The ICO website has a full list of your rights under data protection legislation, you can access this here: https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/individual-rights
-              </p>
-
-              <p>
-                You have the right to lodge a complaint with the ICO at any time. Should you wish to exercise that right full details are available at: https://ico.org.uk/make-a-complaint
-              </p>
-
-              <p>
-                For general information on how the Environment Agency treats your personal data and how to contact us, see our Personal Information Charter: https://www.gov.uk/government/organisations/environment-agency/about/personal-information-charter
-              </p>
-
-            </div>
-
           </div>
 
         </div>
@@ -1179,13 +1096,164 @@
       </div>
       <div class="pagination">
         <p>
-          Page 4 of 4
+          Page 4 of 5
         </p>
       </div>
 
     </div>
     <!-- page end -->
 
+    <!-- page 5 -->
+    <div id="page-5">
+
+      <!-- content for page 5 -->
+      <div class="content">
+
+        <!-- left column -->
+        <div class="content-left">
+
+          <div class="block">
+
+            <div class="block-head bold">
+              How we use your personal data
+            </div>
+
+            <div class="text-block">
+
+              <h3>
+                Privacy Notice
+              </h3>
+
+              <p>
+                The Environment Agency is the data controller collecting this personal data. You can contact our Data Protection Officer at:<br>
+                <br>
+                Data Protection Team<br>
+                Environment Agency<br>
+                Horizon House<br>
+                Deanery Road<br>
+                Bristol<br>
+                BS1 5AH<br>
+                dataprotection@environment-agency.gov.uk
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="block">
+
+            <div class="text-block">
+
+              <h3>
+                Why we are collecting personal data and what we will do with it?
+              </h3>
+              <p>
+                We are collecting and processing personal data to process your application, including any enquiries you make through the pre-application service, for a water abstraction licence or impoundment licence, to amend or renew your existing licence, to manage your licence, keep public registers up to date, to contact you to advise of actions you need to take to manage your licence or inform you of changes in policy and to register for and use our online water resources service. This includes your name, address and contact details, and any records of abstracted quantities of water you submit to the Environment Agency.
+              </p>
+
+              <p>
+                Processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the data controller. Namely to undertake our responsibilities for managing water resources in England through our abstraction and impoundment licensing system.
+              </p>
+
+              <h3>
+                Sharing and transferring personal data
+              </h3>
+              <p>
+                We may pass the information on to our agents or representatives to do these things for us.
+              </p>
+              <p>
+                We will not share or disclose your personal data to any party outside of the Environment Agency without your explicit consent, unless lawfully able to do so.
+              </p>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- right column -->
+        <div class="content-right" id="page-5-block-hack">
+
+          <div class="block">
+
+            <div class="text-block">
+
+              <p>
+                We will not transfer the personal data that you provide outside the European Economic Area.
+              </p>
+
+              <h3>
+                How long we hold personal data for
+              </h3>
+
+              <p>
+                We will keep your personal data as required by law to keep public registers.
+              </p>
+
+              <p>
+                We will keep your personal data required so you can access our online water resources service for as long as you require access to the service.
+              </p>
+
+              <p>
+                We will keep other personal data for 7 years once the abstraction or impoundment licence ceases to have effect. After 7 years we will review retention in line with our standard information retention policy.
+              </p>
+
+              <h3>
+                Automated decision making and profiling
+              </h3>
+
+              <p>
+                We will not use the information you provide for automated individual decision making (making a decision solely by automated means without any human involvement) or profiling (automated processing of personal data to evaluate certain things about an individual).
+              </p>
+
+              <h3>
+                Your rights
+              </h3>
+
+              <p>
+                You have rights under the General Data Protection Regulation (GDPR) and the Data Protection Act 2018 (DPA 2018). The Information Commissioner's Office (ICO) is the supervisory authority for data protection legislation.
+              </p>
+
+              <p>
+                The ICO website has a full list of your rights under data protection legislation, you can access this here: https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/individual-rights
+              </p>
+
+              <p>
+                You have the right to lodge a complaint with the ICO at any time. Should you wish to exercise that right full details are available at: https://ico.org.uk/make-a-complaint
+              </p>
+
+              <p>
+                For general information on how the Environment Agency treats your personal data and how to contact us, see our Personal Information Charter: https://www.gov.uk/government/organisations/ environment-agency/about/personal-information-charter
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- content end -->
+
+      <!-- footer -->
+      <div class="footer">
+        <p>
+          EA Area <span class="bold">Central area</span>
+        </p>
+        <p>
+          Return reference <span class="bold">10042736</span>
+        </p>
+        <p>
+          Licence number <span class="bold">AN/033/0012/007</span>
+        </p>
+      </div>
+      <div class="pagination">
+        <p>
+          Page 5 of 5
+        </p>
+      </div>
+
+    </div>
+    <!-- page end -->
 
 
   </body>

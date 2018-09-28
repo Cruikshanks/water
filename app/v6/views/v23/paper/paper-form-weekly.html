@@ -119,6 +119,26 @@
         page-break-after: always;
       }
 
+      #page-5 {
+        position: absolute;
+        left: 0mm;
+        top: 1188mm;
+        width: 210mm;
+        height: 297mm;
+        /* border: 1pt solid red; */
+        page-break-after: always;
+      }
+
+      #page-6 {
+        position: absolute;
+        left: 0mm;
+        top: 1485mm;
+        width: 210mm;
+        height: 297mm;
+        /* border: 1pt solid red; */
+        page-break-after: always;
+      }
+
       h1 {
         font-size: 22px;
         font-weight: 800;
@@ -295,7 +315,8 @@
         margin-bottom: 0;
       }
 
-      .month-label {
+      .week-label {
+        /* display: inline-block; */
         /* color: grey; */
         margin-top: 3mm;
         margin-bottom: 0;
@@ -389,6 +410,12 @@
         width: 30mm;
       } */
 
+      #page3-column-hack {
+        /* page 3 column hack */
+        /* aligns input fields nicely */
+        padding-top: 17mm;
+      }
+
     </style>
   </head>
 
@@ -466,7 +493,7 @@
 
         <!-- Title -->
         <div id="title-block">
-          <h1 class="bold">Water abstraction monthly return</h1>
+          <h1 class="bold">Water abstraction weekly return</h1>
         </div>
 
       </div>
@@ -678,7 +705,7 @@
 
       <div class="pagination">
         <p>
-          Page 1 of 4
+          Page 1 of 6
         </p>
       </div>
 
@@ -713,7 +740,7 @@
                 No (a ‘nil return’)
               </p>
               <p class="guide">
-                If yes, go to section 10 on page 4
+                If yes, go to section 11 on page 4
               </p>
             <!-- </div> -->
           </div>
@@ -887,7 +914,7 @@
 
       <div class="pagination">
         <p>
-          Page 2 of 4
+          Page 2 of 6
         </p>
       </div>
 
@@ -899,67 +926,340 @@
     <!-- page 3 -->
     <div id="page-3">
 
-      <!-- content for page 2 -->
+      <!-- content for page 3 -->
       <div class="content">
 
         <!-- left column -->
         <div class="content-left">
 
           <div class="block">
+
             <div class="block-head bold">
               10. Return details
             </div>
             <p>
-              Month ending meter readings / volumes
+              Week ending meter readings / volumes
             </p>
-            <p class="month-label">
-              30 April 2018
+            <br>
+
+            <p class="week-label">
+              7 April 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
-              31 May 2018
+            <p class="week-label">
+              14 April 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
+            <p class="week-label">
+              21 April 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              28 April 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              05 May 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              12 May 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              19 May 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              26 May 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              02 June 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              09 June 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              16 June 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              23 June 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- right column -->
+        <div class="content-right" id="page3-column-hack">
+
+          <div class="block">
+
+            <p class="week-label">
               30 June 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
-              31 July 2018
+            <p class="week-label">
+              7 July 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
-              31 August 2018
+            <p class="week-label">
+              14 July 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
-              30 September 2018
+            <p class="week-label">
+              21 July 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
-              31 October 2018
+            <p class="week-label">
+              28 July 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
-              30 November 2018
+            <p class="week-label">
+              4 August 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
-              31 December 2018
+            <p class="week-label">
+              4 August 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
-              31 January 2019
+            <p class="week-label">
+              11 August 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
-              28 February 2019
+            <p class="week-label">
+              18 August 2018
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
-            <p class="month-label">
+            <p class="week-label">
+              25 August 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              1 September 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              8 September 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- content end -->
+
+      <!-- footer -->
+      <div class="footer">
+        <p>
+          EA Area <span class="bold">Central area</span>
+        </p>
+        <p>
+          Return reference <span class="bold">10042736</span>
+        </p>
+        <p>
+          Licence number <span class="bold">AN/033/0012/007</span>
+        </p>
+      </div>
+      <div class="pagination">
+        <p>
+          Page 3 of 6
+        </p>
+      </div>
+
+    </div>
+    <!-- page end -->
+
+    <!-- page 4 -->
+    <div id="page-4">
+
+      <!-- content for page 4 -->
+      <div class="content">
+
+        <!-- left column -->
+        <div class="content-left">
+
+          <div class="block">
+
+            <p class="week-label">
+              15 September 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              22 September 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              29 September 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              6 October 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              13 October 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              20 October 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              27 October 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              3 November 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              10 November 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              17 November 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              24 November 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              1 December 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              8 December 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- right column -->
+        <div class="content-right">
+
+          <div class="block">
+
+            <p class="week-label">
+              14 December 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              22 December 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              29 December 2018
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              5 January 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              12 January 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              19 January 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              26 January 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              2 February 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              9 February 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              16 February 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              23 February 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              2 March 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              9 March 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- content end -->
+
+      <!-- footer -->
+      <div class="footer">
+        <p>
+          EA Area <span class="bold">Central area</span>
+        </p>
+        <p>
+          Return reference <span class="bold">10042736</span>
+        </p>
+        <p>
+          Licence number <span class="bold">AN/033/0012/007</span>
+        </p>
+      </div>
+      <div class="pagination">
+        <p>
+          Page 4 of 6
+        </p>
+      </div>
+
+    </div>
+    <!-- page end -->
+
+
+    <!-- page 5 -->
+    <div id="page-5">
+
+      <!-- content for page 5 -->
+      <div class="content">
+
+        <div class="block">
+
+          <!-- left column -->
+          <div class="content-left">
+
+            <p class="week-label">
+              16 March 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              23 March 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
+              30 March 2019
+              <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+            </p>
+            <p class="week-label">
               31 March 2019
               <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
             </p>
+
           </div>
 
         </div>
@@ -988,19 +1288,17 @@
       </div>
       <div class="pagination">
         <p>
-          Page 3 of 4
+          Page 5 of 6
         </p>
       </div>
 
     </div>
     <!-- page end -->
-    <!-- page 3 -->
 
+    <!-- page 6 -->
+    <div id="page-6">
 
-    <!-- page 4 -->
-    <div id="page-4">
-
-      <!-- content for page 2 -->
+      <!-- content for page 6 -->
       <div class="content">
 
         <!-- left column -->
@@ -1008,7 +1306,7 @@
 
           <div class="block">
             <div class="block-head bold">
-              10. Total water abstracted
+              11. Total water abstracted
             </div>
             <p class="label">
               Amount abstracted
@@ -1021,7 +1319,7 @@
 
           <div class="block">
             <div class="block-head bold">
-              11. Further information
+              12. Further information
             </div>
             <p class="label">
               If you need to explain an entry or give more information, send this on a seperate sheet. Write the return reference <span class="bold">10042736</span> on each sheet.
@@ -1036,7 +1334,7 @@
 
           <div class="item">
             <div class="block-head bold">
-              12. Declaration
+              13. Declaration
             </div>
             <p>
               I confirm that the information in this return is correct.
@@ -1179,7 +1477,7 @@
       </div>
       <div class="pagination">
         <p>
-          Page 4 of 4
+          Page 6 of 6
         </p>
       </div>
 
