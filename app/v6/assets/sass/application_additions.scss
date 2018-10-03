@@ -1375,7 +1375,12 @@ details {
     display: inline-block;
     padding-bottom: 0;
   }
-  ;
+}
+
+.mobile-only {
+  @media (min-width: 768px) {
+    visibility: hidden;
+  }
 }
 
 .version {
