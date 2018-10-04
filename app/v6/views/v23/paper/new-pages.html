@@ -105,7 +105,8 @@
         margin: 0;
         padding: 5mm 15mm 5mm 15mm;
         box-sizing: border-box;
-        background-color: yellow;
+        /* background-color: yellow; */
+        overflow: hidden;
       }
 
       .content {
@@ -115,15 +116,25 @@
 
       .columns {
         display: flex;
-        margin-left: -5mm;
-        margin-right: -5mm;
+        /* margin-left: -5mm;
+        margin-right: -5mm; */
       }
 
       .column {
         flex-basis: 50%;
         flex-grow: 1;
         background: #fcfcfc;
-        margin: 5mm;
+        padding-right: 5mm;
+      }
+
+      .columns:first-child {
+        /* margin-left: -5mm; */
+        margin-right: 2.5mm;
+      }
+
+      .columns:last-child {
+        /* margin-left: -2.5mm; */
+        margin-right: 5mm;
       }
 
       .pagination {
@@ -156,7 +167,7 @@
         display: block;
         width: 95.4mm;
         height: 26.8mm;
-        background-color: powderblue;
+        /* background-color: powderblue; */
         /* border: 1px solid black; */
       }
 
@@ -245,8 +256,20 @@
         border: 1pt solid white;
       }
 
+      .daily-input {
+        display: flex;
+        /* color: grey; */
+        font-size: 10pt;
+        margin-top: 0.5mm;
+        margin-bottom: 0;
+        padding: 0.5mm;
+      }
+
       .day-label {
-        width: 31mm;
+        display: inline-block;
+        align-self: flex-start;
+        padding-top: 1.4mm;
+        width: 5.5mm;
       }
 
       .number-input {
@@ -254,24 +277,21 @@
         margin-top: 0;
         border: 1pt solid gray;
         border-right: 0;
+        width: 6mm;
+        height: 7.5mm;
+        margin-top: 1mm;
+      }
+
+      .small-number-input {
+        display: inline-block;
+        margin-top: 0;
+        border: 1pt solid gray;
+        border-right: 0;
         /* width: 6mm;
         height: 7.5mm; */
-        width: 3mm;
+        width: 3.5mm;
         height: 5.5mm;
       }
-
-      .number-input:first-child {
-        position: relative;
-        background-color: yellow;
-      }
-
-      /* more room around input
-
-      width: 6mm;
-      height: 7.5mm;
-      margin-top: 1mm;
-
-      */
 
       .number-group {
         display: inline-block;
@@ -294,13 +314,6 @@
 
       .label {
         /* color: grey; */
-        margin-bottom: 0;
-      }
-
-      .daily-input {
-        /* color: grey; */
-        font-size: 10pt;
-        margin-top: 0.5mm;
         margin-bottom: 0;
       }
 
@@ -862,398 +875,600 @@
           </div>
 
           <div class="columns">
-          <div class="column">
+            <div class="column">
 
-          <div class="block-head">April 2018</div>
+              <div class="block-head">April 2018</div>
 
-          <div class="daily-input">
-            <span class="day-label">
-              1
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              2
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              3
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              4
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              5
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              6
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              7
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              8
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              9
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              10
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              11
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              12
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              13
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              14
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              15
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              16
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              17
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              18
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              19
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              20
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              21
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              22
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              23
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              24
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              25
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              26
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              27
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              28
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              29
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              30
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            <span class="day-label">
-              31
-            <span>
-            <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  1
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  2
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  3
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  4
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  5
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+              <div class="daily-input">
+                <div class="day-label">
+                  6
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  7
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  8
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  9
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  10
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
 
 
+              <div class="daily-input">
+                <div class="day-label">
+                  11
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  12
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  13
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  14
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  15
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
 
-        </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  16
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  17
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  18
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  19
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  20
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
 
-        <div class="column">
 
-          <div class="block-head">May 2018</div>
+              <div class="daily-input">
+                <div class="day-label">
+                  21
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  22
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  23
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  24
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  25
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
 
-          <div class="daily-input">
-            1 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            2 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            3 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            4 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            5 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            6 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            7 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            8 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            9 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            10 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            11 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            12 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            13 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            14 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            15 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            16 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            17 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            18 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            19 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            20 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            21 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            22 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            23 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            24 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            25 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            26 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            27 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            28 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            29 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            30 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            31 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  26
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  27
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  28
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  29
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  30
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  31
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
 
-        </div>
-        <div class="column">
+            </div>
+            <div class="column">
 
-          <div class="block-head">June 2018</div>
+              <div class="block-head">May 2018</div>
 
-          <div class="daily-input">
-            1 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            2 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            3 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            4 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            5 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            6 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            7 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            8 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            9 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            10 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            11 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            12 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            13 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            14 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            15 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            16 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            17 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            18 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            19 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            20 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            21 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            22 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            23 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            24 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            25 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            26 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            27 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            28 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            29 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
-          <div class="daily-input">
-            30 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-          </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  1
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  2
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  3
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  4
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  5
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
 
-        </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  6
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  7
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  8
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  9
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  10
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
 
-      </div>
+
+              <div class="daily-input">
+                <div class="day-label">
+                  11
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  12
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  13
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  14
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  15
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+              <div class="daily-input">
+                <div class="day-label">
+                  16
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  17
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  18
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  19
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  20
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+
+              <div class="daily-input">
+                <div class="day-label">
+                  21
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  22
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  23
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  24
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  25
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+              <div class="daily-input">
+                <div class="day-label">
+                  26
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  27
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  28
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  29
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  30
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  31
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+            </div>
+            <div class="column">
+
+              <div class="block-head">June 2018</div>
+
+              <div class="daily-input">
+                <div class="day-label">
+                  1
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  2
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  3
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  4
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  5
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+              <div class="daily-input">
+                <div class="day-label">
+                  6
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  7
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  8
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  9
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  10
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+
+              <div class="daily-input">
+                <div class="day-label">
+                  11
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  12
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  13
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  14
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  15
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+              <div class="daily-input">
+                <div class="day-label">
+                  16
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  17
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  18
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  19
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  20
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+
+              <div class="daily-input">
+                <div class="day-label">
+                  21
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  22
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  23
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  24
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  25
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+              <div class="daily-input">
+                <div class="day-label">
+                  26
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  27
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  28
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  29
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+              <div class="daily-input">
+                <div class="day-label">
+                  30
+                </div>
+                <div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input"></div><div class="small-number-input last-digit"></div>
+              </div>
+
+            </div>
+
+
+          </div>
 
       </div>
 
