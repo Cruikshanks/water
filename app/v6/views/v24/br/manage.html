@@ -1,0 +1,53 @@
+{% extends "../br/head-signedin.html" %}
+
+{% block page_title %}
+  Reports and notifications - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-br-manage.html" %}
+
+  <!-- page title -->
+  <h1  class="heading-large medium-space">Reports and notifications</h1>
+
+  <div id="special-links" class="grid-row">
+    <div class="column-full">
+      <ul>
+        <li>
+          <div>
+            <a href="/v23/br/returns/send-paper-forms">
+              Send paper forms
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="/v23/br/returns/returns-overview">
+              View return cycles
+            </a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="/v23/br/returns/returns-flagged">
+              Return queries
+            </a>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}

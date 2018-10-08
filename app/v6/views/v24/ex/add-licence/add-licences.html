@@ -1,0 +1,85 @@
+{% extends "v18/head.html" %}
+
+{% block page_title %}
+  Some licences could not be added - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <div class="medium-space"></div>
+
+  <!-- back -->
+  <div class="small-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+  </div>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Some licences could not be added
+      </h1>
+
+      <h2 class="heading-medium">
+        We found 7 licences
+      </h2>
+
+      <p>
+        These licences have been added to your account.
+      </p>
+
+      <h2 class="heading-medium">
+        Some of your licence numbers were not unrecognised
+      </h2>
+
+      <ul class="list list-bullet text">
+        <li>
+          TH/039/0943/024
+        </li>
+        <li>
+          TH/039/0943/025
+        </li>
+        <li>
+          TH/039/0943/026
+        </li>
+      </ul>
+
+      <p>
+        If you believe that you might have input any of the licence numbers incorrectly you could go back and try to resolve this.
+      </p>
+
+      <div class="medium-space">
+        <a href="/v23/ex/returns-registration/add-licences">Go back and try adding the unrecognised licences again</a>
+      </div>
+
+      <p>
+        You may give us a call to see if we can help you add these licences.
+        <ul class="list list-bullet text">
+          <li>Phone 03708 506 506 (UK)</li>
+          <li>minicom if you are deaf or hard of hearing on 03702 422 549.</li>
+        </ul>
+      </p>
+
+      <p>
+        Phone lines are open Monday to Friday, 8am to 6pm.</br>
+        Call charges can be found on <a href="https://www.gov.uk/call-charges">GOV.UK</a></p>
+      </p>
+
+      <!-- continue button -->
+      <a href="/v23/ex/returns/returns-list" class="button">View your returns</a>
+      </a>
+
+      </form>
+      <p></p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

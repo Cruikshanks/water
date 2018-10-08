@@ -1,0 +1,106 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-br-view.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          Abstraction return for {{ pData.LicenceSerialNo }}
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          Abstraction return
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="form-group">
+
+        <form data-routing="1">
+
+          <fieldset class="medium-space">
+
+            <legend>
+              <h1 class="heading-medium">
+                What are your return totals based on?
+              </h1>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="recorded-amount" type="radio" name="radio-contact-group" value="confirm-return-derived?wid={{ query.wid }}">
+              <label for="recorded-amount">Records</label>
+            </div>
+            <div class="multiple-choice" data-target="estimated-flow-rate">
+              <input id="radio-flow-rate" type="radio" name="radio-contact-group" value="confirm-return-derived?wid={{ query.wid }}">
+              <label for="radio-flow-rate">Abstraction rate</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="estimated-flow-rate">
+              <label class="form-label" for="estimated-flow-rate">Pump capacity</label>
+              <input class="form-control small-space" name="hours-run" type="text" id="flow-rate">
+              <label class="form-label" for="hours-run">Hours run</label>
+              <input class="form-control" name="hours-run" type="text" id="hours-run">
+            </div>
+
+            <div class="multiple-choice" data-target="estimated-herd-number">
+              <input id="radio-herd-number" type="radio" name="radio-contact-group" value="confirm-return-derived?wid={{ query.wid }}">
+              <label for="radio-herd-number">Herd numbers</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="estimated-herd-number">
+              <label class="form-label" for="herd-number">Number of head of livestock</label>
+              <input class="form-control small-space" name="herd-number" type="text" id="herd-number">
+            </div>
+
+          </fieldset>
+
+          <button type="submit" class="button">Continue</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
+
+{% endblock %}

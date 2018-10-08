@@ -1,0 +1,239 @@
+{% extends "../ex/head-signedin.html" %}
+
+{% block page_title %}
+  Your water abstraction or impoundment licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-ex-view.html" %}
+
+  <div class="grid-row hidden">
+    <div class="column-two-thirds small-space">
+      <div class="panel panel-border-wide alert-default">
+        Returns are due for some of your licences<br>
+        <a href="returns/returns-list">View and complete your returns</a>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="heading-large">
+    Your licences
+  </h1>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="panel panel-border-wide">
+        <p>
+          You must refer to and comply with your paper licence when making decisions about abstracting or impounding water. The information in this service is for your reference only.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- table with four columns -->
+  <div class="table medium-space">                                          <!-- a table -->
+
+    <div class="table-row table-head">                                      <!-- the table head -->
+      <div class="table-cell bold-small column-33">
+        Licence number
+      </div>
+      <div class="table-cell bold-small">
+        Licence name
+      </div>
+      <div class="table-cell bold-small column-20">
+        End date
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h2 class="sr-only">
+          Row 1
+        </h2>
+        <h3 class="context">
+          Licence serial number
+        </h3>
+        <a href="/v23/ex/online-licence?wid=31">
+          03/28/60/0031
+        </a>
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence name
+        </h3>
+        <!-- Licence name -->
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence end date
+        </h3>
+        30 April 2021
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h2 class="sr-only">
+          Row 1
+        </h2>
+        <h3 class="context">
+          Licence serial number
+        </h3>
+        <a href="/v23/ex/online-licence?wid=32">
+          03/28/60/0032
+        </a>
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence name
+        </h3>
+        Scrifford Pike
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence end date
+        </h3>
+        30 April 2021
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h2 class="sr-only">
+          Row 2
+        </h2>
+        <h3 class="context">
+          Licence serial number
+        </h3>
+        <a href="/v23/ex/online-licence?wid=33">
+          03/28/60/0033
+        </a>
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence name
+        </h3>
+        Honeydew Crescent
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence end date
+        </h3>
+        15 September 2022
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h2 class="sr-only">
+          Row 2
+        </h2>
+        <h3 class="context">
+          Licence serial number
+        </h3>
+        <a href="/v23/ex/online-licence?wid=34">
+          03/28/60/0034
+        </a>
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence name
+        </h3>
+        <!-- Licence name -->
+        Bridge Farm
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence end date
+        </h3>
+        30 September 2025
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h2 class="sr-only">
+          Row 2
+        </h2>
+        <h3 class="context">
+          Licence serial number
+        </h3>
+        <a href="/v23/ex/online-licence?wid=3">
+          01/04/12/0047
+        </a>
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence name
+        </h3>
+        River House
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence end date
+        </h3>
+        1 March 2027
+      </div>
+    </div>
+
+    <div class="table-row medium-space">                                    <!-- a data row starts -->
+
+      <div class="table-cell">
+        <h2 class="sr-only">
+          Row 2
+        </h2>
+        <h3 class="context">
+          Licence serial number
+        </h3>
+        <a href="/v23/ex/online-licence?wid=4">
+          01/04/12/0048
+        </a>
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence name
+        </h3>
+        Brickleigh Court
+      </div>
+      <div class="table-cell">
+        <h3 class="context">
+          Licence end date
+        </h3>
+        1 September 2031
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+<script>
+  $(function() {
+
+    $('a').parents('.table-row').addClass('clickable');
+
+  // Click on licence list clicks inner link
+    $('.table-row').on('click', function (ev) {
+      window.location.href = $(this).find('a:first').attr('href');
+      $(this).addClass('active');
+      ev.preventDefault();
+    });
+  });
+</script>
+
+{% endblock %}

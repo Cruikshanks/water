@@ -1,0 +1,96 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-br-view.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          <a href="returns">Abstraction return for {{ pData.LicenceSerialNo }}</a>
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          <a href="returns">Abstraction return</a>
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- navigation block -->
+  {% include "../../partials/return-internal-meta.html" %}
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}" target="_blank">View this licence</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="form-group">
+
+    <form data-routing="1">
+
+      <fieldset class="medium-space">
+
+        <legend>
+          <h1 class="heading-medium">
+            Are there any abstraction amounts to report?
+          </h1>
+        </legend>
+
+        <div class="multiple-choice">
+          <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-method?wid={{ query.wid }}">
+          <label for="return-form">Yes</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="nil-return" type="radio" name="radio-inline-group" value="/v23/br/returns/confirm-no-return?wid={{ query.wid }}">
+          <label for="nil-return">No</label>
+        </div>
+
+      </fieldset>
+
+      <button type="submit" class="button">Continue</button>
+    </form>
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
+
+{% endblock %}

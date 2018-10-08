@@ -1,0 +1,88 @@
+{% extends "../head.html" %}
+
+{% block page_title %}
+    Create an account - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <div class="small-space">
+
+    <a class="link-back" onclick="history.go(-1)">Back</a>
+
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="check-email" method="post" class="form" id="password_reset" data-parsley-validate="" data-parsley-errors-messages-disabled>
+
+      <div class="error-summary hidden" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+        <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+          That email address isn’t valid
+        </h2>
+
+        <ul class="error-summary-list">
+          <li><a href="#user-id">Re-enter your email</a></li>
+        </ul>
+
+      </div>
+
+      <h1 class="heading-large">
+        Create an account
+      </h1>
+
+      <p class="lede">
+        Enter your email address and we will send you a link. Click on the link to finish setting up your account. If it has not arrived check your spam folder.
+      </p>
+
+      <p>
+        We will only use your email address to send you notifications about your licence or the service.
+      </p>
+
+      <div class="form-group">
+        <label for="user-id">
+
+          <fieldset>
+            <span class="form-label">Email address</span>
+            <span data-parsely-id="user-id" class="error-message hidden">Please enter a valid email address</span>
+          </fieldset>
+
+        </label>
+
+        <input type="email" class="form-control" id="user-id" name="user_id" required=""/>
+      </div>
+
+      <!-- <input type="submit" value="Continue" class="button" role="button"/> -->
+      <a href="check-email" class="button">
+        Continue
+      </a>
+    </form>
+
+    <script>
+        function getParameterByName(name, url) {
+          //this function enables named parameters to be parsed from the query string
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        //get the user-id value from the query string if present and set user-id field to same...
+        document.getElementById('user-id').value = getParameterByName('user_id');
+     </script>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

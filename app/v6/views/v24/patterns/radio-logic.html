@@ -1,0 +1,45 @@
+<div class="form-group">
+
+  <form data-routing="1">
+
+  <fieldset class="medium-space">
+
+    <legend>
+      <h1 class="heading-medium">
+        Are there any abstraction amounts to report?
+      </h1>
+    </legend>
+
+    <div class="multiple-choice">
+      <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-unit?wid={{ query.wid }}">
+      <label for="return-form">Yes</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="nil-return" type="radio" name="radio-inline-group" value="/v23/br/returns/confirm-no-return?wid={{ query.wid }}">
+      <label for="nil-return">No</label>
+    </div>
+
+  </fieldset>
+
+    <button type="submit" class="button">Submit</button>
+  </form>
+</div>
+
+</main>
+
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+$(function() {
+  $('form[data-routing]').on('submit', function(ev) {
+    // FInd selected radio button
+    const url = $(this).find('input:checked').val();
+
+    if(url) {
+      ev.preventDefault();
+      window.location.href = url;
+      return false;
+    }
+  });
+})
+</script>
