@@ -150,7 +150,7 @@
       #logo-container {
         position: absolute;
         top: 4.3mm;
-        top: 12mm;
+        top: 8mm;
         left: 15mm;
         width: 180mm;
         height: 30mm;
@@ -307,7 +307,7 @@
       }
 
        .key-data {
-         line-height: 6mm;
+         line-height: 2mm;
          padding-top: 3mm;
          font-size: 12pt;
        }
@@ -367,9 +367,9 @@
 
     <div class="page">
 
-      <div class="content">
+      {{ macros.header(notification.personalisation) }}
 
-        {{ macros.header(notification.personalisation) }}
+      <div class="content">
 
         <!-- title area -->
         <div id="logo-container">
@@ -488,7 +488,7 @@
 
               <div class="item">
                 <p>
-                  We need your return by <span class="bold">31 August 2019
+                  You must send your return by <span class="bold">31 August 2019
                 </p>
               </div>
 
