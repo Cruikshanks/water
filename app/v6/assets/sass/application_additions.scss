@@ -773,15 +773,6 @@ details {
   display: hidden;
 }
 
-.task-completed {
-  line-height: 2rem; // not exactly the task list style but increases readability and affordance
-  white-space: nowrap;
-}
-
-.task-error {
-  background-color: #B10E1E;
-}
-
 .flush-left {
   margin-left: 0;
   padding-left: 0;
@@ -1062,10 +1053,6 @@ details {
 
 // ar views
 
-#licences-as-tasks {
-
-}
-
 #ar-name-column {
   width: 40%;
 }
@@ -1082,23 +1069,6 @@ details {
   margin-bottom: 0.25em;
 }
 
-.open-task {
-  // background: $secondary-text-colour;
-  background: $button-colour;
-}
-
-.late-task {
-  // background: $secondary-text-colour;
-  background: $secondary-text-colour;
-}
-
-.not-completed {
-  background: $orange;
-  // background: $button-colour;
-  margin: auto;
-  float: none;
-}
-
 .approve {
   background: $turquoise;
   background: $button-colour;
@@ -1108,11 +1078,6 @@ details {
   // background-color: $yellow;
   background-color: #E8F4FA;
   // background-color: $focus-colour;
-}
-
-// the list of tasks
-.ar-tasks {
-
 }
 
 .ar-review {
@@ -1139,6 +1104,32 @@ details {
 }
 
 .task-completed {
+  margin: auto;
+  float: none;
+  line-height: 2rem; // not exactly the task list style but increases readability and affordance
+  white-space: nowrap;
+}
+
+.task-error {
+  background-color: #B10E1E;
+}
+
+.task-late {
+  background-color: #0B0C0C;
+}
+
+.open-task {
+  // background: $secondary-text-colour;
+  background: $button-colour;
+}
+
+.task-closed {
+  // background: $secondary-text-colour;
+  background: $secondary-text-colour;
+}
+
+.not-completed {
+  background: $orange;
   margin: auto;
   float: none;
 }
