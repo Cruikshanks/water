@@ -105,8 +105,7 @@
 
       li {
         line-height: 5.5mm;
-        margin-left: 5mm;
-        padding: 1mm;
+        margin-left: 4mm;
       }
 
       .page {
@@ -153,21 +152,16 @@
         /* background: #fcfcfc; */
       }
 
+      .columns .column:last-child {
+        padding-right: 0;
+      }
+
       .meta {
         padding-right: 0;
       }
 
       .footer .column {
         padding-right: 0;
-      }
-
-      .tight {
-        padding-right: 2.5mm;
-      }
-
-      .columns:first-child {
-        /* margin-left: -5mm; */
-        margin-right: 2.5mm;
       }
 
       .pagination {
@@ -203,8 +197,23 @@
       .address-block {
         position: absolute;
         bottom: 0;
-        font-size: 8.5pt;
+        font-size: 10pt;
       }
+
+      /* #address-container {
+        position: absolute;
+        left: 24.6mm;
+        top: 39.5mm;
+        display: block;
+        width: 95.4mm;
+        height: 26.8mm;
+      }
+
+      .address-block {
+        position: absolute;
+        bottom: 0;
+        font-size: 8.5pt;
+      } */
 
       .cover-content {
         position: relative;
@@ -217,23 +226,6 @@
       #cover-layout {
         left: 90mm;
         /* padding-top: 28mm; */
-      }
-
-      .content-left {
-        position: absolute;
-        width: 85mm;
-        height: 100%;
-        margin-right: 5mm;
-        /* border: 1px solid blue; */
-      }
-
-      .content-right {
-        position: absolute;
-        left:105mm;
-        width: 85mm;
-        height: 100%;
-        padding-left: 5mm;
-        /* border: 1px solid green; */
       }
 
       .block {
@@ -273,12 +265,16 @@
         padding-top: 1.4mm;
       }
 
+      .week-right-column-hack {
+        margin-top: 8mm;
+      }
+
       .number-input {
         display: inline-block;
         margin-top: 0;
         border: 1pt solid gray;
         border-right: 0;
-        width: 6mm;
+        width: 6.7mm;
         height: 7.5mm;
         margin-top: 1mm;
       }
@@ -370,7 +366,9 @@
         text-decoration: underline;
       }
 
-
+      .smaller {
+        font-size: 10pt;
+      }
 
     </style>
   </head>
@@ -454,7 +452,7 @@
           </div>
 
           <div class="column meta">
-            {{ macros.header(notification.personalisation) }}
+            {{ macros.area(notification.personalisation) }}
           </div>
         </div>
 
@@ -481,131 +479,135 @@
         <!-- content for page 1 -->
         <div class="cover-content">
 
-          <!-- left column -->
-          <div class="content-left">
+          <div class="columns">
 
-            <div class="block">
+            <!-- left column -->
+            <div class="column">
+
+              <div class="block">
+
+                <div class="item">
+                  <p>
+                    Send your return by <span class="bold">31 August 2019</span>.
+                  </p>
+                </div>
+
+                <div class="item">
+                  <p>
+                    When you send this return, you give the Environment Agency personal data such as your name and email address. Our privacy statement at the end of this form explains how we use your personal data.
+                  </p>
+                </div>
+
+                <div class="item">
+                  <p class="bold">
+                    Return the completed form to
+                  </p>
+
+                  <p>
+                    National Operator Returns Team<br>
+                    Environment Agency<br>
+                    Quadrant 2<br>
+                    99 Parkway Avenue<br>
+                    Sheffield<br>
+                    S9 4WF<br>
+                  </p>
+                </div>
+
+                <div class="item">
+
+                  <!-- <p>
+                    national-operator-returns@environment<br>-agency.gov.uk
+                  </p> -->
+
+                </div>
+
+                <div class="item">
+
+                  <p class="bold">
+                    If you need help to complete this form:
+                  </p>
+
+                  <p>
+                    • read the water abstraction guidance on www.gov.uk/government/collections/<br>
+                    water-abstraction-returns
+                  </p>
+
+                  <p>
+                    • call our customer help centre on<br>
+                    03708 506 506 (calls cost the same as calls to 01 and 02 landline numbers)
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- column end -->
+
+            <!-- right column -->
+            <div class="column" id="cover-layout">
 
               <div class="item">
-                <p>
-                  Send your return by <span class="bold">31 August 2019
+                <p class="label">
+                  Licence number
+                </p>
+                <p class="bold">
+                  AN/033/0012/007
                 </p>
               </div>
 
               <div class="item">
+                <p class="label">
+                  Return reference
+                </p>
+                <p class="bold">
+                  10042736
+                </p>
+              </div>
+
+              <div class="item">
+                <p class="label">
+                  Site
+                </p>
+                <p class="bold">
+                  Great Ouse at Bedford College
+                </p>
+              </div>
+
+              <div class="item">
+                <p class="label">
+                  Purpose
+                </p>
+                <p class="bold">
+                  Heat pump cooling water
+                </p>
+              </div>
+
+              <div class="item">
+                <p class="label">
+                  For the period
+                </p>
                 <p>
-                  When you send this return, you give the Environment Agency personal data such as your name and email address. Our privacy statement at the end of this form explains how we use your personal data.
+                  <span class="bold">1 April 2018</span> to <span class="bold">31 March 2019</span>
                 </p>
               </div>
 
               <div class="item">
                 <p class="bold">
-                  Please return completed form to:
-                </p>
-
-                <p>
-                  National Operator Returns Team<br>
-                  Environment Agency<br>
-                  Quadrant 2<br>
-                  99 Parkway Avenue<br>
-                  Sheffield<br>
-                  S9 4WF<br>
+                  If you do not send your return in time, we may take enforcement action.
                 </p>
               </div>
 
               <div class="item">
-
-                <!-- <p>
-                  national-operator-returns@environment<br>-agency.gov.uk
-                </p> -->
-
-              </div>
-
-              <div class="item">
-
                 <p class="bold">
-                  If you need help to complete this form:
+                  You are on a two-part tariff.
                 </p>
-
-                <p>
-                  • read the water abstraction guidance on www.gov.uk/government/collections/<br>
-                  water-abstraction-returns
-                </p>
-
-                <p>
-                  • call our customer help centre on<br>
-                  03708 506 506 (calls cost the same as calls to 01 and 02 landline numbers)
-                </p>
-
               </div>
 
             </div>
+            <!-- column right end -->
 
           </div>
-          <!-- column end -->
-
-          <!-- right column -->
-          <div class="content-right" id="cover-layout">
-
-            <div class="item">
-              <p class="label">
-                Licence number
-              </p>
-              <p class="bold">
-                AN/033/0012/007
-              </p>
-            </div>
-
-            <div class="item">
-              <p class="label">
-                Return reference
-              </p>
-              <p class="bold">
-                10042736
-              </p>
-            </div>
-
-            <div class="item">
-              <p class="label">
-                Site
-              </p>
-              <p class="bold">
-                Great Ouse at Bedford College
-              </p>
-            </div>
-
-            <div class="item">
-              <p class="label">
-                Purpose
-              </p>
-              <p class="bold">
-                Heat pump cooling water
-              </p>
-            </div>
-
-            <div class="item">
-              <p class="label">
-                For the period
-              </p>
-              <p>
-                <span class="bold">1 April 2018</span> to <span class="bold">31 March 2019</span>
-              </p>
-            </div>
-
-            <div class="item">
-              <p class="bold">
-                If you do not send your return in time, we may take enforcement action.
-              </p>
-            </div>
-
-            <div class="item">
-              <p class="bold">
-                You are on a two-part tariff
-              </p>
-            </div>
-
-          </div>
-          <!-- column right end -->
 
         </div>
         <!-- content container -->
@@ -616,12 +618,12 @@
       <div class="footer">
         <div class="columns">
           <div class="column">
-            <p>
+            <p class="smaller">
               WR71 - October 2018
             </p>
           </div>
           <div  class="column">
-            <p class="pagination">
+            <p class="pagination smaller">
               Page 1 of 6
             </p>
           </div>
@@ -636,17 +638,8 @@
 
       <div class="content">
 
-        <div class="columns">
-          <div class="column">
-
-            {{ macros.licence(notification.personalisation) }}
-
-          </div>
-
-          <div class="column meta">
-            {{ macros.header(notification.personalisation) }}
-          </div>
-        </div>
+        <!-- header -->
+        {{ macros.header(notification.personalisation) }}
 
         <div class="columns">
         <!-- left column -->
@@ -656,7 +649,7 @@
           <div class="block">
 
             <div class="block-head bold">
-              1. Return contact details
+              1. Who should we contact about this return?
             </div>
 
             <p>
@@ -726,7 +719,7 @@
               No (a ‘nil return’)
             </p>
             <p class="guide">
-              If no, go to section 10 on page 5
+              If no, go to section 11 on page 5
             </p>
           </div>
 
@@ -771,17 +764,17 @@
             </p>
             <p class="key-data">
               <span class="checkbox"></span>
-              Volume estimates
+              Volumes
             </p>
             <p class="guide">
-              If estimates, go to section 8 on page 5
+              If estimates, go to section 9 on page 5
             </p>
 
           </div>
 
           <div class="block">
             <div class="block-head bold">
-              5. Meter details (if known)
+              5. Meter details (if not estimated)
             </div>
             <div class="item">
               <p class="label">
@@ -798,11 +791,25 @@
                 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
               </p>
             </div>
+            <div class="item">
+              <p>
+                Some meters are marked with ×10. If yours is, you should send us the actual number that you see on the display. You do not need to multiply it by 10.
+              </p>
+
+              <!-- <p>
+                Some meters are marked with ×10. You should enter the actual figure that you see on the display. You do not need to multiply the volume by 10.
+              </p> -->
+
+              <p class="key-data">
+                <span class="checkbox"></span>
+                My meter has a ×10 display
+              </p>
+            </div>
           </div>
 
           <div class="block">
             <div class="block-head bold">
-              6. Start date for meter reading
+              6. Start meter reading
             </div>
             <div class="item">
               <p class="label">
@@ -829,7 +836,7 @@
 
           <div class="block">
             <div class="block-head bold">
-              7. End date for meter reading
+              7. End meter reading
             </div>
             <div class="item">
               <p class="label">
@@ -863,12 +870,12 @@
       <div class="footer">
         <div class="columns">
           <div class="column">
-            <p>
+            <p class="smaller">
               WR71 - October 2018
             </p>
           </div>
           <div  class="column">
-            <p class="pagination">
+            <p class="pagination smaller">
               Page 2 of 6
             </p>
           </div>
@@ -882,20 +889,11 @@
 
       <div class="content">
 
-        <div class="columns">
-          <div class="column">
-
-            {{ macros.licence(notification.personalisation) }}
-
-          </div>
-
-          <div class="column meta">
-            {{ macros.header(notification.personalisation) }}
-          </div>
-        </div>
+        <!-- header -->
+        {{ macros.header(notification.personalisation) }}
 
         <div class="block-head bold">
-          7. Return details
+          8. Meter readings or volumes
         </div>
 
         <div class="columns">
@@ -965,7 +963,7 @@
             </div>
           </div>
 
-          <div class="column">
+          <div class="column week-right-column-hack">
             <div class="block">
 
               <p class="week-label">
@@ -1034,12 +1032,12 @@
       <div class="footer">
         <div class="columns">
           <div class="column">
-            <p>
+            <p class="smaller">
               WR71 - October 2018
             </p>
           </div>
           <div  class="column">
-            <p class="pagination">
+            <p class="pagination smaller">
               Page 3 of 6
             </p>
           </div>
@@ -1052,17 +1050,8 @@
 
       <div class="content">
 
-        <div class="columns">
-          <div class="column">
-
-            {{ macros.licence(notification.personalisation) }}
-
-          </div>
-
-          <div class="column meta">
-            {{ macros.header(notification.personalisation) }}
-          </div>
-        </div>
+        <!-- header -->
+        {{ macros.header(notification.personalisation) }}
 
         <div class="columns">
           <div class="column">
@@ -1189,12 +1178,12 @@
       <div class="footer">
         <div class="columns">
           <div class="column">
-            <p>
+            <p class="smaller">
               WR71 - October 2018
             </p>
           </div>
           <div  class="column">
-            <p class="pagination">
+            <p class="pagination smaller">
               Page 4 of 6
             </p>
           </div>
@@ -1209,24 +1198,15 @@
 
       <div class="content">
 
-        <div class="columns">
-          <div class="column">
-
-            {{ macros.licence(notification.personalisation) }}
-
-          </div>
-
-          <div class="column meta">
-            {{ macros.header(notification.personalisation) }}
-          </div>
-        </div>
+        <!-- header -->
+        {{ macros.header(notification.personalisation) }}
 
         <div class="columns">
           <div class="column">
 
             <div class="block">
               <div class="block-head bold">
-                8. Assessment without a meter
+                9. Assessment without a meter
               </div>
               <p class="label">
                 How did you make the assessment? For example, pump capacity by hours run or numbers of livestock.
@@ -1245,7 +1225,7 @@
 
             <div class="block">
               <div class="block-head bold">
-                9. Total water abstracted
+                10. Total water abstracted
               </div>
               <p class="label">
                 Amount abstracted
@@ -1258,10 +1238,10 @@
 
             <div class="block">
               <div class="block-head bold">
-                10. Further information
+                11. Further information
               </div>
               <p class="label">
-                If you need to explain an entry or give more information, send this on a separate sheet. Write the return reference <span class="bold">10042736</span> on each sheet.
+                If you need to explain an entry or give more information, send this on a separate sheet. Write the return reference <span class="bold">10042736</span> and your licence number <span class="bold">AN/033/0012/007</span> on each sheet.
                 <div>
                   <p class="key-data">
                     <span class="checkbox"></span>
@@ -1276,7 +1256,7 @@
           <div class="column">
             <div class="block">
               <div class="block-head bold">
-                11. Declaration
+                12. Declaration
               </div>
               <p>
                 I confirm that the information in this return is correct.
@@ -1298,12 +1278,12 @@
       <div class="footer">
         <div class="columns">
           <div class="column">
-            <p>
+            <p class="smaller">
               WR71 - October 2018
             </p>
           </div>
           <div  class="column">
-            <p class="pagination">
+            <p class="pagination smaller">
               Page 5 of 6
             </p>
           </div>
@@ -1321,151 +1301,29 @@
 
       <div class="content">
 
-        <div class="columns">
-          <div class="column">
+        <!-- header -->
+        {{ macros.header(notification.personalisation) }}
 
-            {{ macros.licence(notification.personalisation) }}
+        <!-- privacy statement -->
+        {{ macros.privacy(notification.personalisation) }}
 
-          </div>
-
-          <div class="column meta">
-            {{ macros.header(notification.personalisation) }}
-          </div>
-        </div>
-
-        <div class="columns">
-          <div class="column">
-
-            <div class="text-block">
-
-              <h2>
-                How we use your personal data: privacy notice
-              </h2>
-
-              <p>
-                The data controller is the Environment Agency. A data controller determines how and why personal data is processed.
-              </p>
-              <h3>
-                The data we need
-              </h3>
-              <p>
-                This data includes your name and contact details, and any records of water use.
-              </p>
-              <h3>
-                Why we need it
-              </h3>
-              <p>
-                We are collecting the data to:
-              </p>
-              <ul>
-                <li>
-                  process your water use records
-                </li>
-                <li>
-                  keep public registers up to date
-                </li>
-                <li>
-                  contact you about your licence
-                </li>
-                <li>
-                  register for and use our online water resources service
-                </li>
-              </ul>
-              <p>
-                We need to do this to manage water resources in England. This is in the public interest and the data controller has official authority vested in it to do this.
-              </p>
-
-              <h3>
-                Sharing and transferring personal data
-              </h3>
-              <p>
-                We will not share your data with anyone outside of the Environment Agency without your consent. But we may pass the your data on to our agents or representatives to process the data for us.
-              </p>
-              <p>
-                We will share your data if we are required to do so by law – for example, by court order, or to prevent fraud or other crime.
-              </p>
-              <p>
-                We will not transfer the your data outside the European Economic Area.
-              </p>
-
-            </div> <!-- end text block -->
-
-
-          </div> <!-- end column 1 -->
-          <div class="column">
-
-            <div class="text-block">
-
-              <h3>
-                How long we hold personal data
-              </h3>
-              <p>
-                For public registers we will keep your data as long as required by law.
-              </p>
-              <p>
-                For the online water resources service we will keep your data for as long as you want to access the service.
-              </p>
-              <p>
-                For other uses, we will keep data for 7 years after the abstraction or impoundment licence ends. After 7 years we will review this in line with our information retention policy.
-              </p>
-
-              <h3>
-                Automated decision making and profiling
-              </h3>
-              <p>
-                We will not use the information you provide:
-              </p>
-              <ul>
-                <li>
-                  to make a decision by automated means without any human involvement
-                </li>
-                <li>
-                  for automated processing of personal data to check certain things about someone.
-                </li>
-                <li>
-                  For general information abut how we treat your personal data, see our Personal Information Charter: www.gov.uk/government/<br>organisations/environmentagency/<br>about/personalinformationcharter
-                </li>
-              </ul>
-              <h3>
-                Contact us or complain
-              </h3>
-              <p>
-                Contact us about your data by email to: dataprotection@environment-agency.gov.uk
-              </p>
-              <p>
-                Or write to: Data Protection Team, Environment Agency, Horizon House, Deanery Road, Bristol BS1 5AH
-              </p>
-              <p>
-                Find out about your rights or complain on the Information Commissioner’s Office (ICO) website: www.ico.org.uk
-              </p>
-
-
-            </div>
-
-          </div>
-
-        </div> <!-- end columns -->
-
-      </div> <!-- end content -->
+      </div>
 
       <!-- footer -->
       <div class="footer">
         <div class="columns">
           <div class="column">
-            <p>
+            <p class="smaller">
               WR71 - October 2018
             </p>
           </div>
           <div  class="column">
-            <p class="pagination">
+            <p class="pagination smaller">
               Page 6 of 6
             </p>
           </div>
         </div>
       </div>
-
-    </div>
-
 
     </div>
 

@@ -1,17 +1,153 @@
-{% macro licence(personalisation) %}
-<!-- licence number -->
-<div class="licence">
-  <p class="smaller">
-    Return reference <span class="bold">10042736</span>
-  </p>
+{% macro header(personalisation) %}
+<div class="columns">
+  <div class="column">
+
+    <!-- licence number -->
+    <div class="licence">
+      <p class="smaller">
+        Return reference <span class="bold">10042736</span>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="column meta">
+
+    <!-- header -->
+    <div class="header">
+      <p class="smaller">
+        Midlands / Central area</span>
+      </p>
+    </div>
+
+  </div>
 </div>
 {% endmacro %}
 
-{% macro header(personalisation) %}
-<!-- header -->
-<div class="header">
-  <p class="smaller">
-    Midlands / Central area</span>
-  </p>
+{% macro area(personalisation) %}
+<div class="column meta">
+
+  <!-- header -->
+  <div class="header">
+    <p class="smaller">
+      Midlands / Central area</span>
+    </p>
+  </div>
+
+</div>
+{% endmacro %}
+
+
+{% macro privacy(personalisation) %}
+<div class="columns">
+  <div class="column">
+
+    <div class="text-block">
+
+      <h2>
+        How we use your personal data: privacy notice
+      </h2>
+
+      <p>
+        The data controller is the Environment Agency. A data controller determines how and why personal data is processed.
+      </p>
+      <h3>
+        The data we need
+      </h3>
+      <p>
+        This data includes your name and contact details, and any records of water use.
+      </p>
+      <h3>
+        Why we need it
+      </h3>
+      <p>
+        We are collecting the data to:
+      </p>
+      <ul>
+        <li>
+          process your water use records
+        </li>
+        <li>
+          keep public registers up to date
+        </li>
+        <li>
+          contact you about your licence
+        </li>
+        <li>
+          register for and use our online water resources service
+        </li>
+      </ul>
+      <p>
+        We need to do this to manage water resources in England. This is in the public interest and the data controller has official authority vested in it to do this.
+      </p>
+
+      <h3>
+        Sharing and transferring personal data
+      </h3>
+      <p>
+        We will not share your data with anyone outside of the Environment Agency without your consent. But we may pass the your data on to our agents or representatives to process the data for us.
+      </p>
+      <p>
+        We will share your data if we are required to do so by law – for example, by court order, or to prevent fraud or other crime.
+      </p>
+      <p>
+        We will not transfer the your data outside the European Economic Area.
+      </p>
+
+    </div> <!-- end text block -->
+
+
+  </div> <!-- end column 1 -->
+  <div class="column">
+
+    <div class="text-block">
+
+      <h3>
+        How long we hold personal data
+      </h3>
+      <p>
+        For public registers we will keep your data as long as required by law.
+      </p>
+      <p>
+        For the online water resources service we will keep your data for as long as you want to access the service.
+      </p>
+      <p>
+        For other uses, we will keep data for 7 years after the abstraction or impoundment licence ends. After 7 years we will review this in line with our information retention policy.
+      </p>
+
+      <h3>
+        Automated decision making and profiling
+      </h3>
+      <p>
+        We will not use the information you provide:
+      </p>
+      <ul>
+        <li>
+          to make a decision by automated means without any human involvement
+        </li>
+        <li>
+          for automated processing of personal data to check certain things about someone.
+        </li>
+        <li>
+          For general information abut how we treat your personal data, see our Personal Information Charter: <span class="bold">www.gov.uk/government/<br>organisations/environmentagency/<br>about/personalinformationcharter</span>
+        </li>
+      </ul>
+      <h3>
+        Contact us or complain
+      </h3>
+      <p>
+        Contact us about your data by <span class="bold">email to: dataprotection@environment-agency.gov.uk</span>
+      </p>
+      <p>
+        Or write to: Data Protection Team, Environment Agency, Horizon House, Deanery Road, Bristol BS1 5AH
+      </p>
+      <p>
+        Find out about your rights or complain on the Information Commissioner’s Office: <span class="bold">www.ico.org.uk</span>
+      </p>
+
+
+    </div>
+
+  </div>
 </div>
 {% endmacro %}
