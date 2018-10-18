@@ -40,43 +40,43 @@
     </div>
   </div>
 
-  <div class="grid-row">
-    <div class="column-full">
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <h3 class="heading-medium">
+        Tell us about one of your meters
+      </h3>
 
       <div class="form-group">
-        <fieldset>
-          <legend>
-            <h2 class="heading-medium">
-              What units are your amounts in?
-            </h2>
-          </legend>
+        <label class="form-label" for="meter-make">Manufacturer</label>
+        <input class="form-control small-space" id="meter-make" name="meter-info" type="text" value="">
 
-          <div class="multiple-choice">
-            <input id="radio-inline-1" type="radio" name="unit-radios" value="">
-            <label for="radio-inline-1">Cubic metres</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="radio-inline-3" type="radio" name="unit-radios" value="">
-            <label for="radio-inline-3">Litres</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="radio-inline-4" type="radio" name="unit-radios" value="">
-            <label for="radio-inline-4">Megalitres</label>
-          </div>
-          <div class="multiple-choice">
-            <input id="radio-inline-2" type="radio" name="unit-radios" value="">
-            <label for="radio-inline-2">Gallons</label>
-          </div>
-        </fieldset>
+        <label class="form-label" for="meter-serial">Serial number</label>
+        <input class="form-control small-space" id="meter-serial" name="meter-info" type="text" value="">
+
+        <label class="form-label" for="start-reading">Meter start reading</label>
+
+        <input class="form-control" id="start-reading" name="meter-info" type="text" value="">
+
+      </div>
+
+      <p>
+        Some meters are marked with ×10. You should enter the actual figure that you see on the display. You do not need to multiply the volume by 10.
+      </p>
+
+      <div class="multiple-choice">
+        <input type="checkbox">
+        <label aria-label="Can do returns">
+          This meter has a ×10 display
+        </label>
       </div>
 
     </div>
   </div>
 
-  <a href="returns-route-multiple-meters?wid={{ query.wid }}" class="button">
+  <a href="returns-form-amounts?wid={{ query.wid }}" class="button">
     Continue
   </a>
-
 
 
   {% endif %}

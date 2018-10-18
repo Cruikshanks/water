@@ -47,28 +47,27 @@
 
             <legend>
               <h3 class="heading-medium">
-                How are you reporting your return?
+                Did you use one or more meters to calculate volumes?
               </h3>
             </legend>
 
             <div class="multiple-choice">
-              <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-meters?wid={{ query.wid }}">
-              <label for="return-form">Readings from one meter</label>
+              <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-amounts-meter?wid={{ query.wid }}">
+              <label for="return-form">Yes</label>
             </div>
             <!-- <div class="multiple-choice">
               <input id="reroute" type="radio" name="radio-inline-group" value="returns-reroute?wid={{ query.wid }}">
               <label for="reroute">Readings from more than one meter</label>
             </div> -->
             <div class="multiple-choice">
-              <input id="nil-return" type="radio" name="radio-inline-group" value="returns-route-unit?wid={{ query.wid }}">
-              <label for="nil-return">Other</label>
+              <input id="nil-return" type="radio" name="radio-inline-group" value="returns-form-amounts?wid={{ query.wid }}">
+              <label for="nil-return">No</label>
             </div>
 
           </fieldset>
 
           <button type="submit" class="button">Continue</button>
         </form>
-
       </div>
 
     </div>

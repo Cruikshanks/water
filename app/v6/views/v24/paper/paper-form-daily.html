@@ -112,29 +112,39 @@
         flex-direction: column;
 
         margin: 0;
-        padding: 5mm 15mm 5mm 15mm;
+        padding: 6mm 16mm 6mm 16mm;
         box-sizing: border-box;
         /* background-color: yellow; */
+        background-image: url('/public/images/print-guide-page.png');
+        background-size: 210mm;
         overflow: hidden;
+      }
+
+      #cover {
+        background-image: url('/public/images/print-guide-cover.png');
+      }
+
+      .licence {
+        margin-bottom: 5mm;
       }
 
       .header {
         text-align: right;
-        margin-bottom: 5mm;
       }
 
       #cover .header {
-        margin-left: 5mm;
-        margin-top: 5mm;
+        /* margin-left: 5mm; */
+        /* margin-top: 5mm; */
       }
 
       .content {
-        padding-top: 5mm;
+        /* padding-top: 5mm; */
         flex-grow: 1;
       }
 
       .columns {
         display: flex;
+        /* padding-bottom: 5mm; */
         /* margin-left: -5mm;
         margin-right: -5mm; */
       }
@@ -170,21 +180,21 @@
         position: absolute;
         top: 4.3mm;
         top: 12mm;
-        left: 15mm;
+        left: 16mm;
         width: 180mm;
         height: 30mm;
       }
 
       #title-block {
         position: absolute;
-        top: 90mm;
+        top: 100mm;
         margin-bottom: 2mm;
       }
 
       #address-container {
         position: absolute;
-        left: 24.6mm;
-        top: 39.5mm;
+        left: 25.5mm;
+        top: 38.5mm;
         display: block;
         width: 95.4mm;
         height: 26.8mm;
@@ -198,9 +208,9 @@
         font-size: 10pt;
       }
 
-      .cover-content {
+      #cover-content {
         position: relative;
-        top: 80mm;
+        top: 102mm;
         width: 180mm;
         height: 185mm;
         /* border: 1px solid; */
@@ -217,13 +227,33 @@
 
       .input {
         /* border-bottom: 1pt solid gray; */
-        border: 1pt solid gray;
+        /* border: 1pt solid gray; */
+        border-bottom: 1pt solid gray;
         margin-top: 1mm;
         /* padding-top: 2mm; */
         padding-bottom: 2mm;
-        height: 7.5mm;
+        height: 5mm;
+        position: relative;
       }
 
+      .input:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -1pt;
+        height: 2mm;
+        border-left: 1pt solid gray;
+      }
+
+      .input:after {
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: -1pt;
+        height: 5pt;
+        border-right: 1pt solid gray;
+      }
+/*
       .input-mask {
         position: relative;
         top: -2pt;
@@ -232,7 +262,7 @@
         height: 95%;
         background-color: white;
         border: 1pt solid white;
-      }
+      } */
 
       .daily-input {
         display: flex;
@@ -255,7 +285,7 @@
         margin-top: 0;
         border: 1pt solid gray;
         border-right: 0;
-        width: 6.75mm;
+        width: 6.62mm;
         height: 7.5mm;
         margin-top: 1mm;
       }
@@ -267,7 +297,7 @@
         border-right: 0;
         /* width: 6mm;
         height: 7.5mm; */
-        width: 3.63mm;
+        width: 3.48mm;
         height: 5.5mm;
       }
 
@@ -299,6 +329,10 @@
          line-height: 2mm;
          padding-top: 3mm;
          font-size: 12pt;
+       }
+
+       .key-data:first-child {
+         padding-top: 0;
        }
 
        .checkbox {
@@ -425,7 +459,6 @@
 
             </div>
           </div>
-
           <div class="column meta">
             {{ macros.area(notification.personalisation) }}
           </div>
@@ -434,8 +467,8 @@
         <!-- address area -->
         <div id="address-container">
           <div class="address-block">
-            FAO: Steve / James<br>
-            Water team<br>
+            FAO: Edward Power<br>
+            Water Resource Licensing team<br>
             Horizon House,<br>
             Deanery Road,<br>
             Near College Green<br>
@@ -451,8 +484,7 @@
           </h1>
         </div>
 
-        <div class="cover-content">
-
+        <div id="cover-content">
           <div class="columns">
 
             <!-- left column -->
@@ -462,13 +494,37 @@
 
                 <div class="item">
                   <p>
-                    Send your return by <span class="bold">31 August 2019</span>.
+                    Send your return by <span class="bold">28 November 2019</span>.
                   </p>
                 </div>
 
                 <div class="item">
                   <p>
-                    When you send this return, you give the Environment Agency personal data such as your name and email address. Our privacy statement at the end of this form explains how we use your personal data.
+                    You must submit a return even if you have not abstracted any water (nil return). If your licence has expired or has been cancelled complete the return up to its end date.
+                  </p>
+                </div>
+
+                <div class="item">
+                  <p>
+                    Before sending it make sure you:
+                    <ul>
+                      <li>
+                        fill in sections 2, 3, 4 and 10
+                      </li>
+                      <li>
+                        tick the ‘nil return’ box if no water<br>
+                        has been abstracted
+                      </li>
+                      <li>
+                        sign the declaration
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+
+                <div class="item">
+                  <p>
+                    If you are required to carry out monitoring as a condition of you abstracting water you need to continue sending this information to your local area office.
                   </p>
                 </div>
 
@@ -476,58 +532,36 @@
                   <p class="bold">
                     Return the completed form to:
                   </p>
-
                   <p>
-                    National Operator Returns Team<br>
+                    Waste and Industry Regulatory Services<br>
                     Environment Agency<br>
-                    Quadrant 2<br>
-                    99 Parkway Avenue<br>
-                    Sheffield<br>
-                    S9 4WF<br>
+                    Quadrant 2, 99 Parkway Avenue<br>
+                    Sheffield, S9 4WF
                   </p>
                 </div>
 
                 <div class="item">
-
-                  <!-- <p>
-                    national-operator-returns@environment<br>-agency.gov.uk
-                  </p> -->
-
-                </div>
-
-                <div class="item">
-
                   <p class="bold">
-                    If you need help to complete this form:
+                    If you do not send your return in time,<br>
+                    we may take enforcement action.
                   </p>
+                </div>
 
-                  <ul>
-                    <li>
-                      read the water abstraction guidance on <span class="bold">www.gov.uk/government/collections/<br>
-                      water-abstraction-returns</span>
-                    </li>
-                    <li>
-                      call our customer help centre on<br>
-                      <span class="bold">03708 506 506</span> (calls cost the same as calls to 01 and 02 landline numbers)
-                    </li>
-                  </ul>
+                <div class="item">
 
-                  <!-- <p>
-                    • read the water abstraction guidance on www.gov.uk/government/collections/<br>
-                    water-abstraction-returns
-                  </p>
+                  <!-- <p class="bold">
+                    Contact us:
+                  </p> -->
 
                   <p>
-                    • call our customer help centre on<br>
-                    03708 506 506 (calls cost the same as calls to 01 and 02 landline numbers)
-                  </p> -->
+                    To claim commercial in confidence, for help completing the form, or to find your local area office, contact us on <span class="bold">03708 506 506</span>
+                  </p>
 
                 </div>
 
               </div>
 
             </div>
-            <!-- column end -->
 
             <!-- right column -->
             <div class="column" id="cover-layout">
@@ -570,7 +604,7 @@
 
               <div class="item">
                 <p class="label">
-                  For the period
+                  Period
                 </p>
                 <p>
                   <span class="bold">1 April 2018</span> to <span class="bold">31 March 2019</span>
@@ -578,22 +612,17 @@
               </div>
 
               <div class="item">
-                <p class="bold">
-                  If you do not send your return in time, we may take enforcement action.
+                <p class="label">
+                  Two-part tariff
                 </p>
-              </div>
-
-              <div class="item">
                 <p class="bold">
-                  You are on a two-part tariff.
+                  Yes
                 </p>
               </div>
 
             </div>
-            <!-- column right end -->
 
           </div>
-
         </div>
 
       </div>
@@ -607,7 +636,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 1 of 6
+              Page 1 of 8
             </p>
           </div>
         </div>
@@ -632,7 +661,7 @@
           <div class="block">
 
             <div class="block-head bold">
-              1. Who should we contact about this return?
+              1. Who is the contact for this return?
             </div>
 
             <p>
@@ -689,22 +718,23 @@
 
           <!-- return -->
           <div class="block">
-
             <div class="block-head bold">
               2. Did you abstract water?
             </div>
 
-            <p class="key-data">
-              <span class="checkbox"></span>
-              Yes
-            </p>
-            <p class="key-data">
-              <span class="checkbox"></span>
-              No (a ‘nil return’)
-            </p>
-            <p class="guide">
-              If no, go to section 11 on page 4
-            </p>
+            <div class="item">
+              <p class="key-data">
+                <span class="checkbox"></span>
+                Yes
+              </p>
+              <p class="key-data">
+                <span class="checkbox"></span>
+                No (nil return)
+              </p>
+              <p class="guide">
+                If no, go to section 13 on page 7
+              </p>
+            </div>
           </div>
 
           <!-- units -->
@@ -712,6 +742,7 @@
             <div class="block-head bold">
               3. Unit of measurement
             </div>
+
             <div class="item">
               <p class="key-data">
                 <span class="checkbox"></span>
@@ -732,36 +763,40 @@
             </div>
           </div>
 
+          <!-- units -->
+          <div class="block">
+            <div class="block-head bold">
+              4. Did you use a meter?
+            </div>
+            <div class="item">
+              <p class="key-data">
+                <span class="checkbox"></span>
+                Yes
+              </p>
+              <p class="key-data">
+                <span class="checkbox"></span>
+                No
+              </p>
+            </div>
+            <p class="guide">
+              If no, go to section 9 on page 3
+            </p>
+          </div>
+
         </div>
 
         <!-- right column -->
         <div class="column">
 
-          <!-- numbers block -->
-          <div class="block">
-
-            <div class="block-head bold">
-              4. What are the numbers you are reporting?
-            </div>
-
-            <p class="key-data">
-              <span class="checkbox"></span>
-              Meter readings
-            </p>
-            <p class="key-data">
-              <span class="checkbox"></span>
-              Volumes
-            </p>
-            <p class="guide">
-              If estimates, go to section 9 on page 7
-            </p>
-
-          </div>
-
           <!-- your meter -->
           <div class="block">
             <div class="block-head bold">
-              5. Meter details (if not estimated)
+              5. Meter details
+            </div>
+            <div class="item">
+              <p>
+                If you have used more than one meter you only need to tell us about one of them.
+              </p>
             </div>
             <div class="item">
               <p class="label">
@@ -849,6 +884,25 @@
             </div>
           </div>
 
+          <!-- numbers block -->
+          <div class="block">
+
+            <div class="block-head bold">
+              8. How are you reporting your return?
+            </div>
+
+            <div class="item">
+              <p class="key-data">
+                <span class="checkbox"></span>
+                Meter readings
+              </p>
+              <p class="key-data">
+                <span class="checkbox"></span>
+                Abstraction volumes
+              </p>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -882,7 +936,7 @@
         {{ macros.header(notification.personalisation) }}
 
         <div class="block-head bold">
-          8. Meter readings or volumes
+          9. Meter readings or abstraction volumes
         </div>
 
         <div class="columns">
@@ -3361,7 +3415,7 @@
 
             <div class="block">
               <div class="block-head bold">
-                9. Assessment without a meter
+                10. Assessment without a meter
               </div>
               <p class="label">
                 How did you make the assessment? For example, pump capacity by hours run or numbers of livestock.
@@ -3380,30 +3434,29 @@
 
             <div class="block">
               <div class="block-head bold">
-                10. Total water abstracted
+                11. Total water abstracted
               </div>
               <p class="label">
                 Amount abstracted
-                <!-- <div class="input">
-                  <div class="input-mask"></div>
-                </div> -->
                 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
               </p>
             </div>
 
             <div class="block">
               <div class="block-head bold">
-                11. Further information
+                12. Further information
               </div>
-              <p class="label">
-                If you need to explain an entry or give more information, send this on a separate sheet. Write the return reference <span class="bold">10042736</span> and your licence number <span class="bold">AN/033/0012/007</span> on each sheet.
-                <div>
-                  <p class="key-data">
-                    <span class="checkbox"></span>
-                    I am sending further information
-                  </p>
-                </div>
-              </p>
+              <div class="item">
+                <p class="label">
+                  If you need to explain an entry or give more information, send this on a separate sheet. Write the return reference <span class="bold">10042736</span> and your licence number <span class="bold">AN/033/0012/007</span> on each sheet.
+                </p>
+              </div>
+              <div class="item">
+                <p class="key-data">
+                  <span class="checkbox"></span>
+                  I am sending further information
+                </p>
+              </div>
             </div>
 
 
@@ -3411,7 +3464,7 @@
           <div class="column">
             <div class="block">
               <div class="block-head bold">
-                12. Declaration
+                13. Declaration
               </div>
               <p>
                 I confirm that the information in this return is correct.
