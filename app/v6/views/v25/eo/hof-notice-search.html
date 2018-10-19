@@ -1,0 +1,71 @@
+{% extends "./head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-eo-manage.html" %}
+
+  <!-- <a href="#" class="link-back medium-space" onclick="history.go(-1)">Back</a> -->
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        Send a hands off flow notification
+      </h1>
+    </div>
+  </div>
+
+  <!-- the form to find an audience -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <!-- form -->
+      <form class="medium-space">
+
+        <label for="licence_no">
+
+          <fieldset>
+
+            <div class="form-group">
+              <label class="form-label" for="ni-number">
+                Find a gauging station to notify its attached licence holders
+                <p>
+                  You can search by Gauging station name or ID, River name, Catchment name, Latitude and Longitude, National Grid Reference or River Levels Online ID
+                </p>
+                <span class="form-hint">
+                  For example, ‘Teston’, ‘Severn’ or ‘51.997478,-2.142893’.
+                </span>
+              </label>
+              <input class="form-control" id="ni-number" type="text" name="ni-number">
+            </div>
+
+          </fieldset>
+        </label>
+
+        <!-- input field here -->
+        <div>
+          <a href="hof-gauges" id="submitButton" class="button button" type="submit">Continue</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

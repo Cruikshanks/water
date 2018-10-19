@@ -1,0 +1,96 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-returns.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          Abstraction return for  {{ pData.LicenceSerialNo }}
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          Abstraction record
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="form-group">
+
+        <form data-routing="1">
+
+          <fieldset class="medium-space">
+
+            <legend>
+              <h3 class="heading-medium">
+                How are you reporting your return?
+              </h3>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="return-form" type="radio" name="radio-inline-group" value="returns-route-meters?wid={{ query.wid }}">
+              <label for="return-form">Readings from one meter</label>
+            </div>
+            <!-- <div class="multiple-choice">
+              <input id="reroute" type="radio" name="radio-inline-group" value="returns-reroute?wid={{ query.wid }}">
+              <label for="reroute">Readings from more than one meter</label>
+            </div> -->
+            <div class="multiple-choice">
+              <input id="nil-return" type="radio" name="radio-inline-group" value="returns-route-unit?wid={{ query.wid }}">
+              <label for="nil-return">Other</label>
+            </div>
+
+          </fieldset>
+
+          <button type="submit" class="button">Continue</button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
+
+{% endblock %}

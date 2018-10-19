@@ -1,0 +1,108 @@
+{% extends "../head-signedin.html" %}
+
+{% block page_title %}
+  Abstraction points for {{ pData.LicenceSerialNo }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-view.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- back -->
+  <div class="medium-space">
+    <a href="#" class="link-back" onclick="history.go(-1)">Licence number {{pData.LicenceSerialNo}}</a>
+  </div>
+
+  <!-- page heading -->
+  {% if pData.LicenceName %}
+    <!-- page title -->
+    <h1 class="heading-large medium-space">
+      <span class="heading-secondary">
+        Licence number {{pData.LicenceSerialNo}}
+      </span>
+      Abstraction points for {{ pData.LicenceName }}
+    </h1>
+  {% else %}
+    <h1 class="heading-large">Abstraction points for licence number {{ pData.LicenceSerialNo }}</h1>
+  {% endif %}
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <h2 class="heading-medium">{{ pData.Point1 }}</h2>
+
+      <div class="datatable">
+        <label>Grid reference</label>
+        <div class="dataText">
+          {{ pData.Point1Ref }}
+        </div>
+      </div>
+
+      <div class="datatable medium-space">
+        <label>Means of abstraction</label>
+        <div class="dataText">
+          {{ pData.Means1 }}
+        </div>
+      </div>
+
+      <!-- more points-based data can follow -->
+      {% if pData.Point2 %}
+
+        <h2 class="heading-medium">{{ pData.Point2 }}</h2>
+
+        <div class="datatable">
+          <label>Grid reference</label>
+          <div class="dataText">
+            {{ pData.Point2Ref }}
+          </div>
+        </div>
+
+        <div class="datatable medium-space">
+          <label>Means of abstraction</label>
+          <div class="dataText">
+            {{ pData.Means2 }}
+          </div>
+        </div>
+
+      {% endif %}
+
+      {% if pData.Point3 %}
+
+        <h2 class="heading-medium">{{ pData.Point3 }}</h2>
+
+        <div class="datatable">
+          <label>Grid reference</label>
+          <div class="dataText">
+            {{ pData.Point3Ref }}
+          </div>
+        </div>
+
+        <div class="datatable small-space">
+          <label>Means of abstraction</label>
+          <div class="dataText">
+            {{ pData.Means3 }}
+          </div>
+        </div>
+
+      {% endif %}
+
+    </div>
+  </div>
+
+</main>
+
+{% endif %}
+{% endfor %}
+
+{% endblock %}

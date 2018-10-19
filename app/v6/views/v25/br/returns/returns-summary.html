@@ -1,0 +1,121 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Your abstraction returns - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-br-manage.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds small-space">
+
+      <!-- page heading -->
+      <h1 class="sub-head">
+        <a href="returns-overview">Return cycles for Anglia</a>
+      </h1>
+      <h2 class="heading-large spaceless">
+        April 2017 to March 2018
+      </h2>
+    </div>
+  </div>
+
+  <div class="data medium-space">
+    <h3><span class="data-item bold-xxlarge">520 of 524</span>
+    <span class="data-item bold-medium">Completed returns</span></h3>
+  </div>
+
+  <div class="grid-row small-space">
+    <div class="column-one-fifth">
+      <div class="data">
+        <span class="data-item bold-xlarge">355</span>
+        <span class="data-item bold-xsmall">Licences</span>
+      </div>
+    </div>
+    <div class="column-one-fifth">
+      <div class="data">
+        <span class="data-item bold-xlarge">347</span>
+        <span class="data-item bold-xsmall">Monthly</span>
+      </div>
+    </div>
+    <div class="column-one-fifth">
+      <div class="data">
+        <span class="data-item bold-xlarge">114</span>
+        <span class="data-item bold-xsmall">Weekly</span>
+      </div>
+    </div>
+    <div class="column-one-fifth">
+      <div class="data">
+        <span class="data-item bold-xlarge">59</span>
+        <span class="data-item bold-xsmall">Daily</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-row medium-space">
+
+    <div class="column-one-fifth">
+      <div class="data">
+        <span class="data-item bold-xlarge">1</span>
+        <span class="data-item bold-xsmall">Over abstracted</span>
+      </div>
+    </div>
+    <div class="column-one-fifth">
+      <div class="data">
+        <span class="data-item bold-xlarge">2</span>
+        <span class="data-item bold-xsmall">Compliance issues</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a href="">Download CSV file</a>
+    </div>
+  </div>
+
+</main>
+
+<script src="/public/v6/javascripts/underscore.min.js"></script>
+<script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/v6/javascripts/license_results.js"></script>
+
+<script>
+  $(function() {
+
+    var ctrlKey = false;
+
+    $(window).keydown(function(ev){
+      if(ev.ctrlKey || ev.keyCode === 224 || ev.keyCode === 17 || ev.keyCode === 91 || ev.keyCode === 93) {
+        ctrlKey = true;
+      }
+    });
+
+    $(window).keyup(function(){
+      ctrlKey = false;
+    });
+
+    $('a').parents('.table-row').addClass('clickable');
+
+    // Click on licence list clicks inner link
+    $('.table-row').on('click', function (ev) {
+      var href = $(this).find('a:first').attr('href');
+      console.log(ctrlKey);
+      ctrlKey ? window.open.blur(href) : window.location.href = href;
+      window.focus();
+      // window.location.href = $(this).find('a:first').attr('href');
+      $(this).addClass('active');
+      ev.preventDefault();
+    });
+  });
+</script>
+
+{% endblock %}

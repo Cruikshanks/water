@@ -1,0 +1,69 @@
+{% extends "../head-signedin.html" %}
+
+{% block page_title %}
+  Which licences do you want to be able to view? - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- back button -->
+  <a href="#" class="link-back" onclick="history.go(-1)">Back</a>
+
+  <!-- page title -->
+  <h1  class="heading-large">Conditions held for {{ pData.LicenceSerialNo }}</h1>
+
+  <!-- tabs -->
+  <nav class="tabs big-space">
+    <ul>
+      <li><a href="/v23/amounts/points?wid={{ query.wid }}">Amounts by point</a></li>
+      <li><a href="/v23/amounts/purposes?wid={{ query.wid }}">Amounts by purpose</a></li>
+      <li><span class="active">Conditional amounts</span></li>
+    </ul>
+  </nav>
+  <p></p>
+
+  <!-- warning about listed conditions -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="notice medium-space">
+        <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
+        <strong class="bold-small">
+          We may not be able to show a full list of your conditions, because we do not hold all of your licence information on our system yet. You must refer to the paper copy of your licence to view and comply with all of your conditions.
+        </strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- conditional amounts -->
+  <div class="grid-row">
+    <div class="column-full">
+
+      <div class="medium-space">
+        <div class="datatablepp dataheadpp">
+          <h2 class="heading-medium">{{ pData.AmountCondition1Label }}</h2>
+        </div>
+        <div class="datatablepp first-datapp">
+          <div class="column-two-thirds data">
+            <p>{{ pData.AmountCondition1Value }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+
+{% endblock %}

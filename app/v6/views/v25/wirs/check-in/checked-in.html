@@ -1,0 +1,45 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Abstraction return received - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-wirs-manage.html" %}
+
+  <!-- confirmation panel -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-large tight">
+          Return received
+        </h1>
+        {% if pData.LicenceName %}
+          <p>Purpose <span class="bold">{{ pData.Purpose1 }}</span><br>
+          Licence name <span class="bold">{{ pData.LicenceName }}</span></p>
+        {% else %}
+          <p>Purpose <span class="bold">{{ pData.Purpose1 }}</span><br>
+          Licence number <span class="bold">{{ pData.LicenceSerialNo }}</span></p>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

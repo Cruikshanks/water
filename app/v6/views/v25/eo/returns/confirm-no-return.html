@@ -1,0 +1,97 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-eo-manage.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          Abstraction return for {{ pData.LicenceSerialNo }}
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          Abstraction record
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- meta data block -->
+  {% include "../../partials/return-external-meta.html" %}
+
+  <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <p>
+        <a href="../online-licence?wid={{ query.wid }}">View this licence</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- <div class="grid-row small-space">
+    <div class="column-two-thirds">
+      <h3 class="heading-medium">
+        Now submit this return
+      </h3>
+    </div>
+  </div> -->
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="notice">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Warning</span>
+        </i>
+        <strong class="bold-small">
+          By submitting this return you are confirming that all the details you are providing are correct, to the best of your knowledge.
+        </strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h3 class="heading-large">
+        Nil return
+      </h3>
+    </div>
+  </div>
+
+  <div class="panel panel-border-wide big-space">
+    <p>
+      Back-up meter, not used this year.
+    </p>
+  </div>
+
+  <a href="return-submitted?wid={{ query.wid }}" class="button">
+    Submit return
+  </a>
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

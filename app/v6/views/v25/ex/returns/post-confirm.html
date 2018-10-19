@@ -1,0 +1,34 @@
+{% extends "./../head-signedin.html" %}
+
+{% block page_title %}
+  We're sending you a paper return form - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "./../../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "./../../partials/nav-ex-returns.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Your paper form has been sent
+      </h1>
+
+      <p>
+        You should receive it within 5 working days.
+      </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

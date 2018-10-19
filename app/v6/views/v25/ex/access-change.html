@@ -1,0 +1,78 @@
+{% extends "../ex/head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Change access to your licences - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-ex-manage.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">
+        Change access to your licences
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full medium-space">
+
+      <p>
+        <!-- mark.turny@aquafall.com has access to your licences. -->
+        <span class="bold-small">mark.turny@aquafall.com</span> has access to your licences.
+      </p>
+
+      <div class="multiple-choice small-space">
+        <label aria-label="Can do returns">
+          <input type="checkbox">
+            This person can view my returns
+          </input>
+        </label>
+      </div>
+
+      <div class="multiple-choice">
+        <label aria-label="Can do returns">
+          <input type="checkbox">
+            This person can also manage my returns
+          </input>
+        </label>
+      </div>
+
+    </div>
+    <div class="column-full medium-space">
+
+      <div class="medium-space">
+        <p>
+          <a href="access-remove-confirm">
+            Remove access
+          </a>
+        </p>
+      </div>
+
+      <button class="button" type="submit" aria-disabled="true">
+        Update
+      </button>
+
+    </div>
+  </div>
+
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+</main>
+{% endblock %}
+
+REMOVE LINK
+
+<a href="/v23/ex/access-remove-confirm?user_id=long_email_address@test.co.uk">
+  Change
+</a>

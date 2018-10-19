@@ -1,0 +1,86 @@
+{% extends "../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Licence return for  {{ pData.LicenceNumber }} - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+  {% for pNumber, pData in permits %}
+  {% if pNumber==chosenPermitID %}
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-ex-returns.html" %}
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <!-- page heading -->
+      {% if pData.LicenceName %}
+        <h2 class="sub-head">
+          Abstraction return for  {{ pData.LicenceSerialNo }}
+        </h2>
+        <h1 class="heading-large spaceless">
+          {{ pData.LicenceName }}
+        </h1>
+      {% else %}
+        <h2 class="sub-head">
+          Abstraction record
+        </h2>
+        <h1 class="heading-large spaceless">
+          Licence number {{pData.LicenceSerialNo}}
+        </h1>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <h3 class="heading-medium">
+        Tell us about one of your meters
+      </h3>
+
+      <div class="form-group">
+        <label class="form-label" for="meter-make">Manufacturer</label>
+        <input class="form-control small-space" id="meter-make" name="meter-info" type="text" value="">
+
+        <label class="form-label" for="meter-serial">Serial number</label>
+        <input class="form-control small-space" id="meter-serial" name="meter-info" type="text" value="">
+
+        <label class="form-label" for="start-reading">Meter start reading</label>
+
+        <input class="form-control" id="start-reading" name="meter-info" type="text" value="">
+
+      </div>
+
+      <p>
+        Some meters are marked with ×10. You should enter the actual figure that you see on the display. You do not need to multiply the volume by 10.
+      </p>
+
+      <div class="multiple-choice">
+        <input type="checkbox">
+        <label aria-label="Can do returns">
+          This meter has a ×10 display
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+  <a href="returns-form-amounts?wid={{ query.wid }}" class="button">
+    Continue
+  </a>
+
+
+  {% endif %}
+  {% endfor %}
+
+</main>
+{% endblock %}

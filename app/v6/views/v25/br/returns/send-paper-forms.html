@@ -1,0 +1,52 @@
+{% extends "../head-signedin.html" %}
+
+{% block page_title %}
+  Send return reminders to licence holders - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-br-manage.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Send paper return forms to licence holders
+      </h1>
+
+      <!-- form -->
+      <form class="medium-space">
+
+        <div class="form-group">
+          <label for="licence_no">
+            <fieldset>
+              <span class="form-label">Enter your licence numbers</span>
+              <span class="form-hint">
+                Add licence numbers here for the licences you wish to send paper forms to. Return forms will be sent for any due returns.
+              </span>
+            </fieldset>
+          </label>
+          <textarea class="form-control form-control-3-4" name="licence_no" id="licence_no" rows="5" value="{{data.licence_no}}" required ></textarea>
+        </div>
+
+        <!-- continue button -->
+        <a href="send-paper-forms-preview" class="button">
+          Continue
+        </a>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

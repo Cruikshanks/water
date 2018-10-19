@@ -1,0 +1,77 @@
+{% extends "./../head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Send a notification - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- internal beta banner block -->
+  {% include "./../../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "./../../partials/nav-br-manage.html" %}
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large tight">
+        Send paper return forms
+      </h1>
+
+      <div class="medium-space">
+
+        <!-- <p lede="heading-medium">
+          You are about to send paper return forms to the licence holders for the following licences. Please make sure you wish to send paper return forms to the licence holders for these licences.
+        </p> -->
+
+        <div class="notice medium-space">
+          <i class="icon icon-important">
+            <span class="visually-hidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            You are about to send paper return forms to the licence holders for the following licences by post.
+          </strong>
+        </div>
+
+        <ul class="list list-bullet text">
+          <li>
+            03/28/60/0031
+          </li>
+          <li>
+            03/28/60/0032
+          </li>
+          <li>
+            03/28/60/0033
+          </li>
+          <li>
+            03/28/60/0034
+          </li>
+          <li>
+            01/04/12/0047
+          </li>
+          <li>
+            01/04/12/0048
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-one-third">
+
+      <div>
+        <a href="paper-forms-sent" id="submitButton" class="button" type="submit">Send paper forms</a>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

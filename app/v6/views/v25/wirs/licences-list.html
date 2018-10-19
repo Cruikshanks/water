@@ -1,0 +1,246 @@
+{% extends "../wirs/head-signedin.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Review licence data - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% from "custom_inc/waterdata.html" import permits %}
+
+  <!-- internal beta banner block -->
+  {% include "../partials/feedback-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../partials/nav-wirs-view.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- page title -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1  class="heading-large">
+        View licences
+      </h1>
+    </div>
+  </div>
+
+  <div class="grid-row medium-space">
+    <div class="column-two-thirds">
+
+      <label class="form-label form-label" for="licenceSearch">Search for a licence</label>
+      <span class="form-hint">Search by registered email address or licence number</span>
+
+      <div class="flexy">
+        <input type="text" class="form-control form-control--block column-two-thirds" />
+        <div class="column-one-third search-button">
+          <a href="licences-list" class="button">Search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- flextable function -->
+  <div class="grid-row medium-space">
+    <div class="column-full">
+
+
+      <div class="table" id="licences-as-tasks">                                <!-- table starts -->
+
+        <div class="table-row table-head">                                      <!-- tablehead starts -->
+
+          <div class="table-cell bold-small column-40" id="ar-number-column">
+            <a href="#" aria-label="Sort by licence number">
+              Licence number
+            </a>
+          </div>
+          <div class="table-cell bold-small column-40" id="ar-name-column">
+            <a href="#" aria-label="Sort by licence number">
+              Licence name
+            </a>
+          </div>
+          <div class="table-cell bold-small column-20" id="ar-end-date-column">
+            <a href="#" aria-label="Sort by end date">
+              End date
+              <span class="sort-icon"> &#x25be;</span>
+            </a>
+          </div>                                                                <!-- tablehead ends -->
+        </div>
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <a href="./online-licence?wid=1">
+              <h2 class="faux-link">
+                {{ permits[1].LicenceSerialNo }}
+              </h2>
+            </a>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Licence name
+            </label>
+            {{ permits[1].LicenceName }}
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              End date
+            </label>
+            {{ permits[1].EffectiveDateEnd }}
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="./online-licence?wid=2">
+                {{ permits[2].LicenceSerialNo }}
+              </a>
+            <h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Licence name
+            </label>
+            {{ permits[2].LicenceName }}
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              End date
+            </label>
+            {{ permits[2].EffectiveDateEnd }}
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="./online-licence?wid=3">
+                {{ permits[3].LicenceSerialNo }}
+              </a>
+            <h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Licence name
+            </label>
+            {{ permits[3].LicenceName }}
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              End date
+            </label>
+            {{ permits[3].EffectiveDateEnd }}
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="./online-licence?wid=4">
+                {{ permits[4].LicenceSerialNo }}
+              </a>
+            <h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Licence name
+            </label>
+            {{ permits[4].LicenceName }}
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              End date
+            </label>
+            {{ permits[4].EffectiveDateEnd }}
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="./online-licence?wid=5">
+                {{ permits[5].LicenceSerialNo }}
+              </a>
+            <h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Licence name
+            </label>
+            {{ permits[5].LicenceName }}
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              End date
+            </label>
+            {{ permits[5].EffectiveDateEnd }}
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+        <div class="table-row medium-space">                                    <!-- a data row starts -->
+          <div class="table-cell">
+            <h2 class="faux-link">
+              <a href="./online-licence?wid=6">
+                {{ permits[6].LicenceSerialNo }}
+              </a>
+            <h2>
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              Licence name
+            </label>
+            {{ permits[6].LicenceName }}
+            <!-- Licence name -->
+          </div>
+          <div class="table-cell">
+            <label class="context">
+              End date
+            </label>
+            {{ permits[6].EffectiveDateEnd }}
+            <!-- 1 Jan 2033 -->
+          </div>
+        </div>                                                                  <!-- a data row ends -->
+
+      </div>                                                                    <!-- table ends -->
+
+    </div>
+  </div>
+
+  <script src="/public/v6/javascripts/underscore.min.js"></script>
+  <script src="/public/v6/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/v6/javascripts/license_results.js"></script>
+
+  <script>
+    $(function() {
+
+      var ctrlKey = false;
+
+      $(window).keydown(function(ev){
+        if(ev.ctrlKey || ev.keyCode === 224 || ev.keyCode === 17 || ev.keyCode === 91 || ev.keyCode === 93) {
+          ctrlKey = true;
+        }
+      });
+
+      $(window).keyup(function(){
+        ctrlKey = false;
+      });
+
+      $('a').parents('.table-row').addClass('clickable');
+
+      // Click on licence list clicks inner link
+      $('.table-row').on('click', function (ev) {
+        var href = $(this).find('a:first').attr('href');
+        console.log(ctrlKey);
+        ctrlKey ? window.open.blur(href) : window.location.href = href;
+        window.focus();
+        // window.location.href = $(this).find('a:first').attr('href');
+        $(this).addClass('active');
+        ev.preventDefault();
+      });
+    });
+  </script>
+
+</main>
+
+{% endblock %}

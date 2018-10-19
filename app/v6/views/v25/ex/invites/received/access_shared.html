@@ -1,0 +1,52 @@
+{% extends "v18/head.html" %}
+
+<!-- page title -->
+{% block page_title %}
+  Your code has been sent - GOV.UK ~
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- beta banner block -->
+  {% include "../../../partials/beta-banner.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- main -->
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Your code has been sent
+      </h1>
+
+      <h2>
+        What happens now?
+      </h2>
+
+      <ol class="list list-number">
+        <li>You should receive your security code letter by post within 5 working days.</li>
+        <li>Once you receive the code, you can either ask <span class="bold">geoff@waterboss.co.uk</span> to enter it into our system, or enter it yourself. The letter will give you instructions for both options.</li>
+        <li>As soon as the security code is entered into our system, <span class="bold">geoff@waterboss.co.uk</span> will be able to view your licence information online straight away.</li>
+      </ol>
+
+      <p>
+        We've emailed this information to you for your records. The email also includes advice on what to do if you don't receive your code within the next 5 working days.
+      </p>
+
+      <p>
+        You can find out more about this service on our <a href="/v23/guidance">website</a>.
+      </p>
+
+      <p>
+        <a href="/v23/ex/registration/create_password">
+          Give feedback about this service
+        </a>
+      </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
