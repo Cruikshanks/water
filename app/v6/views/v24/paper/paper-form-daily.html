@@ -76,6 +76,7 @@
 
       h2 {
         font-size: 14pt;
+        line-height: 7mm;
         font-weight: 800;
         margin-bottom: 3mm;
       }
@@ -91,6 +92,7 @@
       p {
         font-size: 12pt;
         line-height: 6mm;
+        /* max-width: 120mm; */
       }
 
       ul {
@@ -185,6 +187,25 @@
         height: 30mm;
       }
 
+      /*
+      .icon {
+        padding-right: 5px;
+      }
+
+      .warning {
+        display: flex;
+      } */
+
+      .description {
+        display: inline-block;
+        margin-left: 8mm;
+        margin-right: 0.5mm;
+      }
+
+      .description p {
+        display: inline-block;
+      }
+
       #title-block {
         position: absolute;
         top: 100mm;
@@ -253,16 +274,6 @@
         height: 5pt;
         border-right: 1pt solid gray;
       }
-/*
-      .input-mask {
-        position: relative;
-        top: -2pt;
-        left: -2pt;
-        width:105%;
-        height: 95%;
-        background-color: white;
-        border: 1pt solid white;
-      } */
 
       .daily-input {
         display: flex;
@@ -468,175 +479,17 @@
           </div>
         </div>
 
-        <!-- address area -->
-        <div id="address-container">
-          <div class="address-block">
-            FAO: Edward Power<br>
-            Water Resource Licensing team<br>
-            Horizon House,<br>
-            Deanery Road,<br>
-            Near College Green<br>
-            Bristol<br>
-            BS1 5AH
-          </div>
-        </div>
-
-        <!-- title -->
         <div id="title-block">
           <h1 class="bold">
             Water abstraction daily return
           </h1>
         </div>
 
-        <div id="cover-content">
-          <div class="columns">
+        <!-- cover block follows -->
+        {{ macros.address(notification.personalisation) }}
 
-            <!-- left column -->
-            <div class="column">
-
-              <div class="block">
-
-                <div class="item">
-                  <p>
-                    Send us your return by <span class="bold">28 November 2019</span>.
-                  </p>
-                </div>
-
-                <div class="item">
-                  <p>
-                    You must submit a return even if you have not abstracted any water (nil return). If your licence has expired or has been cancelled complete the return up to its end date.
-                  </p>
-                </div>
-
-                <div class="item">
-                  <p>
-                    Before sending it make sure you:
-                    <ul>
-                      <li>
-                        have filled in all the relevant sections
-                      </li>
-                      <li>
-                        ticked the ‘nil return’ box if no water<br>
-                        has been abstracted
-                      </li>
-                      <li>
-                        signed the declaration
-                      </li>
-                    </ul>
-                  </p>
-                </div>
-
-                <div class="item">
-                  <p>
-                    If you are required to carry out monitoring<br>
-                    as a condition of you abstracting water you need to continue sending this information<br>
-                    to your local area office.
-                  </p>
-                </div>
-
-                <div class="item">
-                  <p class="bold">
-                    Return the completed form to:
-                  </p>
-                  <p>
-                    Waste and Industry Regulatory Services<br>
-                    Environment Agency<br>
-                    Quadrant 2, 99 Parkway Avenue<br>
-                    Sheffield, S9 4WF
-                  </p>
-                </div>
-
-                <div class="item">
-
-                  <!-- <p class="bold">
-                    Contact us:
-                  </p> -->
-
-                  <p>
-                    To claim commercial in confidence, for help completing the form, or to find your local area office, contact us on <span class="bold">03708 506 506</span>.
-                  </p>
-                </div>
-
-                <div class="item">
-                  <p>
-                    Lines are open Monday to Friday,<br>
-                    8am to 6pm (GMT).
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- right column -->
-            <div class="column" id="cover-layout">
-
-              <div class="item">
-                <p class="label">
-                  Licence number
-                </p>
-                <p class="bold">
-                  AN/033/0012/007
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Return reference
-                </p>
-                <p class="bold">
-                  10042736
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Site
-                </p>
-                <p class="bold">
-                  Great Ouse at Bedford College
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Purpose
-                </p>
-                <p class="bold">
-                  Heat pump cooling water
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Period
-                </p>
-                <p>
-                  <span class="bold">1 April 2018</span> to <span class="bold">31 March 2019</span>
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Two-part tariff
-                </p>
-                <p class="bold">
-                  Yes
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="bold">
-                  If you do not send your return in time<br>
-                  we may take enforcement action.
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
+        <!-- cover block follows -->
+        {{ macros.cover(notification.personalisation) }}
 
       </div>
 
@@ -665,265 +518,8 @@
         <!-- header -->
         {{ macros.header(notification.personalisation) }}
 
-        <!-- questions -->
-        <div class="columns">
-
-          <div class="column">
-
-          <!-- contact information -->
-          <div class="block">
-
-            <div class="block-head bold">
-              1. Who is the contact for this return?
-            </div>
-
-            <p>
-              Write in CAPITAL LETTERS
-            </p>
-
-            <br>
-
-            <div class="item">
-              <p class="label">
-                First name<br>
-                <div class="input">
-                  <div class="input-mask">
-                    <p class="bold">
-
-                    </p>
-                  </div>
-                </div>
-              </p>
-            </div>
-
-            <div class="item">
-              <p class="label">
-                Last name<br>
-                <div class="input">
-                  <div class="input-mask">
-                  </div>
-                </div>
-              </p>
-            </div>
-
-            <div class="item">
-              <p class="label">
-                Telephone<br>
-                <div class="input">
-                  <div class="input-mask">
-                  </div>
-                </div>
-              </p>
-            </div>
-
-            <div class="item">
-              <p class="label">
-                Email<br>
-                <!-- <span class="hint">For example yourname@example.com</span><br> -->
-                <div class="input">
-                  <div class="input-mask">
-                  </div>
-                </div>
-              </p>
-            </div>
-
-          </div>
-
-          <!-- return -->
-          <div class="block">
-            <div class="block-head bold">
-              2. Did you abstract water?
-            </div>
-
-            <div class="item">
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Yes
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                No (nil return)
-              </p>
-              <p class="guide">
-                If no, go to section 13
-              </p>
-            </div>
-          </div>
-
-          <!-- units -->
-          <div class="block">
-            <div class="block-head bold">
-              3. Unit of measurement
-            </div>
-
-            <div class="item">
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Cubic metres
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Litres
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Megalitres
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Gallons
-              </p>
-            </div>
-          </div>
-
-          <!-- units -->
-          <div class="block">
-            <div class="block-head bold">
-              4. Did you use a meter?
-            </div>
-            <div class="item">
-              <p>
-                If you used more than one meter you must report your return in abstraction volumes.
-              </p>
-            </div>
-            <div class="item">
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Yes
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                No
-              </p>
-            </div>
-            <p class="guide">
-              If no, go to section 9
-            </p>
-          </div>
-
-        </div>
-
-        <!-- right column -->
-        <div class="column">
-
-          <!-- your meter -->
-          <div class="block">
-            <div class="block-head bold">
-              5. Meter details
-            </div>
-            <div class="item">
-              <p>
-                If you used more than one meter you only need to tell us about one of them.
-              </p>
-            </div>
-            <div class="item">
-              <p class="label">
-                Manufacturer<br>
-                <div class="input">
-                  <div class="input-mask">
-                  </div>
-                </div>
-              </p>
-            </div>
-            <div class="item">
-              <p class="label">
-                Serial number<br>
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-            </div>
-
-            <div class="item">
-              <p>
-                Some meters are marked with ×10. If yours is, send us the actual number on the display. You do not need to multiply it by 10.
-              </p>
-
-              <!-- <p>
-                Some meters are marked with ×10. You should enter the actual figure that you see on the display. You do not need to multiply the volume by 10.
-              </p> -->
-
-              <p class="key-data">
-                <span class="checkbox"></span>
-                My meter has a ×10 display
-              </p>
-            </div>
-
-          </div>
-
-          <!-- start reading -->
-          <div class="block">
-            <div class="block-head bold">
-              6. Start meter reading
-            </div>
-            <div class="item">
-              <p class="label">
-                The date when abstraction starts,<br> for example 19 03 2019
-              <div class="number-group">
-                <div class="number-input"></div><div class="number-input last-digit"></div>
-              </div>
-              <div class="number-group">
-                <div class="number-input"></div><div class="number-input last-digit"></div>
-              </div>
-              <div class="number-group">
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">
-                Reading<br>
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-            </div>
-          </div>
-
-          <!-- end reading -->
-          <div class="block">
-            <div class="block-head bold">
-              7. End meter reading
-            </div>
-            <div class="item">
-              <p class="label">
-                The date when abstraction ends
-              </p>
-              <div class="number-group">
-                <div class="number-input"></div><div class="number-input last-digit"></div>
-              </div>
-              <div class="number-group">
-                <div class="number-input"></div><div class="number-input last-digit"></div>
-              </div>
-              <div class="number-group">
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </div>
-            </div>
-            <div class="item">
-              <p class="label">
-                Reading<br>
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-            </div>
-          </div>
-
-          <!-- numbers block -->
-          <div class="block">
-
-            <div class="block-head bold">
-              8. How are you reporting your return?
-            </div>
-
-            <div class="item">
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Meter readings
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Abstraction volumes
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+        <!-- openquestions -->
+        {{ macros.openquestions(notification.personalisation) }}
 
       </div>
 
@@ -945,7 +541,7 @@
 
     </div>
 
-    <!-- questions pages start -->
+    <!-- daily fields i -->
     <div class="page">
 
       <div class="content">
@@ -955,7 +551,7 @@
 
         <div class="block-head bold">
           9. Meter readings or abstraction volumes
-          <p class="regular">
+          <p class="lede regular">
             Taken at the end of each day. Enter ‘0’ on the days you did not abstract water.
           </p>
         </div>
@@ -1570,6 +1166,7 @@
 
     </div>
 
+    <!-- daily fields ii -->
     <div class="page">
 
       <div class="content">
@@ -2191,6 +1788,7 @@
 
     </div>
 
+    <!-- daily fields iii -->
     <div class="page">
 
       <div class="content">
@@ -2812,6 +2410,7 @@
 
     </div>
 
+    <!-- daily fields iv -->
     <div class="page">
 
       <div class="content">
@@ -3421,9 +3020,7 @@
 
     </div>
 
-
     <!-- declaration page -->
-
     <div class="page">
 
       <div class="content">
@@ -3431,75 +3028,7 @@
         <!-- header -->
         {{ macros.header(notification.personalisation) }}
 
-        <div class="columns">
-          <div class="column">
-
-            <div class="block">
-              <div class="block-head bold">
-                10. Reporting without a meter
-              </div>
-              <p class="label">
-                What are the abstraction volumes based on, for example, pump capacity by hours run?
-
-                <div class="input">
-                  <div class="input-mask"></div>
-                </div>
-                <div class="input">
-                  <div class="input-mask"></div>
-                </div>
-                <div class="input">
-                  <div class="input-mask"></div>
-                </div>
-              </p>
-            </div>
-
-            <div class="block">
-              <div class="block-head bold">
-                11. Total water abstracted
-              </div>
-              <p class="label">
-                Amount abstracted
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-            </div>
-
-            <div class="block">
-              <div class="block-head bold">
-                12. Further information
-              </div>
-              <div class="item">
-                <p class="label">
-                  If you need to explain an entry or give more information, send this on a separate sheet. Write the return reference <span class="bold">10042736</span> and your licence number <span class="bold">AN/033/0012/007</span> on each sheet.
-                </p>
-              </div>
-              <div class="item">
-                <p class="key-data">
-                  <span class="checkbox"></span>
-                  I am sending further information
-                </p>
-              </div>
-            </div>
-
-
-          </div>
-          <div class="column">
-            <div class="block">
-              <div class="block-head bold">
-                13. Declaration
-              </div>
-              <p>
-                I confirm that the information I have provided is correct, to the best of my knowledge.
-              </p>
-              <br>
-              <p class="label">
-                Signed
-              </p>
-              <div class="input">
-                <div class="input-mask"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {{ macros.declaration(notification.personalisation) }}
 
       </div>
 
@@ -3521,41 +3050,36 @@
 
     </div>
 
+    <!-- privacy statement -->
+    <div class="page">
+
+      <div class="content">
+
+        <!-- header -->
+        {{ macros.header(notification.personalisation) }}
 
         <!-- privacy statement -->
+        {{ macros.privacy(notification.personalisation) }}
 
-        <div class="page">
+      </div>
 
-          <div class="content">
-
-            <!-- header -->
-            {{ macros.header(notification.personalisation) }}
-
-            <!-- privacy statement -->
-            {{ macros.privacy(notification.personalisation) }}
-
+      <!-- footer -->
+      <div class="footer">
+        <div class="columns">
+          <div class="column">
+            <p class="smaller">
+              WR71 - October 2018
+            </p>
           </div>
-
-          <!-- footer -->
-          <div class="footer">
-            <div class="columns">
-              <div class="column">
-                <p class="smaller">
-                  WR71 - October 2018
-                </p>
-              </div>
-              <div  class="column">
-                <p class="pagination smaller">
-                  Page 8 of 8
-                </p>
-              </div>
-            </div>
+          <div  class="column">
+            <p class="pagination smaller">
+              Page 8 of 8
+            </p>
           </div>
-
         </div>
+      </div>
 
-
-
+    </div>
 
   </body>
 

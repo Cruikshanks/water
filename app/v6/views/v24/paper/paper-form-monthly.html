@@ -60,6 +60,380 @@
       /* end of old broswer support */
       /* end of reset */
 
+      /* start of custom styles */
+      html {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        font-size: 25px;
+        font-weight: 800;
+      }
+
+      h2 {
+        font-size: 14pt;
+        line-height: 7mm;
+        font-weight: 800;
+        margin-bottom: 3mm;
+      }
+
+      h3 {
+        font-size: 12pt;
+        font-weight: 800;
+        margin-top: 4mm;
+        margin-bottom: 2mm;
+        line-height: 5mm;
+      }
+
+      p {
+        font-size: 12pt;
+        line-height: 6mm;
+        /* max-width: 120mm; */
+      }
+
+      ul {
+        list-style: disc outside none;
+        margin-left: 0;
+      }
+
+      li {
+        line-height: 5.5mm;
+        margin-left: 4mm;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        page-break-after: always;
+
+        display: flex;
+        flex-direction: column;
+
+        margin: 0;
+        padding: 6mm 16mm 6mm 16mm;
+        box-sizing: border-box;
+        /* background-color: yellow; */
+        background-image: url('/public/images/print-guide-page.png');
+        background-size: 210mm;
+        overflow: hidden;
+      }
+
+      #cover {
+        background-image: url('/public/images/print-guide-cover.png');
+      }
+
+      .licence {
+        margin-bottom: 5mm;
+      }
+
+      .header {
+        text-align: right;
+      }
+
+      #cover .header {
+        /* margin-left: 5mm; */
+        /* margin-top: 5mm; */
+      }
+
+      .content {
+        /* padding-top: 5mm; */
+        flex-grow: 1;
+      }
+
+      .columns {
+        display: flex;
+        /* padding-bottom: 5mm; */
+        /* margin-left: -5mm;
+        margin-right: -5mm; */
+      }
+
+      .column {
+        flex-basis: 50%;
+        flex-grow: 1;
+        padding-right: 10mm;
+        /* background: #fcfcfc; */
+      }
+
+      .columns .column:last-child {
+        padding-right: 0;
+      }
+
+      .footer .column {
+        padding-right: 0;
+      }
+
+      .pagination {
+        text-align: right;
+      }
+
+      .lede {
+        padding-bottom: 2mm;
+      }
+
+      .meta {
+        padding-right: 0;
+      }
+
+      #logo-container {
+        position: absolute;
+        top: 4.3mm;
+        top: 12mm;
+        left: 16mm;
+        width: 180mm;
+        height: 30mm;
+      }
+
+      #title-block {
+        position: absolute;
+        top: 100mm;
+        margin-bottom: 2mm;
+      }
+
+      #address-container {
+        position: absolute;
+        left: 25.5mm;
+        top: 38.5mm;
+        display: block;
+        width: 95.4mm;
+        height: 26.8mm;
+        /* background-color: powderblue; */
+        /* border: 1px solid black; */
+      }
+
+      .address-block {
+        position: absolute;
+        bottom: 0;
+        font-size: 10pt;
+      }
+
+      #cover-content {
+        position: relative;
+        top: 102mm;
+        width: 180mm;
+        height: 185mm;
+        /* border: 1px solid; */
+      }
+
+      #cover-layout {
+        left: 90mm;
+        /* padding-top: 28mm; */
+      }
+
+      .block {
+        margin-bottom: 7.5mm;
+      }
+
+      .input {
+        /* border-bottom: 1pt solid gray; */
+        /* border: 1pt solid gray; */
+        border-bottom: 1pt solid gray;
+        margin-top: 1mm;
+        /* padding-top: 2mm; */
+        padding-bottom: 2mm;
+        height: 5mm;
+        position: relative;
+      }
+
+      .input:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -1pt;
+        height: 2mm;
+        border-left: 1pt solid gray;
+      }
+
+      .input:after {
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: -1pt;
+        height: 5pt;
+        border-right: 1pt solid gray;
+      }
+
+      .daily-input {
+        display: flex;
+        /* color: grey; */
+        font-size: 10pt;
+        margin-top: 0.5mm;
+        margin-bottom: 0;
+        padding: 0.5mm;
+      }
+
+      .day-label {
+        display: inline-block;
+        align-self: flex-start;
+        padding-top: 1.4mm;
+        width: 5.5mm;
+      }
+
+      .number-input {
+        display: inline-block;
+        margin-top: 0;
+        border: 1pt solid gray;
+        border-right: 0;
+        width: 6.62mm;
+        height: 7.5mm;
+        margin-top: 1mm;
+      }
+
+      .small-number-input {
+        display: inline-block;
+        margin-top: 0;
+        border: 1pt solid gray;
+        border-right: 0;
+        /* width: 6mm;
+        height: 7.5mm; */
+        width: 3.48mm;
+        height: 5.5mm;
+      }
+
+      .number-group {
+        display: inline-block;
+        padding-right: 3mm;
+      }
+
+      .last-digit {
+        border-right: 1pt solid gray;
+      }
+
+      .input p {
+        font-size: 14pt;
+        padding-top: 1.4mm;
+      }
+
+      .stacked {
+        margin-bottom: 0;
+        border-bottom: 1pt solid grey;
+      }
+
+      .label {
+        /* color: grey; */
+        margin-bottom: 0;
+      }
+
+       .key-data {
+         line-height: 2mm;
+         padding-top: 3mm;
+         font-size: 12pt;
+       }
+
+       .key-data:first-child {
+         padding-top: 0;
+       }
+
+       .checkbox {
+         display: inline-block;
+         border: 1pt solid black;
+         width: 5mm;
+         height: 5mm;
+         position: relative;
+         top: 1mm;
+         margin-right: 2mm;
+       }
+
+      .guide {
+        font-size: 12pt;
+        margin-top: 5mm;
+      }
+
+      .bold {
+        font-weight: 800;
+      }
+
+      .regular {
+        font-weight: 400;
+      }
+
+      .block-head {
+        font-size: 12pt;
+        line-height: 6mm;
+        margin-bottom: 2mm;
+      }
+
+      .item {
+        margin-bottom: 3mm;
+      }
+
+      .hint {
+        color: grey;
+        color: #6f777b;
+        /* font-weight: 800; */
+      }
+
+      .faux-link {
+        text-decoration: underline;
+      }
+
+      .smaller {
+        font-size: 10pt;
+      }
+
+    </style>
+  </head>
+
+  <!-- <head>
+    <style>
+
+      /* reset css */
+
+      /* http://meyerweb.com/eric/tools/css/reset/
+      v2.0 | 20110126
+      License: none (public domain)
+      */
+
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          font-size: 100%;
+          font: inherit;
+          vertical-align: baseline;
+      }
+
+      /* start of old broswer support */
+      article, aside, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      /* end of old broswer support */
+      /* end of reset */
+
       html {
         box-sizing: border-box;
       }
@@ -352,7 +726,7 @@
       }
 
     </style>
-  </head>
+  </head> -->
 
   <body class="paper">
 
@@ -432,171 +806,25 @@
 
             </div>
           </div>
-
           <div class="column meta">
             {{ macros.area(notification.personalisation) }}
           </div>
         </div>
 
-        <!-- address area -->
-        <div id="address-container">
-          <div class="address-block">
-            FAO: Steve / James<br>
-            Water team<br>
-            Horizon House,<br>
-            Deanery Road,<br>
-            Near College Green<br>
-            Bristol<br>
-            BS1 5AH
-          </div>
-        </div>
-
-        <!-- Title -->
         <div id="title-block">
           <h1 class="bold">
             Water abstraction monthly return
           </h1>
         </div>
 
-        <!-- content for page 1 -->
-        <div class="cover-content">
+        <!-- cover block follows -->
+        {{ macros.address(notification.personalisation) }}
 
-          <div class="columns">
-
-            <!-- left column -->
-            <div class="column">
-
-              <div class="block">
-
-                <div class="item">
-                  <p>
-                    Send your return by <span class="bold">31 August 2019</span>.
-                  </p>
-                </div>
-
-                <div class="item">
-                  <p>
-                    When you send this return, you give the Environment Agency personal data such as your name and email address. Our privacy statement at the end of this form explains how we use your personal data.
-                  </p>
-                </div>
-
-                <div class="item">
-                  <p class="bold">
-                    Return the completed form to
-                  </p>
-
-                  <p>
-                    National Operator Returns Team<br>
-                    Environment Agency<br>
-                    Quadrant 2<br>
-                    99 Parkway Avenue<br>
-                    Sheffield<br>
-                    S9 4WF<br>
-                  </p>
-                </div>
-
-                <div class="item">
-
-                  <!-- <p>
-                    national-operator-returns@environment<br>-agency.gov.uk
-                  </p> -->
-
-                </div>
-
-                <div class="item">
-
-                  <p class="bold">
-                    If you need help to complete this form:
-                  </p>
-
-                  <p>
-                    • read the water abstraction guidance on www.gov.uk/government/collections/<br>
-                    water-abstraction-returns
-                  </p>
-
-                  <p>
-                    • call our customer help centre on<br>
-                    03708 506 506 (calls cost the same as calls to 01 and 02 landline numbers)
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-            <!-- column end -->
-
-            <!-- right column -->
-            <div class="column" id="cover-layout">
-
-              <div class="item">
-                <p class="label">
-                  Licence number
-                </p>
-                <p class="bold">
-                  AN/033/0012/007
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Return reference
-                </p>
-                <p class="bold">
-                  10042736
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Site
-                </p>
-                <p class="bold">
-                  Great Ouse at Bedford College
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Purpose
-                </p>
-                <p class="bold">
-                  Heat pump cooling water
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  For the period
-                </p>
-                <p>
-                  <span class="bold">1 April 2018</span> to <span class="bold">31 March 2019</span>
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="bold">
-                  If you do not send your return in time, we may take enforcement action.
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="bold">
-                  You are on a two-part tariff.
-                </p>
-              </div>
-
-            </div>
-            <!-- column right end -->
-
-          </div>
-
-        </div>
-        <!-- content container -->
+        <!-- cover block follows -->
+        {{ macros.cover(notification.personalisation) }}
 
       </div>
 
-      <!-- footer -->
       <div class="footer">
         <div class="columns">
           <div class="column">
@@ -606,15 +834,15 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 1 of 6
+              Page 1 of 5
             </p>
           </div>
         </div>
       </div>
 
-      </div>
     </div>
 
+    <!-- open questions -->
     <div class="page">
 
       <div class="content">
@@ -622,229 +850,8 @@
         <!-- header -->
         {{ macros.header(notification.personalisation) }}
 
-        <div class="columns">
-
-          <!-- left column -->
-          <div class="column">
-
-            <!-- contact information -->
-            <div class="block">
-
-              <div class="block-head bold">
-                1. Who should we contact about this return?
-              </div>
-
-              <p>
-                Write in CAPITAL LETTERS
-              </p>
-
-              <br>
-
-              <div class="item">
-                <p class="label">
-                  First name<br>
-                  <div class="input">
-                    <div class="input-mask">
-                      <p class="bold">
-
-                      </p>
-                    </div>
-                  </div>
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Last name<br>
-                  <div class="input">
-                    <div class="input-mask">
-                    </div>
-                  </div>
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Telephone<br>
-                  <div class="input">
-                    <div class="input-mask">
-                    </div>
-                  </div>
-                </p>
-              </div>
-
-              <div class="item">
-                <p class="label">
-                  Email<br>
-                  <!-- <span class="hint">For example yourname@example.com</span><br> -->
-                  <div class="input">
-                    <div class="input-mask">
-                    </div>
-                  </div>
-                </p>
-              </div>
-
-            </div>
-
-            <div class="block">
-
-              <div class="block-head bold">
-                2. Did you abstract water?
-              </div>
-
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Yes
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                No (a ‘nil return’)
-              </p>
-              <p class="guide">
-                If no, go to section 11 on page 4
-              </p>
-            </div>
-
-            <div class="block">
-              <div class="block-head bold">
-                3. Unit of measurement
-              </div>
-              <div class="item">
-                <p class="key-data">
-                  <span class="checkbox"></span>
-                  Cubic metres
-                </p>
-                <p class="key-data">
-                  <span class="checkbox"></span>
-                  Litres
-                </p>
-                <p class="key-data">
-                  <span class="checkbox"></span>
-                  Megalitres
-                </p>
-                <p class="key-data">
-                  <span class="checkbox"></span>
-                  Gallons
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- right column -->
-          <div class="column">
-
-            <div class="block">
-
-              <div class="block-head bold">
-                4. What are the numbers you are reporting?
-              </div>
-
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Meter readings
-              </p>
-              <p class="key-data">
-                <span class="checkbox"></span>
-                Volumes
-              </p>
-              <p class="guide">
-                If estimates, go to section 9 on page 7
-              </p>
-
-            </div>
-
-            <div class="block">
-              <div class="block-head bold">
-                5. Meter details (if not estimated)
-              </div>
-              <div class="item">
-                <p class="label">
-                  Manufacturer<br>
-                  <div class="input">
-                    <div class="input-mask">
-                    </div>
-                  </div>
-                </p>
-              </div>
-              <div class="item">
-                <p class="label">
-                  Serial number<br>
-                  <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-                </p>
-              </div>
-
-              <div class="item">
-                <p>
-                  Some meters are marked with ×10. If yours is, you should send us the actual number that you see on the display. You do not need to multiply it by 10.
-                </p>
-
-                <!-- <p>
-                  Some meters are marked with ×10. You should enter the actual figure that you see on the display. You do not need to multiply the volume by 10.
-                </p> -->
-
-                <p class="key-data">
-                  <span class="checkbox"></span>
-                  My meter has a ×10 display
-                </p>
-              </div>
-
-            </div>
-
-            <div class="block">
-              <div class="block-head bold">
-                6. Start meter reading
-              </div>
-              <div class="item">
-                <p class="label">
-                  The date when abstraction starts,<br> for example 19 03 2019
-                <div class="number-group">
-                  <div class="number-input"></div><div class="number-input last-digit"></div>
-                </div>
-                <div class="number-group">
-                  <div class="number-input"></div><div class="number-input last-digit"></div>
-                </div>
-                <div class="number-group">
-                  <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-                </div>
-              </div>
-              <div class="item">
-                <p class="label">
-                  Reading<br>
-                  <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-                </p>
-              </div>
-            </div>
-
-            <div class="block">
-              <div class="block-head bold">
-                7. End meter reading
-              </div>
-              <div class="item">
-                <p class="label">
-                  The date when abstraction ends
-                </p>
-                <div class="number-group">
-                  <div class="number-input"></div><div class="number-input last-digit"></div>
-                </div>
-                <div class="number-group">
-                  <div class="number-input"></div><div class="number-input last-digit"></div>
-                </div>
-                <div class="number-group">
-                  <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-                </div>
-              </div>
-              <div class="item">
-                <p class="label">
-                  Reading<br>
-                  <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
+        <!-- openquestions -->
+        {{ macros.openquestions(notification.personalisation) }}
 
       </div>
 
@@ -866,7 +873,7 @@
 
     </div>
 
-    <!-- monthly form -->
+    <!-- monthly fields -->
     <div class="page">
 
       <div class="content">
@@ -965,76 +972,7 @@
         <!-- header -->
         {{ macros.header(notification.personalisation) }}
 
-        <div class="columns">
-          <div class="column">
-
-            <div class="block">
-              <div class="block-head bold">
-                9. Assessment without a meter
-              </div>
-              <p class="label">
-                How did you make the assessment? For example, pump capacity by hours run or numbers of livestock.
-
-                <div class="input">
-                  <div class="input-mask"></div>
-                </div>
-                <div class="input">
-                  <div class="input-mask"></div>
-                </div>
-                <div class="input">
-                  <div class="input-mask"></div>
-                </div>
-              </p>
-            </div>
-
-            <div class="block">
-              <div class="block-head bold">
-                10. Total water abstracted
-              </div>
-              <p class="label">
-                Amount abstracted
-                <!-- <div class="input">
-                  <div class="input-mask"></div>
-                </div> -->
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-            </div>
-
-            <div class="block">
-              <div class="block-head bold">
-                11. Further information
-              </div>
-              <p class="label">
-                If you need to explain an entry or give more information, send this on a separate sheet. Write the return reference <span class="bold">10042736</span> and your licence number <span class="bold">AN/033/0012/007</span> on each sheet.
-                <div>
-                  <p class="key-data">
-                    <span class="checkbox"></span>
-                    I am sending further information
-                  </p>
-                </div>
-              </p>
-            </div>
-
-
-          </div>
-          <div class="column">
-            <div class="block">
-              <div class="block-head bold">
-                12. Declaration
-              </div>
-              <p>
-                I confirm that the information in this return is correct.
-              </p>
-              <br>
-              <p class="label">
-                Signed
-              </p>
-              <div class="input">
-                <div class="input-mask"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {{ macros.declaration(notification.personalisation) }}
 
       </div>
 
@@ -1056,11 +994,7 @@
 
     </div>
 
-
-
-
     <!-- privacy statement -->
-
     <div class="page">
 
       <div class="content">
@@ -1071,7 +1005,7 @@
         <!-- privacy statement -->
         {{ macros.privacy(notification.personalisation) }}
 
-      </div> <!-- end content -->
+      </div>
 
       <!-- footer -->
       <div class="footer">
@@ -1088,9 +1022,6 @@
           </div>
         </div>
       </div>
-
-    </div>
-
 
     </div>
 
