@@ -70,7 +70,7 @@
       }
 
       h1 {
-        font-size: 25mm;
+        font-size: 22pt;
         font-weight: 800;
       }
 
@@ -377,357 +377,6 @@
     </style>
   </head>
 
-  <!-- <head>
-    <style>
-
-      /* reset css */
-
-      /* http://meyerweb.com/eric/tools/css/reset/
-      v2.0 | 20110126
-      License: none (public domain)
-      */
-
-      html, body, div, span, applet, object, iframe,
-      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-      a, abbr, acronym, address, big, cite, code,
-      del, dfn, em, img, ins, kbd, q, s, samp,
-      small, strike, strong, sub, sup, tt, var,
-      b, u, i, center,
-      dl, dt, dd, ol, ul, li,
-      fieldset, form, label, legend,
-      table, caption, tbody, tfoot, thead, tr, th, td,
-      article, aside, canvas, details, embed,
-      figure, figcaption, footer, header, hgroup,
-      menu, nav, output, ruby, section, summary,
-      time, mark, audio, video {
-          margin: 0;
-          padding: 0;
-          border: 0;
-          font-size: 100%;
-          font: inherit;
-          vertical-align: baseline;
-      }
-
-      /* start of old broswer support */
-      article, aside, details, figcaption, figure,
-      footer, header, hgroup, menu, nav, section {
-        display: block;
-      }
-      body {
-        line-height: 1;
-      }
-      ol, ul {
-        list-style: none;
-      }
-      blockquote, q {
-        quotes: none;
-      }
-      blockquote:before, blockquote:after,
-      q:before, q:after {
-        content: '';
-        content: none;
-      }
-      table {
-        border-collapse: collapse;
-        border-spacing: 0;
-      }
-      /* end of old broswer support */
-      /* end of reset */
-
-      html {
-        box-sizing: border-box;
-      }
-      /* styles for the form */
-
-      body {
-        font-family: Arial, sans-serif;
-      }
-
-      h1 {
-        font-size: 25mm;
-        font-weight: 800;
-      }
-
-      h2 {
-        font-size: 14pt;
-        font-weight: 800;
-        margin-bottom: 3mm;
-      }
-
-      h3 {
-        font-size: 12pt;
-        font-weight: 800;
-        margin-top: 4mm;
-        margin-bottom: 2mm;
-        line-height: 5mm;
-      }
-
-      p {
-        font-size: 12pt;
-        line-height: 6mm;
-      }
-
-      .lede {
-        padding-bottom: 2mm;
-      }
-
-      ul {
-        list-style-type: disc;
-        padding-top: 2mm;
-        padding-bottom: 2mm;
-      }
-
-      li {
-        line-height: 5.5mm;
-        margin-left: 4mm;
-      }
-
-      .page {
-        width: 210mm;
-        height: 297mm;
-        page-break-after: always;
-
-        display: flex;
-        flex-direction: column;
-
-        margin: 0;
-        padding: 5mm 15mm 5mm 15mm;
-        box-sizing: border-box;
-        /* background-color: yellow; */
-        /* border: 1mm solid black; */
-        overflow: hidden;
-      }
-
-      .header {
-        text-align: right;
-        margin-bottom: 5mm;
-      }
-
-      #cover .header {
-        margin-top: 5mm;
-        margin-left: 5mm;
-      }
-
-      .content {
-        padding-top: 5mm;
-        flex-grow: 1;
-      }
-
-      .columns {
-        display: flex;
-        /* margin-left: -5mm;
-        margin-right: -5mm; */
-      }
-
-      .column {
-        flex-basis: 50%;
-        flex-grow: 1;
-        padding-right: 10mm;
-        /* background: #fcfcfc; */
-      }
-
-      .columns .column:last-child {
-        padding-right: 0;
-      }
-
-      .meta {
-        padding-right: 0;
-      }
-
-      .footer .column {
-        padding-right: 0;
-      }
-
-      .pagination {
-        text-align: right;
-      }
-
-      #logo-container {
-        position: absolute;
-        top: 4.3mm;
-        top: 12mm;
-        left: 15mm;
-        width: 180mm;
-        height: 30mm;
-      }
-
-      #title-block {
-        position: absolute;
-        top: 90mm;
-        margin-bottom: 2mm;
-      }
-
-      #address-container {
-        position: absolute;
-        left: 24.6mm;
-        top: 39.5mm;
-        display: block;
-        width: 95.4mm;
-        height: 26.8mm;
-        /* background-color: powderblue; */
-        /* border: 1mm solid black; */
-      }
-
-      .address-block {
-        position: absolute;
-        bottom: 0;
-        font-size: 10pt;
-      }
-
-      .cover-content {
-        position: relative;
-        top: 80mm;
-        width: 180mm;
-        height: 185mm;
-        /* border: 1mm solid; */
-      }
-
-      #cover-layout {
-        left: 90mm;
-        /* padding-top: 28mm; */
-      }
-
-      .block {
-        margin-bottom: 7.5mm;
-      }
-
-      .input {
-        /* border-top: 1mm solid lightgrey; */
-        /* background-color: WhiteSmoke; */
-        /* border-bottom: 1pt solid gray; */
-        border: 1pt solid gray;
-        margin-top: 1mm;
-        /* padding-top: 2mm; */
-        padding-bottom: 2mm;
-        height: 7.5mm;
-      }
-
-      .input-mask {
-        position: relative;
-        top: -2pt;
-        left: -2pt;
-        width:105%;
-        height: 95%;
-        background-color: white;
-        border: 1pt solid white;
-      }
-
-      /* .daily-input {
-        display: flex;
-        font-size: 10pt;
-        margin-top: 0.5mm;
-        margin-bottom: 0;
-        padding: 0.5mm;
-      } */
-
-      .month-label {
-        margin-top: 3mm;
-      }
-
-      .number-input {
-        display: inline-block;
-        margin-top: 0;
-        border: 1pt solid gray;
-        border-right: 0;
-        width: 6.75mm;
-        height: 7.5mm;
-        margin-top: 1mm;
-      }
-
-      .small-number-input {
-        display: inline-block;
-        margin-top: 0;
-        border: 1pt solid gray;
-        border-right: 0;
-        /* width: 6mm;
-        height: 7.5mm; */
-        width: 3.5mm;
-        height: 5.5mm;
-      }
-
-      .number-group {
-        display: inline-block;
-        padding-right: 3mm;
-      }
-
-      .last-digit {
-        border-right: 1pt solid gray;
-      }
-
-      .input p {
-        font-size: 14pt;
-        padding-top: 1.4mm;
-      }
-
-      .stacked {
-        margin-bottom: 0;
-        border-bottom: 1pt solid grey;
-      }
-
-      .label {
-        /* color: grey; */
-        margin-bottom: 0;
-      }
-
-       .key-data {
-         line-height: 2mm;
-         padding-top: 3mm;
-         font-size: 12pt;
-       }
-
-       .checkbox {
-         display: inline-block;
-         border: 1pt solid black;
-         width: 5mm;
-         height: 5mm;
-         position: relative;
-         top: 1mm;
-         margin-right: 2mm;
-       }
-
-      .guide {
-        font-size: 12pt;
-        margin-top: 5mm;
-      }
-
-      /* .guide {
-        margin-top: 2mm;
-        font-style: italic;
-      } */
-
-      /* typographic style */
-
-      .bold {
-        font-weight: 800;
-      }
-
-      .block-head {
-        font-size: 12pt;
-        line-height: 6mm;
-        margin-bottom: 2mm;
-      }
-
-      .item {
-        margin-bottom: 3mm;
-      }
-
-      .hint {
-        color: grey;
-        color: #6f777b;
-        /* font-weight: 800; */
-      }
-
-      .faux-link {
-        text-decoration: underline;
-      }
-
-      .smaller {
-        font-size: 10pt;
-      }
-
-    </style>
-  </head> -->
-
   <body class="paper">
 
     <!-- cover page -->
@@ -834,7 +483,38 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 1 of 5
+              Page 1 of 6
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- guidance -->
+    <div class="page">
+
+      <div class="content">
+
+        <!-- header -->
+        {{ macros.header(notification.personalisation) }}
+
+        <!-- openquestions -->
+        {{ macros.guide(notification.personalisation, "month") }}
+
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+        <div class="columns">
+          <div class="column">
+            <p class="smaller">
+              WR71 - October 2018
+            </p>
+          </div>
+          <div  class="column">
+            <p class="pagination smaller">
+              Page 2 of 6
             </p>
           </div>
         </div>
@@ -865,7 +545,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 2 of 5
+              Page 3 of 6
             </p>
           </div>
         </div>
@@ -960,7 +640,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 3 of 5
+              Page 4 of 6
             </p>
           </div>
         </div>
@@ -989,7 +669,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 4 of 5
+              Page 5 of 6
             </p>
           </div>
         </div>
@@ -1020,7 +700,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 5 of 5
+              Page 6 of 6
             </p>
           </div>
         </div>

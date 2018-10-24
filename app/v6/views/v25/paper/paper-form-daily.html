@@ -70,7 +70,7 @@
       }
 
       h1 {
-        font-size: 25px;
+        font-size: 22pt;
         font-weight: 800;
       }
 
@@ -84,7 +84,6 @@
       h3 {
         font-size: 12pt;
         font-weight: 800;
-        margin-top: 4mm;
         margin-bottom: 2mm;
         line-height: 5mm;
       }
@@ -176,6 +175,10 @@
 
       .meta {
         padding-right: 0;
+      }
+
+      .buffed {
+        margin-top: 10mm;
       }
 
       #logo-container {
@@ -310,6 +313,25 @@
         height: 7.5mm; */
         width: 3.48mm;
         height: 5.5mm;
+      }
+
+      .special-number-input {
+        display: inline-block;
+        margin-top: 0;
+        border: 1pt solid gray;
+        width: 6.62mm;
+        height: 7.5mm;
+        margin-top: 1mm;
+      }
+
+      .special-label {
+        display: inline;
+      }
+
+      .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       .number-group {
@@ -502,7 +524,38 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 1 of 8
+              Page 1 of 9
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- guidance -->
+    <div class="page">
+
+      <div class="content">
+
+        <!-- header -->
+        {{ macros.header(notification.personalisation) }}
+
+        <!-- openquestions -->
+        {{ macros.guide(notification.personalisation, "day") }}
+
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+        <div class="columns">
+          <div class="column">
+            <p class="smaller">
+              WR71 - October 2018
+            </p>
+          </div>
+          <div  class="column">
+            <p class="pagination smaller">
+              Page 2 of 9
             </p>
           </div>
         </div>
@@ -533,7 +586,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 2 of 8
+              Page 3 of 9
             </p>
           </div>
         </div>
@@ -1158,7 +1211,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 3 of 8
+              Page 4 of 9
             </p>
           </div>
         </div>
@@ -1780,7 +1833,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 4 of 8
+              Page 5 of 9
             </p>
           </div>
         </div>
@@ -2402,7 +2455,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 5 of 8
+              Page 6 of 9
             </p>
           </div>
         </div>
@@ -3012,7 +3065,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 6 of 8
+              Page 7 of 9
             </p>
           </div>
         </div>
@@ -3042,7 +3095,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 7 of 8
+              Page 8 of 9
             </p>
           </div>
         </div>
@@ -3073,7 +3126,7 @@
           </div>
           <div  class="column">
             <p class="pagination smaller">
-              Page 8 of 8
+              Page 9 of 9
             </p>
           </div>
         </div>
