@@ -309,8 +309,6 @@
         margin-top: 0;
         border: 1pt solid gray;
         border-right: 0;
-        /* width: 6mm;
-        height: 7.5mm; */
         width: 3.48mm;
         height: 5.5mm;
       }
@@ -324,7 +322,26 @@
         margin-top: 1mm;
       }
 
-      .special-label {
+      .special-row {
+        display: flex;
+      }
+
+      .special-input {
+       display: inline-block;
+       width: 10mm;
+       height: 7.5mm;
+       border: 1pt solid gray;
+      }
+
+      .elastic {
+        height: 28px;
+        padding-left: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      special-label {
         display: inline;
       }
 
