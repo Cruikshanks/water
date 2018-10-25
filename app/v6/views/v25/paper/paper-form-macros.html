@@ -258,7 +258,9 @@
       </div>
       <div class="item">
         <p class="label">
-          If you need to explain an entry or give more information send this on a separate sheet. Write the return reference <span class="bold">10042736</span> and your licence number <span class="bold">AN/033/0012/007</span> on each sheet.
+          If you need to explain an entry or give more<br>
+          information send this on a separate sheet. Write the return reference <span class="bold">10042736</span> and your licence number <span class="bold">AN/033/0012/007</span><br>
+          on each sheet.
         </p>
       </div>
       <div class="item">
@@ -269,9 +271,6 @@
       </div>
     </div>
 
-
-  </div>
-  <div class="column">
     <div class="block">
       <div class="block-head bold">
         13. Declaration
@@ -289,6 +288,98 @@
         <div class="input-mask"></div>
       </div>
     </div>
+
+    <div class="block">
+      <div class="block-head bold">
+        Contact us
+      </div>
+
+      <!-- contact us -->
+      <div class="item">
+        <p>
+          If you need help filling out the form, contact the National Customer Contact Centre on <span class="bold">03708 506 506</span>.
+        </p>
+      </div>
+
+
+      <!-- contact us -->
+      <div class="item">
+        <p>
+          To claim commercial in confidence for<br>
+          this return, contact the Waste and Industry Regulatory Services on <span class="bold">national-operator-returns@environment-agency.gov.uk</span>,<br>
+          or <span class="bold">03708 506 506</span>.
+        </p>
+      </div>
+      <div>
+        <p>
+          Lines are open Monday to Friday,<br>
+          8am to 6pm (GMT).
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="column">
+
+    <!-- privacy statement -->
+
+      <div class="text-block">
+
+        <h2>
+          The Data Protection Act 1998
+        </h2>
+
+        <p>
+          We, the Environment Agency, will process the information you provide so that we can deal with your abstraction return, make sure you keep to the conditions of the licence, permit or registration, and process renewals.
+        </p>
+
+        <br>
+
+        <p>
+          We may also process or release the information to:
+        </p>
+
+        <br>
+
+        <p>
+          <ul>
+            <li>
+              offer you documents or services relating<br>
+              to environmental matters
+            </li>
+            <li>
+              consult the public, public organisations and other organisations (for example,<br>
+              the Health & Safety Executive, local authorities, the emergency services, the Department for Environment, Food and Rural Affairs) on environmental issues
+            </li>
+            <li>
+              carry out research and development work on environmental issues, or allow others to do so
+            </li>
+            <li>
+              manage and assess present and likely future demand for water, or allow others<br>
+              to do so
+            </li>
+            <li>
+              prevent anyone from breaking environmental law, investigate cases where environmental law may have been broken and take any action that is needed
+            </li>
+            <li>
+              assess whether customers are<br>
+              satisfied with our service and to<br>
+              improve our service
+            </li>
+            <li>
+              respond to requests for Information under the Freedom of information Act 2000 and the Environmental Information Regulations 2004 (if the Data Protection Act allows).
+            </li>
+          </ul>
+        </p>
+        <br>
+        <p>
+          We may pass the information on to our agents or representatives to do these things for us.
+        </p>
+
+      </div>
+
+
   </div>
 </div>
 {% endmacro %}
@@ -419,7 +510,7 @@
         </p>
       </div>
       <p class="guide">
-        If no, go to section 9
+        If no, go to section 8
       </p>
     </div>
 
@@ -549,93 +640,6 @@
 </div>
 {% endmacro %}
 
-
-{% macro privacy(personalisation) %}
-<div class="columns">
-  <div class="column">
-
-    <div class="text-block">
-
-      <h2>
-        The Data Protection Act 1998
-      </h2>
-
-      <p>
-        We, the Environment Agency, will process the information you provide so that we can deal with your abstraction return, make sure you keep to the conditions of the licence, permit or registration, and process renewals.
-      </p>
-
-      <br>
-
-      <p>
-        We may also process or release the information to:
-      </p>
-
-      <br>
-
-      <p>
-        <ul>
-          <li>
-            offer you documents or services relating<br>
-            to environmental matters
-          </li>
-          <li>
-            consult the public, public organisations and other organisations (for example,<br>
-            the Health & Safety Executive, local authorities, the emergency services, the Department for Environment, Food and Rural Affairs) on environmental issues
-          </li>
-          <li>
-            carry out research and development work on environmental issues, or allow others to do so
-          </li>
-          <li>
-            manage and assess present and likely future demand for water, or allow others<br>
-            to do so
-          </li>
-          <li>
-            prevent anyone from breaking environmental law, investigate cases where environmental law may have been broken, and take any action that is needed
-          </li>
-          <li>
-            assess whether customers are<br>
-            satisfied with our service, and to<br>
-            improve our service
-          </li>
-          <li>
-            respond to requests for information under the Freedom of information Act 2000 and the Environmental Information Regulations 2004 (if the Data Protection Act allows).
-          </li>
-        </ul>
-      </p>
-      <br>
-      <p>
-        We may pass the information on to our agents or representatives to do these things for us.
-      </p>
-
-    </div> <!-- end text block -->
-
-
-  </div> <!-- end column 1 -->
-  <div class="column">
-
-    <div class="text-block">
-
-      <div class="item buffed">
-        <p>
-          To claim commercial in confidence for<br>
-          this return, contact the Waste and Industry Regulatory Services on <span class="bold">national-operator-returns@environment-agency.gov.uk</span>,<br>
-          or <span class="bold">03708 506 506</span>.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lines are open Monday to Friday,<br>
-          8am to 6pm (GMT).
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</div>
-{% endmacro %}
-
-
 {% macro guide(personalisation, phase) %}
 <div class="columns">
   <div class="column">
@@ -659,7 +663,9 @@
         </h3>
 
         <p>
-          The return shows your licence number, return reference and site description. If you need to modify the site description call us on <span class="bold">03708 506 506</span>. The combination of the licence number and return reference make a return unique.
+          The return shows your licence number, return reference and site description.<br>
+          If you need to modify the site description<br>
+          call us on <span class="bold">03708 506 506</span>. The combination of the licence number and return reference make a return unique.
         </p>
 
       </div>
@@ -738,11 +744,9 @@
 
       <div class="item">
         <h3>
-          8. and 9. How are you reporting your return?
+          8. and 9. How are you reporting<br>
+          your return?
         </h3>
-        <p>
-          If you used more than one meter you need to enter your abstracted quantities as volumes not meter readings.
-        </p>
       </div>
 
       <div class="item">
@@ -751,7 +755,7 @@
         </p>
         <ul>
           <li>
-            continuous meter readings
+            continuous meter readings, or
           </li>
           <li>
             the actual quantity on the {{phase}}s you abstracted water and ‘0’ when you did not
@@ -761,14 +765,22 @@
 
       <div class="item">
         <p>
-          A decimal point should only be used to indicate a fraction of a whole unit. For example, 0.5 will be taken to mean half<br>
-          a gallon.
+          If you used more than one meter you need to enter your abstracted quantities as volumes not meter readings.
+        </p>
+      </div>
+
+      <div class="item">
+        <p>
+          A decimal point should only be used<br>
+          to indicate a fraction of a whole unit.<br>
+          For example, 0.5 will be taken to mean<br>
+          half a gallon.
         </p>
       </div>
 
       <div class="item">
         <h3>
-          10. Total water abtracted
+          10. Total volume of water abstracted
         </h3>
         <p>
           This is the total volume of water abstracted in the return period.
@@ -789,7 +801,7 @@
         </h3>
         <p>
           You must sign the declaration before sending your return to us, even if it is a<br>
-          ‘nil’ return. 
+          ‘nil’ return.
         </p>
       </div>
 
