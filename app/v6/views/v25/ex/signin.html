@@ -82,18 +82,18 @@
       </form>
 
       <p>
-        <a id="password_reset_link" href="/v23/reset_Password/password_reset" class="password_reset small-space">Forgotten password?</a>
+        <a id="password_reset_link" href="/v25/reset_Password/password_reset" class="password_reset small-space">Forgotten password?</a>
       </p>
-      <!-- <a id="password_reset_link" href="/v23/ex/start" class="password_reset">Create an account to use this service</a> -->
+      <!-- <a id="password_reset_link" href="/v25/ex/start" class="password_reset">Create an account to use this service</a> -->
 
-      <a id="password_reset_link" href="/v23/ex/start" class="password_reset">Create an account to use this service</a>
+      <a id="password_reset_link" href="/v25/ex/start" class="password_reset">Create an account to use this service</a>
 
       <script>
         // the following code overrides the default link click behaviour and adds the
         document.getElementById('password_reset_link').onclick=function(e){
         e.preventDefault();
         var user_id=document.getElementById('user-id').value
-        window.location='/v23/change_password/change_password?user_id='+user_id; //redirect to password reset screen
+        window.location='/v25/change_password/change_password?user_id='+user_id; //redirect to password reset screen
       }
 
       {% if incorrectLogin == "1" %}
