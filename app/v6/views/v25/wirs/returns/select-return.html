@@ -1,0 +1,65 @@
+{% extends "../head-signedin.html" %}
+
+{% block page_title %}
+  Abstraction return - process - GOV.UK
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <!-- navigation block -->
+  {% include "../../partials/beta-banner.html" %}
+
+  <!-- navigation block -->
+  {% include "../../partials/nav-wirs-manage.html" %}
+
+  <div class="big-space"></div>
+
+  <!-- page title -->
+  <h1  class="heading-large medium-space">
+    Select your return
+  </h1>
+
+  <div class="form-group">
+
+    <form data-routing="1">
+
+      <fieldset class="medium-space">
+
+        <div class="multiple-choice">
+          <input id="return-check-in" type="radio" name="return-status" value="../check-in/return-check-in?wid={{ query.wid }}">
+          <label for="return-check-in">03/28/60/0032</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="report-return" type="radio" name="return-status" value="returns-route-return?wid={{ query.wid }}">
+          <label for="report-return">082/263/01/G*/62</label>
+        </div>
+
+      </fieldset>
+
+      <a href="return-status?wid=32" class="button">Continue</a>
+
+    </form>
+
+  </div>
+
+</main>
+
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+
+<script>
+  $(function() {
+    $('form[data-routing]').on('submit', function(ev) {
+      // FInd selected radio button
+      const url = $(this).find('input:checked').val();
+
+      if(url) {
+        ev.preventDefault();
+        window.location.href = url;
+        return false;
+      }
+    });
+  })
+</script>
+
+{% endblock %}
