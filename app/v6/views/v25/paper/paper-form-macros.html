@@ -4,22 +4,31 @@
 
     <!-- licence number -->
     <div class="licence">
-      <p class="smaller">
-        Return reference <span class="bold">10042736</span>
-      </p>
-      <p class="smaller">
-        Licence number <span class="bold">AN/033/0012/007</span>
-      </p>
+
+      <div class="qr-container">
+        <div class="qr-code">&nbsp;</div>
+        <div class="return-id">
+          <p class="smaller">
+            Return reference <span class="bold">10042736</span>
+          </p>
+          <p class="smaller">
+            Licence number <span class="bold">AN/033/0012/007</span>
+          </p>
+        </div>
+      </div>
+
     </div>
 
   </div>
 
   <div class="column meta">
-
     <!-- header -->
     <div class="header">
       <p class="smaller">
-        Midlands / Central
+        Thames / South West
+      </p>
+      <p class="smaller">
+        Two-part tariff
       </p>
     </div>
 
@@ -35,6 +44,9 @@
     <p class="smaller">
       Midlands / Central
     </p>
+    <p class="smaller">
+      Two-part tariff
+    </p>
   </div>
 
 </div>
@@ -43,13 +55,12 @@
 {% macro address(personalisation) %}
 <div id="address-container">
   <div class="address-block">
-    FAO: Edward Power<br>
-    Water Resource Licensing team<br>
-    Horizon House,<br>
-    Deanery Road,<br>
-    Near College Green<br>
+    Lucy Packer<br>
+    Front desk<br>
+    Temple Quay House,<br>
+    1 Friary<br>
     Bristol<br>
-    BS1 5AH
+    BS1 6EA
   </div>
 </div>
 {% endmacro %}
@@ -260,35 +271,15 @@
       </div>
 
       <div class="item">
-        <p class="label">
-          Two-part tariff
+
+        <p class="emphasis bold">
+          Please return all pages
         </p>
+
         <p class="bold">
-          Yes
+          If you do not send your return in time<br>
+          we may take enforcement action.
         </p>
-      </div>
-
-      <div class="item">
-
-        <!-- <div class="item"> -->
-          <!-- <div class="warning"> -->
-            <!-- <div class="icon">
-              <svg width="5mm" height="5mm" viewBox="0 0 68 68" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>alert icon</title>
-                <desc>Important</desc>
-                <defs></defs>
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <path d="M34,68 C15.2223185,68 0,52.7776815 0,34 C0,15.2223185 15.2223185,0 34,0 C52.7776815,0 68,15.2223185 68,34 C68,52.7776815 52.7776815,68 34,68 Z M34,53 C36.7614237,53 39,50.7614237 39,48 C39,45.2385763 36.7614237,43 34,43 C31.2385763,43 29,45.2385763 29,48 C29,50.7614237 31.2385763,53 34,53 Z M31,37.8926621 L37,37.8926621 L37.5,14 L30.5,14 L31,37.8926621 Z" id="alert-icon" fill="#000000" fill-rule="nonzero"></path>
-                </g>
-
-              </svg>
-            </div> -->
-            <p class="bold">
-              If you do not send your return in time<br>
-              we may take enforcement action.
-            </p>
-          <!-- </div> -->
-        <!-- </div> -->
 
       </div>
 
