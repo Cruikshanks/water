@@ -206,18 +206,6 @@
           </p>
         </div>
 
-        <div class="item">
-          <p class="bold">
-            Return the completed form including all of the numbered pages to:
-          </p>
-          <p>
-            Waste and Industry Regulatory Services<br>
-            Environment Agency<br>
-            Quadrant 2, 99 Parkway Avenue<br>
-            Sheffield, S9 4WF
-          </p>
-        </div>
-
       </div>
 
     </div>
@@ -270,11 +258,23 @@
         </p>
       </div>
 
-      <div class="item">
+      <div class="boxed">
+        <div class="item">
+          <p class="bold">
+            Send this page with your completed form to:
+          </p>
+        </div>
+        <div class="item">
+          <p>
+            Waste and Industry Regulatory Services<br>
+            Environment Agency<br>
+            Quadrant 2, 99 Parkway Avenue<br>
+            Sheffield, S9 4WF
+          </p>
+        </div>
+      </div>
 
-        <p class="emphasis bold">
-          Please return all pages
-        </p>
+      <div class="item">
 
         <p class="bold">
           If you do not send your return in time<br>
@@ -314,9 +314,9 @@
         <div class="input">
           <div class="input-mask"></div>
         </div>
-        <div class="input">
+        <!-- <div class="input">
           <div class="input-mask"></div>
-        </div>
+        </div> -->
       </p>
     </div>
 
@@ -326,15 +326,14 @@
       </div>
       <div class="item">
         <p class="label">
-          If you need to explain an entry or give more<br>
-          information send this on a separate sheet. Write the return reference <span class="bold">10042736</span> and your licence number <span class="bold">AN/033/0012/007</span><br>
+          If you need to explain an entry or give more information send this on a separate sheet. Write the return reference <span class="bold">10042736</span> and your licence number <span class="bold">AN/033/0012/007</span><br>
           on each sheet.
         </p>
       </div>
-      <div class="item">
-        <p class="key-data">
-          <span class="checkbox"></span>
-          I am sending further information
+      <div class="checkbox-and-text">
+        <div class="checkbox"></div>
+        <p>
+          Tick this box if you are sending further information
         </p>
       </div>
     </div>
@@ -374,14 +373,14 @@
       <div class="item">
         <p>
           To claim commercial in confidence for<br>
-          this return, contact the Waste and Industry Regulatory Services on <span class="bold">national-operator-returns@environment-agency.gov.uk</span>,<br>
+          this return, contact the Waste and Industry Regulatory Services on <span class="bold">abstraction.returns@environment-agency.gov.uk</span>,
           or <span class="bold">03708 506 506</span>.
         </p>
       </div>
       <div>
         <p>
           Lines are open Monday to Friday,<br>
-          8am to 6pm (GMT).
+          8am to 6pm.
         </p>
       </div>
 
@@ -535,10 +534,29 @@
       </div>
     </div>
 
+    <!-- numbers block -->
+    <div class="block">
+
+      <div class="block-head bold">
+        3. How are you reporting your return?
+      </div>
+
+      <div class="item">
+        <p class="key-data">
+          <span class="checkbox"></span>
+          Meter readings
+        </p>
+        <p class="key-data">
+          <span class="checkbox"></span>
+          Abstraction volumes
+        </p>
+      </div>
+    </div>
+
     <!-- units -->
     <div class="block">
       <div class="block-head bold">
-        3. Unit of measurement
+        4. Unit of measurement
       </div>
       <div class="item">
         <p class="key-data">
@@ -560,10 +578,15 @@
       </div>
     </div>
 
-    <!-- units -->
+  </div>
+
+  <!-- right column -->
+  <div class="column">
+
+    <!-- meter -->
     <div class="block">
       <div class="block-head bold">
-        4. Did you use a meter?
+        5. Did you use a meter?
       </div>
       <div class="item">
         <p class="key-data">
@@ -576,19 +599,14 @@
         </p>
       </div>
       <p class="guide">
-        If no, go to section 8
+        If no, go to section 9
       </p>
     </div>
-
-  </div>
-
-  <!-- right column -->
-  <div class="column">
 
     <!-- your meter -->
     <div class="block">
       <div class="block-head bold">
-        5. Meter details
+        6. Meter details
       </div>
       <div class="item special-row">
         <div class="special-input">
@@ -626,10 +644,12 @@
           Some meters are marked with ×10. You should enter the actual figure that you see on the display. You do not need to multiply the volume by 10.
         </p> -->
 
-        <p class="key-data">
-          <span class="checkbox"></span>
-          My meter has a ×10 display
-        </p>
+        <div class="key-data checkbox-and-text">
+          <div class="checkbox"></div>
+          <p>
+          Tick this box if your meter has a ×10 display
+          </p>
+        </div>
       </div>
 
     </div>
@@ -637,7 +657,7 @@
     <!-- start reading -->
     <div class="block">
       <div class="block-head bold">
-        6. Start meter reading
+        7. Start meter reading
       </div>
       <div class="item">
         <div class="number-group">
@@ -661,7 +681,7 @@
     <!-- end reading -->
     <div class="block">
       <div class="block-head bold">
-        7. End meter reading
+        8. End meter reading
       </div>
       <div class="item">
         <div class="number-group">
@@ -678,25 +698,6 @@
         <p class="label">
           Reading<br>
           <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-        </p>
-      </div>
-    </div>
-
-    <!-- numbers block -->
-    <div class="block">
-
-      <div class="block-head bold">
-        8. How are you reporting your return?
-      </div>
-
-      <div class="item">
-        <p class="key-data">
-          <span class="checkbox"></span>
-          Meter readings
-        </p>
-        <p class="key-data">
-          <span class="checkbox"></span>
-          Abstraction volumes
         </p>
       </div>
     </div>
@@ -756,7 +757,19 @@
 
       <div class="item">
         <h3>
-          3. Unit of measurement
+          3. How are you reporting your return?
+        </h3>
+      </div>
+
+      <div class="item">
+        <p>
+          Choose Meter readings or Abstraction volumes
+        </p>
+      </div>
+
+      <div class="item">
+        <h3>
+          4. Unit of measurement
         </h3>
         <p>
           Tell us what units have been used to measure your abstraction.
@@ -765,7 +778,7 @@
 
       <div class="item">
         <h3>
-          4. and 5. Meter details
+          5. and 6. Meter details
         </h3>
         <p>
           If you have used multiple meters tell us how many. You only need to give us the manufacturer and serial number for one<br>
@@ -779,54 +792,33 @@
         </p>
       </div>
 
-      <div class="item">
-        <h3>
-          6. and 7. Start and end meter readings
-        </h3>
-        <p>
-          If you are reporting continuous run meter readings you need to enter ‘start’ and ‘end’ meter readings. You also need to add the individual entries.
-        </p>
-      </div>
-
-      <div class="item">
-        <p>
-          The <span class="bold">start reading</span> is taken immediately before the start of the period of abstraction but within the reporting period.
-        </p>
-      </div>
-
     </div> <!-- end text block -->
 
   </div>
 
   <div class="column">
 
-    <div class="text-block buffed">
+    <div class="item buffed">
+      <h3>
+        7. and 8. Start and end meter readings
+      </h3>
+      <p>
+        If you are reporting continuous run meter readings you need to enter ‘start’ and ‘end’ meter readings. You also need to add the individual entries.
+      </p>
+    </div>
+
+    <div class="item">
+      <p>
+        The <span class="bold">start reading</span> is taken immediately before the start of the period of abstraction but within the reporting period.
+      </p>
+    </div>
+
+    <div class="text-block">
 
       <div class="item">
         <p>
           The <span class="bold">end reading</span> is taken at the end of the abstraction period. We treat all readings in between the start and end dates as if they were taken at the end of each {{phase}}.
         </p>
-      </div>
-
-      <div class="item">
-        <h3>
-          8. and 9. How are you reporting<br>
-          your return?
-        </h3>
-      </div>
-
-      <div class="item">
-        <p>
-          Enter either:
-        </p>
-        <ul>
-          <li>
-            continuous meter readings, or
-          </li>
-          <li>
-            the actual quantity on the {{phase}}s you abstracted water and ‘0’ when you did not
-          </li>
-        </ul>
       </div>
 
       <div class="item">
@@ -842,6 +834,26 @@
           For example, 0.5 will be taken to mean<br>
           half a gallon.
         </p>
+      </div>
+
+      <div class="item">
+        <h3>
+          9. Meter readings or absraction volumes
+        </h3>
+      </div>
+
+      <div class="item">
+        <p>
+          Enter either:
+        </p>
+        <ul>
+          <li>
+            continuous meter readings, or
+          </li>
+          <li>
+            the actual quantity on the {{phase}}s you abstracted water and ‘0’ when you did not
+          </li>
+        </ul>
       </div>
 
       <div class="item">
