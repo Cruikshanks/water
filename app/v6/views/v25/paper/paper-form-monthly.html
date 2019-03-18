@@ -93,6 +93,7 @@
         font-size: 12pt;
         line-height: 6mm;
         /* max-width: 120mm; */
+        word-wrap: break-word;
       }
 
       ul {
@@ -356,7 +357,7 @@
 
        .key-data {
          line-height: 2mm;
-         padding-top: 3mm;
+         padding-top: 2mm;
          font-size: 12pt;
        }
 
@@ -432,10 +433,23 @@
       }
 
       .checkbox-and-text p {
+        width: calc(100% - 5mm);
         display: inline-block;
         position: relative;
         left: 2rem;
         top: -5mm;
+      }
+
+      .checkbox-and-text__text {
+        height: 5mm;
+      }
+
+      .pull-up {
+        margin-top: -7mm;
+      }
+
+      .month-padding {
+        padding: 2mm 0;
       }
 
     </style>
@@ -542,7 +556,7 @@
         <div class="columns">
           <div class="column">
             <p class="smaller">
-              WR71 - October 2018
+              WR71 - April 2019
             </p>
           </div>
           <div  class="column">
@@ -573,7 +587,7 @@
         <div class="columns">
           <div class="column">
             <p class="smaller">
-              WR71 - October 2018
+              WR71 - March 2019
             </p>
           </div>
           <div  class="column">
@@ -604,7 +618,7 @@
         <div class="columns">
           <div class="column">
             <p class="smaller">
-              WR71 - October 2018
+              WR71 - March 2019
             </p>
           </div>
           <div  class="column">
@@ -636,50 +650,62 @@
               <p class="month-label">
                 30 April 2018
                 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
               </p>
               <p class="month-label">
                 31 May 2018
                 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
               </p>
               <p class="month-label">
                 30 June 2018
                 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
               </p>
               <p class="month-label">
                 31 July 2018
                 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
               </p>
               <p class="month-label">
                 31 August 2018
                 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
               </p>
               <p class="month-label">
                 30 September 2018
                 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-              <p class="month-label">
-                31 October 2018
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-              <p class="month-label">
-                30 November 2018
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-              <p class="month-label">
-                31 December 2018
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-              <p class="month-label">
-                31 January 2019
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
-              </p>
-              <p class="month-label">
-                28 February 2019
-                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
               </p>
               <p class="month-label">
                 31 March 2019
                 <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
+              </p>
+              <p class="month-label">
+                30 November 2018
+                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
+              </p>
+              <p class="month-label">
+                31 December 2018
+                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
+              </p>
+              <p class="month-label">
+                31 January 2019
+                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
+              </p>
+              <p class="month-label">
+                28 February 2019
+                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
+              </p>
+              <p class="month-label">
+                31 March 2019
+                <div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input"></div><div class="number-input last-digit"></div>
+                <div class="month-padding"></div>
               </p>
             </div>
 
@@ -693,7 +719,7 @@
         <div class="columns">
           <div class="column">
             <p class="smaller">
-              WR71 - October 2018
+              WR71 - March 2019
             </p>
           </div>
           <div  class="column">
@@ -722,7 +748,7 @@
         <div class="columns">
           <div class="column">
             <p class="smaller">
-              WR71 - October 2018
+              WR71 - March 2019
             </p>
           </div>
           <div  class="column">
